@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>कक्षा १२ सामाजिक अध्ययन · एकाइ १ नोट</title>
+
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <style>
+        /* ---------- रिसेट र आधार ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e2b4f;
+            --primary-light: #2c3e6b;
+            --secondary: #c79a3e;
+            --secondary-light: #e8c97a;
+            --accent: #d4893b;
+            --bg-warm: #fcf7f0;
+            --card-bg: #ffffff;
+            --text-dark: #1e1e2a;
+            --text-muted: #4a4a5a;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --radius: 18px;
+            --transition: 0.25s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-warm);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding: 0 0 3rem 0;
+        }
+
+        /* ---------- स्क्रोलबार ---------- */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f0ebe3;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--secondary);
+            border-radius: 10px;
+        }
+
+        /* ---------- कन्टेनर ---------- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ---------- हिरो हेडर ---------- */
+        .hero {
+            background: linear-gradient(145deg, var(--primary) 0%, #15203a 100%);
+            color: #fff;
+            padding: 2.8rem 1.8rem 2.2rem;
+            border-radius: 0 0 var(--radius) var(--radius);
+            margin: 0 0 2.5rem 0;
+            box-shadow: 0 12px 40px rgba(20, 30, 60, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "✦";
+            position: absolute;
+            right: -20px;
+            bottom: -40px;
+            font-size: 14rem;
+            opacity: 0.04;
+            color: #fff;
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: var(--secondary);
+            color: #fff;
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--secondary-light);
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+            opacity: 0.85;
+            margin-top: 0.5rem;
+            max-width: 650px;
+        }
+
+        .hero-meta {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 1.2rem;
+        }
+
+        .hero-meta i {
+            margin-right: 0.4rem;
+            color: var(--secondary-light);
+        }
+
+        .hero-meta a {
+            color: var(--secondary-light);
+            text-decoration: none;
+        }
+
+        .hero-meta a:hover {
+            text-decoration: underline;
+        }
+
+        /* ---------- विषयसूची ---------- */
+        .toc {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 1.8rem 2rem;
+            margin-bottom: 2.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.8rem 1.6rem;
+        }
+
+        .toc-label {
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .toc-label i {
+            color: var(--secondary);
+        }
+
+        .toc a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 0.3rem 0.2rem;
+            border-bottom: 2px solid transparent;
+            transition: var(--transition);
+            white-space: nowrap;
+        }
+
+        .toc a:hover {
+            border-bottom-color: var(--secondary);
+            color: var(--primary);
+        }
+
+        /* ---------- सेक्सन कार्ड ---------- */
+        .section {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem 2.2rem;
+            margin-bottom: 2.2rem;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.4rem;
+            flex-wrap: wrap;
+        }
+
+        .section-header .num {
+            background: var(--primary);
+            color: #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .section-header h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--primary);
+        }
+
+        .section-header h2 i {
+            color: var(--secondary);
+            margin-right: 0.4rem;
+            font-size: 1.3rem;
+        }
+
+        .section-header .tag {
+            margin-left: auto;
+            background: var(--secondary-light);
+            color: var(--primary);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        /* ---------- उपशीर्षक ---------- */
+        .subhead {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin: 1.8rem 0 0.8rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .subhead i {
+            color: var(--secondary);
+            font-size: 1rem;
+            width: 1.6rem;
+            text-align: center;
+        }
+
+        .subhead-sm {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--primary);
+            margin: 1.2rem 0 0.4rem 0;
+        }
+
+        /* ---------- पाठ र सूची ---------- */
+        p {
+            margin-bottom: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        ul, ol {
+            padding-left: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--text-muted);
+        }
+
+        li {
+            margin-bottom: 0.3rem;
+        }
+
+        .highlight {
+            background: #fef6e6;
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .highlight-gold {
+            background: var(--secondary-light);
+            padding: 0.1rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        /* ---------- तालिका ---------- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1rem 0 1.4rem 0;
+            border-radius: 12px;
+            border: 1px solid #ede8e0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            min-width: 480px;
+        }
+
+        th {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 600;
+            padding: 0.7rem 1rem;
+            text-align: left;
+        }
+
+        td {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #f0ebe3;
+            vertical-align: top;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:nth-child(even) td {
+            background: #faf8f5;
+        }
+
+        /* ---------- एकोर्डियन (interactive) ---------- */
+        .accordion {
+            margin: 1rem 0 0.8rem 0;
+            border-radius: 12px;
+            border: 1px solid #ede8e0;
+            overflow: hidden;
+        }
+
+        .accordion-item {
+            border-bottom: 1px solid #ede8e0;
+        }
+        .accordion-item:last-child {
+            border-bottom: none;
+        }
+
+        .accordion-btn {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1rem 1.2rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: inherit;
+            color: var(--text-dark);
+            transition: var(--transition);
+            background: #faf8f5;
+        }
+
+        .accordion-btn:hover {
+            background: #f3eee8;
+        }
+
+        .accordion-btn i {
+            color: var(--secondary);
+            transition: var(--transition);
+            font-size: 1rem;
+        }
+
+        .accordion-btn.open i {
+            transform: rotate(180deg);
+        }
+
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.3s ease;
+            padding: 0 1.2rem;
+            background: #fff;
+        }
+
+        .accordion-body.open {
+            max-height: 1200px;
+            padding: 0.8rem 1.2rem 1.4rem;
+        }
+
+        .accordion-body p,
+        .accordion-body ul,
+        .accordion-body ol {
+            margin-bottom: 0.6rem;
+        }
+
+        /* ---------- ग्रिड (सिप कार्ड) ---------- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin: 0.8rem 0 1.2rem 0;
+        }
+
+        .skill-card {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            border-left: 4px solid var(--secondary);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            background: #f3eee8;
+            transform: translateY(-2px);
+        }
+
+        .skill-card .num {
+            font-weight: 700;
+            color: var(--secondary);
+            font-size: 0.85rem;
+        }
+
+        .skill-card h4 {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--primary);
+            margin: 0.2rem 0 0.2rem 0;
+        }
+
+        .skill-card p {
+            font-size: 0.88rem;
+            margin-bottom: 0;
+            color: var(--text-muted);
+        }
+
+        /* ---------- प्रश्नोत्तर ब्लक ---------- */
+        .qa-block {
+            margin: 1.2rem 0;
+            padding: 1rem 1.4rem;
+            background: #faf8f5;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .qa-block .q {
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .qa-block .q i {
+            color: var(--secondary);
+        }
+
+        .qa-block .a {
+            color: var(--text-muted);
+            padding-left: 1.8rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 1.2rem;
+        }
+
+        /* ---------- चिप ---------- */
+        .chip {
+            display: inline-block;
+            background: var(--secondary-light);
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.15rem 0.9rem;
+            border-radius: 40px;
+            margin-right: 0.3rem;
+        }
+
+        /* ---------- फुटर ---------- */
+        .footer {
+            text-align: center;
+            padding: 2.5rem 1rem 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid #ede8e0;
+            margin-top: 1rem;
+        }
+
+        .footer strong {
+            color: var(--primary);
+        }
+
+        .footer i {
+            color: var(--secondary);
+        }
+
+        /* ---------- प्रतिक्रियाशील ---------- */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 2rem 1.2rem 1.8rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .hero p {
+                font-size: 0.95rem;
+            }
+            .section {
+                padding: 1.4rem 1.2rem;
+            }
+            .section-header h2 {
+                font-size: 1.3rem;
+            }
+            .toc {
+                padding: 1.2rem 1.2rem;
+                gap: 0.5rem 1rem;
+            }
+            .toc a {
+                font-size: 0.8rem;
+                white-space: normal;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            .table-wrap table {
+                font-size: 0.82rem;
+                min-width: 360px;
+            }
+            .qa-block {
+                padding: 0.8rem 1rem;
+            }
+            .accordion-btn {
+                font-size: 0.88rem;
+                padding: 0.8rem 1rem;
+            }
+            .hero-meta {
+                font-size: 0.8rem;
+                gap: 0.8rem 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.4rem;
+            }
+            .section-header .num {
+                width: 30px;
+                height: 30px;
+                font-size: 0.85rem;
+            }
+            .section-header h2 {
+                font-size: 1.1rem;
+            }
+            .container {
+                padding: 0 10px;
+            }
+            .section {
+                padding: 1rem 0.8rem;
+            }
+        }
+
+        /* ---------- प्रिन्ट ---------- */
+        @media print {
+            .hero {
+                background: #1e2b4f !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .section {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-inside: avoid;
+            }
+            .toc {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+            .accordion-body {
+                max-height: none !important;
+                padding: 0.8rem 1.2rem 1.4rem !important;
+            }
+            .accordion-btn {
+                display: none;
+            }
+            .accordion-item {
+                border-bottom: 1px solid #ddd;
+            }
+            .accordion-body {
+                border-top: 1px solid #eee;
+            }
+            .accordion-btn .fa-chevron-down {
+                display: none;
+            }
+        }
+
+        /* ---------- उपयोगिता ---------- */
+        .mt-1 {
+            margin-top: 0.8rem;
+        }
+        .mb-1 {
+            margin-bottom: 0.8rem;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .flex {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        .gap-1 {
+            gap: 1rem;
+        }
+        .w-full {
+            width: 100%;
+        }
+        .small {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* ---------- माथि फर्कने ---------- */
+        .back-top {
+            display: inline-block;
+            margin-top: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+            text-decoration: none;
+            border-bottom: 2px solid var(--secondary-light);
+            padding-bottom: 2px;
+        }
+        .back-top:hover {
+            border-bottom-color: var(--secondary);
+        }
+        .back-top i {
+            color: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== हिरो ===== -->
+    <header class="hero">
+        <div class="container">
+            <div class="hero-badge"><i class="fas fa-graduation-cap"></i> कक्षा १२ · सामाजिक अध्ययन</div>
+            <h1>एकाइ १ <span>अवधारणा तथा अभ्यास</span></h1>
+            <p>सामाजिक अध्ययन र जीवनोपयोगी शिक्षाको सम्पूर्ण अध्ययन सामग्री — समाधान, अभ्यास र नमुना प्रश्नोत्तर सहित।</p>
+            <div class="hero-meta">
+                <span><i class="fas fa-user-graduate"></i> तयार गर्ने: <strong>एन. रेग्मी</strong></span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:nrgegmi511@gmail.com">nrgegmi511@gmail.com</a></span>
+                <span><i class="fas fa-book-open"></i> ३ वटा दस्तावेज समावेश</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- ===== विषयसूची ===== -->
+        <nav class="toc" aria-label="विषयसूची">
+            <span class="toc-label"><i class="fas fa-compass"></i> जानुहोस्</span>
+            <a href="#concepts">अवधारणा</a>
+            <a href="#who-skills">WHO सिप</a>
+            <a href="#eastern">पूर्वीय</a>
+            <a href="#western">पाश्चात्य</a>
+            <a href="#comparison">तुलना</a>
+            <a href="#solved">समाधान</a>
+            <a href="#qa">प्रश्नोत्तर</a>
+            <a href="#tips">परीक्षा टिप्स</a>
+        </nav>
+
+        <!-- ============================================================ -->
+        <!-- सेक्सन १: अवधारणा                                             -->
+        <!-- ============================================================ -->
+        <section id="concepts" class="section">
+            <div class="section-header">
+                <span class="num">१</span>
+                <h2><i class="fas fa-brain"></i> सामाजिक अध्ययन र जीवनोपयोगी सिप</h2>
+                <span class="tag">आधारभूत</span>
+            </div>
+
+            <div class="subhead"><i class="fas fa-users"></i> सामाजिक अध्ययन</div>
+            <p><span class="highlight">सामाजिक अध्ययन</span> नागरिक सक्षमता विकासका लागि सामाजिक विज्ञानहरूको एकीकृत अध्ययन हो। यसले मानव र उसको भौतिक, सामाजिक, राजनीतिक, सांस्कृतिक तथा आर्थिक वातावरणबीचको अन्तरक्रियाको अध्ययन गर्दछ। विद्यालय पाठ्यक्रममा भूगोल, इतिहास, अर्थशास्त्र, समाजशास्त्र, मानवशास्त्र, राजनीतिशास्त्र, मनोविज्ञान, धर्म, संस्कृति, कला र विज्ञानका विषयवस्तुहरू समन्वयात्मक रूपमा समावेश गरिन्छन्।</p>
+
+            <div class="subhead"><i class="fas fa-hand-holding-heart"></i> जीवनोपयोगी शिक्षा</div>
+            <p>मानव जीवनका लागि आवश्यक र उपयोगी सिपहरूलाई <span class="highlight">जीवनोपयोगी सिप</span> भनिन्छ र यस्ता सिप सिकाउने शिक्षालाई <span class="highlight">जीवनोपयोगी शिक्षा</span> भनिन्छ। यसले व्यक्तिमा व्यावसायिक दक्षताका साथै सामाजिक जीवनका लागि अत्यावश्यक सिपहरू प्रदान गर्दछ। यसले असल चरित्र, सिर्जनात्मकता, नैतिकता र व्यावहारिक कुशलताको विकास गर्छ।</p>
+
+            <div class="subhead"><i class="fas fa-link"></i> अन्तरसम्बन्ध</div>
+            <ul>
+                <li><strong>ज्ञान बनाम प्रयोग:</strong> सामाजिक अध्ययनले समाजको <em>ज्ञान</em> दिन्छ; जीवनोपयोगी सिपले त्यसलाई व्यवहारमा उतार्ने <em>सिप</em> सिकाउँछ।</li>
+                <li><strong>समाज प्रयोगशालाको रूपमा:</strong> सामाजिक अध्ययन विज्ञान हो; जीवनोपयोगी शिक्षा त्यसको प्रयोगशाला हो।</li>
+                <li><strong>सक्षम नागरिक:</strong> सामाजिक अध्ययनले अधिकार र कर्तव्यको सैद्धान्तिक बोध गराउँछ; जीवनोपयोगी शिक्षाले ती पूरा गर्न आवश्यक चरित्र विकास गर्छ।</li>
+                <li><strong>एकीकृत सिकाइ:</strong> सामाजिक अध्ययनका क्रियाकलाप (परियोजना, समूह कार्य) ले नेतृत्व र सहकार्य जस्ता सिपको अभ्यास गराउँछ।</li>
+            </ul>
+            <div style="background:#f0ebe3;border-radius:10px;padding:0.8rem 1.2rem;margin-top:0.5rem;">
+                <p style="margin:0;font-size:0.9rem;"><i class="fas fa-lightbulb" style="color:var(--secondary);"></i> <strong>प्राचीन जरा:</strong> नेपालको परम्परागत <span class="highlight-gold">१४ विद्या</span>, <span class="highlight-gold">१८ शास्त्र</span> र <span class="highlight-gold">६४ कला</span> जीवनोपयोगी सिपका प्रारम्भिक रूप हुन्।</p>
+            </div>
+            <a href="#" class="back-top"><i class="fas fa-arrow-up"></i> माथि फर्कनुहोस्</a>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- सेक्सन २: WHO सिप                                             -->
+        <!-- ============================================================ -->
+        <section id="who-skills" class="section">
+            <div class="section-header">
+                <span class="num">२</span>
+                <h2><i class="fas fa-heartbeat"></i> WHO जीवनोपयोगी सिप (१९९९)</h2>
+                <span class="tag">६ क्षेत्र</span>
+            </div>
+
+            <p>विश्व स्वास्थ्य सङ्गठन (WHO) ले यी ६ मुख्य जीवनोपयोगी सिप क्षेत्रहरू पहिचान गरेको छ:</p>
+
+            <div class="grid-2">
+                <div class="skill-card"><span class="num">१</span><h4>सञ्चार र अन्तरवैयक्तिक सिप</h4><p>विचार, भावना र सूचनाको प्रभावकारी आदानप्रदान; सकारात्मक सम्बन्ध निर्माण।</p></div>
+                <div class="skill-card"><span class="num">२</span><h4>निर्णय गर्ने र समस्या समाधान</h4><p>विकल्पको विश्लेषण, सही निर्णय, रचनात्मक समाधान खोज्ने।</p></div>
+                <div class="skill-card"><span class="num">३</span><h4>सिर्जनात्मक र समालोचनात्मक सोच</h4><p>नयाँ तरिकाले सोच्ने; सूचना र तर्कको गहिरो विश्लेषण।</p></div>
+                <div class="skill-card"><span class="num">४</span><h4>आत्मजागरुकता र समानुभूति</h4><p>आफ्ना बल र कमजोरी चिन्ने; अरूको दृष्टिकोण बुझ्ने।</p></div>
+                <div class="skill-card"><span class="num">५</span><h4>दृढता र आत्मनियन्त्रण</h4><p>दबाबमा पनि संयमित रहने; भावनाहरू नियन्त्रण गर्ने।</p></div>
+                <div class="skill-card"><span class="num">६</span><h4>उत्थानशीलता र समस्यासँग सामना</h4><p>तनाव वा प्रतिकूलताबाट छिट्टै उठ्ने; चुनौती व्यवस्थापन।</p></div>
+            </div>
+
+            <div style="background:#faf8f5;border-radius:12px;padding:0.8rem 1.2rem;">
+                <p style="margin:0;font-size:0.9rem;"><i class="fas fa-quote-left" style="color:var(--secondary);"></i> यी सिपहरू दैनिक जीवनको सामना, मानसिक स्वास्थ्य र समाजमा सकारात्मक योगदानका लागि आवश्यक छन्।</p>
+            </div>
+            <a href="#" class="back-top"><i class="fas fa-arrow-up"></i> माथि फर्कनुहोस्</a>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- सेक्सन ३: पूर्वीय                                             -->
+        <!-- ============================================================ -->
+        <section id="eastern" class="section">
+            <div class="section-header">
+                <span class="num">३</span>
+                <h2><i class="fas fa-om"></i> पूर्वीय चिन्तन परम्परा</h2>
+                <span class="tag">हिन्दू · बौद्ध</span>
+            </div>
+
+            <p>पूर्वीय चिन्तनले चरित्र निर्माण, धर्म, संस्कार र प्रकृतिसँगको तादात्म्यलाई जोड दिन्छ।</p>
+
+            <!-- Accordion: हिन्दू -->
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false">
+                        <span><i class="fas fa-om" style="color:var(--secondary);"></i> हिन्दू दर्शन र धर्मका १० लक्षण</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p>वैदिक चिन्तनमा <span class="highlight">धर्म</span> को अर्थ धारणा, कर्तव्य र प्राकृतिक गुण हो। <strong>धर्मका १० लक्षण</strong> यी हुन्:</p>
+                        <ol style="columns:2 220px;column-gap:2rem;">
+                            <li><strong>धृति</strong> — धैर्य</li>
+                            <li><strong>क्षमा</strong> — क्षमाशीलता</li>
+                            <li><strong>दम</strong> — वासनामाथि नियन्त्रण</li>
+                            <li><strong>अस्तेय</strong> — चोरी नगर्नु</li>
+                            <li><strong>शौच</strong> — शरीर, मन र बुद्धिको शुद्धता</li>
+                            <li><strong>इन्द्रिय निग्रह</strong> — इन्द्रियहरूलाई वशमा राख्नु</li>
+                            <li><strong>धी</strong> — बुद्धिमानी</li>
+                            <li><strong>विद्या</strong> — ज्ञान आर्जन</li>
+                            <li><strong>सत्य</strong> — मन, वचन, कर्मले सत्य पालन</li>
+                            <li><strong>अक्रोध</strong> — क्रोध नगर्नु</li>
+                        </ol>
+                        <p>मानव जीवनका चार लक्ष्य <span class="highlight">पुरुषार्थ चतुष्टय</span> — <strong>धर्म, अर्थ, काम, मोक्ष</strong> हुन्।</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-btn" aria-expanded="false">
+                        <span><i class="fas fa-buddha" style="color:var(--secondary);"></i> बौद्ध दर्शन</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="accordion-body">
+                        <p>बौद्ध परम्पराले <strong>चार आर्य सत्य</strong>, <strong>अष्टाङ्गिक मार्ग</strong> र <strong>पञ्चशील</strong> मार्फत स्वस्थ जीवनशैलीको वकालत गर्दछ।</p>
+                        <ul>
+                            <li><strong>चार आर्य सत्य:</strong> (१) दुःख छ, (२) दुःखका कारण छन्, (३) दुःखको निवारण छ, (४) निवारणको मार्ग अष्टाङ्गिक मार्ग हो।</li>
+                            <li><strong>आर्य अष्टाङ्गिक मार्ग:</strong> सम्यक् दृष्टि, सङ्कल्प, वाक्, कर्म, जीविका, प्रयास, स्मृति, समाधि।</li>
+                            <li><strong>पञ्चशील:</strong> प्राणी हिंसा नगर्ने, झुटो नबोल्ने, चोरी नगर्ने, व्यभिचार नगर्ने, मध्यपान नगर्ने।</li>
+                            <li><strong>मध्यम मार्ग:</strong> अतिवादबाट बच्न र मध्यम मार्गी हुनुपर्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subhead"><i class="fas fa-leaf"></i> नेपालको योगदान</div>
+            <ul>
+                <li><strong>ऋषिमुनिहरूको तपोभूमि:</strong> हिमालय र नदी किनारमा योग र दर्शनको विकास भयो।</li>
+                <li><strong>गौतम बुद्ध:</strong> शान्ति, अहिंसा र मध्यम मार्गका प्रवर्तक बुद्धको जन्मभूमि।</li>
+                <li><strong>राजा जनकको दर्शन:</strong> प्राचीन मिथिलाको दार्शनिक विमर्श र सीताको आदर्श जीवनले पूर्वीय नारी चेतना र दर्शनमा योगदान दियो।</li>
+            </ul>
+            <a href="#" class="back-top"><i class="fas fa-arrow-up"></i> माथि फर्कनुहोस्</a>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- सेक्सन ४: पाश्चात्य                                           -->
+        <!-- ============================================================ -->
+        <section id="western" class="section">
+            <div class="section-header">
+                <span class="num">४</span>
+                <h2><i class="fas fa-landmark"></i> पाश्चात्य चिन्तन परम्परा</h2>
+                <span class="tag">ग्रिस · पुनर्जागरण</span>
+            </div>
+
+            <p>पाश्चात्य चिन्तनको मूल स्रोत प्राचीन ग्रिस हो।</p>
+
+            <div class="subhead"><i class="fas fa-user-graduate"></i> प्रमुख दार्शनिक र योगदान</div>
+            <ul>
+                <li><strong>सोक्रेटस (सुकरात):</strong> तार्किक बहसको शैली विकास गरे; पाश्चात्य दर्शनको आधारशिला।</li>
+                <li><strong>प्लेटो:</strong> सुकरातका शिष्य; 'एकेडेमी' खोले; ज्ञानका सबै विधाको अध्ययनमा जोड; आदर्श शासकको अवधारणा।</li>
+                <li><strong>एरिस्टोटल (अरस्तु):</strong> प्लेटोका शिष्य; भौतिक जगत् र मानव समाजको अध्ययन अगाडि बढाए; प्रकृति विज्ञान र तर्कशास्त्रका लागि निर्णायक।</li>
+            </ul>
+
+            <div class="subhead"><i class="fas fa-clock"></i> ऐतिहासिक कालखण्डहरू</div>
+            <ul>
+                <li><span class="highlight">अँध्यारो युग:</span> चर्च अत्यन्त शक्तिशाली; प्रकृति विज्ञान, आलोचनात्मक अध्ययन र पन्थनिरपेक्ष विचारलाई दमन गरियो।</li>
+                <li><span class="highlight">पुनर्जागरण:</span> चर्चको अत्याचार विरुद्ध कलाकार, दार्शनिक र वैज्ञानिकले विद्रोह गरे; प्राचीन ग्रिसको चिन्तन पुनःजीवित भयो।</li>
+                <li><span class="highlight">ज्ञानोदय युग:</span> वैज्ञानिक चिन्तन, वैचारिक स्वतन्त्रता र मानव ज्ञानको सर्वोच्चता स्थापित भयो; आधुनिक पाश्चात्य स्वरूप निर्धारण भयो।</li>
+            </ul>
+
+            <div class="subhead"><i class="fas fa-balance-scale"></i> सबल र दुर्बल पक्ष</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:0.5rem 0;">
+                <div style="background:#e8f0e8;border-radius:12px;padding:0.8rem 1.2rem;">
+                    <h4 style="color:#1e5a2e;"><i class="fas fa-check-circle"></i> सबल पक्ष</h4>
+                    <ul style="margin:0.2rem 0 0 0;padding-left:1.2rem;">
+                        <li>शिक्षा, वैज्ञानिक खोज, आधुनिक प्रविधि, औद्योगिक विकास</li>
+                        <li>मानवतावाद, मानवअधिकार, उदारवादी लोकतन्त्र</li>
+                        <li>पर्यावरणमैत्री दृष्टिकोण र न्यून उपभोगवादको वकालत</li>
+                    </ul>
+                </div>
+                <div style="background:#f0e8e8;border-radius:12px;padding:0.8rem 1.2rem;">
+                    <h4 style="color:#8a2e2e;"><i class="fas fa-exclamation-triangle"></i> दुर्बल पक्ष</h4>
+                    <ul style="margin:0.2rem 0 0 0;padding-left:1.2rem;">
+                        <li>औपनिवेशीकरण र प्राकृतिक स्रोतको विनाशकारी दोहन</li>
+                        <li>आर्थिक असमानता, हिंसा, गरिबी</li>
+                        <li>उपभोगवाद र भौतिक समृद्धिको नाममा आपसी लडाइँ</li>
+                    </ul>
+                </div>
+            </div>
+            <a href="#" class="back-top"><i class="fas fa-arrow-up"></i> माथि फर्कनुहोस्</a>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- सेक्सन ५: तुलना                                               -->
+        <!-- ============================================================ -->
+        <section id="comparison" class="section">
+            <div class="section-header">
+                <span class="num">५</span>
+                <h2><i class="fas fa-arrows-left-right"></i> पूर्वीय र पाश्चात्य तुलना</h2>
+                <span class="tag">समन्वय</span>
+            </div>
+
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>आधार</th><th>पूर्वीय चिन्तन</th><th>पाश्चात्य चिन्तन</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>मूल स्रोत</strong></td><td>वेद, उपनिषद्, बुद्ध, जैन, किरात</td><td>प्राचीन ग्रिस (सुकरात, प्लेटो, एरिस्टोटल) र पुनर्जागरण</td></tr>
+                        <tr><td><strong>मुख्य दार्शनिक योगदान</strong></td><td>योग, ध्यान, आध्यात्मिक मूल्य</td><td>तार्किक बहस, एकेडेमी, भौतिक जगतको अध्ययन</td></tr>
+                        <tr><td><strong>जोड दिइएको विषय</strong></td><td>आन्तरिक शान्ति, नैतिकता, धर्म</td><td>वैज्ञानिक खोज, तर्क, प्रविधि, भौतिक विकास</td></tr>
+                        <tr><td><strong>दृष्टिकोण र पद्धति</strong></td><td>सामूहिकता, प्रकृतिसँग तादात्म्य, संश्लेषण</td><td>व्यक्तिवाद, आलोचनात्मक चेत, वस्तुगत विश्लेषण</td></tr>
+                        <tr><td><strong>लक्ष्य</strong></td><td>आत्मज्ञान र मोक्ष</td><td>नागरिक अधिकार, सुख र आर्थिक समृद्धि</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="subhead"><i class="fas fa-handshake"></i> समन्वय: पूर्वीय र पाश्चात्यको सङ्गम</div>
+            <ul>
+                <li><strong>पूर्वीयबाट पाश्चात्यले लिने:</strong> योग, ध्यान, आयुर्वेद, पर्यावरणमैत्री विचार, आध्यात्मिकता (पाश्चात्य विश्वविद्यालयहरूमा अनुसन्धान बढ्दो)।</li>
+                <li><strong>पाश्चात्यबाट पूर्वीयले लिने:</strong> प्रविधि, उद्यमशीलता, परिणाममुखी कार्यपद्धति, लोकतान्त्रिक पद्धति।</li>
+                <li><strong>वैश्वस्थानीयकरण (Glocalization):</strong> शिक्षा नीतिमा बहुसांस्कृतिकता, बहुविधता र प्रविधिको प्रयोगसँगै मौलिकता प्रवर्द्धन।</li>
+            </ul>
+            <p style="font-style:italic;color:var(--primary);">दुवै चिन्तनको समन्वयले वैश्विक सामञ्जस्य, सहकार्य र शान्ति प्रवर्द्धन गर्न सकिन्छ।</p>
+            <a href="#" class="back-top"><i class="fas fa-arrow-up"></i> माथि फर्कनुहोस्</a>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- सेक्सन ६: समाधान (Solved)                                     -->
+        <!-- ============================================================ -->
+        <section id="solved" class="section">
+            <div class="section-header">
+                <span class="num">६</span>
+                <h2><i class="fas fa-check-double"></i> समाधान (Solved Exercises)</h2>
+                <span class="tag">क्रियाकलाप</span>
+            </div>
+
+            <!-- क्रियाकलाप १ -->
+            <div class="subhead"><i class="fas fa-briefcase"></i> क्रियाकलाप १: १० पेसा र विशिष्ट जीवनोपयोगी सिप</div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>क्र.स.</th><th>पेसा</th><th>आवश्यक विशिष्ट जीवनोपयोगी सिप</th></tr></thead>
+                    <tbody>
+                        <tr><td>१</td><td>शिक्षक</td><td>प्रभावकारी सञ्चार, धैर्यता, सिर्जनात्मक शिक्षण कला</td></tr>
+                        <tr><td>२</td><td>कृषक</td><td>मौसमजन्य निर्णय, वातावरणीय सचेतना, कार्यमा दृढता</td></tr>
+                        <tr><td>३</td><td>डाक्टर</td><td>समानुभूति, जटिल परिस्थितिमा निर्णय, उच्च नैतिकता</td></tr>
+                        <tr><td>४</td><td>पसले/व्यापारी</td><td>अन्तरवैयक्तिक सिप, ग्राहक संवाद, आर्थिक अनुशासन</td></tr>
+                        <tr><td>५</td><td>सिकर्मी</td><td>ज्यामितीय र व्यावहारिक कुशलता, मापन ज्ञान, सिर्जनात्मकता</td></tr>
+                        <tr><td>६</td><td>सफ्टवेयर इन्जिनियर</td><td>समालोचनात्मक सोच, तार्किक समस्या समाधान, निरन्तर सिकाइ</td></tr>
+                        <tr><td>७</td><td>उद्यमी</td><td>जोखिम व्यवस्थापन, नेतृत्व, दृढता</td></tr>
+                        <tr><td>८</td><td>वकिल</td><td>तार्किक विश्लेषण, सार्वजनिक भनाइ, निष्पक्षता</td></tr>
+                        <tr><td>९</td><td>पत्रकार</td><td>सूचनाको वस्तुनिष्ठ विश्लेषण, सञ्चार, सत्यनिष्ठा</td></tr>
+                        <tr><td>१०</td><td>नर्स</td><td>आत्मजागरुकता, सेवाभाव, संवेग व्यवस्थापन</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- क्रियाकलाप २ -->
+            <div class="subhead"><i class="fas fa-microphone-alt"></i> क्रियाकलाप २: अन्तर्वार्ता प्रतिवेदन (स्थानीय अल्लो उद्योग)</div>
+            <div style="background:#faf8f5;border-radius:12px;padding:1rem 1.4rem;margin:0.5rem 0 1rem 0;">
+                <p><strong>प्रतिवेदन शीर्षक:</strong> स्थानीय अल्लो कपडा उद्योग सञ्चालकको व्यावसायिक यात्रा</p>
+                <ul>
+                    <li><strong>नाम:</strong> श्री हस्तमाया पुन, सञ्चालक: 'हिमाली अल्लो घरेलु उद्योग'</li>
+                    <li><strong>कार्यक्षेत्र रोज्नुको कारण:</strong> स्थानीय स्तरमा खेर गइरहेको अल्लोको धागोको सदुपयोग गरी पुर्ख्यौली सिपको व्यावसायिकरण।</li>
+                    <li><strong>मुख्य चुनौतीहरू:</strong> आधुनिक प्रविधिको अभाव, बिचौलियाहरूको प्रभाव, लगानीको सीमितता।</li>
+                    <li><strong>प्राप्त सफलता:</strong> २५ जना महिलालाई प्रत्यक्ष रोजगारी, राष्ट्रिय व्यापार मेलामा उत्कृष्ट उद्यमी पुरस्कार।</li>
+                    <li><strong>समुदायको भूमिका:</strong> कच्चा पदार्थ संकलनमा सहयोग; स्थानीय उत्पादनलाई सांस्कृतिक पहिचानका रूपमा अपनाएको।</li>
+                    <li><strong>निष्कर्ष:</strong> सफलताको कडी — कठिन समयमा <span class="highlight">धैर्यता</span> र <span class="highlight">सिर्जनात्मक सोच</span>।</li>
+                </ul>
+            </div>
+
+            <!-- अभ्यास प्रश्नहरू -->
+            <div class="subhead"><i class="fas fa-question-circle"></i> अभ्यास प्रश्नहरूको उत्तर</div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> (क) जीवनोपयोगी शिक्षामा समावेश हुने मुख्य विषयवस्तुहरू लेख्नुहोस्।</div>
+                <div class="a">
+                    <ul>
+                        <li>स्वस्थ जीवनशैली, आहारविहार, शारीरिक समुन्नति</li>
+                        <li>नैतिक मूल्य-मान्यता, असल चरित्र, मर्यादित व्यवहार</li>
+                        <li>व्यावहारिक र प्राविधिक सिप</li>
+                        <li>मनोसामाजिक पक्ष र अन्तर्निहित गुणहरू</li>
+                        <li>नागरिक अधिकार र कर्तव्यको बोध</li>
+                        <li>समूहमा काम गर्ने सिप र प्रभावकारी सञ्चार</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> (ख) WHO (१९९९) ले पहिचान गरेका ६ जीवनोपयोगी सिपहरू व्याख्या गर्नुहोस्।</div>
+                <div class="a">
+                    <ol>
+                        <li><strong>सञ्चार र अन्तरवैयक्तिक सिप:</strong> विचार, भावना, सूचनाको प्रभावकारी आदानप्रदान; सकारात्मक सम्बन्ध निर्माण।</li>
+                        <li><strong>निर्णय गर्ने र समस्या समाधान सिप:</strong> विकल्प विश्लेषण, सही निर्णय, रचनात्मक समाधान।</li>
+                        <li><strong>सिर्जनात्मक र समालोचनात्मक सोच:</strong> नयाँ ढङ्गले सोच्ने; सूचना र तर्कको गहिरो विश्लेषण।</li>
+                        <li><strong>आत्मजागरुकता र समानुभूति:</strong> आफ्ना बल-कमजोरी चिन्ने; अरूको दृष्टिकोण बुझ्ने।</li>
+                        <li><strong>दृढता र आत्मनियन्त्रण:</strong> दबाबमा पनि संयमित, भावना नियन्त्रण।</li>
+                        <li><strong>उत्थानशीलता र समस्यालाई सम्बोधन:</strong> तनाव वा प्रतिकूलताबाट छिट्टै उठ्ने, चुनौती व्यवस्थापन।</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> (ग) सामाजिक अध्ययन र जीवनोपयोगी शिक्षाबिचको अन्तरसम्बन्ध विश्लेषण गर्नुहोस्।</div>
+                <div class="a">
+                    <ul>
+                        <li><strong>ज्ञान बनाम प्रयोग:</strong> सामाजिक अध्ययनले समाजको <em>ज्ञान</em> दिन्छ; जीवनोपयोगी सिपले व्यवहारमा उतार्ने <em>सिप</em> सिकाउँछ।</li>
+                        <li><strong>समाज प्रयोगशालाको रूपमा:</strong> सामाजिक अध्ययन विज्ञान; जीवनोपयोगी शिक्षा त्यसको प्रयोगशाला।</li>
+                        <li><strong>सक्षम नागरिक:</strong> सामाजिक अध्ययनले अधिकार-कर्तव्यको सैद्धान्तिक बोध; जीवनोपयोगी शिक्षाले चरित्र विकास।</li>
+                        <li><strong>एकीकृत सिकाइ:</strong> सामाजिक अध्ययनका क्रियाकलाप (परियोजना, समूह कार्य) ले नेतृत्व, सहकार्य जस्ता सिपको अभ्यास गराउँछ।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ६४ कला -->
+            <div class="subhead"><i class="fas fa-palette"></i> परियोजना: ६४ कलाको परिचय र वर्गीकरण</div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>वर्ग</th><th>समावेश हुने कलाहरू (उदाहरण)</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>ललितकला</strong></td><td>गीत, वाद्य, नृत्य, चित्रकर्म, माल्यग्रन्थन, प्रतिमा निर्माण</td></tr>
+                        <tr><td><strong>युद्धकला</strong></td><td>शस्त्रास्त्र सञ्चालन, व्यूह रचना, व्यायाम, धनुर्विद्या</td></tr>
+                        <tr><td><strong>व्यावहारिक कला</strong></td><td>सूपकर्म (पाककला), सूचिकर्म (सिलाइ-बुनाइ), रङ्गरोगन, केशविन्यास, सुगन्ध निर्माण</td></tr>
+                        <tr><td><strong>वैज्ञानिक शिल्प</strong></td><td>धातुविज्ञान, यन्त्रमातृका, वास्तुविद्या, बागवानी, ज्योतिष</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><strong>आधुनिक सान्दर्भिकता:</strong> (१) उद्यमशीलता र आत्मनिर्भरता, (२) मानसिक सन्तुलन, (३) सांस्कृतिक दिगोपना र पर्यटन।</p>
+
+            <a href="#" class="back-top"><i class="fas fa-arrow-up"></i> माथि फर्कनुहोस्</a>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- सेक्सन ७: नमुना प्रश्नोत्तर (Model Q&A)                       -->
+        <!-- ============================================================ -->
+        <section id="qa" class="section">
+            <div class="section-header">
+                <span class="num">७</span>
+                <h2><i class="fas fa-file-alt"></i> नमुना प्रश्नोत्तर</h2>
+                <span class="tag">१ · ५ · ८ अङ्क</span>
+            </div>
+
+            <!-- अति संक्षिप्त (१ अङ्क) -->
+            <div class="subhead"><i class="fas fa-circle"></i> अति संक्षिप्त उत्तर (१ अङ्क)</div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> १. सामाजिक अध्ययन भनेको के हो?</div>
+                <div class="a">मानव र उसको भौतिक, सामाजिक, राजनीतिक, सांस्कृतिक तथा आर्थिक वातावरणबीचको अन्तरक्रियाको एकीकृत र व्यवस्थित अध्ययनलाई सामाजिक अध्ययन भनिन्छ।</div>
+            </div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> २. जीवनोपयोगी सिप (Life Skills) भनेको के हो?</div>
+                <div class="a">मानव जीवनका लागि आवश्यक र उपयोगी सिपहरू, जसले दैनिक चुनौती सामना गर्न र शारीरिक, मानसिक, आध्यात्मिक रूपमा सक्षम बनाउँछ।</div>
+            </div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> ३. WHO ले पहिचान गरेका कुनै दुई जीवनोपयोगी सिप लेख्नुहोस्।</div>
+                <div class="a">(क) दृढता र आत्मनियन्त्रण &nbsp; (ख) उत्थानशीलता (Resilience)।</div>
+            </div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> ४. पूर्वीय चिन्तनको आधारभूत स्रोत केलाई मानिन्छ?</div>
+                <div class="a">वेद, उपनिषद्, हिन्दु, बौद्ध, जैन, किरात दर्शन तथा एसियाली सभ्यताका मूल्य-मान्यताहरू।</div>
+            </div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> ५. बुद्धका पञ्चशील नियममध्ये एक उल्लेख गर्नुहोस्।</div>
+                <div class="a">चोरी नगर्ने (अस्तेय)।</div>
+            </div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> ६. पाश्चात्य चिन्तनका दुई प्रख्यात दार्शनिकको नाम लेख्नुहोस्।</div>
+                <div class="a">सुकरात (Socrates) र एरिस्टोटल (Aristotle)।</div>
+            </div>
+
+            <!-- संक्षिप्त (५ अङ्क) -->
+            <div class="subhead" style="margin-top:2rem;"><i class="fas fa-star"></i> संक्षिप्त उत्तर (५ अङ्क)</div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> १. सामाजिक अध्ययन र जीवनोपयोगी सिपबिचको अन्तरसम्बन्ध स्पष्ट पार्नुहोस्।</div>
+                <div class="a">
+                    <ul>
+                        <li><strong>प्राचीन र आधुनिक:</strong> नेपालको १४ विद्या, १८ शास्त्र, ६४ कला जीवनोपयोगी सिपका प्रारम्भिक रूप हुन्, जसलाई सामाजिक अध्ययनले सामाजिक परिवेशमा जोडेर अध्ययन गर्दछ।</li>
+                        <li><strong>ज्ञानको व्यवहारिक प्रयोग:</strong> सामाजिक अध्ययनले सैद्धान्तिक ज्ञान दिन्छ; जीवनोपयोगी सिपले निर्णय, समस्या समाधान र सञ्चारमा प्रयोग गराउँछ।</li>
+                        <li><strong>सक्षम नागरिक:</strong> सामाजिक अध्ययनले नागरिक सक्षमताको आधार; जीवनोपयोगी शिक्षाले आन्तरिक गुण र सामाजिक व्यवहार विकास गर्छ।</li>
+                        <li><strong>प्रयोगात्मक सिकाइ:</strong> सामाजिक अध्ययनका परियोजना कार्यले सहकार्य र नेतृत्व जस्ता सिपको अभ्यास गराउँछ।</li>
+                    </ul>
+                    <p><em>निष्कर्ष:</em> सामाजिक अध्ययनले समाजको संरचना बुझाउँछ; जीवनोपयोगी सिपले व्यक्तिलाई त्यही समाजमा सफल र नैतिक रूपमा बाँच्न सक्षम बनाउँछ।</p>
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> २. पूर्वीय चिन्तनले मानव चरित्र निर्माणमा कसरी जोड दिन्छ? स्पष्ट पार्नुहोस्।</div>
+                <div class="a">
+                    <ul>
+                        <li><strong>धर्मका १० लक्षण:</strong> धैर्य, क्षमा, आत्मनियन्त्रण, अस्तेय, शौच, इन्द्रिय निग्रह, बुद्धि, विद्या, सत्य, अक्रोध — यी सबैले नैतिक रूपमा सबल बनाउँछन्।</li>
+                        <li><strong>पुरुषार्थ चतुष्टय:</strong> धर्म, अर्थ, काम, मोक्षबीच सन्तुलनले अनुशासित र उद्देश्यपूर्ण जीवन प्रेरित गर्छ।</li>
+                        <li><strong>मध्यम मार्ग र पञ्चशील:</strong> अतिवादबाट बच्ने, अहिंसा, सत्य, अस्तेय आदि पालन गरी शान्त र संयमित चरित्र निर्माण।</li>
+                        <li><strong>आध्यात्मिक स्वास्थ्य:</strong> योग, ध्यान, आहारमा जोड दिँदै मानसिक र आध्यात्मिक समुन्नति नै वास्तविक चरित्र हो भन्ने मान्यता।</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> ३. पूर्वीय र पाश्चात्य चिन्तनको तुलनात्मक अध्ययन प्रस्तुत गर्नुहोस्।</div>
+                <div class="a">
+                    <div class="table-wrap" style="margin:0.3rem 0;">
+                        <table>
+                            <thead><tr><th>आधार</th><th>पूर्वीय</th><th>पाश्चात्य</th></tr></thead>
+                            <tbody>
+                                <tr><td>मूल स्रोत</td><td>वेद, उपनिषद्, बुद्ध, जैन, किरात</td><td>प्राचीन ग्रिस र पुनर्जागरण</td></tr>
+                                <tr><td>मुख्य योगदान</td><td>योग, ध्यान, आध्यात्मिक मूल्य</td><td>तार्किक बहस, एकेडेमी, भौतिक जगतको अध्ययन</td></tr>
+                                <tr><td>जोड</td><td>आन्तरिक शान्ति, नैतिकता, धर्म</td><td>विज्ञान, प्रविधि, भौतिक विकास</td></tr>
+                                <tr><td>दृष्टिकोण</td><td>सामूहिकता, प्रकृतिसँग तादात्म्य</td><td>व्यक्तिवाद, आलोचनात्मक चेत</td></tr>
+                                <tr><td>लक्ष्य</td><td>आत्मज्ञान, मोक्ष</td><td>अधिकार, सुख, आर्थिक समृद्धि</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p><em>दुवैको उद्देश्य मानव कल्याण नै हो; एउटाले मानसिक शान्तिमा, अर्कोले भौतिक सहजतामा जोड दिन्छ।</em></p>
+                </div>
+            </div>
+
+            <!-- विस्तृत (८ अङ्क) -->
+            <div class="subhead" style="margin-top:2rem;"><i class="fas fa-gem"></i> विस्तृत उत्तर (८ अङ्क)</div>
+
+            <div class="qa-block">
+                <div class="q"><i class="fas fa-question"></i> समन्वयात्मक चिन्तन: आधुनिक विश्वमा भौतिक प्रगति र आध्यात्मिक शान्तिको सङ्गम</div>
+                <div class="a">
+                    <ol>
+                        <li><strong>साधन र साध्य:</strong> पाश्चात्य चिन्तनले विज्ञान र प्रविधि (साधन) दिन्छ; पूर्वीय चिन्तनले तिनको सही प्रयोगका लागि नैतिकता र आध्यात्मिक दृष्टि (साध्य) दिन्छ।</li>
+                        <li><strong>मानसिक स्वास्थ्य:</strong> प्रतिस्पर्धात्मक संसारमा पाश्चात्य मनोविज्ञान र पूर्वीय योग-ध्यानको समन्वय तनाव व्यवस्थापनमा अत्यन्त प्रभावकारी छ।</li>
+                        <li><strong>दिगो विकास:</strong> पाश्चात्य औद्योगिक प्रविधि + पूर्वीय 'प्रकृतिसँग तादात्म्य' को मिलनले मात्र जलवायु परिवर्तनको समाधान सम्भव छ।</li>
+                        <li><strong>अधिकार र कर्तव्य:</strong> पाश्चात्य मानव अधिकार + पूर्वीय 'धर्म' (कर्तव्यबोध) ले जिम्मेवार नागरिक र सभ्य समाज निर्माण गर्छ।</li>
+                        <li><strong>नेपाल र वैश्वस्थानीयकरण:</strong> नेपालले आफ्नो मौलिक पहिचान (आयुर्वेद, सदाचार, ६४ कला) जोगाउँदै वैश्विक वैज्ञानिक शिक्षा र प्रविधिलाई आत्मसात् गर्नुपर्छ।</li>
+                    </ol>
+                    <p><em>निष्कर्ष:</em> पाश्चात्य चिन्तनले संसारलाई बुझ्ने र परिवर्तन गर्ने शक्ति दिन्छ; पूर्वीय चिन्तनले आफैँलाई चिन्ने र शान्त रहने कला सिकाउँछ। दुवैको समन्वय नै दिगो सुख र विश्व शान्तिको प्रधान आवश्यकता हो।</p>
+                </div>
+            </div>
+
+            <a href="#" class="back-top"><i class="fas fa-arrow-up"></i> माथि फर्कनुहोस्</a>
+        </section>
+
+        <!-- ============================================================ -->
+        <!-- सेक्सन ८: परीक्षा टिप्स                                      -->
+        <!-- ============================================================ -->
+        <section id="tips" class="section">
+            <div class="section-header">
+                <span class="num">८</span>
+                <h2><i class="fas fa-lightbulb"></i> परीक्षाका लागि विशेष सुझाव</h2>
+                <span class="tag">expert tips</span>
+            </div>
+
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin:0.5rem 0;">
+                <div style="background:#faf8f5;border-radius:12px;padding:1rem 1.2rem;border-left:4px solid var(--secondary);">
+                    <h4 style="color:var(--primary);"><i class="fas fa-bookmark" style="color:var(--secondary);"></i> विशिष्ट शब्दावली प्रयोग</h4>
+                    <p style="font-size:0.9rem;margin:0;">'धर्मका १० लक्षण', '१४ विद्या', '१८ शास्त्र', 'वैश्वस्थानीयकरण' जस्ता शब्दहरू सही सन्दर्भमा प्रयोग गर्नुहोस्।</p>
+                </div>
+                <div style="background:#faf8f5;border-radius:12px;padding:1rem 1.2rem;border-left:4px solid var(--secondary);">
+                    <h4 style="color:var(--primary);"><i class="fas fa-list-ul" style="color:var(--secondary);"></i> बुँदागत र स्पष्ट प्रस्तुति</h4>
+                    <p style="font-size:0.9rem;margin:0;">५ र ८ अङ्कका प्रश्नमा छोटो परिचय, बुँदागत व्याख्या र तार्किक निष्कर्ष लेख्नुहोस्। महत्त्वपूर्ण शब्द बोल्ड वा अन्डरलाइन गर्नुहोस्।</p>
+                </div>
+                <div style="background:#faf8f5;border-radius:12px;padding:1rem 1.2rem;border-left:4px solid var(--secondary);">
+                    <h4 style="color:var(--primary);"><i class="fas fa-check-circle" style="color:var(--secondary);"></i> तथ्यगत शुद्धता</h4>
+                    <p style="font-size:0.9rem;margin:0;">WHO सिप वा बुद्धका पञ्चशील लेख्दा स्रोतमा आधारित ठ्याक्कै शब्दहरू प्रयोग गर्नुहोस् — यसले अङ्क प्राप्त गर्न सजिलो हुन्छ।</p>
+                </div>
+                <div style="background:#faf8f5;border-radius:12px;padding:1rem 1.2rem;border-left:4px solid var(--secondary);">
+                    <h4 style="color:var(--primary);"><i class="fas fa-clock" style="color:var(--secondary);"></i> समय व्यवस्थापन</h4>
+                    <p style="font-size:0.9rem;margin:0;">१ अङ्कका लागि २-३ मिनेट, ५ अङ्कका लागि १०-१२ मिनेट, ८ अङ्कका लागि १५-१८ मिनेट छुट्याउनुहोस्।</p>
+                </div>
+            </div>
+
+            <div style="background:var(--primary);color:#fff;border-radius:12px;padding:1rem 1.4rem;margin-top:0.8rem;">
+                <p style="margin:0;color:#fff;font-weight:500;"><i class="fas fa-quote-left" style="color:var(--secondary-light);"></i> सफलता साना प्रयासहरूको योग हो, जुन दिनहुँ दोहोरिन्छ। निरन्तर अभ्यास गर्नुहोस्!</p>
+            </div>
+            <a href="#" class="back-top"><i class="fas fa-arrow-up"></i> माथि फर्कनुहोस्</a>
+        </section>
+
+        <!-- ===== फुटर ===== -->
+        <footer class="footer">
+            <p><i class="fas fa-graduation-cap"></i> कक्षा १२ सामाजिक अध्ययन · एकाइ १ — <strong>एन. रेग्मी</strong> &middot; <a href="mailto:nrgegmi511@gmail.com" style="color:var(--primary);">nrgegmi511@gmail.com</a></p>
+            <p style="font-size:0.8rem;margin-top:0.3rem;"><i class="fas fa-heart" style="color:#c79a3e;"></i> विद्यार्थीहरूको लागि तयार &middot; २०२६</p>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- ===== एकोर्डियन स्क्रिप्ट ===== -->
+    <script>
+        (function() {
+            const buttons = document.querySelectorAll('.accordion-btn');
+            buttons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const body = this.nextElementSibling;
+                    const isOpen = body.classList.contains('open');
+
+                    const parent = this.closest('.accordion');
+                    parent.querySelectorAll('.accordion-body').forEach(b => b.classList.remove('open'));
+                    parent.querySelectorAll('.accordion-btn').forEach(b => b.classList.remove('open'));
+
+                    if (!isOpen) {
+                        body.classList.add('open');
+                        this.classList.add('open');
+                    }
+                });
+            });
+
+            // पहिलो एकोर्डियन खोल्नुहोस् (वैकल्पिक)
+            const firstBtn = document.querySelector('.accordion-btn');
+            if (firstBtn) {
+                firstBtn.click();
+            }
+        })();
+    </script>
+
+</body>
+</html>
