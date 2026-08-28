@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+    <title>एकाइ १ - सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #e84315;
+            --primary-dark: #c0392b;
+            --secondary: #2d3436;
+            --accent1: #fdcb6e;
+            --accent2: #00b894;
+            --accent3: #6c5ce7;
+            --accent4: #0984e3;
+            --bg-light: #f8f9fa;
+            --bg-card: #ffffff;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            --radius: 16px;
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', 'Segoe UI', sans-serif;
+            background: var(--bg-light);
+            color: var(--secondary);
+            line-height: 1.8;
+            padding: 0;
+            min-height: 100vh;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            background: linear-gradient(135deg, #e84315 0%, #d63031 50%, #c0392b 100%);
+            color: #fff;
+            padding: 20px 16px 30px;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 4px 20px rgba(232, 67, 21, 0.4);
+            border-bottom: 4px solid var(--accent1);
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .header-title {
+            font-size: clamp(1.1rem, 4vw, 1.8rem);
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-title span {
+            background: var(--accent1);
+            color: var(--primary-dark);
+            font-size: 0.55em;
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-weight: 800;
+        }
+
+        .header-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .header-badge i {
+            font-style: normal;
+            display: inline-block;
+            animation: pulse-badge 2s infinite;
+        }
+
+        @keyframes pulse-badge {
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        /* ===== NAVIGATION ===== */
+        .nav-bar {
+            background: #fff;
+            padding: 10px 12px;
+            position: sticky;
+            top: 72px;
+            z-index: 998;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+            border-bottom: 2px solid #f0f0f0;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .nav-bar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 6px;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            min-width: max-content;
+        }
+
+        .nav-btn {
+            background: transparent;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-family: inherit;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            white-space: nowrap;
+            background: #f1f2f6;
+            border: 1px solid transparent;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent1);
+            color: #000;
+            transform: translateY(-1px);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: #fff;
+            box-shadow: 0 4px 15px rgba(232, 67, 21, 0.35);
+        }
+
+        .nav-btn .badge {
+            background: rgba(255, 255, 255, 0.3);
+            padding: 0 8px;
+            border-radius: 20px;
+            font-size: 0.6rem;
+            margin-left: 4px;
+        }
+
+        .nav-btn.active .badge {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* ===== MAIN CONTAINER ===== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px 12px 80px;
+        }
+
+        /* ===== SECTION HEADERS ===== */
+        .section-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: #fff;
+            padding: 18px 22px;
+            border-radius: var(--radius);
+            margin: 28px 0 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            box-shadow: 0 4px 18px rgba(232, 67, 21, 0.3);
+            scroll-margin-top: 140px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(1.1rem, 3vw, 1.6rem);
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-header .icon {
+            font-size: 1.6rem;
+            line-height: 1;
+        }
+
+        .section-header .count {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 2px 14px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .section-sub {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 2px 14px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        /* ===== CARDS — always open ===== */
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 14px;
+            overflow: visible;
+            transition: var(--transition);
+            border-left: 5px solid var(--accent2);
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+            transform: translateY(-2px);
+        }
+
+        .card-header {
+            padding: 16px 18px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: #fafafa;
+            border-bottom: 1px solid #f0f0f0;
+            user-select: none;
+        }
+
+        .card-header .num {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 1.1rem;
+            min-width: 32px;
+            background: #fde8e4;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .card-header .q-text {
+            font-weight: 700;
+            font-size: clamp(0.95rem, 2vw, 1.1rem);
+            flex: 1;
+        }
+
+        .card-body {
+            padding: 18px 18px 22px;
+            background: #fff;
+        }
+
+        .card-body .answer {
+            font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+            font-weight: 500;
+            line-height: 1.9;
+            color: #1a1a2e;
+        }
+
+        .card-body .answer b,
+        .card-body .answer strong {
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+
+        .card-body .answer ul,
+        .card-body .answer ol {
+            padding-left: 24px;
+            margin: 6px 0 10px;
+        }
+
+        .card-body .answer li {
+            margin-bottom: 4px;
+        }
+
+        .card-body .answer .highlight {
+            background: var(--accent1);
+            padding: 0 6px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        /* ===== TABLE ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 10px 0 8px;
+            border-radius: 12px;
+            border: 1px solid #eef0f3;
+        }
+
+        .table-wrapper table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: clamp(0.8rem, 1.4vw, 0.95rem);
+            min-width: 500px;
+        }
+
+        .table-wrapper th {
+            background: var(--primary);
+            color: #fff;
+            font-weight: 700;
+            padding: 12px 14px;
+            text-align: left;
+        }
+
+        .table-wrapper td {
+            padding: 11px 14px;
+            border-bottom: 1px solid #f0f0f0;
+            vertical-align: top;
+        }
+
+        .table-wrapper tr:nth-child(even) td {
+            background: #fafbfc;
+        }
+
+        .table-wrapper tr:hover td {
+            background: #f0f8ff;
+        }
+
+        .table-wrapper td:first-child {
+            font-weight: 700;
+            color: var(--primary-dark);
+            width: 28%;
+        }
+
+        /* ===== COMPARISON TABLE SPECIAL ===== */
+        .comp-table th:first-child {
+            background: var(--accent3);
+        }
+        .comp-table th:last-child {
+            background: var(--accent4);
+        }
+        .comp-table td:first-child {
+            font-weight: 800;
+            color: var(--accent3);
+        }
+        .comp-table td:last-child {
+            color: var(--accent4);
+        }
+
+        /* ===== FLOW BOX ===== */
+        .flow-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #eef0f3 100%);
+            border-radius: 12px;
+            padding: 18px 16px;
+            margin: 12px 0;
+            border-left: 6px solid var(--accent2);
+            font-weight: 600;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .flow-box .arrow {
+            font-size: 1.8rem;
+            color: var(--accent2);
+        }
+
+        .flow-box .step {
+            background: #fff;
+            padding: 6px 18px;
+            border-radius: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            font-weight: 700;
+            display: inline-block;
+        }
+
+        /* ===== SCROLL TO TOP ===== */
+        .scroll-top {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: var(--primary);
+            color: #fff;
+            width: 54px;
+            height: 54px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.6rem;
+            box-shadow: 0 6px 24px rgba(232, 67, 21, 0.4);
+            cursor: pointer;
+            transition: var(--transition);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: scale(0.8);
+            pointer-events: none;
+        }
+
+        .scroll-top.visible {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        .scroll-top:hover {
+            transform: scale(1.08) translateY(-3px);
+            box-shadow: 0 8px 32px rgba(232, 67, 21, 0.5);
+        }
+
+        /* ===== SEARCH ===== */
+        .search-box {
+            position: relative;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 10px 18px 10px 44px;
+            border-radius: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(4px);
+            color: #fff;
+            font-family: inherit;
+            font-size: 0.85rem;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .search-box input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .search-box input:focus {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: #fff;
+        }
+
+        .search-box .search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.1rem;
+            opacity: 0.7;
+        }
+
+        .highlight-match {
+            background: #fdcb6e;
+            padding: 0 4px;
+            border-radius: 4px;
+            font-weight: 700;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 30px 16px;
+            font-size: 1.1rem;
+            color: #999;
+            display: none;
+        }
+
+        .no-results.show {
+            display: block;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 640px) {
+            .header {
+                padding: 14px 12px 20px;
+            }
+            .header-title {
+                font-size: 1rem;
+            }
+            .header-badge {
+                font-size: 0.6rem;
+                padding: 4px 12px;
+            }
+            .nav-bar {
+                top: 62px;
+                padding: 8px 10px;
+            }
+            .nav-btn {
+                font-size: 0.65rem;
+                padding: 6px 12px;
+            }
+            .section-header {
+                padding: 14px 16px;
+                margin: 20px 0 14px;
+            }
+            .section-header h2 {
+                font-size: 1rem;
+            }
+            .card-header {
+                padding: 12px 14px;
+            }
+            .card-header .num {
+                width: 28px;
+                height: 28px;
+                font-size: 0.85rem;
+                min-width: 28px;
+            }
+            .card-header .q-text {
+                font-size: 0.9rem;
+            }
+            .card-body {
+                padding: 14px 14px 18px;
+            }
+            .card-body .answer {
+                font-size: 0.85rem;
+            }
+            .container {
+                padding: 12px 8px 80px;
+            }
+            .scroll-top {
+                width: 46px;
+                height: 46px;
+                font-size: 1.2rem;
+                bottom: 18px;
+                right: 18px;
+            }
+            .table-wrapper table {
+                font-size: 0.75rem;
+                min-width: 380px;
+            }
+            .table-wrapper th,
+            .table-wrapper td {
+                padding: 8px 10px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .header-title {
+                font-size: 0.85rem;
+            }
+            .nav-btn {
+                font-size: 0.6rem;
+                padding: 4px 10px;
+            }
+            .card-header .q-text {
+                font-size: 0.8rem;
+            }
+            .card-body .answer {
+                font-size: 0.8rem;
+            }
+            .section-header h2 {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ===== PRINT ===== */
+        @media print {
+            .nav-bar,
+            .scroll-top {
+                display: none !important;
+            }
+            .header {
+                position: static !important;
+            }
+            .card {
+                break-inside: avoid;
+                border-left: 3px solid #ccc;
+            }
+            .section-header {
+                background: #333 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .table-wrapper th {
+                background: #333 !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        /* ===== ANIMATION ===== */
+        .fade-in {
+            animation: fadeUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smartboard / large screen */
+        @media (min-width: 1200px) {
+            .container {
+                padding: 24px 20px 100px;
+            }
+            .card-header {
+                padding: 20px 26px;
+            }
+            .card-body {
+                padding: 22px 26px 28px;
+            }
+            .card-body .answer {
+                font-size: 1.1rem;
+            }
+            .section-header {
+                padding: 24px 32px;
+            }
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="top">
+        <div class="header-inner">
+            <div class="header-title">
+                📘 एकाइ १
+                <span>NEB</span>
+            </div>
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="खोज्नुहोस्..." aria-label="Search">
+            </div>
+            <div class="header-badge">
+                <i>🎯</i> कक्षा १२ · सामाजिक अध्ययन
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav-bar" id="mainNav">
+        <div class="nav-inner">
+            <button class="nav-btn active" data-target="section-short" onclick="scrollToSection('section-short')">
+                ⚡ अति छोटो <span class="badge">२०</span>
+            </button>
+            <button class="nav-btn" data-target="section-medium" onclick="scrollToSection('section-medium')">
+                📝 छोटो <span class="badge">२०</span>
+            </button>
+            <button class="nav-btn" data-target="section-compare" onclick="scrollToSection('section-compare')">
+                ⚖️ तुलना
+            </button>
+            <button class="nav-btn" data-target="section-long" onclick="scrollToSection('section-long')">
+                📚 लामो <span class="badge">१५</span>
+            </button>
+            <button class="nav-btn" data-target="section-flow" onclick="scrollToSection('section-flow')">
+                🔄 प्रक्रिया
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN ===== -->
+    <main class="container" id="mainContainer">
+
+        <!-- ============================================================ -->
+        <!-- ===== अति छोटो उत्तर ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-short">
+            <h2><span class="icon">⚡</span> अति छोटो उत्तर <span class="count">१ अङ्क</span></h2>
+            <span class="section-sub">२० प्रश्नहरू</span>
+        </div>
+
+        <div id="shortContainer">
+
+            <!-- 1 -->
+            <div class="card fade-in" data-search="सामाजिक अध्ययन">
+                <div class="card-header">
+                    <span class="num">१</span>
+                    <span class="q-text"><b>सामाजिक अध्ययन भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">सामाजिक अध्ययन नागरिक सक्षमता विकास गर्नका लागि गरिने सामाजिक विज्ञानहरूको एकीकृत अध्ययन हो, जसअन्तर्गत मानव र उसको भौतिक, सामाजिक, राजनीतिक, सांस्कृतिक तथा आर्थिक वातावरणसँगको अन्तरक्रियाको अध्ययन गरिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा">
+                <div class="card-header">
+                    <span class="num">२</span>
+                    <span class="q-text"><b>जीवनोपयोगी शिक्षा भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">मानव जीवनलाई सरल, सफल, मर्यादित र सार्थक बनाउनका लागि आवश्यक पर्ने व्यवहारिक एवं जीवनोपयोगी सिपहरु सिकाउने शिक्षालाई जीवनोपयोगी शिक्षा भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी सिप">
+                <div class="card-header">
+                    <span class="num">३</span>
+                    <span class="q-text"><b>जीवनोपयोगी सिप भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">मानव जीवनका लागि आवश्यक, उपयोगी र दैनिक व्यवहारलाई सहज एवं उत्पादनशील बनाउने विभिन्न मनोसामाजिक तथा व्यवहारिक क्षमता वा सिपहरुलाई जीवनोपयोगी सिप भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="card fade-in" data-search="स्वस्थ जीवनशैली">
+                <div class="card-header">
+                    <span class="num">४</span>
+                    <span class="q-text"><b>स्वस्थ जीवनशैली भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">असल चरित्र, सदाचार, योग, ध्यान, उपयुक्त आहारविहार, शारीरिक तथा मानसिक सुस्वास्थ्य र आध्यात्मिक सन्तुलन कायम राखी अनुशासित रूपमा जिउने पद्धतिलाई स्वस्थ जीवनशैली भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा विषयवस्तु">
+                <div class="card-header">
+                    <span class="num">५</span>
+                    <span class="q-text"><b>जीवनोपयोगी शिक्षामा समावेश हुने कुनै दुई विषयवस्तु लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>क)</b> सभ्य सामाजिक सम्बन्ध र नैतिक मर्यादापूर्ण व्यवहारको विकास।</li>
+                            <li><b>ख)</b> प्रभावकारी सञ्चार गर्ने सिप तथा समूहमा काम गर्ने सिपको सिकाइ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="card fade-in" data-search="समानुभूति">
+                <div class="card-header">
+                    <span class="num">६</span>
+                    <span class="q-text"><b>समानुभूति भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">अरूको दुःख, भावना, दृष्टिकोण र परिस्थितिलाई आफ्नै ठानेर महसुस गर्ने र सोही अनुसार सहानुभूतिपूर्वक बुझ्ने मानवीय क्षमता वा सिपलाई समानुभूति भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="card fade-in" data-search="सिर्जनात्मक सिप">
+                <div class="card-header">
+                    <span class="num">७</span>
+                    <span class="q-text"><b>सिर्जनात्मक सिपको एउटा महत्त्व लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">सिर्जनात्मक सिपको मुख्य महत्त्व नयाँ विचारहरूको सिर्जना गरी दैनिक जीवनका समस्याहरूलाई नौलो, मौलिक र प्रभावकारी ढङ्गले समाधान गर्नु हो।</div>
+                </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="card fade-in" data-search="आत्मजागरुकता">
+                <div class="card-header">
+                    <span class="num">८</span>
+                    <span class="q-text"><b>आत्मजागरुकता भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">आफ्नो क्षमता, सीमा, भावना, रुचि, विचार, सबल पक्ष र कमजोरीहरूलाई आफैँले स्पष्ट रूपमा चिन्न र बुझ्न सक्ने क्षमतालाई आत्मजागरुकता भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="card fade-in" data-search="निर्णय गर्ने सिप">
+                <div class="card-header">
+                    <span class="num">९</span>
+                    <span class="q-text"><b>निर्णय गर्ने सिप भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">उपलब्ध विभिन्न विकल्पहरूमध्येबाट परिस्थिति अनुकूल सबैभन्दा उपयुक्त, तर्कपूर्ण र न्यायोचित विकल्प छनोट गर्न सक्ने क्षमतालाई निर्णय गर्ने सिप भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="card fade-in" data-search="समस्या समाधान सिप">
+                <div class="card-header">
+                    <span class="num">१०</span>
+                    <span class="q-text"><b>समस्या समाधान सिप भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">दैनिक जीवनमा आइपर्ने विभिन्न जटिलता, चुनौती वा कठिनाइहरूलाई पहिचान गरी तिनको उपयुक्त, व्यवहारिक र रचनात्मक समाधान पहिल्याउने क्षमतालाई समस्या समाधान सिप भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="card fade-in" data-search="चिन्तन परम्परा">
+                <div class="card-header">
+                    <span class="num">११</span>
+                    <span class="q-text"><b>चिन्तन परम्परा भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">मानव सभ्यताको विकासक्रमसँगै संसार, जीवन र जगत्लाई हेर्ने दृष्टिकोणको रूपमा विकसित भएका विभिन्न दार्शनिक, वैचारिक, धार्मिक र सांस्कृतिक सोचाइको पद्धतिलाई चिन्तन परम्परा भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="card fade-in" data-search="पूर्वीय चिन्तन परम्परा">
+                <div class="card-header">
+                    <span class="num">१२</span>
+                    <span class="q-text"><b>पूर्वीय चिन्तन परम्परा भन्नाले के बुझिन्छ?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">पूर्वीय दर्शन, धर्म (हिन्दु, बौद्ध, जैन, किरात आदि), संस्कार, संस्कृति, सभ्यता, रीतिस्थिति र कला आदिमा आधारित रही एसियाको पूर्वी, दक्षिण र दक्षिण-पूर्वी भूभागमा विकास भएको दार्शनिक एवं वैचारिक प्रणालीलाई पूर्वीय चिन्तन परम्परा भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 13 -->
+            <div class="card fade-in" data-search="पाश्चात्य चिन्तन परम्परा">
+                <div class="card-header">
+                    <span class="num">१३</span>
+                    <span class="q-text"><b>पाश्चात्य चिन्तन परम्परा भन्नाले के बुझिन्छ?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">प्राचीन ग्रिसलाई मूल स्रोत मानी युरोप र पश्चिमा देशहरूमा विकास भएको, इसाई धर्मदर्शन, पुनर्जागरण, वैचारिक स्वतन्त्रता र वैज्ञानिक खोजमा आधारित चिन्तन प्रणालीलाई पाश्चात्य चिन्तन परम्परा भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 14 -->
+            <div class="card fade-in" data-search="वैदिक दर्शन षड्दर्शन">
+                <div class="card-header">
+                    <span class="num">१४</span>
+                    <span class="q-text"><b>वैदिक दर्शनलाई किन षड्दर्शन भनिन्छ?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">वैदिक चिन्तन अन्तर्गत वेदमा आधारित भएर विकास भएका ६ वटा प्रमुख दार्शनिक सम्प्रदायहरू (न्याय, वैशेषिक, साङ्ख्य, योग, मीमांसा र वेदान्त) रहेका हुनाले यसलाई षड्दर्शन भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 15 -->
+            <div class="card fade-in" data-search="नास्तिक दर्शन">
+                <div class="card-header">
+                    <span class="num">१५</span>
+                    <span class="q-text"><b>नास्तिक दर्शन भनेको के हो?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">वेदको प्रामाणिकता र ईश्वरको अस्तित्वलाई स्वीकार नगर्ने पूर्वीय दर्शनको शाखा (जस्तै: बौद्ध दर्शन, जैन दर्शन र चार्वाक दर्शन) लाई नास्तिक दर्शन भनिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 16 -->
+            <div class="card fade-in" data-search="बौद्ध दर्शन शिक्षा">
+                <div class="card-header">
+                    <span class="num">१६</span>
+                    <span class="q-text"><b>बौद्ध दर्शनका कुनै दुई शिक्षाको नाम लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>क)</b> जीवनमा अतिवादबाट बचेर मध्यममार्गको अवलम्बन गर्नु।</li>
+                            <li><b>ख)</b> आर्य अष्टाङ्गिक मार्ग र पञ्चशील (हिंसा नगर्नु, झुटो नबोल्नु आदि) को पालना गर्नु।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 17 -->
+            <div class="card fade-in" data-search="पाश्चात्य चिन्तन स्रोत">
+                <div class="card-header">
+                    <span class="num">१७</span>
+                    <span class="q-text"><b>पाश्चात्य चिन्तन परम्पराको मुख्य स्रोत कुन परम्परालाई मानिन्छ?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">पाश्चात्य चिन्तन परम्पराको मुख्य स्रोत प्राचीन ग्रिसको दार्शनिक चिन्तन परम्परालाई मानिन्छ।</div>
+                </div>
+            </div>
+
+            <!-- 18 -->
+            <div class="card fade-in" data-search="पाश्चात्य दार्शनिक">
+                <div class="card-header">
+                    <span class="num">१८</span>
+                    <span class="q-text"><b>पाश्चात्य चिन्तन परम्परामा योगदान दिने कुनै दुई दार्शनिकको नाम लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">पाश्चात्य चिन्तन परम्परामा योगदान दिने दुई प्रमुख दार्शनिकहरू <b>सोक्रेटस (सुकरात)</b> र <b>प्लेटो</b> हुन्।</div>
+                </div>
+            </div>
+
+            <!-- 19 -->
+            <div class="card fade-in" data-search="संवेग व्यवस्थापन">
+                <div class="card-header">
+                    <span class="num">१९</span>
+                    <span class="q-text"><b>संवेग व्यवस्थापन गर्ने कुनै दुई उपाय लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>क)</b> नियमित योग, ध्यान तथा श्वासप्रश्वासको अभ्यास (प्राणायाम) गर्ने।</li>
+                            <li><b>ख)</b> आत्मनियन्त्रण (दम र इन्द्रिय निग्रह) को अभ्यास गरी रिस र उत्तेजनालाई सन्तुलित राख्ने।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 20 -->
+            <div class="card fade-in" data-search="तनाव व्यवस्थापन">
+                <div class="card-header">
+                    <span class="num">२०</span>
+                    <span class="q-text"><b>तनाव व्यवस्थापन गर्ने कुनै दुई उपाय लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>क)</b> सन्तुलित आहारविहार तथा सकारात्मक सोचको विकास गर्ने।</li>
+                            <li><b>ख)</b> आफ्नो भावना र समस्याहरू अरूसँग साटासाट गर्ने र मनोरञ्जनात्मक वा रचनात्मक गतिविधिमा संलग्न हुने।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end shortContainer -->
+
+        <!-- ============================================================ -->
+        <!-- ===== छोटो उत्तर ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-medium" style="margin-top:40px;">
+            <h2><span class="icon">📝</span> छोटो उत्तर <span class="count">३–५ अङ्क</span></h2>
+            <span class="section-sub">२० प्रश्नहरू</span>
+        </div>
+
+        <div id="mediumContainer">
+
+            <!-- M1 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा विषयवस्तु">
+                <div class="card-header">
+                    <span class="num">१</span>
+                    <span class="q-text"><b>जीवनोपयोगी शिक्षामा समावेश हुने विषयवस्तुहरू उल्लेख गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>जीवनोपयोगी शिक्षाको मुख्य उद्देश्य व्यक्तिलाई व्यवहारिक, सक्षम र कुशल नागरिक बनाउनु हो। यसमा समावेश हुने विषयवस्तुहरू:</p>
+                        <ul>
+                            <li><b>सभ्य सामाजिक सम्बन्ध र नैतिक आचरण:</b> समाजमा मर्यादित व्यवहार, नैतिक मूल्यमान्यता र असल आपसी सम्बन्ध कायम गर्ने तरिकाहरू।</li>
+                            <li><b>मनोसामाजिक पक्ष र आध्यात्मिक समुन्नति:</b> व्यक्तिको शारीरिक, मानसिक तथा आध्यात्मिक विकासका लागि योग, ध्यान र अनुशासन।</li>
+                            <li><b>व्यावहारिक र व्यावसायिक कुशलता:</b> सफल पेशागत जीवनका लागि आवश्यक प्राविधिक तथा व्यवसायिक ज्ञान र सिपहरु।</li>
+                            <li><b>नागरिक दायित्व र कर्तव्य बोध:</b> समाज र राष्ट्रप्रति नागरिकको हैसियतले निर्वाह गर्नुपर्ने कर्तव्य, अधिकार र उत्तरदायित्वको बोध।</li>
+                            <li><b>सञ्चार र सहकार्य:</b> समूहमा मिलेर काम गर्ने, नेतृत्व लिने र प्रभावकारी रूपमा विचारहरू साटासाट गर्ने क्षमताको सिकाइ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M2 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी सिप क्षेत्र">
+                <div class="card-header">
+                    <span class="num">२</span>
+                    <span class="q-text"><b>जीवनोपयोगी सिपअन्तर्गत पर्ने छओटा मुख्य क्षेत्रहरू लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>विश्व स्वास्थ्य सङ्गठन (WHO) ले सन् १९९९ मा पहिचान गरेका जीवनोपयोगी सिपका ६ वटा मुख्य क्षेत्रहरू:</p>
+                        <ol>
+                            <li><b>सञ्चार र अन्तरवैयक्तिक सिप:</b> प्रभावकारी रूपमा विचार आदानप्रदान गर्ने र अरूसँग सुमधुर सम्बन्ध राख्ने सिप।</li>
+                            <li><b>निर्णय गर्ने र समस्या समाधान सिप:</b> उपयुक्त विकल्प छनोट गर्ने र जीवनका चुनौतीहरूको सामना गर्ने सिप।</li>
+                            <li><b>सिर्जनात्मक र समालोचनात्मक सोचाइ सिप:</b> नयाँ ढंगले सोच्ने र सत्य-तथ्य विश्लेषण गर्ने क्षमता।</li>
+                            <li><b>आत्मजागरुकता र समानुभूति:</b> आफैँलाई चिन्नु र अरूको दुःख एवं भावनालाई आफ्नै सरह बुझ्नु।</li>
+                            <li><b>दृढता, समभाव र आत्मनियन्त्रण:</b> सही कुरामा दृढ रहनु र आफ्ना संवेगहरूलाई नियन्त्रणमा राख्नु।</li>
+                            <li><b>उत्थानशीलता र समस्यालाई सम्बोधन गर्ने क्षमता:</b> कठिन परिस्थितिमा पनि विचलित नभई सामना गर्ने क्षमता।</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M3 -->
+            <div class="card fade-in" data-search="सामाजिक अध्ययन जीवनोपयोगी शिक्षा अन्तरसम्बन्ध">
+                <div class="card-header">
+                    <span class="num">३</span>
+                    <span class="q-text"><b>सामाजिक अध्ययन र जीवनोपयोगी शिक्षा कसरी अन्तरसम्बन्धित छन्?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>परिपूरक भूमिका:</b> सामाजिक अध्ययनले समाजको सैद्धान्तिक ज्ञान दिन्छ भने जीवनोपयोगी शिक्षाले व्यावहारिक सिपहरु प्रदान गर्छ।</li>
+                            <li><b>सिकाइ क्रियाकलापमा सम्बन्ध:</b> छलफल, अवलोकन, अन्तर्वार्ता र परियोजना कार्यहरूले विद्यार्थीमा समूह कार्य, सहकार्य, नेतृत्व, र समस्या समाधान जस्ता सिपहरु विकास गराउँछन्।</li>
+                            <li><b>साझा लक्ष्य:</b> दुवैको साझा लक्ष्य नागरिक सक्षमताको विकास गर्नु, अधिकार र कर्तव्य बुझाउनु र समाजप्रति उत्तरदायी असल चरित्रवान व्यक्ति निर्माण गर्नु हो।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M4 -->
+            <div class="card fade-in" data-search="सामाजिक अध्ययन नागरिक सक्षमता">
+                <div class="card-header">
+                    <span class="num">४</span>
+                    <span class="q-text"><b>सामाजिक अध्ययनले नागरिक सक्षमता विकास गर्न कसरी सहयोग गर्छ?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>एकीकृत ज्ञान प्रदान गरेर:</b> भूगोल, इतिहास, अर्थशास्त्र, समाजशास्त्र, मानवशास्त्र, राजनीतिशास्त्र, मनोविज्ञान, धर्म, संस्कृति र कला जस्ता विषयहरूको ज्ञान दिन्छ।</li>
+                            <li><b>अन्तरसम्बन्ध बुझाएर:</b> मानव र उसको प्राकृतिक, राजनीतिक, सामाजिक तथा आर्थिक वातावरणबिचको दोहोरो प्रभाव र अन्तरक्रियालाई विश्लेषण गर्न सिकाउँछ।</li>
+                            <li><b>तर्कपूर्ण निर्णय क्षमता बढाएर:</b> विद्यार्थीलाई आफ्नो समाज बुझ्दै विश्वव्यापी विविधता, सामाजिक सहिष्णुता र सामञ्जस्यता स्थापित गर्न सुसूचित र तर्कपूर्ण निर्णय लिन सक्षम बनाउँछ।</li>
+                            <li><b>अधिकार र कर्तव्यको बोध गराएर:</b> समाजको एक जिम्मेवार सदस्यको रूपमा पालना गर्नुपर्ने नैतिक मर्यादा, कानुनी शासन र नागरिक हक-अधिकारप्रति सचेत गराउँछ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M5 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा महत्त्व">
+                <div class="card-header">
+                    <span class="num">५</span>
+                    <span class="q-text"><b>जीवनोपयोगी शिक्षाको महत्त्व उल्लेख गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>चरित्र निर्माण र असल व्यक्तित्व विकास:</b> नैतिक मर्यादा, सदाचार, इमानदारिता र जिम्मेवारीपनको भावना विकास गराउँछ।</li>
+                            <li><b>दैनिक समस्या समाधान:</b> जीवनमा आउने साना-ठूला कठिनाइ, तनाव र संवेगहरूलाई सहज रूपमा व्यवस्थापन गर्न सक्षम बनाउँछ।</li>
+                            <li><b>सञ्चार र सुमधुर सम्बन्ध:</b> परिवार, समाज र कार्यस्थलमा प्रभावकारी सञ्चार र आपसी सहकार्य बढाएर सभ्य सामाजिक सम्बन्ध कायम गर्न मद्दत गर्छ।</li>
+                            <li><b>व्यावसायिक र पेशागत सफलता:</b> प्राविधिक वा व्यवसायिक ज्ञानको साथै कार्यस्थलमा आवश्यक पर्ने नेतृत्व र सामूहिक काम गर्ने क्षमताको विकास गराउँछ।</li>
+                            <li><b>शारीरिक र मानसिक सुस्वास्थ्य:</b> योग, ध्यान र अनुशासन सिकाएर स्वस्थ र तनावमुक्त जीवनशैली अपनाउन उत्प्रेरित गर्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M6 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा दैनिक जीवन">
+                <div class="card-header">
+                    <span class="num">६</span>
+                    <span class="q-text"><b>जीवनोपयोगी शिक्षाले व्यक्तिको दैनिक जीवनमा कसरी सहयोग पुर्याउँछ?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>सचेत र विवेकपूर्ण निर्णय लिन:</b> व्यक्तिगत वा पारिवारिक समस्याहरूमा भावुक नभई तर्कपूर्ण र सही विकल्प छनोट गर्न मद्दत गर्छ।</li>
+                            <li><b>तनाव र संवेग नियन्त्रण गर्न:</b> दैनिक जीवनमा आइपर्ने रिस, डर, चिन्ता र निराशा (तनाव) लाई सकारात्मक सोच र धैर्यताका साथ व्यवस्थापन गर्न सिकाउँछ।</li>
+                            <li><b>द्वन्द्व व्यवस्थापन र आपसी मेलमिलाप:</b> समाजमा विभिन्न सोच र स्वभावका व्यक्तिहरूसँग हुने असमझदारीलाई संवाद र समानुभूतिका माध्यमबाट समाधान गर्न सहयोग गर्छ।</li>
+                            <li><b>स्वस्थ बानी र आचरणको विकास:</b> योग, ध्यान र उचित आहारविहारको माध्यमबाट शारीरिक तथा मानसिक रूपमा स्वस्थ रहन मद्दत पुर्याउँछ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M7 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा सिप सम्बन्ध">
+                <div class="card-header">
+                    <span class="num">७</span>
+                    <span class="q-text"><b>जीवनोपयोगी शिक्षा र जीवनोपयोगी सिपबीचको सम्बन्ध स्पष्ट पार्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>जीवनोपयोगी शिक्षा र जीवनोपयोगी सिपबिचको सम्बन्ध <b>'सिद्धान्त र व्यवहार'</b> वा <b>'बाटो र गन्तव्य'</b> जस्तै छ:</p>
+                        <ul>
+                            <li><b>साधन र साध्य:</b> जीवनोपयोगी शिक्षा एउटा माध्यम वा प्रक्रिया हो, जसले मानिसलाई असल जीवन जिउने ज्ञान दिन्छ भने जीवनोपयोगी सिप त्यस शिक्षाबाट प्राप्त हुने नतिजा वा दक्षता हो।</li>
+                            <li><b>विषयवस्तु र अभ्यास:</b> जीवनोपयोगी शिक्षाको मुख्य विषयवस्तु नै जीवनोपयोगी सिपहरु सिकाउनु हो। शिक्षा विना मानिसले सिपहरुको सैद्धान्तिक र नैतिक आधार बुझ्न सक्दैन, र सिपको विकास विना जीवनोपयोगी शिक्षा केवल कोरा कागजमा सीमित हुन्छ।</li>
+                            <li><b>अन्तरसम्बन्ध:</b> जीवनोपयोगी शिक्षाले व्यक्तिको शारीरिक, मानसिक र आध्यात्मिक समुन्नतिका लागि मार्गनिर्देश गर्छ भने जीवनोपयोगी सिपले त्यसलाई वास्तविक व्यवहार र कार्यस्थलमा लागू गर्न मद्दत गर्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M8 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी सिप स्वस्थ जीवनशैली सम्बन्ध">
+                <div class="card-header">
+                    <span class="num">८</span>
+                    <span class="q-text"><b>जीवनोपयोगी सिप र स्वस्थ जीवनशैलीबीचको सम्बन्ध लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>सकारात्मक व्यवहारमा मद्दत:</b> जीवनोपयोगी सिप (जस्तै: आत्मजागरुकता, संवेग र तनाव व्यवस्थापन) ले मानिसलाई नकारात्मक बानीहरू (जस्तै: धूमपान, मद्यपान वा अत्यधिक क्रोध) बाट टाढा राख्न मद्दत गर्छ।</li>
+                            <li><b>मानसिक र आध्यात्मिक स्वास्थ्य:</b> पूर्वीय मान्यता अनुसार योग, ध्यान र आत्मनियन्त्रण (दम र इन्द्रिय निग्रह) जस्ता जीवनोपयोगी सिपहरुले मानसिक तनाव कम गरी आन्तरिक शान्ति प्रदान गर्छन् र स्वस्थ जीवनशैली निर्माण गर्छन्।</li>
+                            <li><b>सन्तुलित आहारविहार र अनुशासन:</b> निर्णय गर्ने सिपले व्यक्तिलाई आफ्नो स्वास्थ्यका लागि के राम्रो र के नराम्रो भन्ने कुरा छुट्ट्याएर सन्तुलित आहारविहार रोज्न सक्षम बनाउँछ, जसले स्वस्थ जीवनयापन सम्भव हुन्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M9 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा सिप प्रदान">
+                <div class="card-header">
+                    <span class="num">९</span>
+                    <span class="q-text"><b>जीवनोपयोगी शिक्षाले जीवनोपयोगी सिप प्रदान गर्छ भन्ने भनाइलाई उदाहरणसहित पुष्टि गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>"जीवनोपयोगी शिक्षाले जीवनोपयोगी सिप प्रदान गर्छ"</b> भन्ने भनाइ पूर्ण रूपमा सत्य छ।</p>
+                        <ul>
+                            <li><b>उदाहरण १ (सञ्चार र सहकार्य):</b> विद्यालयमा जीवनोपयोगी शिक्षा अन्तर्गत विद्यार्थीहरूलाई समूहमा आधारित <b>परियोजना कार्य (Project Work)</b> दिइन्छ। यस प्रक्रियाबाट उनीहरूले सैद्धान्तिक रूपमा पढेको "समूहमा काम गर्ने, सहकार्य गर्ने र प्रभावकारी सञ्चार गर्ने" सिप व्यवहारमै हासिल गर्छन्।</li>
+                            <li><b>उदाहरण २ (तनाव र संवेग व्यवस्थापन):</b> जीवनोपयोगी शिक्षा अन्तर्गत <b>योग र ध्यानको अभ्यास</b> गराइन्छ। यस शिक्षाले विद्यार्थीहरूलाई आफ्नो रिस र परीक्षाको समयमा हुने तनावलाई नियन्त्रण गर्ने (आत्मनियन्त्रण र संवेग व्यवस्थापन) वास्तविक सिप प्रदान गर्छ।</li>
+                            <li><b>उदाहरण ३ (समानुभूति):</b> विभिन्न सामाजिक समस्याहरूको खोजी गर्ने र समुदाय भ्रमण गर्ने शैक्षिक कार्यक्रमहरू मार्फत विद्यार्थीहरूले अरूको दुःख महसुस गर्ने व्यावहारिक समानुभूति सिप सिक्छन्।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M10 -->
+            <div class="card fade-in" data-search="स्वस्थ जीवनशैली विशेषता">
+                <div class="card-header">
+                    <span class="num">१०</span>
+                    <span class="q-text"><b>स्वस्थ जीवनशैलीका प्रमुख विशेषताहरू लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>शारीरिक र मानसिक सन्तुलन:</b> शरीरलाई निरोगी राख्न उचित आहारविहार र मस्तिष्कलाई शान्त राख्न सकारात्मक सोच।</li>
+                            <li><b>आत्मनियन्त्रण र सदाचार:</b> इन्द्रियहरूलाई वशमा राख्ने (इन्द्रिय निग्रह) र समाजमा मर्यादित व्यवहार प्रदर्शन गर्ने।</li>
+                            <li><b>योग र ध्यानको दिनचर्या:</b> नियमित शारीरिक कसरत र मानसिक एकाग्रताका लागि ध्यान तथा प्राणायामको प्रयोग।</li>
+                            <li><b>संवेग र तनावको सफल व्यवस्थापन:</b> दैनिक जीवनका उतारचढावमा विचलित नभई समभाव (Equanimity) कायम राख्नु।</li>
+                            <li><b>प्रकृतिसँग तादात्म्यता:</b> वातावरणीय सन्तुलन र पर्यावरणमैत्री आचरण अपनाउनु।</li>
+                            <li><b>मध्यममार्गको अवलम्बन:</b> खानपान, मनोरञ्जन र काममा कुनै पनि प्रकारको अतिवाद (Excessiveness) बाट बच्नु र मध्यमार्ग रोज्नु।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M11 -->
+            <div class="card fade-in" data-search="पूर्वीय चिन्तन परम्परा विशेषता">
+                <div class="card-header">
+                    <span class="num">११</span>
+                    <span class="q-text"><b>पूर्वीय चिन्तन परम्पराका प्रमुख विशेषताहरू उल्लेख गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>आध्यात्मिकता र आन्तरिक शान्ति:</b> भौतिक सुखभन्दा आत्मज्ञान, ईश्वर र मानसिक एवं आध्यात्मिक समुन्नतिमा जोड दिन्छ।</li>
+                            <li><b>नैतिकता र सदाचार (धर्म):</b> सत्यको अवलम्बन, परोपकार, प्राणी दया र नैतिक मूल्यमान्यताहरूको पालनालाई जीवनको आधार मान्छ।</li>
+                            <li><b>सामूहिकता र सहकार्य:</b> व्यक्तिवादी सोच भन्दा आपसी सद्भाव, सहकार्य, परिवार र समाजलाई बढी महत्त्व दिन्छ।</li>
+                            <li><b>प्रकृति र मानवको सम्बन्ध:</b> प्रकृतिसँग तादात्म्यता कायम राख्ने, पर्यावरणमैत्री जीवनशैली र पारिस्थितिक प्रणालीको सम्मान गर्छ।</li>
+                            <li><b>योग र ध्यानको अभ्यास:</b> शारीरिक स्वास्थ्य र मानसिक एकाग्रताका लागि आयुर्वेद, योग र ध्यानलाई व्यावहारिक जीवनमा लागू गर्छ।</li>
+                            <li><b>पुरुषार्थ चतुष्टय:</b> मानव जीवनको लक्ष्य धर्म, अर्थ, काम र मोक्षको प्राप्ति हो भन्ने विश्वास राख्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M12 -->
+            <div class="card fade-in" data-search="पाश्चात्य चिन्तन परम्परा विशेषता">
+                <div class="card-header">
+                    <span class="num">१२</span>
+                    <span class="q-text"><b>पाश्चात्य चिन्तन परम्पराका प्रमुख विशेषताहरू उल्लेख गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>तार्किक र आलोचनात्मक बहस:</b> सत्य पत्ता लगाउन तर्क, प्रश्नोत्तर, संवाद र आलोचनात्मक अध्ययनलाई जोड दिन्छ।</li>
+                            <li><b>भौतिकवाद र वैज्ञानिक दृष्टिकोण:</b> भौतिक जगत्को वैज्ञानिक खोज, प्रविधिको विकास र तथ्यमा आधारित अनुसन्धानलाई प्राथमिकता दिन्छ।</li>
+                            <li><b>व्यक्तिवाद र स्वतन्त्रता:</b> सामाजिक बन्धन भन्दा व्यक्तिको वैचारिक स्वतन्त्रता, मानव अधिकार र उदारवादी लोकतान्त्रिक मूल्यमान्यतालाई महत्त्व दिन्छ।</li>
+                            <li><b>उपभोगवाद र प्रकृति दोहन:</b> प्रकृतिलाई उपयोग गर्ने र भौतिक सुख-सुविधा बढाउने दृष्टिकोण राख्छ।</li>
+                            <li><b>विविध कालखण्डको प्रभाव:</b> प्राचीन ग्रिसको दर्शन, मध्यकालको इसाई धर्मदर्शन, पुनर्जागरण (Renaissance) र ज्ञानोद्दीपन (Enlightenment) को वैचारिक क्रान्तिबाट निर्देशित छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M13 -->
+            <div class="card fade-in" data-search="नेपाल पूर्वीय चिन्तन योगदान">
+                <div class="card-header">
+                    <span class="num">१३</span>
+                    <span class="q-text"><b>पूर्वीय चिन्तन परम्परामा नेपालको योगदान लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>बौद्ध दर्शनको उद्गम स्थल:</b> शान्तिका अग्रदूत गौतम बुद्धको जन्मस्थल लुम्बिनी (नेपाल) भएकोले बौद्ध दर्शन, पञ्चशील, अष्टाङ्गिक मार्ग र मध्यममार्गको विकासमा नेपालको योगदान अद्वितीय छ।</li>
+                            <li><b>वैदिक र सनातन संस्कृतिको केन्द्र:</b> नेपालको पावन भूमिमा थुप्रै ऋषिमुनिहरूले तपस्या गरी वेद, पुराण र विभिन्न दर्शनहरूको संहिताबद्ध र परिमार्जन गरे। जनकपुर प्राचीन कालमा दार्शनिक शास्त्रार्थको प्रमुख केन्द्र थियो।</li>
+                            <li><b>आयुर्वेद र योगको अभ्यास:</b> प्राचीन कालदेखि नै नेपालमा आयुर्वेद, योग, विपश्यना, र शाकाहारी जीवनशैलीको निरन्तर अभ्यास हुँदै आएको छ।</li>
+                            <li><b>किरात तथा रैथाने दर्शन:</b> नेपालमा किरात दर्शन जस्ता मौलिक रैथाने दर्शन र संस्कृतिहरूले प्रकृति पूजा र सामुदायिक एकताको अनुपम उदाहरण प्रस्तुत गरेका छन्।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M14 -->
+            <div class="card fade-in" data-search="आधुनिक पाश्चात्य चिन्तन">
+                <div class="card-header">
+                    <span class="num">१४</span>
+                    <span class="q-text"><b>आधुनिक पाश्चात्य चिन्तन परम्परालाई एक वाक्यमा स्पष्ट पार्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">आधुनिक पाश्चात्य चिन्तन परम्परा वैज्ञानिक चिन्तन, वैचारिक स्वतन्त्रता, मानव अधिकार, उदारवादी लोकतान्त्रिक पद्धति, भौतिक समृद्धि र प्रविधिको विकासमा आधारित दार्शनिक दृष्टिकोण हो।</div>
+                </div>
+            </div>
+
+            <!-- M15 -->
+            <div class="card fade-in" data-search="मध्यकाल अन्धकार युग">
+                <div class="card-header">
+                    <span class="num">१५</span>
+                    <span class="q-text"><b>पाश्चात्य चिन्तन परम्पराको मध्यकाललाई अन्धकारको युग किन भनिन्छ?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>चर्चको आधिपत्य:</b> त्यस समय युरोपमा इसाई चर्च र धार्मिक सङ्गठनहरू राजनीतिक, सामाजिक र वैचारिक रूपमा अत्यधिक शक्तिशाली थिए।</li>
+                            <li><b>वैज्ञानिक चिन्तनमा बन्देज:</b> चर्चको स्थापित धार्मिक मान्यता विपरीतका वैज्ञानिक खोज, आलोचनात्मक अध्ययन र पथनिरपेक्ष (Secular) विचारहरूलाई कठोरतापूर्वक दमन गरिन्थ्यो।</li>
+                            <li><b>वैचारिक स्वतन्त्रताको अभाव:</b> स्वतन्त्र रूपमा सोच्ने, लेख्ने वा प्रश्न गर्ने दार्शनिक र वैज्ञानिकहरूलाई दण्डित गरिन्थ्यो, जसले गर्दा ज्ञान र विज्ञानको विकास लामो समयसम्म अवरुद्ध बन्यो।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M16 -->
+            <div class="card fade-in" data-search="वैदिक दर्शन सार">
+                <div class="card-header">
+                    <span class="num">१६</span>
+                    <span class="q-text"><b>वैदिक दर्शनको मुख्य सार लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>सत्य र धर्मको पालना:</b> सधैँ सत्यको पक्षमा रहनु (सत्यको अवलम्बन), धर्मको धारणा र पालना गर्नु तथा निरन्तर स्वाध्याय गर्नु यसको मूल उपदेश हो।</li>
+                            <li><b>धर्मका १० लक्षण:</b> धैर्यता (धृति), क्षमा, इन्द्रिय निग्रह, चोरी नगर्नु (अस्तेय), मन-वचन-कर्मको शुद्धता (शौच), बुद्धि, ज्ञान, सत्य र रिस रागको त्याग (अक्रोध) जस्ता मानवीय गुणहरूको विकास गर्नु।</li>
+                            <li><b>परोपकार र स्वावलम्बन:</b> स्वावलम्बी बन्नु, अरूको भलाइ गर्नु (परोपकार), र सबै प्राणीहरूप्रति दया राख्नु।</li>
+                            <li><b>शारीरिक र आध्यात्मिक स्वास्थ्यको सन्तुलन:</b> मानव जीवनका चार लक्ष्यहरू— धर्म, अर्थ, काम र मोक्ष (पुरुषार्थ चतुष्टय) प्राप्तिको लागि शारीरिक र मानसिक स्वास्थ्यलाई बलियो बनाउनु।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M17 -->
+            <div class="card fade-in" data-search="बौद्ध दर्शन योगदान">
+                <div class="card-header">
+                    <span class="num">१७</span>
+                    <span class="q-text"><b>बौद्ध दर्शनले मानव जीवनमा दिएको योगदान लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>चार आर्य सत्य:</b> संसारमा दुःख छ, दुःखको कारण (तृष्णा) छ, दुःख निवारण सम्भव छ र यसका लागि मार्ग छ भन्ने सत्य बुझाई मानिसलाई यथार्थवादी बनाउँछ।</li>
+                            <li><b>आर्य अष्टाङ्गिक मार्ग:</b> सम्यक् दृष्टि, सम्यक् संकल्प, सम्यक् वाक्, सम्यक् कर्म, सम्यक् जीविका, सम्यक् प्रयास, सम्यक् स्मृति र सम्यक् समाधि जस्ता ८ मार्गहरूले मानिसलाई नैतिक र अनुशासित जीवन जिउन सिकाउँछन्।</li>
+                            <li><b>मध्यममार्गको सिद्धान्त:</b> जीवनमा अत्यधिक विलासिता र अत्यधिक कठोर तपस्या दुवै अतिवादबाट बचेर सन्तुलित मार्ग (मध्यममार्ग) रोज्न सिकाउँछ।</li>
+                            <li><b>शान्ति र अहिंसा (पञ्चशील):</b> प्राणी हिंसा नगर्ने, झुटो नबोल्ने, चोरी नगर्ने जस्ता पञ्चशीलका सिद्धान्तले विश्वमा शान्ति, सामाजिक सहिष्णुता र अहिंसा प्रवर्धन गर्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M18 -->
+            <div class="card fade-in" data-search="इसाई धर्मदर्शन प्रभाव">
+                <div class="card-header">
+                    <span class="num">१८</span>
+                    <span class="q-text"><b>इसाई धर्मदर्शनले पाश्चात्य चिन्तन परम्परामा पारेको प्रभाव उल्लेख गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>मध्यकालीन समाजको नियन्त्रण:</b> मध्यकालमा चर्च सबै क्षेत्रमा शक्तिशाली रह्यो, जसले मानिसको दैनिक जीवन, नैतिकता, कानुन र चिन्तनलाई इसाई धार्मिक मान्यता अनुसार निर्देशित गर्यो।</li>
+                            <li><b>द्वन्द्व र वैज्ञानिक क्रान्ति:</b> इसाई धर्मको कडा बन्धन र दमनका विरुद्ध कालान्तरमा विद्रोही कलाकार, दार्शनिक र वैज्ञानिकहरूले आवाज उठाए, जसको फलस्वरूप पुनर्जागरण (Renaissance) र पथनिरपेक्ष (Secular) वैचारिक चिन्तनको उदय भयो।</li>
+                            <li><b>राजनीतिक र सामाजिक मूल्यहरूको विकास:</b> पछि गएर क्रिश्चियन मान्यताहरू र वैज्ञानिक सुधारवादी आन्दोलनको मिश्रणबाट युरोपमा उदारवादी लोकतन्त्र र आधुनिक न्याय प्रणालीको विकास भयो।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M19 -->
+            <div class="card fade-in" data-search="आत्मनियन्त्रण महत्त्व">
+                <div class="card-header">
+                    <span class="num">१९</span>
+                    <span class="q-text"><b>दैनिक जीवनमा आत्मनियन्त्रणको महत्त्व लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>संवेग व्यवस्थापन:</b> यसले रिस, उत्तेजना, ईर्ष्या र लोभ जस्ता संवेगहरूलाई सन्तुलित राखी गलत निर्णय वा द्वन्द्व हुनबाट बचाउँछ।</li>
+                            <li><b>स्वस्थ आचरणको निर्माण:</b> क्षणिक सुख दिने तर स्वास्थ्यलाई हानि पुऱ्याउने बानीहरू (जस्तै: जङ्क फुड, मद्यपान वा अत्यधिक स्क्रिन समय) बाट बच्न मद्दत गर्छ।</li>
+                            <li><b>लक्ष्य प्राप्तिमा मद्दत:</b> एकाग्रता र इच्छाशक्तिको विकास गराई आफ्नो काम र अध्ययनमा दत्तचित्त भएर लाग्न सहयोग गर्छ।</li>
+                            <li><b>सभ्य सामाजिक व्यवहार:</b> समाजमा अरूको अधिकारको सम्मान गर्दै मर्यादित र नैतिक व्यवहार प्रदर्शन गर्न उत्प्रेरित गर्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- M20 -->
+            <div class="card fade-in" data-search="परियोजना कार्य सिप">
+                <div class="card-header">
+                    <span class="num">२०</span>
+                    <span class="q-text"><b>परियोजना कार्यबाट प्राप्त हुने जीवनोपयोगी सिपहरू लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>सहकार्य र सामूहिक भावना (Teamwork):</b> समूहमा मिलेर काम गर्ने, जिम्मेवारी बाँडफाँड गर्ने र एकअर्कालाई सहयोग गर्ने क्षमता विकास हुन्छ।</li>
+                            <li><b>प्रभावकारी सञ्चार (Communication Skill):</b> सूचना सङ्कलनका क्रममा समाजका मानिसहरूसँग कुराकानी गर्ने, अन्तर्वार्ता लिने र आफ्ना कुरा स्पष्ट राख्ने सिप विकास हुन्छ।</li>
+                            <li><b>समस्या समाधान र आलोचनात्मक सोच (Problem Solving & Critical Thinking):</b> परियोजनाका क्रममा आइपर्ने व्यवधानहरू हल गर्ने र सङ्कलित तथ्याङ्कको सत्यता जाँच्ने क्षमता बढ्छ।</li>
+                            <li><b>नेतृत्व सिप (Leadership Skill):</b> समूहको नेतृत्व लिने, योजना बनाउने र कार्यलाई समयमै सम्पन्न गराउने क्षमता हासिल हुन्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end mediumContainer -->
+
+        <!-- ============================================================ -->
+        <!-- ===== तुलनात्मक तालिका ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-compare" style="margin-top:40px;">
+            <h2><span class="icon">⚖️</span> पूर्वीय र पाश्चात्य चिन्तन परम्परा <span class="count">तुलना</span></h2>
+            <span class="section-sub">व्यावहारिक विश्लेषण</span>
+        </div>
+
+        <div class="card fade-in" style="border-left-color:var(--accent3);">
+            <div class="card-header">
+                <span class="num" style="background:var(--accent3);color:#fff;">⚖️</span>
+                <span class="q-text"><b>तुलनात्मक तालिका</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+                    <div class="table-wrapper comp-table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>तुलनाको आधार</th>
+                                    <th>पूर्वीय चिन्तन परम्परा</th>
+                                    <th>पाश्चात्य चिन्तन परम्परा</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>उत्पत्ति र मूल स्रोत</td>
+                                    <td>एसिया महादेशको पूर्वी, दक्षिण र दक्षिण-पूर्वी भूभाग; वैदिक, हिन्दु, बौद्ध, जैन, किरात, सिख, कन्फुसियस, ताओ आदि।</td>
+                                    <td>प्राचीन ग्रिसको दार्शनिक चिन्तन; सुकरात, प्लेटो, एरिस्टोटल, इसाई धर्मदर्शन र वैज्ञानिक क्रान्तिको प्रभाव।</td>
+                                </tr>
+                                <tr>
+                                    <td>जीवनको मुख्य लक्ष्य</td>
+                                    <td><b>पुरुषार्थ चतुष्टय</b> (धर्म, अर्थ, काम, मोक्ष) र आन्तरिक एवं आध्यात्मिक समुन्नति।</td>
+                                    <td>सत्यको खोजीका लागि <b>तार्किक बहस</b>, आलोचनात्मक चिन्तन, वैचारिक स्वतन्त्रता र भौतिक विकास।</td>
+                                </tr>
+                                <tr>
+                                    <td>प्रकृतिसँगको सम्बन्ध</td>
+                                    <td>प्रकृतिसँग तादात्म्य, पर्यावरणमैत्री र पारिस्थितिक प्रणालीसापेक्ष जीवनशैली।</td>
+                                    <td>प्राकृतिक स्रोतहरूको अत्यधिक उपयोग (दोहन) र <b>उपभोगवाद (Consumerism)</b>।</td>
+                                </tr>
+                                <tr>
+                                    <td>व्यक्ति र समाज</td>
+                                    <td>सामूहिकता, पारिवारिक आबद्धता, सामाजिक समन्वय र सहकार्यलाई महत्त्व।</td>
+                                    <td><b>व्यक्तिगत स्वतन्त्रता</b>, वैचारिक स्वतन्त्रता र व्यक्तिवादलाई प्रश्रय।</td>
+                                </tr>
+                                <tr>
+                                    <td>सुस्वास्थ्यका साधन</td>
+                                    <td><b>आयुर्वेद, योग, ध्यान, विपश्यना र इन्द्रिय निग्रह</b> (आत्मनियन्त्रण)।</td>
+                                    <td><b>भौतिक विज्ञान, प्रविधि र आधुनिक चिकित्सा शास्त्र</b>को विकास।</td>
+                                </tr>
+                                <tr>
+                                    <td>जीवनशैली र आचरण</td>
+                                    <td>अतिवादबाट बचेर <b>मध्यममार्ग</b> र पञ्चशीलको पालना।</td>
+                                    <td>बजार अर्थतन्त्र, पूँजीवाद, औद्योगिक विकास र भौतिक सुख-सुविधा बढाउने जीवनशैली।</td>
+                                </tr>
+                                <tr>
+                                    <td>ऐतिहासिक कालखण्ड</td>
+                                    <td>प्राचीन कालदेखि अविच्छिन्न विकास; नेपालको गौरवशाली योगदान (बुद्ध र वैदिक दर्शन)।</td>
+                                    <td>मध्यकालमा चर्चको कडा नियन्त्रणका कारण <b>अन्धकारको युग (Dark Age)</b>; पुनर्जागरण (Renaissance) र ज्ञानोद्दीपन (Enlightenment) बाट वैज्ञानिक बनेको।</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div style="margin-top:16px;padding:14px 16px;background:#f0f8ff;border-radius:12px;border-left:5px solid var(--accent2);">
+                        <p style="font-weight:700;color:var(--primary-dark);">🤝 व्यावहारिक समन्वय:</p>
+                        <p>वर्तमान आधुनिक समयमा यी दुवै चिन्तन परम्पराहरू एकअर्काका पूरक बनिरहेका छन्:</p>
+                        <ul>
+                            <li><b>पश्चिममा पूर्वीय प्रभाव:</b> पाश्चात्य समाजमा मानसिक स्वास्थ्य र आध्यात्मिक शान्तिका लागि पूर्वीय दर्शनको मन्त्र जपिँदै छ र त्यहाँ योग, ध्यान तथा आयुर्वेदको आकर्षण उत्तरोत्तर बढ्दो छ।</li>
+                            <li><b>पूर्वमा पाश्चात्य प्रभाव:</b> पूर्वीय समाजले आफ्नो परम्परालाई जोगाउँदै समृद्धिका लागि पाश्चात्य समाजको प्रविधि, उद्यमशीलता र परिणाममुखी कार्यपद्धतिलाई ग्रहण गरिरहेको छ।</li>
+                        </ul>
+                        <p style="margin-top:8px;font-weight:700;">अतः प्राच्य र पाश्चात्य चिन्तनको सुन्दर समन्वयबाट नै विश्वमा शान्ति, सहकार्य र पर्यावरणमैत्री दिगो विकास सम्भव हुने विश्वास गरिन्छ।</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ===== लामो उत्तर ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-long" style="margin-top:40px;">
+            <h2><span class="icon">📚</span> लामो उत्तर <span class="count">८–१० अङ्क</span></h2>
+            <span class="section-sub">१५ प्रश्नहरू</span>
+        </div>
+
+        <div id="longContainer">
+
+            <!-- L1 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा सिप स्वस्थ जीवनशैली अन्तरसम्बन्ध">
+                <div class="card-header">
+                    <span class="num">१</span>
+                    <span class="q-text"><b>जीवनोपयोगी शिक्षा, जीवनोपयोगी सिप र स्वस्थ जीवनशैलीबीचको अन्तरसम्बन्ध उदाहरणसहित स्पष्ट पार्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>परिचय र अवधारणाहरू:</b></p>
+                        <ul>
+                            <li><b>जीवनोपयोगी शिक्षा:</b> मानव जीवनलाई सरल, सफल, मर्यादित र अर्थपूर्ण बनाउनका लागि आवश्यक पर्ने व्यावहारिक र नैतिक ज्ञान प्रदान गर्ने शैक्षिक प्रक्रिया।</li>
+                            <li><b>जीवनोपयोगी सिप:</b> दैनिक जीवनका माग, चुनौती र समस्याहरूलाई प्रभावकारी र सकारात्मक ढङ्गले सम्बोधन गर्न आवश्यक पर्ने मनोसामाजिक तथा व्यावहारिक क्षमता।</li>
+                            <li><b>स्वस्थ जीवनशैली:</b> शारीरिक सुस्वास्थ्य, मानसिक शान्ति र आध्यात्मिक सन्तुलन कायम राख्दै अनुशासित, मर्यादित र पर्यावरणमैत्री रूपमा जीवनयापन गर्ने कला।</li>
+                        </ul>
+
+                        <p><b>यिनीहरूबिचको अन्तरसम्बन्ध:</b></p>
+                        <ul>
+                            <li><b>ज्ञानबाट व्यवहारतर्फको यात्रा:</b> जीवनोपयोगी शिक्षाले सैद्धान्तिक मार्गदर्शन दिन्छ → यसबाट जीवनोपयोगी सिपहरु (आत्मनियन्त्रण, तनाव व्यवस्थापन) प्राप्त हुन्छ → यी सिपहरु दैनिक आचरणमा उतारिँदा स्वस्थ जीवनशैली निर्माण हुन्छ।</li>
+                            <li><b>मानसिक र संवेगात्मक सुदृढता:</b> जीवनोपयोगी शिक्षाले योग, ध्यान र आत्मसंयमको महत्त्व बुझाउँछ → 'संवेग व्यवस्थापन' र 'तनाव व्यवस्थापन' जस्ता सिपहरुले मानिसलाई मानसिक रूपमा स्वस्थ राख्छ।</li>
+                            <li><b>शारीरिक र आहारविहारको अनुशासन:</b> पूर्वीय चिन्तन अनुसार उपयुक्त आहारविहार र शौचाचार स्वस्थ जीवनका आधार हुन् → 'निर्णय गर्ने सिप' ले व्यक्तिलाई जङ्क फुड त्यागेर सन्तुलित आहार रोज्न मद्दत गर्छ।</li>
+                        </ul>
+
+                        <div class="flow-box">
+                            <span class="step">📖 जीवनोपयोगी शिक्षा (सैद्धान्तिक जग)</span>
+                            <span class="arrow">⬇️</span>
+                            <span class="step">🧠 जीवनोपयोगी सिप (व्यावहारिक क्षमता)</span>
+                            <span class="arrow">⬇️</span>
+                            <span class="step">🌿 स्वस्थ जीवनशैली (अनुशासित जीवन)</span>
+                        </div>
+
+                        <p><b>व्यावहारिक उदाहरणहरू:</b></p>
+                        <ul>
+                            <li><b>उदाहरण क (तनाव र परीक्षा):</b> विद्यार्थीले जीवनोपयोगी शिक्षा अन्तर्गत तनाव व्यवस्थापनको ज्ञान पाउँछ → परीक्षाको समयमा 'तनाव व्यवस्थापन' सिप प्रयोग गर्दै योग, ध्यान र प्राणायाम अभ्यास गर्छ → परीक्षाको भय जितेर शान्त र स्वस्थ मानसिक जीवनशैली कायम राख्छ।</li>
+                            <li><b>उदाहरण ख (निर्णय क्षमता र स्वास्थ्य):</b> साथीहरूको दबाबमा परेर धूमपानको कुलतमा फस्नुको सट्टा → जीवनोपयोगी शिक्षा पाएको व्यक्तिले 'दृढता' र 'निर्णय गर्ने सिप' प्रयोग गरी "म यो गर्दिनँ" भनी अस्वीकार गर्न सक्छ → जीवनभर निरोगी र स्वस्थ जीवनशैली अपनाउँछ।</li>
+                        </ul>
+                        <p style="font-weight:700;color:var(--primary-dark);margin-top:8px;">अतः जीवनोपयोगी शिक्षा विना सिपको जग बस्दैन र सिपको व्यावहारिक प्रयोग विना स्वस्थ जीवनशैली सम्भव हुँदैन।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L2 -->
+            <div class="card fade-in" data-search="सामाजिक अध्ययन जीवनोपयोगी शिक्षा अन्तरसम्बन्ध">
+                <div class="card-header">
+                    <span class="num">२</span>
+                    <span class="q-text"><b>सामाजिक अध्ययन र जीवनोपयोगी शिक्षाबीचको अन्तरसम्बन्ध विस्तृत रूपमा व्याख्या गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>सामान्य परिचय:</b></p>
+                        <ul>
+                            <li><b>सामाजिक अध्ययन:</b> नागरिक सक्षमता विकासका लागि इतिहास, भूगोल, अर्थशास्त्र, समाजशास्त्र र राजनीतिशास्त्रको एकीकृत अध्ययन।</li>
+                            <li><b>जीवनोपयोगी शिक्षा:</b> मानव जीवनलाई मर्यादित, उत्पादनशील र सफल बनाउन आवश्यक व्यक्तिगत, सामाजिक र नैतिक सिपहरु सिकाउने विद्या।</li>
+                        </ul>
+
+                        <p><b>अन्तरसम्बन्ध:</b></p>
+                        <ul>
+                            <li><b>सैद्धान्तिक जग र व्यावहारिक प्रयोग:</b> सामाजिक अध्ययनले समाजको संरचना, कानुनी शासन, लोकतान्त्रिक मूल्यमान्यता र सांस्कृतिक विविधताको ज्ञान दिन्छ → जीवनोपयोगी शिक्षाले समाजमा जिम्मेदार सदस्यका रूपमा कसरी समायोजन हुने, सुमधुर सम्बन्ध राख्ने र अधिकार-कर्तव्यको सन्तुलन मिलाउने सिप प्रदान गर्छ।</li>
+                            <li><b>सक्रिय सिकाइ क्रियाकलापमा अन्तरघुलन:</b> सामाजिक अध्ययनका शैक्षिक विधिहरू (छलफल, समूह कार्य, अन्तर्वार्ता, क्षेत्र भ्रमण, परियोजना कार्य) ले विद्यार्थीमा स्वतः जीवनोपयोगी सिपहरु (सहकार्य, नेतृत्व, समस्या समाधान) विकास गराउँछन्।</li>
+                            <li><b>साझा लक्ष्य (नागरिक सक्षमता):</b> सामाजिक अध्ययनको उद्देश्य विद्यार्थीलाई असल, सुसूचित र सक्रिय नागरिक बनाउनु हो → जीवनोपयोगी शिक्षाले पनि असल चरित्र, सिर्जनात्मकता र नैतिकताको विकास गराई समाजप्रति उत्तरदायी नागरिक तयार गर्छ।</li>
+                            <li><b>मूल्य र मान्यताको बोध:</b> जीवनोपयोगी शिक्षाले जीवनदर्शन र मानवीय मूल्यमान्यताको बोध गराउँछ → समाजका विभिन्न पक्षहरू बुझ्न र सामाजिक विषयवस्तुहरूको विवेकपूर्ण विश्लेषण गर्न सघाउँछ।</li>
+                        </ul>
+
+                        <div class="table-wrapper" style="margin-top:10px;">
+                            <table>
+                                <thead><tr><th>सामाजिक अध्ययनको पक्ष</th><th>जीवनोपयोगी शिक्षाको योगदान</th></tr></thead>
+                                <tbody>
+                                    <tr><td>सामाजिक सरोकार र अन्तर्निर्भरता</td><td>समाजका व्यक्ति र संस्थाहरूसँग प्रभावकारी सञ्चार र सुमधुर सम्बन्ध कायम राख्नु।</td></tr>
+                                    <tr><td>समूह कार्य र क्षेत्र भ्रमण</td><td>सामूहिक कार्यबाट नेतृत्व सिप, सहकार्य र द्वन्द्व व्यवस्थापन सिक्नु।</td></tr>
+                                    <tr><td>नागरिक दायित्व र अधिकारको ज्ञान</td><td>समाजप्रति कर्तव्यनिष्ठ र नैतिक बन्न 'नैतिकता' र 'सदाचार' को विकास गर्नु।</td></tr>
+                                    <tr><td>सामाजिक समस्याको पहिचान</td><td>समस्याहरूको उचित विकल्प पहिल्याई 'समस्या समाधान सिप' को प्रयोग गर्नु।</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="font-weight:700;color:var(--primary-dark);margin-top:10px;">निष्कर्ष: सामाजिक अध्ययनले मानिसलाई सामाजिक प्राणी बनाउँछ भने जीवनोपयोगी शिक्षाले उसलाई समाजमा बाँच्न, सङ्घर्ष गर्न र सफल हुन सक्षम बनाउँछ।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L3 -->
+            <div class="card fade-in" data-search="पूर्वीय चिन्तन परम्परा अर्थ विशेषता महत्त्व">
+                <div class="card-header">
+                    <span class="num">३</span>
+                    <span class="q-text"><b>पूर्वीय चिन्तन परम्पराको अर्थ, विशेषता र महत्त्व वर्णन गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>अर्थ:</b> एसिया महादेशको पूर्वी, दक्षिण र दक्षिण-पूर्वी भूभाग (विशेष गरी नेपाल र भारत समेटिएको उपमहाद्वीप) मा हजारौँ वर्षदेखि विकास भएको दार्शनिक, वैचारिक, आध्यात्मिक र व्यावहारिक चिन्तन पद्धति। वेद, उपनिषद्, पुराण, बौद्ध दर्शन, जैन दर्शन, किरात दर्शन, सिख दर्शन, कन्फुसियस दर्शन र ताओ दर्शनको सम्मिश्रण।</p>
+
+                        <p><b>मुख्य विशेषताहरू:</b></p>
+                        <ul>
+                            <li><b>आध्यात्मिकता र आन्तरिक चिन्तन:</b> बाह्य सुखभन्दा आन्तरिक शान्ति, आत्मज्ञान र मोक्षलाई जीवनको परम लक्ष्य मान्छ।</li>
+                            <li><b>नैतिकता र सदाचार (धर्म):</b> 'धर्म' लाई कर्तव्य, सदाचार र नैतिक मर्यादाको रूपमा बुझाइएको छ।</li>
+                            <li><b>सामूहिकता र पारिवारिक आबद्धता:</b> "वसुधैव कुटुम्बकम्" (सारा संसार नै मेरो परिवार) भन्ने भावना; व्यक्तिवादभन्दा समुदायलाई प्राथमिकता।</li>
+                            <li><b>प्रकृतिसँगको एकात्मकता:</b> प्रकृतिलाई आमा वा पुजनीय शक्तिको रूपमा हेर्ने; पर्यावरणमैत्री जीवनशैली।</li>
+                            <li><b>शारीरिक र मानसिक सुस्वास्थ्यको सन्तुलन:</b> आयुर्वेद, योग, ध्यान, प्राणायाम र शाकाहारी भोजनलाई महत्त्व।</li>
+                            <li><b>पुरुषार्थ चतुष्टय:</b> जीवनलाई सन्तुलित बनाउन धर्म, अर्थ, काम र मोक्षको प्राप्तिलाई मार्गदर्शन।</li>
+                        </ul>
+
+                        <p><b>महत्त्व:</b></p>
+                        <ul>
+                            <li><b>तनावयुक्त आधुनिक समाजका लागि ओखती:</b> योग, ध्यान र विपश्यना जस्ता साधनहरू मानसिक शान्तिको सर्वोत्तम उपाय।</li>
+                            <li><b>पर्यावरणीय सन्तुलन:</b> प्रकृति संरक्षण र जैविक सन्तुलनको दृष्टिकोणले पृथ्वीको रक्षा गर्न सम्भव।</li>
+                            <li><b>सामाजिक सहिष्णुता र शान्ति:</b> "अहिंसा परमो धर्म:" र बुद्धका पञ्चशील शिक्षाहरूले विश्वमा शान्ति र सहअस्तित्व प्रवर्धन गर्छ।</li>
+                            <li><b>नैतिक संकटको समाधान:</b> वैदिक धर्मका १० लक्षण र अष्टाङ्गिक मार्गले भ्रष्टाचार, स्वार्थ र नैतिक पतन रोक्न उपयोगी।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L4 -->
+            <div class="card fade-in" data-search="पूर्वीय चिन्तन दैनिक जीवन">
+                <div class="card-header">
+                    <span class="num">४</span>
+                    <span class="q-text"><b>पूर्वीय चिन्तन परम्पराका मुख्य सारहरूलाई दैनिक जीवनमा कसरी अवलम्बन गर्न सकिन्छ? उदाहरणसहित लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>१. सत्य र कर्तव्यको पालना (सत्य र धर्म):</b></p>
+                        <ul>
+                            <li><b>प्रयोग:</b> विद्यालय, घर र समाजमा इमानदार हुनु, कहिल्यै झुटो नबोल्नु, अर्काको सम्पत्ति वा कामको अधिकार नखिन्नु (अस्तेय)।</li>
+                            <li><b>उदाहरण:</b> परीक्षामा चोरी नगर्नु र आफ्नै मिहिनेतले उत्तर लेख्नु 'सत्य' र 'अस्तेय' को पालना हो।</li>
+                        </ul>
+
+                        <p><b>२. आत्मनियन्त्रण र संवेग व्यवस्थापन (दम र इन्द्रिय निग्रह):</b></p>
+                        <ul>
+                            <li><b>प्रयोग:</b> आफ्ना वासना, क्रोध, लोभ र इन्द्रियहरूलाई नियन्त्रणमा राख्नु।</li>
+                            <li><b>उदाहरण:</b> सामाजिक सञ्जालमा घन्टौँ समय नष्ट नगरी आवश्यक समय मात्र चलाउनु 'इन्द्रिय निग्रह' को उदाहरण हो।</li>
+                        </ul>
+
+                        <p><b>३. बौद्ध दर्शनको मध्यममार्ग र पञ्चशील:</b></p>
+                        <ul>
+                            <li><b>प्रयोग:</b> जीवनका कुनै पनि कुरामा 'अतिवाद' बाट बच्नु, हिंसा नगर्नु, झुटो नबोल्नु, मद्यपान नगर्नु।</li>
+                            <li><b>उदाहरण:</b> कडा व्रत बस्नु वा अनियन्त्रित जङ्क फुड खानु दुवै अतिवाद हो; सन्तुलित आहार मध्यममार्ग हो।</li>
+                        </ul>
+
+                        <p><b>४. शारीरिक र मानसिक सुस्वास्थ्य (योग, ध्यान र शौच):</b></p>
+                        <ul>
+                            <li><b>प्रयोग:</b> मन-वचन-कर्मको शुद्धता, नियमित योग र ध्यान अभ्यास।</li>
+                            <li><b>उदाहरण:</b> दैनिक १५ मिनेट योग र ध्यानले मानसिक एकाग्रता बढ्छ, पढाइमा मन जान्छ, रिस र तनाव व्यवस्थापन सजिलो हुन्छ।</li>
+                        </ul>
+
+                        <p><b>५. परोपकार र प्राणी दया:</b></p>
+                        <ul>
+                            <li><b>प्रयोग:</b> असहाय व्यक्तिलाई सहयोग गर्नु, जीवजन्तुप्रति दयालु हुनु।</li>
+                            <li><b>उदाहरण:</b> भोको कुकुर वा पशुपक्षीलाई आहारा दिनु, समाजमा कसैलाई दुःख पर्दा सहयोग गर्नु।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L5 -->
+            <div class="card fade-in" data-search="नेपाल पूर्वीय चिन्तन योगदान">
+                <div class="card-header">
+                    <span class="num">५</span>
+                    <span class="q-text"><b>पूर्वीय चिन्तन परम्परामा नेपालको योगदानको चर्चा गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>१. बौद्ध दर्शनको प्रवर्धन (लुम्बिनी र गौतम बुद्ध):</b></p>
+                        <ul>
+                            <li>बौद्ध दर्शनका प्रवर्तक गौतम बुद्धको जन्मस्थल नेपालको लुम्बिनी हो।</li>
+                            <li>चार आर्य सत्य, आर्य अष्टाङ्गिक मार्ग, पञ्चशील र मध्यममार्ग जस्ता शिक्षाहरू नेपालको माटोबाट सुरु भएर विश्वभर शान्ति, अहिंसा र मानवताको पर्याय बनेका छन्।</li>
+                        </ul>
+
+                        <p><b>२. वैदिक र सनातन दर्शनको संवर्धन:</b></p>
+                        <ul>
+                            <li>नेपालको हिमाली तथा पहाडी भूभाग ऋषिमुनिहरूको तपस्या र चिन्तन स्थल रहँदै आएको छ।</li>
+                            <li>जनकपुर दार्शनिक शास्त्रार्थको प्रमुख केन्द्र थियो; राजा जनकको दरबारमा याज्ञवल्क्य, अष्टावक्र र गार्गी जस्ता महान् दार्शनिकहरूले आत्मा, परमात्मा र ब्रह्माण्डका बारेमा बहस गरे।</li>
+                        </ul>
+
+                        <p><b>३. योग र आयुर्वेदको जीवित परम्परा:</b></p>
+                        <ul>
+                            <li>नेपालमा आयुर्वेद, जडीबुटीजन्य उपचार र योगको अभ्यास आदिम कालदेखि निरन्तर चल्दै आएको छ।</li>
+                            <li>हिमाली क्षेत्रमा पाइने बहुमूल्य जडीबुटीहरू आयुर्वेदका प्राण हुन्।</li>
+                        </ul>
+
+                        <p><b>४. किरात दर्शन र प्रकृति पूजा:</b></p>
+                        <ul>
+                            <li>नेपालका मौलिक किरात समुदायको 'मुन्धुम' र प्रकृति पूजाले मानव र प्रकृतिबिचको अटुट सम्बन्ध देखाउँछ।</li>
+                        </ul>
+
+                        <p><b>५. धार्मिक सहिष्णुता र समन्वयको नमूना:</b></p>
+                        <ul>
+                            <li>नेपालमा हिन्दु, बौद्ध, किरात र अन्य धर्मावलम्बीहरूबिच कहिल्यै धार्मिक युद्ध भएन; मन्दिर र विहारहरू सँगसँगै ठडिएका छन्।</li>
+                            <li>यसरी विभिन्न चिन्तनहरूलाई मिलाएर लैजाने <b>धार्मिक सहिष्णुता</b> को सन्देश नेपालले विश्वलाई दिएको छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L6 -->
+            <div class="card fade-in" data-search="पाश्चात्य चिन्तन परम्परा अर्थ विकास विशेषता">
+                <div class="card-header">
+                    <span class="num">६</span>
+                    <span class="q-text"><b>पाश्चात्य चिन्तन परम्पराको अर्थ, विकासक्रम र विशेषताहरू उल्लेख गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>अर्थ:</b> युरोप र पश्चिमी देशहरूमा उत्पत्ति भई विश्वभर विस्तार भएको दार्शनिक, तार्किक, वैज्ञानिक र भौतिकवादी वैचारिक प्रणाली।</p>
+
+                        <p><b>विकासक्रम (Evolution):</b></p>
+                        <ul>
+                            <li><b>क) प्राचीन ग्रिस काल:</b> पाश्चात्य चिन्तनको मुख्य स्रोत। सुकरात, प्लेटो, एरिस्टोटलले तार्किक बहस, नीतिशास्त्र र राजनीतिक सिद्धान्तको जग बसाले।</li>
+                            <li><b>ख) मध्यकाल / अँध्यारो युग:</b> युरोपमा इसाई चर्को अत्यधिक वर्चस्व; वैज्ञानिक अनुसन्धान, तार्किक बहस र स्वतन्त्र चिन्तनलाई दमन गरियो।</li>
+                            <li><b>ग) पुनर्जागरण र ज्ञानोद्दीपन काल:</b> चर्को दमनविरुद्ध दार्शनिक, वैज्ञानिक र कलाकारहरूले आवाज उठाए; धर्मनिरपेक्षता, व्यक्तिगत स्वतन्त्रता र वैज्ञानिक चिन्तनको उदय।</li>
+                            <li><b>घ) आधुनिक काल:</b> भौतिक विज्ञान, प्रविधिको विकास, औद्योगिक क्रान्ति, बजार अर्थतन्त्र, पूँजीवाद, उदारवादी लोकतन्त्रको उदय।</li>
+                        </ul>
+
+                        <p><b>विशेषताहरू:</b></p>
+                        <ul>
+                            <li><b>तार्किकता र आलोचनात्मक चिन्तन:</b> सत्य पत्ता लगाउन प्रमाण, तर्क र प्रश्नोत्तर पद्धतिलाई अनिवार्य मानिन्छ।</li>
+                            <li><b>वैज्ञानिक दृष्टिकोण र भौतिकवाद:</b> अमूर्त आध्यात्मिक भन्दा आँखाले देख्ने, परीक्षण गर्ने भौतिक वस्तु र प्रविधिको विकासमा जोड।</li>
+                            <li><b>व्यक्तिवाद र स्वतन्त्रता:</b> व्यक्तिको विचार, मानव अधिकार र वैचारिक स्वतन्त्रतालाई सर्वोपरि मानिन्छ।</li>
+                            <li><b>प्रकृतिमाथि नियन्त्रण र उपभोगवाद:</b> प्रकृतिलाई मानव हितका लागि दोहन गर्ने साधनको रूपमा लिइन्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L7 -->
+            <div class="card fade-in" data-search="पूर्वीय पाश्चात्य समानता भिन्नता तालिका">
+                <div class="card-header">
+                    <span class="num">७</span>
+                    <span class="q-text"><b>पूर्वीय र पाश्चात्य चिन्तन परम्पराबीचका समानता तथा भिन्नता तालिकासहित प्रस्तुत गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>समानताहरू:</b></p>
+                        <ul>
+                            <li>दुवैको अन्तिम लक्ष्य सत्य, ज्ञान र मानव अस्तित्वको यथार्थ पत्ता लगाउनु हो।</li>
+                            <li>दुवैले समाज सञ्चालनका लागि नैतिक मूल्यमान्यता, सदाचार र असल आचरणलाई महत्त्व दिन्छन्।</li>
+                            <li>दुवैले मानव जीवनलाई सुखी, व्यवस्थित र अर्थपूर्ण बनाउने बारेमा विश्लेषण गरेका छन्।</li>
+                            <li>समयको मागसँगै दुवै परिमार्जित र विकसित हुँदै आधुनिक युगमा प्रवेश गरेका छन्।</li>
+                        </ul>
+
+                        <p><b>भिन्नताहरू (तालिका):</b></p>
+                        <div class="table-wrapper comp-table">
+                            <table>
+                                <thead><tr><th>तुलनाको आधार</th><th>पूर्वीय चिन्तन</th><th>पाश्चात्य चिन्तन</th></tr></thead>
+                                <tbody>
+                                    <tr><td>मुख्य केन्द्रबिन्दु</td><td>आध्यात्मिक प्रगति, आन्तरिक आत्मज्ञान</td><td>भौतिक उन्नति, बाह्य जगत्को खोजी, वैज्ञानिक तथ्य</td></tr>
+                                    <tr><td>प्रकृतिसँगको सम्बन्ध</td><td>तादात्म्य, पर्यावरणमैत्री</td><td>प्रकृतिमाथि विजय, दोहन</td></tr>
+                                    <tr><td>व्यक्ति र समाज</td><td>सामूहिकता, पारिवारिक एकता</td><td>व्यक्तिवाद, व्यक्तिगत स्वतन्त्रता</td></tr>
+                                    <tr><td>स्वास्थ्य र जीवनशैली</td><td>योग, ध्यान, आयुर्वेद</td><td>आधुनिक चिकित्सा विज्ञान, भौतिक सुख</td></tr>
+                                    <tr><td>सत्यको विधि</td><td>ध्यान, स्वचिन्तन, शास्त्र प्रामाणिकता</td><td>तर्क, प्रमाण, प्रयोग, अवलोकन</td></tr>
+                                    <tr><td>जीवनको लक्ष्य</td><td>मोक्ष/निर्वाण, पुरुषार्थ</td><td>भौतिक समृद्धि, अधिकार, सुखमय वर्तमान</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p style="font-weight:700;color:var(--primary-dark);margin-top:8px;">आधुनिक संसारमा यी दुवैको सन्तुलित समन्वय नै मानव जातिको वास्तविक कल्याणको मार्ग हो।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L8 -->
+            <div class="card fade-in" data-search="बौद्ध दर्शन अष्टाङ्गिक मार्ग">
+                <div class="card-header">
+                    <span class="num">८</span>
+                    <span class="q-text"><b>बौद्ध दर्शनअन्तर्गतको अष्टाङ्गिक मार्गलाई आफ्नो दैनिक जीवनमा कसरी लागू गर्न सकिन्छ? पाँच बुँदामा लेख्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ol>
+                            <li><b>सम्यक् दृष्टि र सम्यक् सङ्कल्प (सत्य बुझाइ र दृढ निश्चय):</b> अन्धविश्वास र अफवाहको पछि नलागी सत्यलाई स्विकार्नु; आफ्नो र अरूको हित हुने गरी नैतिक विकासको प्रतिज्ञा गर्नु।<br>
+                            <i>व्यावहारिक प्रयोग:</i> परीक्षाको समयमा "म मिहिनेत गर्छु र असल मानिस बन्छु" भनी सकारात्मक सङ्कल्प लिनु।</li>
+
+                            <li><b>सम्यक् वाक् (सभ्य र सत्य बोली):</b> अरूको चित्त दुख्ने गरी कठोर नबोल्नु, झुटो नबोल्नु, गालीगलौज र कुरा काट्ने कामबाट टाढा रहनु।<br>
+                            <i>व्यावहारिक प्रयोग:</i> साथीहरूसँग वा अभिभावकहरूसँग शिष्ट, सत्य र विनम्र भाषामा कुराकानी गर्नु; सामाजिक सञ्जालमा कसैलाई होच्याएर टिप्पणी नगर्नु।</li>
+
+                            <li><b>सम्यक् कर्म (नैतिक कार्य):</b> प्राणी हिंसा नगर्नु, चोरी नगर्नु, व्यभिचार नगर्नु जस्ता असल कार्यहरूमा लाग्नु।<br>
+                            <i>व्यावहारिक प्रयोग:</i> साना जीवजन्तुहरूलाई दुःख नदिनु, विद्यालय वा सार्वजनिक सम्पत्तिको संरक्षण गर्नु।</li>
+
+                            <li><b>सम्यक् जीविका (इमानदार पेसा):</b> समाज र प्राणी जगत्लाई हानि नपुग्ने गरी न्यायपूर्ण र वैध तरिकाबाट जीविकोपार्जन गर्नु।<br>
+                            <i>व्यावहारिक प्रयोग:</i> भविष्यमा पेसा रोज्दा तस्करी, ठगी वा हानिकारक व्यवसाय नगर्ने र इमानदार श्रममा विश्वास गर्नु।</li>
+
+                            <li><b>सम्यक् स्मृति र सम्यक् समाधि (सचेतना र मानसिक एकाग्रता):</b> आफ्नो सोच, बोली र व्यवहारप्रति सधैँ सजग रहनु; मनलाई शान्त र एकाग्र राख्नु।<br>
+                            <i>व्यावहारिक प्रयोग:</i> दैनिक १० मिनेट ध्यान वा मौन बस्ने अभ्यास गरी मनलाई नियन्त्रणमा राख्नु, जसले पढाइमा एकाग्रता बढ्छ।</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L9 -->
+            <div class="card fade-in" data-search="इसाई धर्मदर्शन पाश्चात्य प्रभाव">
+                <div class="card-header">
+                    <span class="num">९</span>
+                    <span class="q-text"><b>इसाई धर्मदर्शनले पाश्चात्य चिन्तन परम्परामा पारेको प्रभाव स्पष्ट पार्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>१. मध्यकालमा इसाई चर्को आधिपत्य र अँध्यारो युग:</b></p>
+                        <ul>
+                            <li>युरोपका सबै क्षेत्रमा चर्को पूर्ण नियन्त्रण थियो।</li>
+                            <li>चर्को मान्यता विपरीत वैज्ञानिक खोजी, आलोचनात्मक विचार वा धर्मनिरपेक्ष तर्कहरू प्रस्तुत गर्न पाइँदैनथ्यो।</li>
+                            <li>स्वतन्त्र सोच्ने दार्शनिक वा वैज्ञानिकहरूलाई 'धर्मद्रोही' को आरोप लगाएर सजाय दिइन्थ्यो, जसले गर्दा युरोपमा ज्ञानको विकास ठप्प भयो।</li>
+                        </ul>
+
+                        <p><b>२. वैज्ञानिक र वैचारिक क्रान्तिको कारक:</b></p>
+                        <ul>
+                            <li>चर्को चरम शोषण र वैचारिक दमनका विरुद्ध कलाकार, साहित्यकार र वैज्ञानिकहरूले विद्रोह गरे → <b>पुनर्जागरण (Renaissance)</b> र <b>ज्ञानोद्दीपन (Enlightenment)</b> को सुरुवात भयो।</li>
+                            <li>इसाई धर्मदर्शनको बन्धनबाट उम्कने प्रयासले युरोपेली समाजमा धर्मनिरपेक्षता, वैचारिक स्वतन्त्रता र वैज्ञानिक दृष्टिकोणको जग बसालियो।</li>
+                        </ul>
+
+                        <p><b>३. नैतिक मूल्यमान्यता र सामाजिक संरचनामा प्रभाव:</b></p>
+                        <ul>
+                            <li>इसाई धर्मको प्रेम, करुणा, सेवा र क्षमा जस्ता भावनाहरूले पाश्चात्य समाजको कानुनी र सामाजिक न्याय प्रणालीलाई प्रभावित पारे।</li>
+                            <li>"सबै मानिस ईश्वरका सन्तान हुन्" भन्ने मान्यताले मानव अधिकार र समानताको अवधारणा विकास गर्न जगको काम गर्‍यो।</li>
+                        </ul>
+                        <p style="font-weight:700;color:var(--primary-dark);margin-top:8px;">इसाई धर्मदर्शनले सुरुमा पाश्चात्य चिन्तनलाई धार्मिक कट्टरतातर्फ धकेले तापनि त्यसै कट्टरताविरुद्धको सङ्घर्षले आधुनिक पाश्चात्य जगतलाई वैज्ञानिक, उदारवादी र लोकतान्त्रिक बनाउन मद्दत गर्‍यो।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L10 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा शारीरिक मानसिक सामाजिक नैतिक विकास">
+                <div class="card-header">
+                    <span class="num">१०</span>
+                    <span class="q-text"><b>जीवनोपयोगी शिक्षाले व्यक्तिको शारीरिक, मानसिक, सामाजिक र नैतिक विकासमा कसरी सहयोग गर्छ?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>१. शारीरिक विकास (Physical Development):</b></p>
+                        <ul>
+                            <li>उचित आहारविहार, पोषण, व्यक्तिगत सरसफाइ (शौचाचार) र शारीरिक अनुशासनको ज्ञान दिन्छ।</li>
+                            <li>नियमित व्यायाम, प्राणायाम र योगको अभ्यास गर्न सिकाउँछ।</li>
+                            <li>लागूऔषध, धूमपान र मद्यपान जस्ता हानिकारक बानीहरूबाट टाढा रहन सचेतना जगाउँछ।</li>
+                        </ul>
+
+                        <p><b>२. मानसिक विकास (Mental/Cognitive Development):</b></p>
+                        <ul>
+                            <li>रिस, डर, निराशा र परीक्षाको तनावलाई सकारात्मक रूपमा व्यवस्थापन गर्ने क्षमता प्रदान गर्छ।</li>
+                            <li>आलोचनात्मक र सिर्जनात्मक सोच — कुनै कुरालाई अन्धविश्वासको भरमा नजानी सत्यता जाँच्न र नयाँ दृष्टिकोणबाट समस्या समाधान गर्न सिकाउँछ।</li>
+                            <li>उपलब्ध विकल्पहरूमध्येबाट सही, तर्कपूर्ण र न्यायोचित विकल्प छनोट गर्ने क्षमता बढाउँछ।</li>
+                        </ul>
+
+                        <p><b>३. सामाजिक विकास (Social Development):</b></p>
+                        <ul>
+                            <li>परिवार, विद्यालय र समुदायमा प्रभावकारी र शिष्ट संवाद र सुमधुर अन्तरवैयक्तिक सम्बन्ध राख्ने सिप सिकाउँछ।</li>
+                            <li>समूहमा मिलेर काम गर्ने, अर्काको अस्तित्व र विचारको सम्मान गर्ने, नेतृत्व लिने क्षमता विकास गराउँछ।</li>
+                            <li>समानुभूति (Empathy) — अरूको दुःख, पीडा र परिस्थितिलाई आफ्नै ठानेर बुझ्ने र मद्दत गर्ने गुणको विकास गराउँछ।</li>
+                        </ul>
+
+                        <p><b>४. नैतिक विकास (Moral Development):</b></p>
+                        <ul>
+                            <li>नैतिक मर्यादापूर्ण व्यवहार, इमानदारिता, परोपकार र असल आचरणको जग बसाल्छ।</li>
+                            <li>नागरिकका हैसियतले समाज र राष्ट्रप्रति पूरा गर्नुपर्ने दायित्व र सामाजिक उत्तरदायित्वको बोध गराउँछ।</li>
+                        </ul>
+                        <p style="font-weight:700;color:var(--primary-dark);margin-top:8px;">जीवनोपयोगी शिक्षाले व्यक्तिको टाउको (ज्ञान), हात (सिप) र हृदय (सहानुभूति र नैतिकता) को एकीकृत विकास गराई पूर्ण मानव निर्माण गर्दछ।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L11 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी सिप क्षेत्र वर्णन">
+                <div class="card-header">
+                    <span class="num">११</span>
+                    <span class="q-text"><b>जीवनोपयोगी सिपका विभिन्न क्षेत्रहरू उदाहरणसहित वर्णन गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p>WHO (सन् १९९९) ले १० वटा प्रमुख जीवनोपयोगी सिपहरुलाई ६ वटा मुख्य क्षेत्रहरूमा वर्गीकरण गरेको छ:</p>
+
+                        <p><b>१. सञ्चार र अन्तरवैयक्तिक सिप:</b></p>
+                        <ul>
+                            <li><b>अवधारणा:</b> आफ्नो भावना र विचार स्पष्ट, आदरपूर्ण र प्रभावकारी रूपमा राख्ने र अरूसँग बलियो सम्बन्ध कायम राख्ने क्षमता।</li>
+                            <li><b>उदाहरण:</b> विवाद हुँदा झगडा नगरी शान्तपूर्वक छलफल गरेर समस्या सुल्झाउनु; नयाँ साथीहरूसँग सजिलै घुलमिल हुनु।</li>
+                        </ul>
+
+                        <p><b>२. निर्णय गर्ने र समस्या समाधान सिप:</b></p>
+                        <ul>
+                            <li><b>अवधारणा:</b> विभिन्न विकल्पमध्ये सबैभन्दा उत्तम बाटो रोज्ने र कठिनाइहरूको रचनात्मक समाधान पहिल्याउने सिप।</li>
+                            <li><b>उदाहरण:</b> इन्टरनेटको झुटा समाचार (Fake News) र सत्य समाचार छुट्ट्याएर मात्र शेयर गर्ने निर्णय गर्नु; गृहकार्य र खेलकुदको उचित तालिका बनाउनु।</li>
+                        </ul>
+
+                        <p><b>३. सिर्जनात्मक र समालोचनात्मक सोचाइ सिप:</b></p>
+                        <ul>
+                            <li><b>अवधारणा:</b> परम्परागत घेराभन्दा बाहिर निस्केर नौलो तरिकाले सोच्नु (सिर्जनात्मक) र सूचना/दाबीको सत्यता केलाएर मात्र स्विकार्नु (समालोचनात्मक)।</li>
+                            <li><b>उदाहरण:</b> पुराना प्लास्टिकका बोतलबाट फूलदानी बनाउनु (सिर्जनात्मक); सामाजिक सञ्जालको अफवाहको वैज्ञानिक सत्यता खोज्नु (समालोचनात्मक)।</li>
+                        </ul>
+
+                        <p><b>४. आत्मजागरुकता र समानुभूति:</b></p>
+                        <ul>
+                            <li><b>अवधारणा:</b> आफ्ना सबल/कमजोर पक्ष, रुचि, भावना चिन्नु (आत्मजागरुकता); अरूको दुःख र भावना आफ्नै ठानेर महसुस गर्नु (समानुभूति)।</li>
+                            <li><b>उदाहरण:</b> मलाई गणित गाह्रो तर नेपालीमा राम्रो छ भनी बुझ्नु (आत्मजागरुकता); अपाङ्गता भएको साथीलाई भर्‍याङ चढ्न मद्दत गर्नु (समानुभूति)।</li>
+                        </ul>
+
+                        <p><b>५. दृढता, समभाव र आत्मनियन्त्रण:</b></p>
+                        <ul>
+                            <li><b>अवधारणा:</b> कसैको चित्त नदुखाई आफ्नो विचार राख्नु (दृढता); उतारचढावमा विचलित नहुनु (समभाव); आफ्ना संवेगहरू काबुमा राख्नु (आत्मनियन्त्रण)।</li>
+                            <li><b>उदाहरण:</b> साथीहरूले धूमपान गर्न कर गर्दा दृढताका साथ "नाइँ" भन्न सक्नु।</li>
+                        </ul>
+
+                        <p><b>६. उत्थानशीलता र समस्यालाई सम्बोधन गर्ने क्षमता:</b></p>
+                        <ul>
+                            <li><b>अवधारणा:</b> कठिन परिस्थिति, असफलता वा दुःखद घटनाबाट निराश नभई पुनः सामान्य अवस्थामा फर्कन सक्ने मानसिक मजबुती।</li>
+                            <li><b>उदाहरण:</b> परीक्षामा सोचे जस्तो अङ्क नआउँदा निराश भएर पढाइ नछोडी आफ्नो गल्ती केलाएर अर्को पटक मिहिनेत गर्ने ऊर्जा जुटाउनु।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L12 -->
+            <div class="card fade-in" data-search="स्वस्थ जीवनशैली विद्यार्थी उपाय">
+                <div class="card-header">
+                    <span class="num">१२</span>
+                    <span class="q-text"><b>स्वस्थ जीवनशैली अपनाउन विद्यार्थीले पालना गर्नुपर्ने उपायहरू उल्लेख गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>१. उचित आहारविहार र सन्तुलित भोजन:</b></p>
+                        <ul>
+                            <li>घरमा पाकेको ताजा, सन्तुलित र पौष्टिक खाना खानुपर्छ।</li>
+                            <li>चाउचाउ, कुरकुरे, कोकाकोला वा प्रशोधित जङ्क फुड त्याग्नुपर्छ।</li>
+                            <li>पर्याप्त मात्रामा सफा पानी पिउने बानी बसाल्नुपर्छ।</li>
+                        </ul>
+
+                        <p><b>२. योग, ध्यान र प्राणायामको दिनचर्या:</b></p>
+                        <ul>
+                            <li>दैनिक बिहान २० मिनेट योग, कसरत वा प्राणायाम गर्नाले शरीर फुर्तिलो रहन्छ।</li>
+                            <li>दैनिक १० मिनेट ध्यान (Meditation) वा विपश्यनाको अभ्यासले तनाव कम हुन्छ, स्मृति शक्ति बलियो हुन्छ र एकाग्रता बढ्छ।</li>
+                        </ul>
+
+                        <p><b>३. डिजिटल र स्क्रिन समयको नियन्त्रण (आत्मनियन्त्रण):</b></p>
+                        <ul>
+                            <li>गेम खेल्ने, टिकटक वा सामाजिक सञ्जालमा घन्टौँ बिताउने बानीलाई नियन्त्रण गर्नुपर्छ।</li>
+                            <li>राती चाँडै सुत्ने र बिहान चाँडै उठ्ने बानी बसाली दैनिक ७-८ घन्टा सुत्नुपर्छ।</li>
+                        </ul>
+
+                        <p><b>४. सदाचार, अनुशासन र संवेग नियन्त्रण:</b></p>
+                        <ul>
+                            <li>गुरु, अभिभावक र ज्येष्ठ सदस्यहरूको आदर-सम्मान गर्ने (मातृदेवो भव, पितृदेवो भव, आचार्यदेवो भव)।</li>
+                            <li>रिस, डाहा र ईर्ष्यालाई 'समभाव' को माध्यमबाट नियन्त्रण गर्ने र रचनात्मक सोच राख्ने।</li>
+                        </ul>
+
+                        <p><b>५. समय व्यवस्थापन र स्वाध्याय:</b></p>
+                        <ul>
+                            <li>परीक्षाको समयमा मात्र घोटिएर नपढी दैनिक स्वाध्याय (Self-study) गर्ने बानी बसाल्नुपर्छ, जसले अन्तिम समयको मानसिक तनावबाट जोगाउँछ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L13 -->
+            <div class="card fade-in" data-search="सामाजिक अध्ययन विषयवस्तु जीवनोपयोगी सिप">
+                <div class="card-header">
+                    <span class="num">१३</span>
+                    <span class="q-text"><b>सामाजिक अध्ययनका विषयवस्तुहरूले जीवनोपयोगी सिप विकास गर्न कसरी सहयोग गर्छन्?</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>सामाजिक मूल्य, मान्यता र संस्कृतिको अध्ययन (समानुभूति र सुमधुर सम्बन्ध):</b> विभिन्न जातजाति, भाषा, धर्म र संस्कृतिको अध्ययनले विद्यार्थीहरूमा अरूको पहिचान र भावनाको आदर गर्ने <b>समानुभूति (Empathy)</b> र सामाजिक सहिष्णुता विकास हुन्छ।</li>
+
+                            <li><b>नागरिक सचेतना, संविधान र कानुनको अध्ययन (निर्णय गर्ने र नेतृत्व सिप):</b> नागरिक अधिकार, कर्तव्य, लोकतन्त्र र कानुनी शासनको अध्ययनले विद्यार्थीलाई समाजप्रति जिम्मेवार बनाउँछ र <b>निर्णय क्षमता</b> तथा <b>नेतृत्व सिप</b> विकास गराउँछ।</li>
+
+                            <li><b>इतिहास र दार्शनिक चिन्तनहरूको अध्ययन (आत्मजागरुकता र समालोचनात्मक सोच):</b> विगतका घटनाहरू, पूर्वीय तथा पाश्चात्य चिन्तन र दार्शनिक शिक्षाहरूको अध्ययनले आफ्नो क्षमता र सीमा चिन्न (<b>आत्मजागरुकता</b>) तथा सामाजिक घटनालाई तर्कको कसीमा जाँच्न (<b>समालोचनात्मक सोच</b>) सक्षम बनाउँछ।</li>
+
+                            <li><b>प्रयोगात्मक तथा परियोजना कार्यहरू (सहकार्य र सञ्चार सिप):</b> समुदाय भ्रमण, अन्तर्वार्ता, सर्वेक्षण र परियोजना कार्यका क्रममा विद्यार्थीले समूहमा मिलेर काम गर्नुपर्छ, जसले <b>सञ्चार सिप</b>, <b>सहकार्य</b> र <b>द्वन्द्व व्यवस्थापन</b> सिप विकास गराउँछ।</li>
+
+                            <li><b>वातावरणीय र भौगोलिक अध्ययन (पर्यावरणीय संवेदनशीलता):</b> प्रकृति र वातावरणबिचको अन्तरसम्बन्ध बुझाउँदा विद्यार्थीहरूमा प्रकृतिलाई माया गर्ने र पर्यावरण संरक्षणमा योगदान पुऱ्याउने सिप र बानी विकास हुन्छ।</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L14 -->
+            <div class="card fade-in" data-search="जीवनोपयोगी शिक्षा सफल जीवन आधार">
+                <div class="card-header">
+                    <span class="num">१४</span>
+                    <span class="q-text"><b>"जीवनोपयोगी शिक्षा सफल र सार्थक जीवनको आधार हो।" यस भनाइलाई पुष्टि गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <ul>
+                            <li><b>व्यावहारिक र व्यावसायिक कुशलता:</b> जीवनोपयोगी शिक्षाले कोरा सिद्धान्त मात्र नभई कार्यस्थल र दैनिक जीवनका समस्याहरू बुद्धिमानीपूर्वक हल गर्ने प्राविधिक ज्ञान दिन्छ, जसले व्यावसायिक जीवन सफल बनाउँछ।</li>
+
+                            <li><b>बलियो मनोसामाजिक जग (मानसिक सुस्वास्थ्य):</b> दुःख, असफलता र चुनौतीहरू आइरहँदा निराशा वा कुलततर्फ नधकेलिई पुनः उठ्न सक्ने <b>उत्थानशीलता</b> प्रदान गर्छ, जसले डिप्रेसन र आत्महत्या जस्ता कदमहरू चाल्नबाट रोक्छ।</li>
+
+                            <li><b>नैतिक र मर्यादित व्यक्तित्वको निर्माण:</b> पूर्वीय दर्शनले "चरित्र नै परम धन हो" भनी सिकाउँछ। जीवनोपयोगी शिक्षाले सदाचार, इमानदारिता, परोपकार र आत्मसंयमको विकास गराउँछ।</li>
+
+                            <li><b>सुमधुर सामाजिक सम्बन्ध र पारिवारिक सुख:</b> प्रभावकारी सञ्चार, समानुभूति र द्वन्द्व समाधानका सिपहरु सिकाउँछ, जसले पारिवारिक जीवन र सामाजिक सम्बन्ध सुमधुर रहन्छ।</li>
+
+                            <li><b>स्वास्थ्य र अध्यात्मको सन्तुलन:</b> योग, ध्यान र उपयुक्त आहारविहारको माध्यमबाट निरोगी शरीर र शान्त मन प्राप्त गर्न सिकाउँछ।</li>
+                        </ul>
+                        <p style="font-weight:700;color:var(--primary-dark);margin-top:8px;">कोरा अकादमिक ज्ञानले मानिसलाई चलाख बनाउला तर जीवनोपयोगी शिक्षाले मात्र मानिसलाई "विवेकशील, नैतिक, सुखी र मानवीय" बनाउँछ।</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- L15 -->
+            <div class="card fade-in" data-search="पूर्वीय पाश्चात्य उपयोगिता आधुनिक जीवन">
+                <div class="card-header">
+                    <span class="num">१५</span>
+                    <span class="q-text"><b>पूर्वीय तथा पाश्चात्य चिन्तनका उपयोगितालाई आधुनिक जीवनसँग सम्बन्धित गरी व्याख्या गर्नुहोस्।</b></span>
+                </div>
+                <div class="card-body">
+                    <div class="answer">
+                        <p><b>आधुनिक जीवनमा पूर्वीय चिन्तनको उपयोगिता:</b></p>
+                        <ul>
+                            <li><b>मानसिक शान्ति र तनाव व्यवस्थापन:</b> आजको व्यस्त जीवनमा <b>योग, ध्यान, प्राणायाम र विपश्यना</b> मानिसका लागि मानसिक ओखती साबित भएका छन्। पश्चिमा देशहरूमा समेत यसको आकर्षण बढ्दो छ।</li>
+                            <li><b>पर्यावरणीय संकटको समाधान:</b> जलवायु परिवर्तनको सामना गर्न पूर्वीय 'प्रकृति संरक्षण' र 'पर्यावरण अनुकूल' जीवनशैलीको सिद्धान्त अत्यन्तै सान्दर्भिक छ।</li>
+                            <li><b>नैतिक संकटको न्यूनीकरण:</b> वैदिक धर्मका १० लक्षण र बुद्धको पञ्चशील (अहिंसा, सत्य, अस्तेय) को व्यावहारिक प्रयोगले अनैतिकता कम गर्न सहयोग गर्छ।</li>
+                        </ul>
+
+                        <p><b>आधुनिक जीवनमा पाश्चात्य चिन्तनको उपयोगिता:</b></p>
+                        <ul>
+                            <li><b>वैज्ञानिक सोच र प्रविधिको प्रयोग:</b> आधुनिक चिकित्सा विज्ञान, यातायात, सञ्चार प्रविधि र इन्टरनेट पाश्चात्य चिन्तनको 'वैज्ञानिक र भौतिकवादी' दृष्टिकोणको उपज हुन्।</li>
+                            <li><b>मानव अधिकार र लोकतान्त्रिक मूल्यहरू:</b> व्यक्तिगत स्वतन्त्रता, न्याय, समानता र मानव अधिकारले न्यायपूर्ण र स्वतन्त्र समाजको निर्माण सम्भव बनाएको छ।</li>
+                            <li><b>आलोचनात्मक विश्लेषण:</b> समाजमा व्याप्त पुराना कुप्रथाहरू (जस्तै: छुवाछुत, अन्धविश्वास) लाई तोड्न पाश्चात्य तार्किक र आलोचनात्मक बहस उपयोगी छ।</li>
+                        </ul>
+
+                        <div class="flow-box" style="border-left-color:var(--accent3);">
+                            <span class="step">🧪 पाश्चात्य चिन्तन (विज्ञान, प्रविधि, भौतिक समृद्धि)</span>
+                            <span class="arrow">➕</span>
+                            <span class="step">🧘 पूर्वीय चिन्तन (अध्यात्म, मानसिक शान्ति, नैतिकता)</span>
+                            <span class="arrow">⬇️</span>
+                            <span class="step" style="background:var(--accent1);color:#000;font-weight:800;">🌍 सन्तुलित र सुखी आधुनिक जीवन (वैश्वस्थानीयकरण)</span>
+                        </div>
+
+                        <p style="font-weight:700;color:var(--primary-dark);margin-top:8px;">पूर्वको अध्यात्म र पश्चिमको विज्ञानको समन्वय (Glocalization) ले मात्र आधुनिक मानव सभ्यता दिगो, सुखी र कल्याणकारी बन्न सक्छ।</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end longContainer -->
+
+        <!-- ============================================================ -->
+        <!-- ===== PROCESS FLOW (Additional) ===== -->
+        <!-- ============================================================ -->
+        <div class="section-header" id="section-flow" style="margin-top:40px;">
+            <h2><span class="icon">🔄</span> तथ्याङ्क विश्लेषण प्रक्रिया</h2>
+            <span class="section-sub">चरणबद्ध</span>
+        </div>
+
+        <div class="card fade-in" style="border-left-color:var(--accent4);">
+            <div class="card-header">
+                <span class="num" style="background:var(--accent4);color:#fff;">📊</span>
+                <span class="q-text"><b>तथ्याङ्क विश्लेषण र प्रस्तुतीकरणको चरणबद्ध प्रक्रिया</b></span>
+            </div>
+            <div class="card-body">
+                <div class="answer">
+                    <div class="flow-box" style="border-left-color:var(--accent4);">
+                        <span class="step">📥 १. तथ्याङ्क तयारी (सफाइ र त्रुटि सुधार)</span>
+                        <span class="arrow">⬇️</span>
+                        <span class="step">💻 २. तथ्याङ्क प्रशोधन (कोडिङ र सफ्टवेयर प्रविष्टि)</span>
+                        <span class="arrow">⬇️</span>
+                        <span class="step">📐 ३. तथ्याङ्क विश्लेषण (गणितीय र गुणात्मक गणना)</span>
+                        <span class="arrow">⬇️</span>
+                        <span class="step">📝 ४. शाब्दिक प्रस्तुतीकरण (स्पष्ट र संक्षिप्त भाषा)</span>
+                        <span class="arrow">⬇️</span>
+                        <span class="step">📊 ५. चित्रात्मक प्रस्तुतीकरण (तालिका, ग्राफ, पाई चार्ट)</span>
+                    </div>
+                    <p style="margin-top:10px;font-weight:700;color:var(--accent4);">यो व्यवस्थित प्रक्रियाले अनुसन्धानको प्रतिवेदनलाई प्राज्ञिक र पठनीय बनाउँछ।</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- No results message -->
+        <div class="no-results" id="noResults">
+            🔍 कुनै पनि प्रश्न फेला परेन। कृपया अर्को शब्द खोज्नुहोस्।
+        </div>
+
+    </main>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="माथि जानुहोस्">
+        ⬆
+    </button>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // ===== SCROLL TO SECTION =====
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                const offset = 130;
+                const top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.target === id) btn.classList.add('active');
+            });
+        }
+
+        // ===== SCROLL TOP BUTTON =====
+        window.addEventListener('scroll', function() {
+            const btn = document.getElementById('scrollTop');
+            if (window.scrollY > 400) {
+                btn.classList.add('visible');
+            } else {
+                btn.classList.remove('visible');
+            }
+        });
+
+        // ===== SEARCH =====
+        const searchInput = document.getElementById('searchInput');
+        const noResults = document.getElementById('noResults');
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.trim().toLowerCase();
+            const allCards = document.querySelectorAll('.card');
+            let anyVisible = false;
+
+            allCards.forEach(card => {
+                const text = card.dataset.search + ' ' + card.querySelector('.q-text')?.textContent + ' ' + card
+                    .querySelector('.answer')?.textContent;
+                const match = text.toLowerCase().includes(query);
+                if (query === '') {
+                    card.style.display = 'block';
+                    anyVisible = true;
+                } else if (match) {
+                    card.style.display = 'block';
+                    anyVisible = true;
+                    highlightText(card, query);
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Also search in table content
+            const tables = document.querySelectorAll('.table-wrapper table');
+            tables.forEach(table => {
+                const parent = table.closest('.card');
+                if (!parent) return;
+                const text = table.textContent.toLowerCase();
+                const match = text.includes(query);
+                if (query === '') {
+                    parent.style.display = 'block';
+                    anyVisible = true;
+                } else if (match) {
+                    parent.style.display = 'block';
+                    anyVisible = true;
+                }
+            });
+
+            if (query !== '' && !anyVisible) {
+                noResults.classList.add('show');
+            } else {
+                noResults.classList.remove('show');
+            }
+        });
+
+        function highlightText(card, query) {
+            card.querySelectorAll('.highlight-match').forEach(el => {
+                const parent = el.parentNode;
+                parent.replaceChild(document.createTextNode(el.textContent), el);
+                parent.normalize();
+            });
+            if (query === '') return;
+            const elements = card.querySelectorAll('.q-text, .answer');
+            elements.forEach(el => {
+                const text = el.textContent;
+                const lower = text.toLowerCase();
+                const idx = lower.indexOf(query);
+                if (idx !== -1) {
+                    const before = text.substring(0, idx);
+                    const match = text.substring(idx, idx + query.length);
+                    const after = text.substring(idx + query.length);
+                    el.innerHTML = '';
+                    if (before) el.appendChild(document.createTextNode(before));
+                    const span = document.createElement('span');
+                    span.className = 'highlight-match';
+                    span.textContent = match;
+                    el.appendChild(span);
+                    if (after) el.appendChild(document.createTextNode(after));
+                }
+            });
+        }
+
+        // ===== ACTIVE NAV ON SCROLL =====
+        window.addEventListener('scroll', function() {
+            const sections = ['section-short', 'section-medium', 'section-compare', 'section-long', 'section-flow'];
+            let current = '';
+            const offset = 150;
+            for (const id of sections) {
+                const el = document.getElementById(id);
+                if (el) {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= offset) {
+                        current = id;
+                    }
+                }
+            }
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.target === current) btn.classList.add('active');
+            });
+        });
+
+        // ===== KEYBOARD SHORTCUT: ESC to clear search =====
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                searchInput.value = '';
+                searchInput.dispatchEvent(new Event('input'));
+                searchInput.blur();
+            }
+        });
+
+        // ===== INIT =====
+        document.addEventListener('DOMContentLoaded', function() {
+            // All cards are visible by default, nothing to do.
+        });
+    </script>
+
+</body>
+</html>
