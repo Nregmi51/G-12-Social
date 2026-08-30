@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ४, पाठ २ – सामाजिक सम्बन्धको विकास र अन्तरनिर्भरता (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #1a1a2e;
+            color: #e8e4de;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #f5f0ea;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.5);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #b8a99a;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #c4450c;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.1rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1f7a4a;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #a0522d;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #e8dfd4;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #c9bdb0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #c4450c;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #1a3a5c;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #c4450c;
+            border-bottom-color: #c4450c;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #c4450c;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #1a3a5c;
+            margin: 42px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 4px solid #b8c4d0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #1a3a5c;
+        }
+
+        .section-head .mark-badge {
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #c4450c;
+        }
+
+        .section-head .mark-badge.gold {
+            background: #b45309;
+        }
+
+        .section-head .mark-badge.green {
+            background: #1f7a4a;
+        }
+
+        .section-head .mark-badge.purple {
+            background: #6b3fa0;
+        }
+
+        .section-head .mark-badge.blue {
+            background: #1a3a5c;
+        }
+
+        .section-head .mark-badge.pink {
+            background: #a03a5a;
+        }
+
+        .sub-head {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #1a3a5c;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #c4450c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #c4450c;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #c4450c;
+        }
+
+        /* ----- CONTENT BOXES with highlight backgrounds ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            font-weight: 500;
+            font-size: 1.12rem;
+            line-height: 2;
+        }
+
+        .content-box.blue-highlight {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-highlight {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-highlight {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-highlight {
+            border-left-color: #6b3fa0;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-highlight {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-highlight {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-highlight {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        .content-box p {
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a3a5c;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            background: #fcf9f5;
+        }
+
+        .qa-block.color1 { border-left-color: #c4450c; background: #fcf9f5; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.15rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #c4450c;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1a3a5c;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.08rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #c4450c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(196, 69, 12, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #a0360a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(196, 69, 12, 0.55);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #c9bdb0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #c9bdb0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1a3a5c;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- SPEECH/DEBATE BOX ----- */
+        .speech-box {
+            background: #fcf8f0;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .speech-box .speech-title {
+            font-weight: 900;
+            color: #1a3a5c;
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .speech-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 6px;
+            line-height: 2;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+                font-size: 1.02rem;
+            }
+            .content-box li, .content-box p {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            .speech-box p {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th, td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-handshake"></i>
+                    एकाइ ४, पाठ २: सामाजिक सम्बन्धको विकास र सामाजिक अन्तरनिर्भरता
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ४, पाठ २
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. पाठमा प्रयोग भएका विषयगत पारिभाषिक (रजिस्टर) शब्दहरू
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> गार्हपत्य</strong>
+                <p>अथर्ववेदमा दाम्पत्य जीवन, विवाह र पारिवारिक सङ्गठनको अस्तित्वलाई बुझाउन प्रयोग गरिएको शब्द। यसले निजी सम्पत्तिको प्रावधानलाई जन्म दिएको संकेत गर्छ <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> आहवनीय</strong>
+                <p>प्राचीन कालमा आवाहन गरिएको वा आवश्यक परेको अवस्थामा मानिसहरू जम्मा हुने प्रारम्भिक ग्राम सङ्गठन वा गाउँ सभा जस्तो संस्था <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> विदथ</strong>
+                <p>ऋग्वेदमा उल्लेख गरिएको एक अत्यन्त प्राचीन सामाजिक-राजनीतिक सभा, जहाँ महिला र पुरुष दुवै सहभागी भई छलफल गर्थे <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> दक्षिणाग्नी</strong>
+                <p>आहवनीय पछि विकास भएको जनपद तहको वृहत्तर सामाजिक-राजनीतिक संस्था <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> साधारण धर्म</strong>
+                <p>समय, स्थान र परिस्थितिको बन्धन विना विश्वभरिका सम्पूर्ण मानव जातिका लागि समान रूपमा लागू हुने आधारभूत नैतिक नियम <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> विशेष धर्म</strong>
+                <p>व्यक्तिको सामाजिक पद, परिस्थिति, समय, स्थान अनुसार परिवर्तन हुने कर्तव्य र नीति नियमहरू <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> पुरुषार्थ चतुष्टय</strong>
+                <p>पूर्वीय दर्शनमा मानव जीवनका चार परम लक्ष्यहरू: धर्म, अर्थ, काम र मोक्ष <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> वैयक्तिकतावादी दृष्टिकोण</strong>
+                <p>व्यक्तिको स्वतन्त्रता, निजी अधिकार र आत्म-विकासलाई सामूहिक हितभन्दा बढी प्राथमिकता दिने पाश्चात्य दृष्टिकोण <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> समुदायवादी दृष्टिकोण</strong>
+                <p>समाज, समुदाय र सामूहिक हितलाई व्यक्तिको भन्दा माथि राख्ने दृष्टिकोण <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> गृहस्थाश्रम</strong>
+                <p>वैदिक आश्रम पद्धतिअनुसार विवाह गरी परिवार निर्माण गर्ने जीवनको दोस्रो र सबैभन्दा महत्त्वपूर्ण व्यावहारिक चरण <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> गुठी / गोष्ठी</strong>
+                <p>सामाजिक सम्बन्ध, सांस्कृतिक जात्रा, पर्व र सहकार्यलाई व्यवस्थित रूपमा सञ्चालन गर्न परम्परागत रूपमा स्थापित सामुदायिक सङ्गठन <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> सामाजिक अन्तरनिर्भरता</strong>
+                <p>मानव समाजमा मानिसहरू आफ्ना विभिन्न आवश्यकताहरू पूरा गर्न अनिवार्य रूपमा एकअर्कामाथि निर्भर रहने स्वाभाविक अवस्था <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "सामाजिक सम्बन्धको विकास र सामाजिक अन्तरनिर्भरता" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. ऐतिहासिक विकास -->
+        <div class="sub-head"><i class="fas fa-history"></i> १. सामाजिक सम्बन्धको ऐतिहासिक विकास र वैदिक पृष्ठभूमि</div>
+
+        <div class="content-box blue-highlight">
+            <p><strong>परिवारको उत्पत्ति र महत्त्व:</strong> मानव समाज व्यक्तिहरू मिलेर बनेको हुन्छ र व्यक्ति नै समाजको आधारभूत एकाइ हो <span class="ref">[८]</span>। तर, समाजको सबैभन्दा पहिलो र आधारभूत संस्था <strong>'परिवार'</strong> हो <span class="ref">[८]</span>।</p>
+            <p><strong>वैदिक वाङ्मयमा पारिवारिक चित्रण:</strong></p>
+            <ul>
+                <li>अथर्ववेदमा दाम्पत्य जीवन र परिवार सङ्गठनको अस्तित्वलाई <strong>'गार्हपत्य'</strong> भनिएको छ, जसको स्थापनासँगै निजी सम्पत्तिको अवधारणा सुरु भएको मानिन्छ <span class="ref">[८]</span>।</li>
+                <li>पारिवारिक संगठन सुदृढ भएपछि गाउँ तहमा <strong>'आहवनीय'</strong> र त्यसपछि जनपद तहमा <strong>'दक्षिणाग्नी'</strong> संस्थाको विकास भयो <span class="ref">[८]</span>।</li>
+            </ul>
+            <p><strong>प्राचीन सामाजिक-राजनीतिक संस्थाहरू:</strong> ऋग्वेदमा <strong>'विदथ'</strong> जस्तो प्राचीन सभाको चर्चा छ, जहाँ महिला र पुरुष दुवै समान रूपमा सहभागी भई निर्णय गर्थे <span class="ref">[८]</span>। यसबाहेक <strong>'सभा', 'समिति', 'परिषद्', 'विश' र 'जन'</strong> जस्ता सङ्गठनहरूको उल्लेख छ <span class="ref">[८]</span>।</p>
+        </div>
+
+        <div class="content-box gold-highlight">
+            <p><strong>पूर्वीय र पाश्चात्य चिन्तनमा राज्यको उत्पत्ति:</strong></p>
+            <ul>
+                <li><strong>पूर्वीय दर्शन (महाभारतको शान्तिपर्व):</strong> प्राचीन समयमा राज्य, राजा वा दण्ड नहुँदा पनि मानिसहरू धर्म (नैतिक नियम) द्वारा अनुशासित भई एकआपसमा सुरक्षित रहन्थे <span class="ref">[८]</span>।</li>
+                <li><strong>पाश्चात्य चिन्तन:</strong> राज्यको उत्पत्ति 'ईश्वरीय इच्छा' वा 'सामाजिक सम्झौता (Social Contract)' बाट भएको मानिन्छ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- २. व्यक्तित्वका आधार -->
+        <div class="sub-head"><i class="fas fa-user"></i> २. व्यक्तित्वका आधार, व्यक्तिका कर्तव्य र अधिकार</div>
+
+        <div class="content-box green-highlight">
+            <p><strong>व्यक्तित्वको निर्माण:</strong> व्यक्तिको व्यक्तित्व निर्माणमा देश, काल (समय) र परिस्थितिको प्रत्यक्ष प्रभाव रहन्छ <span class="ref">[८]</span>। संस्कार, संस्कृति र सदाचारको पालनाले असल पात्र बन्न मद्दत गर्छ <span class="ref">[८]</span>।</p>
+            <p><strong>साधारण धर्म र विशेष धर्मको अन्तरसम्बन्ध:</strong></p>
+            <ul>
+                <li><strong>साधारण धर्म:</strong> विश्वका सम्पूर्ण मानिसका लागि सधैँ लागू हुने नैतिक मूल्यहरू (सत्य, अहिंसा, करुणा) <span class="ref">[८]</span>।</li>
+                <li><strong>विशेष धर्म:</strong> व्यक्तिको भूमिका, समय, स्थान अनुसार बदलिने कर्तव्यहरू <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <div class="content-box purple-highlight">
+            <p><strong>नेपाली संस्कृतिको मौलिक चिन्तन शैली:</strong></p>
+            <ul>
+                <li>सामाजिक व्यवहारमा <strong>'समष्टि प्रधान'</strong> (समुदाय केन्द्रित) तर आध्यात्मिक प्रयोजनमा <strong>'व्यष्टि-केन्द्रित'</strong> चिन्तन <span class="ref">[८]</span>।</li>
+                <li><strong>कर्तव्य र अधिकारको सन्तुलन:</strong> नेपाली संस्कृतिमा <strong>'पहिले कर्तव्य, अनि अधिकार'</strong> को मान्यता <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ३. परिवार -->
+        <div class="sub-head"><i class="fas fa-home"></i> ३. परिवार र पारिवारिक आदर्श</div>
+
+        <div class="content-box pink-highlight">
+            <p><strong>पारिवारिक जग र गृहस्थाश्रम:</strong> पूर्वीय दर्शनमा <strong>'गृहस्थाश्रम'</strong> को महिमामार्फत समाज र राष्ट्र निर्माणमा परिवारको योगदान बुझाइएको छ <span class="ref">[८]</span>।</p>
+            <p><strong>संस्कारको पाठशाला:</strong> व्यक्तिको जीवनशैली, सोच, दृष्टिकोण र चरित्रको निर्माणमा परिवार नै पहिलो र प्राथमिक पाठशाला हो <span class="ref">[८]</span>।</p>
+            <p><strong>आधुनिक समयका चुनौतीहरू:</strong> वैश्वीकरण, रोजगारी, प्रविधिको प्रभावले परम्परागत संयुक्त परिवारको स्वरूप बदलिएर एकल परिवारको सङ्ख्या बढ्दै गएको छ <span class="ref">[८]</span>।</p>
+        </div>
+
+        <!-- ४. सामाजिक अन्तरनिर्भरता -->
+        <div class="sub-head"><i class="fas fa-globe-asia"></i> ४. सामाजिक अन्तरनिर्भरता</div>
+
+        <div class="content-box teal-highlight">
+            <p><strong>अन्तरनिर्भरताको परिभाषा:</strong> मानिस एक सामाजिक प्राणी भएकाले कोही पनि व्यक्ति पूर्ण रूपमा आत्मनिर्भर हुन सक्दैन। आफ्ना जैविक, आर्थिक, सामाजिक आवश्यकता पूरा गर्न एकअर्काको सहयोग चाहिनु नै सामाजिक अन्तरनिर्भरता हो <span class="ref">[८]</span>।</p>
+            <p><strong>प्राचीन र परम्परागत स्वरूप:</strong></p>
+            <ul>
+                <li>परिवार, कुल, र कुटम्बबीच गहिरो अन्तरनिर्भरता <span class="ref">[८]</span>।</li>
+                <li><strong>'गुठी' (गोष्ठी)</strong> जस्ता संरचनाले सामाजिक र धार्मिक सहकार्य व्यवस्थित गर्थे <span class="ref">[८]</span>।</li>
+                <li>शिल्पीहरूको श्रेणी र व्यापारीहरूको संगठन (पुग, सार्थ समवाय) <span class="ref">[८]</span>।</li>
+                <li>प्राचीन गुरुकुल र आश्रम पद्धतिमा उत्कृष्ट अन्तरनिर्भरता <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <div class="content-box orange-highlight">
+            <p><strong>आधुनिक र वैश्विक स्वरूप:</strong></p>
+            <ul>
+                <li>यातायात, सञ्चार प्रविधि, अनलाइन सञ्जालको विकासले अन्तरनिर्भरता <strong>वैश्विक</strong> तहमा पुगेको छ <span class="ref">[८]</span>।</li>
+                <li>अन्तर्राष्ट्रिय व्यापार, पर्यटन, वैदेशिक रोजगारीले विश्वका मानिसहरू गहिरो रूपमा जोडिएका छन् <span class="ref">[८]</span>।</li>
+                <li>संयुक्त राष्ट्रसङ्घ, सार्क, विश्व स्वास्थ्य संगठन जस्ता संस्थाहरू मार्फत समन्वय र अन्तरनिर्भरता कायम भएको छ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण र प्राज्ञिक समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-users"></i> क्रियाकलाप १: परिवार र आफन्तको सहयोगले सफलता — अन्तरक्रिया प्रतिवेदन</div>
+
+        <div class="content-box blue-highlight">
+            <p><strong>प्रतिवेदन: मेरो सफलतामा परिवार र समाजको भूमिका</strong></p>
+            <ul>
+                <li><strong>अन्तरक्रिया मिति:</strong> २०८३/०५/१४</li>
+                <li><strong>अतिथि:</strong> श्री हरिप्रसाद न्यौपाने (वरिष्ठ सामाजिक शिक्षक, उमेर: ५८ वर्ष)</li>
+                <li><strong>सहभागी:</strong> कक्षा १२ का सम्पूर्ण विद्यार्थीहरू</li>
+            </ul>
+            <p><strong>मुख्य निष्कर्ष र सारसंक्षेप:</strong></p>
+            <ol>
+                <li><strong>शिक्षाको जग बस्न सहयोग:</strong> बाल्यकालमा आर्थिक अवस्था कमजोर हुँदाहुँदै पनि बुबाआमाले आफ्नो गाँस काटेर र काका-बडाबाले ऋणधन गरी विद्यालय पठाएको स्मरण <span class="ref">[८]</span>।</li>
+                <li><strong>मानसिक तथा संवेगात्मक ढाडस:</strong> उच्च शिक्षामा आइपरेका कठिनाइहरूमा आफन्तहरूले बास र खानाको व्यवस्था गरिदिएर ठुलो सहारा दिएका थिए <span class="ref">[८]</span>।</li>
+                <li><strong>पारिवारिक आदर्शको प्रभाव:</strong> चरित्र र अनुशासनको विकासमा हजुरबुबाको नैतिक कथा र पारिवारिक वातावरणको प्रत्यक्ष प्रभाव रहेको <span class="ref">[८]</span>।</li>
+                <li><strong>निष्कर्ष:</strong> मानिसको सफलतामा केवल व्यक्तिगत मिहिनेत मात्र पर्याप्त हुँदैन, बरु परिवार र आफन्तको अदृश्य त्याग, विश्वास र सहयोग नै सफलताको मुख्य कडी हो <span class="ref">[८]</span>।</li>
+            </ol>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-microphone-alt"></i> क्रियाकलाप २: वक्तृत्वकला — "सामाजिक अन्तरनिर्भरता अहिलेको आवश्यकता हो"</div>
+
+        <div class="speech-box">
+            <div class="speech-title">"सामाजिक अन्तरनिर्भरता अहिलेको आवश्यकता हो"</div>
+            <p><strong>आदरणीय सभापति महोदय, निष्पक्ष निर्णायक मण्डल, गुरुवर्ग र मेरा प्यारा सहपाठी साथीहरू,</strong></p>
+            <p>आज यस गरिमामय हलमा आयोजित वक्तृत्वकला प्रतियोगितामा <strong>"सामाजिक अन्तरनिर्भरता अहिलेको आवश्यकता हो"</strong> भन्ने शीर्षकमा आफ्ना तार्किक विचारहरू प्रस्तुत गर्न पाउँदा मलाई अत्यन्तै खुसी लागेको छ।</p>
+            <p>महोदय, मानव सभ्यताको सुरुवातदेखि नै मानिस एक्लै बाँच्न सकेको छैन र सक्दैन पनि। मानिस जन्मिएदेखि मृत्युपर्यन्त आफ्ना हरेक आवश्यकताका लागि समाजमा रहेका अन्य व्यक्ति, संस्था र पर्यावरणमाथि निर्भर रहनुपर्छ <span class="ref">[८]</span>।</p>
+            <p>हाम्रो भान्सामा पाक्ने नुनदेखि लिएर हातमा रहेको मोबाइल फोनसम्म, हामीले चढ्ने गाडीदेखि लिएर बिरामी हुँदा खाने औषधिसम्मका सामग्रीहरू फरक-फरक देश र मानिसहरूको सहकार्यबाट मात्र सम्भव भएका हुन् <span class="ref">[८]</span>।</p>
+            <p>यदि हामीले "म एक्लै सक्षम छु, मलाई कसैको सहयोग चाहिँदैन" भन्ने अहङ्कार राख्यौँ भने समाजमा द्वन्द्व, अशान्ति र एक्लोपन मात्र सिर्जना हुन्छ। जलवायु परिवर्तन, महामारी र गरिबी जस्ता साझा वैश्विक समस्याहरू समाधान गर्न कुनै एउटा देश वा व्यक्ति मात्र सफल हुन सक्दैन; यसका लागि विश्वव्यापी सहकार्य र अन्तरनिर्भरता अनिवार्य छ <span class="ref">[८]</span>।</p>
+            <p>अन्त्यमा, पूर्वीय दर्शनको <strong>"वसुधैव कुटुम्बकम्"</strong> (सारा संसार नै एक परिवार हो) भन्ने मूल मर्मलाई आत्मसात् गर्दै, आपसी सामाजिक सम्बन्ध र अन्तरनिर्भरतालाई अझ मजबुत बनाउनु नै आजको संसारको सर्वोत्तम कल्याणको मार्ग हो भन्दै म आफ्ना भनाइहरू यही टुङ्ग्याउँछु।</p>
+            <p><strong>धन्यवाद, नमस्कार !</strong></p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्रमाणित समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> गार्हपत्य, आहवनीय र विदथ भन्नाले के के बुझिन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> वैदिक वाङ्मयमा उल्लेख गरिएका यी तीन शब्दहरूले प्राचीन सामाजिक-पारिवारिक तथा राजनीतिक संरचनालाई जनाउँछन् <span class="ref">[८]</span>:</p>
+                <ul>
+                    <li><strong>गार्हपत्य:</strong> अथर्ववेदमा दाम्पत्य जीवन र पारिवारिक सङ्गठनको स्वरूप, निजी सम्पत्तिको प्रावधानको सुरुवात <span class="ref">[८]</span>।</li>
+                    <li><strong>आहवनीय:</strong> आवश्यक परेको अवस्थामा मानिसहरू जम्मा हुने प्रारम्भिक ग्राम सङ्गठन वा गाउँ सभा <span class="ref">[८]</span>।</li>
+                    <li><strong>विदथ:</strong> ऋग्वेदमा उल्लेख भएको प्राचीन सभा, जहाँ महिला र पुरुष दुवै सहभागी भई निर्णय गर्थे <span class="ref">[८]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> वैयक्तिकतावादी र समुदायवादी दृष्टिकोणमा के भिन्नता ? नेपाली संस्कृतिमा समन्वय कसरी ?</div>
+            <div class="a">
+                <div class="table-wrap">
+                    <div class="table-caption">तालिका: वैयक्तिकतावादी र समुदायवादी दृष्टिकोणको तुलना</div>
+                    <table>
+                        <thead>
+                            <tr><th>आधार</th><th>वैयक्तिकतावादी</th><th>समुदायवादी</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>मूल दर्शन</strong></td>
+                                <td>व्यक्ति, निजी स्वतन्त्रता, सुख र विकास केन्द्रित <span class="ref">[८]</span>।</td>
+                                <td>समाज, समुदाय, सामूहिक हित र एकता केन्द्रित <span class="ref">[८]</span>।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>प्राथमिकता</strong></td>
+                                <td>कर्तव्य भन्दा <strong>हकअधिकार</strong> पहिलो <span class="ref">[८]</span>।</td>
+                                <td>अधिकार भन्दा <strong>कर्तव्य</strong> पहिलो <span class="ref">[८]</span>।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>प्रचलन</strong></td>
+                                <td>पश्चिमा सभ्यता <span class="ref">[८]</span>।</td>
+                                <td>पूर्वीय, नेपाली संस्कृति <span class="ref">[८]</span>।</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p><strong>नेपाली संस्कृतिमा समन्वय:</strong> सामाजिक व्यवहारमा <strong>'समष्टि प्रधान'</strong> तर आध्यात्मिक साधनामा <strong>'व्यष्टि-केन्द्रित'</strong>। कर्तव्य पूरा गरेपछि मात्र अधिकारको मान्यता <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">३.</span> सामाजिक अन्तरनिर्भरता भन्नाले के बुझिन्छ? उदाहरणसहित चर्चा गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानव समाजमा रहेका व्यक्ति, परिवार, समुदाय र देशहरू आफ्ना विभिन्न आवश्यकताहरू एक्लै पूरा गर्न असमर्थ हुने भएकाले एकअर्काको सहयोगमा भर पर्ने स्वाभाविक अवस्था नै <strong>सामाजिक अन्तरनिर्भरता</strong> हो <span class="ref">[८]</span>।</p>
+                <p><strong>उदाहरणहरू:</strong></p>
+                <ul>
+                    <li><strong>अर्मपर्म प्रथा:</strong> परम्परागत नेपाली समाजमा खेतीपातीमा एक घरले अर्कोलाई गर्ने श्रम सहयोग <span class="ref">[८]</span>।</li>
+                    <li><strong>कृषक र सहर:</strong> सहर खाद्यान्नका लागि ग्रामीण किसानमा निर्भर, किसान औषधि, मल, प्रविधिका लागि सहरमा निर्भर <span class="ref">[८]</span>।</li>
+                    <li><strong>वैश्विक अन्तरनिर्भरता:</strong> नेपाल जलविद्युत र सडकका लागि विदेशी लगानीमा, विदेशी देशहरू नेपाली श्रमशक्तिमा निर्भर <span class="ref">[८]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">४.</span> सामाजिक सम्बन्धले सामाजिक अन्तरनिर्भरता वृद्धि गर्छ। पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> यो भनाइ पूर्ण रूपमा सत्य हो। सामाजिक सम्बन्धले अन्तरनिर्भरता बढाउन मद्दत गर्ने कुरालाई निम्न उदाहरणबाट पुष्टि गर्न सकिन्छ <span class="ref">[८]</span>:</p>
+                <ul>
+                    <li><strong>१. विश्वासको जग:</strong> बलियो सामाजिक सम्बन्धले आपसी विश्वास पैदा गर्छ, जसले संकटको बेला एकअर्कालाई गुहार्ने अवस्था बढाउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>२. गुठी र चाडपर्व:</strong> नेपाली समाजमा जात्रा, विवाह, व्रतबन्ध जस्ता कार्य एक्लै सम्भव नहुने, छिमेकी र आफन्तको सहयोग अनिवार्य <span class="ref">[८]</span>।</li>
+                    <li><strong>३. अर्मपर्म र ऐँचो-पैँचो:</strong> गाउँघरमा छिमेकीबीच दैनिक उपभोगका वस्तु साटासाट गर्ने चलन सामाजिक सम्बन्धको घनिष्ठताका कारण टिकेको छ <span class="ref">[८]</span>।</li>
+                    <li><strong>४. व्यवसाय र ग्राहक:</strong> व्यापारी र ग्राहकबीचको सुमधुर सम्बन्धले व्यवसायलाई निरन्तरता दिन्छ <span class="ref">[८]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">Exam-oriented</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> वैदिक कालमा 'विदथ' संस्थामा महिलाको सहभागिता कस्तो थियो? <span class="ref">[८]</span></div>
+            <div class="a"><strong>उत्तर:</strong> वैदिक कालमा 'विदथ' संस्थामा महिला र पुरुष दुवै समान रूपमा सहभागी भई धार्मिक, सामाजिक र घरायसी निर्णयहरूमा सक्रिय भूमिका खेल्थे <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> विदुर नीति र चाणक्य नीतिअनुसार कुल भन्दा ठुलो एकाइ कुन हो? <span class="ref">[८]</span></div>
+            <div class="a"><strong>उत्तर:</strong> विदुर नीति र चाणक्य नीतिअनुसार कुल भन्दा ठुलो एकाइ <strong>'ग्राम'</strong> हो र ग्रामभन्दा ठुलो <strong>'जनपद'</strong> हो <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">३.</span> पुरुषार्थ चतुष्टयभित्र पर्ने चारवटा तत्त्वहरू के-के हुन्? <span class="ref">[८]</span></div>
+            <div class="a"><strong>उत्तर:</strong> <strong>धर्म, अर्थ, काम र मोक्ष</strong> <span class="ref">[८]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> प्राचीन कालका व्यावसायिक र सामाजिक संगठनहरूले अन्तरनिर्भरतालाई कसरी व्यवस्थित गर्थे? <span class="ref">[८]</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> प्राचीन समाजमा राज्यको उपस्थिति आधुनिक जस्तो सर्वव्यापी थिएन। समाजलाई व्यवस्थित गर्न विभिन्न संगठनहरू क्रियाशील थिए <span class="ref">[८]</span>:</p>
+                <ul>
+                    <li><strong>गुठी/गोष्ठी:</strong> सांस्कृतिक र धार्मिक सहकार्यको व्यवस्थापन <span class="ref">[८]</span>।</li>
+                    <li><strong>शिल्पी श्रेणी/पुग:</strong> रैथाने सीप भएका कालीगढ र शिल्पीहरूको आर्थिक सहकार्य <span class="ref">[८]</span>।</li>
+                    <li><strong>सार्थ समवाय/व्यापारी निगम:</strong> लामो दूरीको व्यापार सुरक्षा र आर्थिक हितका लागि सामूहिक संगठन <span class="ref">[८]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color2" style="border-left-color:#1a3a5c;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "मानिस जन्मदेखि मृत्युपर्यन्त सामाजिक सम्बन्ध र अन्तरनिर्भरताको जालोमा बाँधिएको हुन्छ।" यस भनाइलाई मानव जीवनका विभिन्न चरण र आधुनिक विश्वको सन्दर्भ जोडी तर्कसहित पुष्टि गर्नुहोस्। <span class="ref">[८]</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानिस जैविक रूपमा जन्मिए पनि सामाजिक रूपमा मात्र ऊ पूर्ण मानव बन्छ। जन्मदेखि मृत्युपर्यन्त मानिस कसरी सामाजिक सम्बन्ध र अन्तरनिर्भरताको जालोमा बाँधिएको हुन्छ भन्ने कुरालाई निम्न तथ्यहरूका आधारमा पुष्टि गर्न सकिन्छ <span class="ref">[८]</span>:</p>
+
+                <p><strong>१. जन्म र बाल्यकाल (पूर्ण निर्भरता):</strong> मानिस जन्मँदा अत्यन्तै असहाय हुन्छ। बाँच्नका लागि आमाको दूध, परिवारको संरक्षण र हेरचाह चाहिन्छ। बोलीचाली, संस्कार, भाषा र सामाजिक व्यवहारको पहिलो पाठ परिवारबाट सिक्छ <span class="ref">[८]</span>।</p>
+
+                <p><strong>२. शिक्षा र युवावस्था (सम्बन्धको विस्तार):</strong> वयस्क हुँदै जाँदा सम्बन्धको दायरा विद्यालय, कलेज, शिक्षक, र सहपाठी समूहसम्म फैलिन्छ। सीप र ज्ञान विकासका लागि शैक्षिक संस्थाहरूमा निर्भर हुनुपर्छ <span class="ref">[८]</span>।</p>
+
+                <p><strong>३. व्यावसायिक जीवन (आर्थिक अन्तरनिर्भरता):</strong> आर्थिक उपार्जनका लागि विभिन्न पेशा, व्यवसायमा संलग्न हुन्छ। कृषक उद्योगीमाथि, उद्योगी मजदुरमाथि, मजदुर उपभोक्तामाथि निर्भर रहन्छन् <span class="ref">[८]</span>।</p>
+
+                <p><strong>४. बुढ्यौली र मृत्यु (अन्तिम सहकार्य):</strong> बुढ्यौलीमा शारीरिक रूपमा कमजोर बन्छ र परिवार तथा समाजको हेरचाह र भावनात्मक साहारा चाहिन्छ। मृत्युपश्चात् पनि अन्तिम संस्कार गर्न समाजको अनिवार्य उपस्थिति आवश्यक हुन्छ <span class="ref">[८]</span>।</p>
+
+                <p><strong>५. आधुनिक वैश्विक सन्दर्भ:</strong> कोरोना महामारी, जलवायु परिवर्तन जस्ता चुनौतीहरूसँग लड्न सबै देशहरू मिलेर काम गर्न बाध्य छन्। संयुक्त राष्ट्रसङ्घ, सार्क जस्ता संस्थाहरू यसै अन्तरनिर्भरताका उपज हुन् <span class="ref">[८]</span>।</p>
+
+                <p><strong>निष्कर्ष:</strong> मानव जीवनको कुनै पनि यस्तो क्षण छैन जहाँ ऊ समाज वा अन्य व्यक्तिभन्दा अलग रहेर बाँच्न सकोस्। सामाजिक सम्बन्ध र अन्तरनिर्भरता मानव अस्तित्वको अनिवार्य र शाश्वत सत्य हो <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#b45309; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> सामाजिक सम्बन्ध र अन्तरनिर्भरता मानव जीवनका अभिन्न पक्ष हुन्। कर्तव्य र अधिकारको सन्तुलन, सामुदायिक सहकार्य र वैश्विक एकताले नै समाजको दिगो विकास सम्भव छ। "वसुधैव कुटुम्बकम्" को मर्मलाई आत्मसात् गर्नुहोस्।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ४, पाठ २</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

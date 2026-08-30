@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ४, पाठ १ – सामाजिक विविधता र विशेषता (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #1a1a2e;
+            color: #e8e4de;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #f5f0ea;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.5);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #b8a99a;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #c4450c;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.1rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1f7a4a;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #a0522d;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #e8dfd4;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #c9bdb0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #c4450c;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #1a3a5c;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #c4450c;
+            border-bottom-color: #c4450c;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #c4450c;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #1a3a5c;
+            margin: 42px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 4px solid #b8c4d0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #1a3a5c;
+        }
+
+        .section-head .mark-badge {
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #c4450c;
+        }
+
+        .section-head .mark-badge.gold {
+            background: #b45309;
+        }
+
+        .section-head .mark-badge.green {
+            background: #1f7a4a;
+        }
+
+        .section-head .mark-badge.purple {
+            background: #6b3fa0;
+        }
+
+        .section-head .mark-badge.blue {
+            background: #1a3a5c;
+        }
+
+        .section-head .mark-badge.pink {
+            background: #a03a5a;
+        }
+
+        .sub-head {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #1a3a5c;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #c4450c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #c4450c;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #c4450c;
+        }
+
+        /* ----- CONTENT BOXES with highlight backgrounds ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            font-weight: 500;
+            font-size: 1.12rem;
+            line-height: 2;
+        }
+
+        .content-box.blue-highlight {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-highlight {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-highlight {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-highlight {
+            border-left-color: #6b3fa0;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-highlight {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-highlight {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-highlight {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        .content-box p {
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a3a5c;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            background: #fcf9f5;
+        }
+
+        .qa-block.color1 { border-left-color: #c4450c; background: #fcf9f5; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.15rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #c4450c;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1a3a5c;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.08rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #c4450c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(196, 69, 12, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #a0360a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(196, 69, 12, 0.55);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #c9bdb0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #c9bdb0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1a3a5c;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- ARTICLE/ESSAY BOX ----- */
+        .article-box {
+            background: #fcf8f0;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .article-box .article-title {
+            font-weight: 900;
+            color: #1a3a5c;
+            font-size: 1.3rem;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .article-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 6px;
+            line-height: 2;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+                font-size: 1.02rem;
+            }
+            .content-box li, .content-box p {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            .article-box p {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th, td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-globe-asia"></i>
+                    एकाइ ४, पाठ १: वर्तमान विश्वका सामाजिक विविधता र विशेषता
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ४, पाठ १
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक (रजिस्टर) शब्दहरू
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> सामाजिक विविधता</strong>
+                <p>समाजमा अनेकौँ जातजाति, भाषा, धर्म, संस्कृति, कला, लिङ्ग र फरक क्षमता भएका मानिसहरू सँगसँगै मिलेर बस्ने र यी सबै विविधतालाई एउटै सामाजिक संरचनाको विशेष अङ्गका रूपमा स्वीकार गरिने अवस्था।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> धार्मिक आस्थाजन्य विविधता</strong>
+                <p>समाजमा फरक-फरक धार्मिक आस्था, सम्प्रदाय, पन्थ वा दर्शन (हिन्दू, बौद्ध, इस्लाम, क्रिश्चियन आदि) मान्ने मानिसहरूको सहअस्तित्व।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> प्रजातीय विविधता</strong>
+                <p>मानिसहरूलाई उनीहरूको शारीरिक बनावट, छालाको रङ र वंशानुगत शारीरिक विशेषताका आधारमा वर्गीकरण गरिने अवस्था।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> जातीय विविधता</strong>
+                <p>साझा भाषा, संस्कृति, साझा भूगोल र साझा इतिहासका आधारमा निर्माण भएका विभिन्न सांस्कृतिक र जातीय समूहहरूको उपस्थिति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> भाषिक विविधता</strong>
+                <p>समाजमा आफ्ना विचार अभिव्यक्ति र पहिचानका माध्यमका रूपमा फरक-फरक मातृभाषाहरू बोलिने अवस्था।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> सांस्कृतिक विविधता</strong>
+                <p>विभिन्न समुदायको रहनसहन, चाडपर्व, रीतिरिवाज, मूल्यमान्यता र जीवनशैलीमा पाइने भिन्नता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> भर्चुअल समुदाय</strong>
+                <p>प्रविधिको विकास र सामाजिक सञ्जालको माध्यमबाट भौगोलिक दुरीभन्दा बाहिर रहेर संसारका विभिन्न स्थानका मानिसहरू डिजिटल रूपमा एकै ठाउँमा जोडिएर बन्ने आधुनिक अभौतिक समुदाय।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> धार्मिक सहिष्णुता</strong>
+                <p>आफ्नो धर्मप्रति आस्थावान् रहँदै समाजमा रहेका अन्य धर्म, विचार र सम्प्रदायप्रति सम्मान, सद्भाव र उदारता देखाउने मानवीय आचरण।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> सामाजिक समन्वय र सामञ्जस्यता</strong>
+                <p>विविधतायुक्त समाजमा रहेका विभिन्न वर्ग र समुदायबिच द्वन्द्व हुन नदिई आपसी समझदारी, मेलमिलाप र सहअस्तित्व कायम गर्ने प्रक्रिया।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "वर्तमान विश्वका सामाजिक विविधता र विशेषता" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. अवधारणा -->
+        <div class="sub-head"><i class="fas fa-users"></i> १. सामाजिक विविधताको अवधारणा</div>
+
+        <div class="content-box blue-highlight">
+            <p><strong>परिचय:</strong> एउटै समाज वा विश्व परिवेशमा विभिन्न जातजाति, भाषा, धर्म, संस्कृति र पहिचान भएका मानिसहरू आपसी आदर र सम्मानका साथ बस्ने अवस्था नै सामाजिक विविधता हो।</p>
+            <p><strong>स्वाभाविक चरित्र:</strong> सामाजिक विविधता विश्वको एक स्वाभाविक र अनिवार्य विशेषता हो। नेपाली समाज पनि बहुजातीय, बहुभाषिक, बहुसांस्कृतिक र बहुधार्मिक विशेषताले भरिएको एक विविधतापूर्ण समाज हो।</p>
+            <p><strong>महत्त्व:</strong> सामाजिक विविधताको सही पहिचान र आदरले समाजमा समावेशीकरण र सामाजिक एकतालाई मजबुत बनाउँछ। यसको ज्ञानले विभिन्न समुदायबिचको व्यवहारलाई थप संवेदनशील, मर्यादित र सम्मानपूर्ण बनाउँछ।</p>
+        </div>
+
+        <!-- २. आयामहरू -->
+        <div class="sub-head"><i class="fas fa-layer-group"></i> २. सामाजिक विविधताका प्रमुख आयामहरू</div>
+
+        <div class="content-box gold-highlight">
+            <p><strong>(क) धार्मिक आस्थाजन्य विविधता:</strong> समाजमा अनेकौँ धर्म र तिनका आन्तरिक सम्प्रदायहरू अस्तित्वमा रहेका हुन्छन्। हिन्दू धर्म (शैव, वैष्णव, शाक्त), बौद्ध धर्म (थेरवादी, महायानी, वज्रयानी), इस्लाम (सुन्नी, शिया), क्रिश्चियन (क्याथोलिक, प्रोटेस्टेन्ट) आदि यसका उदाहरण हुन्। धार्मिक विविधतालाई समाजको यथार्थ मानी धार्मिक सहिष्णुता र आपसी समन्वय कायम गर्नु राष्ट्रिय एकता र विश्व शान्तिका लागि अपरिहार्य छ।</p>
+        </div>
+
+        <div class="content-box green-highlight">
+            <p><strong>(ख) प्रजातीय तथा जातीय विविधता:</strong> शारीरिक बनोट र छालाको रङका आधारमा मानिसहरूलाई 'प्रजाति' (काला वर्णका अफ्रिकी, गोरा वर्णका युरोपेली) मा वर्गीकरण गरिन्छ। भाषा, संस्कृति र इतिहासका आधारमा 'जाति' निर्धारण हुन्छ।</p>
+            <p><strong>नेपाल र चीनको रोचक तुलना:</strong> नेपाल भौगोलिक रूपमा सानो भए तापनि यहाँ <strong>१ सय २५ जातीय समूह</strong>को बसोबास छ, जसले नेपालको उच्च जातीय विविधता देखाउँछ। चीन भौगोलिक रूपमा धेरै विशाल भए तापनि त्यहाँ आधिकारिक रूपमा केवल <strong>५६ जातीय समूह</strong> मात्र छन्, जसमा 'हान' (Han) जातिको जनसङ्ख्या ९० प्रतिशतभन्दा बढी छ।</p>
+        </div>
+
+        <div class="content-box purple-highlight">
+            <p><strong>(ग) भाषिक विविधता:</strong> भाषा मानिसको अभिव्यक्ति र पहिचानको मुख्य कडी हो। यसले संस्कृति र इतिहासलाई पुस्तान्तरण गर्छ। विश्वका अधिकांश देशहरू क्रमशः बहुभाषिक बन्दै गइरहेका छन्। राष्ट्रिय एकता र समतामूलक विकासका लागि विभिन्न भाषिक समुदायको संरक्षण र सम्मान गर्नु आवश्यक छ।</p>
+        </div>
+
+        <div class="content-box pink-highlight">
+            <p><strong>(घ) सांस्कृतिक विविधता:</strong> संस्कृतिले समाजका मानिसहरूलाई जोड्ने र साझा पहिचान दिने काम गर्छ। विश्वव्यापी रूपमा यातायात, शिक्षा, व्यापार, पर्यटन र मिडियामा पहुँच बढेकाले सांस्कृतिक आदानप्रदान तीव्र भएको छ र सांस्कृतिक विविधता थप फराकिलो बन्दै गएको छ।</p>
+        </div>
+
+        <div class="content-box orange-highlight">
+            <p><strong>(ङ) कला:</strong> कलाअन्तर्गत चित्रकला, मूर्तिकला, स्थापत्य (आर्किटेक्चर), सङ्गीत, नृत्य, साहित्य, नाटक र व्यावसायिक कलाहरू पर्छन्। कलाले समाज वा देशको मौलिक पहिचान निर्माण गर्न र सामाजिक विविधतालाई समृद्ध बनाउन भूमिका खेल्छ।</p>
+        </div>
+
+        <div class="content-box teal-highlight">
+            <p><strong>(च) लैङ्गिक र फरक क्षमताजन्य विविधता:</strong> महिला, पुरुष र यौनिक तथा लैङ्गिक अल्पसङ्ख्यकहरू (LGBTQIA+) बीचको लैङ्गिक विविधता तथा शारीरिक एवं मानसिक रूपमा फरक क्षमता भएका व्यक्तिहरूको विविधता पनि सामाजिक विविधताका महत्त्वपूर्ण हिस्सा हुन्।</p>
+        </div>
+
+        <!-- ३. विश्वमा विविधताको झलक -->
+        <div class="sub-head"><i class="fas fa-globe"></i> ३. वर्तमान विश्वमा विविधताको एक झलक</div>
+
+        <div class="content-box blue-highlight">
+            <p><strong>तथ्याङ्कहरू:</strong></p>
+            <ul>
+                <li>वर्तमान विश्वमा करिब <strong>६ सय ५० जातीय समुदायहरू</strong> रहेका छन्।</li>
+                <li>विश्वभर करिब <strong>४ हजार ३ सय धार्मिक आस्थाजन्य सम्प्रदायहरू</strong> क्रियाशील छन्।</li>
+                <li>संसारमा करिब <strong>७ हजार १ सय भाषाहरू</strong> बोलिन्छन्।</li>
+            </ul>
+            <p><strong>लन्डनको उदाहरण (सन् २०२१):</strong> बेलायतको लन्डन सहरमा गरिएको अध्ययनअनुसार त्यहाँ करिब <strong>२ सय ७० प्रकारका जातिका मानिसहरू</strong> बस्छन् र उनीहरूले करिब <strong>३ सय प्रकारका भाषाहरू</strong> बोल्छन्। यसले बसाइँसराइका कारण आधुनिक सहरहरू कसरी 'विश्वको साझा थलो' बन्दै छन् भन्ने स्पष्ट पार्छ।</p>
+            <p><strong>भर्चुअल संसारको उदय:</strong> आजको प्रविधिले मानिसहरूलाई आफ्नै घरमा बसेर इन्टरनेटका माध्यमबाट विश्वभरका मानिसहरूसँग जोडिई 'भर्चुअल समुदाय' निर्माण गर्ने अवसर दिएको छ।</p>
+            <p><strong>समन्वयको आवश्यकता:</strong> सामाजिक विविधता बढ्दै जाँदा आपसी समन्वय र उचित नीतिको अभावमा द्वन्द्व निम्तिन सक्छ। तसर्थ, द्वन्द्व व्यवस्थापन र शान्तिका लागि विविधतालाई उचित सम्बोधन गर्ने नीति आवश्यक हुन्छ।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-language"></i> क्रियाकलाप १: नेपालका १० मुख्य भाषाहरू</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">नेपालका १० मुख्य भाषाहरू (जनगणना २०७८)</div>
+            <table>
+                <thead>
+                    <tr><th>क्र.सं.</th><th>भाषा</th><th>प्रतिशत (%)</th><th>मुख्य क्षेत्र</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>१</td><td><strong>नेपाली</strong></td><td>४४.८६%</td><td>देशैभर (साझा सम्पर्क भाषा)</td></tr>
+                    <tr><td>२</td><td><strong>मैथिली</strong></td><td>११.०५%</td><td>मधेश प्रदेश</td></tr>
+                    <tr><td>३</td><td><strong>भोजपुरी</strong></td><td>६.२४%</td><td>मध्य तराई र मधेश</td></tr>
+                    <tr><td>४</td><td><strong>थारू</strong></td><td>५.८८%</td><td>तराई क्षेत्र</td></tr>
+                    <tr><td>५</td><td><strong>तामाङ</strong></td><td>४.८८%</td><td>बागमती प्रदेश र पहाडी जिल्लाहरू</td></tr>
+                    <tr><td>६</td><td><strong>बज्जिका</strong></td><td>३.८९%</td><td>रौतहट, सर्लाही आदि</td></tr>
+                    <tr><td>७</td><td><strong>मगर</strong></td><td>२.७८%</td><td>लुम्बिनी, गण्डकी, कर्णाली</td></tr>
+                    <tr><td>८</td><td><strong>डोटेली</strong></td><td>२.७८%</td><td>सुदूरपश्चिम प्रदेश</td></tr>
+                    <tr><td>९</td><td><strong>उर्दू</strong></td><td>२.६२%</td><td>तराई र सहरी क्षेत्रहरू</td></tr>
+                    <tr><td>१०</td><td><strong>नेवारी</strong></td><td>२.४०%</td><td>काठमाडौँ उपत्यका</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="content-box green-highlight">
+            <p><strong>कक्षाको बहुभाषिक क्षमता (काल्पनिक नमुना):</strong> कुल ४० विद्यार्थीमध्ये सबै नेपाली बोल्छन्। करिब १२ जना ३ भाषा र २ जना ४ भाषा बोल्न सक्षम छन्। यसले हाम्रो कक्षाकोठा लघु-नेपालको रूपमा रहेको प्रमाणित गर्छ।</p>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-hands-pray"></i> क्रियाकलाप २: धार्मिक सहिष्णुता कायम राख्ने उपायहरू</div>
+
+        <div class="content-box gold-highlight">
+            <p><strong>नेपालमा धार्मिक जनसङ्ख्या (जनगणना २०७८):</strong></p>
+            <ul>
+                <li><strong>हिन्दू धर्म:</strong> ८१.१९%</li>
+                <li><strong>बौद्ध धर्म:</strong> ८.२१%</li>
+                <li><strong>इस्लाम धर्म:</strong> ५.०९%</li>
+                <li><strong>किरात धर्म:</strong> ३.१७%</li>
+                <li><strong>क्रिश्चियन धर्म:</strong> १.७६%</li>
+                <li><strong>अन्य:</strong> ०.५८%</li>
+            </ul>
+            <p><strong>धार्मिक सहिष्णुता कायम राख्ने ५ व्यावहारिक उपायहरू:</strong></p>
+            <ol>
+                <li><strong>धार्मिक उत्सवहरूमा सामूहिक सहभागिता:</strong> सबै धर्मका चाडपर्वमा मिलेर खुसी साटासाट गर्ने।</li>
+                <li><strong>धर्मनिरपेक्षता र कानुनको पालना:</strong> संविधानले दिएको धार्मिक स्वतन्त्रताको सम्मान गर्ने।</li>
+                <li><strong>शैक्षिक पाठ्यक्रममा सर्वधर्म समभाव:</strong> बाल्यकालदेखि सबै धर्मप्रति सम्मान गर्ने बानी बसाल्ने।</li>
+                <li><strong>सञ्चार माध्यमको जिम्मेवार भूमिका:</strong> घृणा फैलाउने पोष्टहरूलाई निषेध गर्ने।</li>
+                <li><strong>अन्तरधार्मिक संवाद र सद्भाव र्‍याली:</strong> स्थानीय तहमा 'सद्भाव समिति' गठन गरी अन्तरक्रिया आयोजना गर्ने।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्रमाणित समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> सामाजिक विविधता भन्नाले के बुझिन्छ? उदाहरणसहित चर्चा गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> समाजमा फरक-फरक जातजाति, भाषा, धर्म, संस्कृति, कला, लिङ्ग र शारीरिक वा मानसिक क्षमता भएका मानिसहरू आपसी सद्भाव, सम्मान र सहअस्तित्वका साथ सँगै बस्ने अवस्थालाई सामाजिक विविधता भनिन्छ।</p>
+                <p><strong>उदाहरण:</strong> नेपालको तराईमा मैथिली र थारू समुदाय, पहाडमा खस-आर्य, मगर, तामाङ, गुरुङ र हिमालमा शेर्पा समुदाय आ-आफ्नो भिन्न भाषा, धर्म, भेषभूषा र चाडपर्वहरूका साथ एउटै राष्ट्रिय पहिचानभित्र अटाएका छन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> वर्तमान विश्व विविधतापूर्ण छ भन्ने तथ्य उदाहरणसहित स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> भूमण्डलीकरण, सूचना प्रविधिको विकास र अन्तर्राष्ट्रिय बसाइँसराइले गर्दा वर्तमान विश्व अत्यन्तै विविधतापूर्ण छ।</p>
+                <ul>
+                    <li>विश्वमा करिब <strong>६ सय ५० जातीय समुदाय</strong>, <strong>४ हजार ३ सय धार्मिक सम्प्रदाय</strong> र <strong>७ हजार १ सय भाषाहरू</strong> छन्।</li>
+                    <li><strong>लन्डन (सन् २०२१):</strong> करिब २ सय ७० जाति र ३ सय भाषाहरूको उपस्थिति।</li>
+                    <li>इन्टरनेटले <strong>भर्चुअल समुदाय</strong> निर्माण गरी भौगोलिक सीमा पार गरेको छ।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> सामाजिक विविधतालाई समन्वय गर्नु किन आवश्यक छ?</div>
+            <div class="a">
+                <ul>
+                    <li><strong>द्वन्द्व व्यवस्थापन र शान्ति स्थापना:</strong> विविधताको समन्वयले सम्भावित द्वन्द्वलाई रोकी स्थायी शान्ति कायम गर्छ।</li>
+                    <li><strong>राष्ट्रिय एकताको सुदृढीकरण:</strong> सबैलाई समान अवसर र सम्मान दिँदा राष्ट्रप्रति अपनत्व बढ्छ।</li>
+                    <li><strong>समतामूलक विकास:</strong> पछाडि परेका वर्गका लागि आवश्यक 'समता' (Equity) मा आधारित नीतिहरू निर्माण गर्न सकिन्छ।</li>
+                    <li><strong>सद्भावपूर्ण व्यवहारको विकास:</strong> एक समुदायले अर्कोको अस्तित्व र मूल्य मान्यतालाई सम्मान गर्न सिक्छ।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> 'सामाजिक विविधता र एकता' आजको आवश्यकता भन्ने शीर्षकमा एक लेख तयार पार्नुहोस्।</div>
+            <div class="a">
+                <div class="article-box">
+                    <div class="article-title">सामाजिक विविधता र एकता: आजको आवश्यकता</div>
+                    <p>मानव समाजको विकास र सभ्यताको इतिहासलाई नियाल्ने हो भने विविधता यसको सबैभन्दा सुन्दर र स्वाभाविक उपहार हो। सृष्टिका कुनै पनि दुई प्राणी वा वनस्पति जसरी ठ्याक्कै समान हुँदैनन्, त्यसरी नै मानव समाज पनि जातजाति, भाषा, धर्म, संस्कृति र विचारका दृष्टिकोणले भिन्न-भिन्नै र बहुआयामिक छ।</p>
+                    <p>वर्तमान विश्वमा विज्ञान, प्रविधि र तीव्र बसाइँसराइले गर्दा भूगोलका सीमाहरू साँघुरा भएका छन् र संसार एउटा 'ग्लोबल भिलेज' मा रूपान्तरण भएको छ। यस्तो अवस्थामा सामाजिक विविधताको सम्मान गर्दै त्यसभित्र एकता कायम गर्नु नै आजको युगको सबैभन्दा ठुलो आवश्यकता हो।</p>
+                    <p>नेपाल जस्तो विकासोन्मुख र बहुसांस्कृतिक मुलुकका लागि त झन् यो विषय जीवन र मरणको सवाल हो। हाम्रो देशमा १२५ भन्दा बढी जातीय समूह र १२५ भन्दा बढी भाषाहरू बोलिन्छन्। नेपालको संविधानले नै नेपाललाई बहुजातीय, बहुभाषिक, बहुसांस्कृतिक र बहुधार्मिक विशेषतायुक्त मुलुक भनी घोषणा गरेको छ।</p>
+                    <p>विविधता आफैँमा एउटा ठुलो शक्ति र सम्पत्ति हो। विभिन्न जातिका मौलिक ज्ञान, सीप, कला, सङ्गीत र परम्पराहरू मिल्दा समाज झन् बढी समृद्ध र गतिशील बन्छ।</p>
+                    <p>तर, विविधताको अर्को संवेदनशील पाटो पनि छ। यदि विविधतालाई विभेदको हतियार बनाइयो र कसैको पहिचान र अधिकारलाई दमन गर्न खोजियो भने यसले समाजमा गम्भीर द्वन्द्व निम्त्याउँछ। साँचो एकता भनेको विविधतालाई नामेट पारेर सबैलाई एउटै रङमा ढाल्नु होइन, बरु आ-आफ्नो भिन्न अस्तित्व जोगाउँदै देश र मानवताको साझा उद्देश्यका लागि एकाकार हुनु हो।</p>
+                    <p>यसका लागि समाजमा धार्मिक सहिष्णुता, भाषिक आदर र सांस्कृतिक सद्भाव कायम हुनुपर्छ। प्रत्येक नागरिकले "मेरो भाषा र संस्कृति जति प्यारो छ, अरूको पनि त्यति नै आदरणीय छ" भन्ने भावना मनमा राख्नुपर्छ।</p>
+                    <p>अतः, बहुआयामिक सामाजिक विविधतालाई आत्मसात् गर्दै आपसी सहिष्णुता, भातृत्व र समझदारीको सुदृढ साङ्लोमा बाँधिएर 'विविधतामा एकता' को मर्मलाई व्यवहारमा उतार्नु नै आजको सभ्य समाजको प्रमुख दायित्व र आवश्यकता हो।</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">Exam-oriented</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> नेपाल र चीनको जातीय विविधतामा के भिन्नता पाउनुहुन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> नेपालमा <strong>१ सय २५ जातीय समूह</strong> छन् भने चीनमा आधिकारिक रूपमा <strong>५६ जातीय समूह</strong> मात्र छन्।</div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> सन् २०२१ को लन्डन सहरको अध्ययनले के तथ्य उजागर गर्‍यो?</div>
+            <div class="a"><strong>उत्तर:</strong> लन्डनमा करिब <strong>२ सय ७० जाति</strong> र <strong>३ सय भाषाहरू</strong> बोलिने तथ्य उजागर गर्‍यो।</div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">३.</span> भर्चुअल समुदाय सामाजिक विविधतासँग कसरी जोडिएको छ?</div>
+            <div class="a"><strong>उत्तर:</strong> इन्टरनेट र सामाजिक सञ्जालका माध्यमबाट संसारभरका मानिसहरू डिजिटल रूपमा जोडिएर भर्चुअल समुदाय बनाइरहेका छन्।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> "कला र सङ्गीत सामाजिक विविधतालाई समृद्ध बनाउने माध्यम हुन्।" पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <ul>
+                    <li><strong>मौलिक पहिचानको प्रदर्शन:</strong> चित्रकला, नृत्य, लोकगीतले समुदायको इतिहास र मूल्यमान्यता प्रस्तुत गर्छ।</li>
+                    <li><strong>सांस्कृतिक आदानप्रदान:</strong> प्रविधिले नेपाली लोक सङ्गीत विश्वव्यापी मञ्चमा पुग्छ।</li>
+                    <li><strong>भाषिक सीमाभन्दा माथि:</strong> सङ्गीत र चित्रकला बुझ्न कुनै भाषाको ज्ञान आवश्यक पर्दैन।</li>
+                    <li><strong>एकता र सहकार्य:</strong> विभिन्न संस्कृतिका कलाकारहरू मिलेर गरिने प्रस्तुतीकरणले सद्भाव प्रवर्द्धन गर्छ।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> वर्तमान विश्वमा विविधता व्यवस्थापनका मुख्य चुनौतीहरू के-के हुन्?</div>
+            <div class="a">
+                <ul>
+                    <li><strong>अति राष्ट्रवाद:</strong> आफ्नो जात/धर्म मात्र सर्वश्रेष्ठ भन्ने सोचले अल्पसंख्यकमाथि दमन।</li>
+                    <li><strong>घृणा फैलाउने अभिव्यक्ति (Hate Speech):</strong> सामाजिक सञ्जालको दुरुपयोग।</li>
+                    <li><strong>अति सामान्यीकरण:</strong> केही व्यक्तिको कमजोरीलाई सिङ्गो समुदायमा लागू गर्नु।</li>
+                    <li><strong>अन्तरसांस्कृतिक द्वन्द्व:</strong> रैथाने र नयाँ समुदायबीच अविश्वास।</li>
+                    <li><strong>समावेशीकरणको अभाव:</strong> नीति निर्माणमा विविधताको प्रतिनिधित्व नहुनु।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color3" style="border-left-color:#1a3a5c;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "विविधतामा एकता नै नेपाली समाजको मौलिक विशेषता र शक्ति हो।" यस भनाइलाई नेपालको धार्मिक, भाषिक र सांस्कृतिक परिवेशका आधारमा विस्तृत रूपमा चर्चा गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नेपाल भौगोलिक रूपमा सानो देश भए तापनि यो जैविक, जातीय, भाषिक, धार्मिक र सांस्कृतिक रूपले संसारकै समृद्ध मुलुकहरूमध्ये एक हो। नेपालमा सदियौँदेखि कायम रहेको "विविधतामा एकता" नेपाली समाजको जीवनपद्धति, पहिचान र राष्ट्रिय शक्ति हो।</p>
+
+                <p><strong>धार्मिक परिवेश र सहिष्णुता:</strong> नेपालमा हिन्दू (८१%), बौद्ध, इस्लाम, किरात, क्रिश्चियन र प्रकृतिपूजकहरूको उपस्थिति छ। इतिहासमा धर्मका नाममा कहिल्यै ठुला साम्प्रदायिक दङ्गाहरू भएका छैनन्। हिन्दूहरूले ईदमा मुस्लिम साथीहरूलाई मुबारकबाद दिन्छन् भने मुस्लिम र बौद्ध समुदायले दसैँ-तिहारलाई राष्ट्रिय पर्वका रूपमा मनाउँछन्।</p>
+
+                <p><strong>भाषिक समृद्धि:</strong> नेपालमा १२५ भन्दा बढी मातृभाषाहरू बोलिन्छन्। नेपाली साझा सम्पर्क भाषा हो भने मैथिली, भोजपुरी, थारू, तामाङ, नेवारी आदि क्षेत्रीय भाषाहरू जीवन्त छन्। यी भाषाहरूले नेपाली भाषा र वाङ्मयलाई समृद्ध बनाएका छन्।</p>
+
+                <p><strong>सांस्कृतिक बहुरङ:</strong> हिमालको ल्होसार, पहाडको साकेला, देउडा, मारुनी र तराईको झिझिया, छठले नेपाललाई बहुरङ्गी सांस्कृतिक मोज्याक बनाएको छ। यी फरक-फरक लोक संस्कृतिहरूले नेपालीलाई सहिष्णु, दयालु र फराकिलो सोच भएको बनाएको छ।</p>
+
+                <p><strong>एकताको बलियो सूत्र:</strong> २०७२ को महाभूकम्प, बाढी-पहिरो वा कोभिड महामारीमा जात, धर्म र भूगोलको पर्खाल भत्किएर सम्पूर्ण नेपाली पीडितको उद्धार र सहयोगमा जुट्छन्। यो सामूहिक भावना र सहकार्य नै हाम्रो सबैभन्दा ठुलो राष्ट्रिय शक्ति हो।</p>
+
+                <p><strong>निष्कर्ष:</strong> विविधता नेपाली समाजको गहना हो भने एकता यसको मुटु हो। यसलाई अझ मजबुत बनाउन राज्यले सबै भाषा र संस्कृतिको संरक्षण गर्ने समतामूलक नीतिहरू लागू गर्नुपर्छ र नागरिक तहमा आपसी सद्भावको अमूल्य धरोहरलाई अक्षुण्ण राख्न निरन्तर प्रयास गरिरहनु आवश्यक छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#b45309; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> सामाजिक विविधता हाम्रो सम्पत्ति हो। विभिन्न जाति, भाषा, धर्म र संस्कृतिको आपसी सम्मान र सद्भावले नै राष्ट्रिय एकता मजबुत हुन्छ। "विविधतामा एकता" को मर्मलाई आत्मसात् गर्नुहोस्।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ४, पाठ १</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

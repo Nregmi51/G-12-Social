@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ४, पाठ ४ – दैनिक जीवनमा दर्शनको उपयोगिता (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f5efe8;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fdfaf5;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.12);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #b8a99a;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #c4450c;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem; /* 18.6px */
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1f7a4a;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #a0522d;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1a3a5c;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #2a5a7a;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.36rem; /* 21.8px */
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #fff;
+            background: #1a3a5c;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #1a3a5c;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #f5d742;
+        }
+
+        .section-head .mark-badge.gold {
+            background: #f5d742;
+        }
+
+        .section-head .mark-badge.green {
+            background: #7dcea0;
+        }
+
+        .section-head .mark-badge.purple {
+            background: #b39ddb;
+        }
+
+        .section-head .mark-badge.blue {
+            background: #81d4fa;
+        }
+
+        .section-head .mark-badge.pink {
+            background: #f48fb1;
+        }
+
+        .sub-head {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #1a3a5c;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #c4450c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #c4450c;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #c4450c;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem; /* 19px */
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.blue-highlight {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-highlight {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-highlight {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-highlight {
+            border-left-color: #6b3fa0;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-highlight {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-highlight {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-highlight {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- LETTER BOX ----- */
+        .letter-box {
+            background: #fcf8f0;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .letter-box .letter-title {
+            font-weight: 900;
+            color: #1a3a5c;
+            font-size: 1.1rem;
+        }
+
+        .letter-box p {
+            font-weight: 500;
+            font-size: 1.19rem;
+            margin-bottom: 6px;
+            line-height: 2;
+        }
+
+        .letter-box .salutation {
+            font-weight: 700;
+            color: #0b2b4a;
+        }
+
+        .letter-box .closing {
+            font-weight: 700;
+            color: #0b2b4a;
+            margin-top: 10px;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a3a5c;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+        }
+
+        .qa-block.color1 { border-left-color: #c4450c; background: #fcf9f5; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem; /* 19.5px */
+        }
+
+        .qa-block .q .qnum {
+            color: #c4450c;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem; /* 19px */
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .example {
+            display: block;
+            padding: 8px 14px;
+            background: rgba(255,255,255,0.6);
+            border-radius: 8px;
+            margin: 6px 0;
+            border-left: 3px solid #c4450c;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1a3a5c;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem; /* 18px */
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #c4450c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(196, 69, 12, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #a0360a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(196, 69, 12, 0.55);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #c9bdb0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #c9bdb0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1a3a5c;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .letter-box p {
+                font-size: 1.02rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-brain"></i>
+                    एकाइ ४, पाठ ४: दैनिक जीवनमा दर्शनको उपयोगिता
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ४, पाठ ४
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक (रजिस्टर) शब्दहरू
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> दर्शन (Philosophy)</strong>
+                <p>प्रकृति, ईश्वर, ज्ञान, विज्ञान, जीवन र चेतनाका बारेमा गरिने तार्किक विवेचन र गहिरो अन्वेषण गर्ने विधा। यसले जीवन र जगतको यथार्थ बुझ्न सघाउँछ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> प्रायोगिक दर्शन</strong>
+                <p>दार्शनिक विचार र सिद्धान्तहरूलाई केवल सिद्धान्तमा मात्र सीमित नराखी दैनिक जीवनका व्यवहार, निर्णय र नैतिक आचरणमा उतार्ने पद्धति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> पञ्चशील (Panchasheel)</strong>
+                <p>बुद्ध दर्शनमा मानिसको नैतिक आचरण र चरित्र निर्माणका लागि निर्देशित गरिएका पाँचवटा सदाचारका नियमहरू (हिंसा नगर्नु, चोरी नगर्नु, झुटो नबोल्नु, व्यभिचार नगर्नु, र लागुपदार्थ सेवन नगर्नु)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> संयम (Self-restraint)</strong>
+                <p>आफैँलाई गलत, हानिकारक र अनैतिक विषयवस्तु वा विचारबाट रोक्ने तथा बोली, विचार, खानपान र व्यवहारमा सन्तुलन कायम गर्ने नैतिक आत्मनियन्त्रण।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> चीवर (Chibar)</strong>
+                <p>बौद्ध भिक्षुहरूले लगाउने विशिष्ट पहेंलो वा कषाय (रातो-पहेंलो) रङको धार्मिक वस्त्र।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> भिक्षापात्र (Bhikshapatra)</strong>
+                <p>बौद्ध भिक्षुहरूले भिक्षा सङ्कलन गर्नका लागि प्रयोग गर्ने कचौरा आकारको विशेष पात्र।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> भिक्षाटन (Bhikshatan)</strong>
+                <p>शारीरिक र मानसिक अहङ्कार त्यागेर भोजनका लागि घर-घरमा गई भिक्षा माग्ने कार्य, जसले शारीरिक स्वास्थ्य र विनयशीलता प्रवर्द्धन गर्दछ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> करुणा (Compassion)</strong>
+                <p>सबै प्राणीहरूको दुःख र पीडा महसुस गरी उनीहरूको कल्याण र दुःख निवारणका लागि मनमा जाग्ने निस्वार्थ दया र सेवाभाव।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> विश्व दृष्टिकोण (Worldview)</strong>
+                <p>व्यक्तिले संसार, जीवन, र समाजलाई हेर्ने, बुझ्ने र विश्लेषण गर्ने उसको दार्शनिक दृष्टिकोण वा दृष्टिकोणहरूको समष्टि रूप।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> नैतिकताको कसी</strong>
+                <p>कुनै पनि कार्य वा व्यवहार नैतिक रूपमा सही वा गलत छ भनी जाँच्ने दार्शनिक र विवेकपूर्ण मापदण्ड।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "दैनिक जीवनमा दर्शनको उपयोगिता" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. बुद्धको जीवनचर्या -->
+        <div class="sub-head"><i class="fas fa-om"></i> १. व्यावहारिक दार्शनिक मोडलका रूपमा बुद्धको जीवनचर्या</div>
+
+        <div class="content-box blue-highlight">
+            <p>भगवान् बुद्धको ४५ वर्षको उपदेश यात्रा र दैनिक चर्याले दर्शन कसरी व्यावहारिक रूपमा लागू हुन्छ भन्ने कुराको सजीव उदाहरण प्रस्तुत गर्दछ:</p>
+            <ul>
+                <li><strong>सन्तुलित दिनचर्या:</strong> बुद्ध बिहानै उठ्ने, स्नान गर्ने, चीवर पहिरिएर भिक्षाटनमा निस्कने गर्दथे। भिक्षाटन गर्दा उनले कहिल्यै कसैसँग खाना माग्दैनथे, बरु श्रद्धालुहरूले इच्छाले दिएको अन्न मात्र स्वीकार गर्दथे। यसले मानिसमा अहङ्कारको नाश र सन्तुष्टिको सञ्चार गर्छ।</li>
+                <li><strong>समान व्यवहार र करुणा:</strong> बुद्धका लागि धनी-गरिब, महिला-पुरुष, सबलाङ्ग-अपाङ्ग, वा जातजातिबिच कुनै भेदभाव थिएन। उनको करुणा सबै प्राणीप्रति समान थियो, जसले सामाजिक समानता र भ्रातृत्वको दार्शनिक आधार व्यावहारिक रूपमै पुष्टि गर्छ।</li>
+                <li><strong>पञ्चशीलको सिद्धान्त:</strong> बुद्धले मानव समाजलाई सभ्य, शान्त र नैतिक बनाउन पाँचवटा आधारभूत नियमहरू (Panchasheel) प्रतिपादन गरे, जुन आजको विश्वमा पनि अपराधमुक्त समाज निर्माणका लागि उत्तिकै सान्दर्भिक छन्।</li>
+            </ul>
+        </div>
+
+        <!-- २. बौद्धिक र प्रायोगिक -->
+        <div class="sub-head"><i class="fas fa-scale-balanced"></i> २. दर्शन: बौद्धिक र प्रायोगिक विधाको सङ्गम</div>
+
+        <div class="content-box green-highlight">
+            <ul>
+                <li><strong>सैद्धान्तिक पक्ष (Theoretical Aspect):</strong> दर्शनले ज्ञानको प्रकृति, अस्तित्व, ब्रह्माण्डको सृष्टि, सत्य र न्यायका बारेमा गम्भीर प्रश्नहरू उठाउँछ र तार्किक विश्लेषण गर्छ।</li>
+                <li><strong>प्रायोगिक पक्ष (Practical Aspect):</strong> दर्शन केवल पुस्तकमा मात्र सीमित हुँदैन। यसले व्यक्तिलाई दैनिक व्यवहारमा कस्तो निर्णय लिने, अरूसँग कस्तो सम्बन्ध राख्ने, र सङ्कटको बेला कसरी विचलित नभई बस्ने भन्ने व्यावहारिक मार्गनिर्देशन गर्दछ। तसर्थ, दर्शन चिन्तन र व्यवहार दुवैको संयोजन हो।</li>
+            </ul>
+        </div>
+
+        <!-- ३. उपयोगिताहरू -->
+        <div class="sub-head"><i class="fas fa-list-check"></i> ३. दैनिक जीवनमा दर्शनका बहुआयामिक उपयोगिताहरू</div>
+
+        <div class="content-box purple-highlight">
+            <p>दैनिक जीवनमा दार्शनिक चिन्तनले मानिसलाई निम्नलिखित पक्षहरूमा प्रत्यक्ष फाइदा पुर्‍याउँछ:</p>
+            <ul>
+                <li><strong>तार्किक र समालोचनात्मक सोचको विकास:</strong> दर्शनको अध्ययनले मानिसलाई कुनै पनि हल्ला वा सतही कुराको पछाडि नलागी सत्य र तथ्यको खोजी गर्न, तर्कपूर्ण विचार राख्न र भूलहरू औँल्याउन सक्षम बनाउँछ।</li>
+                <li><strong>नैतिक आचरण र व्यवहार:</strong> यसले हाम्रा दैनिक व्यवहारहरूलाई 'नैतिकताको कसीमा' जाँच्न सिकाउँछ। कुन काम सही हो र कुन गलत हो भनी निर्णय लिन दार्शनिक चेतनाले मद्दत गर्दछ।</li>
+                <li><strong>द्वन्द्व र समस्या समाधान:</strong> जीवनमा आइपर्ने विभिन्न विकल्पहरूमध्ये सबैभन्दा उपयुक्त विकल्प छनोट गर्न, मानसिक तनाव व्यवस्थापन गर्न र अरूको भिन्न दृष्टिकोणलाई पनि सम्मान गर्न दर्शनले सिकाउँछ।</li>
+                <li><strong>सञ्चार र अभिव्यक्ति क्षमतामा सुधार:</strong> स्पष्ट सोच्न सक्ने व्यक्तिले स्पष्ट रूपमा बोल्न र लेख्न पनि सक्छ। दर्शनले तर्क प्रस्तुत गर्ने शैली र सञ्चार दक्षतामा निखार ल्याउँछ, जसले उच्च शिक्षा र रोजगारीमा सफलता प्रदान गर्दछ।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-user-tie"></i> क्रियाकलाप १: आमा वा बुबाको दैनिक दिनचर्या र विश्व दृष्टिकोणको प्रभाव</div>
+
+        <div class="content-box gold-highlight">
+            <p><strong>उत्तर:</strong> मैले मेरो बुबा (श्री हरिप्रसाद शर्मा) सँग उहाँको दैनिक दिनचर्या र जीवनप्रतिको सोचका बारेमा गरेको कुराकानीका आधारमा तयार पारिएको प्रतिवेदन यस प्रकार छ:</p>
+
+            <p><strong>बुबाको दैनिक दिनचर्या (Daily Routine):</strong> बुबा हरेक बिहान ५:०० बजे उठ्नुहुन्छ। नित्यकर्म र स्नानपछि करिब आधा घण्टा योग र ध्यान गर्नुहुन्छ। त्यसपछि घरको करेसाबारीमा गोडमेल र तरकारीको रेखदेख गर्नुहुन्छ। बिहानको स्वस्थ खानपानपछि उहाँ आफ्नो व्यवसाय (किराना पसल) मा जानुहुन्छ। पसलमा आउने ग्राहकहरूसँग उहाँ सधैँ नम्र र इमानदार भएर प्रस्तुत हुनुहुन्छ। साँझ घर फर्केपछि परिवारसँग समय बिताउनुहुन्छ र १०:०० बजे सुत्नुहुन्छ।</p>
+
+            <p><strong>बुबाको विश्व दृष्टिकोण (Worldview) र त्यसको प्रभाव विश्लेषण:</strong></p>
+            <ul>
+                <li><strong>व्यवसायमा इमानदारिता:</strong> बुबा बढी नाफा कमाउने लोभमा कहिल्यै मिसावट गर्नुहुन्न र सामानको उचित मूल्य मात्र लिनुहुन्छ। यो उहाँको 'सत्य र अस्तेय' (चोरी नगर्ने र इमानदार रहने) दार्शनिक मूल्य मान्यताको नतिजा हो।</li>
+                <li><strong>सहनशीलता र सन्तुलन:</strong> पसलमा कहिलेकाहीँ रिसाहा वा अभद्र ग्राहक आउँदा पनि बुबा रिस नियन्त्रण गरी शान्त रहनुहुन्छ। उहाँ संवेग व्यवस्थापन र 'संयम' लाई जीवनको मुख्य कडी मान्नुहुन्छ।</li>
+                <li><strong>सेवाभाव:</strong> छिमेकी वा असहाय व्यक्तिहरूलाई आवश्यक पर्दा बुबाले विनास्वार्थ सरसहयोग गर्नुहुन्छ। सबै मानिस र प्राणीप्रति दयाभाव राख्ने उहाँको आदर्श दृष्टिकोणले उहाँलाई समाजमा सम्मानित बनाएको छ।</li>
+            </ul>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-user-tie"></i> क्रियाकलाप २: महागुरु फाल्गुनन्दका उपदेश र दैनिक जीवनमा सकारात्मक प्रभाव</div>
+
+        <div class="content-box pink-highlight">
+            <p><strong>महागुरु फाल्गुनन्दका मुख्य उपदेशहरू (Teachings):</strong></p>
+            <ol>
+                <li><strong>अहिंसा र जीवदया:</strong> कुनै पनि जीवको हत्या नगर्नु र मारकाटबाट टाढै रहनु। देवीदेवताका नाममा गरिने पशुबलिलाई पूर्ण रूपमा निषेध गर्नु।</li>
+                <li><strong>सत्य र सदाचार (सत्यहाङ्मा):</strong> सधैँ सत्य बोल्नु, इमानदार बन्नु, र कसैप्रति वैरभाव वा ईर्ष्या नराख्नु।</li>
+                <li><strong>मद्यपान र कुलत निषेध:</strong> जाँड, रक्सी, सुर्ती जस्ता नशालु र स्वास्थ्य बिगार्ने पदार्थहरूको सेवन पूर्ण रूपमा बन्द गर्नु।</li>
+                <li><strong>सामाजिक तथा सांस्कृतिक सुधार:</strong> विवाह, भोजभतेर वा संस्कारका कार्यहरूमा हुने फजुलखर्ची र तडकभडक रोक्नु।</li>
+                <li><strong>शिक्षा र मातृभाषाको संरक्षण:</strong> आफ्ना बालबालिकाहरूलाई अनिवार्य रूपमा शिक्षा दिनु र आफ्नो मातृभाषा, लिपि तथा संस्कृतिको जगेर्ना गर्नु।</li>
+            </ol>
+
+            <p><strong>दैनिक जीवनमा पार्ने सकारात्मक प्रभाव (Positive Impacts):</strong></p>
+            <ul>
+                <li><strong>शान्तिपूर्ण समाज निर्माण:</strong> अहिंसाको उपदेशले व्यक्ति र समाजमा रिस र हिंसा कम गरी पारस्परिक मेलमिलाप र शान्ति स्थापना गर्न मद्दत गर्दछ।</li>
+                <li><strong>आर्थिक बचत र समृद्धि:</strong> भोजभतेरमा हुने अनावश्यक खर्च र रक्सीजन्य पदार्थमा हुने फजुलखर्ची रोकिँदा परिवारको आर्थिक अवस्था सुदृढ हुन्छ र बचत गर्ने बानी बस्छ।</li>
+                <li><strong>स्वास्थ्यमा सुधार:</strong> मद्यपान र लागुपदार्थ सेवन नगर्दा मानिस शारीरिक र मानसिक रूपमा स्वस्थ रहन्छ र घरेलु हिंसाका घटनाहरू स्वतः कम हुन्छन्।</li>
+                <li><strong>सांस्कृतिक पहिचानको जगेर्ना:</strong> आफ्नो भाषा र लिपिको अध्ययनले नयाँ पुस्तालाई आफ्नो मौलिक इतिहास र पहिचानप्रति गौरव गर्न सिकाउँछ।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्रमाणित समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> दर्शन बौद्धिक साथसाथै प्रायोगिक विधा पनि हो किन? कारण उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> दर्शनलाई बौद्धिक र प्रायोगिक दुवै विधा मानिन्छ किनभने यसले विचार र व्यवहारलाई सँगसँगै डोर्‍याउँछ।</p>
+                <ol>
+                    <li><strong>बौद्धिक विधा हुनुको कारण:</strong> दर्शनले सत्य, न्याय, अस्तित्व, ब्रह्माण्डको रचना, र ज्ञानको सीमा जस्ता जटिल र अमूर्त विषयहरूमा गहिरो बौद्धिक मन्थन, तर्क र समालोचनात्मक विश्लेषण गर्दछ। यसले मानव मस्तिष्कलाई सोच्न र प्रश्न गर्न सिकाउने हुनाले यो उच्च बौद्धिक विधा हो।</li>
+                    <li><strong>प्रायोगिक विधा हुनुको कारण:</strong> दार्शनिक चिन्तन केवल दार्शनिक निष्कर्ष वा सिद्धान्तमा मात्र सीमित रहँदैन। यसले मानिसलाई दैनिक जीवनमा कसरी बाँच्ने, कुन कुरालाई राम्रो र कुनलाई नराम्रो मान्ने, र कसरी नैतिक निर्णय लिने भनी व्यावहारिक मार्गदर्शन गर्दछ।</li>
+                </ol>
+                <p>अतः, सिद्धान्त निर्माण गर्ने बौद्धिक पाटो र त्यसलाई जीवनमा लागू गर्ने व्यावहारिक पाटो दुवै समेटिने भएकाले दर्शन बौद्धिक र प्रायोगिक दुवै विधा हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> दैनिक जीवनका क्रियाकलापसँग दर्शन कसरी सम्बन्धित हुन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> दैनिक जीवनका साना-तिना क्रियाकलापदेखि ठुला निर्णयहरूसम्म दर्शन प्रत्यक्ष वा अप्रत्यक्ष रूपमा जोडिएको हुन्छ।</p>
+                <ul>
+                    <li><strong>निर्णय प्रक्रियामा:</strong> हामीले दिनभरि गर्ने हरेक कार्य हाम्रो आन्तरिक जीवन दर्शन र मूल्य मान्यतामा आधारित हुन्छ।</li>
+                    <li><strong>नैतिकताको कसीमा:</strong> जब हामी "यो काम गर्नु सही हो कि गलत?" भनी सोच्छौँ, त्यहाँ स्वतः नीतिशास्त्र (Ethics) को प्रयोग भइरहेको हुन्छ, जुन दर्शनकै एक मुख्य शाखा हो।</li>
+                    <li><strong>सन्तुलित जीवनशैली र संयम:</strong> रिस उठ्दा शान्त रहनु, अरूलाई दुःख नदिनु, र आफ्नो स्वार्थभन्दा माथि उठेर सोच्नु जस्ता कुराहरू दार्शनिक अनुशासन र आत्मनियमनका उपज हुन्।</li>
+                    <li><strong>सम्बन्ध र सञ्चार:</strong> परिवार र समाजका सदस्यहरूसँग गरिने सञ्चार, सहानुभूति, र आपसी आदरभाव हाम्रो विश्व दृष्टिकोणबाट निर्देशित हुन्छ।</li>
+                </ul>
+                <p>तसर्थ, मानिस सजग भएर होस् वा नजानीकन, आफ्ना दैनिक व्यवहारहरू कुनै न कतै दार्शनिक विचारकै आधारमा सञ्चालन गरिरहेको हुन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> दैनिक जीवनमा दर्शनको उपयोगिताका केही उदाहरणहरू दिनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> दैनिक जीवनमा दर्शनको व्यावहारिक उपयोगिताका मुख्य उदाहरणहरू यस प्रकार छन्:</p>
+                <ol>
+                    <li><strong>बुद्धको पञ्चशीलको पालना:</strong> दैनिक जीवनमा झुट नबोल्नु, कसैको चित्त नदुखाउनु (अहिंसा), र मदपान जस्ता कुलतबाट टाढा रहनु दर्शनको व्यावहारिक उपयोगको उत्कृष्ट उदाहरण हो।</li>
+                    <li><strong>समालोचनात्मक निर्णय (Critical Decision Making):</strong> सामाजिक सञ्जालमा फैलिएका अफवाह वा हल्लाहरूलाई विनाप्रमाण पत्याउनुको सट्टा "यसको सत्यता के हो?" भनी प्रश्न गर्नु र तथ्य जाँच गर्नु दार्शनिक चिन्तनको प्रयोग हो।</li>
+                    <li><strong>द्वन्द्व व्यवस्थापन र सहनशीलता:</strong> घर वा कार्यस्थलमा मतभेद हुँदा "मेरो विचार मात्र सहि हो" भन्ने हठ त्यागेर अरूको दृष्टिकोणलाई पनि बुझ्ने प्रयास गर्नु (खुला सोच)।</li>
+                    <li><strong>करुणा र परोपकार:</strong> बाटोमा कोही असहाय वा घाइते व्यक्ति देख्दा उसको मद्दत गर्नु र भोकाएका प्राणीहरूलाई भोजन गराउनु करुणा दर्शनको व्यावहारिक उपयोग हो।</li>
+                    <li><strong>यथार्थपरक जीवनशैली:</strong> अनावश्यक तडकभडक र विलासिता त्यागेर आफ्नो क्षमता अनुसारको सरल र सन्तुष्ट जीवन जिउनु (संयम)।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> तपाईंको जीवनमा कुन दर्शनका कस्ता प्रभावहरू परेका छन्? उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मेरो व्यक्तिगत जीवनमा विशेष गरी <strong>पूर्वीय बौद्ध दर्शन</strong> र <strong>समतामूलक विश्व दृष्टिकोण</strong> को गहिरो प्रभाव परेको छ।</p>
+                <ul>
+                    <li><strong>अहिंसा र जीवदयाको भावना:</strong> बौद्ध दर्शनको अहिंसा र करुणाको सिद्धान्तले गर्दा म ससाना जीवजन्तुहरूलाई अनावश्यक दुःख नदिन सधैँ सचेत रहन्छु।</li>
+                    <li><strong>सदाचार र इमानदारिता:</strong> पञ्चशील अन्तर्गतको 'झुट नबोल्ने' र 'चोरी नगर्ने' नियमलाई मैले मेरो विद्यार्थी जीवनको अभिन्न हिस्सा बनाएको छु।</li>
+                    <li><strong>मानसिक शान्ति र सन्तुलन (संयम):</strong> कठिन वा तनावपूर्ण परिस्थिति आइपर्दा म हतारमा उत्तेजित हुन्न। दैनिक १५ मिनेट ध्यान (Meditation) गर्ने बानीले गर्दा ममा धैर्यता र एकाग्रता बढेको छ।</li>
+                    <li><strong>समानता र आदरभाव:</strong> जात, धर्म, लिङ्ग वा वर्गका आधारमा कसैलाई पनि भेदभाव नगरी सबैलाई समान रूपमा आदर गर्ने दृष्टिकोणको विकास भएको छ।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ===== LETTER (Project Work) ===== -->
+        <div class="sub-head"><i class="fas fa-envelope"></i> परियोजना कार्य (Project Work): सम्पादकलाई चिठी</div>
+
+        <div class="letter-box">
+            <p><strong>मिति:</strong> २०८३/०५/१४</p>
+            <p><strong>ठेगाना:</strong> गल्छी, धादिङ।</p>
+            <p class="salutation">श्रीमान् सम्पादक ज्यू,<br><strong>'कान्तिपुर' राष्ट्रिय दैनिक</strong><br>तिनकुने, काठमाडौँ।</p>
+            <p><strong>विषय: "दैनिक जीवनमा दार्शनिक चिन्तनको अपरिहार्यता" सम्बन्धमा।</strong></p>
+
+            <p>महोदय, तपाईंको लोकप्रिय र प्रतिष्ठित राष्ट्रिय दैनिक पत्रिकामार्फत आजको समाजमा हराउँदै गएको नैतिक मूल्य र दार्शनिक चेतनालाई पुनर्जागृत गराउन "दैनिक जीवनमा दर्शनको उपयोगिता" विषयमा यो संक्षिप्त पत्र प्रकाशित गरिदिनुहुन हार्दिक अनुरोध गर्दछु।</p>
+
+            <p>आजको आधुनिक र प्रविधिकेन्द्रित संसारमा मानिस भौतिक सुखसुविधा र अन्धाधुन्ध दौडमा यति व्यस्त भएको छ कि उसले आफैँलाई चिन्न र जीवनको वास्तविक उद्देश्य बुझ्न बिर्सिसकेको छ। समाजमा डिप्रेसन, संवेगात्मक अस्थिरता, भ्रष्टाचार, र नैतिक मूल्य मान्यताको स्खलन तीव्र रूपमा बढिरहेको छ। यस्तो अवस्थामा धेरैजसो मानिसहरू दर्शनलाई केवल 'विश्वविद्यालयको कोठामा पढाइने सुक्खा र अमूर्त सिद्धान्त' ठान्ने गल्ती गर्छन्। तर वास्तवमा, दर्शन मानिसलाई जिउने कला सिकाउने सबैभन्दा व्यावहारिक र जीवन्त विधा हो।</p>
+
+            <p>इन्टरनेटमा गरिएका विभिन्न अध्ययन र अनुसन्धानहरूले देखाएका छन् कि संसारका सफल र मानसिक रूपमा सन्तुलित व्यक्तिहरू कुनै न कुनै दार्शनिक चिन्तन प्रणालीबाट निर्देशित छन्। दर्शनले हामीलाई तर्कपूर्ण सोच्न (Logical Thinking) र कुनै पनि कुरालाई संशय र तथ्यको कसीमा जाँचेर मात्र स्वीकार गर्न सिकाउँछ।</p>
+
+            <p>दैनिक जीवनमा दर्शनको व्यावहारिक प्रयोग भनेको बुद्धको 'पञ्चशील' र 'संयम' को पालना गर्नु हो। जसले आफ्नो बोली, व्यवहार र विचारमा संयम राख्छ, उसको पारिवारिक र सामाजिक जीवन सधैँ सुखी र द्वन्द्वमुक्त हुन्छ। दर्शनले हामीलाई 'करुणा' सिकाउँछ, जसले गर्दा समाजमा रहेका गरिब, असहाय र फरक क्षमता भएका व्यक्तिहरूप्रति हामी संवेदनशील बन्न सक्छौँ।</p>
+
+            <p>अतः, आजको शिक्षा र समाजमा वैज्ञानिक चिन्तनका साथै दार्शनिक चेतनाको विकास गर्नु अपरिहार्य भइसकेको छ। दर्शनले मानिसलाई स्वार्थी हुनबाट जोगाएर एक जिम्मेवार, परोपकारी र विवेकी नागरिक बन्न प्रेरित गर्छ। तसर्थ, विद्यालय तहदेखि नै व्यावहारिक दर्शन र नैतिक शिक्षालाई जोड दिनुपर्ने देखिन्छ।</p>
+
+            <p class="closing">भवदीय,<br>मनिषा आचार्य<br>गल्छी, धादिङ।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">Exam-oriented</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">१.</span> संयम (Self-restraint) भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> बोली, व्यवहार, विचार र खानपानमा नियन्त्रण राखी आफूलाई अनैतिक, खराब र हानिकारक कुराहरूबाट टाढा राख्ने नैतिक गुण नै संयम हो।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">२.</span> बुद्धले आफ्नो उपदेश यात्राको ४५ वर्षको अवधिमा वर्षा ऋतुमा पालना गर्ने नियम के थियो?</div>
+            <div class="a"><strong>उत्तर:</strong> बुद्धले वर्षा ऋतुको समयमा लगातार तीन महिनासम्म यात्रा नगरी कुनै एक निश्चित स्थान वा विहारमा मात्र बस्ने नियम पालना गर्दथे।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">३.</span> बौद्ध भिक्षुहरूको वस्त्र र भिक्षा सङ्कलन गर्ने कचौरालाई क्रमशः के भनिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> बौद्ध भिक्षुहरूको वस्त्रलाई <strong>'चीवर'</strong> र भिक्षा सङ्कलन गर्ने कचौरालाई <strong>'भिक्षापात्र'</strong> भनिन्छ।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> बुद्ध दर्शनको 'पञ्चशील' को सिद्धान्तलाई वर्तमान समाजमा कसरी प्रयोग गर्न सकिन्छ? स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> बुद्ध दर्शनको 'पञ्चशील' (पाँच नैतिक नियमहरू) वर्तमान आधुनिक समाजमा रहेका अनेकौँ विकृति र विसङ्गतिहरूलाई न्यूनीकरण गर्न एक अचूक औषधिको रूपमा प्रयोग गर्न सकिन्छ:</p>
+                <ol>
+                    <li><strong>अहिंसाको प्रयोग:</strong> हत्या, हिंसा र साम्प्रदायिक दङ्गा रोकी समाजमा शान्ति, भ्रातृत्व र अहिंसा प्रवर्द्धन गर्न मद्दत पुग्छ।</li>
+                    <li><strong>अस्तेय (चोरी नगर्नु):</strong> व्यक्तिमा इमानदारिता जगाई भ्रष्टाचार, कालोबजारी र ठगी जस्ता आर्थिक अपराधहरू रोक्न मद्दत गर्छ।</li>
+                    <li><strong>सत्यको प्रयोग:</strong> झुटो बोल्ने, सामाजिक सञ्जालमा अफवाह फैलाउने र धोखाधडी गर्ने प्रवृत्ति हटाई आपसी विश्वास बलियो बनाउँछ।</li>
+                    <li><strong>सदाचार (व्यभिचार नगर्नु):</strong> यसले यौनजन्य हिंसा, चरित्रहीनता र पारिवारिक विखण्डनलाई रोकेर मर्यादित समाज निर्माण गर्छ।</li>
+                    <li><strong>मद्यपान र कुलत निषेध:</strong> लागुपदार्थ र मद्यपानको अन्त्यले घरेलु हिंसा कम गर्छ र युवा पुस्तालाई कुलतबाट जोगाई स्वस्थ जनशक्ति तयार पार्छ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> "संयम र असल सोच विना मानिसको जीवन सुखमय हुन सक्दैन।" यस भनाइलाई पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानव जीवनमा भौतिक सुख र साधनले मात्र साँचो सुख प्राप्त हुन सक्दैन। मानसिक शान्ति र आत्मसन्तुष्टिका लागि संयम र असल सोच अनिवार्य पूर्वसर्त हुन्:</p>
+                <ul>
+                    <li><strong>संयमको भूमिका:</strong> संयमले मानिसलाई लोभ, क्रोध, ईर्ष्या र घमण्ड जस्ता मानसिक विकारहरूबाट जोगाउँछ। जसले आफ्नो जिब्रो (बोली र स्वाद), व्यवहार र विचारमा नियन्त्रण राख्न सक्दैन, उसको जीवन सधैँ विवाद र अशान्तिले भरिएको हुन्छ।</li>
+                    <li><strong>असल सोचको भूमिका:</strong> असल सोचले मानिसलाई अरूको प्रगतिमा डाह गर्नुको सट्टा खुसी हुन र सबैप्रति करुणाभाव राख्न सिकाउँछ। यसले जीवनमा सकारात्मक ऊर्जा भर्छ।</li>
+                    <li><strong>निष्कर्ष:</strong> तसर्थ, बाह्य परिस्थिति जस्तोसुकै भए पनि आन्तरिक रूपमा सुखी, शान्त र सम्मानित जीवन जिउनका लागि संयम र असल सोच नै मानिसका सबैभन्दा ठुला दार्शनिक पुँजी हुन्।</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color3" style="border-left-color:#1a3a5c;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "दर्शन केवल सिद्धान्त होइन, यो त जीवन जिउने व्यावहारिक कला हो।" यस भनाइलाई दार्शनिक चिन्तनको व्यावहारिक उपयोगिता र बुद्धको जीवनचर्याको उदाहरण प्रस्तुत गर्दै तर्कसहित पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><strong>परिचय (Introduction)</strong></p>
+                <p>दर्शन (Philosophy) शब्दको उत्पत्ति ग्रीक शब्द 'फिलोसफिया' (ज्ञानप्रतिको प्रेम) बाट भएको हो। धेरैजसो मानिसहरू दर्शनलाई कठिन, अमूर्त र केवल दार्शनिकहरूले मात्र कोठाभित्र बसेर गर्ने बौद्धिक बहस ठान्छन्। तर वास्तवमा, दर्शन केवल सैद्धान्तिक विधा मात्र होइन। यो त मानिसलाई दैनिक जीवनमा आईपर्ने उतारचढावहरूका बिच कसरी सही निर्णय लिने, कसरी नैतिक आचरण अपनाउने र कसरी जीवनलाई अर्थपूर्ण बनाउने भनी सिकाउने एक व्यावहारिक जीवन पद्धति र जीवन जिउने कला हो।</p>
+
+                <p><strong>मुख्य विश्लेषण र तर्कहरू</strong></p>
+                <p>दैनिक जीवनमा दर्शनको व्यावहारिक उपयोगिता र यसको महत्वलाई निम्नलिखित तर्कहरूका आधारमा पुष्टि गर्न सकिन्छ:</p>
+                <ul>
+                    <li><strong>तार्किक निर्णय क्षमता:</strong> दर्शनले हामीलाई अन्धविश्वास र अफवाहहरूबाट मुक्त गराई तर्कपूर्ण रूपमा सोच्न (Analytical thinking) सिकाउँछ। यसले विकल्पहरूमध्ये उत्कृष्ट विकल्प छनोट गरी सही समयमा सही निर्णय लिन सघाउँछ।</li>
+                    <li><strong>नैतिकताको मार्गदर्शन:</strong> दर्शनको प्रमुख शाखा 'नीतिशास्त्र' ले हाम्रा हरेक व्यवहारहरूलाई 'नैतिकताको कसी' मा जाँच्न सिकाउँछ। यसले मानिसलाई कानुनको डरले मात्र नभई आफ्नै विवेकको आधारमा असल कर्म गर्न प्रेरित गर्छ।</li>
+                    <li><strong>संवेग र तनाव व्यवस्थापन:</strong> पूर्वीय दर्शनका योग, ध्यान र अष्टाङ्ग मार्ग जस्ता व्यावहारिक पक्षहरूले मानिसको चञ्चल मनलाई नियन्त्रण गरी रिस, चिन्ता र निराशालाई परास्त गर्न मद्दत गर्दछन्।</li>
+                    <li><strong>समानता र करुणाको प्रवर्द्धन:</strong> दार्शनिक चेतनाले मानिसलाई संकुचित सोचाइबाट माथि उठाई सबै मानिस र प्राणीप्रति समान र सम्मानजनक दृष्टिकोण राख्न सिकाउँछ।</li>
+                </ul>
+
+                <p><strong>व्यावहारिक/वास्तविक उदाहरण</strong></p>
+                <p>दर्शनको व्यावहारिक प्रयोगको सबैभन्दा ठुलो उदाहरण <strong>भगवान् बुद्धको दैनिक जीवनचर्या</strong> हो। बुद्धले आफ्नो जीवनका ४५ वर्ष पैदल यात्रा गरेर बिताए। उनले दैनिक रूपमा चीवर वस्त्र लगाएर, अहङ्कार त्याग गरी भिक्षापात्र बोकेर भिक्षाटन गर्थे। उनले कसैसँग हठ गरेर अन्न मागेनन्, बरु श्रद्धाले दिएको भोजन मात्र खाए। उनले शत्रुता राख्नेहरूसँग पनि सधैँ करुणा र मैत्रीपूर्ण व्यवहार गरे। उनले प्रतिपादन गरेको 'Panchasheel' (हिंसा नगर्नु, चोरी नगर्नु, झुटो नबोल्नु, व्यभिचार नगर्नु, मदपान नगर्नु) कुनै सुक्खा सिद्धान्त होइन, बरु जुनसुकै कालखण्डमा पनि मानव समाजलाई अपराधमुक्त र सभ्य बनाउने एक उत्कृष्ट व्यावहारिक जीवन संहिता हो।</p>
+
+                <p><strong>निष्कर्ष</strong></p>
+                <p>निष्कर्षमा, दर्शन पुस्तकका पानाहरूमा सजाइने ज्ञान मात्र होइन, बरु यसलाई हाम्रो बोली, व्यवहार, आचरण र निर्णयमा उतार्नु आवश्यक छ। जब हामी आफ्नो संवेग नियन्त्रण गर्छौँ, सत्य बोल्छौँ, र अरूका पीडाप्रति संवेदनशील हुन्छौँ, त्यहाँ स्वतः दार्शनिक चिन्तनको व्यावहारिक उपयोग भइरहेको हुन्छ। तसर्थ, दर्शन जीवनको जटिल परीक्षा र यात्रालाई सजिलो, सुन्दर र सफल बनाउने एक अमूल्य व्यावहारिक औजार हो।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#b45309; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> दर्शन जीवन जिउने कला हो। सत्य, अहिंसा, करुणा र संयमलाई दैनिक जीवनमा उतार्नु नै साँचो दार्शनिक अभ्यास हो। "जीवन दर्शन नै सफल जीवनको कुञ्जी हो।"
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ४, पाठ ४</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

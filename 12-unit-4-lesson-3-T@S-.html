@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ४, पाठ ३ – जीवन दर्शन र सामाजिक मूल्य (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #1a1a2e;
+            color: #e8e4de;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #f5f0ea;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.5);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #b8a99a;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #c4450c;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem; /* 18.6px */
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1f7a4a;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #a0522d;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #e8dfd4;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #c9bdb0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.36rem; /* 21.8px */
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #c4450c;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #1a3a5c;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #c4450c;
+            border-bottom-color: #c4450c;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #c4450c;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #1a3a5c;
+            margin: 42px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 4px solid #b8c4d0;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #1a3a5c;
+        }
+
+        .section-head .mark-badge {
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #c4450c;
+        }
+
+        .section-head .mark-badge.gold {
+            background: #b45309;
+        }
+
+        .section-head .mark-badge.green {
+            background: #1f7a4a;
+        }
+
+        .section-head .mark-badge.purple {
+            background: #6b3fa0;
+        }
+
+        .section-head .mark-badge.blue {
+            background: #1a3a5c;
+        }
+
+        .section-head .mark-badge.pink {
+            background: #a03a5a;
+        }
+
+        .sub-head {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #1a3a5c;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #c4450c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #c4450c;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #c4450c;
+        }
+
+        /* ----- CONTENT BOXES with highlight backgrounds ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            font-weight: 500;
+            line-height: 2;
+        }
+        
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem; /* 19px */
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.blue-highlight {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-highlight {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-highlight {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-highlight {
+            border-left-color: #6b3fa0;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-highlight {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-highlight {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-highlight {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a3a5c;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            background: #fcf9f5;
+        }
+
+        .qa-block.color1 { border-left-color: #c4450c; background: #fcf9f5; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem; /* 19.5px */
+        }
+
+        .qa-block .q .qnum {
+            color: #c4450c;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem; /* 19px */
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1a3a5c;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem; /* 18px */
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #c4450c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(196, 69, 12, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #a0360a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(196, 69, 12, 0.55);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #c9bdb0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #c9bdb0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1a3a5c;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-brain"></i>
+                    एकाइ ४, पाठ ३: जीवन दर्शन, सामाजिक मूल्य मान्यताहरू र सामाजिक व्यवहार
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ४, पाठ ३
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. पाठ ३ का विषयगत पारिभाषिक (रजिस्टर) शब्दहरू
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> दर्शन (Philosophy)</strong>
+                <p>संस्कृतको 'दृश्' धातुमा 'अन' प्रत्यय लागेर बनेको शब्द, जसको अर्थ 'हेर्ने वा देख्ने कार्य' वा 'साक्षात्कार गर्ने साधन' हो <span class="ref">[८]</span>। प्रकृति, ईश्वर, ज्ञान, जीवन र चेतनासम्बन्धी तर्कपूर्ण विवेचन गर्ने शास्त्रीय पद्धति <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> जीवन दर्शन</strong>
+                <p>व्यक्तिले आफ्नो जीवनको कारण, प्रयोजन, अस्तित्व र लक्ष्यका बारेमा अवलम्बन गर्ने मार्गनिर्देशक दार्शनिक मान्यता वा दृष्टिकोण <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> विश्वदृष्टिकोण (Worldview)</strong>
+                <p>मानिसले आफ्नो जीवनको भोगाइ, सामाजिकीकरण, संस्कृति र शिक्षाका आधारमा समग्र विश्वलाई हेर्ने, बुझ्ने धारणा <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> तत्त्वमीमांसा (Metaphysics)</strong>
+                <p>दर्शनशास्त्रको त्यो शाखा जसले ब्रह्माण्डको सृष्टि, अस्तित्व, प्रकृति, ईश्वर, चेतना र भौतिक जगत्को अन्तिम यथार्थताको विश्लेषण गर्दछ <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> ज्ञानमीमांसा (Epistemology)</strong>
+                <p>मानव ज्ञानको उत्पत्ति, सीमा, प्रकृति, आधिकारिकता, स्रोत र सत्यताको परीक्षण गर्ने दर्शनशास्त्रको विधा <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> मूल्यमीमांसा (Axiology)</strong>
+                <p>मानव जीवनका मूल्य, मान्यता, नैतिकता, आचरण र सौन्दर्यको अध्ययन गर्ने दर्शनको शाखा <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> आस्तिक दर्शन</strong>
+                <p>ईश्वरीय सत्ता, वैदिक प्रामाणिकता वा परलोकको अस्तित्वलाई स्विकार्ने दार्शनिक चिन्तन परम्परा (साङ्ख्य, योग, न्याय, वैशेषिक, मीमांसा, वेदान्त) <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> नास्तिक दर्शन</strong>
+                <p>ईश्वरीय सत्ता वा वेदको अकाट्य प्रामाणिकतालाई अस्वीकार गर्ने दार्शनिक चिन्तन परम्परा (बौद्ध, जैन, चार्वाक) <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> समता (Equity)</strong>
+                <p>सबैलाई एउटै व्यवहार गर्नुको सट्टा व्यक्तिको विशिष्ट आवश्यकता, अवस्था अनुसार न्यायोचित व्यवहार गर्नु <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> वैदिक षड्दर्शन</strong>
+                <p>पूर्वीय चिन्तन परम्पराका ६ वटा मुख्य वैदिक आस्तिक दर्शनहरू: साङ्ख्य, योग, न्याय, वैशेषिक, मीमांसा र वेदान्त <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> द्विधा विभाजन दृष्टिकोण</strong>
+                <p>जगत्लाई दुई विपरीत कित्तामा मात्र विभाजन गरेर हेर्ने चिन्तन शैली (जस्तै: चेतना भर्सेज पदार्थ, असल भर्सेज खराब) <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a3a5c; margin-right:4px;"></i> समन्वयात्मक दृष्टिकोण</strong>
+                <p>चेतना र पदार्थ, विचार र व्यवहार बीच द्वन्द्व नगराई तिनीहरूबीचको सातत्य, सहअस्तित्व र समन्वयमा जोड दिने सन्तुलित दृष्टिकोण <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "जीवन दर्शन, सामाजिक मूल्य मान्यताहरू र सामाजिक व्यवहार" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. दर्शनको परिचय -->
+        <div class="sub-head"><i class="fas fa-question-circle"></i> १. दर्शन र जीवन दर्शनको परिचय</div>
+
+        <div class="content-box blue-highlight">
+            <p><strong>दर्शनको शाब्दिक स्वरूप:</strong> अंग्रेजी शब्द <strong>'Philosophy'</strong> ग्रीक भाषाको <strong>'Philosophia'</strong> (Philo = प्रेम/अनुराग, Sophia = ज्ञान/विवेक) बाट बनेको हो, जसको अर्थ <strong>"ज्ञानप्रतिको अनुराग वा प्रेम"</strong> (Love of wisdom) हुन्छ <span class="ref">[८]</span>। संस्कृतमा यसलाई <strong>'दृश्'</strong> धातुबाट उत्पत्ति गराई <strong>"जसको माध्यमबाट सत्य वा तत्त्वको साक्षात्कार हुन्छ, त्यही दर्शन हो"</strong> भनी परिभाषित गरिएको छ <span class="ref">[८]</span>।</p>
+            <p><strong>जीवन दर्शनको भूमिका:</strong> मानिसले सचेत वा अचेत रूपमा आफ्नो जीवनलाई अघि बढाउन जुन विचार, मूल्य र सिद्धान्तलाई आधार बनाउँछ, त्यही नै उसको जीवन दर्शन हो <span class="ref">[८]</span>। यसले व्यक्तिको सामाजिक व्यवहार, निर्णय क्षमता र दृष्टिकोणलाई प्रत्यक्ष रूपमा निर्देशित गर्दछ <span class="ref">[८]</span>।</p>
+        </div>
+
+        <!-- २. दर्शनका क्षेत्रहरू -->
+        <div class="sub-head"><i class="fas fa-sitemap"></i> २. दर्शनका प्रमुख क्षेत्रहरू (Branches of Philosophy)</div>
+
+        <div class="content-box gold-highlight">
+            <p>आधुनिक दार्शनिकहरूले दर्शनका विषयवस्तुलाई मुख्यतः निम्न क्षेत्रहरूमा विभाजन गरेका छन् <span class="ref">[८]</span>:</p>
+            <ul>
+                <li><strong>तत्त्वमीमांसा (Metaphysics):</strong> ब्रह्माण्डको उत्पत्ति, ईश्वरको अस्तित्व र आत्माको स्वरूपको खोजी गर्ने <span class="ref">[८]</span>।</li>
+                <li><strong>ज्ञानमीमांसा (Epistemology):</strong> ज्ञान कसरी प्राप्त हुन्छ? ज्ञानको सीमा र सत्यता के हो भन्ने कुराको विश्लेषण गर्ने <span class="ref">[८]</span>।</li>
+                <li><strong>मूल्यमीमांसा (Axiology):</strong> मानव जीवनको मूल्य, नैतिकता, आदर्श र कला/सौन्दर्यको अध्ययन गर्ने <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ३. पूर्वीय दर्शन -->
+        <div class="sub-head"><i class="fas fa-om"></i> ३. पूर्वीय दर्शन परम्परा (Eastern Philosophical Traditions)</div>
+
+        <div class="content-box green-highlight">
+            <p>पूर्वीय दर्शन अत्यन्त समृद्ध र विविधतायुक्त छ, जसलाई मुख्य दुई वर्गमा बाँडिएको छ <span class="ref">[८]</span>:</p>
+        </div>
+
+        <div class="content-box teal-highlight">
+            <p><strong>(क) आस्तिक दर्शन (वैदिक षड्दर्शन) <span class="ref">[८]</span>:</strong></p>
+            <ol>
+                <li><strong>साङ्ख्य दर्शन:</strong> सूत्रकार <strong>कपिल</strong>। सृष्टिमा 'प्रकृति' (पदार्थ) र 'पुरुष' (चेतना) को सहअस्तित्व स्वीकार <span class="ref">[८]</span>।</li>
+                <li><strong>योग दर्शन:</strong> सूत्रकार <strong>पतञ्जलि</strong>। अष्टाङ्ग योगको प्रतिपादन <span class="ref">[८]</span>।</li>
+                <li><strong>न्याय दर्शन:</strong> सूत्रकार <strong>गौतम</strong>। तर्कशास्त्र र प्रमाणलाई ज्ञानको आधार माने <span class="ref">[८]</span>।</li>
+                <li><strong>वैशेषिक दर्शन:</strong> सूत्रकार <strong>कणाद</strong>। 'अणु' (Atom) को सिद्धान्त <span class="ref">[८]</span>।</li>
+                <li><strong>मीमांसा दर्शन:</strong> सूत्रकार <strong>जैमिनी</strong>। कर्मकाण्ड र धर्मको व्याख्या <span class="ref">[८]</span>।</li>
+                <li><strong>वेदान्त दर्शन (उत्तरमीमांसा):</strong> सूत्रकार <strong>बादरयाण</strong>। उपनिषद्को ज्ञान र ब्रह्मको व्याख्या <span class="ref">[८]</span>।</li>
+            </ol>
+        </div>
+
+        <div class="content-box purple-highlight">
+            <p><strong>(ख) नास्तिक दर्शन (अवैदिक दर्शन) <span class="ref">[८]</span>:</strong></p>
+            <ol>
+                <li><strong>बौद्ध दर्शन:</strong> <strong>गौतम बुद्ध</strong>का उपदेशहरू — चार आर्यसत्य र अष्टाङ्गिक मार्ग <span class="ref">[८]</span>।</li>
+                <li><strong>जैन दर्शन:</strong> २४ औँ तीर्थङ्कर <strong>महावीर</strong> — अहिंसा, अनेकान्तवाद, अपरिग्रह <span class="ref">[८]</span>।</li>
+                <li><strong>चार्वाक दर्शन (लोकायत):</strong> संस्थापक <strong>चार्वाक</strong> — पूर्ण भौतिकवाद र प्रत्यक्ष प्रमाणमात्र स्वीकार <span class="ref">[८]</span>।</li>
+                <li><strong>किरात दर्शन (मुन्धुम):</strong> महागुरु फाल्गुनन्दसम्मको मौलिक प्राकृतिक दर्शन परम्परा <span class="ref">[८]</span>।</li>
+                <li><strong>बोन दर्शन:</strong> तोन्पा शेनराव मिवाका उपदेशमा आधारित प्राचीन प्रकृतिपूजक दर्शन <span class="ref">[८]</span>।</li>
+            </ol>
+        </div>
+
+        <!-- ४. पश्चिमा दर्शन -->
+        <div class="sub-head"><i class="fas fa-globe-europe"></i> ४. पश्चिमा दर्शन परम्परा (Western Philosophical Traditions)</div>
+
+        <div class="content-box pink-highlight">
+            <p><strong>स्रोत र चिन्तकहरू:</strong> पश्चिमा दर्शनको मुख्य उद्गम स्थल प्राचीन <strong>ग्रीस</strong> हो <span class="ref">[८]</span>। <strong>सक्रेटस (सुकरात), प्लेटो</strong> र <strong>एरिस्टोटल (अरस्तू)</strong> जस्ता महान् दार्शनिकहरूले यसको जग बसाले <span class="ref">[८]</span>।</p>
+            <p><strong>आधुनिक पश्चिमा चिन्तन:</strong></p>
+            <ul>
+                <li><strong>इमानुएल कान्ट:</strong> मानव मस्तिष्कले तर्क र अनुभवका माध्यमबाट सत्यको साक्षात्कार गर्दछ <span class="ref">[८]</span>।</li>
+                <li><strong>कार्ल मार्क्स:</strong> संसारको चालक शक्ति चेतना नभएर भौतिक परिस्थिति हो भन्ने <strong>द्वन्द्वात्मक भौतिकवाद</strong> (Dialectical Materialism) को प्रतिपादन <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ५. समतामूलक विश्व दृष्टिकोण -->
+        <div class="sub-head"><i class="fas fa-balance-scale"></i> ५. समतामूलक विश्व दृष्टिकोण (Equitable Worldview)</div>
+
+        <div class="content-box orange-highlight">
+            <p><strong>समानता र समताबीचको भिन्नता:</strong> समानता (Equality) ले सबैलाई विनाभेदभाव एउटै स्रोत दिनुपर्छ भन्छ, तर समता (Equity) ले समाजका असक्षम, पिछडिएकाहरूलाई विशेष आवश्यकता अनुसार थप स्रोत वा सकारात्मक विभेद प्रदान गरेर मात्र वास्तविक समानताको विन्दुमा पुग्न सकिन्छ भनी वकालत गर्दछ <span class="ref">[८]</span>।</p>
+            <p><strong>समतामूलक दृष्टिकोणको आवश्यकता:</strong> यसले मानिसको रङ, जाति, लिङ्ग, धर्म वा शारीरिक बनावटका आधारमा हुने विभेदलाई अन्त्य गरी मानवीय सम्मान र समतामूलक न्याय सुनिश्चित गर्दछ <span class="ref">[८]</span>।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-book"></i> क्रियाकलाप १: नेपाली पाठ्यपुस्तकमा प्रतिविम्बित विश्वदृष्टिकोणको समीक्षा</div>
+
+        <div class="content-box blue-highlight">
+            <p><strong>उत्तर (समीक्षात्मक प्रतिवेदन):</strong> कक्षा १२ को अनिवार्य नेपाली विषयको पाठ्यपुस्तकमा रहेका विभिन्न विधाहरूका माध्यमबाट अभिव्यक्त भएका दार्शनिक तथा विश्व दृष्टिकोणहरूको समीक्षा यस प्रकार छ <span class="ref">[८]</span>:</p>
+
+            <p><strong>१. 'आमाको सपना' (कविता - गोपालप्रसाद रिमाल):</strong> <strong>आशावादी र प्रगतिशील विश्व दृष्टिकोण</strong>। क्रान्ति र परिवर्तन अवश्यभावी छ, र नयाँ पुस्ताले समाजमा व्याप्त विकृति र निरंकुशताको अन्त्य गरी सुन्दर भविष्य निर्माण गर्नेछ भन्ने क्रान्तिकारी दृष्टिकोण।</p>
+
+            <p><strong>२. 'एक चिहान' (उपन्यास - हृदयचन्द्रसिंह प्रधान):</strong> <strong>सामाजिक यथार्थवादी तथा माक्र्सवादी/पदार्थवादी विश्व दृष्टिकोण</strong>। गरिब वर्गमाथि हुने शोषण, श्रमको महत्त्व र वर्गीय एकताका माध्यमबाट मात्र सामाजिक रूपान्तरण सम्भव छ भन्ने विचार।</p>
+
+            <p><strong>३. 'घनघस्याको उकालो काट्दा' (नियात्रा - तारानाथ शर्मा):</strong> <strong>प्रकृतिमुखी, मानवतावादी र अस्तित्ववादी विश्व दृष्टिकोण</strong>। दुर्गम क्षेत्रका मानिसहरूको सङ्घर्षशील जीवन र प्रकृतिसँग मानिसको सामीप्यलाई सुन्दर ढङ्गले प्रस्तुत गरिएको छ।</p>
+
+            <p><strong>४. 'योगमाया' (जीवनी):</strong> <strong>विद्रोही, आध्यात्मिक र समतामूलक विश्व दृष्टिकोण</strong>। तत्कालीन समाजमा व्याप्त सतीप्रथा, जातीय विभेद र लैङ्गिक असमानताका विरुद्ध अध्यात्मलाई सामाजिक चेतना र विद्रोहको हतियार बनाइएको दृष्टिकोण।</p>
+
+            <p><strong>निष्कर्ष:</strong> नेपाली पाठ्यपुस्तकका यी सिर्जनाहरूले विद्यार्थीलाई समाजलाई बहुआयामिक कोणबाट बुझ्न, सामाजिक न्यायका पक्षमा उभिन र जीवनप्रति सकारात्मक दृष्टिकोण राख्न सघाउँछन् <span class="ref">[८]</span>।</p>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-users"></i> क्रियाकलाप २: समतामूलक दृष्टिकोणको आवश्यकता — छलफल निष्कर्ष</div>
+
+        <div class="content-box gold-highlight">
+            <p><strong>विषय: सभ्य र न्यायपूर्ण समाज निर्माणका लागि समतामूलक दृष्टिकोणको अपरिहार्यता</strong></p>
+            <p>हाम्रो कक्षामा "समतामूलक दृष्टिकोणको आवश्यकता" का सन्दर्भमा गरिएको सामूहिक छलफलबाट निकालिएका मुख्य निष्कर्षहरू निम्न बुँदाहरूमा प्रस्तुत गरिएको छ <span class="ref">[८]</span>:</p>
+
+            <ol>
+                <li><strong>ऐतिहासिक अन्यायको सम्बोधन:</strong> समाजमा महिला, दलित, आदिवासी जनजाति र अपाङ्गता भएका व्यक्तिहरू शताब्दीऔँदेखि सामाजिक, आर्थिक र राजनीतिक रूपमा पछाडि पारिएका छन् <span class="ref">[८]</span>। उनीहरूलाई समान प्रतिस्पर्धामा ल्याउन विशेष सुविधा (सकारात्मक विभेद/आरक्षण) दिन समतामूलक दृष्टिकोण आवश्यक छ <span class="ref">[८]</span>।</li>
+
+                <li><strong>वास्तविक समानताको प्राप्ति:</strong> केवल 'समानता' को नाराले असमान अवस्थामा रहेका मानिसलाई न्याय दिन सक्दैन <span class="ref">[८]</span>। आँखा देख्ने र दृष्टिविहीन दुवैलाई एउटै लिखित परीक्षा लिनु समानता त होला तर न्याय होइन <span class="ref">[८]</span>। दृष्टिविहीनलाई ब्रेल लिपि वा सहयोगी लेखक उपलब्ध गराउनु 'समता' हो, जसले मात्र वास्तविक समानता जन्माउँछ <span class="ref">[८]</span>।</li>
+
+                <li><strong>समान सहभागिता र लोकतन्त्रको सुदृढीकरण:</strong> राज्यका हरेक अङ्ग र नीति निर्माण तहमा समाजका सबै वर्गको अर्थपूर्ण प्रतिनिधित्व गराउन समतामूलक दृष्टिकोणले मद्दत गर्छ <span class="ref">[८]</span>।</li>
+
+                <li><strong>सामाजिक शान्ति र द्वन्द्व न्यूनीकरण:</strong> जब सीमान्तकृत वर्गले राज्यबाट आफ्नो आवश्यकताको सम्बोधन भएको महसुस गर्छ, तब समाजमा असन्तोष र द्वन्द्वको अन्त्य भई सामाजिक सद्भाव र सहकार्य प्रवर्द्धन हुन्छ <span class="ref">[८]</span>।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्रमाणित समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> दर्शन भन्नाले के बुझिन्छ?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> दर्शन (Philosophy) भन्नाले प्रकृति, ईश्वर, ब्रह्माण्ड, ज्ञान, सत्य, मानवीय जीवन र चेतनाका बारेमा गरिने तार्किक, बौद्धिक र व्यवस्थित विवेचन वा विश्लेषण बुझिन्छ <span class="ref">[८]</span>। यो संस्कृतको 'दृश्' धातुबाट बनेको हो, जसको अर्थ सत्यको साक्षात्कार गर्ने माध्यम हो भने अंग्रेजीमा यसलाई ज्ञानप्रतिको अनुराग (Love of wisdom) का रूपमा लिइन्छ <span class="ref">[८]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> दर्शनको महत्त्व उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानव जीवन र समाजलाई सही मार्गनिर्देशन गर्न दर्शनको असाध्यै ठुलो महत्त्व रहेको छ <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>सत्य र यथार्थको अन्वेषण:</strong> दर्शनले अन्धविश्वासबाट मुक्त गराई तर्क, प्रमाण र विवेकका आधारमा वास्तविक यथार्थ पत्ता लगाउन सघाउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>जीवनको लक्ष्य र मार्गनिर्देशन:</strong> "म को हुँ? मेरो जीवनको उद्देश्य के हो?" जस्ता प्रश्नहरूको उत्तर दिएर नैतिक र सुव्यवस्थित जीवन जिउने मार्ग देखाउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>समालोचनात्मक चिन्तनको विकास:</strong> दर्शनको अध्ययनले सही र गलत, न्याय र अन्याय छुट्याउन सक्ने गहिरो तार्किक र विश्लेषणात्मक क्षमता (Critical Thinking) को विकास गराउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>सभ्य सामाजिक मूल्यहरूको निर्माण:</strong> शान्ति, सद्भाव, सहअस्तित्व, समता र परोपकार जस्ता मूल्यहरू स्थापना गर्न दर्शनले जगको काम गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>समस्या समाधानमा बौद्धिक क्षमता:</strong> जटिल दोधार वा वैचारिक संकटका बेला उपयुक्त विकल्पहरू छनोट गरी सही निर्णय लिन दर्शनले मानसिक रूपमा सबल बनाउँछ <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> विश्व दृष्टिकोण भन्नाले के बुझिन्छ?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> विश्व दृष्टिकोण (Worldview) भन्नाले मानिसले आफ्नो जीवनको भोगाइ, शिक्षा, सामाजिकीकरण र सांस्कृतिक परिवेशका आधारमा समग्र विश्व, मानव समाज र प्राकृतिक व्यवस्थाका बारेमा बनाएको एउटा समग्र वैचारिक धारणा वा दृष्टिकोण बुझिन्छ <span class="ref">[८]</span>। यो जन्मजात हुँदैन, बरु समाज र पर्यावरणसँगको अन्तरक्रियाबाट मानिसले ग्रहण गर्दछ र यसैका आधारमा उसले संसारमा आफ्ना क्रियाकलाप र सामाजिक व्यवहार सञ्चालन गर्छ <span class="ref">[८]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> द्विधा विभाजन दृष्टिकोण र समन्वयात्मक दृष्टिकोणको फरक उदाहरणसहित स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <div class="table-wrap">
+                    <div class="table-caption">तालिका: द्विधा विभाजन र समन्वयात्मक दृष्टिकोणको तुलना <span class="ref">[८]</span></div>
+                    <table>
+                        <thead>
+                            <tr><th>आधार</th><th>द्विधा विभाजन दृष्टिकोण</th><th>समन्वयात्मक दृष्टिकोण</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>मूल अवधारणा</strong></td>
+                                <td>संसारलाई दुई विपरीत कित्तामा बाँडेर हेर्छ <span class="ref">[८]</span>।</td>
+                                <td>विपरीत तत्वबीच पनि सम्बन्ध, सातत्य र सहअस्तित्व स्विकार्छ <span class="ref">[८]</span>।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>सोचाईको ढाँचा</strong></td>
+                                <td>'यो वा त्यो' (Either-Or) को चरम सोच <span class="ref">[८]</span>।</td>
+                                <td>'यो र त्यो दुवै' (Both-And) को लचिलो सोच <span class="ref">[८]</span>।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>उदाहरण</strong></td>
+                                <td>चेतना र पदार्थलाई शत्रुवत मान्नु; मानिसलाई असल/खराब गरी वर्गीकरण <span class="ref">[८]</span>।</td>
+                                <td>चेतना र पदार्थ दुवैको सातत्यबाट सृष्टि मान्नु (साङ्ख्य दर्शन) <span class="ref">[८]</span>।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>व्यावहारिक प्रभाव</strong></td>
+                                <td>वैचारिक सङ्कुचितता, कट्टरता र द्वन्द्व निम्त्याउँछ <span class="ref">[८]</span>।</td>
+                                <td>सामाजिक सद्भाव, सहअस्तित्व र शान्ति प्रवर्द्धन गर्छ <span class="ref">[८]</span>।</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">(ङ)</span> विभिन्न दार्शनिकहरूको योगदानको सूची तयार पार्नुहोस्।</div>
+            <div class="a">
+                <div class="table-wrap">
+                    <div class="table-caption">तालिका: प्रमुख दार्शनिकहरू र उनीहरूको योगदान <span class="ref">[८]</span></div>
+                    <table>
+                        <thead>
+                            <tr><th>क्र.सं.</th><th>दार्शनिकको नाम</th><th>दर्शन/चिन्तन परम्परा</th><th>प्रमुख योगदान <span class="ref">[८]</span></th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>१</td><td><strong>महर्षि कपिल</strong></td><td>साङ्ख्य दर्शन</td><td>चेतना (पुरुष) र पदार्थ (प्रकृति) को संयोजनलाई सृष्टिको कारण मान्ने साङ्ख्य दर्शनको सूत्रपात <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>२</td><td><strong>महर्षि पतञ्जलि</strong></td><td>योग दर्शन</td><td>अष्टाङ्ग योग र प्राणायामको प्रतिपादन <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>३</td><td><strong>महर्षि गौतम</strong></td><td>न्याय दर्शन</td><td>तर्क, प्रमाण, वादविवादको न्याय सूत्रको विकास <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>४</td><td><strong>महर्षि कणाद</strong></td><td>वैशेषिक दर्शन</td><td>'परमाणु' (अणु) को वैज्ञानिक अवधारणा <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>५</td><td><strong>गौतम बुद्ध</strong></td><td>बौद्ध दर्शन</td><td>चार आर्यसत्य, अष्टाङ्गिक मार्ग र मध्यम मार्गको उपदेश <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>६</td><td><strong>महावीर</strong></td><td>जैन दर्शन</td><td>अहिंसा, अनेकान्तवाद र अपरिग्रहको सिद्धान्त <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>७</td><td><strong>चार्वाक</strong></td><td>चार्वाक दर्शन (लोकायत)</td><td>पूर्ण भौतिकवादी विचार र इहलौकिक सुखको वकालत <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>८</td><td><strong>महागुरु फाल्गुनन्द</strong></td><td>किरात (मुन्धुम) दर्शन</td><td>सत्य धर्म मुचुल्का, शाकाहारी जीवन र सामाजिक कुप्रथा सुधार <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>९</td><td><strong>तोन्पा शेनराव मिवा</strong></td><td>बोन दर्शन</td><td>हिमाली क्षेत्रको प्राचीन प्रकृतिपूजक बोन दर्शनको सुरुवात <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>१०</td><td><strong>सक्रेटस, प्लेटो, एरिस्टोटल</strong></td><td>ग्रीक (पश्चिमा) दर्शन</td><td>तर्कशास्त्र, आदर्श राज्यको कल्पना, नैतिकताको जग <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>११</td><td><strong>इमानुएल कान्ट</strong></td><td>आधुनिक पश्चिमा दर्शन</td><td>मानव मस्तिष्कले ज्ञानको प्राप्ति र बौद्धिक तर्कमार्फत सत्यको साक्षात्कार <span class="ref">[८]</span>।</td></tr>
+                            <tr><td>१२</td><td><strong>कार्ल मार्क्स</strong></td><td>माक्र्सवादी दर्शन</td><td>द्वन्द्वात्मक भौतिकवाद, वर्ग सङ्घर्ष र सर्वहारा वर्गको मुक्तिका लागि क्रान्तिकारी दर्शन <span class="ref">[८]</span>।</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">Exam-oriented</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> "लोकायत दर्शन" भनेको कुन दर्शन हो र यसका संस्थापक को हुन्?</div>
+            <div class="a"><strong>उत्तर:</strong> लोकायत दर्शन भनेको <strong>चार्वाक दर्शन</strong> हो र यसका संस्थापक <strong>चार्वाक</strong> हुन् <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">२.</span> दर्शनको इतिहासमा 'षड्दर्शन' भन्नाले कुन कुन दर्शनलाई बुझाउँछ?</div>
+            <div class="a"><strong>उत्तर:</strong> षड्दर्शन भन्नाले पूर्वीय वैदिक परम्पराका ६ वटा दर्शनहरू: <strong>साङ्ख्य, योग, न्याय, वैशेषिक, मीमांसा र वेदान्त</strong>लाई बुझाउँछ <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">३.</span> समतामूलक विश्व दृष्टिकोण प्रवर्द्धन गर्ने सबैभन्दा उपयुक्त माध्यम के हुन सक्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> सामाजिकीकरण, शिक्षा, मानवअधिकारको चेतना र समतामूलक व्यवहार नै समतामूलक विश्व दृष्टिकोण प्रवर्द्धन गर्ने सबैभन्दा उपयुक्त माध्यम हो <span class="ref">[८]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> "विश्वदृष्टिकोण जन्मजात हुँदैन, यो त आर्जित प्रक्रिया हो।" यस भनाइलाई पुष्टि गर्नुहोस्। <span class="ref">[८]</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> यो भनाइ पूर्ण रूपमा सत्य हो। कुनै पनि शिशु जन्मिँदा संसारका बारेमा कुनै पूर्व-निर्णय, आस्था वा विचार बोकेर जन्मिँदैन। विश्वदृष्टिकोण क्रमिक रूपमा आर्जन गरिने सामाजिक र सांस्कृतिक प्रक्रिया हो <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>सामाजिकीकरण (Socialization):</strong> परिवार, छरछिमेक र विद्यालयको संगतबाट समाजका मूल्य, मान्यता र व्यवहारहरू सिक्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>सांस्कृतिक परिवेश (Cultural Environment):</strong> आफ्नो धर्म, परम्परा, चाडपर्वबाट संसारलाई हेर्ने आँखा प्राप्त गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>शिक्षा र सञ्चार (Education and Media):</strong> औपचारिक शिक्षा, पुस्तकहरूको अध्ययन र सञ्चार प्रविधिले सोच्ने दायरा फराकिलो बनाउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>जीवनभोगाइ (Life Experiences):</strong> संघर्ष, सफलता, असफलता र चुनौतीहरूले दृष्टिकोणलाई परिवर्तन गर्दै लैजान्छन् <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color2" style="border-left-color:#1a3a5c;">
+            <div class="q"><span class="qnum">प्रश्न:</span> समतामूलक विश्व दृष्टिकोणको अवधारणालाई स्पष्ट पार्दै यसले सभ्य र समावेशी समाज निर्माणमा कसरी मद्दत गर्दछ? विस्तृत रूपमा विवेचना गर्नुहोस्। <span class="ref">[८]</span></div>
+            <div class="a">
+
+                <p><strong>परिचय (Introduction)</strong></p>
+                <p>समतामूलक विश्व दृष्टिकोण (Equitable Worldview) भन्नाले समाजमा रहेका कुनै पनि व्यक्ति, जाति, लिङ्ग, भाषा, वर्ग वा समुदायलाई उनीहरूको शारीरिक बनावट, लैङ्गिक पहिचान, सामाजिक अवस्था वा धर्मका आधारमा भेदभाव नगरी सबैलाई समान मानवीय गरिमा र सम्मानका साथ हेर्ने फराकिलो मानवीय सोच हो <span class="ref">[८]</span>। यसले केवल औपचारिकतामा सिमित 'समानता' (Equality) भन्दा माथि उठेर पिछडिएका र भिन्न क्षमता भएका वर्गहरूको वास्तविक अवस्था र आवश्यकता अनुसार न्यायोचित व्यवहार वा 'समता' (Equity) को प्रत्याभूति गराउन जोड दिन्छ <span class="ref">[८]</span>।</p>
+
+                <p><strong>मुख्य विश्लेषण र तर्कहरू (Core Analysis & Arguments)</strong></p>
+                <p>सभ्य र समावेशी समाज निर्माणमा समतामूलक विश्व दृष्टिकोणले निम्नलिखित पक्षहरू मार्फत निर्णायक सहयोग पुर्‍याउँछ <span class="ref">[८]</span>:</p>
+                <ul>
+                    <li><strong>सामाजिक विभेदको अन्त्य:</strong> जातपात, लैङ्गिक विभेद, वर्गीय खाडल र रङ्गभेद जस्ता पुरातन र अमानवीय चिन्तनलाई मस्तिष्कबाटै उखेल्न मद्दत गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>सकारात्मक विभेद र आरक्षणको औचित्य बोध:</strong> सीमान्तकृत, दलित, महिला वा अपाङ्गता भएका व्यक्तिहरूलाई विशेष अवसर र स्रोत उपलब्ध गराउँदा मात्र उनीहरू सक्षम वर्ग सरह प्रतिस्पर्धामा आउन सक्छन् <span class="ref">[८]</span>।</li>
+                    <li><strong>सीमान्तकृत वर्गको आत्मसम्मानमा वृद्धि:</strong> जब राज्यले समतामूलक नीति अंगीकार गर्छ, तब उत्पीडनमा परेका वर्गहरूले आफ्नो आत्मसम्मान र पहिचान सुरक्षित भएको महसुस गर्छन् <span class="ref">[८]</span>।</li>
+                    <li><strong>सहअस्तित्व र विविधताको सम्मान:</strong> "म र मेरो वर्ग मात्र सर्वश्रेष्ठ हो" भन्ने अहङ्कारलाई तोडेर बहुभाषिक, बहुधार्मिक र बहुसांस्कृतिक समाजको सहअस्तित्व स्विकार्न सिकाउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>द्वन्द्व व्यवस्थापन र दिगो शान्ति:</strong> धनी र गरिब वर्गबीचको खाडल कम हुँदा स्रोत र साधनमा सबैको न्यायोचित पहुँच स्थापित हुन्छ, जसले दिगो शान्ति स्थापना गर्दछ <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><strong>व्यावहारिक/वास्तविक उदाहरण (Practical/Real-life Example)</strong></p>
+                <p>समतामूलक दृष्टिकोणको सबैभन्दा सुन्दर व्यावहारिक उदाहरण नेपालको संविधान र सार्वजनिक परीक्षाहरूमा देख्न सकिन्छ <span class="ref">[८]</span>। लोक सेवा आयोगको परीक्षामा दृष्टिविहीन व्यक्तिका लागि सहयोगी लेखक (Writer) र थप समय प्रदान गरिन्छ <span class="ref">[८]</span>। महिला, आदिवासी, र अपाङ्गता भएकाहरूका लागि निश्चित कोटा सुरक्षित गरिएको हुन्छ <span class="ref">[८]</span>। यदि सबैलाई विनाकुनै विशेष सहयोग एउटै कोठामा राखेर परीक्षा लिइएको भए त्यो 'समानता' तो हुन्थ्यो तर दृष्टिविहीनका लागि घोर अन्याय हुन्थ्यो <span class="ref">[८]</span>। सहयोगी लेखक र थप समय दिनु 'समता' हो, जसले सबैलाई समान अवसरको सुनिश्चितता प्रदान गर्छ <span class="ref">[८]</span>।</p>
+
+                <p><strong>निष्कर्ष (Conclusion)</strong></p>
+                <p>समतामूलक विश्व दृष्टिकोण केवल आदर्श वा भाषणको विषय मात्र नभई व्यवहारमा उतारिनुपर्ने जीवन पद्धति हो <span class="ref">[८]</span>। जबसम्म हामीले समाजका पछाडि पारिएका वर्गहरूको आँसु र आवश्यकतालाई उनीहरूकै स्थानमा उभिएर (समानुभूतिपूर्वक) बुझ्न सक्दैनौँ, तबसम्म सभ्य समाजको निर्माण सम्भव छैन <span class="ref">[८]</span>। अतः, समतामूलक चिन्तनलाई हरेक व्यक्तिको संस्कार र व्यवहारको हिस्सा बनाई विविधतायुक्त र सुन्दर समावेशी विश्व निर्माण गर्नु आजको पुस्ताको प्रमुख दायित्व हो <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#b45309; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> दर्शनले जीवनको सही मार्ग देखाउँछ। समता, सद्भाव र समालोचनात्मक चिन्तन नै सभ्य समाजको आधार हो। "वसुधैव कुटुम्बकम्" र "सत्यमेव जयते" को मर्मलाई आत्मसात् गर्नुहोस्।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ४, पाठ ३</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

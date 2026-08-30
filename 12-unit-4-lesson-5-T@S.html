@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ४, पाठ ५ – समुदायमा परिवर्तन र सामाजिक रूपान्तरण (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f5efe8;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fdfaf5;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.12);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #b8a99a;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #c4450c;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1f7a4a;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #a0522d;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1a5a3a;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #2a7a5a;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS - DEEP GREEN ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #fff;
+            background: #1a5a3a;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #1a5a3a;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #f5d742;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; }
+        .section-head .mark-badge.green { background: #7dcea0; }
+        .section-head .mark-badge.purple { background: #b39ddb; }
+        .section-head .mark-badge.blue { background: #81d4fa; }
+        .section-head .mark-badge.pink { background: #f48fb1; }
+
+        .sub-head {
+            font-size: 1.35rem;
+            font-weight: 800;
+            color: #1a3a5c;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #c4450c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #c4450c;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #c4450c;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.blue-highlight {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-highlight {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-highlight {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-highlight {
+            border-left-color: #6b3fa0;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-highlight {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-highlight {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-highlight {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a5a3a;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+        }
+
+        .qa-block.color1 { border-left-color: #c4450c; background: #fcf9f5; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #c4450c;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1a5a3a;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- ARTICLE / PROJECT BOX ----- */
+        .article-box {
+            background: #fcf8f0;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .article-box .article-title {
+            font-weight: 900;
+            color: #1a5a3a;
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .article-box p {
+            font-weight: 500;
+            font-size: 1.19rem;
+            margin-bottom: 6px;
+            line-height: 2;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #c4450c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(196, 69, 12, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #a0360a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(196, 69, 12, 0.55);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #c9bdb0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #c9bdb0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1a5a3a;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .article-box p {
+                font-size: 1.02rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-people-arrows"></i>
+                    एकाइ ४, पाठ ५: समुदायमा आएका परिवर्तन र सामाजिक रूपान्तरण
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ४, पाठ ५
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक (रजिस्टर) शब्दहरू
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> सूचना समाज (Information Society)</strong>
+                <p>सूचना र ज्ञानको उत्पादन, प्रशोधन र वितरणलाई आर्थिक, सामाजिक तथा सांस्कृतिक विकासको मुख्य आधार मान्ने आधुनिक समाज।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> सामाजिक रूपान्तरण</strong>
+                <p>समाजको मौलिक संरचना, मूल्यमान्यता, सामाजिक संस्थाहरू, र मानिसहरूको स्थापित व्यवहार ढाँचामा समयक्रमसँगै आउने व्यापक, गहिरो र दीर्घकालीन सकारात्मक परिवर्तन।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> बसाइँसराइ (Migration)</strong>
+                <p>रोजगारी, शिक्षा, सुरक्षा, स्वास्थ्य वा अन्य अनुकूल अवसरहरूको खोजीमा मानिसहरू आफ्नो स्थायी वा अस्थायी बसोबासको स्थान परिवर्तन गरी एक भौगोलिक क्षेत्रबाट अर्को क्षेत्रमा सर्ने प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> उत्तर-औद्योगिक समाज (Post-Industrial Society)</strong>
+                <p>त्यस्तो विकसित समाज जहाँ वस्तु उत्पादन गर्ने उद्योगहरूको तुलनामा ज्ञान, सूचना, सेवा, र प्रविधिको क्षेत्रले अर्थतन्त्र र सामाजिक जीवनको नेतृत्व गर्दछ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> टेलीमेडिसिन (Telemedicine)</strong>
+                <p>आधुनिक सञ्चार प्रविधिको माध्यमबाट दुर्गम स्थानमा रहेका बिरामीहरूलाई विशेषज्ञ चिकित्सकहरूले टाढैबाट स्वास्थ्य परामर्श, निदान र उपचार सेवा प्रदान गर्ने डिजिटल प्रणाली।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> उपभोक्तावाद (Consumerism)</strong>
+                <p>बजारमा उपलब्ध नयाँ-नयाँ वस्तु र सेवाहरूको अत्यधिक उपभोगलाई नै जीवनको मुख्य सुख र प्रतिष्ठाको आधार मान्ने आधुनिक विचार वा प्रवृत्ति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> परसंस्कृतिकरण (Acculturation)</strong>
+                <p>फरक सांस्कृतिक पृष्ठभूमि भएका समूहहरू निरन्तर सम्पर्कमा रहँदा एक-अर्काको संस्कृति, आचारविचार र बानीव्यहोरा ग्रहण गरी आफ्नो सांस्कृतिक जीवनशैलीमा परिवर्तन ल्याउने प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> आभासी समुदाय (Virtual Community)</strong>
+                <p>इन्टरनेट र सामाजिक सञ्जालको माध्यमबाट संसारका विभिन्न स्थानमा रहेका मानिसहरू साझा चासो, भावना र विचारका आधारमा डिजिटल माध्यममा जोडिएर बन्ने गैर-भौगोलिक समुदाय।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "समुदायमा आएका परिवर्तन र सामाजिक रूपान्तरण" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. शिक्षा र सूचना -->
+        <div class="sub-head"><i class="fas fa-graduation-cap"></i> १. शिक्षा र सूचनाको पहुँचमा वृद्धि तथा सूचना समाज</div>
+
+        <div class="content-box blue-highlight">
+            <ul>
+                <li><strong>ऐतिहासिक रूपान्तरण:</strong> विगतका दशकहरूमा विश्वभर साक्षरता र शिक्षाको अवसरमा ठूलो वृद्धि भएको छ। यसले मानिसहरूको चेतना र दृष्टिकोणमा सकारात्मक परिवर्तन ल्याएको छ।</li>
+                <li><strong>सूचना समाजको उदय:</strong> समकालीन विश्वमा सूचना केवल ज्ञानको माध्यम मात्र नभई बजारमा खरिद-बिक्री हुने बहुमूल्य वस्तुसमेत बनेको छ।</li>
+                <li><strong>उत्तर-औद्योगिक समाजको अवधारणा:</strong> ड्यानियल बेलले सन् १९७३ मा 'उत्तर-औद्योगिक समाज' को चर्चा गर्दै सेवा र प्रविधिको प्रभुत्व हुने समाजको परिकल्पना गरे। योनेजी मासुदाले यसलाई 'सूचना समाज' (Information Society) को रूपमा परिभाषित गरे।</li>
+                <li><strong>परिवर्तित प्रभाव:</strong> शिक्षा र सूचनाको विकासले गर्दा समाजमा रहेका पुराना अन्धविश्वास, लैङ्गिक विभेद र दमनकारी सामाजिक प्रथाहरू क्रमशः हट्दै गइरहेका छन्।</li>
+            </ul>
+        </div>
+
+        <!-- २. मानव अन्तरक्रिया -->
+        <div class="sub-head"><i class="fas fa-people-arrows"></i> २. मानव अन्तरक्रिया, अन्तरनिर्भरता र बसाइँसराइको प्रभाव</div>
+
+        <div class="content-box green-highlight">
+            <ul>
+                <li><strong>भौगोलिक दूरीको अन्त्य:</strong> यातायात र सञ्चार प्रविधिको अभूतपूर्व विकासले विश्वलाई एउटा 'ग्लोबल भिलेज' मा परिणत गरिदिएको छ।</li>
+                <li><strong>बसाइँसराइको बहुआयामिक प्रभाव:</strong>
+                    <ul>
+                        <li><strong>सांस्कृतिक अन्तर्घुलन:</strong> बसाइँसराइका कारण एउटै समुदायमा विभिन्न जातजाति, भाषा र धर्मका मानिसहरू सँगै बस्न थालेका छन्।</li>
+                        <li><strong>द्वन्द्व र चुनौती:</strong> तीव्र बसाइँसराइले गर्दा स्रोत र साधनमाथि चाप बढ्नुका साथै कहिलेकाहीँ रैथाने र आप्रवासी समुदायबीच सांस्कृतिक वा आर्थिक द्वन्द्व सिर्जना हुने सम्भावना रहन्छ।</li>
+                        <li><strong>उद्गम र गन्तव्य स्थानमा प्रभाव:</strong> बसाइँसराइले मानिस प्रस्थान गरेको स्थान (Origin) मा जनसाङ्ख्यिक र श्रमशक्ति घट्ने तथा पुगेको स्थान (Destination) मा बजारीकरण र सामाजिक विविधता बढ्ने गर्दछ।</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ३. प्रविधिको क्रान्ति -->
+        <div class="sub-head"><i class="fas fa-microchip"></i> ३. प्रविधिको क्रान्ति र यसका प्रभावहरू</div>
+
+        <div class="content-box purple-highlight">
+            <ul>
+                <li><strong>दैनिक जीवनमा प्रभाव:</strong> प्रविधि मानव जीवनको अभिन्न अङ्ग बनेको छ। यसले हाम्रो सोच्ने, सिक्ने र काम गर्ने तरिका पूर्ण रूपमा बदलिदिएको छ।</li>
+                <li><strong>सकारात्मक पाटाहरू:</strong>
+                    <ul>
+                        <li><strong>शिक्षामा पहुँच:</strong> भर्चुअल क्लासरूम, अनलाइन सिकाइ र खुला विश्वविद्यालयहरूले गर्दा जोसुकैले जुनसुकै स्थानबाट पनि उच्च शिक्षा हासिल गर्न सक्ने वातावरण बनेको छ।</li>
+                        <li><strong>स्वास्थ्य सेवा:</strong> 'टेलीमेडिसिन' को माध्यमबाट विकट गाउँका बिरामीहरूले राजधानी वा विदेशका विशेषज्ञ डाक्टरबाट सहजै परामर्श पाउन थालेका छन्।</li>
+                    </ul>
+                </li>
+                <li><strong>नकारात्मक चुनौतीहरू:</strong> प्रविधिको अत्यधिक विकासले गर्दा श्रमको आवश्यकता घट्दै जाँदा परम्परागत रोजगारी गुम्ने र ठूलो संख्यामा मानिसहरू बेरोजगार बन्ने जोखिम बढेको छ।</li>
+            </ul>
+        </div>
+
+        <!-- ४. मिडिया र वैचारिक विस्तार -->
+        <div class="sub-head"><i class="fas fa-broadcast-tower"></i> ४. मिडिया र वैचारिक विस्तारको भूमिका</div>
+
+        <div class="content-box pink-highlight">
+            <ul>
+                <li><strong>सञ्चार माध्यमको शक्ति:</strong> रेडियो, टेलिभिजन, छापा माध्यम र मुख्य रूपमा सामाजिक सञ्जालले गर्दा संसारको एक कुनामा उठेको विचार वा आन्दोलन क्षणभरमै विश्वभर फैलिन्छ।</li>
+                <li><strong>सामाजिक रूपान्तरणमा मिडियाको भूमिका:</strong> मानव अधिकार, लैङ्गिक समानता, जलवायु परिवर्तन र लोकतन्त्रका पक्षमा जनमत सिर्जना गर्न मिडियाले अभूतपूर्व योगदान पुर्‍याएको छ।</li>
+                <li><strong>नकारात्मक प्रभाव:</strong> मिडिया र सामाजिक सञ्जालको दुरुपयोग गरी अफवाह फैलाउने, घृणास्पद अभिव्यक्ति (Hate Speech) प्रवाह गर्ने र अश्लील सामग्रीको प्रचार-प्रसार गर्ने प्रवृत्तिले सामाजिक सद्भाव खलबलाउने खतरा बढेको छ।</li>
+            </ul>
+        </div>
+
+        <!-- ५. खुला बजार -->
+        <div class="sub-head"><i class="fas fa-store"></i> ५. खुला बजार अर्थतन्त्र र बहुराष्ट्रिय कम्पनीहरूको प्रभाव</div>
+
+        <div class="content-box orange-highlight">
+            <ul>
+                <li><strong>वैश्विक अर्थतन्त्र:</strong> वर्तमान विश्वका अधिकांश मुलुकहरूले खुला बजार अर्थतन्त्रको नीति अवलम्बन गरेका छन्।</li>
+                <li><strong>बहुराष्ट्रिय कम्पनी (MNCs):</strong> संसारका ठूला कम्पनीहरूले विभिन्न देशमा पुगेर लगानी, उत्पादन र बजारीकरण गरिरहेका छन्।</li>
+                <li><strong>चुनौतीहरू:</strong> उपभोक्तावादी (Consumerist) संस्कृतिको अत्यधिक प्रवर्द्धन भएको छ। स्थानीय साना उद्योगहरू ठूला बहुराष्ट्रिय कम्पनीसँग प्रतिस्पर्धा गर्न नसकी बन्द हुने अवस्था सिर्जना भएको छ।</li>
+            </ul>
+        </div>
+
+        <!-- ६. सामाजिकीकरण -->
+        <div class="sub-head"><i class="fas fa-users"></i> ६. सामाजिकीकरण र संस्कृतिकरणका परिवर्तित प्रवृत्तिहरू</div>
+
+        <div class="content-box teal-highlight">
+            <ul>
+                <li><strong>परम्परागत संस्थाको ह्रास:</strong> पहिलेका दिनहरूमा बालबालिकाको सामाजिकीकरणमा परिवार, धार्मिक स्थल, गुठी, र छरछिमेकको भूमिका निर्णायक हुन्थ्यो।</li>
+                <li><strong>आधुनिक सामाजिकीकरण:</strong> अचेल बालबालिका तथा युवाहरू आफ्नो धेरैजसो समय इन्टरनेट, युट्युब र अनलाइन गेमिङमा बिताउने हुनाले उनीहरूको सामाजिकीकरणमा 'आभासी माध्यम' र 'मिडिया' हाबी भएको छ।</li>
+                <li><strong>सांस्कृतिक परिवर्तन:</strong> जन्मदिन मनाउने शैली, नयाँ वर्ष मनाउने तरिका, खानपान र पहिरनमा पश्चिमा संस्कृतिको अन्धानुकरण र देखासिकी (परसंस्कृतिकरण) तीव्र रूपमा बढेको छ।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-school"></i> क्रियाकलाप १: स्थानीय पालिकामा शिक्षाको पहुँचको तुलना</div>
+
+        <div class="content-box blue-highlight">
+            <p><strong>अध्ययन गरिएको पालिका:</strong> निलकण्ठ नगरपालिका, धादिङ (एक नमुना स्थानीय तह)।</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: ५० वर्षअघि र वर्तमानमा शिक्षाको पहुँच</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>तुलनाको क्षेत्र</th>
+                            <th>५० वर्ष पहिले</th>
+                            <th>वर्तमान अवस्था</th>
+                            <th>परिवर्तनको विश्लेषण</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>सामुदायिक विद्यालय</strong></td>
+                            <td>करिब ४ वटा प्राथमिक विद्यालय</td>
+                            <td>४८ वटा</td>
+                            <td>दुर्गम गाउँ-गाउँमा विद्यालय पुगेकाले विपन्न र दुर्गमका बालबालिकाको शिक्षामा पहुँच स्थापित भएको छ।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>संस्थागत (निजी) विद्यालय</strong></td>
+                            <td>शून्य (०)</td>
+                            <td>१८ वटा</td>
+                            <td>गुणस्तरीय र आधुनिक अंग्रेजी माध्यमको शिक्षा खोज्नेहरूका लागि स्थानीय स्तरमै विकल्प उपलब्ध भएको छ।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>माध्यमिक र उच्च शिक्षा</strong></td>
+                            <td>माध्यमिक विद्यालय थिएन</td>
+                            <td>१२ वटा माध्यमिक विद्यालय र ३ वटा क्याम्पस</td>
+                            <td>स्थानीय स्तरमै स्नातक र स्नातकोत्तर तहसम्मको अध्ययन सम्भव भएको छ।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>लैङ्गिक तथा समावेशी सहभागिता</strong></td>
+                            <td>छात्रा र दलितको उपस्थिति ५% भन्दा कम</td>
+                            <td>छात्र र छात्राको सङ्ख्या बराबर, समावेशी छात्रवृत्ति</td>
+                            <td>शिक्षामा सामाजिक समता र समावेशीकरणको राम्रो विकास भएको छ।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><strong>निष्कर्ष:</strong> ५० वर्षको अवधिमा पालिकामा शैक्षिक संस्थाहरूको सङ्ख्यामा गुणात्मक र परिमाणात्मक क्रान्ति आएको छ। यसले गर्दा चेतनाको स्तर बढेको छ, बालविवाह जस्ता कुप्रथाहरू घटेका छन्, र स्थानीय स्तरमै सचेत जनशक्ति तयार भई सामाजिक रूपान्तरणको ठोस जग निर्माण भएको छ।</p>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-comments"></i> क्रियाकलाप २: विद्यालय वरिपरिको सामाजिक विविधता र समन्वय</div>
+
+        <div class="content-box gold-highlight">
+            <p><strong>१. जातीय र भाषिक विविधता:</strong> नेवार, ब्राह्मण, क्षेत्री, तामाङ, गुरुङ र दलित समुदायको मिश्रित बसोबास। नेपाली, नेवारी, तामाङ र गुरुङ भाषाहरू बोलिन्छन्।</p>
+            <p><strong>२. धार्मिक विविधता:</strong> हिन्दू, बौद्ध र इसाई धर्म मान्नेहरू सद्भावका साथ बसोबास गर्छन्।</p>
+            <p><strong>३. धार्मिक-सांस्कृतिक समन्वय:</strong></p>
+            <ul>
+                <li><strong>चाडपर्वमा साझा सहभागिता:</strong> दसैँ, तिहार, ल्होसार, योमरी पुन्हीमा सबै समुदाय सहभागी हुन्छन्।</li>
+                <li><strong>दुःख-सुखमा आपसी सहयोग:</strong> जात, धर्म नभनी सबैले सहयोग गर्छन्।</li>
+            </ul>
+            <p><strong>निष्कर्ष:</strong> विविधता हाम्रो सम्पत्ति हो। यसले नेपाली समाजको अनुपम गहना र सामाजिक सद्भावको उत्कृष्ट सन्देश दिएको छ।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्रमाणित समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> सूचना समाज भन्नाले के बुझिन्छ?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> सूचनाको उत्पादन, प्रशोधन, भण्डारण र सञ्चारलाई नै आर्थिक तथा सामाजिक जीवनको मुख्य चालक शक्ति मान्ने आधुनिक समाजलाई <strong>सूचना समाज (Information Society)</strong> भनिन्छ। यस्तो समाजमा शारीरिक श्रम र औद्योगिकीकरण भन्दा बौद्धिक श्रम, सूचना प्रविधि (IT), इन्टरनेट, र ज्ञानमा आधारित अर्थतन्त्र (Knowledge-based Economy) को भूमिका निर्णायक हुन्छ।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> बसाइँसराइले सामाजिक विविधतामा पार्ने प्रभावहरू विश्लेषण गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> बसाइँसराइले समाजको संरचनामा व्यापक परिवर्तन ल्याउँछ।</p>
+                <p><strong>सकारात्मक प्रभावहरू:</strong></p>
+                <ol>
+                    <li><strong>बहुसांस्कृतिक समाजको निर्माण:</strong> फरक-फरक जातजाति, भाषा, धर्म र संस्कृति भएका मानिसहरूलाई एउटै भूगोलमा ल्याएर राख्छ।</li>
+                    <li><strong>सांस्कृतिक अन्तर्घुलन:</strong> एक-अर्काको चाडपर्व, खानपान, पहिरन र भाषा सिक्ने अवसर मिल्छ।</li>
+                    <li><strong>सिर्जनात्मकता र नवप्रवर्तन:</strong> फरक पृष्ठभूमि र अनुभव भएका मानिसहरूको जमघटले नयाँ विचार, प्रविधि र व्यवसायिक शैलीहरूको विकासमा मद्दत पुर्‍याउँछ।</li>
+                </ol>
+                <p><strong>नकारात्मक प्रभावहरू:</strong></p>
+                <ol>
+                    <li><strong>मौलिक पहिचान लोप हुने खतरा:</strong> आधुनिक बन्ने होडमा अल्पसंख्यक वा आदिवासी समुदायको रैथाने भाषा र मौलिक संस्कृति लोप हुने खतरा रहन्छ।</li>
+                    <li><strong>स्रोत र साधनमाथि चाप:</strong> गन्तव्य स्थानमा अचानक जनसङ्ख्या बढ्दा आवास, शिक्षा, खानेपानी, र स्वास्थ्य जस्ता पूर्वाधारहरूमा अत्यधिक चाप परी सामाजिक असन्तुलन आउन सक्छ।</li>
+                    <li><strong>सामाजिक द्वन्द्वको जोखिम:</strong> आप्रवासी र रैथाने समुदायबीच सांस्कृतिक मूल्यमान्यता, रोजगारको अवसर र राजनीतिक प्रतिनिधित्वका सवालमा असमझदारी वा सामाजिक द्वन्द्व उत्पन्न हुन सक्छ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> प्रविधिको विकास र सामाजिक सञ्जालको बढ्दो प्रयोगले पारेका सकारात्मक र नकारात्मक असर विश्लेषण गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>सकारात्मक प्रभावहरू:</strong></p>
+                <ol>
+                    <li><strong>सञ्चार र सम्पर्कमा सहजता:</strong> भौगोलिक रूपमा टाढा रहेका आफन्त र साथीभाइसँग क्षणभरमै भिडियो कल वा सन्देशमार्फत जोडिन सकिन्छ।</li>
+                    <li><strong>ज्ञान र शिक्षाको लोकतान्त्रिकरण:</strong> इन्टरनेट र सामाजिक सञ्जाल विभिन्न शैक्षिक सामग्री, अनलाइन कक्षाहरू र सूचनाको विशाल भण्डार हुन्।</li>
+                    <li><strong>व्यापार र डिजिटल बजारीकरण:</strong> साना तथा मझौला व्यवसायीहरूले सामाजिक सञ्जालमार्फत आफ्ना उत्पादनहरूको निःशुल्क विज्ञापन गरी ग्राहकहरूसँग सिधै जोडिन सकेका छन्।</li>
+                    <li><strong>चेतना र नागरिक जागरण:</strong> सामाजिक वा वातावरणीय मुद्दाहरूका पक्षमा क्षणभरमै विश्वव्यापी ऐक्यबद्धता र जनमत सिर्जना गर्न सक्षम बनेको छ।</li>
+                </ol>
+                <p><strong>नकारात्मक असरहरू:</strong></p>
+                <ol>
+                    <li><strong>आभासी लत र मानसिक समस्या:</strong> अत्यधिक प्रयोगले अनिन्द्रा, एक्लोपन, डिप्रेसन र एन्जाइटी जस्ता मानसिक समस्याहरू युवा पुस्तामा देखिएका छन्।</li>
+                    <li><strong>सामाजिक सम्बन्धमा दूरी:</strong> प्रत्यक्ष पारिवारिक र सामाजिक अन्तरक्रियाहरू पातलिँदै गएका छन्।</li>
+                    <li><strong>अफवाह र घृणास्पद अभिव्यक्तिको प्रचार:</strong> नियमनको अभावमा झुटो समाचार (Fake News), चरित्र हत्या गर्ने सामग्री र साम्प्रदायिक सद्भाव बिगार्ने घृणास्पद अभिव्यक्तिहरू तीव्र रूपमा फैलिने गरेका छन्।</li>
+                    <li><strong>साइबर अपराध र गोपनीयताको जोखिम:</strong> व्यक्तिगत सूचना चोरी हुने (Data Hack), अनलाइन ठगी हुने, र सामाजिक सञ्जालमार्फत ब्ल्याकमेलिङ र साइबर बुलिङ (Cyber Bullying) हुने घटनाहरूमा डरलाग्दो वृद्धि भएको छ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> समाजमा आएको परिवर्तनले सामाजिक रूपान्तरणमा मदत पुर्‍याउँछ, कसरी?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> समाज परिवर्तनशील छ। समाजका साना-तिना अवयवहरूमा आउने परिवर्तनहरू सञ्चित हुँदै गएर अन्ततः सिङ्गो सामाजिक व्यवस्था, विचार र मूल्यमान्यतामा आउने महापरिवर्तन नै सामाजिक रूपान्तरण हो।</p>
+                <ol>
+                    <li><strong>चेतना र दृष्टिकोणमा बदलाव:</strong> शिक्षा र सूचनाको पहुँचमा भएको वृद्धिले मानिसहरूमा वैज्ञानिक दृष्टिकोणको विकास गराउँछ। कुप्रथाहरू विरुद्ध आवाज उठ्छ र समतामूलक समाजको रूपान्तरण सम्भव हुन्छ।</li>
+                    <li><strong>आर्थिक ढाँचामा परिवर्तन:</strong> कृषि प्रधान अर्थतन्त्रबाट औद्योगिक र सेवामूलक अर्थतन्त्रमा हुने रूपान्तरणले मानिसहरूको जीवनस्तर उकास्छ।</li>
+                    <li><strong>कानुनी र राजनीतिक सुधार:</strong> सामाजिक बहस र नागरिक आन्दोलनका रूपमा आउने परिवर्तनले राज्यलाई नयाँ कानुन बनाउन बाध्य पार्छ।</li>
+                    <li><strong>सञ्चार र अन्तरसम्बन्ध:</strong> सञ्चार र प्रविधिको विकासले परम्परागत रूपमा सङ्कुचित र एकाङ्की रहेको समाजलाई खुला र विश्वव्यापी दृष्टिकोण भएको समाजमा बदल्छ।</li>
+                </ol>
+                <p>अतः, समाजमा आउने हरेक साना र क्रमिक परिवर्तनहरू नै सामाजिक रूपान्तरणका मुख्य संवाहक हुन्।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== PROJECT WORK ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="project">
+            <i class="fas fa-project-diagram"></i>
+            परियोजना कार्य (Project Work): मनोरञ्जनको शैलीमा पुस्तान्तरण
+            <span class="mark-badge gold">Project</span>
+        </div>
+
+        <div class="article-box">
+            <div class="article-title">मनोरञ्जनको शैलीमा आएको पुस्तान्तरण: एक विश्लेषणात्मक लेख</div>
+
+            <p><strong>पृष्ठभूमि:</strong> मानव जीवनको व्यस्तता र थकानबाट मुक्त भई मानसिक स्फूर्ति प्राप्त गर्न मनोरञ्जन अनिवार्य साधन हो। समयको परिवर्तनसँगै मनोरञ्जनका साधन र शैलीमा पनि ठूलो बदलाव आएको छ।</p>
+
+            <p><strong>विगतको मनोरञ्जन (ज्येष्ठ नागरिकहरूको अनुभव):</strong></p>
+            <ul>
+                <li><strong>सामूहिक जमघट र बातचित:</strong> चौतारी, पाटी वा आँगनमा भेला भएर कुराकानी गर्ने।</li>
+                <li><strong>परम्परागत सङ्गीत र लोकसंस्कृति:</strong> रोधी, दोहोरी, भजनकीर्तन, बालन, खैँजडी नाच।</li>
+                <li><strong>गाउँ खाने कथा र दन्त्यकथा:</strong> हजुरबुबा-हजुरआमासँग लोककथा सुन्ने।</li>
+                <li><strong>शारीरिक खेलकुद:</strong> बाघचाल, डन्डीबियो, कपर्दी, रुमाल लुकाई, चङ्गा उडाउने।</li>
+            </ul>
+
+            <p><strong>वर्तमान पुस्ताको मनोरञ्जन:</strong></p>
+            <ul>
+                <li><strong>डिजिटल र सामाजिक सञ्जाल:</strong> फेसबुक, इन्स्टाग्राम, टिकटक, युट्युब हेर्नु र रिल्स बनाउनु।</li>
+                <li><strong>अनलाइन गेमिङ र स्ट्रिमिङ:</strong> PUBG, Free Fire, Netflix, Prime Video।</li>
+                <li><strong>आभासी कुराकानी:</strong> मेसेन्जर वा ह्वाट्सएप ग्रुप च्याट।</li>
+            </ul>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: विगत र वर्तमान मनोरञ्जनको तुलना</div>
+                <table>
+                    <thead>
+                        <tr><th>तुलनाको क्षेत्र</th><th>५० वर्ष पहिले</th><th>वर्तमान</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>प्रकृति</strong></td>
+                            <td>सामाजिक र सामूहिक (छिमेकी र समुदायसँग प्रत्यक्ष)</td>
+                            <td>एकाङ्की र व्यक्तिगत (कोठाभित्र एक्लै)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>भौतिक सक्रियता</strong></td>
+                            <td>उच्च (खेलकुद, नाचगान, हिँडडुल)</td>
+                            <td>शारीरिक निष्क्रियता (घन्टौँ ग्याजेट चलाउने)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>लागत</strong></td>
+                            <td>निःशुल्क र रैथाने</td>
+                            <td>खर्चिलो (इन्टरनेट, महँगो मोबाइल, सब्स्क्रिप्सन)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>मानसिक प्रभाव</strong></td>
+                            <td>प्रकृतिसँग सामीप्य, शान्ति, बलियो विश्वास</td>
+                            <td>आभासी संसार, तनाव, लाइक-कमेन्टको दौड</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><strong>निष्कर्ष:</strong> प्रविधिको विकासले मनोरञ्जनलाई पहुँचयोग्य र विविध बनाएको छ तर सामाजिक र शारीरिक रूपमा निष्क्रिय बनाउँदै लगेको छ। हामीले ज्येष्ठ नागरिकहरूको पुस्ताबाट 'प्रत्यक्ष भेटघाट, सामाजिक मेलमिलाप र शारीरिक सक्रियता' युक्त मनोरञ्जनका असल पक्षहरूलाई सिक्दै, आधुनिक प्रविधिको सन्तुलित र सीमित प्रयोग गरी स्वस्थ मनोरञ्जनको बानी बसाल्न आवश्यक देखिन्छ।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">Exam-oriented</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">१.</span> 'उत्तर-औद्योगिक समाज' (Post-Industrial Society) को अवधारणा कुन समाजशास्त्रीले ल्याएका हुन् र कहिले?</div>
+            <div class="a"><strong>उत्तर:</strong> उत्तर-औद्योगिक समाजको अवधारणा समाजशास्त्री <strong>ड्यानियल बेल (Daniel Bell) ले सन् १९७३ मा</strong> ल्याएका हुन्।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">२.</span> 'सूचना समाज' (Information Society) शब्दावलीको पहिलो प्रयोग कसले गरेका थिए?</div>
+            <div class="a"><strong>उत्तर:</strong> 'सूचना समाज' शब्दावलीको पहिलो प्रयोग जापानी लेखक <strong>योनेजी मासुदा (Yoneji Masuda)</strong> ले गरेका थिए।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">३.</span> उपभोक्तावादी संस्कृति (Consumerism) भनेको के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> आवश्यकताको आधारमा भन्दा पनि विज्ञापन र देखासिकीको प्रभावमा परेर बजारका नयाँ-नयाँ विलासी वस्तु र सेवाहरूको अत्यधिक उपभोग गर्ने प्रवृत्ति नै उपभोक्तावादी संस्कृति हो।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> "प्रविधिको विकासले शिक्षा र स्वास्थ्य क्षेत्रमा सामाजिक रूपान्तरण ल्याएको छ।" यस भनाइलाई उदाहरणसहित पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> विज्ञान र प्रविधिको तीव्र विकासले शिक्षा र स्वास्थ्यमा क्रान्तिकारी सामाजिक रूपान्तरण ल्याएको छ:</p>
+                <ol>
+                    <li><strong>शिक्षामा अनलाइन सिकाइ:</strong> 'भर्चुअल क्लासरूम', युट्युब, जुम (Zoom) र खुला विश्वविद्यालयहरू मार्फत विद्यार्थीहरूले आफ्नै घरमा बसेर संसारकै उत्कृष्ट विश्वविद्यालयका कोर्षहरू अध्ययन गर्न पाएका छन्।</li>
+                    <li><strong>टेलीमेडिसिनद्वारा दुर्गममा स्वास्थ्य सेवा:</strong> ग्रामीण क्षेत्रका स्वास्थ्य चौकीहरूबाट चिकित्सकहरूले आधुनिक उपकरण र इन्टरनेटको माध्यमबाट सहरी क्षेत्रका विशेषज्ञ चिकित्सकहरूसँग प्रत्यक्ष समन्वय गरी बिरामीको सफल निदान र उपचार गरिरहेका छन्।</li>
+                    <li><strong>सूचनाको सहज पहुँच र जनचेतना:</strong> स्वास्थ्य सम्बन्धी जानकारी, सरसफाई र महामारीका बारेमा सामाजिक सञ्जाल र डिजिटल मिडिया मार्फत तुरुन्तै चेतना फैलाउन सकिएको छ, जसले मातृ मृत्युदर र बाल मृत्युदर घटाउन ठूलो मद्दत पुगेको छ।</li>
+                </ol>
+                <p>अतः, प्रविधिको विवेकपूर्ण प्रयोगले शिक्षा र स्वास्थ्य क्षेत्रमा अभूतपूर्व पहुँच पुर्‍याई नेपाली समाजलाई ज्ञानमुखी र स्वस्थ समाजका रूपमा रूपान्तरण गरिरहेको छ।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color2" style="border-left-color:#1a5a3a;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "सूचना प्रविधि र सामाजिक सञ्जालको तीव्र विकासले परम्परागत नेपाली समाजको सामाजिकीकरण र सांस्कृतिक मूल्यमान्यतामा कस्ता परिवर्तनहरू ल्याएको छ? यसका सकारात्मक र नकारात्मक पक्षहरू केलाउँदै समीक्षा गर्नुहोस्।"</div>
+            <div class="a">
+                <p><strong>परिचय (Introduction)</strong></p>
+                <p>मानिसलाई समाजको एक सभ्य, जिम्मेवार र सक्रिय सदस्य बनाउने निरन्तर सञ्चालन भइरहने जीवनपर्यन्त प्रक्रिया नै सामाजिकीकरण (Socialization) हो। परम्परागत रूपमा नेपाली समाजमा सामाजिकीकरणको मुख्य माध्यम परिवार, छरछिमेक, विद्यालय र धार्मिक-सांस्कृतिक गुठीहरू हुन्थे। तर, एक्काइसौँ शताब्दीमा सूचना प्रविधि, इन्टरनेट र सामाजिक सञ्जाल (फेसबुक, टिकटक, युट्युब आदि) को अभूतपूर्व विस्तारले नेपाली समाजको सामाजिकीकरणको ढाँचा र सांस्कृतिक मूल्यमान्यतामा तीव्र र गहिरो परिवर्तन ल्याएको छ।</p>
+
+                <p><strong>मुख्य विश्लेषण र तर्कहरू</strong></p>
+                <p><strong>सकारात्मक परिवर्तनहरू:</strong></p>
+                <ul>
+                    <li><strong>विश्वव्यापी दृष्टिकोणको विकास (Global Outlook):</strong> सामाजिक सञ्जालको माध्यमबाट नेपाली युवाहरूले संसारभरिका लोकतान्त्रिक मूल्यमान्यता, मानव अधिकार, लैंगिक समानता र सिर्जनात्मक विचारहरू सजिलै ग्रहण गरिरहेका छन्।</li>
+                    <li><strong>नयाँ सीप र नवप्रवर्तन:</strong> युवाहरूले युट्युब र अनलाइन प्लाटफर्महरूबाट कोडिङ, संगीत, चित्रकला, र व्यवसायिक सीपहरू सिकेर आफ्नो व्यक्तित्व विकास गरिरहेका छन्।</li>
+                    <li><strong>सांस्कृतिक प्रवर्द्धन र सञ्चार:</strong> नेपालका मौलिक कला, लोक संस्कृति, र जात्राहरूलाई भिडियोको रूपमा सामाजिक सञ्जालमा राखेर विश्वव्यापी रूपमा प्रचार-प्रसार गर्न सहज भएको छ।</li>
+                </ul>
+
+                <p><strong>नकारात्मक परिवर्तनहरू:</strong></p>
+                <ul>
+                    <li><strong>परम्परागत संस्थाहरूको भूमिकामा ह्रास:</strong> बालबालिकाहरू आमाबाबु वा हजुरबुबा-हजुरआमाको सङ्गत र लोककथा सुन्नुभन्दा मोबाइलको स्क्रिनमा बढी समय बिताउँछन्, जसले गर्दा पुस्तान्तरणको दूरी बढेको छ र मौलिक घरायसी मूल्यमान्यता कमजोर भएका छन्।</li>
+                    <li><strong>आभासी सम्बन्धको बाहुल्यता:</strong> मानिसहरू प्रत्यक्ष छिमेकी वा परिवारका सदस्यसँग बोल्नुको सट्टा अनलाइनमा अपरिचित व्यक्तिहरूसँग बढी अन्तरक्रिया गर्छन्, जसले मानिसमा वास्तविक सामाजिक संवेदनशीलता र आत्मीयता घटाएको छ।</li>
+                    <li><strong>पश्चिमा संस्कृतिको अन्धानुकरण (Cultural Erosion):</strong> सामाजिक सञ्जालमा देखिने विलासी जीवनशैली र पश्चिमा चाडपर्वहरूको देखासिकीका कारण हाम्रो मौलिक कला, संस्कार र भेषभूषा ओझेलमा पर्दै गइरहेका छन्।</li>
+                </ul>
+
+                <p><strong>व्यावहारिक उदाहरण</strong></p>
+                <p>नेपाली समाजमा यसको प्रत्यक्ष उदाहरण चाडपर्व मनाउने शैलीमा देखिन्छ। पहिले दसैँ वा तिहारको समयमा पिङ खेल्ने, देउसी-भैलो खेल्ने र देउसी-भैलोबाट संकलित रकमले सामाजिक कार्य गर्ने परम्परा थियो। तर आजभोलि, धेरैजसो युवा र बालबालिकाहरू चाडपर्वका बेला पनि कोठाभित्रै बसेर मोबाइलमा पब्जी खेल्ने, टिकटक भिडियो बनाउने, वा फेसबुकमा 'दसैँको शुभकामना' पोष्ट गरेरै आफ्नो मनोरञ्जन र सामाजिक दायित्व पूरा भएको ठान्छन्, जसले हाम्रो सामाजिकीकरणलाई एकाङ्की बनाएको छ।</p>
+
+                <p><strong>निष्कर्ष</strong></p>
+                <p>सूचना प्रविधि र सामाजिक सञ्जाल सामाजिक रूपान्तरणका दुईधारी तरबार हुन्। यसले हामीलाई विश्वसँग जोडेर बौद्धिक र आधुनिक बनाएको छ भने अर्कोतर्फ हाम्रा मौलिक सामाजिक सम्बन्धहरूलाई संकुचित र खोक्रो बनाउँदै लगेको छ। तसर्थ, सूचना प्रविधिलाई पूर्ण प्रतिबन्ध लगाउन सम्भव नभएकाले, विद्यालय र घरमा 'डिजिटल साक्षरता' र 'सन्तुलित प्रविधि प्रयोग' सम्बन्धी जीवनोपयोगी शिक्षाहरू प्रदान गरी आफ्ना मौलिक सांस्कृतिक मूल्यहरूको जगेर्ना गर्दै प्रविधिको सही सदुपयोग गर्नु नै आजको मुख्य आवश्यकता हो।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#b45309; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> समाज परिवर्तनशील छ। प्रविधिको सही सदुपयोग र मौलिक सांस्कृतिक मूल्यको संरक्षणबीच सन्तुलन कायम गर्नु नै सामाजिक रूपान्तरणको सफल कुञ्जी हो। "परिवर्तन स्वाभाविक हो, तर मौलिकता जोगाउनु कर्तव्य हो।"
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ४, पाठ ५</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
