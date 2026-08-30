@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>तथ्याङ्क तथा सूचनाको विश्लेषण र प्रस्तुतीकरण – MCQ</title>
+    <style>
+        /* ─── RESET & BASE ─── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', 'Mukta', system-ui, sans-serif;
+        }
+
+        body {
+            background: #fdf8f0;
+            /* creamy background */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 16px;
+        }
+
+        .app-wrapper {
+            max-width: 820px;
+            width: 100%;
+            background: #fdf8f0;
+            border-radius: 32px;
+            padding: 0 0 24px 0;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ─── HEADER – Blue Plate ─── */
+        .header-plate {
+            background: #0a2a5e;
+            /* deep blue */
+            border-radius: 24px 24px 12px 12px;
+            padding: 20px 24px 18px 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(10, 42, 94, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        .header-plate::after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .header-plate .top-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .header-plate .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .header-plate .brand h1 {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.3px;
+            line-height: 1.3;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+        .header-plate .brand .narayan {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffe484;
+            font-weight: 800;
+            font-size: 13px;
+            padding: 4px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        .header-plate .badge-set {
+            background: rgba(255, 255, 255, 0.12);
+            color: #fff;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 5px 16px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .header-plate .badge-set span {
+            background: #ffcc02;
+            color: #0a2a5e;
+            font-weight: 800;
+            padding: 0 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            line-height: 20px;
+        }
+
+        /* ─── PROGRESS BAR ─── */
+        .progress-strip {
+            display: flex;
+            gap: 6px;
+            margin: 14px 0 8px 0;
+            position: relative;
+            z-index: 2;
+        }
+        .progress-strip .seg {
+            flex: 1;
+            height: 5px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.20);
+            transition: background 0.4s ease;
+        }
+        .progress-strip .seg.done {
+            background: #34c759;
+        }
+        .progress-strip .seg.active {
+            background: #ffcc02;
+        }
+        .progress-strip .seg.wrong {
+            background: #ff3b30;
+        }
+
+        /* ─── STATS ROW ─── */
+        .stats-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .stat-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 10px 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(10, 42, 94, 0.06);
+            text-align: center;
+        }
+        .stat-card .label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7a8a9e;
+        }
+        .stat-card .value {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0a2a5e;
+            line-height: 1.2;
+            margin-top: 2px;
+        }
+        .stat-card .value small {
+            font-size: 14px;
+            font-weight: 600;
+            color: #7a8a9e;
+        }
+
+        /* ─── QUESTION CARD ─── */
+        .question-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px 20px 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(10, 42, 94, 0.06);
+            margin-bottom: 12px;
+            transition: opacity 0.25s ease;
+        }
+
+        .q-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .q-number {
+            background: #0a2a5e;
+            color: #fff;
+            font-weight: 800;
+            font-size: 15px;
+            padding: 4px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+        }
+        .q-set-tag {
+            font-size: 12px;
+            font-weight: 700;
+            color: #0a2a5e;
+            background: #e8edf5;
+            padding: 4px 14px;
+            border-radius: 40px;
+        }
+
+        .q-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0a2a5e;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            padding-right: 4px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .option-btn {
+            background: #f8f6f2;
+            border: 2px solid #e8e4dc;
+            border-radius: 16px;
+            padding: 14px 18px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #0a2a5e;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            line-height: 1.4;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        .option-btn .opt-label {
+            background: #e8edf5;
+            color: #0a2a5e;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 2px 12px;
+            border-radius: 30px;
+            flex-shrink: 0;
+            min-width: 32px;
+            text-align: center;
+        }
+        .option-btn:active:not(.disabled-opt) {
+            transform: scale(0.98);
+        }
+        .option-btn:hover:not(.disabled-opt) {
+            border-color: #0a2a5e;
+            background: #f0f4fa;
+        }
+
+        .option-btn.correct {
+            border-color: #34c759;
+            background: #e8f9ed;
+            box-shadow: 0 0 0 3px rgba(52, 199, 89, 0.20);
+        }
+        .option-btn.correct .opt-label {
+            background: #34c759;
+            color: #fff;
+        }
+
+        .option-btn.wrong {
+            border-color: #ff3b30;
+            background: #fde8e6;
+            box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.18);
+        }
+        .option-btn.wrong .opt-label {
+            background: #ff3b30;
+            color: #fff;
+        }
+
+        .option-btn.reveal-correct {
+            border-color: #34c759;
+            background: #e8f9ed;
+        }
+        .option-btn.reveal-correct .opt-label {
+            background: #34c759;
+            color: #fff;
+        }
+
+        .option-btn.disabled-opt {
+            cursor: default;
+            opacity: 0.85;
+        }
+
+        /* ─── FEEDBACK PANEL ─── */
+        .feedback-panel {
+            margin-top: 16px;
+            padding: 14px 18px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.5;
+            display: none;
+        }
+        .feedback-panel.show {
+            display: block;
+        }
+        .feedback-panel.correct {
+            background: #e8f9ed;
+            border: 2px solid #34c759;
+            color: #0a5a1e;
+        }
+        .feedback-panel.wrong {
+            background: #fde8e6;
+            border: 2px solid #ff3b30;
+            color: #7a1a14;
+        }
+        .feedback-panel .fb-title {
+            font-weight: 800;
+            font-size: 17px;
+        }
+        .feedback-panel .fb-explain {
+            margin-top: 4px;
+            font-weight: 500;
+            opacity: 0.85;
+        }
+
+        /* ─── NAVIGATION ─── */
+        .nav-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .nav-left,
+        .nav-right {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background: #f0f4fa;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #0a2a5e;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .btn:active {
+            transform: scale(0.96);
+        }
+        .btn-primary {
+            background: #0a2a5e;
+            color: #fff;
+            border-color: #0a2a5e;
+        }
+        .btn-primary:hover {
+            background: #1a3a7e;
+        }
+        .btn-primary:disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        .btn-outline {
+            background: transparent;
+            border-color: #d0d8e4;
+        }
+        .btn-outline:hover {
+            background: #e8edf5;
+            border-color: #b0bcc8;
+        }
+        .btn-success {
+            background: #34c759;
+            color: #fff;
+            border-color: #34c759;
+        }
+        .btn-success:hover {
+            background: #2db84e;
+        }
+        .btn-danger {
+            background: #ff3b30;
+            color: #fff;
+            border-color: #ff3b30;
+        }
+        .btn-danger:hover {
+            background: #e6352a;
+        }
+        .btn-gold {
+            background: #ffcc02;
+            color: #0a2a5e;
+            border-color: #ffcc02;
+            font-weight: 800;
+        }
+        .btn-gold:hover {
+            background: #f5c000;
+        }
+        .btn-sm {
+            padding: 6px 14px;
+            font-size: 12px;
+        }
+        .btn:disabled {
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        /* ─── RESULTS ─── */
+        .results-box {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 32px 24px;
+            border: 2px solid #0a2a5e;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(10, 42, 94, 0.10);
+        }
+        .results-box .big-score {
+            font-size: 56px;
+            font-weight: 900;
+            color: #0a2a5e;
+            line-height: 1.1;
+        }
+        .results-box .sub-score {
+            font-size: 20px;
+            font-weight: 700;
+            color: #3a5a7e;
+            margin-top: 4px;
+        }
+        .results-box .detail-msg {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0a2a5e;
+            margin-top: 12px;
+            padding: 8px 16px;
+            background: #f0f4fa;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        .results-box .stars {
+            font-size: 32px;
+            letter-spacing: 6px;
+            margin: 12px 0 18px 0;
+        }
+        .results-box .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        /* ─── HOME / SET SELECTOR ─── */
+        .home-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        @media (max-width: 480px) {
+            .home-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .set-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 18px 16px 16px 16px;
+            border: 1px solid rgba(10, 42, 94, 0.08);
+            box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease;
+        }
+        .set-card:active {
+            transform: scale(0.98);
+        }
+        .set-card .set-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .set-card .set-badge {
+            background: #0a2a5e;
+            color: #fff;
+            font-weight: 800;
+            font-size: 13px;
+            padding: 2px 14px;
+            border-radius: 40px;
+        }
+        .set-card .set-score {
+            font-size: 14px;
+            font-weight: 700;
+            color: #34c759;
+        }
+        .set-card .set-title {
+            font-size: 17px;
+            font-weight: 700;
+            color: #0a2a5e;
+            margin-bottom: 6px;
+        }
+        .set-card .set-meta {
+            font-size: 13px;
+            color: #7a8a9e;
+            font-weight: 500;
+        }
+        .set-card .set-actions {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .set-card .set-actions .btn {
+            flex: 1;
+            text-align: center;
+            font-size: 13px;
+            padding: 8px 12px;
+        }
+
+        /* ─── HIDDEN ─── */
+        .hidden {
+            display: none !important;
+        }
+
+        /* ─── TOAST / NOTIFICATION ─── */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0a2a5e;
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            text-align: center;
+            max-width: 90%;
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 600px) {
+            .header-plate {
+                padding: 16px 16px 14px 16px;
+            }
+            .header-plate .brand h1 {
+                font-size: 15px;
+            }
+            .header-plate .brand .narayan {
+                font-size: 11px;
+                padding: 3px 10px;
+            }
+            .header-plate .badge-set {
+                font-size: 11px;
+                padding: 4px 12px;
+            }
+            .q-text {
+                font-size: 18px;
+            }
+            .option-btn {
+                font-size: 16px;
+                padding: 12px 14px;
+            }
+            .stats-row {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 6px;
+            }
+            .stat-card .value {
+                font-size: 18px;
+            }
+            .nav-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .nav-left,
+            .nav-right {
+                justify-content: center;
+            }
+            .btn {
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+            .results-box .big-score {
+                font-size: 42px;
+            }
+        }
+        @media (max-width: 400px) {
+            .q-text {
+                font-size: 16px;
+            }
+            .option-btn {
+                font-size: 14px;
+                padding: 10px 12px;
+                gap: 10px;
+            }
+            .stat-card .value {
+                font-size: 16px;
+            }
+            .header-plate .brand h1 {
+                font-size: 13px;
+            }
+        }
+
+        /* ─── ANIMATIONS ─── */
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0.3;
+                transform: translateY(6px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeSlide 0.3s ease;
+        }
+
+        @keyframes shake {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            20%,
+            60% {
+                transform: translateX(-6px);
+            }
+            40%,
+            80% {
+                transform: translateX(6px);
+            }
+        }
+        .shake {
+            animation: shake 0.4s ease;
+        }
+
+        /* scroll behavior */
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-wrapper" id="app">
+        <!-- ─── HEADER PLATE (Blue) ─── -->
+        <div class="header-plate">
+            <div class="top-row">
+                <div class="brand">
+                    <h1>📊 तथ्याङ्क तथा सूचनाको विश्लेषण</h1>
+                    <span class="narayan">🙏 Narayan Sir</span>
+                </div>
+                <div class="badge-set" id="headerSetBadge">
+                    सेट <span id="setNumDisplay">1</span> • <span id="qCountDisplay">५</span> प्रश्न
+                </div>
+            </div>
+            <!-- progress segments -->
+            <div class="progress-strip" id="progressStrip">
+                <div class="seg" data-idx="0"></div>
+                <div class="seg" data-idx="1"></div>
+                <div class="seg" data-idx="2"></div>
+                <div class="seg" data-idx="3"></div>
+                <div class="seg" data-idx="4"></div>
+            </div>
+        </div>
+
+        <!-- ─── STATS ─── -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="label">📝 उत्तर</div>
+                <div class="value" id="answeredCount">0 <small>/ 5</small></div>
+            </div>
+            <div class="stat-card">
+                <div class="label">✅ सही</div>
+                <div class="value" id="correctCount">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">📈 प्रतिशत</div>
+                <div class="value" id="percentDisplay">0%</div>
+            </div>
+        </div>
+
+        <!-- ─── TOAST ─── -->
+        <div class="toast" id="toast"></div>
+
+        <!-- ─── HOME / SET SELECTOR ─── -->
+        <div id="homeView">
+            <div class="home-grid" id="setGrid">
+                <!-- dynamically rendered -->
+            </div>
+        </div>
+
+        <!-- ─── QUIZ VIEW ─── -->
+        <div id="quizView" class="hidden">
+            <div class="question-card fade-in" id="questionCard">
+                <div class="q-header">
+                    <span class="q-number" id="qNumLabel">प्रश्न १</span>
+                    <span class="q-set-tag" id="qSetLabel">सेट १</span>
+                </div>
+                <div class="q-text" id="qText">प्रश्न लोड हुँदै…</div>
+                <div class="options-grid" id="optionsGrid"></div>
+                <div class="feedback-panel" id="feedbackPanel">
+                    <div class="fb-title" id="fbTitle">✅ सही!</div>
+                    <div class="fb-explain" id="fbExplain">व्याख्या</div>
+                </div>
+                <div class="nav-row">
+                    <div class="nav-left">
+                        <button class="btn btn-outline" id="prevBtn">◀ अघिल्लो</button>
+                        <button class="btn btn-outline" id="resetSetBtn">↻ रिसेट</button>
+                    </div>
+                    <div class="nav-right">
+                        <span style="font-size:13px;font-weight:600;color:#7a8a9e;" id="progressLabel">१ / ५</span>
+                        <button class="btn btn-primary" id="nextBtn">पछिल्लो ▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── RESULTS VIEW ─── -->
+        <div id="resultsView" class="hidden">
+            <div class="results-box fade-in">
+                <div class="stars" id="resultStars">⭐⭐⭐</div>
+                <div class="big-score" id="resultScore">०%</div>
+                <div class="sub-score" id="resultSub">० / ५ सही</div>
+                <div class="detail-msg" id="resultMsg">राम्रो प्रयास! 💪</div>
+                <div class="btn-group">
+                    <button class="btn btn-outline" id="resultResetBtn">↻ पुनः प्रयास</button>
+                    <button class="btn btn-gold" id="resultHomeBtn">🏠 सबै सेट</button>
+                    <button class="btn btn-success" id="resultNextSetBtn">➡ अर्को सेट</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── FOOTER SPACER ─── -->
+        <div style="height:12px;"></div>
+    </div>
+
+    <script>
+        // ═══════════════════════════════════════════════════
+        //  DATA — 20 Questions (4 sets × 5)
+        // ═══════════════════════════════════════════════════
+
+        const ALL_QUESTIONS = [{
+            id: 1,
+            set: 0,
+            no: 1,
+            text: 'तथ्याङ्क तयारी (Data Preparation) को मुख्य कार्य कुन हो?',
+            options: [
+                { label: 'क', text: 'तथ्याङ्कको दार्शनिक र सामाजिक विश्लेषण गर्ने' },
+                { label: 'ख', text: 'काँचो तथ्याङ्कलाई सफाइ गर्ने, सच्याउने र सफ्टवेयरमा प्रविष्टिका लागि योग्य बनाउने' },
+                { label: 'ग', text: 'अनुसन्धान प्रतिवेदन सरोकारवालाहरूमाझ सार्वजनिक गर्ने' },
+                { label: 'घ', text: 'क्षेत्र भ्रमणका लागि अन्तर्वार्ता मार्गदर्शन निर्माण गर्ने' }
+            ],
+            correct: 1,
+            explain: 'काँचो तथ्याङ्कलाई सफा, शुद्ध र सफ्टवेयरमा हाल्न योग्य बनाउनु नै तयारी हो।'
+        }, {
+            id: 2,
+            set: 0,
+            no: 2,
+            text: '[कुन पर्दैन] तलका मध्ये कुन सफ्टवेयर परिमाणात्मक (Quantitative) तथ्याङ्क प्रशोधन गर्नका लागि प्रयोग गरिँदैन (पर्दैन)?',
+            options: [
+                { label: 'क', text: 'ATLAS.ti' },
+                { label: 'ख', text: 'IBM SPSS Statistics' },
+                { label: 'ग', text: 'RStudio' },
+                { label: 'घ', text: 'Microsoft Excel' }
+            ],
+            correct: 0,
+            explain: 'ATLAS.ti गुणात्मक तथ्याङ्कको लागि हो, परिमाणात्मकको लागि होइन।'
+        }, {
+            id: 3,
+            set: 0,
+            no: 3,
+            text: 'गुणात्मक तथ्याङ्क प्रशोधन गर्दा कम्प्युटर सफ्टवेयरको सहायताले मुख्य-मुख्य विचारहरू छनोट गरी के निर्माण गरिन्छ?',
+            options: [
+                { label: 'क', text: 'मध्यक र मध्यिका' },
+                { label: 'ख', text: 'स्तरीय भिन्नता' },
+                { label: 'ग', text: 'कोड, उद्धरण र अन्तरसम्बन्धको सञ्जाल (Network)' },
+                { label: 'घ', text: 'वृत्तचित्र र स्तम्भचित्र' }
+            ],
+            correct: 2,
+            explain: 'गुणात्मकमा कोड, उद्धरण र नेटवर्क बनाइन्छ।'
+        }, {
+            id: 4,
+            set: 0,
+            no: 4,
+            text: '[कुन पर्छ] अनुसन्धानको नतिजा प्रबोधिकरण (Result Dissemination) अन्तर्गत तलका मध्ये कुन कार्य पर्छ?',
+            options: [
+                { label: 'क', text: 'तथ्याङ्कको सफाइ र प्रविष्टि सम्पादन गर्ने' },
+                { label: 'ख', text: 'गुगल फर्म निर्माण गरी प्रश्नावली पठाउने' },
+                { label: 'ग', text: 'प्रतिवेदनलाई सुरक्षित भण्डारण गरी क्लाउडमा लुकाएर राख्ने' },
+                { label: 'घ', text: 'अनुसन्धान जर्नलहरूमा लेख छपाउने र विभिन्न सञ्चार माध्यमबाट नतिजा सार्वजनिक गर्ने' }
+            ],
+            correct: 3,
+            explain: 'नतिजा प्रबोधिकरण भनेको जर्नल, मिडिया मार्फत सार्वजनिक गर्नु हो।'
+        }, {
+            id: 5,
+            set: 0,
+            no: 5,
+            text: '[कुन पर्दैन] शाब्दिक प्रस्तुतीकरण गर्दा ध्यान दिनुपर्ने प्रभावकारी पक्षहरूमा तलका मध्ये कुन पर्दैन (गर्नु हुँदैन)?',
+            options: [
+                { label: 'क', text: 'लक्षित पाठकको स्तर र क्षमता बुझ्ने' },
+                { label: 'ख', text: 'अत्यधिक आलङ्कारिक र भावनाप्रधान भाषाको प्रयोग गर्ने' },
+                { label: 'ग', text: 'निश्चित सङ्ख्या वा प्रतिशत उल्लेख गर्ने' },
+                { label: 'घ', text: 'दोहोरो अर्थ नलाग्ने सरल र छोटा वाक्य लेख्ने' }
+            ],
+            correct: 1,
+            explain: 'अत्यधिक आलङ्कारिक भावनाप्रधान भाषा शाब्दिक प्रस्तुतीकरणमा उपयुक्त हुँदैन।'
+        }, {
+            id: 6,
+            set: 1,
+            no: 6,
+            text: 'कुल १०० प्रतिशत मानको विभिन्न समूह वा विधामा भएको हिस्सा वा वितरणलाई देखाउन कुन चित्रात्मक साधनको प्रयोग गरिन्छ?',
+            options: [
+                { label: 'क', text: 'सङ्गठन चार्ट' },
+                { label: 'ख', text: 'वृत्तचित्र वा पाई चार्ट' },
+                { label: 'ग', text: 'फ्लोचार्ट' },
+                { label: 'घ', text: 'रेखाचित्र' }
+            ],
+            correct: 1,
+            explain: '१००% को भाग देखाउन पाई चार्ट उत्तम हो।'
+        }, {
+            id: 7,
+            set: 1,
+            no: 7,
+            text: '[कुन पर्छ] कुनै प्रक्रिया वा चरणबद्ध कार्यप्रवाह (Process flow) लाई क्रमिक रूपमा चित्रमा देखाउने साधन अन्तर्गत तलका मध्ये कुन पर्छ?',
+            options: [
+                { label: 'क', text: 'फ्लोचार्ट' },
+                { label: 'ख', text: 'सङ्गठन चार्ट' },
+                { label: 'ग', text: 'तालिका' },
+                { label: 'घ', text: 'स्तम्भचित्र' }
+            ],
+            correct: 0,
+            explain: 'प्रक्रिया प्रवाह देखाउन फ्लोचार्ट प्रयोग हुन्छ।'
+        }, {
+            id: 8,
+            set: 1,
+            no: 8,
+            text: '[कुन पर्दैन] गुणात्मक तथ्याङ्क प्रशोधन र विश्लेषण गर्ने सफ्टवेयरको सूचीमा तलका मध्ये कुन पर्दैन?',
+            options: [
+                { label: 'क', text: 'NVivo' },
+                { label: 'ख', text: 'MAXQDA' },
+                { label: 'ग', text: 'OriginPro' },
+                { label: 'घ', text: 'Quirkos' }
+            ],
+            correct: 2,
+            explain: 'OriginPro परिमाणात्मक ग्राफिङ सफ्टवेयर हो, गुणात्मक होइन।'
+        }, {
+            id: 9,
+            set: 1,
+            no: 9,
+            text: 'परिमाणात्मक तथ्याङ्कको विश्लेषणमा कुन साङ्ख्यिकीय मापन प्रयोग गरिन्छ?',
+            options: [
+                { label: 'क', text: 'कोड निर्माण' },
+                { label: 'ख', text: 'शब्द वा वाक्यको कोडीकरण' },
+                { label: 'ग', text: 'अन्तर्वार्ता टिपोट विश्लेषण' },
+                { label: 'घ', text: 'मध्यक, मध्यिका, रित र स्तरीय भिन्नता' }
+            ],
+            correct: 3,
+            explain: 'Mean, Median, Mode, SD परिमाणात्मक विश्लेषणका आधार हुन्।'
+        }, {
+            id: 10,
+            set: 1,
+            no: 10,
+            text: '[कुन पर्छ] चित्रात्मक प्रस्तुतीकरण गर्दा ध्यान दिनुपर्ने कुराहरूमा तलका मध्ये कुन पक्ष पर्छ?',
+            options: [
+                { label: 'क', text: 'चार्ट वा ग्राफमा स्रोत उल्लेख नगर्ने' },
+                { label: 'ख', text: 'चार्ट वा तालिकाको शीर्षक, सङ्केत, रङ र आकार स्पष्ट हुनुपर्ने' },
+                { label: 'ग', text: 'जतिसक्दो धेरै चम्किलो र भड्किलो रङ भर्ने' },
+                { label: 'घ', text: 'व्याख्या विना सिधै चित्र मात्र राख्ने' }
+            ],
+            correct: 1,
+            explain: 'शीर्षक, सङ्केत, रङ, आकार स्पष्ट हुनुपर्छ।'
+        }, {
+            id: 11,
+            set: 2,
+            no: 11,
+            text: '[कुन पर्दैन] शाब्दिक प्रस्तुतीकरणलाई प्रभावकारी बनाउने असल उपायहरूमा तलका मध्ये कुन पर्दैन?',
+            options: [
+                { label: 'क', text: 'वाक्यहरू छोटो र पढ्न सजिलो बनाउने' },
+                { label: 'ख', text: "'धेरै, अधिकांश, थोरै, कम' जस्ता अमूर्त शब्दहरूको बढी प्रयोग गर्ने" },
+                { label: 'ग', text: 'एउटै बुँदालाई पटक-पटक नदोहोर्‍याउने' },
+                { label: 'घ', text: 'तथ्य र तथ्याङ्कहरूको पुनरावलोकन गरी गल्ती सच्याउने' }
+            ],
+            correct: 1,
+            explain: 'अमूर्त शब्द धेरै प्रयोग गर्नु हुँदैन, सङ्ख्या/प्रतिशत दिनुपर्छ।'
+        }, {
+            id: 12,
+            set: 2,
+            no: 12,
+            text: '[कुन पर्छ] संस्थाको पदसोपान, तहगत संरचना र सदस्यहरूको आपसी सम्बन्ध देखाउने साधन अन्तर्गत तलका मध्ये कुन पर्छ?',
+            options: [
+                { label: 'क', text: 'सङ्गठन चार्ट' },
+                { label: 'ख', text: 'वृत्तचित्र' },
+                { label: 'ग', text: 'रेखाचित्र' },
+                { label: 'घ', text: 'फ्लोचार्ट' }
+            ],
+            correct: 0,
+            explain: 'सङ्गठन चार्टले पदसोपान देखाउँछ।'
+        }, {
+            id: 13,
+            set: 2,
+            no: 13,
+            text: 'समयको अन्तरालमा तथ्याङ्कको उतारचढाव वा प्रवृत्ति (Trend) देखाउन कुन चित्रात्मक साधन बढी उपयुक्त हुन्छ?',
+            options: [
+                { label: 'क', text: 'तालिका' },
+                { label: 'ख', text: 'फ्लोचार्ट' },
+                { label: 'ग', text: 'रेखाचित्र वा लाइन ग्राफ' },
+                { label: 'घ', text: 'सङ्गठन चार्ट' }
+            ],
+            correct: 2,
+            explain: 'Trend देखाउन Line Graph उपयुक्त।'
+        }, {
+            id: 14,
+            set: 2,
+            no: 14,
+            text: 'अनुसन्धानमा "तथ्याङ्क विश्लेषण" चरणलाई किन सबैभन्दा महत्त्वपूर्ण चरण मानिन्छ?',
+            options: [
+                { label: 'क', text: 'यस चरणमा मात्र सुरुवाती तथ्याङ्क संकलन गरिन्छ' },
+                { label: 'ख', text: 'यसले नयाँ कम्प्युटर सफ्टवेयर खरिद गर्न मद्दत गर्छ' },
+                { label: 'ग', text: 'यसले गुणात्मक तथ्याङ्कलाई मात्र परिमाणात्मक बनाउँछ' },
+                { label: 'घ', text: 'यसै चरणबाट मात्र प्रशोधित तथ्याङ्कको वास्तविक अर्थ र निष्कर्ष निकालिन्छ' }
+            ],
+            correct: 3,
+            explain: 'विश्लेषणबाट नै अर्थ र निष्कर्ष निस्कन्छ।'
+        }, {
+            id: 15,
+            set: 2,
+            no: 15,
+            text: '[कुन पर्दैन] डिजिटल रूपमा तथ्याङ्क सुरक्षित रूपमा भण्डारण (Data Storage) गर्ने उपयुक्त विधिहरूमा तलका मध्ये कुन पर्दैन?',
+            options: [
+                { label: 'क', text: 'पेनड्राइभ वा बाह्य हार्डडिस्कमा सुरक्षित ब्याकअप राख्ने' },
+                { label: 'ख', text: 'तथ्याङ्कलाई कागजमा मात्र लेखेर खुल्ला र असुरक्षित कोठामा राख्ने' },
+                { label: 'ग', text: 'गुगल ड्राइभ वा सुरक्षित क्लाउड स्टोरेजमा भण्डारण गर्ने' },
+                { label: 'घ', text: 'कम्प्युटरको सुरक्षित फोल्डरमा पासवर्ड राखेर सेभ गर्ने' }
+            ],
+            correct: 1,
+            explain: 'कागजमा खुला कोठामा राख्नु सुरक्षित विधि होइन।'
+        }, {
+            id: 16,
+            set: 3,
+            no: 16,
+            text: '[कुन पर्छ] परिमाणात्मक (Quantitative) तथ्याङ्क प्रशोधन र विश्लेषण गर्ने प्रख्यात सफ्टवेयर अन्तर्गत तलका मध्ये कुन पर्छ?',
+            options: [
+                { label: 'क', text: 'NVivo' },
+                { label: 'ख', text: 'IBM SPSS Statistics' },
+                { label: 'ग', text: 'ATLAS.ti' },
+                { label: 'घ', text: 'Dedoose' }
+            ],
+            correct: 1,
+            explain: 'SPSS परिमाणात्मकको लागि चर्चित सफ्टवेयर हो।'
+        }, {
+            id: 17,
+            set: 3,
+            no: 17,
+            text: '[कुन पर्दैन] गुणात्मक तथ्याङ्क (Qualitative Data) को उदाहरणमा तलका मध्ये कुन पर्दैन (अर्थात् कुन परिमाणात्मक हो)?',
+            options: [
+                { label: 'क', text: 'विद्यार्थीको उमेर, तौल र परीक्षाको प्राप्ताङ्क' },
+                { label: 'ख', text: 'मानिसको धर्म, आस्था र सांस्कृतिक परम्परा' },
+                { label: 'ग', text: 'अन्तर्वार्ताबाट प्राप्त व्यक्तिको अनुभव र विचार' },
+                { label: 'घ', text: 'वस्तुको गुणस्तर र सेवाप्रतिको सन्तुष्टि' }
+            ],
+            correct: 0,
+            explain: 'उमेर, तौल, प्राप्ताङ्क परिमाणात्मक हो।'
+        }, {
+            id: 18,
+            set: 3,
+            no: 18,
+            text: 'अनुसन्धानको सन्दर्भमा "तथ्याङ्क प्रशोधन" (Data Processing) भन्नाले के बुझिन्छ?',
+            options: [
+                { label: 'क', text: 'केवल प्रश्नावली निर्माण गरेर अनुसन्धान क्षेत्र तोक्ने कार्य' },
+                { label: 'ख', text: 'सामाजिक सञ्जालमा संकलित फोटोहरू अपलोड गर्ने कार्य' },
+                { label: 'ग', text: 'तथ्याङ्कलाई सफ्टवेयरमा प्रविष्टि गरी विभिन्न साङ्ख्यिकीय वा गुणात्मक ढाँचामा बदल्ने कार्य' },
+                { label: 'घ', text: 'प्रतिवेदन लेखनको अन्तिम प्रतिलिपि बजारमा बिक्री गर्ने कार्य' }
+            ],
+            correct: 2,
+            explain: 'तथ्याङ्कलाई सफ्टवेयरमा हालेर ढाँचामा बदल्नु नै प्रशोधन हो।'
+        }, {
+            id: 19,
+            set: 3,
+            no: 19,
+            text: 'चित्रात्मक प्रस्तुतीकरण (Visual Presentation) को मुख्य फाइदा के हो?',
+            options: [
+                { label: 'क', text: 'यसले धेरै पानाहरू ओगटेर प्रतिवेदनलाई निकै मोटो बनाउँछ' },
+                { label: 'ख', text: 'यसका लागि कुनै विशेष तयारी वा गणितीय ज्ञान आवश्यक पर्दैन' },
+                { label: 'ग', text: 'यसले वास्तविक र संकलित तथ्याङ्कलाई लुकाउन मद्दत गर्छ' },
+                { label: 'घ', text: 'यसले कम समय र थोरै स्थानमा धेरै जानकारी पाठकलाई सजिलैसँग बुझाउन सघाउँछ' }
+            ],
+            correct: 3,
+            explain: 'चित्रले थोरै स्थानमा धेरै कुरा छिटो बुझाउँछ।'
+        }, {
+            id: 20,
+            set: 3,
+            no: 20,
+            text: '[कुन पर्दैन] परिमाणात्मक तथ्याङ्क प्रशोधन र विश्लेषणका साङ्ख्यिकीय विधिहरूमा तलका मध्ये कुन पर्दैन (गुणात्मक विधि हो)?',
+            options: [
+                { label: 'क', text: 'मध्यक (Mean) र मध्यिका (Median) को गणना' },
+                { label: 'ख', text: 'मुख्य-मुख्य विचारहरूको कोडीकरण (Coding) र सञ्जाल निर्माण' },
+                { label: 'ग', text: 'स्तरीय भिन्नता (Standard Deviation) को मापन' },
+                { label: 'घ', text: 'सहसम्बन्ध (Correlation) र प्रतिगमन (Regression) को विश्लेषण' }
+            ],
+            correct: 1,
+            explain: 'कोडीकरण र सञ्जाल गुणात्मक विधि हो।'
+        }];
+
+        // ─── HELPERS ──────────────────────────────────────
+        function shuffle(arr) {
+            for (let i = arr.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [arr[i], arr[j]] = [arr[j], arr[i]];
+            }
+            return arr;
+        }
+
+        function showToast(msg, dur) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            clearTimeout(t._timer);
+            t._timer = setTimeout(() => t.classList.remove('show'), dur || 1800);
+        }
+
+        // ─── STATE ────────────────────────────────────────
+        let currentSet = 0; // 0-3
+        let currentQIndex = 0; // 0-4
+        let answers = {}; // { questionId: selectedIndex }
+        let revealed = {}; // { questionId: true }
+        let setCompleted = [false, false, false, false];
+        let setScores = [0, 0, 0, 0]; // correct count per set
+        let autoTimer = null;
+        let isAnswering = false;
+
+        // DOM refs
+        const homeView = document.getElementById('homeView');
+        const quizView = document.getElementById('quizView');
+        const resultsView = document.getElementById('resultsView');
+        const setGrid = document.getElementById('setGrid');
+        const qText = document.getElementById('qText');
+        const qNumLabel = document.getElementById('qNumLabel');
+        const qSetLabel = document.getElementById('qSetLabel');
+        const optionsGrid = document.getElementById('optionsGrid');
+        const feedbackPanel = document.getElementById('feedbackPanel');
+        const fbTitle = document.getElementById('fbTitle');
+        const fbExplain = document.getElementById('fbExplain');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const resetSetBtn = document.getElementById('resetSetBtn');
+        const progressLabel = document.getElementById('progressLabel');
+        const progressStrip = document.getElementById('progressStrip');
+        const answeredCount = document.getElementById('answeredCount');
+        const correctCount = document.getElementById('correctCount');
+        const percentDisplay = document.getElementById('percentDisplay');
+        const setNumDisplay = document.getElementById('setNumDisplay');
+        const qCountDisplay = document.getElementById('qCountDisplay');
+        const resultScore = document.getElementById('resultScore');
+        const resultSub = document.getElementById('resultSub');
+        const resultMsg = document.getElementById('resultMsg');
+        const resultStars = document.getElementById('resultStars');
+        const resultResetBtn = document.getElementById('resultResetBtn');
+        const resultHomeBtn = document.getElementById('resultHomeBtn');
+        const resultNextSetBtn = document.getElementById('resultNextSetBtn');
+
+        // ─── RENDER HOME ──────────────────────────────────
+        function renderHome() {
+            homeView.classList.remove('hidden');
+            quizView.classList.add('hidden');
+            resultsView.classList.add('hidden');
+
+            const sets = [0, 1, 2, 3];
+            let html = '';
+            const setNames = ['तथ्याङ्क तयारी', 'चित्रात्मक साधन', 'प्रस्तुतीकरण', 'विश्लेषण विधि'];
+
+            sets.forEach(s => {
+                const qs = ALL_QUESTIONS.filter(q => q.set === s);
+                const answered = qs.filter(q => answers[q.id] !== undefined).length;
+                const correct = qs.filter(q => answers[q.id] === q.correct).length;
+                const pct = answered ? Math.round((correct / qs.length) * 100) : 0;
+                const done = answered === qs.length;
+                html += `
+                    <div class="set-card">
+                        <div class="set-top">
+                            <span class="set-badge">सेट ${s+1}</span>
+                            <span class="set-score">${done ? '✅' : '📝'} ${correct}/${qs.length}</span>
+                        </div>
+                        <div class="set-title">${setNames[s]}</div>
+                        <div class="set-meta">प्रश्न ${qs[0].no}–${qs[qs.length-1].no} • ${pct}%</div>
+                        <div class="set-actions">
+                            <button class="btn btn-primary" data-set="${s}">▶ सुरु गर्नुहोस्</button>
+                            <button class="btn btn-outline btn-sm" data-reset="${s}">↻ रिसेट</button>
+                        </div>
+                    </div>
+                `;
+            });
+            setGrid.innerHTML = html;
+
+            // event listeners
+            setGrid.querySelectorAll('[data-set]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const s = parseInt(btn.dataset.set);
+                    startSet(s);
+                });
+            });
+            setGrid.querySelectorAll('[data-reset]').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const s = parseInt(btn.dataset.reset);
+                    resetSet(s);
+                    renderHome();
+                    showToast(`सेट ${s+1} रिसेट गरियो`);
+                });
+            });
+            updateHomeStats();
+        }
+
+        function updateHomeStats() {
+            const allAnswered = ALL_QUESTIONS.filter(q => answers[q.id] !== undefined).length;
+            const allCorrect = ALL_QUESTIONS.filter(q => answers[q.id] === q.correct).length;
+            const pct = allAnswered ? Math.round((allCorrect / allAnswered) * 100) : 0;
+            document.getElementById('answeredCount').textContent = allAnswered + ' / 20';
+            document.getElementById('correctCount').textContent = allCorrect;
+            document.getElementById('percentDisplay').textContent = pct + '%';
+        }
+
+        // ─── START SET ────────────────────────────────────
+        function startSet(s) {
+            currentSet = s;
+            currentQIndex = 0;
+            // if set was previously completed, reset answers for that set
+            // but only if we want fresh start — we'll keep existing answers
+            // but we allow re-taking
+            const qs = ALL_QUESTIONS.filter(q => q.set === s);
+            // If all answered, we can still replay — we don't clear answers
+            // but we'll show the first unanswered if any, else first
+            const firstUnanswered = qs.findIndex(q => answers[q.id] === undefined);
+            if (firstUnanswered !== -1) {
+                currentQIndex = firstUnanswered;
+            } else {
+                currentQIndex = 0;
+            }
+            // reset revealed for this set
+            qs.forEach(q => { revealed[q.id] = false; });
+            homeView.classList.add('hidden');
+            quizView.classList.remove('hidden');
+            resultsView.classList.add('hidden');
+            setNumDisplay.textContent = s + 1;
+            qCountDisplay.textContent = '५';
+            renderQuestion();
+            updateStats();
+            updateProgress();
+            showToast(`सेट ${s+1} सुरु भयो!`);
+        }
+
+        // ─── RENDER QUESTION ─────────────────────────────
+        function renderQuestion() {
+            const qs = ALL_QUESTIONS.filter(q => q.set === currentSet);
+            if (qs.length === 0) return;
+            if (currentQIndex >= qs.length) {
+                // all done, show results
+                showSetResults();
+                return;
+            }
+            const q = qs[currentQIndex];
+            qNumLabel.textContent = `प्रश्न ${q.no}`;
+            qSetLabel.textContent = `सेट ${currentSet+1}`;
+            qText.textContent = q.text;
+
+            // options
+            optionsGrid.innerHTML = '';
+            const labels = ['क', 'ख', 'ग', 'घ'];
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.dataset.idx = idx;
+                const isAnswered = answers[q.id] !== undefined;
+                const selected = answers[q.id] === idx;
+                const isCorrect = idx === q.correct;
+                const showReveal = revealed[q.id] && isCorrect;
+
+                if (isAnswered) {
+                    btn.classList.add('disabled-opt');
+                    if (selected && isCorrect) btn.classList.add('correct');
+                    else if (selected && !isCorrect) btn.classList.add('wrong');
+                    else if (showReveal || (revealed[q.id] && isCorrect)) btn.classList.add('reveal-correct');
+                }
+
+                btn.innerHTML = `<span class="opt-label">${labels[idx]}</span> ${opt.text}`;
+                btn.addEventListener('click', () => handleOptionClick(q, idx));
+                optionsGrid.appendChild(btn);
+            });
+
+            // feedback
+            if (answers[q.id] !== undefined) {
+                const isCorrect = answers[q.id] === q.correct;
+                feedbackPanel.className = 'feedback-panel show ' + (isCorrect ? 'correct' : 'wrong');
+                fbTitle.textContent = isCorrect ? '✅ सही!' : '❌ गलत!';
+                fbExplain.textContent = q.explain;
+            } else {
+                feedbackPanel.className = 'feedback-panel';
+            }
+
+            progressLabel.textContent = `${currentQIndex+1} / ${qs.length}`;
+            updateProgress();
+            updateStats();
+
+            // scroll to top of card on mobile
+            document.getElementById('questionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // ─── HANDLE OPTION CLICK ─────────────────────────
+        function handleOptionClick(q, idx) {
+            if (isAnswering) return;
+            if (answers[q.id] !== undefined) {
+                showToast('यो प्रश्नको जवाफ दिइसकियो।');
+                return;
+            }
+            isAnswering = true;
+            answers[q.id] = idx;
+            revealed[q.id] = true;
+
+            const isCorrect = idx === q.correct;
+            if (isCorrect) {
+                setScores[currentSet] = (setScores[currentSet] || 0) + 1;
+            }
+
+            // re-render question with feedback
+            renderQuestion();
+
+            // Show toast feedback
+            showToast(isCorrect ? '✅ सही उत्तर!' : '❌ गलत! सही उत्तर हेर्नुहोस्।', 1200);
+
+            // auto advance after 1.5 seconds
+            clearTimeout(autoTimer);
+            autoTimer = setTimeout(() => {
+                const qs = ALL_QUESTIONS.filter(qq => qq.set === currentSet);
+                if (currentQIndex < qs.length - 1) {
+                    currentQIndex++;
+                    renderQuestion();
+                } else {
+                    // check if all answered
+                    const allAnswered = qs.every(qq => answers[qq.id] !== undefined);
+                    if (allAnswered) {
+                        showSetResults();
+                    } else {
+                        // move to next unanswered
+                        const nextUnanswered = qs.findIndex(qq => answers[qq.id] === undefined);
+                        if (nextUnanswered !== -1) {
+                            currentQIndex = nextUnanswered;
+                            renderQuestion();
+                        } else {
+                            showSetResults();
+                        }
+                    }
+                }
+                isAnswering = false;
+            }, 1500);
+        }
+
+        // ─── SHOW SET RESULTS ────────────────────────────
+        function showSetResults() {
+            const qs = ALL_QUESTIONS.filter(q => q.set === currentSet);
+            const answered = qs.filter(q => answers[q.id] !== undefined).length;
+            const correct = qs.filter(q => answers[q.id] === q.correct).length;
+            const pct = answered ? Math.round((correct / qs.length) * 100) : 0;
+
+            // mark set as completed if all answered
+            if (answered === qs.length) {
+                setCompleted[currentSet] = true;
+            }
+
+            quizView.classList.add('hidden');
+            resultsView.classList.remove('hidden');
+
+            resultScore.textContent = pct + '%';
+            resultSub.textContent = `${correct} / ${qs.length} सही`;
+
+            let msg = '';
+            let stars = '';
+            if (pct === 100) { msg = '🌟 उत्कृष्ट! सबै सही!';
+                stars = '⭐⭐⭐⭐⭐'; } else if (pct >= 80) { msg = '👏 धेरै राम्रो!';
+                stars = '⭐⭐⭐⭐'; } else if (pct >= 60) { msg = '💪 राम्रो प्रयास! अझ सुधार गर्नुहोस्।';
+                stars = '⭐⭐⭐'; } else if (pct >= 40) { msg = '📖 अभ्यास जारी राख्नुहोस्!';
+                stars = '⭐⭐'; } else { msg = '🔄 पुनः प्रयास गर्नुहोस्!';
+                stars = '⭐'; }
+            resultMsg.textContent = msg;
+            resultStars.textContent = stars;
+
+            // update home stats
+            updateHomeStats();
+            renderHome(); // re-render to show updated set cards
+
+            // result buttons
+            resultResetBtn.onclick = () => {
+                resetSet(currentSet);
+                startSet(currentSet);
+                showToast(`सेट ${currentSet+1} पुनः सुरु भयो`);
+            };
+            resultHomeBtn.onclick = () => {
+                renderHome();
+                showToast('सबै सेटहरू');
+            };
+            resultNextSetBtn.onclick = () => {
+                if (currentSet < 3) {
+                    startSet(currentSet + 1);
+                } else {
+                    renderHome();
+                    showToast('सबै सेट सकियो! 🎉');
+                }
+            };
+            // hide next if last set
+            if (currentSet >= 3) {
+                resultNextSetBtn.style.display = 'none';
+            } else {
+                resultNextSetBtn.style.display = 'inline-flex';
+            }
+        }
+
+        // ─── UPDATE STATS ─────────────────────────────────
+        function updateStats() {
+            const qs = ALL_QUESTIONS.filter(q => q.set === currentSet);
+            const answered = qs.filter(q => answers[q.id] !== undefined).length;
+            const correct = qs.filter(q => answers[q.id] === q.correct).length;
+            const pct = answered ? Math.round((correct / answered) * 100) : 0;
+
+            document.getElementById('answeredCount').textContent = answered + ' / 5';
+            document.getElementById('correctCount').textContent = correct;
+            document.getElementById('percentDisplay').textContent = pct + '%';
+
+            // also update home stats globally
+            const allAns = ALL_QUESTIONS.filter(q => answers[q.id] !== undefined).length;
+            const allCor = ALL_QUESTIONS.filter(q => answers[q.id] === q.correct).length;
+            const allPct = allAns ? Math.round((allCor / allAns) * 100) : 0;
+            // update home stats when visible
+            if (!homeView.classList.contains('hidden')) {
+                document.getElementById('answeredCount').textContent = allAns + ' / 20';
+                document.getElementById('correctCount').textContent = allCor;
+                document.getElementById('percentDisplay').textContent = allPct + '%';
+            }
+        }
+
+        // ─── UPDATE PROGRESS ─────────────────────────────
+        function updateProgress() {
+            const qs = ALL_QUESTIONS.filter(q => q.set === currentSet);
+            const segs = progressStrip.querySelectorAll('.seg');
+            segs.forEach((seg, i) => {
+                seg.className = 'seg';
+                if (i < qs.length) {
+                    const q = qs[i];
+                    if (answers[q.id] !== undefined) {
+                        if (answers[q.id] === q.correct) {
+                            seg.classList.add('done');
+                        } else {
+                            seg.classList.add('wrong');
+                        }
+                    }
+                    if (i === currentQIndex && answers[q.id] === undefined) {
+                        seg.classList.add('active');
+                    }
+                }
+            });
+        }
+
+        // ─── RESET SET ────────────────────────────────────
+        function resetSet(s) {
+            const qs = ALL_QUESTIONS.filter(q => q.set === s);
+            qs.forEach(q => {
+                delete answers[q.id];
+                delete revealed[q.id];
+            });
+            setScores[s] = 0;
+            setCompleted[s] = false;
+            currentQIndex = 0;
+            updateHomeStats();
+        }
+
+        // ─── NAVIGATION ───────────────────────────────────
+        prevBtn.addEventListener('click', () => {
+            if (isAnswering) return;
+            const qs = ALL_QUESTIONS.filter(q => q.set === currentSet);
+            if (currentQIndex > 0) {
+                currentQIndex--;
+                renderQuestion();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (isAnswering) return;
+            const qs = ALL_QUESTIONS.filter(q => q.set === currentSet);
+            // if current is answered, move to next unanswered or next
+            if (answers[qs[currentQIndex]?.id] !== undefined) {
+                if (currentQIndex < qs.length - 1) {
+                    currentQIndex++;
+                    renderQuestion();
+                } else {
+                    showSetResults();
+                }
+            } else {
+                showToast('कृपया पहिले प्रश्नको उत्तर दिनुहोस्।');
+            }
+        });
+
+        resetSetBtn.addEventListener('click', () => {
+            resetSet(currentSet);
+            startSet(currentSet);
+            showToast(`सेट ${currentSet+1} रिसेट भयो`);
+        });
+
+        // ─── INIT ──────────────────────────────────────────
+        renderHome();
+        showToast('🙏 Narayan Sir – तथ्याङ्क MCQ', 2000);
+    </script>
+
+</body>
+</html>

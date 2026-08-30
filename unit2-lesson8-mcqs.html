@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>एक्सेल प्रयोग – तथ्याङ्क प्रशोधन</title>
+    <style>
+        /* ─── RESET & BASE ─── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', 'Mukta', system-ui, sans-serif;
+        }
+
+        body {
+            background: #fdf8f0;
+            /* creamy background */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 16px;
+        }
+
+        .app-wrapper {
+            max-width: 820px;
+            width: 100%;
+            background: #fdf8f0;
+            border-radius: 32px;
+            padding: 0 0 24px 0;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ─── HEADER – Blue background, light skyblue text ─── */
+        .header-plate {
+            background: #0a2a5e;
+            /* deep blue */
+            border-radius: 24px 24px 12px 12px;
+            padding: 20px 24px 18px 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(10, 42, 94, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        .header-plate::after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .header-plate .top-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .header-plate .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .header-plate .brand h1 {
+            color: #b0d4ff;
+            /* light skyblue */
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.3px;
+            line-height: 1.3;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+        .header-plate .brand .narayan {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffe484;
+            font-weight: 800;
+            font-size: 13px;
+            padding: 4px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        .header-plate .badge-set {
+            background: rgba(255, 255, 255, 0.12);
+            color: #b0d4ff;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 5px 16px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .header-plate .badge-set span {
+            background: #ffcc02;
+            color: #0a2a5e;
+            font-weight: 800;
+            padding: 0 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            line-height: 20px;
+        }
+
+        /* ─── PROGRESS BAR ─── */
+        .progress-strip {
+            display: flex;
+            gap: 6px;
+            margin: 14px 0 8px 0;
+            position: relative;
+            z-index: 2;
+        }
+        .progress-strip .seg {
+            flex: 1;
+            height: 5px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.20);
+            transition: background 0.4s ease;
+        }
+        .progress-strip .seg.done {
+            background: #34c759;
+        }
+        .progress-strip .seg.active {
+            background: #ffcc02;
+        }
+        .progress-strip .seg.wrong {
+            background: #ff3b30;
+        }
+
+        /* ─── STATS ROW ─── */
+        .stats-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .stat-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 10px 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(10, 42, 94, 0.06);
+            text-align: center;
+        }
+        .stat-card .label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7a8a9e;
+        }
+        .stat-card .value {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0a2a5e;
+            line-height: 1.2;
+            margin-top: 2px;
+        }
+        .stat-card .value small {
+            font-size: 14px;
+            font-weight: 600;
+            color: #7a8a9e;
+        }
+
+        /* ─── QUESTION CARD ─── */
+        .question-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px 20px 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(10, 42, 94, 0.06);
+            margin-bottom: 12px;
+            transition: opacity 0.25s ease;
+        }
+
+        .q-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .q-number {
+            background: #0a2a5e;
+            color: #b0d4ff;
+            font-weight: 800;
+            font-size: 15px;
+            padding: 4px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+        }
+        .q-set-tag {
+            font-size: 12px;
+            font-weight: 700;
+            color: #0a2a5e;
+            background: #e8edf5;
+            padding: 4px 14px;
+            border-radius: 40px;
+        }
+
+        .q-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0a2a5e;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            padding-right: 4px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .option-btn {
+            background: #f8f6f2;
+            border: 2px solid #e8e4dc;
+            border-radius: 16px;
+            padding: 14px 18px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #0a2a5e;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            line-height: 1.4;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        .option-btn .opt-label {
+            background: #e8edf5;
+            color: #0a2a5e;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 2px 12px;
+            border-radius: 30px;
+            flex-shrink: 0;
+            min-width: 32px;
+            text-align: center;
+        }
+        .option-btn:active:not(.disabled-opt) {
+            transform: scale(0.98);
+        }
+        .option-btn:hover:not(.disabled-opt) {
+            border-color: #0a2a5e;
+            background: #f0f4fa;
+        }
+
+        .option-btn.correct {
+            border-color: #34c759;
+            background: #e8f9ed;
+            box-shadow: 0 0 0 3px rgba(52, 199, 89, 0.20);
+        }
+        .option-btn.correct .opt-label {
+            background: #34c759;
+            color: #fff;
+        }
+
+        .option-btn.wrong {
+            border-color: #ff3b30;
+            background: #fde8e6;
+            box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.18);
+        }
+        .option-btn.wrong .opt-label {
+            background: #ff3b30;
+            color: #fff;
+        }
+
+        .option-btn.reveal-correct {
+            border-color: #34c759;
+            background: #e8f9ed;
+        }
+        .option-btn.reveal-correct .opt-label {
+            background: #34c759;
+            color: #fff;
+        }
+
+        .option-btn.disabled-opt {
+            cursor: default;
+            opacity: 0.85;
+        }
+
+        /* ─── FEEDBACK PANEL ─── */
+        .feedback-panel {
+            margin-top: 16px;
+            padding: 14px 18px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.5;
+            display: none;
+        }
+        .feedback-panel.show {
+            display: block;
+        }
+        .feedback-panel.correct {
+            background: #e8f9ed;
+            border: 2px solid #34c759;
+            color: #0a5a1e;
+        }
+        .feedback-panel.wrong {
+            background: #fde8e6;
+            border: 2px solid #ff3b30;
+            color: #7a1a14;
+        }
+        .feedback-panel .fb-title {
+            font-weight: 800;
+            font-size: 17px;
+        }
+        .feedback-panel .fb-explain {
+            margin-top: 4px;
+            font-weight: 500;
+            opacity: 0.85;
+        }
+
+        /* ─── NAVIGATION ─── */
+        .nav-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .nav-left,
+        .nav-right {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background: #f0f4fa;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #0a2a5e;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .btn:active {
+            transform: scale(0.96);
+        }
+        .btn-primary {
+            background: #0a2a5e;
+            color: #b0d4ff;
+            border-color: #0a2a5e;
+        }
+        .btn-primary:hover {
+            background: #1a3a7e;
+        }
+        .btn-primary:disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        .btn-outline {
+            background: transparent;
+            border-color: #d0d8e4;
+        }
+        .btn-outline:hover {
+            background: #e8edf5;
+            border-color: #b0bcc8;
+        }
+        .btn-success {
+            background: #34c759;
+            color: #fff;
+            border-color: #34c759;
+        }
+        .btn-success:hover {
+            background: #2db84e;
+        }
+        .btn-danger {
+            background: #ff3b30;
+            color: #fff;
+            border-color: #ff3b30;
+        }
+        .btn-danger:hover {
+            background: #e6352a;
+        }
+        .btn-gold {
+            background: #ffcc02;
+            color: #0a2a5e;
+            border-color: #ffcc02;
+            font-weight: 800;
+        }
+        .btn-gold:hover {
+            background: #f5c000;
+        }
+        .btn-sm {
+            padding: 6px 14px;
+            font-size: 12px;
+        }
+        .btn:disabled {
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        /* ─── RESULTS ─── */
+        .results-box {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 32px 24px;
+            border: 2px solid #0a2a5e;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(10, 42, 94, 0.10);
+        }
+        .results-box .big-score {
+            font-size: 56px;
+            font-weight: 900;
+            color: #0a2a5e;
+            line-height: 1.1;
+        }
+        .results-box .sub-score {
+            font-size: 20px;
+            font-weight: 700;
+            color: #3a5a7e;
+            margin-top: 4px;
+        }
+        .results-box .detail-msg {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0a2a5e;
+            margin-top: 12px;
+            padding: 8px 16px;
+            background: #f0f4fa;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        .results-box .stars {
+            font-size: 32px;
+            letter-spacing: 6px;
+            margin: 12px 0 18px 0;
+        }
+        .results-box .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        /* ─── HIDDEN ─── */
+        .hidden {
+            display: none !important;
+        }
+
+        /* ─── TOAST ─── */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0a2a5e;
+            color: #b0d4ff;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            text-align: center;
+            max-width: 90%;
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 600px) {
+            .header-plate {
+                padding: 16px 16px 14px 16px;
+            }
+            .header-plate .brand h1 {
+                font-size: 15px;
+            }
+            .header-plate .brand .narayan {
+                font-size: 11px;
+                padding: 3px 10px;
+            }
+            .header-plate .badge-set {
+                font-size: 11px;
+                padding: 4px 12px;
+            }
+            .q-text {
+                font-size: 18px;
+            }
+            .option-btn {
+                font-size: 16px;
+                padding: 12px 14px;
+            }
+            .stats-row {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 6px;
+            }
+            .stat-card .value {
+                font-size: 18px;
+            }
+            .nav-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .nav-left,
+            .nav-right {
+                justify-content: center;
+            }
+            .btn {
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+            .results-box .big-score {
+                font-size: 42px;
+            }
+        }
+        @media (max-width: 400px) {
+            .q-text {
+                font-size: 16px;
+            }
+            .option-btn {
+                font-size: 14px;
+                padding: 10px 12px;
+                gap: 10px;
+            }
+            .stat-card .value {
+                font-size: 16px;
+            }
+            .header-plate .brand h1 {
+                font-size: 13px;
+            }
+        }
+
+        /* ─── ANIMATIONS ─── */
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0.3;
+                transform: translateY(6px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeSlide 0.3s ease;
+        }
+
+        @keyframes shake {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            20%,
+            60% {
+                transform: translateX(-6px);
+            }
+            40%,
+            80% {
+                transform: translateX(6px);
+            }
+        }
+        .shake {
+            animation: shake 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-wrapper" id="app">
+        <!-- ─── HEADER PLATE (Blue bg, light skyblue text) ─── -->
+        <div class="header-plate">
+            <div class="top-row">
+                <div class="brand">
+                    <h1>📊 तथ्याङ्क प्रशोधन र विश्लेषणमा एक्सेल</h1>
+                    <span class="narayan">🙏 Narayan Sir</span>
+                </div>
+                <div class="badge-set">
+                    <span id="qCountDisplay">२५</span> प्रश्न
+                </div>
+            </div>
+            <!-- progress segments -->
+            <div class="progress-strip" id="progressStrip">
+                <!-- 25 segments, will be generated by JS -->
+            </div>
+        </div>
+
+        <!-- ─── STATS ─── -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="label">📝 उत्तर</div>
+                <div class="value" id="answeredCount">0 <small>/ 25</small></div>
+            </div>
+            <div class="stat-card">
+                <div class="label">✅ सही</div>
+                <div class="value" id="correctCount">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">📈 प्रतिशत</div>
+                <div class="value" id="percentDisplay">0%</div>
+            </div>
+        </div>
+
+        <!-- ─── TOAST ─── -->
+        <div class="toast" id="toast"></div>
+
+        <!-- ─── QUIZ VIEW ─── -->
+        <div id="quizView">
+            <div class="question-card fade-in" id="questionCard">
+                <div class="q-header">
+                    <span class="q-number" id="qNumLabel">प्रश्न १</span>
+                    <span class="q-set-tag" id="qSetLabel">एक्सेल</span>
+                </div>
+                <div class="q-text" id="qText">प्रश्न लोड हुँदै…</div>
+                <div class="options-grid" id="optionsGrid"></div>
+                <div class="feedback-panel" id="feedbackPanel">
+                    <div class="fb-title" id="fbTitle">✅ सही!</div>
+                    <div class="fb-explain" id="fbExplain">व्याख्या</div>
+                </div>
+                <div class="nav-row">
+                    <div class="nav-left">
+                        <button class="btn btn-outline" id="prevBtn">◀ अघिल्लो</button>
+                        <button class="btn btn-outline" id="resetBtn">↻ रिसेट</button>
+                    </div>
+                    <div class="nav-right">
+                        <span style="font-size:13px;font-weight:600;color:#7a8a9e;" id="progressLabel">१ / २५</span>
+                        <button class="btn btn-primary" id="nextBtn">पछिल्लो ▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── RESULTS VIEW ─── -->
+        <div id="resultsView" class="hidden">
+            <div class="results-box fade-in">
+                <div class="stars" id="resultStars">⭐⭐⭐</div>
+                <div class="big-score" id="resultScore">०%</div>
+                <div class="sub-score" id="resultSub">० / २५ सही</div>
+                <div class="detail-msg" id="resultMsg">राम्रो प्रयास! 💪</div>
+                <div class="btn-group">
+                    <button class="btn btn-gold" id="resultResetBtn">↻ पुनः सुरु गर्नुहोस्</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="height:12px;"></div>
+    </div>
+
+    <script>
+        // ═══════════════════════════════════════════════════
+        //  DATA — 25 Questions (based on provided MCQs)
+        // ═══════════════════════════════════════════════════
+
+        const ALL_QUESTIONS = [{
+            id: 1,
+            text: 'माइक्रोसफ्ट एक्सेल (Microsoft Excel) कस्तो प्रकारको कम्प्युटर सफ्टवेयर हो?',
+            options: [
+                { label: 'क', text: 'वर्ड प्रोसेसिङ (Word Processing)' },
+                { label: 'ख', text: 'स्प्रेडसिट (Spreadsheet)' },
+                { label: 'ग', text: 'प्रिजेन्टेसन (Presentation)' },
+                { label: 'घ', text: 'डाटाबेस म्यानेजमेन्ट (Database Management)' }
+            ],
+            correct: 1,
+            explain: 'एक्सेल स्प्रेडसिट सफ्टवेयर हो।'
+        }, {
+            id: 2,
+            text: 'एक्सेलमा कुनै पनि गणितीय वा साङ्ख्यिकीय सूत्र (Formula) प्रविष्टि गर्दा सुरुमा अनिवार्य रूपमा कुन चिन्ह प्रयोग गर्नुपर्छ?',
+            options: [
+                { label: 'क', text: '+ (प्लस)' },
+                { label: 'ख', text: '= (बराबर)' },
+                { label: 'ग', text: '* (इन्टु)' },
+                { label: 'घ', text: '/ (डिभाइड)' }
+            ],
+            correct: 1,
+            explain: 'सबै सूत्र = चिन्हले सुरु हुन्छ।'
+        }, {
+            id: 3,
+            text: 'तथ्याङ्कको औसत मान अर्थात् मध्यक (Mean) निकाल्न एक्सेलमा कुन सूत्र (Formula) को प्रयोग गरिन्छ?',
+            options: [
+                { label: 'क', text: '=MEAN(Cell Range)' },
+                { label: 'ख', text: '=SUM(Cell Range)' },
+                { label: 'ग', text: '=AVERAGE(Cell Range)' },
+                { label: 'घ', text: '=TOTAL(Cell Range)' }
+            ],
+            correct: 2,
+            explain: 'AVERAGE ले औसत निकाल्छ।'
+        }, {
+            id: 4,
+            text: '[कुन पर्दैन] तलका मध्ये कुन चाहिँ परिमाणात्मक (Quantitative) तथ्याङ्क प्रशोधन गर्ने सफ्टवेयर अन्तर्गत पर्दैन?',
+            options: [
+                { label: 'क', text: 'IBM SPSS Statistics' },
+                { label: 'ख', text: 'Stata' },
+                { label: 'ग', text: 'ATLAS.ti (यो गुणात्मक तथ्याङ्क प्रशोधन गर्ने सफ्टवेयर हो)' },
+                { label: 'घ', text: 'OriginPro' }
+            ],
+            correct: 2,
+            explain: 'ATLAS.ti गुणात्मक तथ्याङ्कको लागि हो, परिमाणात्मक होइन।'
+        }, {
+            id: 5,
+            text: 'तथ्याङ्कको मध्यिका (Median) गणना गर्न माइक्रोसफ्ट एक्सेलमा प्रयोग गरिने सही सूत्र कुन हो?',
+            options: [
+                { label: 'क', text: '=MED(Cell Range)' },
+                { label: 'ख', text: '=MIDDLE(Cell Range)' },
+                { label: 'ग', text: '=MID(Cell Range)' },
+                { label: 'घ', text: '=MEDIAN(Cell Range)' }
+            ],
+            correct: 3,
+            explain: 'MEDIAN ले मध्यिका दिन्छ।'
+        }, {
+            id: 6,
+            text: '[कुन पर्दैन] गुणात्मक तथ्याङ्क (Qualitative Data) प्रशोधन र विश्लेषण गर्ने सफ्टवेयर अन्तर्गत तलका मध्ये कुन पर्दैन?',
+            options: [
+                { label: 'क', text: 'NVivo' },
+                { label: 'ख', text: 'Quirkos' },
+                { label: 'ग', text: 'MAXQDA' },
+                { label: 'घ', text: 'TiMi Suite (यो परिमाणात्मक तथ्याङ्क प्रशोधन गर्ने सफ्टवेयर हो)' }
+            ],
+            correct: 3,
+            explain: 'TiMi Suite परिमाणात्मक हो, गुणात्मक होइन।'
+        }, {
+            id: 7,
+            text: 'एक्सेलमा तथ्याङ्कको बहुलक वा रित (Mode) गणना गर्न प्रयोग गरिने सही सूत्र कुन हो?',
+            options: [
+                { label: 'क', text: '=MODE(Cell Range)' },
+                { label: 'ख', text: '=MOD(Cell Range)' },
+                { label: 'ग', text: '=RI(Cell Range)' },
+                { label: 'घ', text: '=MOST(Cell Range)' }
+            ],
+            correct: 0,
+            explain: 'MODE ले बहुलक निकाल्छ।'
+        }, {
+            id: 8,
+            text: 'एक्सेलमा स्तरीय भिन्नता (Standard Deviation) निकाल्न तलका मध्ये कुन सूत्र प्रयोग गरिन्छ?',
+            options: [
+                { label: 'क', text: '=STDEV(Cell Range)' },
+                { label: 'ख', text: '=SD(Cell Range)' },
+                { label: 'ग', text: '=STDEVA(Cell Range)' },
+                { label: 'घ', text: '=VAR(Cell Range)' }
+            ],
+            correct: 0,
+            explain: 'STDEV ले स्तरीय भिन्नता निकाल्छ।'
+        }, {
+            id: 9,
+            text: '[कुन पर्छ] पुस्तकको पाना ३९ अनुसार माइक्रोसफ्ट एक्सेल कस्ता सञ्चालन प्रणाली (Operating System) का लागि उपलब्ध छ?',
+            options: [
+                { label: 'क', text: 'विन्डोज (Windows) का लागि मात्र' },
+                { label: 'ख', text: 'विन्डोज, म्याक, एन्ड्रोइड र आईओएस (Windows, macOS, Android, iOS)' },
+                { label: 'ग', text: 'लिनक्स (Linux) का लागि मात्र' },
+                { label: 'घ', text: 'एमएस डस (MS-DOS) का लागि मात्र' }
+            ],
+            correct: 1,
+            explain: 'एक्सेल धेरै प्लेटफर्ममा उपलब्ध छ।'
+        }, {
+            id: 10,
+            text: 'तथ्याङ्कशास्त्रमा मध्यक (Mean) निकाल्ने गणितीय सूत्र \\(\\bar{X} = \\frac{\\sum X}{n}\\) हो भने एक्सेलमा यसलाई गणना गर्न कुन विकल्प प्रयोग गरिन्छ?',
+            options: [
+                { label: 'क', text: '=TOTAL(Cell Range)' },
+                { label: 'ख', text: '=AVERAGE(Cell Range)' },
+                { label: 'ग', text: '=SUM(Cell Range)' },
+                { label: 'घ', text: '=DIVIDE(Cell Range)' }
+            ],
+            correct: 1,
+            explain: 'AVERAGE ले औसत निकाल्छ।'
+        }, {
+            id: 11,
+            text: 'एक्सेलमा कुनै सेल रेन्ज (Cell Range) चयन गर्नका लागि दुईवटा सेलको नाम बीचमा कुन चिन्ह (Separator) प्रयोग गरिन्छ?',
+            options: [
+                { label: 'क', text: ', (कमा)' },
+                { label: 'ख', text: '; (सेमिकोलन)' },
+                { label: 'ग', text: ': (कोलोन)' },
+                { label: 'घ', text: '- (हाइफन)' }
+            ],
+            correct: 2,
+            explain: 'रेन्जको लागि : (colon) प्रयोग गरिन्छ।'
+        }, {
+            id: 12,
+            text: '[कुन पर्छ] गुणात्मक तथ्याङ्क (Qualitative Data) विश्लेषण गर्ने डिजिटल सफ्टवेयर अन्तर्गत तलका मध्ये कुन पर्दछ?',
+            options: [
+                { label: 'क', text: 'IBM SPSS Statistics' },
+                { label: 'ख', text: 'OriginPro' },
+                { label: 'ग', text: 'Dedoose' },
+                { label: 'घ', text: 'TiMi Suite' }
+            ],
+            correct: 2,
+            explain: 'Dedoose गुणात्मक विश्लेषणको लागि हो।'
+        }, {
+            id: 13,
+            text: 'तथ्याङ्क प्रशोधनमा प्रयोग हुने \'स्तरीय भिन्नता\' (Standard Deviation) ले मुख्यतया के मापन गर्छ?',
+            options: [
+                { label: 'क', text: 'तथ्याङ्कको कुल योगफल' },
+                { label: 'ख', text: 'तथ्याङ्कको सबैभन्दा ठुलो संख्या' },
+                { label: 'ग', text: 'तथ्याङ्कको औसत संख्या' },
+                { label: 'घ', text: 'तथ्याङ्कका मानहरू मध्यक (Mean) बाट कति टाढा वा नजिक छन्' }
+            ],
+            correct: 3,
+            explain: 'SD ले मध्यकको वरिपरि फैलावट मापन गर्छ।'
+        }, {
+            id: 14,
+            text: 'एक्सेल विन्डोको कोलम र रो भन्दा ठीक माथि रहेको पट्टी जहाँ हामीले टाइप गरेको सूत्र वा मान देखिन्छ, त्यसलाई के भनिन्छ?',
+            options: [
+                { label: 'क', text: 'Status Bar' },
+                { label: 'ख', text: 'Title Bar' },
+                { label: 'ग', text: 'Menu Bar' },
+                { label: 'घ', text: 'Formula Bar' }
+            ],
+            correct: 3,
+            explain: 'Formula Bar मा सूत्र वा मान देखिन्छ।'
+        }, {
+            id: 15,
+            text: 'माइक्रोसफ्ट एक्सेल खोल्न विन्डोज (Windows) को स्टार्ट मेनु (Start Menu) पछि कुन विकल्पमा जानुपर्छ?',
+            options: [
+                { label: 'क', text: 'All Programs' },
+                { label: 'ख', text: 'All Documents' },
+                { label: 'ग', text: 'Accessories' },
+                { label: 'घ', text: 'Control Panel' }
+            ],
+            correct: 0,
+            explain: 'Start Menu → All Programs → Microsoft Excel'
+        }, {
+            id: 16,
+            text: 'एक्सेलमा तथ्याङ्क प्रविष्टि गरिसकेपछि गणितीय विश्लेषणका सूत्रहरू राख्न मुख्य रूपमा कता जान सकिन्छ?',
+            options: [
+                { label: 'क', text: 'Formulas Bar मा गई More Functions भित्र Statistical मा' },
+                { label: 'ख', text: 'Home Bar मा गई Font Style मा' },
+                { label: 'ग', text: 'View Bar मा गई Zoom Option मा' },
+                { label: 'घ', text: 'Review Bar मा गई Translate मा' }
+            ],
+            correct: 0,
+            explain: 'Formulas → More Functions → Statistical मा जान्छौं।'
+        }, {
+            id: 17,
+            text: 'माइक्रोसफ्ट एक्सेलको एउटा पाना (Sheet) मा रहेका ठाडो कोठाहरू (Columns) र तेर्सो कोठाहरू (Rows) काटिएर बनेको आयातकार कोठालाई के भनिन्छ?',
+            options: [
+                { label: 'क', text: 'कोलम (Column)' },
+                { label: 'ख', text: 'सेल (Cell)' },
+                { label: 'ग', text: 'रो (Row)' },
+                { label: 'घ', text: 'सिट (Sheet)' }
+            ],
+            correct: 1,
+            explain: 'Cell भनेको आयातकार कोठा हो।'
+        }, {
+            id: 18,
+            text: '[कुन पर्छ] परिमाणात्मक तथ्याङ्क प्रशोधन गर्नका लागि हाल विश्वभरि सबैभन्दा बढी लोकप्रिय र सर्वसुलभ सफ्टवेयर तलका मध्ये कुन हो?',
+            options: [
+                { label: 'क', text: 'NVivo' },
+                { label: 'ख', text: 'Microsoft Excel' },
+                { label: 'ग', text: 'Quirkos' },
+                { label: 'घ', text: 'Transana' }
+            ],
+            correct: 1,
+            explain: 'Excel सबैभन्दा लोकप्रिय र सर्वसुलभ हो।'
+        }, {
+            id: 19,
+            text: '[कुन पर्दैन] गुणात्मक तथ्याङ्क प्रशोधन गर्ने सफ्टवेयर अन्तर्गत तलका मध्ये कुन जोडी पर्दैन?',
+            options: [
+                { label: 'क', text: 'ATLAS.ti र NVivo' },
+                { label: 'ख', text: 'Quirkos र MAXQDA' },
+                { label: 'ग', text: 'RStudio र IBM SPSS Statistics (यी दुवै परिमाणात्मक तथ्याङ्कका सफ्टवेयर हुन्)' },
+                { label: 'घ', text: 'Dedoose र Transana' }
+            ],
+            correct: 2,
+            explain: 'RStudio र SPSS परिमाणात्मक हुन्, गुणात्मक होइनन्।'
+        }, {
+            id: 20,
+            text: 'एक्सेलमा `=MEDIAN(B2:B11)` सूत्र प्रविष्टि गरी Enter थिच्दा के परिणाम प्राप्त हुन्छ?',
+            options: [
+                { label: 'क', text: 'छनोट गरिएका तथ्याङ्कको कुल जोड' },
+                { label: 'ख', text: 'छनोट गरिएका तथ्याङ्कको औसत मान' },
+                { label: 'ग', text: 'छनोट गरिएका तथ्याङ्कको मध्यिका मान' },
+                { label: 'घ', text: 'छनोट गरिएका तथ्याङ्कको बहुलक वा रित' }
+            ],
+            correct: 2,
+            explain: 'MEDIAN ले मध्यिका दिन्छ।'
+        }, {
+            id: 21,
+            text: '[कुन पर्दैन] तथ्याङ्क प्रशोधन र विश्लेषणमा कम्प्युटर सफ्टवेयरको प्रयोग गर्नुका फाइदाहरूमा तलको कुन कुरा पर्दैन?',
+            options: [
+                { label: 'क', text: 'समय र श्रमको अत्यधिक बचत हुनु' },
+                { label: 'ख', text: 'मानवीय त्रुटिरहित र सही परिणाम प्राप्त हुनु' },
+                { label: 'ग', text: 'ठुलो परिमाणको तथ्याङ्क सजिलै व्यवस्थापन हुनु' },
+                { label: 'घ', text: 'तथ्याङ्क सङ्कलन गर्ने कार्य पूर्ण रूपमा स्वचालित हुनु' }
+            ],
+            correct: 3,
+            explain: 'सफ्टवेयरले सङ्कलन स्वचालित गर्दैन, विश्लेषण मात्र।'
+        }, {
+            id: 22,
+            text: '[कुन पर्छ] परिमाणात्मक तथ्याङ्क प्रशोधन गर्ने सफ्टवेयरहरू मात्र रहेको सही समूह कुन हो?',
+            options: [
+                { label: 'क', text: 'NVivo, ATLAS.ti, Quirkos' },
+                { label: 'ख', text: 'MAXQDA, Dedoose, Raven\'s Eye' },
+                { label: 'ग', text: 'Transana, Datagrav, NVivo' },
+                { label: 'घ', text: 'IBM SPSS, RStudio, Stata' }
+            ],
+            correct: 3,
+            explain: 'SPSS, RStudio, Stata सबै परिमाणात्मक हुन्।'
+        }, {
+            id: 23,
+            text: 'तथ्याङ्कको बहुलक वा रित (Mode) भन्नाले के बुझिन्छ?',
+            options: [
+                { label: 'क', text: 'तथ्याङ्कभित्र सबैभन्दा बढी दोहोरिएको वा सबैभन्दा बढी बारम्बारता भएको मान' },
+                { label: 'ख', text: 'तथ्याङ्कको कुल योगफललाई संख्याले भाग गर्दा आउने मान' },
+                { label: 'ग', text: 'तथ्याङ्कलाई क्रमबद्ध रूपमा राख्दा ठिक बीचमा पर्ने मान' },
+                { label: 'घ', text: 'तथ्याङ्कको सुरुको र अन्तिम मानको अन्तर' }
+            ],
+            correct: 0,
+            explain: 'Mode सबैभन्दा बढी दोहोरिएको मान हो।'
+        }, {
+            id: 24,
+            text: 'पाठ्यपुस्तकको पाना ३९ मा उल्लेख भए अनुसार, विन्डोजमा एक्सेल खोल्ने तरिकाको सही क्रम कुन हो?',
+            options: [
+                { label: 'क', text: 'Start Menu -> All Programs -> Microsoft Excel' },
+                { label: 'ख', text: 'Start Menu -> Control Panel -> Microsoft Excel' },
+                { label: 'ग', text: 'Start Menu -> Run -> Word -> Microsoft Excel' },
+                { label: 'घ', text: 'Desktop Right Click -> New -> MS Word' }
+            ],
+            correct: 0,
+            explain: 'सही क्रम: Start → All Programs → Microsoft Excel'
+        }, {
+            id: 25,
+            text: 'गुणात्मक तथ्याङ्क (Qualitative Data) विश्लेषणका लागि सफ्टवेयर प्रयोग गर्दा मुख्यतया कुन कार्य गरिन्छ?',
+            options: [
+                { label: 'क', text: 'मध्यक, मध्यिका र स्तरीय भिन्नता गणना गर्ने' },
+                { label: 'ख', text: 'कोड (Code) र उद्धरण (Quotation) निकाली सञ्जाल (Network) बनाउने' },
+                { label: 'ग', text: 'बार चार्ट र हिस्टोग्राम जस्ता ग्राफ निर्माण गर्ने' },
+                { label: 'घ', text: 'गणितीय र साङ्ख्यिकीय परीक्षण गर्ने' }
+            ],
+            correct: 1,
+            explain: 'गुणात्मक विश्लेषणमा कोडिङ र नेटवर्क बनाइन्छ।'
+        }];
+
+        // ─── STATE ────────────────────────────────────────
+        let currentIndex = 0;
+        let answers = {}; // { questionId: selectedIndex }
+        let revealed = {}; // { questionId: true }
+        let isAnswering = false;
+        let autoTimer = null;
+
+        // DOM refs
+        const qText = document.getElementById('qText');
+        const qNumLabel = document.getElementById('qNumLabel');
+        const qSetLabel = document.getElementById('qSetLabel');
+        const optionsGrid = document.getElementById('optionsGrid');
+        const feedbackPanel = document.getElementById('feedbackPanel');
+        const fbTitle = document.getElementById('fbTitle');
+        const fbExplain = document.getElementById('fbExplain');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const progressLabel = document.getElementById('progressLabel');
+        const progressStrip = document.getElementById('progressStrip');
+        const answeredCount = document.getElementById('answeredCount');
+        const correctCount = document.getElementById('correctCount');
+        const percentDisplay = document.getElementById('percentDisplay');
+        const quizView = document.getElementById('quizView');
+        const resultsView = document.getElementById('resultsView');
+        const resultScore = document.getElementById('resultScore');
+        const resultSub = document.getElementById('resultSub');
+        const resultMsg = document.getElementById('resultMsg');
+        const resultStars = document.getElementById('resultStars');
+        const resultResetBtn = document.getElementById('resultResetBtn');
+
+        // ─── INIT PROGRESS STRIP ─────────────────────────
+        function initProgress() {
+            const total = ALL_QUESTIONS.length;
+            progressStrip.innerHTML = '';
+            for (let i = 0; i < total; i++) {
+                const seg = document.createElement('div');
+                seg.className = 'seg';
+                seg.dataset.idx = i;
+                progressStrip.appendChild(seg);
+            }
+        }
+        initProgress();
+
+        // ─── UPDATE PROGRESS ─────────────────────────────
+        function updateProgress() {
+            const segs = progressStrip.querySelectorAll('.seg');
+            segs.forEach((seg, i) => {
+                const q = ALL_QUESTIONS[i];
+                seg.className = 'seg';
+                if (answers[q.id] !== undefined) {
+                    if (answers[q.id] === q.correct) {
+                        seg.classList.add('done');
+                    } else {
+                        seg.classList.add('wrong');
+                    }
+                }
+                if (i === currentIndex && answers[q.id] === undefined) {
+                    seg.classList.add('active');
+                }
+            });
+        }
+
+        // ─── UPDATE STATS ─────────────────────────────────
+        function updateStats() {
+            const total = ALL_QUESTIONS.length;
+            const answered = ALL_QUESTIONS.filter(q => answers[q.id] !== undefined).length;
+            const correct = ALL_QUESTIONS.filter(q => answers[q.id] === q.correct).length;
+            const pct = answered ? Math.round((correct / answered) * 100) : 0;
+
+            answeredCount.innerHTML = `${answered} <small>/ ${total}</small>`;
+            correctCount.textContent = correct;
+            percentDisplay.textContent = pct + '%';
+        }
+
+        // ─── SHOW TOAST ──────────────────────────────────
+        function showToast(msg, dur) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            clearTimeout(t._timer);
+            t._timer = setTimeout(() => t.classList.remove('show'), dur || 1800);
+        }
+
+        // ─── RENDER QUESTION ─────────────────────────────
+        function renderQuestion() {
+            const q = ALL_QUESTIONS[currentIndex];
+            if (!q) return;
+
+            qNumLabel.textContent = `प्रश्न ${q.id}`;
+            qSetLabel.textContent = 'एक्सेल';
+            qText.textContent = q.text;
+
+            optionsGrid.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.dataset.idx = idx;
+                const isAnswered = answers[q.id] !== undefined;
+                const selected = answers[q.id] === idx;
+                const isCorrect = idx === q.correct;
+                const showReveal = revealed[q.id] && isCorrect;
+
+                if (isAnswered) {
+                    btn.classList.add('disabled-opt');
+                    if (selected && isCorrect) btn.classList.add('correct');
+                    else if (selected && !isCorrect) btn.classList.add('wrong');
+                    else if (showReveal || (revealed[q.id] && isCorrect)) btn.classList.add('reveal-correct');
+                }
+
+                btn.innerHTML = `<span class="opt-label">${opt.label}</span> ${opt.text}`;
+                btn.addEventListener('click', () => handleOptionClick(q, idx));
+                optionsGrid.appendChild(btn);
+            });
+
+            // feedback
+            if (answers[q.id] !== undefined) {
+                const isCorrect = answers[q.id] === q.correct;
+                feedbackPanel.className = 'feedback-panel show ' + (isCorrect ? 'correct' : 'wrong');
+                fbTitle.textContent = isCorrect ? '✅ सही!' : '❌ गलत!';
+                fbExplain.textContent = q.explain;
+            } else {
+                feedbackPanel.className = 'feedback-panel';
+            }
+
+            progressLabel.textContent = `${currentIndex+1} / ${ALL_QUESTIONS.length}`;
+            updateProgress();
+            updateStats();
+
+            // scroll to top of card on mobile
+            document.getElementById('questionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // update nav buttons
+            prevBtn.disabled = currentIndex === 0;
+            // next button disabled if current question not answered? We'll allow clicking next only if answered or if it's the last
+            // We'll handle logic in next click
+        }
+
+        // ─── HANDLE OPTION CLICK ─────────────────────────
+        function handleOptionClick(q, idx) {
+            if (isAnswering) return;
+            if (answers[q.id] !== undefined) {
+                showToast('यो प्रश्नको जवाफ दिइसकियो।');
+                return;
+            }
+            isAnswering = true;
+            answers[q.id] = idx;
+            revealed[q.id] = true;
+
+            const isCorrect = idx === q.correct;
+
+            // re-render question with feedback
+            renderQuestion();
+
+            // Show toast feedback
+            showToast(isCorrect ? '✅ सही उत्तर!' : '❌ गलत! सही उत्तर हेर्नुहोस्।', 1200);
+
+            // auto advance after 1.5 seconds
+            clearTimeout(autoTimer);
+            autoTimer = setTimeout(() => {
+                if (currentIndex < ALL_QUESTIONS.length - 1) {
+                    // find next unanswered if any, else go to next sequential
+                    let nextIdx = currentIndex + 1;
+                    // If there are unanswered questions after current, go to the first unanswered
+                    for (let i = nextIdx; i < ALL_QUESTIONS.length; i++) {
+                        if (answers[ALL_QUESTIONS[i].id] === undefined) {
+                            nextIdx = i;
+                            break;
+                        }
+                    }
+                    // If all remaining are answered, just go to next sequential (but they'll be answered)
+                    currentIndex = nextIdx;
+                    renderQuestion();
+                } else {
+                    // all questions done? check if all answered
+                    const allAnswered = ALL_QUESTIONS.every(qq => answers[qq.id] !== undefined);
+                    if (allAnswered) {
+                        showResults();
+                    } else {
+                        // move to next unanswered
+                        const nextUnanswered = ALL_QUESTIONS.findIndex(qq => answers[qq.id] === undefined);
+                        if (nextUnanswered !== -1) {
+                            currentIndex = nextUnanswered;
+                            renderQuestion();
+                        } else {
+                            showResults();
+                        }
+                    }
+                }
+                isAnswering = false;
+            }, 1500);
+        }
+
+        // ─── SHOW RESULTS ─────────────────────────────────
+        function showResults() {
+            quizView.classList.add('hidden');
+            resultsView.classList.remove('hidden');
+
+            const total = ALL_QUESTIONS.length;
+            const correct = ALL_QUESTIONS.filter(q => answers[q.id] === q.correct).length;
+            const pct = Math.round((correct / total) * 100);
+
+            resultScore.textContent = pct + '%';
+            resultSub.textContent = `${correct} / ${total} सही`;
+
+            let msg = '';
+            let stars = '';
+            if (pct === 100) { msg = '🌟 उत्कृष्ट! सबै सही!';
+                stars = '⭐⭐⭐⭐⭐'; } else if (pct >= 80) { msg = '👏 धेरै राम्रो!';
+                stars = '⭐⭐⭐⭐'; } else if (pct >= 60) { msg = '💪 राम्रो प्रयास! अझ सुधार गर्नुहोस्।';
+                stars = '⭐⭐⭐'; } else if (pct >= 40) { msg = '📖 अभ्यास जारी राख्नुहोस्!';
+                stars = '⭐⭐'; } else { msg = '🔄 पुनः प्रयास गर्नुहोस्!';
+                stars = '⭐'; }
+            resultMsg.textContent = msg;
+            resultStars.textContent = stars;
+
+            // reset button
+            resultResetBtn.onclick = resetAll;
+        }
+
+        // ─── RESET ALL ──────────────────────────────────
+        function resetAll() {
+            answers = {};
+            revealed = {};
+            currentIndex = 0;
+            isAnswering = false;
+            clearTimeout(autoTimer);
+            resultsView.classList.add('hidden');
+            quizView.classList.remove('hidden');
+            renderQuestion();
+            showToast('सबै रिसेट गरियो, फेरि सुरु गर्नुहोस्!');
+        }
+
+        // ─── NAVIGATION ──────────────────────────────────
+        prevBtn.addEventListener('click', () => {
+            if (isAnswering) return;
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderQuestion();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (isAnswering) return;
+            const q = ALL_QUESTIONS[currentIndex];
+            if (answers[q.id] === undefined) {
+                showToast('कृपया पहिले यो प्रश्नको उत्तर दिनुहोस्।');
+                return;
+            }
+            if (currentIndex < ALL_QUESTIONS.length - 1) {
+                // go to next unanswered if any, else just next
+                let nextIdx = currentIndex + 1;
+                for (let i = nextIdx; i < ALL_QUESTIONS.length; i++) {
+                    if (answers[ALL_QUESTIONS[i].id] === undefined) {
+                        nextIdx = i;
+                        break;
+                    }
+                }
+                currentIndex = nextIdx;
+                renderQuestion();
+            } else {
+                // last question, if all answered show results else stay
+                const allAnswered = ALL_QUESTIONS.every(qq => answers[qq.id] !== undefined);
+                if (allAnswered) {
+                    showResults();
+                } else {
+                    showToast('अझै केही प्रश्नहरू बाँकी छन्, कृपया उत्तर दिनुहोस्।');
+                }
+            }
+        });
+
+        resetBtn.addEventListener('click', resetAll);
+
+        // ─── INIT ──────────────────────────────────────────
+        renderQuestion();
+        showToast('🙏 Narayan Sir – एक्सेल तथ्याङ्क प्रशोधन MCQ', 2000);
+    </script>
+
+</body>
+</html>
