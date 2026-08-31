@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ २, पाठ ८ – माइक्रोसफ्ट एक्सेल प्रयोग (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f5efe8;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fdfaf5;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.12);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #b8a99a;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #c4450c;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1f7a4a;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #a0522d;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1a5a3a;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #2a7a5a;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS - DEEP GREEN ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #fff;
+            background: #1a5a3a;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #1a5a3a;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #f5d742;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; }
+        .section-head .mark-badge.green { background: #7dcea0; }
+        .section-head .mark-badge.purple { background: #b39ddb; }
+        .section-head .mark-badge.blue { background: #81d4fa; }
+        .section-head .mark-badge.pink { background: #f48fb1; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #1a3a5c;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #c4450c;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #c4450c;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a3a5c;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #c4450c;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.blue-highlight {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-highlight {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-highlight {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-highlight {
+            border-left-color: #6b3fa0;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-highlight {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-highlight {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-highlight {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1a5a3a;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #c4450c;
+        }
+
+        .qa-block.color1 { border-left-color: #c4450c; background: #fcf9f5; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #c4450c;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #1a5a3a;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1a5a3a;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #c4450c;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(196, 69, 12, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #a0360a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(196, 69, 12, 0.55);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #c9bdb0;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #c4450c;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #c9bdb0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1a5a3a;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-file-excel"></i>
+                    एकाइ २, पाठ ८: तथ्याङ्क प्रशोधन र विश्लेषणमा माइक्रोसफ्ट एक्सेलको प्रयोग
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> पूर्ण शैक्षिक नोट</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ २, पाठ ८
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक (रजिस्टर) शब्दहरू
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> स्प्रेडसिट (Spreadsheet)</strong>
+                <p>तथ्याङ्क तथा सूचनाहरूलाई रो (Rows) र कोलम (Columns) को ढाँचामा व्यवस्थित गरी साङ्ख्यिकीय गणना, विश्लेषण, र चार्ट निर्माण गर्न प्रयोग गरिने डिजिटल तालिका वा सफ्टवेयर <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> रो (Row)</strong>
+                <p>स्प्रेडसिटमा तेर्सो रूपमा रहेका कोठाहरूको लहर, जसलाई १, २, ३ आदि अङ्कहरूद्वारा जनाइन्छ <span class="ref">[४]</span>। एक्सेलमा कुल <strong>१०,४८,५७६</strong> वटा रोहरू हुन्छन् <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> कोलम (Column)</strong>
+                <p>स्प्रेडसिटमा ठाडो रूपमा रहेका कोठाहरूको लहर, जसलाई A, B, C आदि अक्षरहरूद्वारा जनाइन्छ <span class="ref">[४]</span>। एक्सेलमा कुल <strong>१६,३८४</strong> वटा कोलमहरू हुन्छन् <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> सेल (Cell)</strong>
+                <p>रो र कोलम काटिएर बन्ने स्प्रेडसिटको साना वर्गाकार वा आयातकार कोठा, जहाँ तथ्याङ्क वा सूत्रहरू प्रविष्टि गरिन्छ <span class="ref">[४]</span>। प्रत्येक सेलको आफ्नै विशिष्ट नाम (Cell Address) हुन्छ, जस्तै: A1, B2 <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> मध्यक (Mean / Average)</strong>
+                <p>सङ्कलन गरिएका तथ्याङ्कहरूको योगफललाई कुल सङ्ख्याले भाग गर्दा आउने औषत मान <span class="ref">[४]</span>। $\bar{X}$ ले जनाइन्छ <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> मध्यिका (Median)</strong>
+                <p>तथ्याङ्कहरूलाई बढ्दो वा घट्दो क्रममा मिलाएर राख्दा ठीक बीचमा पर्ने मान <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> रित / बहुलक (Mode)</strong>
+                <p>दिएको तथ्याङ्क श्रेणीमा सबैभन्दा बढी पटक दोहोरिएको वा सबैभन्दा बढी आवृत्ति (Frequency) भएको मान <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> स्तरीय भिन्नता (Standard Deviation)</strong>
+                <p>तथ्याङ्क समूहका मानहरू मध्यक (Mean) बाट कति टाढा वा नजिक छरिएर रहेका छन् भनी मापन गर्ने साङ्ख्यिकीय सूचक <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> सेल रेन्ज (Cell Range)</strong>
+                <p>गणनाका लागि छानिएका निश्चित सेलहरूको समूह, जसलाई सुरुको सेल र अन्तिम सेलको बीचमा कोलोन (:) चिन्ह राखेर जनाइन्छ, जस्तै: `B2:B11` <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1a5a3a; margin-right:4px;"></i> फर्मुला बार (Formula Bar)</strong>
+                <p>एक्सेल विन्डोको माथिल्लो भागमा रहेको क्षेत्र, जहाँ सक्रिय सेलमा प्रविष्टि गरिएको तथ्याङ्क, अक्षर वा सूत्र (Formula) देखिन्छ <span class="ref">[४]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "माइक्रोसफ्ट एक्सेलको प्रयोग" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. परिचय र संरचना -->
+        <div class="sub-head"><i class="fas fa-table"></i> १. माइक्रोसफ्ट एक्सेलको परिचय र आधारभूत संरचना</div>
+
+        <div class="content-box blue-highlight">
+            <p><strong>परिचय:</strong> माइक्रोसफ्ट एक्सेल (MS Excel) माइक्रोसफ्ट कम्पनीद्वारा विकसित एक अत्यन्तै लोकप्रिय र शक्तिशाली स्प्रेडसिट सफ्टवेयर हो <span class="ref">[४]</span>। यसको प्रयोग विभिन्न परिमाणात्मक तथ्याङ्कहरूको प्रविष्टि गर्न, साङ्ख्यिकीय गणना गर्न, र ग्राफ/चार्टहरू निर्माण गर्न विश्वभर व्यापक रूपमा गरिन्छ <span class="ref">[४]</span>।</p>
+            <p><strong>एक्सेल सिटको संरचना <span class="ref">[४]</span>:</strong></p>
+            <ul>
+                <li><strong>कोलम (Columns):</strong> १६,३८४ वटा (ठाडो लहरहरू) <span class="ref">[४]</span>।</li>
+                <li><strong>रो (Rows):</strong> १०,४८,५७६ वटा (तेर्सो लहरहरू) <span class="ref">[४]</span>।</li>
+                <li><strong>सेल (Cells):</strong> कोलम र रोको मिलन बिन्दु। कुल सेल संख्या = १६,३८४ × १०,४८,५७६ <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- २. एक्सेल खोल्ने विधि -->
+        <div class="sub-head"><i class="fas fa-folder-open"></i> २. माइक्रोसफ्ट एक्सेल खोल्ने चरणबद्ध विधि <span class="ref">[४]</span></div>
+
+        <div class="content-box green-highlight">
+            <p><strong>विधि १ (स्टार्ट मेनुबाट) <span class="ref">[४]</span>:</strong></p>
+            <ol>
+                <li>कम्प्युटर स्क्रिनको बायाँ कुनामा रहेको <strong>Start Menu</strong> मा क्लिक गर्ने <span class="ref">[४]</span>।</li>
+                <li>त्यसपछि <strong>All Programs</strong> (वा All Apps) मा जाने <span class="ref">[४]</span>।</li>
+                <li>त्यहाँ रहेको <strong>Microsoft Office</strong> भित्र गई <strong>Microsoft Excel</strong> मा क्लिक गर्ने <span class="ref">[४]</span>।</li>
+            </ol>
+            <p><strong>विधि २ (टास्कबार वा रन कमान्डबाट) <span class="ref">[४]</span>:</strong></p>
+            <ol>
+                <li>यदि टास्कबारमा एक्सेलको सर्टकट आइकन भएमा त्यसमा सिधै क्लिक गर्ने <span class="ref">[४]</span>।</li>
+                <li>अथवा, कीबोर्डमा <strong>Windows + R</strong> थिचेर Run Box मा <strong>excel</strong> टाइप गरी Enter थिच्ने।</li>
+            </ol>
+        </div>
+
+        <!-- ३. सूत्र प्रयोगका नियम -->
+        <div class="sub-head"><i class="fas fa-calculator"></i> ३. एक्सेलमा तथ्याङ्क प्रविष्टि र सूत्र प्रयोगका आधारभूत नियमहरू</div>
+
+        <div class="content-box purple-highlight">
+            <ul>
+                <li><strong>तथ्याङ्क प्रविष्टि (Data Entry):</strong> एक्सेल खोल्ने बित्तिकै उपलब्ध हुने ग्रिडलाइन कोठाहरूमा माउसको क्लिक वा कीबोर्डको एरो की (Arrow Key) प्रयोग गरेर सजिलै सङ्ख्या वा अक्षर टाइप गर्न सकिन्छ <span class="ref">[४]</span>।</li>
+                <li><strong>बराबर चिन्ह (=) को अनिवार्यता:</strong> एक्सेलमा कुनै पनि गणितीय वा साङ्ख्यिकीय गणना गर्न सूत्र (Formula) प्रयोग गर्नुअघि सेलमा <strong>बराबर चिन्ह (=)</strong> अनिवार्य रूपमा टाइप गर्नुपर्छ <span class="ref">[४]</span>। बराबर चिन्ह विना एक्सेलले सूत्रलाई सामान्य अक्षरको रूपमा मात्र बुझ्दछ <span class="ref">[४]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ४. साङ्ख्यिकीय सूत्र तुलना -->
+        <div class="sub-head"><i class="fas fa-table"></i> ४. साङ्ख्यिकीय मानहरूको गणितीय र एक्सेल सूत्रको तुलनात्मक तालिका</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: गणितीय सूत्र र एक्सेल सूत्रको तुलना <span class="ref">[४]</span></div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:18%;">साङ्ख्यिकीय विधा</th>
+                        <th style="width:32%;">गणितीय अवधारणा र सूत्र <span class="ref">[४]</span></th>
+                        <th style="width:25%;">एक्सेल सूत्र <span class="ref">[४]</span></th>
+                        <th style="width:25%;">उदाहरण (B2:B11)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>मध्यक (Mean)</strong></td>
+                        <td>$\bar{X} = \frac{\sum X}{n}$ <span class="ref">[४]</span></td>
+                        <td><code>=AVERAGE(Cell Range)</code> <span class="ref">[४]</span></td>
+                        <td><code>=AVERAGE(B2:B11)</code> <span class="ref">[४]</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>मध्यिका (Median)</strong></td>
+                        <td>क्रमबद्ध गरी ठीक बीचको मान <span class="ref">[४]</span></td>
+                        <td><code>=MEDIAN(Cell Range)</code> <span class="ref">[४]</span></td>
+                        <td><code>=MEDIAN(B2:B11)</code> <span class="ref">[४]</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>रित (Mode)</strong></td>
+                        <td>सबैभन्दा धेरै दोहोरिएको मान <span class="ref">[४]</span></td>
+                        <td><code>=MODE(Cell Range)</code> <span class="ref">[४]</span></td>
+                        <td><code>=MODE(B2:B11)</code> <span class="ref">[४]</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>स्तरीय भिन्नता (Standard Deviation)</strong></td>
+                        <td>$S = \sqrt{\frac{\sum(X-\bar{X})^2}{n-1}}$ <span class="ref">[४]</span></td>
+                        <td><code>=STDEV(Cell Range)</code> <span class="ref">[४]</span></td>
+                        <td><code>=STDEV(B2:B11)</code> <span class="ref">[४]</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-chart-bar"></i> क्रियाकलाप १: कक्षाको आन्तरिक परीक्षाको प्राप्ताङ्क प्रशोधन</div>
+
+        <div class="content-box pink-highlight">
+            <p><strong>प्रश्न:</strong> एउटा माइक्रोसफ्ट एक्सेल फाइल खोल्नुहोस्। त्यसमा कम्तीमा १० वटा Rows र पाँचवटा Columns मा तपाईंको कक्षाको आन्तरिक परीक्षाको प्राप्ताङ्क भर्नुहोस्। त्यसपछि प्रत्येक Column को मध्यक (Mean), मध्यिका (Median), रित/बहुलक (Mode) र स्तरीय भिन्नता (Standard Deviation) निकालेर शिक्षकलाई देखाउनुहोस् <span class="ref">[४]</span>।</p>
+
+            <p><strong>उत्तर (प्रयोगात्मक कार्ययोजना तथा नमुना तालिका):</strong> यो कार्य सम्पन्न गर्न सर्वप्रथम कम्प्युटरमा एक्सेल खोली निम्न अनुसार १० जना विद्यार्थीको ५ वटा विषय (अङ्ग्रेजी, नेपाली, गणित, विज्ञान र सामाजिक) को प्राप्ताङ्क प्रविष्टि गरियो <span class="ref">[४]</span>:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: एक्सेलमा प्रविष्टि गरिएको तथ्याङ्क (Data Entry)</div>
+                <table>
+                    <thead>
+                        <tr><th>Row</th><th>Name</th><th>English</th><th>Nepali</th><th>Maths</th><th>Science</th><th>Social</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>२</td><td>विकास</td><td>७५</td><td>९५</td><td>५०</td><td>५५</td><td>५२</td></tr>
+                        <tr><td>३</td><td>राम</td><td>३५</td><td>५७</td><td>६४</td><td>७४</td><td>७१</td></tr>
+                        <tr><td>४</td><td>कर्ण</td><td>२९</td><td>४९</td><td>४८</td><td>५३</td><td>५३</td></tr>
+                        <tr><td>५</td><td>यादव</td><td>२८</td><td>५२</td><td>६०</td><td>६४</td><td>६४</td></tr>
+                        <tr><td>६</td><td>फुल्वा</td><td>३०</td><td>५४</td><td>५२</td><td>६३</td><td>६५</td></tr>
+                        <tr><td>७</td><td>निरजा</td><td>२४</td><td>३९</td><td>३९</td><td>४८</td><td>७१</td></tr>
+                        <tr><td>८</td><td>अम्बा</td><td>२४</td><td>४४</td><td>४८</td><td>५२</td><td>५४</td></tr>
+                        <tr><td>९</td><td>दिपेश</td><td>३५</td><td>५७</td><td>६६</td><td>५६</td><td>५७</td></tr>
+                        <tr><td>१०</td><td>रुबी</td><td>२५</td><td>४५</td><td>४०</td><td>५२</td><td>५५</td></tr>
+                        <tr><td>११</td><td>एन्नी</td><td>२५</td><td>४५</td><td>४९</td><td>४८</td><td>४५</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><strong>साङ्ख्यिकीय नतिजा निकाल्न प्रयोग गरिएका सूत्रहरू र परिणाम (Formulas &amp; Results):</strong></p>
+            <ul>
+                <li><strong>मध्यक (Mean/Average):</strong> अङ्ग्रेजी: <strong>३३.००</strong> | नेपाली: <strong>५३.७०</strong> | गणित: <strong>५१.६०</strong> | विज्ञान: <strong>५६.५०</strong> | सामाजिक: <strong>५८.७०</strong> <span class="ref">[४]</span></li>
+                <li><strong>मध्यिका (Median):</strong> अङ्ग्रेजी: <strong>२८.५०</strong> | नेपाली: <strong>५०.५०</strong> | गणित: <strong>४९.५०</strong> | विज्ञान: <strong>५४.००</strong> | सामाजिक: <strong>५६.००</strong> <span class="ref">[४]</span></li>
+                <li><strong>रित (Mode):</strong> अङ्ग्रेजी: <strong>३५.००</strong> | नेपाली: <strong>५७.००</strong> | गणित: <strong>४८.००</strong> | विज्ञान: <strong>४८.००</strong> | सामाजिक: <strong>७१.००</strong> <span class="ref">[४]</span></li>
+                <li><strong>स्तरीय भिन्नता (STDEV):</strong> अङ्ग्रेजी: <strong>१५.३२</strong> | नेपाली: <strong>१५.६८</strong> | गणित: <strong>९.१९</strong> | विज्ञान: <strong>८.२०</strong> | सामाजिक: <strong>८.६५</strong> <span class="ref">[४]</span></li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्राज्ञिक समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> माइक्रोसफ्ट एक्सेलको छोटो परिचय दिनुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> माइक्रोसफ्ट एक्सेल (MS Excel) माइक्रोसफ्ट कम्पनीद्वारा विन्डोज, म्याकओएस, एन्ड्रोइड र आइओएस अपरेटिङ सिस्टमका लागि विकास गरिएको एक लोकप्रिय स्प्रेडसिट (Spreadsheet) सफ्टवेयर हो <span class="ref">[४]</span>। यसमा तथ्याङ्कहरूलाई रो (Rows) र कोलम (Columns) को मिलनबाट बन्ने सेल (Cell) हरूमा प्रविष्टि गरिन्छ <span class="ref">[४]</span>। यो सफ्टवेयर विशेष गरी परिमाणात्मक सामाजिक तथ्याङ्कहरूको भण्डारण गर्न, गणितीय तथा जटिल साङ्ख्यिकीय विश्लेषण गर्न र आकर्षक वृत्तचित्र, स्तम्भचित्र तथा रेखाचित्रहरू निर्माण गर्न प्रयोग गरिन्छ <span class="ref">[४]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> मध्यक भनेको के हो?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> कुनै पनि तथ्याङ्क श्रेणीमा रहेका सम्पूर्ण मानहरूको जोड वा योगफललाई ती मानहरूको कुल सङ्ख्याले भाग गर्दा आउने औषत परिणामलाई <strong>मध्यक (Mean / Average)</strong> भनिन्छ <span class="ref">[४]</span>। यसलाई साङ्ख्यिकीय भाषामा $\bar{X}$ ले जनाइन्छ र यसको गणितीय सूत्र $\bar{X} = \frac{\sum X}{n}$ हुन्छ <span class="ref">[४]</span>। माइक्रोसफ्ट एक्सेलमा यसको गणना गर्न <code>=AVERAGE(Cell Range)</code> सूत्रको प्रयोग गरिन्छ <span class="ref">[४]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> स्तरीय भिन्नताले के मापन गर्छ?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> स्तरीय भिन्नता (Standard Deviation) ले कुनै पनि तथ्याङ्क समूहमा रहेका विभिन्न मानहरू त्यस समूहको औसत मान अर्थात् मध्यक (Mean) बाट कति दूरीमा वा कति टाढा र नजक छरिएर रहेका छन् भन्ने कुराको मापन गर्छ <span class="ref">[४]</span>। यदि स्तरीय भिन्नताको मान कम आएमा तथ्याङ्कहरू मध्यकको वरपर केन्द्रित छन् भन्ने बुझिन्छ भने स्तरीय भिन्नता बढी आएमा तथ्याङ्कहरू धेरै छरिएर रहेका छन् भन्ने स्पष्ट हुन्छ <span class="ref">[४]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> माइक्रोसफ्ट एक्सेल प्रयोग गरी मध्यिका निकाल्ने तरिका लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> माइक्रोसफ्ट एक्सेल प्रयोग गरी कुनै पनि तथ्याङ्कको मध्यिका (Median) निकाल्ने चरणबद्ध तरिका निम्न बमोजिम छ <span class="ref">[४]</span>:</p>
+                <ol>
+                    <li>सर्वप्रथम कम्प्युटरमा एक्सेल फाइल खोली आवश्यक तथ्याङ्कहरू निश्चित सेलहरूमा प्रविष्टि (Entry) गर्ने <span class="ref">[४]</span>।</li>
+                    <li>त्यसपछि जुन सेल वा कोठामा मध्यिकाको नतिजा निकाल्नुपर्ने हो, त्यहाँ माउसले क्लिक गर्ने <span class="ref">[४]</span>।</li>
+                    <li>अब कीबोर्डबाट पहिले बराबर चिन्ह <strong>`=`</strong> टाइप गर्ने र त्यसपछि <strong>`MEDIAN`</strong> टाइप गर्ने <span class="ref">[४]</span>।</li>
+                    <li>यसपछि सानो कोष्ठक सुरु गरी तथ्याङ्क रहेका सेलहरूको दायरा (Cell Range) छनोट गर्ने वा टाइप गर्ने (जस्तै: <code>=MEDIAN(B2:B11)</code>) <span class="ref">[४]</span>।</li>
+                    <li>अन्त्यमा कोष्ठक बन्द गरी कीबोर्डको <strong>Enter</strong> की थिच्ने। यसो गर्दा छनोट गरिएको कोठामा उक्त तथ्याङ्कको मध्यिका स्वतः देखा पर्दछ <span class="ref">[४]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">(ङ)</span> मानिसले आफैँले गणना गर्नुभन्दा कम्प्युटर सफ्टवेयर प्रयोग गरी तथ्याङ्क प्रशोधन र विश्लेषण गर्दा के के फाइदा हुन्छन्? कम्तीमा पाँच बुँदामा लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानिसले हातैले वा परम्परागत तरिकाले गणना गर्नुको सट्टा कम्प्युटर सफ्टवेयर (जस्तै: MS Excel, SPSS, RStudio) प्रयोग गरी तथ्याङ्क प्रशोधन र विश्लेषण गर्दा हुने पाँच मुख्य फाइदाहरू यस प्रकार छन् <span class="ref">[४]</span>:</p>
+                <ol>
+                    <li><strong>समय र श्रमको बचत:</strong> कम्प्युटर सफ्टवेयरले ठुला भन्दा ठुला र जटिल तथ्याङ्कहरूलाई पनि सेकेन्डभरमै प्रशोधन गर्न सक्ने हुनाले यसले मानवीय समय र श्रमको व्यापक बचत गर्छ <span class="ref">[४]</span>।</li>
+                    <li><strong>शतप्रतिशत शुद्धता (Accuracy):</strong> मानिसले गणना गर्दा भूलवश गल्ती हुन सक्ने उच्च सम्भावना रहन्छ, तर सफ्टवेयरमा सही सूत्र हाल्दा नतिजा सधैँ त्रुटिरहित र शतप्रतिशत शुद्ध हुन्छ <span class="ref">[४]</span>।</li>
+                    <li><strong>ठुलो परिमाणको तथ्याङ्क व्यवस्थापन:</strong> मानिसले लाखौँ तथ्याङ्कहरू एकैसाथ प्रशोधन गर्न सक्दैन, तर सफ्टवेयरहरूले ठुलो परिमाणका तथ्याङ्कलाई सजिलै प्रविष्टि र वर्गीकरण गर्न सक्छन् <span class="ref">[४]</span>।</li>
+                    <li><strong>बहुआयामिक साङ्ख्यिकीय गणना सम्भव:</strong> एउटै सफ्टवेयरमा मध्यक, मध्यिका जस्ता सामान्य गणनादेखि लिएर स्तरीय भिन्नता, सहसम्बन्ध र प्रतिगमन जस्ता उच्च साङ्ख्यिकीय विश्लेषणहरू सहजै गर्न सकिन्छ <span class="ref">[४]</span>।</li>
+                    <li><strong>चित्रात्मक प्रस्तुतीकरणमा सहजता:</strong> प्रशोधित तथ्याङ्कहरूलाई तत्कालै आकर्षक वृत्तचित्र (Pie chart), स्तम्भचित्र (Bar graph) र रेखाचित्रमा रूपान्तरण गर्न सकिने हुनाले बुझ्न र बुझाउन सहज हुन्छ <span class="ref">[४]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष थप सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">१.</span> माइक्रोसफ्ट एक्सेलमा कुल कति वटा Rows र Columns हुन्छन्?</div>
+            <div class="a"><strong>उत्तर:</strong> क्रमशः <strong>१०,४८,५७६ वटा Rows</strong> र <strong>१६,३८४ वटा Columns</strong> <span class="ref">[४]</span>।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">२.</span> एक्सेलमा कुनै पनि सूत्र (Formula) को सुरुवात कुन चिन्हबाट गर्नुपर्छ र किन?</div>
+            <div class="a"><strong>उत्तर:</strong> सधैँ <strong>बराबर चिन्ह (=)</strong> बाट, किनकि यस विना एक्सेलले सूत्रलाई गणितीय कमान्डका रूपमा बुझ्न सक्दैन <span class="ref">[४]</span>।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">३.</span> एक्सेलमा स्तरीय भिन्नता (Standard Deviation) निकाल्ने सूत्र के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> <code>=STDEV(Cell Range)</code>, जस्तै: <code>=STDEV(B2:B11)</code> <span class="ref">[४]</span>।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">४.</span> 'Cell' भनेको के हो? यसको नाम कसरी निर्धारण हुन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> स्प्रेडसिटमा रो र कोलम काटिएर बनेको कोठालाई सेल भनिन्छ <span class="ref">[४]</span>। यसको नाम पहिले कोलमको अक्षर र पछि रोको नम्बर मिलेर बन्छ (जस्तै: B5) <span class="ref">[४]</span>।</div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">५.</span> एक्सेलमा रित (Mode) पत्ता लगाउन कुन सूत्र टाइप गर्नुपर्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> <code>=MODE(Cell Range)</code> <span class="ref">[४]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">१.</span> माइक्रोसफ्ट एक्सेललाई सामाजिक अनुसन्धानमा किन एक बहुउपयोगी डिजिटल साधन मानिन्छ? पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सामाजिक अनुसन्धानमा परिमाणात्मक तथ्याङ्कहरूको प्रशोधन र विश्लेषण अपरिहार्य हुन्छ। यसका लागि माइक्रोसफ्ट एक्सेललाई निम्न कारणहरूले गर्दा बहुउपयोगी डिजिटल साधन मानिन्छ <span class="ref">[४]</span>:</p>
+                <ol>
+                    <li><strong>सुलभता र सजिलो प्रयोग:</strong> यो सफ्टवेयर लगभग सबै कम्प्युटर वा ल्यापटपमा सहजै उपलब्ध हुने र सामान्य अभ्यासबाटै सजिलै चलाउन सकिने खालको हुन्छ <span class="ref">[४]</span>।</li>
+                    <li><strong>त्रुटिरहित साङ्ख्यिकीय गणना:</strong> अनुसन्धानमा चाहिने मध्यक, मध्यिका, रित तथा स्तरीय भिन्नता जस्ता मानहरू एक्सेलका सूत्र प्रयोग गरी तुरुन्तै र त्रुटिरहित ढङ्गले निकाल्न सकिन्छ <span class="ref">[४]</span>।</li>
+                    <li><strong>प्रभावकारी वर्गीकरण र भण्डारण:</strong> यसले हजारौँ उत्तरदाताहरूबाट सङ्कलन गरिएको तथ्याङ्कलाई रो र कोलममा व्यवस्थित गरी दीर्घकालसम्म सुरक्षित भण्डारण गर्न सघाउँछ <span class="ref">[४]</span>।</li>
+                    <li><strong>चार्ट र ग्राफ निर्माण:</strong> अनुसन्धान प्रतिवेदनलाई बुझाउन आवश्यक पर्ने पाई चार्ट वा बार ग्राफहरू एक्सेलमा केही क्लिककै भरमा आकर्षक रूपमा तयार पार्न सकिन्छ <span class="ref">[४]</span>।</li>
+                </ol>
+                <p>अतः, तथ्याङ्क व्यवस्थापनदेखि प्रस्तुतीकरणसम्मका सबै कार्यहरू एकै ठाउँमा हुने भएकाले यो अनुसन्धानका लागि उत्कृष्ट र व्यावहारिक साधन हो <span class="ref">[४]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">२.</span> "कुन पर्छ / कुन पर्दैन" विश्लेषण गर्नुहोस्:</div>
+            <div class="a">
+                <p><strong>(क) एक्सेलमा साङ्ख्यिकीय विश्लेषण गर्दा कुन कुन विधा वा गणनाहरू पर्दछन्?</strong></p>
+                <ul>
+                    <li><strong>पर्दछन्:</strong> मध्यक (Mean/Average), मध्यिका (Median), रित (Mode), स्तरीय भिन्नता (Standard Deviation), र सहसम्बन्ध (Correlation) <span class="ref">[४]</span>।</li>
+                    <li><strong>पर्दैनन्:</strong> गुणात्मक कोडीकरण (Qualitative Coding), अन्तर्वार्ताको भिडियो विश्लेषण र वर्णनात्मक पाठ्य विश्लेषण (Textual Analysis) <span class="ref">[४]</span>।</li>
+                </ul>
+                <p><strong>(ख) गुणात्मक तथ्याङ्क प्रशोधन गर्ने सफ्टवेयरहरूको वर्गीकरण:</strong></p>
+                <ul>
+                    <li><strong>पर्दछन् (गुणात्मक सफ्टवेयर):</strong> ATLAS.ti, NVivo, Quirkos, MAXQDA, Dedoose, Raven's Eye <span class="ref">[४]</span>।</li>
+                    <li><strong>पर्दैनन् (परिमाणात्मक सफ्टवेयर):</strong> IBM SPSS, Stata, OriginPro, Microsoft Excel <span class="ref">[४]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">३.</span> एक्सेलमा 'Cell Range' भन्नाले के बुझिन्छ? यसको महत्त्व स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>अवधारणा:</strong> एक्सेलमा साङ्ख्यिकीय वा गणितीय गणनाका लागि छनोट गरिएका लगातार वा क्रमिक सेलहरूको समूहलाई सेल रेन्ज (Cell Range) भनिन्छ <span class="ref">[४]</span>। यसलाई व्यक्त गर्दा पहिलो सेलको नाम र अन्तिम सेलको नामको बीचमा दुईवटा थोप्ला वा कोलोन (:) चिन्ह राखेर जनाइन्छ, जस्तै: <code>C2:C15</code> <span class="ref">[४]</span>।</p>
+                <p><strong>सेल रेन्जको महत्त्व:</strong></p>
+                <ol>
+                    <li><strong>छिटो गणना:</strong> यदि हामीले १० वा १०० वटा कोठाहरूमा भएका सङ्ख्या जोड्नु पर्‍यो भने प्रत्येक कोठाको नाम छुट्टाछुट्टै लेख्नुको सट्टा सेल रेन्ज (जस्तै: <code>=SUM(A1:A100)</code>) प्रयोग गर्दा काम निकै छिटो हुन्छ।</li>
+                    <li><strong>त्रुटीरहित काम:</strong> यसले एक्सेल सूत्रहरूलाई छोटो र सफा बनाउँछ, जसले गर्दा सूत्र टाइप गर्दा हुन सक्ने मानवीय त्रुटि कम हुन्छ।</li>
+                    <li><strong>चार्ट निर्माणमा सहजता:</strong> ग्राफ वा चार्ट बनाउँदा कुन तथ्याङ्कलाई चित्रमा ढाल्ने हो भनी क्षेत्र निर्धारण गर्न सेल रेन्जले प्रत्यक्ष मद्दत पुर्‍याउँछ।</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्न (८ अङ्क)</div>
+
+        <div class="qa-block color6" style="border-left-color:#1a5a3a;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "आधुनिक सामाजिक अनुसन्धान र दैनिक प्रशासनिक कार्यमा माइक्रोसफ्ट एक्सेलको भूमिका अपरिहार्य छ।" यस भनाइलाई एक्सेलका विशेषता, उपयोगिता र प्रयोगात्मक पक्षका आधारमा विश्लेषण गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> विज्ञान र सूचना प्रविधिको तीव्र विकासले गर्दा वर्तमान समयमा सामाजिक अनुसन्धान तथा प्रशासनिक काम गर्ने शैलीमा व्यापक परिवर्तन आएको छ। परम्परागत रूपमा ढड्डा वा कागजमा तथ्याङ्क राख्ने र हातैले जटिल हिसाब गर्ने प्रथा पूर्ण रूपमा विस्थापित भइसकेको छ। यस डिजिटल रूपान्तरणको केन्द्रमा माइक्रोसफ्ट एक्सेल (MS Excel) जस्ता स्प्रेडसिट सफ्टवेयरहरू रहेका छन् <span class="ref">[४]</span>। एक्सेल केवल गणितीय हिसाब गर्ने मेसिन मात्र नभई, यो ठुला-ठुला परिमाणात्मक सामाजिक तथ्याङ्कहरूलाई व्यवस्थित रूपमा संकलन, प्रशोधन, विश्लेषण, र चित्रात्मक रूपमा प्रस्तुत गर्ने एक विश्वसनीय प्राज्ञिक र प्रशासनिक हतियार हो <span class="ref">[४]</span>। यसको प्रयोग विना आधुनिक कार्यालय र अनुसन्धानको परिकल्पना गर्न पनि कठिन छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+                <ul>
+                    <li><strong>कम्प्युटरमा आधारित वैज्ञानिक तथ्याङ्क व्यवस्थापन:</strong> एक्सेलमा १०,४८,५७६ वटा रो र १६,३८४ वटा कोलम हुने भएकाले यसले विशाल तथ्याङ्कलाई एकै ठाउँमा वर्गीकरण र भण्डारण गर्ने क्षमता राख्छ <span class="ref">[४]</span>।</li>
+                    <li><strong>जटिल साङ्ख्यिकीय गणनामा सहजता:</strong> अनुसन्धानमा आवश्यक पर्ने केन्द्रीय प्रवृत्तिको मापन (मध्यक, मध्यिका, रित) र अपकिरणको मापन (स्तरीय भिन्नता) जस्ता गणितीय विश्लेषणहरूलाई एक्सेलमा रहेका पूर्व-निर्धारित सूत्रहरू (Formulas) प्रयोग गरी सजिलै र तुरुन्तै हल गर्न सकिन्छ <span class="ref">[४]</span>।</li>
+                    <li><strong>मानवीय गल्तीको शून्य सम्भावना:</strong> मानिस थाक्दा वा ध्यान विचलित हुँदा हिसाब बिग्रन सक्छ, तर एक्सेलमा प्रविष्टि गरिएको सूत्रले कहिल्यै गल्ती गर्दैन। यसले अनुसन्धानको विश्वसनीयता र प्रशासनिक कामको गुणस्तर बढाउँछ।</li>
+                    <li><strong>बजेट निर्माण र वित्तीय नियन्त्रण:</strong> हरेक प्रशासनिक कार्यालय वा व्यवसायमा वार्षिक बजेट बनाउन, आम्दानी र खर्चको हिसाब राख्न, र कर्मचारीहरूको पारिश्रमिक तथा हाजिरी व्यवस्थापन गर्न एक्सेल पाना (Excel Sheet) सबैभन्दा भरपर्दो माध्यम हो।</li>
+                    <li><strong>तत्काल निर्णय लिन सहयोग (Data Visualization):</strong> एक्सेलले कच्चा तथ्याङ्कलाई विश्लेषण गरेर तत्कालै रङ्गीन वृत्तचित्र (Pie Chart) वा स्तम्भचित्र (Bar Graph) मा ढाल्न सक्छ, जसले गर्दा नीति निर्माता र प्रशासकहरूलाई निर्णय लिन सजिलो हुन्छ <span class="ref">[४]</span>।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> एउटा विद्यालयको वार्षिक परीक्षाको नतिजा प्रकाशन र विश्लेषण गर्ने प्रशासनिक कार्यलाई व्यावहारिक उदाहरणका रूपमा लिन सकिन्छ।</p>
+                <ul>
+                    <li><strong>परम्परागत शैली:</strong> यदि एक जना शिक्षकले कक्षा १२ का १०० जना विद्यार्थीको ५ वटा विषयको औषत प्राप्ताङ्क (Mean) र उनीहरूको नतिजाको स्तर (Standard Deviation) हातैले वा साधारण क्याल्कुलेटरले निकाल्नु परेमा कम्तीमा २-३ दिनको कडा मिहिनेत चाहिन्छ र गल्ती हुने सम्भावना उत्तिकै रहन्छ।</li>
+                    <li><strong>एक्सेलको प्रयोग:</strong> तर, शिक्षकले एक्सेल सिटमा विद्यार्थीको नाम र विषयगत अङ्क प्रविष्टि गरी <code>B12</code> कोठामा <code>=AVERAGE(B2:B101)</code> र <code>B13</code> कोठामा <code>=STDEV(B2:B101)</code> जस्ता सूत्र प्रयोग गरेमा मात्र <strong>५ सेकेन्ड</strong> भित्र सबै १०० जना विद्यार्थीको औसत र स्तरीय भिन्नताको परिणाम निस्कन्छ <span class="ref">[४]</span>। यसका साथै सबैभन्दा धेरै विद्यार्थीले प्राप्त गरेको अङ्क <code>=MODE(B2:B101)</code> बाट तुरुन्तै पत्ता लाग्छ <span class="ref">[४]</span>।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, माइक्रोसफ्ट एक्सेल आधुनिक युगको एक अपरिहार्य जीवनोपयोगी र डिजिटल सिप हो <span class="ref">[४]</span>। यसले जटिल र झन्झटिलो तथ्याङ्क प्रशोधन प्रक्रियालाई सरल, तीव्र र शतप्रतिशत शुद्ध बनाउँछ <span class="ref">[४]</span>। चाहे शैक्षिक अनुसन्धानमा तथ्याङ्कको विश्लेषण गर्नु होस् वा कुनै सरकारी वा निजी कार्यालयको दैनिक आयव्यय र प्रशासनिक काम व्यवस्थापन गर्नु होस्, एक्सेलको ज्ञान र प्रयोग अनिवार्य सर्त बनेको छ। तसर्थ, प्रत्येक विद्यार्थी, अनुसन्धानकर्ता र राष्ट्रसेवक कर्मचारीले यस सफ्टवेयरको कुशल प्रयोग गर्न सक्ने सिप हासिल गर्नु समयको माग र व्यक्तिगत विकासका लागि कोशेढुङ्गा साबित हुन्छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#b45309; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> माइक्रोसफ्ट एक्सेल आधुनिक अनुसन्धान र प्रशासनको मेरुदण्ड हो। यसको सूत्रहरू (AVERAGE, MEDIAN, MODE, STDEV) को अभ्यास गर्नुहोस् र तथ्याङ्क विश्लेषणलाई सरल, छिटो र शुद्ध बनाउनुहोस्। डिजिटल सिप नै भविष्यको कुञ्जी हो।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ २, पाठ ८</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

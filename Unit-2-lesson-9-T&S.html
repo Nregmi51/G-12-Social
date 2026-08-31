@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ २, पाठ ९ – शाब्दिक जानकारी प्रस्तुतीकरण (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f5f0e8;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fdfaf5;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #007FFF;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #007FFF;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #007FFF;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #007FFF;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #007FFF;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #4da6ff;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS - Azure ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #fff;
+            background: #007FFF;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(0, 127, 255, 0.30);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #007FFF;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #f5d742;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; }
+        .section-head .mark-badge.green { background: #7dcea0; }
+        .section-head .mark-badge.purple { background: #b39ddb; }
+        .section-head .mark-badge.blue { background: #81d4fa; }
+        .section-head .mark-badge.pink { background: #f48fb1; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #0055b3;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #007FFF;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #007FFF;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0055b3;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #007FFF;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #007FFF;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.pearl-bg {
+            border-left-color: #007FFF;
+            background: #f5f0e8;
+        }
+
+        .content-box.cream-bg {
+            border-left-color: #007FFF;
+            background: #fdfaf5;
+        }
+
+        .content-box.teal-bg {
+            border-left-color: #007FFF;
+            background: #d4ecf7;
+        }
+
+        .content-box.azure-bg {
+            border-left-color: #007FFF;
+            background: #e6f0fa;
+        }
+
+        .content-box.gold-bg {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-bg {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-bg {
+            border-left-color: #6b3fa0;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-bg {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #007FFF;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #007FFF;
+        }
+
+        .qa-block.color1 { border-left-color: #007FFF; background: #e6f0fa; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #007FFF;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #0055b3;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #007FFF;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #c9bdb0;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #007FFF;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 127, 255, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0066cc;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(0, 127, 255, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #007FFF;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #d0c4b8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #007FFF;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-file-alt"></i>
+                    एकाइ २, पाठ ९: शाब्दिक जानकारीलाई प्रस्तुत गर्ने तरिका
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ २, पाठ ९
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक (रजिस्टर) शब्दहरू
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#007FFF; margin-right:4px;"></i> शाब्दिक जानकारी</strong>
+                <p>अनुसन्धान वा अध्ययनका क्रममा प्राप्त भएका विचार, तथ्य, भनाइ र वर्णनात्मक विवरणहरूलाई शब्द, वाक्य वा अनुच्छेदका रूपमा प्रस्तुत गरिने सूचना।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#007FFF; margin-right:4px;"></i> संक्षिप्त रूप</strong>
+                <p>प्रतिवेदनमा समय र स्थान बचत गर्न लामो शब्द वा संस्थाको नामलाई छोटो रूपमा लेखिने प्रक्रिया (जस्तै: MoEST, त्रिवि)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#007FFF; margin-right:4px;"></i> प्राविधिक शब्द</strong>
+                <p>कुनै विशिष्ट विधा, क्षेत्र वा अनुसन्धानमा मात्र प्रयोग हुने र सामान्य पाठकका लागि कठिन हुन सक्ने विशेष अर्थ बोकेका शब्दहरू।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#007FFF; margin-right:4px;"></i> पादटिप्पणी (Footnote)</strong>
+                <p>मुख्य पाठमा प्रयोग भएको कुनै शब्द वा वाक्यको थप स्पष्टीकरण, स्रोत वा व्याख्या सोही पृष्ठको तल्लो भागमा सुपरस्क्रिप्ट अङ्क प्रयोग गरी दिइने टिप्पणी।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#007FFF; margin-right:4px;"></i> अन्त्य टिप्पणी (Endnote)</strong>
+                <p>प्रतिवेदन, अध्याय वा पुस्तकको सबैभन्दा अन्त्यमा रोमन अङ्क (i, ii, iii...) प्रयोग गरी विस्तृत विवरण, सन्दर्भ वा स्रोत खुलाउन प्रयोग गरिने टिप्पणी।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#007FFF; margin-right:4px;"></i> सामुदायिक विद्यालय</strong>
+                <p>नेपाल सरकारबाट नियमित वा आंशिक रूपमा सरकारी अनुदान वा सहयोग प्राप्त गरी समुदायको अग्रसरतामा सञ्चालन हुने विद्यालय।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#007FFF; margin-right:4px;"></i> संस्थागत विद्यालय</strong>
+                <p>नेपाल सरकारबाट कुनै पनि सरकारी अनुदान वा आर्थिक सहयोग प्राप्त नगरी निजी गुठी, कम्पनी वा व्यक्तिको लगानी र व्यवस्थापनमा सञ्चालन हुने विद्यालय।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#007FFF; margin-right:4px;"></i> प्रधानाध्यापक</strong>
+                <p>विद्यालयको समग्र प्रशासनिक, शैक्षिक र व्यवस्थापकीय कार्यहरूको नेतृत्व र सञ्चालन गर्न तोकिएको प्रमुख शिक्षक वा पदाधिकारी।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "शाब्दिक जानकारीलाई प्रस्तुत गर्ने तरिका" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. संक्षिप्त रूप -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> १. संक्षिप्त रूपको सूची र यसको महत्त्व</div>
+
+        <div class="content-box pearl-bg">
+            <p>अनुसन्धान प्रतिवेदन, योजना वा प्रस्तावनामा धेरै संस्थाहरू, प्रणालीहरू वा प्राविधिक सर्तहरूको नाम पटक-पटक दोहोरिन्छन्। ती सबैलाई बारम्बार पूरा रूपमा लेख्दा प्रतिवेदन भद्दा र पढ्न झन्झटिलो देखिन्छ। त्यसैले संक्षिप्त रूपको सूची प्रयोग गरिन्छ।</p>
+            <p><strong>यसका फाइदाहरू:</strong></p>
+            <ul>
+                <li><strong>समयको बचत:</strong> लेखक र पाठक दुवैको समय बचत हुन्छ।</li>
+                <li><strong>संक्षिप्तता:</strong> प्रतिवेदन छोटो, सटिक र आकर्षक बन्छ।</li>
+                <li><strong>सहजता:</strong> पाठकले अपरिचित संक्षिप्त शब्दको अर्थ तुरुन्तै सूचीबाट हेर्न सक्छन्।</li>
+            </ul>
+            <p><strong>पाठ्यपुस्तकमा दिइएका केही प्रमुख उदाहरणहरू:</strong></p>
+            <div class="table-wrap">
+                <div class="table-caption">संक्षिप्त रूप र पूर्ण रूप (Full Forms)</div>
+                <table>
+                    <thead>
+                        <tr><th>संक्षिप्त रूप</th><th>पूर्ण रूप (Full Form)</th><th>नेपाली अर्थ</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>CAS</strong></td><td>Continuous Assessment System</td><td>निरन्तर विद्यार्थी मूल्याङ्कन प्रणाली</td></tr>
+                        <tr><td><strong>GoN</strong></td><td>Government of Nepal</td><td>नेपाल सरकार</td></tr>
+                        <tr><td><strong>JEMC</strong></td><td>Janak Education Materials Centre</td><td>जनक शिक्षा सामग्री केन्द्र</td></tr>
+                        <tr><td><strong>MoEST</strong></td><td>Ministry of Education, Science and Technology</td><td>शिक्षा, विज्ञान तथा प्रविधि मन्त्रालय</td></tr>
+                        <tr><td><strong>SIP</strong></td><td>School Development Plan</td><td>विद्यालय सुधार योजना</td></tr>
+                        <tr><td><strong>STR</strong></td><td>Student Teacher Ratio</td><td>विद्यार्थी शिक्षक अनुपात</td></tr>
+                        <tr><td><strong>पाविके</strong></td><td>—</td><td>पाठ्यक्रम विकास केन्द्र</td></tr>
+                        <tr><td><strong>त्रिवि</strong></td><td>—</td><td>त्रिभुवन विश्वविद्यालय</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- २. प्राविधिक शब्द सूची -->
+        <div class="sub-head"><i class="fas fa-book"></i> २. प्राविधिक शब्दहरूको सूची (Glossary) र यसको आवश्यकता</div>
+
+        <div class="content-box teal-bg">
+            <p>अनुसन्धानमा कतिपय यस्ता शब्दहरू प्रयोग हुन सक्छन् जसको अर्थ सामान्य पाठकलाई थाहा नहुन सक्छ वा उक्त अनुसन्धानको सन्दर्भमा त्यसको विशिष्ट अर्थ हुन सक्छ। यस्ता शब्दहरूलाई वर्णानुक्रम अनुसार सूचीकृत गरी अर्थ स्पष्ट पार्ने कार्यलाई <strong>प्राविधिक शब्दहरूको सूची (Glossary)</strong> भनिन्छ।</p>
+            <p><strong>आवश्यकता:</strong> यसले फरक शैक्षिक वा सामाजिक पृष्ठभूमि भएका पाठकहरूलाई पनि अनुसन्धानको मूल मर्म बुझ्न समान अवसर प्रदान गर्छ।</p>
+            <p><strong>उदाहरणहरू:</strong></p>
+            <ul>
+                <li><strong>सामुदायिक विद्यालय:</strong> नेपालमा सरकारी सहयोग प्राप्त गर्ने गरी स्थापना भएका विद्यालयहरू।</li>
+                <li><strong>संस्थागत विद्यालय:</strong> नेपालमा सरकारी सहयोग नलिनने गरी कुनै संस्था वा व्यक्तिले सञ्चालन गरेका विद्यालयहरू।</li>
+                <li><strong>प्रधानाध्यापक:</strong> विद्यालयको प्रशासन तथा व्यवस्थापन गर्न तोकिएको प्रमुख व्यक्ति (शिक्षक)।</li>
+            </ul>
+        </div>
+
+        <!-- ३. पादटिप्पणी र अन्त्य टिप्पणी -->
+        <div class="sub-head"><i class="fas fa-notes-medical"></i> ३. पादटिप्पणी (Footnote) र अन्त्य टिप्पणी (Endnote)</div>
+
+        <div class="content-box pearl-bg">
+            <p>अनुसन्धान लेखनमा थप स्पष्टीकरण दिन वा विचारको स्रोत खुलाउन यी दुई टिप्पणीहरूको प्रयोग गरिन्छ।</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">पादटिप्पणी (Footnote) र अन्त्य टिप्पणी (Endnote) तुलना</div>
+                <table>
+                    <thead>
+                        <tr><th>तुलनाको आधार</th><th>पादटिप्पणी (Footnote)</th><th>अन्त्य टिप्पणी (Endnote)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>स्थान</strong></td>
+                            <td>सम्बन्धित पृष्ठको सबैभन्दा तल्लो भागमा</td>
+                            <td>अध्यायको अन्त्यमा वा सम्पूर्ण प्रतिवेदनको अन्त्यमा</td>
+                        </tr>
+                        <tr>
+                            <td><strong>सङ्केत शैली</strong></td>
+                            <td>साधारण अङ्क (१, २, ३...)</td>
+                            <td>रोमन साना अङ्क (i, ii, iii...)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>पहुँच र सहजता</strong></td>
+                            <td>अत्यधिक सहज — पानाको तल तुरुन्तै</td>
+                            <td>केही झन्झटिलो — अन्त्यमा जानुपर्ने</td>
+                        </tr>
+                        <tr>
+                            <td><strong>मुख्य उद्देश्य</strong></td>
+                            <td>तत्कालै शब्दको अर्थ वा सानो स्पष्टीकरण</td>
+                            <td>विस्तृत स्रोत विवरण वा लामो व्याख्या</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ४. MS Word मा प्रयोग -->
+        <div class="sub-head"><i class="fas fa-laptop"></i> ४. माइक्रोसफ्ट वर्ड (MS Word) मा Footnote र Endnote थप्ने प्रयोगात्मक विधि</div>
+
+        <div class="content-box teal-bg">
+            <p>आधुनिक डिजिटल अनुसन्धान लेखनमा सफ्टवेयरको प्रयोग अनिवार्य छ। MS Word मा यी टिप्पणीहरू राख्न निम्न व्यावहारिक चरणहरू अपनाइन्छ:</p>
+            <ol>
+                <li>MS Word मा आफ्नो प्रतिवेदन खोल्ने।</li>
+                <li>जुन शब्द वा वाक्यको पछाडि टिप्पणी राख्नुपर्ने हो, माउसको कर्सर त्यहीँ लैजाने।</li>
+                <li>विन्डोज मेनु बारमा रहेको <strong>References</strong> मेनुमा क्लिक गर्ने।</li>
+                <li><strong>Insert Footnote</strong> (पादटिप्पणी) वा <strong>Insert Endnote</strong> (अन्त्य टिप्पणी) मा क्लिक गर्ने।</li>
+                <li>क्लिक गर्नासाथ कर्सर सम्बन्धित ठाउँमा पुग्छ, जहाँ आफूले दिनुपर्ने थप विवरण टाइप गर्न सकिन्छ।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-search"></i> क्रियाकलाप १: पुस्तकालयबाट संक्षिप्त रूप, प्राविधिक शब्द र टिप्पणीको पहिचान</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-book-open" style="color:#007FFF; margin-right:8px;"></i> पुस्तक: "नेपालको सामाजिक-आर्थिक इतिहास"</p>
+
+            <p><strong>१. संक्षिप्त रूपको सूची (List of Abbreviations):</strong></p>
+            <div class="table-wrap">
+                <div class="table-caption">संक्षिप्त रूपहरू</div>
+                <table>
+                    <thead>
+                        <tr><th>संक्षिप्त रूप</th><th>पूर्ण रूप (Full Form)</th><th>नेपाली अर्थ</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>CBS</strong></td><td>Central Bureau of Statistics</td><td>केन्द्रीय तथ्याङ्क विभाग</td></tr>
+                        <tr><td><strong>FDI</strong></td><td>Foreign Direct Investment</td><td>वैदेशिक प्रत्यक्ष लगानी</td></tr>
+                        <tr><td><strong>GDP</strong></td><td>Gross Domestic Product</td><td>कुल गार्हस्थ्य उत्पादन</td></tr>
+                        <tr><td><strong>UNDP</strong></td><td>United Nations Development Programme</td><td>संयुक्त राष्ट्रसङ्घीय विकास कार्यक्रम</td></tr>
+                        <tr><td><strong>ने.स.</strong></td><td>नेपाल संवत्</td><td>नेपालको मौलिक संवत्</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><strong>२. प्राविधिक शब्दहरूको सूची (Glossary):</strong></p>
+            <ul>
+                <li><strong>गुठी:</strong> धार्मिक वा सामाजिक हितका काम सञ्चालन गर्नका लागि छुट्याइएको वा राखिएको चल-अचल सम्पत्ति वा कोष।</li>
+                <li><strong>सनद:</strong> तत्कालीन राणा वा शाह कालमा शासकहरूद्वारा जारी गरिने आधिकारिक लालमोहर वा राजकीय आदेश पत्र।</li>
+                <li><strong>पर्म:</strong> नेपाली ग्रामीण समाजमा कृषि कार्यका लागि गरिने अर्मपर्म वा श्रमको आपसी सरसहयोग र लेनदेन।</li>
+            </ul>
+
+            <p><strong>३. सङ्कलित पादटिप्पणी (Footnote Sample):</strong><br>
+            पुस्तकको पृष्ठ १५ मा "नेपालको पहिलो औद्योगिक विकास योजना"² — पानाको तल: <br>
+            <span style="background:#f0ece6; padding:2px 10px; border-radius:8px;">² योजनाको विस्तृत विवरण उद्योग मन्त्रालयको वि.सं. २०१३ को प्रतिवेदन, पाना ४५ बाट लिइएको हो।</span></p>
+
+            <p><strong>४. सङ्कलित अन्त्य टिप्पणी (Endnote Sample):</strong><br>
+            पुस्तकको पहिलो अध्याय सकिएपछि: <br>
+            <span style="background:#f0ece6; padding:2px 10px; border-radius:8px;">[i] Hamilton, Francis (1819). An Account of the Kingdom of Nepal. Edinburgh: Archibald Constable and Company.</span></p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्रमाणित समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> प्राविधिक शब्दको छोटो परिचय दिनुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> कुनै विशेष विधा, शैक्षिक क्षेत्र, पेसा वा अनुसन्धानको क्षेत्रमा मात्र प्रयोग हुने र त्यहाँ एउटा विशिष्ट तथा निश्चित अर्थ बोक्ने शब्दहरूलाई प्राविधिक शब्द (Technical Terms) भनिन्छ। यस्ता शब्दहरू सामान्य बोलचालको भाषामा भन्दा फरक अर्थमा प्रयोग हुन्छन्। उदाहरणका लागि, सामाजिक अनुसन्धानको क्षेत्रमा प्रयोग हुने 'चर' (Variable), 'सहसम्बन्ध' (Correlation), वा स्वास्थ्य क्षेत्रको 'टेलीमेडिसिन' र शिक्षा क्षेत्रको 'सामुदायिक विद्यालय' प्राविधिक शब्दहरू हुन्।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> पादटिप्पणी तथा अन्त्य टिप्पणीमा के फरक छ?</div>
+            <div class="a">
+                <div class="table-wrap" style="margin-top:6px;">
+                    <div class="table-caption">तुलना: पादटिप्पणी र अन्त्य टिप्पणी</div>
+                    <table>
+                        <thead>
+                            <tr><th>आधार</th><th>पादटिप्पणी (Footnote)</th><th>अन्त्य टिप्पणी (Endnote)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>स्थान</strong></td><td>पृष्ठको तल्लो भागमा</td><td>अध्याय वा प्रतिवेदनको अन्त्यमा</td></tr>
+                            <tr><td><strong>सङ्केत शैली</strong></td><td>साधारण अङ्क (१, २, ३...)</td><td>रोमन साना अङ्क (i, ii, iii...)</td></tr>
+                            <tr><td><strong>सहजता</strong></td><td>धेरै सहज — तुरुन्तै हेर्न सकिन्छ</td><td>केही झन्झटिलो — अन्त्यमा जानुपर्छ</td></tr>
+                            <tr><td><strong>प्रयोग</strong></td><td>छोटो स्पष्टीकरण</td><td>विस्तृत सन्दर्भ वा लामो व्याख्या</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> छोटो रूपको सूचीको परिचय दिई यसलाई तयार गर्दा ध्यान दिनुपर्ने कुनै तीन कुराहरू लेख्नुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> अनुसन्धान प्रतिवेदनमा प्रयोग गरिएका विभिन्न लामा नाम वा प्राविधिक शब्दहरूको संक्षिप्त रूप र तिनीहरूको पूर्ण रूप समेटेर वर्णानुक्रम अनुसार तयार पारिएको सूचीलाई <strong>संक्षिप्त रूपको सूची (List of Abbreviations)</strong> भनिन्छ।<br>
+                <strong>ध्यान दिनुपर्ने तीन कुराहरू:</strong>
+                <ol>
+                    <li><strong>वर्णानुक्रम:</strong> सबै संक्षिप्त रूपहरूलाई A, B, C... वा क, ख, ग... को क्रमअनुसार मिलाउनुपर्छ।</li>
+                    <li><strong>पहिलो पटकको पूर्ण रूप:</strong> प्रतिवेदनको मुख्य पाठमा कुनै पनि संक्षिप्त शब्द पहिलो पटक प्रयोग गर्दा पहिले पूरा रूप लेखेर कोष्ठकमा संक्षिप्त रूप लेख्नुपर्छ।</li>
+                    <li><strong>प्रचलित र आधिकारिक सङ्केत:</strong> आफूखुसी नभई आधिकारिक र स्थापित प्रचलन अनुसारका सङ्केतहरू मात्र प्रयोग गर्नुपर्छ (जस्तै: GoN, MoEST)।</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">१.</span> "SIP" को पूर्ण रूप के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> School Development Plan (विद्यालय सुधार योजना)।</div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">२.</span> पादटिप्पणी र अन्त्य टिप्पणी राख्न माइक्रोसफ्ट वर्ड (MS Word) को कुन मेनु प्रयोग गरिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> References मेनु प्रयोग गरिन्छ।</div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">३.</span> "सामुदायिक विद्यालय" को परिभाषा के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> नेपाल सरकारबाट नियमित वा आंशिक रूपमा सहयोग वा अनुदान प्राप्त गरी समुदायद्वारा सञ्चालित हुने विद्यालय नै सामुदायिक विद्यालय हो।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">१.</span> अनुसन्धान प्रतिवेदन लेखनमा 'प्राविधिक शब्दहरूको सूची' (Glossary) को महत्त्व उदाहरणसहित स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अनुसन्धान प्रतिवेदनमा प्राविधिक शब्दहरूको सूची (Glossary) को ठुलो महत्त्व हुन्छ।</p>
+                <ul>
+                    <li><strong>समान बुझाइ कायम गर्ने:</strong> पाठक र लेखकबीच शब्दको बुझाइमा भ्रम रहन दिँदैन।</li>
+                    <li><strong>पठनीयता बढाउने:</strong> कठिन शब्दहरूको अर्थ तुरुन्तै थाहा पाउँदा पाठकको रुचि र बुझाइ मजबुत हुन्छ।</li>
+                    <li><strong>प्राज्ञिक स्तर उच्च बनाउने:</strong> अनुसन्धानलाई बढी व्यवस्थित, वैज्ञानिक र प्रामाणिक बनाउँछ।</li>
+                </ul>
+                <p><strong>उदाहरण:</strong> "संस्थागत विद्यालय" शब्दको ग्लोसरीमा *"नेपालमा सरकारी सहयोग नलिनने गरी कुनै संस्था वा व्यक्तिले सञ्चालन गरेका विद्यालयहरू"* भनी अर्थ स्पष्ट पारिँदा पाठकले सजिलै बुझ्न सक्छन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">२.</span> "पादटिप्पणी (Footnote) को अभावमा प्रतिवेदनको विश्वसनीयता कमजोर हुन सक्छ।" यस भनाइलाई पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> यो भनाइ पूर्ण रूपमा सत्य हो।</p>
+                <ul>
+                    <li><strong>स्रोतको इमानदार स्विकारोक्ति:</strong> पादटिप्पणीले लेखिएका तथ्याङ्क वा विचार कसको हो र कहाँबाट लिइएको हो भन्ने स्पष्ट गर्छ, बौद्धिक चोरीबाट जोगाउँछ।</li>
+                    <li><strong>तथ्यको प्रमाणिकरण:</strong> पाठकले पादटिप्पणी हेरेर उक्त तथ्यको प्रमाणिकरण गर्न सक्छन्।</li>
+                    <li><strong>पाठको निरन्तरता:</strong> थप स्पष्टीकरण तल राखी मुख्य पाठलाई बुझ्न सजिलो बनाउँछ।</li>
+                </ul>
+                <p>तसर्थ, पादटिप्पणीको अभावमा पाठकले तथ्यहरूलाई लेखकको कपोलकल्पित दाबी मान्न सक्छन्, जसले सम्पूर्ण अनुसन्धानको विश्वसनीयता समाप्त हुन सक्छ।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्न (८ अङ्क)</div>
+
+        <div class="qa-block color1" style="border-left-color:#007FFF;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "शाब्दिक जानकारीको व्यवस्थित प्रस्तुतीकरणले नै अनुसन्धान प्रतिवेदनलाई स्तरीय र विश्वसनीय बनाउँछ।" यस भनाइलाई संक्षिप्त रूप, प्राविधिक शब्दको सूची, र पादटिप्पणीको उपयोगिताका आधारमा समीक्षा गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> सामाजिक अध्ययन वा कुनै पनि विधाको अनुसन्धानमा केवल तथ्याङ्क सङ्कलन गर्नु मात्र पर्याप्त हुँदैन। सङ्कलित शाब्दिक जानकारीलाई पाठक समक्ष कसरी प्रस्तुत गरिन्छ भन्ने कुराले अनुसन्धानको स्तर निर्धारण गर्दछ। संक्षिप्त रूपको सूची, प्राविधिक शब्दहरूको सूची, र पादटिप्पणी जस्ता साधनहरू शाब्दिक जानकारीलाई व्यवस्थित, स्पष्ट र प्राज्ञिक रूपमा प्रस्तुत गर्ने अत्यन्तै महत्वपूर्ण कडीहरू हुन्।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+
+                <p><strong>क) संक्षिप्त रूपको सूची (Abbreviations) को योगदान:</strong> प्रतिवेदनमा 'त्रिभुवन विश्वविद्यालय' वा 'शिक्षा, विज्ञान तथा प्रविधि मन्त्रालय' जस्ता शब्दहरू सयौँ पटक आउँछन्। संक्षिप्त रूपको सूचीले 'त्रिवि' वा 'MoEST' जस्ता शब्दहरूको प्रयोगलाई वैध बनाई प्रतिवेदनलाई चुस्त, संक्षिप्त र समय अनुकूल बनाउँछ।</p>
+
+                <p><strong>ख) प्राविधिक शब्दको सूची (Glossary) को योगदान:</strong> अनुसन्धानमा प्रयोग हुने 'सामुदायिक विद्यालय' वा 'प्रधानाध्यापक' जस्ता विशिष्ट शब्दहरूको आफ्नै अर्थ र सीमा हुन्छ। ग्लोसरीले यी शब्दहरूको वास्तविक र कानुनी परिभाषा प्रस्तुत गर्दछ, जसले गर्दा पाठकहरू भ्रममा पर्दैनन् र अनुसन्धानको वास्तविक सन्देश समाजमा स्पष्ट रूपमा प्रवाह हुन्छ।</p>
+
+                <p><strong>ग) पादटिप्पणी (Footnote) को प्राज्ञिक भूमिका:</strong> पादटिप्पणीले प्रतिवेदनमा संकलित विचार, कथन र तथ्याङ्कहरू कुन पुस्तक, कुन दस्तावेज वा कुन वेबसाइटबाट साभार गरिएको हो सो कुरा सोही पानाको तल्लो भागमा स्पष्ट रूपमा देखाउँछ। यसले लेखकको इमानदारिता प्रदर्शन गर्नुका साथै अनुसन्धानलाई बौद्धिक चोरीको कलङ्कबाट पूर्ण रूपमा बचाउँछ।</p>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपालको सन्दर्भमा तयार पारिएका विभिन्न सरकारी प्रतिवेदन वा UNDP, UNICEF का प्रतिवेदनहरू हेर्दा सुरुका पानाहरूमा संक्षिप्त रूपहरूको सूची र अन्तिम पानामा विस्तृत शब्दावली अनिवार्य रूपमा राखिएको हुन्छ। यसले गर्दा विदेशी वा स्वदेशी जुनसुकै अनुसन्धानकर्ताले ती प्रतिवेदनहरू पढ्दा शब्दहरूको अर्थ र तथ्याङ्कको स्रोतमा कुनै शङ्का गर्न पाउँदैनन्।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> शाब्दिक जानकारीलाई व्यवस्थित रूपमा प्रस्तुत नगर्दा उत्कृष्ट अनुसन्धान पनि पाठकका लागि झन्झटिलो र अविश्वसनीय बन्न सक्छ। तसर्थ, संक्षिप्त रूपको सूची, प्राविधिक शब्दहरूको सूची, र पादटिप्पणीको बुद्धिमानी प्रयोगले नै अनुसन्धानलाई स्तरीय, पठनीय, र वैज्ञानिक रूपमा विश्वसनीय बनाउन निर्णायक भूमिका खेल्छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#b45309; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> शाब्दिक जानकारीको सुन्दर र व्यवस्थित प्रस्तुतीकरणले अनुसन्धानको गुणस्तर निर्धारण गर्छ। संक्षिप्त रूप, प्राविधिक शब्द सूची र पादटिप्पणीको सही प्रयोगले प्रतिवेदनलाई प्राज्ञिक, विश्वसनीय र पाठकमैत्री बनाउँछ। MS Word को References मेनुको अभ्यास गर्नुहोस्।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ २, पाठ ९</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

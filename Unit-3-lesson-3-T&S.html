@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ ३ – सिर्जनात्मक चिन्तन (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #fcf5e8;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fefcf7;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #DA1884;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #DA1884;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8dfd4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #c9bdb0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #DA1884;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #DA1884;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #DA1884;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #e860a8;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #DA1884 ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #fff;
+            background: #DA1884;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(218, 24, 132, 0.30);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #DA1884;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #f5d742;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; }
+        .section-head .mark-badge.green { background: #7dcea0; }
+        .section-head .mark-badge.purple { background: #b39ddb; }
+        .section-head .mark-badge.blue { background: #81d4fa; }
+        .section-head .mark-badge.pink { background: #f48fb1; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #b0156a;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #DA1884;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #DA1884;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #b0156a;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #DA1884;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #DA1884;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.blue-highlight {
+            border-left-color: #DA1884;
+            background: #fcf0f7;
+        }
+
+        .content-box.gold-highlight {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-highlight {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-highlight {
+            border-left-color: #6b3fa0;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-highlight {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-highlight {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-highlight {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #c9bdb0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #c9bdb0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #DA1884;
+            font-weight: 800;
+            color: #fff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8dfd4;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #c9bdb0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #DA1884;
+        }
+
+        .qa-block.color1 { border-left-color: #DA1884; background: #fcf0f7; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #DA1884;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #b0156a;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #DA1884;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .flow-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #fcf0f7;
+            border-radius: 20px;
+            border: 2px dashed #da80b0;
+        }
+
+        .flow-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #da80b0;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .flow-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .flow-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .flow-chart {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .flow-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- Mermaid-style flow ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #fcf0f7;
+            border-radius: 20px;
+            border: 2px dashed #da80b0;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #da80b0;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- LETTER BOX ----- */
+        .letter-box {
+            background: #fcf8f0;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .letter-box .letter-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .letter-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 6px;
+            line-height: 2;
+        }
+
+        .letter-box .salutation {
+            font-weight: 700;
+            color: #0b2b4a;
+        }
+
+        .letter-box .closing {
+            font-weight: 700;
+            color: #0b2b4a;
+            margin-top: 10px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #DA1884;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(218, 24, 132, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #b0156a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(218, 24, 132, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #DA1884;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #d0c4b8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #DA1884;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- PROJECT BOX ----- */
+        .project-box {
+            background: #fcf8f0;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .project-box .project-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.15rem;
+        }
+
+        .project-box p,
+        .project-box li {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        /* ----- SELF-ASSESSMENT TABLE ----- */
+        .self-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+
+        .self-table th {
+            background: #DA1884;
+            color: #fff;
+            font-weight: 800;
+            padding: 10px 14px;
+            text-align: left;
+        }
+
+        .self-table td {
+            padding: 8px 14px;
+            border: 1px solid #d0c4b8;
+            vertical-align: top;
+        }
+
+        .self-table .tick {
+            text-align: center;
+            font-weight: 700;
+            color: #1f7a4a;
+        }
+
+        .self-table .cross {
+            text-align: center;
+            font-weight: 700;
+            color: #c0392b;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .flow-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .letter-box p {
+                font-size: 1.02rem;
+            }
+            .self-table {
+                font-size: 0.85rem;
+            }
+            .self-table th,
+            .self-table td {
+                padding: 4px 8px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-lightbulb"></i>
+                    एकाइ ३, पाठ ३: सिर्जनात्मक चिन्तन
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ३, पाठ ३
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक (रजिस्टर) शब्दहरू
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> सिर्जनात्मक चिन्तन</strong>
+                <p>कुनै पनि परिस्थिति वा परिदृश्यमा परम्परागत ढङ्गभन्दा बाहिर गएर नयाँ विकल्पहरू सोच्ने, समस्या समाधानका नौला उपायहरू खोज्ने र ती विचारहरूलाई वास्तविकतामा बदल्ने सचेत मानसिक प्रक्रिया <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> नवप्रवर्तन (Innovation)</strong>
+                <p>कार्यस्थल, उत्पादन, सेवा वा विचारको क्षेत्रमा नयाँ प्रविधि, ढाँचा वा उपयोगिता थप गरी मौलिक र गुणात्मक सुधार ल्याउने कार्य <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> मस्तिष्क मन्थन (Brainstorming)</strong>
+                <p>कुनै पनि समस्याको बहुआयामिक समाधान खोज्नका लागि दिमागलाई स्वतन्त्र छाडी विना अवरोध धेरैभन्दा धेरै नवीन र सम्भावित विचारहरू सङ्कलन गर्ने बौद्धिक कसरत <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> मानसिक लचकता</strong>
+                <p>संकुचित र एकपक्षीय सोचबाट मुक्त भई परिस्थितिको माग अनुसार फरक-फरक दृष्टिकोण वा बहुविकल्पहरूबाट सोच्न र आत्मसात गर्न सक्ने मानसिक क्षमता <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> तयारी चरण</strong>
+                <p>सिर्जनात्मक चिन्तन प्रक्रियाको पहिलो चरण, जसमा आवश्यक सूचना र सामग्री सङ्कलन, अनुसन्धान, मस्तिष्क मन्थन र प्रारम्भिक योजना निर्माण गर्ने काम गरिन्छ <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> विकास चरण</strong>
+                <p>तयार पारिएको सिर्जनात्मक योजनालाई दिमागमा परिपक्व हुन दिइने विश्रामको अवधि, जसमा सिर्जनाकार सचेत रूपमा अर्कै काममा व्यस्त रहे पनि अवचेतन मनमा योजनाको विकास भइरहेको हुन्छ <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> प्रदीप्ति चरण / अन्तर्दृष्टि</strong>
+                <p>सिर्जनाकारको दिमागमा अचानक, आश्चर्यजनक वा चम्किलो रूपमा समस्या समाधानको अचूक सूत्र वा नवीन विचार फुरेर आउने सिर्जनात्मकताको मुख्य क्षण <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> मूल्याङ्कन चरण</strong>
+                <p>फुर्न आएको नवीन विचार व्यावहारिक रूपमा उपयोगी छ कि छैन भनी स्थापित ज्ञान, अनुभव वा स्थलगत अनुसन्धानका आधारमा परीक्षण र विश्लेषण गर्ने चरण <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> प्रमाणीकरण चरण</strong>
+                <p>कडा परिश्रमका साथ नवीन विचारलाई अन्तिम व्यावहारिक रूप दिई समाज, सरोकारवाला वा लक्षित समूह समक्ष प्रदर्शन वा पेस गर्ने अन्तिम चरण <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#DA1884; margin-right:4px;"></i> कल्पनाशीलता (Imagination)</strong>
+                <p>वास्तवमा आँखा अगाडि अस्तित्वमा नभएका तर सम्भावित भविष्यमा साकार पार्न सकिने नवीन दृश्य, विचार र समाधानहरू मनभित्र रूपरेखा कोर्न सक्ने क्षमता <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "सिर्जनात्मक चिन्तन" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. अवधारणा र क्षेत्र -->
+        <div class="sub-head"><i class="fas fa-globe"></i> १. सिर्जनात्मक चिन्तनको अवधारणा र क्षेत्र</div>
+
+        <div class="content-box blue-highlight">
+            <ul>
+                <li><strong>व्यापकता:</strong> सिर्जनात्मक चिन्तन केवल कला, संगीत, साहित्य वा चित्रकलाको क्षेत्रमा मात्र सीमित नभई विज्ञान, प्रविधि, व्यापार, नीति निर्माण र दैनिक जीवनका साना-तिना व्यावहारिक समस्या समाधानमा समेत समान रूपमा लागू हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>अन्तरनिहित क्षमता प्रस्फुटन:</strong> यसले मानिसमा लुकेर रहेको अद्वितीय प्रतिभा र क्षमतालाई बाहिर ल्याउने अवसर दिन्छ। नयाँ सिर्जना गर्न पाउँदा मानिस आफैँमा उत्साहित, खुसी र मानसिक रूपमा आनन्दित हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>दैनिक जीवनका उदाहरणहरू <span class="ref">[८]</span>:</strong>
+                    <ul>
+                        <li>कुनै नयाँ पोस्टर, लोगो, विज्ञापन वा वेबसाइटको डिजाइन सोच्नु।</li>
+                        <li>पत्रपत्रिका वा ब्लगका माध्यमबाट सामाजिक समस्याको रचनात्मक निकास सुझाउनु।</li>
+                        <li>कुनै पुराना वा प्रयोगविहीन वस्तुहरूलाई नयाँ उपयोगिता दिई नवप्रवर्तन गर्नु।</li>
+                        <li>कथा, कविता, उपन्यास वा संगीतको सिर्जना गर्नु।</li>
+                        <li>कार्यस्थलमा श्रम र समय बचत गर्ने सरल र प्रभावकारी विधिहरू विकास गर्नु।</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- २. ८ विशेषताहरू -->
+        <div class="sub-head"><i class="fas fa-list-check"></i> २. सिर्जनात्मक चिन्तनका ८ वटा मुख्य विशेषताहरू <span class="ref">[८]</span></div>
+
+        <div class="content-box green-highlight">
+            <ol>
+                <li>यसले मानिसमा <strong>जिज्ञासुपन र खुला सोचाइ</strong> (Curiosity and Openness) लाई सधैँ बढावा दिन्छ <span class="ref">[८]</span>।</li>
+                <li>व्यक्तिलाई सिकाइ र नयाँ कार्यप्रति <strong>गहिरो अभिरुचि</strong> जगाई आन्तरिक सन्तुष्टि प्रदान गर्दछ <span class="ref">[८]</span>।</li>
+                <li>सोचाइ र चिन्तनको क्षेत्रमा <strong>विविधता (Diversity)</strong> र व्यापकता ल्याउँछ <span class="ref">[८]</span>।</li>
+                <li>गल्ती हुन सक्ने डरलाई जितेर नयाँ क्षेत्रमा पाइला टेक्न <strong>'जोखिम वहन गर्ने क्षमता'</strong> (Risk-taking ability) बढाउँछ <span class="ref">[८]</span>।</li>
+                <li>हरेक काममा परम्परागत ढर्रा भन्दा माथि उठी <strong>नवप्रवर्तन (Innovation)</strong> ल्याउन मद्दत गर्दछ <span class="ref">[८]</span>।</li>
+                <li>अमूर्त विचारहरूलाई मूर्त रूप दिन <strong>'कल्पनाशीलता'</strong> मा विशेष जोड दिन्छ <span class="ref">[८]</span>।</li>
+                <li>व्यक्तिलाई आफ्नो सिर्जना र काममा रमाउने सुन्दर र <strong>सिर्जनशील वातावरण</strong> तयार पार्छ <span class="ref">[८]</span>।</li>
+                <li>जुनसुकै जटिल वा सामान्य कार्यलाई पनि <strong>नवीन दृष्टिकोण, फरक ढङ्ग र नयाँ तरिका</strong> बाट फत्ते गर्न मद्दत गर्छ <span class="ref">[८]</span>।</li>
+            </ol>
+        </div>
+
+        <!-- ३. ५ चरणहरू -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> ३. सिर्जनात्मक चिन्तन प्रक्रियाका ५ वटा क्रमिक चरणहरू <span class="ref">[८]</span></div>
+
+        <div class="content-box purple-highlight">
+            <p>कुनै पनि नवीन विचार वा वस्तुको सिर्जना अचानक र विना आधार हुँदैन। यसका पछाडि वैज्ञानिक रूपमा प्रमाणित निम्नलिखित ५ चरणहरू सक्रिय रहन्छन् <span class="ref">[८]</span>:</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">१. तयारी चरण<br><span style="font-weight:400;">(Preparation)</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">२. विकास चरण<br><span style="font-weight:400;">(Incubation)</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">३. प्रदीप्ति चरण<br><span style="font-weight:400;">(Illumination)</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">४. मूल्याङ्कन चरण<br><span style="font-weight:400;">(Evaluation)</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">५. प्रमाणीकरण चरण<br><span style="font-weight:400;">(Verification)</span></div>
+            </div>
+
+            <ul>
+                <li><strong>(क) तयारी चरण (Preparation Phase):</strong> यो सिर्जनात्मक यात्राको प्रस्थान बिन्दु हो। यस चरणमा अनुसन्धान गरिन्छ, आवश्यक सूचना र भौतिक सामग्री सङ्कलन गरिन्छ, र मस्तिष्क मन्थन गरी ज्ञान र अनुभवका आधारमा एउटा बलियो योजना बनाइन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(ख) विकास चरण (Incubation Phase):</strong> तयारी पूरा भएपछि योजनालाई दिमागमा परिपक्व हुन केही समय विश्राम दिइन्छ। यस अवधिमा सिर्जनाकार सचेत रूपमा अर्कै काममा संलग्न रहे पनि उसको अवचेतन मन (Subconscious mind) मा उक्त योजना र समस्या समाधानको प्रक्रिया निरन्तर चलिरहेको हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(ग) प्रदीप्ति चरण (Illumination Phase):</strong> यसलाई 'अन्तर्दृष्टि' (Insight) वा 'युरेका क्षण' पनि भनिन्छ। यस चरणमा अचम्मको रूपमा अचानक दिमागमा नयाँ विचार, जुक्ति वा समस्या समाधानको साँचो फुर्न आउँछ <span class="ref">[८]</span>।</li>
+                <li><strong>(घ) मूल्याङ्कन चरण (Evaluation Phase):</strong> प्राप्त नवीन विचारले व्यावहारिक रूपमा काम गर्छ कि गर्दैन भनी स्थापित सिद्धान्त, तथ्याङ्क वा स्थलगत अनुसन्धानमार्फत सूक्ष्म विश्लेषण र मूल्याङ्कन गरिन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(ङ) प्रमाणीकरण चरण (Verification Phase):</strong> कडा शारीरिक र मानसिक परिश्रम गरी विचारलाई पूर्णता दिइन्छ। सिर्जनाकारको दिमागमा रहेको अमूर्त परिकल्पनाले भौतिक रूपमा प्रकट हुने अवसर पाउँछ र यसलाई अरू व्यक्तिहरू समक्ष पेस गरिन्छ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ४. फाइदाहरू -->
+        <div class="sub-head"><i class="fas fa-check-circle"></i> ४. सिर्जनात्मक चिन्तनका व्यावहारिक फाइदाहरू <span class="ref">[८]</span></div>
+
+        <div class="content-box pink-highlight">
+            <ul>
+                <li><strong>मानसिक लचकतामा वृद्धि:</strong> मानिसमा एउटै कुरामा मात्र अडिग नरही विभिन्न सम्भावित विकल्पहरूमा विचार गर्ने उदार बानी बस्छ <span class="ref">[८]</span>।</li>
+                <li><strong>बहुआयामिक समस्या समाधान:</strong> जटिल र अप्रत्याशित समस्याहरूको केवल एक पक्षीय नभई चौतर्फी र दिगो निकास खोज्न मद्दत गर्छ <span class="ref">[८]</span>।</li>
+                <li><strong>चुनौतीलाई अवसरमा रूपान्तरण:</strong> कार्यस्थल वा दैनिक जीवनमा आउने विषम परिस्थिति वा अवरोधहरूलाई नवप्रवर्तनको अवसरमा बदल्न सघाउँछ <span class="ref">[८]</span>।</li>
+                <li><strong>सत्यको बहुपक्षीय साक्षात्कार:</strong> कुनै पनि घटना वा अवधारणाको गहिराइमा पुगेर विभिन्न आयाम र दृष्टिकोणहरू विश्लेषण गर्ने बानी बस्छ <span class="ref">[८]</span>।</li>
+                <li><strong>सञ्चार र सहकार्यमा सुधार:</strong> यसले समूहमा काम गर्ने क्षमता (Teamwork), सञ्चार सिप र अरूसँग सुमधुर सम्बन्ध कायम राख्न ठुलो सहयोग पुर्‍याउँछ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-recycle"></i> क्रियाकलाप १: प्रयोगविहीन वस्तुको आकर्षक पुनरुत्पादन (Upcycling Project)</div>
+
+        <div class="project-box">
+            <p class="project-title"><i class="fas fa-lightbulb" style="color:#DA1884; margin-right:8px;"></i> परियोजनाको नाम: फोहोर टिनको बट्टाबाट बहुउपयोगी "कलात्मक कलमदानी र टेबल सजावट सामग्री"</p>
+
+            <ul>
+                <li><strong>१. कच्चा पदार्थ सङ्कलन (श्रोत):</strong> विद्यालयको चमेनागृह नजिकै फालिएको प्रयोगविहीन दुध वा फलफूलको खाली टिनको बट्टा <span class="ref">[८]</span>।</li>
+                <li><strong>२. आवश्यक अन्य सामग्रीहरू:</strong> पुराना रङ्गीन कागजका टुक्राहरू, केही सुकेका रुखका पातहरू, सुतली धागो, कैँची, र फेभिकोल गम।</li>
+                <li><strong>३. निर्माण प्रक्रिया (Step-by-Step Process):</strong>
+                    <ul>
+                        <li><strong>पहिलो चरण (सफाइ):</strong> टिनको बट्टालाई साबुनपानीले राम्रोसँग धोएर सुकाइयो र यसका तिखा किनारहरूलाई सुरक्षित बनाउन प्लासले थिचियो।</li>
+                        <li><strong>दोस्रो चरण (कभरिङ):</strong> बट्टाको बाहिरी भागमा फेभिकोल लगाएर खस्रो सुतली धागोलाई तलदेखि माथिसम्म कसिलो गरी बेरियो, जसले गर्दा यसलाई मौलिक र प्राकृतिक रूप (Rustic Look) प्राप्त भयो।</li>
+                        <li><strong>तेस्रो चरण (कलात्मक सजावट):</strong> सुतली धागोमाथि सुकेका प्राकृतिक रुखका पातहरू र केही पुराना रङ्गीन कागजका टुक्राहरू काटेर फूलको बुट्टा बनाई टाँसियो।</li>
+                    </ul>
+                </li>
+                <li><strong>४. उपयोगिता:</strong> यो सामग्री टेबलमा कलम, पेन्सिल, स्केल र कैँची राख्ने "कलमदानी" को रूपमा प्रयोग गर्न सकिन्छ। यसका साथै यसभित्र थोरै माटो हालेर सानो इन्डोर प्लान्ट (सजावटी बोटबिरुवा) लगाई टेबल सजाउन समेत सकिन्छ।</li>
+                <li><strong>५. सिकाइ निष्कर्ष:</strong> यस क्रियाकलापले हामीलाई फोहोर व्यवस्थापन गर्ने मात्र नभई प्रयोगविहीन फालिएका वस्तुहरूमा नयाँपन थपेर आर्थिक र व्यावहारिक मूल्य सिर्जना गर्न (सिर्जनात्मक चिन्तन र नवप्रवर्तन) सिकाउँछ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-rocket"></i> क्रियाकलाप २: आजको १० वर्षपछिको विश्व (काल्पनिक विज्ञान कथा/लेख)</div>
+
+        <div class="content-box orange-highlight">
+            <p style="font-weight:800; font-size:1.25rem; color:#0b2b4a; text-align:center;">लेख शीर्षक: सन् २०३६ को संसार र मानव जीवनलाई चकित पार्ने तीन महा-आविष्कारहरू</p>
+
+            <p>कल्पना नै आविष्कारको जननी हो। आजभन्दा दश वर्षअघि हामीले सोच्न नसकेका प्रविधिहरू आज हाम्रो दैनिक जीवनको हिस्सा बनिसकेका छन्। यसै आधारमा आजको ठीक १० वर्षपछि अर्थात् <strong>सन् २०३६</strong> सम्ममा विज्ञान र प्रविधिको क्षेत्रमा हुने क्रान्तिकारी परिवर्तनले मानव सभ्यतालाई पूर्ण रूपमा नयाँ मोड दिने निश्चित छ।</p>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin:14px 0;">
+                <div style="background:#fcf0f7; border-radius:12px; padding:14px 16px; border:2px solid #da80b0;">
+                    <p style="font-weight:800; color:#b0156a; font-size:1.05rem;">१. जैविक एआई चिप</p>
+                    <p style="font-size:0.98rem;">शरीरको छालामुनि राख्न सकिने चिपले क्यान्सर, हृदयघात जस्ता रोग लाग्नुअघि नै पहिचान गरी चेतावनी दिनेछ।</p>
+                </div>
+                <div style="background:#eef8f2; border-radius:12px; padding:14px 16px; border:2px solid #7dcea0;">
+                    <p style="font-weight:800; color:#1f7a4a; font-size:1.05rem;">२. सौर्य पर्यावरण शुद्धिकरण यन्त्र</p>
+                    <p style="font-size:0.98rem;">सौर्य ऊर्जाबाट चल्ने सानो यन्त्रले ५ मिटर दायराको प्रदूषित हावालाई शुद्ध अक्सिजनमा बदल्नेछ।</p>
+                </div>
+                <div style="background:#fef6ed; border-radius:12px; padding:14px 16px; border:2px solid #d97706;">
+                    <p style="font-weight:800; color:#b45309; font-size:1.05rem;">३. होलोग्राफिक मस्तिष्क असिस्टेन्ट</p>
+                    <p style="font-size:0.98rem;">थ्री-डी होलोग्राफिक प्रक्षेपण मार्फत विद्यार्थीहरूले शिक्षकको जीवन्त रूप कक्षामै देख्न पाउनेछन्।</p>
+                </div>
+            </div>
+
+            <p>निष्कर्षमा, सन् २०३६ को प्रविधिले केवल विलासिता मात्र बढाउने छैन, बरु स्वास्थ्य, वातावरण र शिक्षाका क्षेत्रमा रहेका ठुला चुनौतीहरूलाई परास्त गरी मानव जीवनलाई अति सुगम र पर्यावरणमैत्री बनाउनेछ <span class="ref">[८]</span>।</p>
+        </div>
+
+        <!-- क्रियाकलाप ३ -->
+        <div class="sub-head"><i class="fas fa-clipboard-list"></i> क्रियाकलाप ३: सिर्जनात्मक चिन्तन र व्यवहार पहिचान (आत्ममूल्याङ्कन तालिका)</div>
+
+        <div class="content-box teal-highlight">
+            <p><strong>प्रश्न:</strong> आफूमा भएका सिर्जनात्मक चिन्तन र व्यवहार पहिचान गरी मूल्याङ्कन गर्नुहोस् <span class="ref">[८]</span>:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: सिर्जनात्मक चिन्तन आत्ममूल्याङ्कन</div>
+                <table class="self-table">
+                    <thead>
+                        <tr>
+                            <th style="width:6%;">क्र.सं.</th>
+                            <th style="width:48%;">सिर्जनात्मक चिन्तन वा व्यवहार <span class="ref">[८]</span></th>
+                            <th style="width:10%;">छ (✓)</th>
+                            <th style="width:10%;">छैन (✗)</th>
+                            <th style="width:26%;">व्यावहारिक सुधारका लागि प्रतिबद्धता</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>१</td>
+                            <td><strong>जिज्ञासु र खुला सोच भएको:</strong> नयाँ कुरा देख्दा 'यो किन र कसरी भयो' भनी सधैँ खोजी नीति गर्ने बानी <span class="ref">[८]</span>।</td>
+                            <td class="tick">✓</td>
+                            <td></td>
+                            <td>यस जिज्ञासालाई कायम राख्दै अझ बढी रचनात्मक पुस्तकहरू पढ्नेछु।</td>
+                        </tr>
+                        <tr>
+                            <td>२</td>
+                            <td><strong>सिक्न पाउँदा खुसी र आनन्दित हुने गरेको:</strong> नयाँ प्रविधि, भाषा वा सिप सिक्न पाउँदा आन्तरिक उत्साह जाग्ने <span class="ref">[८]</span>।</td>
+                            <td class="tick">✓</td>
+                            <td></td>
+                            <td>विद्यालयका अतिरिक्त क्रियाकलापमा सक्रिय सहभागी हुनेछु।</td>
+                        </tr>
+                        <tr>
+                            <td>३</td>
+                            <td><strong>विविध प्रकारले सोच्ने र जटिलताको सामना गर्ने:</strong> समस्या पर्दा एउटा मात्र उपायमा नअल्मलिई फरक ढङ्गले सोच्ने <span class="ref">[८]</span>।</td>
+                            <td class="tick">✓</td>
+                            <td></td>
+                            <td>गणित र विज्ञानका कठिन समस्या समाधानमा अझ बढी वैकल्पिक उपाय खोज्नेछु।</td>
+                        </tr>
+                        <tr>
+                            <td>४</td>
+                            <td><strong>मौजुदा अवस्थाभन्दा पर गएर जोखिम लिन तयार भएको:</strong> गल्ती होला कि भन्ने डर त्यागेर नयाँ काम सुरु गर्न सक्ने <span class="ref">[८]</span>।</td>
+                            <td></td>
+                            <td class="cross">✗</td>
+                            <td>नयाँ काम सुरु गर्दा आउने असफलतालाई सिकाइको अवसर मानेर अबदेखि जोखिम वहन गर्ने क्षमता विकास गर्नेछु।</td>
+                        </tr>
+                        <tr>
+                            <td>५</td>
+                            <td><strong>आफ्ना कल्पना, आविष्कार, स्रोतसाधन प्रयोग गरी नयाँपन दिने:</strong> पुराना वस्तुहरूबाट नयाँ र उपयोगी सामान बनाउन रुचि राख्ने <span class="ref">[८]</span>।</td>
+                            <td class="tick">✓</td>
+                            <td></td>
+                            <td>घरमा निस्कने फोहोर प्लास्टिक र कागजको पुन:प्रयोग (Recycle) गर्ने बानीलाई निरन्तरता दिनेछु।</td>
+                        </tr>
+                        <tr>
+                            <td>६</td>
+                            <td><strong>आफ्ना सिर्जनामा असाध्यै खुसी हुने:</strong> आफैँले कोरेको चित्र वा लेखेको कविता देख्दा आत्मसन्तुष्टि मिल्ने <span class="ref">[८]</span>।</td>
+                            <td class="tick">✓</td>
+                            <td></td>
+                            <td>आफ्ना सिर्जनाहरू शिक्षक र साथीहरूलाई देखाएर पृष्ठपोषण लिनेछु।</td>
+                        </tr>
+                        <tr>
+                            <td>७</td>
+                            <td><strong>गीत, कथा, कविता आदि सिर्जना गर्न रमाइलो मान्ने:</strong> साहित्य वा रचनात्मक लेखनमा रुचि भएको <span class="ref">[८]</span>।</td>
+                            <td class="tick">✓</td>
+                            <td></td>
+                            <td>विद्यालयको भित्ते पत्रिका र मुखपत्रमा आफ्ना रचनाहरू नियमित प्रकाशन गर्नेछु।</td>
+                        </tr>
+                        <tr>
+                            <td>८</td>
+                            <td><strong>एकान्तप्रिय, शान्त र अन्तर्मुखी स्वभाव देखाउने:</strong> हल्लाखल्लाभन्दा एकान्तमा बसेर गहिरो चिन्तन गर्न मन पराउने <span class="ref">[८]</span>।</td>
+                            <td></td>
+                            <td class="cross">✗</td>
+                            <td>बढी बहिर्मुखी भए पनि, दैनिक १० मिनेट एकान्तमा बसेर आत्मसमीक्षा गर्ने अभ्यास थाल्नेछु।</td>
+                        </tr>
+                        <tr>
+                            <td>९</td>
+                            <td><strong>बढी नै कल्पनाशील हुने:</strong> भविष्यका सम्भावना र काल्पनिक संसारका बारेमा सोचिरहने <span class="ref">[८]</span>।</td>
+                            <td class="tick">✓</td>
+                            <td></td>
+                            <td>काल्पनिक विचारहरूलाई योजनाबद्ध रूपमा व्यावहारिक कार्यमा रूपान्तरण गर्ने प्रयास गर्नेछु।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्रमाणित समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> सिर्जनात्मक चिन्तन भनेको के हो?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> कुनै पनि विशिष्ट परिस्थिति, समस्या वा परिदृश्यमा परम्परागत र पुराना सोच्ने ढाँचाहरू भन्दा बाहिर गएर नयाँ र मौलिक विकल्पहरू सोच्ने, समस्या समाधानका नवीन उपायहरू पहिल्याउने र तिनलाई व्यावहारिक रूपमा लागू गर्ने मानसिक क्षमतालाई <strong>सिर्जनात्मक चिन्तन (Creative Thinking)</strong> भनिन्छ <span class="ref">[८]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> सिर्जनात्मक चिन्तन गर्ने व्यक्तिसँग हुने कुनै दुई विशेषताहरू लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सिर्जनात्मक चिन्तन गर्ने व्यक्तिसँग हुने दुई प्रमुख विशेषताहरू निम्नलिखित छन् <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>जिज्ञासु र खुलापन (Curiosity and Openness):</strong> उनीहरू जहिले पनि नयाँ कुरा सिक्न उत्सुक हुन्छन् र अरूको विचारलाई सम्मानपूर्वक सुन्ने खुला सोच राख्छन् <span class="ref">[८]</span>।</li>
+                    <li><strong>कल्पनाशीलता र नवप्रवर्तन (Imagination and Innovation):</strong> उनीहरू अमूर्त कुराहरू कल्पना गर्न सक्छन् र काम गर्ने शैलीमा सधैँ नयाँपन वा सुधार ल्याउन प्रयासरत रहन्छन् <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> सिर्जनात्मक चिन्तनको तयारी चरणमा के गरिन्छ?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> सिर्जनात्मक चिन्तनको <strong>तयारी चरण (Preparation Phase)</strong> मा मुख्य रूपमा निम्न कार्यहरू गरिन्छ <span class="ref">[८]</span>:
+                <ul>
+                    <li>समस्या वा सिर्जना गर्न खोजिएको विषयसँग सम्बन्धित आवश्यक सूचना, तथ्याङ्क र भौतिक सामग्रीहरू सङ्कलन गरिन्छ <span class="ref">[८]</span>।</li>
+                    <li>मस्तिष्क मन्थन (Brainstorming) र गहन अध्ययन गरी उपलब्ध सबै विकल्पहरूमाथि विचार गरिन्छ <span class="ref">[८]</span>।</li>
+                    <li>संकलित ज्ञान र अनुभवका आधारमा आगामी सिर्जनात्मक कार्यलाई मूर्तरूप दिन एउटा स्पष्ट प्रारम्भिक योजना तयार गरिन्छ <span class="ref">[८]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> सिर्जनात्मक चिन्तनको अभ्यास गर्दा हुने एक फाइदा लेख्नुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> सिर्जनात्मक चिन्तनको निरन्तर अभ्यास गर्दा मानिसको <strong>मानसिक लचकता (Mental Flexibility)</strong> मा वृद्धि हुन्छ, जसले गर्दा व्यक्ति कुनै पनि समस्यालाई एकपक्षीय रूपमा मात्र नहेरी विभिन्न सम्भावित विकल्पहरूबाट विश्लेषण गरी व्यावहारिक समाधान निकाल्न सक्षम बन्दछ <span class="ref">[८]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">(ङ)</span> सिर्जनात्मक चिन्तनका कुनै पाँच विशेषताहरूको सूची बनाउनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सिर्जनात्मक चिन्तनका पाँचवटा मुख्य विशेषताहरू यस प्रकार छन् <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li>यसले व्यक्तिमा <strong>जिज्ञासु र खुला सोच</strong> विकास गराई सिकाइप्रति अभिरुचि जगाउँछ <span class="ref">[८]</span>।</li>
+                    <li>यसले सोच र चिन्तनको क्षेत्रमा <strong>विविधता र बहुआयामिकता</strong> प्रदान गर्दछ <span class="ref">[८]</span>।</li>
+                    <li>यसले व्यक्तिको असफलतासँग नडराई नयाँ प्रयास गर्ने <strong>जोखिम वहन गर्ने क्षमता</strong>मा वृद्धि गर्छ <span class="ref">[८]</span>।</li>
+                    <li>यसले सधैँ परम्परागत शैलीको सट्टा काममा <strong>नवप्रवर्तन र मौलिकता</strong> ल्याउन मद्दत गर्छ <span class="ref">[८]</span>।</li>
+                    <li>यसले मानव मस्तिष्कको <strong>कल्पनाशीलता</strong>लाई तीव्र बनाई अमूर्त विचारलाई यथार्थमा बदल्न सघाउँछ <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">(च)</span> सिर्जनात्मक चिन्तन प्रक्रियाका पाँच चरणको छोटो परिचय दिनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सिर्जनात्मक चिन्तनका ५ क्रमिक चरणहरूको संक्षिप्त परिचय यस प्रकार छ <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>तयारी चरण (Preparation Phase):</strong> सिर्जनाको सुरुवाती चरण जसमा सूचना सङ्कलन, मस्तिष्क मन्थन र योजना बनाउने काम गरिन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>विकास चरण (Incubation Phase):</strong> योजनालाई परिपक्व हुन दिइने विश्राम अवधि, जहाँ सचेत रूपमा अर्कै काम गरिए पनि अवचेतन मनमा विचारको विकास भइरहन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>प्रदीप्ति चरण (Illumination Phase):</strong> यसलाई अन्तर्दृष्टि चरण पनि भनिन्छ, जसमा अचानक दिमागमा आश्चर्यजनक रूपमा नयाँ विचार र समस्याको समाधान फुर्न आउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>मूल्याङ्कन चरण (Evaluation Phase):</strong> नयाँ विचार व्यावहारिक र उपयोगी छ कि छैन भनी स्थापित ज्ञान वा स्थलगत अनुसन्धानका आधारमा जाँच्ने कार्य गरिन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>प्रमाणीकरण चरण (Verification Phase):</strong> कडा मिहिनेतका साथ विचारलाई अन्तिम रूप दिई सिर्जनालाई अरू मानिसहरू समक्ष प्रदर्शन वा प्रमाणीकरण गरिने चरण <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">(छ)</span> सिर्जनात्मक चिन्तन विकास गर्नका लागि अपनाउन सकिने उपाय उल्लेख गर्दै आफ्ना भाई वा बहिनीलाई एउटा पत्र लेख्नुहोस्।</div>
+            <div class="a">
+                <div class="letter-box">
+                    <p><strong>बनेपा, काभ्रेपलाञ्चोक</strong></p>
+                    <p><strong>मिति: २०८३/०५/१५</strong></p>
+                    <p class="salutation">प्यारी बहिनी सुस्मिता,</p>
+                    <p>धेरै धेरै माया र न्यानो आशीर्वाद!</p>
+                    <p>हामी सबै सन्चै छौँ र आशा छ तिमी पनि आफ्नो अध्ययनमा स्वस्थ र व्यस्त छौ। हिजो बुबासँग फोनमा कुरा हुँदा तिमीले विद्यालयमा हुने अतिरिक्त क्रियाकलाप र गणितका कतिपय समस्याहरूमा फरक ढङ्गले सोच्न गाह्रो भइरहेको र परीक्षाको तनावले सताएको कुरा सुनाएकी थियौ। त्यसैले आज मैले तिमीलाई तिम्रो अध्ययन र दैनिक व्यवहारमा <strong>'सिर्जनात्मक चिन्तन' (Creative Thinking)</strong> कसरी विकास गर्न सकिन्छ र यसको के महत्त्व छ भन्ने बारेमा केही महत्त्वपूर्ण जीवनोपयोगी उपायहरू सिकाउन यो पत्र लेख्दै छु <span class="ref">[८]</span>।</p>
+                    <p>बहिनी, सिर्जनात्मक चिन्तन केवल ठुला कलाकार वा वैज्ञानिकहरूका लागि मात्र होइन, यो हामीजस्ता विद्यार्थीका लागि झन् बढी आवश्यक छ <span class="ref">[८]</span>। यसले हाम्रो पढाइलाई रमाइलो बनाउँछ र समस्याहरू सजिलै हल गर्न सघाउँछ <span class="ref">[८]</span>।</p>
+                    <p>तिमीले आफ्नो दैनिक जीवनमा निम्न उपायहरू अपनाएर यो सिप विकास गर्न सक्छौ <span class="ref">[८]</span>:</p>
+                    <ol>
+                        <li><strong>आफ्नो उत्सुकता र जिज्ञासालाई कहिल्यै मर्न नदेऊ:</strong> कक्षामा वा घरमा नयाँ कुरा देख्दा वा पढ्दा 'यो किन भयो र कसरी भयो' भनी प्रश्न सोध्ने बानी बसाल। जति धेरै प्रश्न गर्छौ, मस्तिष्कको सोचाइ उति नै फराकिलो हुन्छ <span class="ref">[८]</span>।</li>
+                        <li><strong>विफलतासँग कहिल्यै नहतोत्साही होऊ:</strong> नयाँ तरिकाले गणितको हिसाब गर्दा वा नयाँ चित्र कोर्दा पहिलो पटकमा बिग्रन सक्छ। खतरा वा जोखिम मोल्न नडराऊ, किनभने गल्ती नै सिकाइको पहिलो पाइला हो <span class="ref">[८]</span>।</li>
+                        <li><strong>मस्तिष्क मन्थन र नियमित समय व्यवस्थापन:</strong> दैनिक रूपमा केही समय एकान्तमा बसेर नयाँ कुराहरू सोच्ने अभ्यास गर। कुनै समस्या आइपर्दा 'यसलाई अझ सरल तरिकाले कसरी समाधान गर्न सकिन्छ' भनी धेरै वटा विकल्पहरू कापीमा लेख्ने गर <span class="ref">[८]</span>।</li>
+                        <li><strong>सकारात्मक सोच राख र आत्मविश्वास बलियो बनाऊ:</strong> 'म सिर्जनशील छु र नयाँ कुरा गर्न सक्छु' भन्ने भावना मनमा दृढ राख। नकारात्मक विचारहरूलाई परास्त गरेर आफ्नो आत्मविश्वासलाई सधैँ उच्च बनाऊ <span class="ref">[८]</span>।</li>
+                        <li><strong>साहित्य पढ्ने र सिर्जनात्मक लेखनको अभ्यास गर:</strong> पत्रपत्रिका, रचनात्मक कथा र नयाँ जानकारी दिने पुस्तकहरू पढ्ने बानी बसाल। फुर्सदको समयमा साना-तिना कविता, डायरी वा चित्र कोरेर आफ्नो कल्पनाशीलतालाई थप तीखो बनाऊ <span class="ref">[८]</span>।</li>
+                    </ol>
+                    <p>बहिनी, सिर्जनात्मक चिन्तन एकै दिनमा विकास हुने कुरा होइन, यसका लागि दैनिक रूपमा माथि उल्लेखित कुराहरूको निरन्तर अभ्यास आवश्यक छ <span class="ref">[८]</span>। मलाई पूर्ण विश्वास छ, तिमीले यी जीवनोपयोगी सिपहरुलाई आफ्नो जीवनशैलीको हिस्सा बनाउनेछौ र आगामी दिनमा उत्कृष्ट नतिजा ल्याउनेछौ <span class="ref">[८]</span>।</p>
+                    <p>पत्र पढेर कस्तो लाग्यो र तिम्रो अभ्यास कस्तो चल्दै छ, अर्को पत्रमा अवश्य लेख्नू। राम्रोसँग अध्ययन गर्नू, आफ्नो स्वास्थ्यको ख्याल राख्नू।</p>
+                    <p class="closing">तिम्रो मायालु दाजु,<br>रोहन शर्मा</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष थप सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">१.</span> सिर्जनात्मक चिन्तनको मुख्य आधार के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> कल्पनाशीलता, उत्सुकता र नयाँपन वा नवप्रवर्तनको चाहना नै सिर्जनात्मक चिन्तनको मुख्य आधार हो <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">२.</span> सिर्जनात्मक चिन्तनका ५ चरणमध्ये तेस्रो चरण कुन हो?</div>
+            <div class="a"><strong>उत्तर:</strong> सिर्जनात्मक चिन्तनको तेस्रो चरण <strong>प्रदीप्ति चरण (Illumination Phase) वा अन्तर्दृष्टि</strong> हो <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">३.</span> "६ सोच्ने टोपीहरू" (Six Thinking Hats) को सिद्धान्त कुन चिन्तनसँग बढी सम्बन्धित छ?</div>
+            <div class="a"><strong>उत्तर:</strong> यो सिद्धान्त <strong>समालोचनात्मक र सिर्जनात्मक चिन्तन</strong> मार्फत व्यवस्थित समस्या समाधान गर्न प्रयोग गरिन्छ <span class="ref">[८]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">१.</span> "सिर्जनात्मक चिन्तन केवल साहित्य र कलामा मात्र सीमित हुँदैन।" यस भनाइलाई उदाहरणसहित स्पष्ट पार्नुहोस्। <span class="ref">[८]</span></div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> यो भनाइ पूर्ण रूपमा सत्य र व्यावहारिक छ। धेरै मानिसहरू सिर्जनात्मक चिन्तन केवल लेखक, कवि, संगीतकार वा चित्रकारहरूले मात्र गर्ने कार्य हो भन्ने भ्रम पाल्छन्। तर वास्तवमा यसको क्षेत्र अत्यन्तै व्यापक छ <span class="ref">[८]</span>:</p>
+                <ul>
+                    <li><strong>वैज्ञानिक र प्राविधिक क्षेत्रमा:</strong> मोबाइल फोन, इन्टरनेट, ई-कमर्स, र चिकित्सा क्षेत्रमा भएका नयाँ औषधिको आविष्कार सिर्जनात्मक चिन्तनकै नतिजा हुन् <span class="ref">[८]</span>।</li>
+                    <li><strong>दैनिक व्यवसाय र उद्योगमा:</strong> न्यूनतम लागतमा उच्च गुणस्तरको सामान कसरी उत्पादन गर्ने, र ग्राहकलाई कसरी आकर्षित गर्ने भन्ने कुरामा व्यवसायीहरूले सिर्जनात्मक चिन्तन र नवप्रवर्तनको प्रयोग गर्छन् <span class="ref">[८]</span>।</li>
+                    <li><strong>दैनिक घरायसी जीवनमा:</strong> काम नलाग्ने पुराना बट्टाहरूबाट फूलदानी बनाउनु, खाना पकाउने नयाँ परिकार वा घरेलु फोहोर व्यवस्थापनका सजिला उपायहरू पत्ता लगाउनु यसका उदाहरण हुन् <span class="ref">[८]</span>।</li>
+                </ul>
+                <p>तसर्थ, जुनसुकै पेसा, व्यवसाय वा उमेरका मानिसले पनि आफ्नो कार्य क्षमता बढाउन र समस्या सुल्झाउन सिर्जनात्मक चिन्तनको निरन्तर प्रयोग गरिरहेका हुन्छन् <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">२.</span> सिर्जनात्मक चिन्तनका ५ चरणहरूलाई एक तालिकामा देखाई संक्षिप्त व्याख्या गर्नुहोस्। <span class="ref">[८]</span></div>
+            <div class="a">
+                <div class="table-wrap">
+                    <div class="table-caption">तालिका: सिर्जनात्मक चिन्तनका ५ चरणहरू <span class="ref">[८]</span></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:10%;">क्र.सं.</th>
+                                <th style="width:25%;">चरण (Phases) <span class="ref">[८]</span></th>
+                                <th style="width:65%;">मुख्य विशेषता तथा कार्यहरू <span class="ref">[८]</span></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>१</td>
+                                <td><strong>तयारी चरण</strong> (Preparation)</td>
+                                <td>सूचना, तथ्याङ्क र कच्चा सामग्री सङ्कलन गर्ने, मस्तिष्क मन्थन गरी योजना बनाउने।</td>
+                            </tr>
+                            <tr>
+                                <td>२</td>
+                                <td><strong>विकास चरण</strong> (Incubation)</td>
+                                <td>योजनालाई अवचेतन मनमा परिपक्व हुन समय दिने, बाह्य रूपमा निष्क्रिय वा अन्य काममा व्यस्त रहने।</td>
+                            </tr>
+                            <tr>
+                                <td>३</td>
+                                <td><strong>प्रदीप्ति चरण</strong> (Illumination)</td>
+                                <td>अचानक दिमागमा आश्चर्यजनक रूपमा नयाँ विचार वा समस्या समाधानको कडी फुर्ने क्षण (अन्तर्दृष्टि)।</td>
+                            </tr>
+                            <tr>
+                                <td>४</td>
+                                <td><strong>मूल्याङ्कन चरण</strong> (Evaluation)</td>
+                                <td>प्राप्त नयाँ विचार कत्तिको व्यावहारिक र उपयोगी छ भनी अनुसन्धान वा परीक्षण गर्ने।</td>
+                            </tr>
+                            <tr>
+                                <td>५</td>
+                                <td><strong>प्रमाणीकरण चरण</strong> (Verification)</td>
+                                <td>कडा मिहिनेतका साथ विचारलाई भौतिक रूपमा प्रदर्शन गर्ने र अरू समक्ष प्रमाणीकरणका लागि पेस गर्ने।</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्न (८ अङ्क)</div>
+
+        <div class="qa-block color5" style="border-left-color:#DA1884;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "आजको आधुनिक र प्रतिस्पर्धी युगमा युवाहरूका लागि सिर्जनात्मक चिन्तन एक अपरिहार्य जीवनोपयोगी सिप हो।" यस भनाइलाई यसका फाइदाहरू र विकास गर्ने उपायहरूका आधारमा पुष्टि गर्नुहोस्। <span class="ref">[८]</span></div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> आजको २१ औँ शताब्दी तीव्र प्रविधि विकास, भूमण्डलीकरण र कडा प्रतिस्पर्धाको युग हो। परम्परागत र घोक्ने प्रवृत्तिले मात्र आजका जटिल चुनौतीहरू सामना गर्न सम्भव छैन। यस्तो परिस्थितिमा युवाहरूमा नवप्रवर्तन ल्याउन र समस्याहरूको नवीन निकास खोज्नका लागि 'सिर्जनात्मक चिन्तन' (Creative Thinking) एक अनिवार्य र अपरिहार्य जीवनोपयोगी सिप बनेको छ <span class="ref">[८]</span>।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+
+                <p><strong>आधुनिक युवाहरूका लागि यो सिप अपरिहार्य हुनुका मुख्य कारण र यसका फाइदाहरू <span class="ref">[८]</span>:</strong></p>
+                <ul>
+                    <li><strong>अध्ययन र करियरमा नवप्रवर्तन:</strong> सिर्जनात्मक चिन्तनले युवाहरूलाई आफ्नो कार्य क्षेत्रमा नयाँ प्रविधि र कार्यशैली विकास गर्न मद्दत गर्छ, जसले उनीहरूलाई उद्यमशील र स्वरोजगार बन्न प्रेरित गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>मानसिक लचकता र अनुकूलन क्षमता:</strong> यसले मानसिक संकुचन हटाएर नयाँ विकल्पहरू स्वीकार गर्ने क्षमता बढाउँछ। युवाहरू जस्तोसुकै कठिन परिस्थितिमा पनि विचलित नभई वैकल्पिक उपायहरू खोजी सहजै अनुकूलन हुन सक्छन् <span class="ref">[८]</span>।</li>
+                    <li><strong>बहुआयामिक समस्या समाधान:</strong> समाज र कार्यस्थलमा आइपर्ने जटिल, बहुआयामिक र अप्रत्याशित समस्याहरूलाई तार्किक र सिर्जनशील ढङ्गले समाधान गर्न यसले बलियो आधार प्रदान गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>सञ्चार र सहकार्यको विकास:</strong> सिर्जनात्मक व्यक्तिहरू खुला सोचका हुने भएकाले उनीहरूमा अरूसँग सञ्चार गर्ने र समूहमा काम गर्ने (Teamwork) क्षमता उच्च हुन्छ <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><strong>सिर्जनात्मक चिन्तन विकास गर्ने ५ व्यावहारिक उपायहरू <span class="ref">[८]</span>:</strong></p>
+                <ol>
+                    <li><strong>जिज्ञासा र उत्सुकता बढाउने:</strong> हरेक घटनामा 'किन, कसरी र केका लागि' भनी निरन्तर प्रश्न सोध्ने बानी बसाल्ने <span class="ref">[८]</span>।</li>
+                    <li><strong>जोखिम वहन गर्ने:</strong> असफलतासँग नडराई नयाँ-नयाँ काम र विधिहरू प्रयोग गर्न अग्रसर हुने <span class="ref">[८]</span>।</li>
+                    <li><strong>मस्तिष्क मन्थन (Brainstorming):</strong> कुनै पनि समस्याको केवल एक मात्र उत्तर हुन्छ भन्ने सोच त्यागेर बहुविकल्पहरूको खोजी गर्ने <span class="ref">[८]</span>।</li>
+                    <li><strong>नियमित समय र निरन्तर अभ्यास:</strong> संगीत, कला, लेखन वा नयाँ प्रविधिको अध्ययनका लागि दैनिक निश्चित समय छुट्ट्याएर कसरत गर्ने <span class="ref">[८]</span>।</li>
+                    <li><strong>आत्मविश्वास र सकारात्मक सोच:</strong> आफैँभित्रका नकारात्मक र हीनभावनाहरू त्यागेर आफ्नो सिर्जनात्मक क्षमतामाथि बलियो विश्वास राख्ने <span class="ref">[८]</span>।</li>
+                </ol>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> हाम्रै नेपाली समाजमा कुलत वा बेरोजगारीको समस्या झेलेर बसेका कतिपय युवाहरूले आफ्नो <strong>सिर्जनात्मक चिन्तन</strong>को प्रयोग गरी घर वा होटलबाट निस्कने जैविक फोहोर सङ्कलन गरेर 'कम्पोस्ट मल' बनाउने र छत तथा कौसी खेतीका लागि अनलाइन डेलिभरी सेवा सुरु गरेका छन्। यो परम्परागत रोजगारीको खोजीभन्दा बाहिर गएर, सानो पूँजी र स्थानीय स्रोतसाधनको प्रयोग गरी गरिएको एक उत्कृष्ट नवप्रवर्तन र व्यावहारिक समस्याको सिर्जनात्मक समाधान हो <span class="ref">[८]</span>।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, सिर्जनात्मक चिन्तन केवल परीक्षा पास गर्ने सैद्धान्तिक ज्ञान मात्र होइन, यो युवाहरूको जीवनको हरेक पाइलामा सफलता र नवप्रवर्तन सुनिश्चित गर्ने शक्तिशाली हतियार हो <span class="ref">[८]</span>। तसर्थ, घर, विद्यालय र समाजले युवाहरूमा रहेको नवीन सोच र उत्सुकतालाई दबाउनुको सट्टा प्रवर्द्धन गर्ने वातावरण सिर्जना गर्नु आजको प्रमुख आवश्यकता हो <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#b45309; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> सिर्जनात्मक चिन्तन मानव मस्तिष्कको अनुपम उपहार हो। जिज्ञासा, कल्पनाशीलता र निरन्तर अभ्यासले यसलाई तीव्र बनाउन सकिन्छ। परम्परागत दायराभन्दा बाहिर सोच्नुहोस्, जोखिम लिनुहोस्, र हरेक समस्यामा नयाँ समाधान खोज्नुहोस् – यही नै सिर्जनात्मक चिन्तनको सार हो।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ३, पाठ ३</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
