@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ १ – जीवनोपयोगी सिप (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f5fa;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1565C0;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1565C0;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8f0f8;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b0c4de;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1565C0;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1565C0;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1565C0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #42A5F5;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e8f0f8;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - BLUE ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #1565C0;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(21, 101, 192, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #1565C0;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #0D47A1;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1565C0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1565C0;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #0D47A1;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #1565C0;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1565C0;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1565C0;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b0c4de;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b0c4de;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #1565C0;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8f0f8;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #b0c4de;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1565C0;
+        }
+
+        .qa-block.color1 { border-left-color: #1565C0; background: #e8f0f8; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1565C0;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #0D47A1;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1565C0;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #e8f0f8;
+            border-radius: 20px;
+            border: 2px dashed #42A5F5;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #42A5F5;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- CLASSIFICATION CHART (CSS) ----- */
+        .class-chart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #e8f0f8;
+            border-radius: 20px;
+            border: 2px solid #1565C0;
+        }
+
+        .chart-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .chart-box {
+            flex: 1;
+            min-width: 200px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 14px 16px;
+            border: 2px solid #1565C0;
+            text-align: center;
+        }
+
+        .chart-box .box-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+            background: #e8f0f8;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+
+        .chart-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 4px 0 0;
+            text-align: left;
+        }
+
+        .chart-box ul li {
+            font-size: 0.95rem;
+            font-weight: 500;
+            padding: 2px 0 2px 20px;
+            position: relative;
+        }
+
+        .chart-box ul li::before {
+            content: "•";
+            color: #1565C0;
+            font-weight: 900;
+            position: absolute;
+            left: 2px;
+        }
+
+        .chart-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            text-align: center;
+        }
+
+        @media (max-width: 700px) {
+            .chart-box {
+                min-width: 100%;
+            }
+            .chart-arrow {
+                display: none;
+            }
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1565C0;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(21, 101, 192, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D47A1;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(21, 101, 192, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1565C0;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b0c4de;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1565C0;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .chart-box {
+                min-width: 100%;
+            }
+            .chart-box ul li {
+                font-size: 0.9rem;
+            }
+            .chart-arrow {
+                display: none;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-brain"></i>
+                    एकाइ ३, पाठ १: जीवनोपयोगी सिपको ऐतिहासिक पृष्ठभूमि, वर्गीकरण र अभ्यास
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ३, पाठ १
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> जीवनोपयोगी सिप (Life Skills)</strong>
+                <p>दैनिक जीवनका आवश्यकता, चुनौती र समस्याहरूलाई प्रभावकारी र सकारात्मक रूपमा सम्बोधन गर्न मद्दत गर्ने व्यावहारिक, सामाजिक तथा मनोवैज्ञानिक क्षमता वा कला <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> ओटावा वडापत्र (Ottawa Charter)</strong>
+                <p>सन् १९८६ मा विश्व स्वास्थ्य सङ्गठन (WHO) को अग्रसरतामा क्यानडाको ओटावामा जारी स्वास्थ्य प्रवर्द्धन सम्बन्धी ऐतिहासिक दस्तावेज, जसले पहिलो पटक जीवनोपयोगी सिपको व्यावहारिक आवश्यकतालाई स्वीकार गर्‍यो <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> बाल अधिकार महासन्धि (CRC - 1989)</strong>
+                <p>संयुक्त राष्ट्रसङ्घद्वारा पारित महासन्धि, जसले बालबालिकाको सर्वाङ्गीण विकासका लागि जीवनोपयोगी शिक्षा र सिपको पहुँचलाई आधारभूत अधिकारका रूपमा व्याख्या गर्‍यो <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> सबैका लागि शिक्षा (Education for All - EFA)</strong>
+                <p>सन् १९९० को जोम्टेन र सन् २००० को डकार सम्मेलनद्वारा घोषित विश्वव्यापी प्रतिबद्धता, जसले मानिसको गुणस्तरीय जीवन र क्षमता विकासका लागि जीवनोपयोगी सिपलाई शिक्षाको पाठ्यक्रममा समावेश गर्ने नीति लियो <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> आत्मबोध सिप (Self-awareness Skills)</strong>
+                <p>आफ्नो क्षमता, कमजोरी, भावना, रुचि, मूल्य र मान्यतालाई आफैँले स्पष्ट रूपमा बुझ्ने र स्व-मूल्याङ्कन गर्ने आन्तरिक मनोवैज्ञानिक सिप <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> अन्तरवैयक्तिक सिप (Interpersonal Skills)</strong>
+                <p>समाजका अन्य व्यक्तिहरूसँग सुमधुर सम्बन्ध कायम राख्न, प्रभावकारी सञ्चार गर्न, र समूहमा आपसी सद्भावका साथ सहकार्य गर्न आवश्यक पर्ने सामाजिक सिप <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> सोचाइ सिप (Thinking Skills)</strong>
+                <p>उपलब्ध सूचनाहरूको तार्किक प्रशोधन गरी सही निर्णय लिन, सिर्जनात्मक र समालोचनात्मक विश्लेषण गर्न, र समस्याहरूको निकास खोज्न मस्तिष्कलाई सक्रिय बनाउने मानसिक सिप <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> उत्थानशीलता (Resilience)</strong>
+                <p>जीवनमा आइपर्ने गम्भीर सङ्कट, असफलता, तनाव वा कठिन परिस्थितिमा विचलित नभई धैर्यताका साथ सामना गर्ने र पुनः पूर्ववत् रूपमा उठ्न सक्ने मानसिक लचकता <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> संवेगात्मक नियमन (Emotional Regulation)</strong>
+                <p>रिस, डर, चिन्ता, ईर्ष्या जस्ता मानव मनमा उत्पन्न हुने संवेगहरूलाई नियन्त्रण र रचनात्मक रूपमा परिचालन गर्ने क्षमता <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#1565C0; margin-right:4px;"></i> आत्मसम्मान (Self-esteem)</strong>
+                <p>आफ्नो योग्यता, अस्तित्व र मूल्यलाई स्वीकार गर्दै आफैँप्रति गर्व गर्ने र सकारात्मक आत्मविश्वास कायम राख्ने मानसिक अवस्था <span class="ref">[७]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "जीवनोपयोगी सिप" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. दार्शनिक र व्यावहारिक परिचय -->
+        <div class="sub-head"><i class="fas fa-compass"></i> १. जीवनोपयोगी सिपको दार्शनिक र व्यावहारिक परिचय</div>
+
+        <div class="content-box blue-light">
+            <p>मानवीय जीवन केवल किताबी ज्ञान र सैद्धान्तिक अध्ययनले मात्र चल्न सक्दैन। व्यक्तिले समाजमा सन्तुलित र सफल जीवनयापन गर्नका लागि आफ्नो भावना नियन्त्रण गर्न, अरूसँग संवाद गर्न, र आइपर्ने अवरोधहरू हल गर्न सक्षम हुनुपर्छ। यिनै व्यावहारिक र सामाजिक-मनोवैज्ञानिक क्षमताहरूको समष्टि रूप नै <strong>जीवनोपयोगी सिप (Life Skills)</strong> हो <span class="ref">[७]</span>। यसले मानिसलाई संवेदनावश निर्णय लिनबाट रोक्छ र तार्किक तथा समतामूलक सोचको विकास गर्दछ।</p>
+        </div>
+
+        <!-- २. ऐतिहासिक विकासक्रम -->
+        <div class="sub-head"><i class="fas fa-history"></i> २. जीवनोपयोगी सिपको ऐतिहासिक विकासक्रम (Timeline Flowchart)</div>
+
+        <div class="content-box green-light">
+            <p>जीवनोपयोगी सिप शिक्षाको विकासक्रमलाई निम्न ऐतिहासिक कोसेढुङ्गाहरू मार्फत बुझ्न सकिन्छ <span class="ref">[७]</span>:</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">सन् १९६५<br><span style="font-weight:400;">सैद्धान्तिक अवधारणाको उदय</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">सन् १९८६<br><span style="font-weight:400;">ओटावा वडापत्र – विद्यालय शिक्षामा प्रवेश</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">सन् १९८९<br><span style="font-weight:400;">बाल अधिकार महासन्धि (UNCRC)</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">सन् १९९०<br><span style="font-weight:400;">जोम्टेन सम्मेलन – 'सबैका लागि शिक्षा'</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">सन् १९९८<br><span style="font-weight:400;">WHO – अन्तर्राष्ट्रिय कार्यढाँचा</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">सन् २०००<br><span style="font-weight:400;">डकार सम्मेलन – औपचारिक समावेश</span></div>
+            </div>
+        </div>
+
+        <!-- ३. WHO वर्गीकरण -->
+        <div class="sub-head"><i class="fas fa-sitemap"></i> ३. विश्व स्वास्थ्य सङ्गठन (WHO) अनुसार जीवनोपयोगी सिपको वर्गीकरण</div>
+
+        <div class="content-box purple-light">
+            <p>विश्व स्वास्थ्य सङ्गठनले जीवनोपयोगी सिपहरूलाई मानवीय कार्यक्षेत्र र मानसिक विकासका आधारमा निम्न ३ प्रमुख समूहहरूमा वर्गीकरण गरेको छ <span class="ref">[७]</span>:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तालिका: WHO को जीवनोपयोगी सिप वर्गीकरण <span class="ref">[७]</span></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:8%;">क्र.सं.</th>
+                            <th style="width:25%;">मुख्य समूह (Major Groups)</th>
+                            <th style="width:32%;">परिभाषिकी <span class="ref">[७]</span></th>
+                            <th style="width:35%;">अन्तर्निहित मुख्य सिपहरू <span class="ref">[७]</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>१</strong></td>
+                            <td><strong>आत्मबोध सिपहरू</strong><br><span style="font-weight:400;">(Self-awareness Skills)</span></td>
+                            <td>व्यक्तिले आफैँलाई र आफ्नो भित्री मनलाई चिन्न तथा नियन्त्रण गर्न प्रयोग गर्ने सिपहरु <span class="ref">[७]</span>।</td>
+                            <td>• तनाव व्यवस्थापन<br>• संवेगात्मक नियमन<br>• सकारात्मक सोच<br>• आत्मसम्मान</td>
+                        </tr>
+                        <tr>
+                            <td><strong>२</strong></td>
+                            <td><strong>अन्तरवैयक्तिक सिपहरू</strong><br><span style="font-weight:400;">(Interpersonal Skills)</span></td>
+                            <td>व्यक्तिले समाज, परिवार र अन्य मानिसहरूसँग सुमधुर सम्बन्ध स्थापित गर्न प्रयोग गर्ने सिपहरु <span class="ref">[७]</span>।</td>
+                            <td>• समानुभूति<br>• श्रवण सिप<br>• अन्तरवैयक्तिक प्रभावकारिता<br>• विवाद/द्वन्द्व परिचालन<br>• सम्बन्ध व्यवस्थापन<br>• प्रभावकारी सञ्चार</td>
+                        </tr>
+                        <tr>
+                            <td><strong>३</strong></td>
+                            <td><strong>सोचाइ सिपहरू</strong><br><span style="font-weight:400;">(Thinking Skills)</span></td>
+                            <td>बौद्धिक रूपमा तार्किक विश्लेषण गर्न, निर्णय लिन र सिर्जनात्मक बन्न मस्तिष्कको प्रयोग गर्ने सिपहरु <span class="ref">[७]</span>।</td>
+                            <td>• लक्ष्य निर्धारण<br>• निर्णय निर्माण<br>• समस्या समाधान<br>• समालोचनात्मक सोच<br>• सिर्जनात्मक सोच<br>• कार्यकारी कार्यसम्पादन र उत्थानशीलता</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १ -->
+        <div class="sub-head"><i class="fas fa-table"></i> क्रियाकलाप १: कक्षा ११ र १२ को पाठ्यक्रममा जीवनोपयोगी सिपको तुलनात्मक अध्ययन</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#1565C0; margin-right:8px;"></i> प्रश्न:</p>
+            <p>माथिको संवादमा केही जीवनोपयोगी सिप दिइएका छन्। तीमध्ये कुन-कुन ११ कक्षामा र कुन-कुन १२ कक्षामा अध्ययन गरिन्छ? कुन-कुन सिपहरु दुवै कक्षामा समावेश गरिएको छैन? समूहमा छलफल गरी एउटा चार्ट बनाउनुहोस् <span class="ref">[७]</span>।</p>
+        </div>
+
+        <div class="content-box orange-light">
+            <p><strong>उत्तर:</strong> नेपालको राष्ट्रिय पाठ्यक्रम प्रारूप र कक्षा ११ तथा १२ को सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षाको पाठ्यक्रमको विश्लेषणका आधारमा तयार पारिएको तुलनात्मक तालिका निम्न बमोजिम छ:</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">तुलनात्मक तालिका: कक्षा ११ र १२ मा जीवनोपयोगी सिप <span class="ref">[७]</span></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:8%;">क्र.सं.</th>
+                            <th style="width:22%;">जीवनोपयोगी सिपको मुख्य समूह</th>
+                            <th style="width:25%;">कक्षा ११ मा अध्ययन गरिने सिपहरु</th>
+                            <th style="width:25%;">कक्षा १२ मा अध्ययन गरिने सिपहरु</th>
+                            <th style="width:20%;">दुवै कक्षामा छुट्टै पाठका रूपमा समावेश नगरिएका सिपहरु (एकीकृत)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>१</strong></td>
+                            <td><strong>आत्मबोध सिपहरू</strong> <span class="ref">[७]</span></td>
+                            <td>• तनाव व्यवस्थापन<br>• सकारात्मक सोच</td>
+                            <td>• आत्मबोध (Self-awareness)<br>• आत्ममूल्याङ्कन (Self-evaluation)</td>
+                            <td>• संवेगात्मक नियमन<br>• आत्मसम्मान <span class="ref">[७]</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>२</strong></td>
+                            <td><strong>अन्तरवैयक्तिक सिपहरू</strong> <span class="ref">[७]</span></td>
+                            <td>• प्रभावकारी सञ्चार<br>• सम्बन्ध व्यवस्थापन</td>
+                            <td>• समानुभूति (Empathy)<br>• विवाद/द्वन्द्व परिचालन</td>
+                            <td>• श्रवण सिप (Listening)<br>• अन्तरवैयक्तिक प्रभावकारिता</td>
+                        </tr>
+                        <tr>
+                            <td><strong>३</strong></td>
+                            <td><strong>सोचाइ सिपहरू</strong> <span class="ref">[७]</span></td>
+                            <td>• निर्णय निर्माण<br>• समस्या समाधान</td>
+                            <td>• समालोचनात्मक चिन्तन<br>• सिर्जनात्मक चिन्तन</td>
+                            <td>• लक्ष्य निर्धारण<br>• कार्यकारी कार्यसम्पादन र उत्थानशीलता <span class="ref">[७]</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><em>नोट: "संवेगात्मक नियमन", "आत्मसम्मान", "श्रवण सिप", "लक्ष्य निर्धारण" र "उत्थानशीलता" जस्ता सिपहरुलाई छुट्टै विशिष्ट पाठको रूपमा नराखिए तापनि पाठ्यक्रमका अन्य पाठहरू (जस्तै संवेग व्यवस्थापन, आत्मबोध र सिर्जनात्मक चिन्तन) भित्र सघन रूपमा एकीकृत (Integrated) गरिएको छ <span class="ref">[७]</span>।</em></p>
+        </div>
+
+        <!-- क्रियाकलाप २ -->
+        <div class="sub-head"><i class="fas fa-chart-pie"></i> क्रियाकलाप २: जीवनोपयोगी सिपको वर्गीकरण बुझाउने प्राज्ञिक चार्ट</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#1565C0; margin-right:8px;"></i> प्रश्न:</p>
+            <p>विश्व स्वास्थ्य सङ्गठनले गरेको जीवनोपयोगी सिपहरुको वर्गीकरणलाई एउटा चार्टमा देखाउनुहोस् <span class="ref">[७]</span>।</p>
+        </div>
+
+        <div class="content-box teal-light">
+            <div style="text-align:center; font-weight:800; font-size:1.2rem; color:#0b2b4a; margin-bottom:12px;">
+                <i class="fas fa-crown" style="color:#1565C0;"></i> विश्व स्वास्थ्य सङ्गठन (WHO) को वर्गीकरण
+            </div>
+
+            <div class="class-chart">
+                <div class="chart-row">
+                    <div class="chart-box">
+                        <div class="box-title"><i class="fas fa-user" style="color:#1565C0;"></i> १. आत्मबोध सिपहरू (४)</div>
+                        <ul>
+                            <li>तनाव व्यवस्थापन</li>
+                            <li>संवेगात्मक नियमन</li>
+                            <li>सकारात्मक सोच</li>
+                            <li>आत्मसम्मान</li>
+                        </ul>
+                    </div>
+                    <div class="chart-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="chart-box">
+                        <div class="box-title"><i class="fas fa-users" style="color:#1565C0;"></i> २. अन्तरवैयक्तिक सिपहरू (६)</div>
+                        <ul>
+                            <li>समानुभूति</li>
+                            <li>श्रवण सिप</li>
+                            <li>अन्तरवैयक्तिक प्रभावकारिता</li>
+                            <li>विवाद परिचालन</li>
+                            <li>सम्बन्ध व्यवस्थापन</li>
+                            <li>प्रभावकारी सञ्चार</li>
+                        </ul>
+                    </div>
+                    <div class="chart-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="chart-box">
+                        <div class="box-title"><i class="fas fa-brain" style="color:#1565C0;"></i> ३. सोचाइ सिपहरू (६)</div>
+                        <ul>
+                            <li>लक्ष्य निर्धारण</li>
+                            <li>निर्णय निर्माण</li>
+                            <li>समस्या समाधान</li>
+                            <li>समालोचनात्मक सोच</li>
+                            <li>सिर्जनात्मक सोच</li>
+                            <li>कार्यकारी कार्यसम्पादन र उत्थानशीलता</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> जीवनोपयोगी सिप विद्यालय शिक्षामा औपचारिक रूपमा कहिलेदेखि सुरु भएको हो?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> जीवनोपयोगी सिप विद्यालय शिक्षामा औपचारिक रूपमा <strong>सन् २०००</strong> देखि 'सेनेगल को डकारमा भएको 'सबैका लागि शिक्षा' को सम्मेलनले गरेको हो।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> स्वसचेतना सिपअन्तर्गत पर्ने कुनै दुईओटा जीवनोपयोगी सिपहरु उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> स्वसचेतना (आत्मबोध) सिपअन्तर्गत पर्ने दुईवटा जीवनोपयोगी सिपहरु निम्नलिखित छन् <span class="ref">[७]</span>:</p>
+                <ol>
+                    <li><strong>तनाव व्यवस्थापन (Stress Management):</strong> दैनिक दबाबलाई सन्तुलित राख्ने क्षमता <span class="ref">[७]</span>।</li>
+                    <li><strong>संवेगात्मक नियमन (Emotional Regulation):</strong> आवेग र संवेगलाई नियन्त्रण गरी सही दिशा दिने क्षमता <span class="ref">[७]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> समस्या समाधान सिप जीवनोपयोगी सिपको कुन समूहमा पर्छ?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> समस्या समाधान (Problem Solving) सिप जीवनोपयोगी सिपको <strong>सोचाइ सिप (Thinking Skills)</strong> को समूहमा पर्दछ <span class="ref">[७]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> विश्व स्वास्थ्य सङ्गठनका अनुसार जीवनोपयोगी सिपहरुलाई कति समूहमा वर्गीकरण गरिएको छ? छोटकरीमा उल्लेख गरी कुनै एक समूहमा पर्ने सिपहरुको सूची बनाउनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> विश्व स्वास्थ्य सङ्गठन (WHO) का अनुसार जीवनोपयोगी सिपहरुलाई जम्मा <strong>तीन प्रमुख समूहमा</strong> (आत्मबोध सिपहरू, अन्तरवैयक्तिक सिपहरू र सोचाइ सिपहरू) वर्गीकरण गरिएको छ <span class="ref">[७]</span>।</p>
+
+                <p><strong>आत्मबोध सिप समूहमा पर्ने सिपहरुको सूची <span class="ref">[७]</span>:</strong></p>
+                <ol>
+                    <li>तनाव व्यवस्थापन (Stress Management) <span class="ref">[७]</span></li>
+                    <li>संवेगात्मक नियमन (Emotional Regulation) <span class="ref">[७]</span></li>
+                    <li>सकारात्मक सोच (Positive Thinking) <span class="ref">[७]</span></li>
+                    <li>आत्मसम्मान (Self-esteem) <span class="ref">[७]</span></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">(ङ)</span> जीवनोपयोगी सिप सिक्नाले हुने फाइदालाई पाँच बुँदामा उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> दैनिक जीवनमा जीवनोपयोगी सिप सिक्नाले मानव जीवनमा निम्न फाइदाहरू पुग्छन् <span class="ref">[७]</span>:</p>
+                <ol>
+                    <li><strong>मानसिक सन्तुलन र शान्ति:</strong> परीक्षा, काम वा सम्बन्धका कारण हुने दैनिक तनाव र संवेगलाई नियन्त्रण गरी मस्तिष्कलाई शान्त राख्न मद्दत गर्दछ <span class="ref">[७]</span>।</li>
+                    <li><strong>विवेकपूर्ण निर्णय क्षमता:</strong> हतार वा भावुकतामा नभई उपलब्ध विकल्पहरूको तार्किक विश्लेषण गरी सही मार्ग छनोट गर्न सघाउँछ <span class="ref">[७]</span>।</li>
+                    <li><strong>सबल सामाजिक सम्बन्ध:</strong> समाजका अन्य सदस्यहरूसँग समानुभूतिपूर्ण व्यवहार गर्न, प्रभावकारी सञ्चार गर्न र असमझदारीहरू संवादमार्फत हल गर्न सहयोग पुग्छ <span class="ref">[७]</span>।</li>
+                    <li><strong>असफलतामा उठ्न सक्ने क्षमता:</strong> जीवनमा आइपर्ने जस्तोसुकै संकट वा असफलतामा पनि हार नमानी पुनः दृढताका साथ अघि बढ्ने उत्थानशीलता (Resilience) विकास गराउँछ <span class="ref">[७]</span>।</li>
+                    <li><strong>करियर र व्यावहारिक सफलता:</strong> समय व्यवस्थापन, लक्ष्य निर्धारण र कार्यसम्पादनमा सुधार आउने हुनाले व्यक्ति आफ्नो पेसा वा अध्ययनमा सफल बन्छ <span class="ref">[७]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">१.</span> जीवनोपयोगी शिक्षाको सैद्धान्तिक अवधारणा कहिले विकास भएको हो?</div>
+            <div class="a"><strong>उत्तर:</strong> जीवनोपयोगी शिक्षाको सैद्धान्तिक अवधारणा <strong>सन् १९६५</strong> तिर विकास भएको हो <span class="ref">[७]</span>।</div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">२.</span> जोम्टेन सम्मेलन (सन् १९९०) को मुख्य प्रतिबद्धता के थियो?</div>
+            <div class="a"><strong>उत्तर:</strong> थाइल्यान्डको जोम्टेनमा भएको 'सबैका लागि शिक्षा' सम्मेलनले गुणस्तरीय जीवन, बाँच्न र क्षमता विकासका लागि जीवनोपयोगी सिपलाई शिक्षामा समेट्ने प्रतिबद्धता जनायो <span class="ref">[७]</span>।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">३.</span> उत्थानशीलता (Resilience) लाई किन सोचाइ सिपको उत्कृष्ट नमुना मानिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> कठिन परिस्थितिमा विचलित नभई मानसिक रूपमा तार्किक र लचिलो बनेर पुनः प्रयास गर्न सिकाउने हुनाले यसलाई सोचाइ सिप मानिन्छ <span class="ref">[७]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">१.</span> "जीवनोपयोगी सिप केवल किताब पढेर प्राप्त हुँदैन, यो त निरन्तरको अभ्यास र व्यवहारबाट मात्र सम्भव हुन्छ।" यस भनाइलाई पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> जीवनोपयोगी सिप (Life Skills) भनेको सैद्धान्तिक सूत्र वा तथ्यहरूको सङ्ग्रह होइन, यो विशुद्ध रूपमा मानिसको व्यावहारिक र सामाजिक-मनोवैज्ञानिक आचरण हो <span class="ref">[७]</span>। त्यसैले यो किताब पढेर मात्र प्राप्त हुन सक्दैन।</p>
+
+                <p><strong>मुख्य बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>ज्ञान र आचरणको भिन्नता:</strong> पुस्तक पढेर हामीले 'रिस नियन्त्रण गर्नुपर्छ' भन्ने कुरा थाहा पाउन सक्छौँ। तर जबसम्म हामी आफैँ रिसाएको बेला मौन बस्ने वा लामो श्वास फेर्ने व्यावहारिक अभ्यास गर्दैनौँ, तबसम्म त्यो संवेग व्यवस्थापनको सिप बन्दैन <span class="ref">[७]</span>।</li>
+                    <li><strong>अभ्यास नै दक्षताको कसी:</strong> जसरी पुस्तक पढेर मात्र कसैले पौडी खेल्न वा साइकल चलाउन सक्दैन, त्यसरी नै समाजमा मिलेर बस्न र द्वन्द्व समाधान गर्नका लागि वास्तविक जीवनमा अन्तरक्रिया र अभ्यास आवश्यक हुन्छ <span class="ref">[७]</span>।</li>
+                    <li><strong>अनुभवबाट परिपक्वता:</strong> जीवनमा आइपर्ने विभिन्न घटना, समस्या र निर्णयहरूमा प्रत्यक्ष रूपमा सहभागी भएर मात्र मानिसले गल्तीहरू सच्याउँदै आफ्ना सिपहरु तिखार्न सक्छ <span class="ref">[७]</span>।</li>
+                    <li><strong>चरित्रमा रूपान्तरण:</strong> निरन्तरको प्रयोग र अभ्यासले मात्र पुराना नकारात्मक व्यवहारहरू हट्छन् र मानिसको चरित्रमा स्थायी सकारात्मक परिवर्तन आउँछ <span class="ref">[७]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> अतः, जीवनोपयोगी सिपको विकास कुनै बौद्धिक विलास नभई दैनिक जीवनमा गरिने निरन्तरको कसरत, प्रयोग र अभ्यासको प्रतिफल हो <span class="ref">[७]</span>।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color2" style="border-left-color:#1565C0;">
+            <div class="q"><span class="qnum">प्रश्न:</span> जीवनोपयोगी सिपको ऐतिहासिक पृष्ठभूमि प्रस्तुत गर्दै यसको वर्गीकरण र आधुनिक शिक्षा प्रणालीमा यसको अपरिहार्यताबारे सविस्तार व्याख्या गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> मानव समाज विज्ञान र प्रविधिको विकाससँगै जटिल र भौतिकवादी बन्दै गएको छ। यस्तो परिवेशमा केवल सैद्धान्तिक डिग्री हासिल गरेका विद्यार्थीहरू व्यावहारिक जीवनका ससाना समस्या र मानसिक तनाव झेल्न नसकी विचलित हुने गरेको पाइन्छ। यसै सन्दर्भमा, विद्यार्थीहरूलाई वास्तविक जीवनका परीक्षाका लागि सक्षम बनाउने, अनुकूल र सकारात्मक व्यवहार गर्न सिकाउने व्यावहारिक क्षमताहरू नै जीवनोपयोगी सिप (Life Skills) हुन् <span class="ref">[७]</span>। यसले शिक्षालाई जागिरमुखी मात्र नभई जीवनमुखी बनाउन मद्दत गर्दछ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+
+                <p><strong>क) ऐतिहासिक पृष्ठभूमि (Historical Trajectory):</strong> जीवनोपयोगी सिपको विकास एक्कासि भएको होइन। सन् १९६५ मा यसको सैद्धान्तिक रूपरेखा कोरिएपछि सन् १९८६ को 'ओटावा वडापत्र' ले यसलाई औपचारिक विद्यालय शिक्षामा प्रवेश गरायो <span class="ref">[७]</span>। सन् १९८९ को संयुक्त राष्ट्रसङ्घीय बाल अधिकार महासन्धि र सन् १९९० को थाइल्यान्डको जोम्टेन सहरमा भएको 'सबैका लागि शिक्षा' सम्मेलनले यसको विश्वव्यापी स्वीकार्यता बढायो <span class="ref">[७]</span>। अन्ततः सन् २००० को सेनेगलको डकार सम्मेलनले यसलाई औपचारिक रूपमा विश्वभरको विद्यालय पाठ्यक्रमको अनिवार्य अङ्ग बनाउने घोषणा गर्‍यो <span class="ref">[७]</span>।</p>
+
+                <p><strong>ख) बहुआयामिक वर्गीकरण (Multidimensional Classification):</strong> विश्व स्वास्थ्य सङ्गठन (WHO) ले मानव विकासका फरक-फरक आयामलाई समेट्न यसलाई ३ समूहमा बाँडेको छ <span class="ref">[७]</span>:</p>
+                <ul>
+                    <li><strong>आत्मबोध सिपहरु:</strong> जसले आफैँलाई चिन्न, तनाव कम गर्न र संवेग व्यवस्थापन गर्न सघाउँछ <span class="ref">[७]</span>।</li>
+                    <li><strong>अन्तरवैयक्तिक सिपहरु:</strong> जसले परिवार, साथीभाइ र समाजसँग सुमधुर सम्बन्ध, सञ्चार र समानुभूति राख्न सक्षम बनाउँछ <span class="ref">[७]</span>।</li>
+                    <li><strong>सोचाइ सिपहरु:</strong> जसले बौद्धिक क्षमता बढाउन, सही निर्णय लिन, सिर्जनात्मक र समालोचनात्मक चिन्तन गर्न सघाउँछ <span class="ref">[७]</span>।</li>
+                </ul>
+
+                <p><strong>ग) आधुनिक शिक्षामा यसको अपरिहार्यता (Necessity in Modern Education):</strong></p>
+                <ul>
+                    <li><strong>मानसिक तनाव व्यवस्थापन:</strong> प्रविधिको अत्यधिक प्रयोग र प्रतिस्पर्धात्मक वातावरणका कारण आजका किशोरकिशोरीहरू डिप्रेसन र कुलततर्फ धकेलिने जोखिम बढेको छ <span class="ref">[७]</span>। योग, ध्यान र संवेग नियमनले उनीहरूलाई मानसिक रूपमा स्वस्थ राख्न मद्दत गर्छ <span class="ref">[७]</span>।</li>
+                    <li><strong>सामाजिक सद्भाव र सहकार्य:</strong> आधुनिक युगमा एक्लिँदै गएका विद्यार्थीलाई समूहमा काम गर्ने (Teamwork) र विविधतालाई सम्मान गर्ने कला सिकाउन यो अपरिहार्य छ <span class="ref">[७]</span>।</li>
+                    <li><strong>उद्यमशीलता र निर्णय क्षमता:</strong> यसले परम्परागत घोक्ने बानीलाई विस्थापित गरी स्वरोजगारी, नेतृत्व र सिर्जनात्मक क्षमता विकास गर्दछ <span class="ref">[७]</span>।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> हाम्रो नेपाली विद्यालय शिक्षामा अध्ययनरत कक्षा १२ का पात्रहरू सुबोध र फुलैयाको संवाद र व्यावहारिक अनुभवलाई हेर्दा, पहिला जीवनोपयोगी सिप पाठ्यक्रममा समावेश नहुँदा विद्यार्थीहरू परीक्षाको अघिल्लो रात अत्यधिक तनावले बिरामी पर्ने वा परीक्षा बिग्रँदा आत्मघाती निर्णय गर्नेसम्मका घटनाहरू हुन्थे <span class="ref">[७]</span>। तर जब विद्यालयमा 'प्राणायाम', 'सकारात्मक सोच' र 'समय व्यवस्थापन' जस्ता जीवनोपयोगी सिपहरु सिकाइयो, सुबोध जस्ता विद्यार्थीहरूले परीक्षालाई एक अवसरका रूपमा लिन थाले र विद्यालय तथा घरायसी जीवनमा उत्कृष्ट सन्तुलन कायम गर्न सफल भए <span class="ref">[७]</span>।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, जीवनोपयोगी सिप आधुनिक समयका अनेकौँ चुनौतीहरूलाई सहजै पार गर्ने एक शक्तिशाली जीवन-अस्त्र हो <span class="ref">[७]</span>। तसर्थ, हाम्रो शिक्षा प्रणालीलाई केवल सैद्धान्तिक प्रमाणपत्र बाँड्ने केन्द्र मात्र बनाउनुको सट्टा व्यावहारिक रूपमा सक्षम, बौद्धिक र नैतिक रूपमा सचेत नागरिक उत्पादन गर्नका लागि जीवनोपयोगी सिपको निरन्तर प्रयोगात्मक अभ्यास गराउनु आजको अपरिहार्य आवश्यकता हो <span class="ref">[७]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1565C0; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> जीवनोपयोगी सिपहरु केवल परीक्षाका लागि मात्र नभई जीवनभरि साथ दिने शक्तिशाली क्षमताहरू हुन्। तनाव व्यवस्थापन, संवेग नियमन, समानुभूति र सिर्जनात्मक चिन्तनलाई दैनिक अभ्यासमा ल्याउनुहोस्। यी सिपहरुले तपाईंलाई एक सफल, सन्तुलित र उत्तरदायी नागरिक बनाउनेछन्।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ३, पाठ १</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
