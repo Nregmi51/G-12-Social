@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ २ – समालोचनात्मक चिन्तन (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f5faf0;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #6a8c2a;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #6a8c2a;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8f0e0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c8a0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #6a8c2a;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #6a8c2a;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #B8F45D;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #9fd44a;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #0b2b4a;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #0b2b4a;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #0b2b4a;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        .toc-grid a:hover i {
+            color: #ffffff;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #B8F45D ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #0b2b4a;
+            background: #B8F45D;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(184, 244, 93, 0.40);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #0b2b4a;
+        }
+
+        .section-head .mark-badge {
+            color: #0b2b4a;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #ffffff; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #4a6a1a;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #B8F45D;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #6a8c2a;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #4a6a1a;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #6a8c2a;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #B8F45D;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.green-light {
+            border-left-color: #B8F45D;
+            background: #f0f8e8;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c8a0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c8a0;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #B8F45D;
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e8f0e0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #b8c8a0;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #B8F45D;
+        }
+
+        .qa-block.color1 { border-left-color: #B8F45D; background: #f0f8e8; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #0b2b4a;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #6a8c2a;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #4a6a1a;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #B8F45D;
+        }
+
+        .glossary-item strong {
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #f0f8e8;
+            border-radius: 20px;
+            border: 2px dashed #B8F45D;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #B8F45D;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- HAT TABLE (6 Thinking Hats) ----- */
+        .hat-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        .hat-table th {
+            background: #B8F45D;
+            font-weight: 800;
+            color: #0b2b4a;
+            font-size: 1.08rem;
+            padding: 10px 14px;
+        }
+
+        .hat-table td {
+            padding: 10px 14px;
+            border: 1px solid #b8c8a0;
+            vertical-align: top;
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        .hat-table .hat-white { background: #f8f8f8; }
+        .hat-table .hat-red { background: #ffe8e8; }
+        .hat-table .hat-black { background: #e8e8e8; }
+        .hat-table .hat-yellow { background: #fef8e0; }
+        .hat-table .hat-green { background: #e8f8e8; }
+        .hat-table .hat-blue { background: #e8e8f8; }
+
+        .hat-icon {
+            font-size: 1.2rem;
+            margin-right: 4px;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- EDITORIAL BOX ----- */
+        .editorial-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9cec0;
+            margin: 12px 0;
+        }
+
+        .editorial-box .editorial-title {
+            font-weight: 900;
+            color: #0b2b4a;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        .editorial-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 8px;
+            line-height: 2;
+        }
+
+        .editorial-box .salutation {
+            font-weight: 700;
+            color: #0b2b4a;
+        }
+
+        .editorial-box .closing {
+            font-weight: 700;
+            color: #0b2b4a;
+            margin-top: 10px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #6a8c2a;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(106, 140, 42, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #4a6a1a;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(106, 140, 42, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #6a8c2a;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c8a0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #B8F45D;
+            color: #0b2b4a;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #0b2b4a;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .editorial-box p {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+            .hat-table td {
+                font-size: 0.92rem;
+                padding: 6px 8px;
+            }
+            .hat-table th {
+                font-size: 0.95rem;
+                padding: 6px 8px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-brain"></i>
+                    एकाइ ३, पाठ २: समालोचनात्मक चिन्तन (Critical Thinking)
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ३, पाठ २
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> समालोचनात्मक चिन्तन (Critical Thinking)</strong>
+                <p>कुनै पनि विषयवस्तु, विचार वा सूचनाका सबल र दुर्बल पक्षहरूको बिनाकुनै पूर्वाग्रह, तथ्य र तर्कका आधारमा निष्पक्ष मूल्याङ्कन गर्ने मानसिक क्षमता <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> आत्मआलोचना (Self-criticism / Self-reflection)</strong>
+                <p>आफ्ना सबल र कमजोर पक्षहरूलाई निष्पक्ष रूपमा केलाएर आफ्ना त्रुटिहरू महसुस गर्ने र तिनलाई सुधार्न तत्पर रहने आन्तरिक प्रक्रिया <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> स्वरूपान्तरण (Transformation)</strong>
+                <p>आत्मआलोचना र आत्मसमीक्षाका माध्यमबाट आफ्ना सोच, कार्य र व्यवहारमा सकारात्मक एवं गुणात्मक परिवर्तन ल्याउने कार्य <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> ६ सोच्ने टोपीहरू (Six Thinking Hats)</strong>
+                <p>डा. एडवर्ड डि बोनोद्वारा प्रतिपादित एक चिन्तन मोडल, जसले कुनै पनि समस्यालाई ६ वटा फरक-फरक दृष्टिकोण वा टोपीहरू (सेतो, रातो, कालो, पहेँलो, हरियो र निलो) लगाएर विश्लेषण गर्न सिकाउँछ <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> वस्तुगत चिन्तन (White Hat Thinking)</strong>
+                <p>डा. डि बोनोका अनुसार भावना वा विचारभन्दा बाहिर गएर केवल उपलब्ध तथ्य, तथ्याङ्क र वास्तविक सूचनाहरूमा केन्द्रित रहने चिन्तन <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> संवेगात्मक चिन्तन (Red Hat Thinking)</strong>
+                <p>तर्क वा तथ्यविना समस्या वा घटनाको संवेगात्मक, भावनात्मक र अन्तर्ज्ञान (Intuition) का पक्षलाई जाँच्ने चिन्तन <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> नकारात्मक चिन्तन (Black Hat Thinking)</strong>
+                <p>कुनै पनि निर्णय वा योजनाका सम्भावित जोखिम, चुनौती, कमजोरी र हानिकारक पक्षहरूलाई ध्यानपूर्वक औँल्याउने सतर्कतापूर्ण चिन्तन <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> सकारात्मक चिन्तन (Yellow Hat Thinking)</strong>
+                <p>कुनै पनि विचार वा समस्यामा लुकेका अवसरहरू, फाइदाहरू, र आशावादी पक्षहरूको खोजी गर्ने चिन्तन <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> सिर्जनात्मक चिन्तन (Green Hat Thinking)</strong>
+                <p>परम्परागत धारभन्दा बाहिर गएर नयाँ विकल्पहरू, सिर्जनात्मक उपायहरू र नवीन शैलीहरूको सिर्जना गर्ने चिन्तन <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#6a8c2a; margin-right:4px;"></i> व्यापक/नियन्त्रक चिन्तन (Blue Hat Thinking)</strong>
+                <p>सबै सरोकारवालाहरूको दृष्टिकोण, समग्र प्रक्रिया र अन्तिम निष्कर्षलाई व्यवस्थित एवं फराकिलो रूपमा सोच्ने चिन्तन <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "समालोचनात्मक चिन्तन" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. अर्थ र परिभाषा -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. समालोचनात्मक चिन्तनको अर्थ र परिभाषा</div>
+
+        <div class="content-box green-light">
+            <ul>
+                <li><strong>शाब्दिक अर्थ:</strong> 'समालोचना' शब्द <strong>'सम्'</strong> (बराबर वा निष्पक्ष) र <strong>'आलोचना'</strong> (गुण-दोष केलाउनु) मिलेर बनेको छ <span class="ref">[८]</span>।</li>
+                <li><strong>परिभाषा:</strong> विभिन्न विचार वा सूचनाहरूबीचको तार्किक सम्बन्धलाई बुझेर, वस्तुगत र तथ्यपरक रूपमा सोच्न सक्ने क्षमता नै समालोचनात्मक चिन्तन हो <span class="ref">[८]</span>।</li>
+                <li><strong>दार्शनिक आधार:</strong> यसले मानिसलाई कुनै पनि कुरा हल्ला वा व्यक्तिगत धारणाका आधारमा पत्याउनुको सट्टा "किन, कसरी, कहाँ, कहिले र कसले" भनी प्रश्न गर्न सिकाउँछ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- २. ७ क्रमिक चरणहरू -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> २. समालोचनात्मक चिन्तनका ७ क्रमिक चरणहरू</div>
+
+        <div class="content-box blue-light">
+            <p>कुनै पनि समस्या वा विचारलाई समालोचनात्मक ढङ्गले विश्लेषण गर्दा निम्न ७ चरणहरू पार गर्नुपर्छ <span class="ref">[८]</span>:</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">१. समस्या, मुद्दा वा प्रश्नको पहिचान गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">२. तथ्याङ्क, विचार र तर्कहरू सङ्कलन गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">३. तथ्याङ्क विश्वसनीय र पर्याप्त छ? विश्लेषण र मूल्याङ्कन</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">४. आफ्नो वा तथ्याङ्कको पक्षधरता (Bias) पहिचान गर्ने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">५. प्राप्त सूचना सान्दर्भिक वा बढी महत्त्वपूर्ण छ? पत्ता लगाउने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">६. सम्भावित विकल्पहरूमाथि विचार गरी निष्कर्ष वा निर्णय दिने</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">७. निष्कर्ष वा निर्णयलाई प्रस्तुतीकरण वा सञ्चार गर्ने</div>
+            </div>
+        </div>
+
+        <!-- ३. ७ सिपहरू -->
+        <div class="sub-head"><i class="fas fa-list-check"></i> ३. समालोचनात्मक चिन्तनमा प्रयोग हुने ७ वटा मुख्य सिपहरु</div>
+
+        <div class="content-box purple-light">
+            <p>समालोचनात्मक चिन्तन एक्लै चल्दैन, यसभित्र निम्न सिपहरु अन्तर्निहित हुन्छन् <span class="ref">[८]</span>:</p>
+            <ul>
+                <li><strong>(क) विश्लेषण सिप (Analysis Skill):</strong> घटना वा मुद्दासँग सम्बन्धित सूचना सङ्कलन गरी तिनको सम्भावित प्रभावको तार्किक विश्लेषण गर्ने क्षमता <span class="ref">[८]</span>।</li>
+                <li><strong>(ख) अर्थ निर्माण सिप (Interpretation Skill):</strong> प्रशोधित तथ्याङ्कबाट सही र अर्थपूर्ण निष्कर्ष निकाल्ने क्षमता <span class="ref">[८]</span>।</li>
+                <li><strong>(ग) निष्कर्ष अनुमान गर्ने सिप (Inference Skill):</strong> सूचना पर्याप्त र विश्वसनीय छ कि छैन भनी जाँची भावी नतिजा अनुमान गर्ने क्षमता <span class="ref">[८]</span>।</li>
+                <li><strong>(घ) व्याख्या गर्ने सिप (Explanation Skill):</strong> पत्ता लागेका कुरा र आफ्ना तर्कहरूलाई सरल र बुझिने गरी प्रस्तुत गर्ने क्षमता <span class="ref">[८]</span>।</li>
+                <li><strong>(ङ) आत्मनियमन सिप (Self-regulation Skill):</strong> आफ्नो सोच्ने शैली र व्यवहार ठिक छ कि छैन भनी आफैँले अनुगमन र परिमार्जन गर्ने क्षमता <span class="ref">[८]</span>।</li>
+                <li><strong>(च) खुला सोचाइ सिप (Open-mindedness Skill):</strong> "मेरो विचार मात्र ठिक हो" भन्ने अहङ्कार त्यागी अरूको फरक दृष्टिकोणलाई सम्मान गर्ने क्षमता <span class="ref">[८]</span>।</li>
+                <li><strong>(छ) समस्या समाधान सिप (Problem Solving Skill):</strong> अप्रत्याशित समस्यालाई बुद्धिमतापूर्वक र विना आवेग समाधान गर्ने क्षमता <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ४. आत्मआलोचना र स्वरूपान्तरण -->
+        <div class="sub-head"><i class="fas fa-exchange-alt"></i> ४. आत्मआलोचना र स्वरूपान्तरणको अन्तरसम्बन्ध</div>
+
+        <div class="content-box orange-light">
+            <ul>
+                <li><strong>आत्मआलोचना (Self-criticism):</strong> यो आफैँभित्र हेर्ने ऐना हो <span class="ref">[८]</span>। यसले आफ्ना गल्ती, कमजोरी र कमजोरीका कारणहरू पहिल्याउन मद्दत गर्दछ <span class="ref">[८]</span>।</li>
+                <li><strong>स्वरूपान्तरण (Transformation):</strong> आत्मआलोचनाबाट पत्ता लागेका कमजोरीहरूलाई सुधार्दै सोच र व्यवहारमा सकारात्मक परिवर्तन ल्याउनु नै स्वरूपान्तरण हो <span class="ref">[८]</span>।</li>
+                <li><strong>सम्बन्ध:</strong> आत्मआलोचना बिना स्वरूपान्तरण सम्भव छैन <span class="ref">[८]</span>। "जहाँ पनि सुधारका लागि ठाउँ रहन्छ" भन्ने दार्शनिक मान्यता नै यी दुईको आधार हो <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १: ६ सोच्ने टोपीहरू -->
+        <div class="sub-head"><i class="fas fa-hat-wizard"></i> क्रियाकलाप १: ६ सोच्ने टोपीहरू (Six Thinking Hats) को प्रयोग</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#6a8c2a; margin-right:8px;"></i> प्रश्न:</p>
+            <p>देहायका समस्याहरूमा ६ सोच्ने टोपीहरूको आधारमा छलफल गरी निष्कर्ष निकाल्नुहोस् <span class="ref">[८]</span>:</p>
+        </div>
+
+        <div class="content-box teal-light">
+            <p style="font-weight:800; color:#0b2b4a; font-size:1.15rem;"><i class="fas fa-mobile-alt" style="color:#6a8c2a;"></i> (क) विद्यार्थीहरूले कक्षामा मोबाइल फोन ल्याउने कि नल्याउने?</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">६ टोपीहरूको आधारमा विश्लेषण तालिका <span class="ref">[८]</span></div>
+                <table class="hat-table">
+                    <thead>
+                        <tr>
+                            <th style="width:20%;">टोपीको रङ र प्रकार</th>
+                            <th style="width:80%;">विश्लेषण र दृष्टिकोण (कक्षामा मोबाइल फोनको सन्दर्भमा) <span class="ref">[८]</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hat-white">
+                            <td><strong><span class="hat-icon">⚪</span> सेतो टोपी</strong><br><span style="font-weight:400;">(तथ्य र सूचना)</span></td>
+                            <td>• विद्यालय समय १०:०० देखि ४:०० बजेसम्म हो <span class="ref">[८]</span>।<br>• मोबाइल फोनले सामाजिक सञ्जाल र गेम खेल्न उक्साउँछ, जसले पढाइमा ध्यान भंग गराउँछ <span class="ref">[८]</span>।<br>• आपतकालीन अवस्थामा अभिभावकसँग सम्पर्क गर्न यो एक साधन हो।</td>
+                        </tr>
+                        <tr class="hat-red">
+                            <td><strong><span class="hat-icon">🔴</span> रातो टोपी</strong><br><span style="font-weight:400;">(भावना र संवेग)</span></td>
+                            <td>• विद्यार्थीहरू मोबाइल नहुँदा साथीहरूमाझ आफू पछाडि परेको महसुस गर्छन् र खिन्न हुन्छन्।<br>• शिक्षकहरू कक्षाकोठामा विद्यार्थीले सुटुक्क मोबाइल चलाउँदा अपमानित र क्रोधित महसुस गर्छन् <span class="ref">[८]</span>।</td>
+                        </tr>
+                        <tr class="hat-black">
+                            <td><strong><span class="hat-icon">⚫</span> कालो टोपी</strong><br><span style="font-weight:400;">(जोखिम र चुनौती)</span></td>
+                            <td>• परीक्षामा चोरी हुने सम्भावना बढ्छ <span class="ref">[८]</span>।<br>• साइबर बुलिङ, नग्न तस्बिर वा भिडियो खिच्ने जस्ता अनैतिक गतिविधि बढ्न सक्छन्।<br>• कक्षाकोठाको शान्त वातावरण बिग्रन्छ।</td>
+                        </tr>
+                        <tr class="hat-yellow">
+                            <td><strong><span class="hat-icon">🟡</span> पहेँलो टोपी</strong><br><span style="font-weight:400;">(अवसर र फाइदा)</span></td>
+                            <td>• इन्टरनेटको प्रयोग गरी कठिन शब्दहरू वा विषयवस्तुहरू तुरुन्तै खोज्न सकिन्छ (Digital Learning) <span class="ref">[८]</span>।<br>• शैक्षिक एप्स र अनलाइन सामग्रीहरू कक्षाकोठामा प्रयोग गर्न सजिलो हुन्छ।</td>
+                        </tr>
+                        <tr class="hat-green">
+                            <td><strong><span class="hat-icon">🟢</span> हरियो टोपी</strong><br><span style="font-weight:400;">(सिर्जनात्मक विकल्प)</span></td>
+                            <td>• पूर्ण प्रतिबन्ध लगाउनुको सट्टा 'मध्यमार्गी नियम' बनाउने <span class="ref">[८]</span>।<br>• विद्यार्थीले मोबाइल ल्याउन पाउने तर कक्षा सुरु हुनुअघि एउटा साझा 'लकर' मा मोबाइल बुझाउनुपर्ने र शैक्षिक प्रयोजनका लागि शिक्षकको अनुमतिमा मात्र चलाउन पाउने <span class="ref">[८]</span>।</td>
+                        </tr>
+                        <tr class="hat-blue">
+                            <td><strong><span class="hat-icon">🔵</span> निलो टोपी</strong><br><span style="font-weight:400;">(समग्र निष्कर्ष)</span></td>
+                            <td><strong>निष्कर्ष:</strong> कक्षाकोठामा विना अनुमति मोबाइल चलाउन पूर्ण निषेध गर्ने, तर प्रविधिमैत्री सिकाइका लागि शिक्षकको निगरानीमा मात्र मोबाइल वा ट्याब्लेट प्रयोग गर्न दिने निर्णय नै सबैभन्दा उपयुक्त र व्यावहारिक हुन्छ <span class="ref">[८]</span>।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="content-box gold-light">
+            <p style="font-weight:800; color:#0b2b4a; font-size:1.15rem;"><i class="fas fa-utensils" style="color:#6a8c2a;"></i> (ख) विद्यालय चमेनागृहमा बिस्कुट, चाउचाउ, पानीपुरी जस्ता तयारी खानेकुरा राख्ने कि नराख्ने?</p>
+
+            <div class="table-wrap">
+                <div class="table-caption">६ टोपीहरूको आधारमा विश्लेषण तालिका <span class="ref">[८]</span></div>
+                <table class="hat-table">
+                    <thead>
+                        <tr>
+                            <th style="width:20%;">टोपीको रङ र प्रकार</th>
+                            <th style="width:80%;">विश्लेषण र दृष्टिकोण (चमेनागृहको तयारी खानेकुरा) <span class="ref">[८]</span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hat-white">
+                            <td><strong><span class="hat-icon">⚪</span> सेतो टोपी</strong></td>
+                            <td>• तयारी खानेकुरा (Junk Food) मा अत्यधिक केमिकल, एमएसजी (MSG), र सोडियम हुन्छ <span class="ref">[८]</span>।<br>• यसले मोटोपन, ग्यास्ट्रिक, र कुपोषण बढाउँछ। घरको खाजा बढी पोषिलो हुन्छ।</td>
+                        </tr>
+                        <tr class="hat-red">
+                            <td><strong><span class="hat-icon">🔴</span> रातो टोपी</strong></td>
+                            <td>• विद्यार्थीहरूलाई चाउचाउ र पानीपुरीको स्वाद असाध्यै मन पर्छ र नपाउँदा उनीहरू खिन्न हुन्छन्।</td>
+                        </tr>
+                        <tr class="hat-black">
+                            <td><strong><span class="hat-icon">⚫</span> कालो टोपी</strong></td>
+                            <td>• विद्यार्थीको स्वास्थ्य बिग्रिएर विद्यालयमा गयल हुने दर बढ्छ। चमेनागृहमा फोहोर र प्लास्टिकजन्य कचरा बढेर वातावरण प्रदूषित हुन्छ।</td>
+                        </tr>
+                        <tr class="hat-yellow">
+                            <td><strong><span class="hat-icon">🟡</span> पहेँलो टोपी</strong></td>
+                            <td>• तयारी खाजा तुरुन्तै उपलब्ध हुने भएकाले समय बचत हुन्छ। चमेनागृह संचालकलाई बढी आर्थिक नाफा हुन्छ।</td>
+                        </tr>
+                        <tr class="hat-green">
+                            <td><strong><span class="hat-icon">🟢</span> हरियो टोपी</strong></td>
+                            <td>• चमेनागृहमा मैदाजन्य र प्याकेटका खाजा पूर्ण निषेध गरी स्थानीय स्तरमा पाइने मकै, भटमास, कोदोको सेलरोटी, चना र फलफूल जस्ता पोषिला खाजाहरू स्वादिष्ट रूपमा पकाएर बेच्ने व्यवस्था मिलाउने।</td>
+                        </tr>
+                        <tr class="hat-blue">
+                            <td><strong><span class="hat-icon">🔵</span> निलो टोपी</strong></td>
+                            <td><strong>निष्कर्ष:</strong> विद्यार्थीहरूको दीर्घकालीन स्वास्थ्यलाई ध्यानमा राखी जङ्क फूडलाई पूर्ण प्रतिबन्ध लगाउने र विद्यालय चमेनागृहमा स्वस्थ, ताजा र स्थानीय प्राङ्गारिक खाजा मात्र बिक्री गर्न अनिवार्य नियम बनाउने।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p><em>(नोट: अन्य समस्याहरू (ग, घ, र ङ) को पनि यही ६ टोपीको सिद्धान्तका आधारमा कक्षाकोठामा छलफल गराई निष्कर्ष निकाल्न सकिन्छ) <span class="ref">[८]</span>।</em></p>
+        </div>
+
+        <!-- क्रियाकलाप २: सम्पादकीय -->
+        <div class="sub-head"><i class="fas fa-newspaper"></i> क्रियाकलाप २: "आत्मआलोचना र स्वरूपान्तरणको महत्त्व" विषयमा सम्पादकीय (Editorial)</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#6a8c2a; margin-right:8px;"></i> प्रश्न:</p>
+            <p>आत्मआलोचना र स्वरूपान्तरणको महत्त्व विषयमा एक राष्ट्रिय दैनिक पत्रिकाका लागि सम्पादकीय तयार पार्नुहोस् <span class="ref">[८]</span>।</p>
+        </div>
+
+        <div class="editorial-box">
+            <p class="editorial-title"><i class="fas fa-pen-fancy" style="color:#6a8c2a; margin-right:8px;"></i> सम्पादकीय</p>
+            <p style="font-weight:800; color:#0b2b4a; text-align:center; font-size:1.2rem;">परिवर्तनको प्रस्थानविन्दु: आत्मआलोचना र स्वरूपान्तरण</p>
+
+            <p>मानवीय जीवन र समाज गतिशिल छ। तर, यो गतिशिलता तब मात्र अर्थपूर्ण र सकारात्मक हुन्छ जब प्रत्येक व्यक्ति आफैँभित्र सुधार गर्न तत्पर रहन्छ। आज हाम्रो समाजमा अरूका कमजोरीहरू औँल्याउने, खोइरो खन्ने र औँला ठड्याउने प्रवृत्ति निकै झाङ्गिएको छ। तर, आफ्नो गल्ती स्वीकार गर्ने र आफैँलाई सच्याउने संस्कारको भने घोर अभाव देखिन्छ। यसै सन्दर्भमा, "जहाँ पनि सुधारका लागि ठाउँ रहन्छ" भन्ने सत्यलाई आत्मसात् गर्दै आत्मआलोचना र स्वरूपान्तरणको संस्कृति प्रवर्द्धन गर्नु आजको प्रमुख आवश्यकता बनेको छ <span class="ref">[८]</span>।</p>
+
+            <p>आत्मआलोचना भनेको आफैँले आफैँलाई नियाल्ने एक बलियो नैतिक ऐना हो <span class="ref">[८]</span>। आफ्ना सबल र कमजोर पक्षहरू केलाएर, आफ्नो कमजोरी महसुस गरी त्यसलाई स्वीकार गर्नु नै आत्मआलोचना हो <span class="ref">[८]</span>। यो व्यक्तिलाई कमजोर बनाउने हतियार होइन, बरु आफैँलाई चिन्न र भविष्यमा थप परिपक्व बन्न सघाउने एक ऊर्जाशील शक्ति हो <span class="ref">[८]</span>। जब कुशल जस्ता कक्षा १२ का विद्यार्थीले समय व्यवस्थापन गर्न नसक्दा र अल्छी गर्दा भोग्नुपरेको हन्डर स्वीकार गरेर आत्मआलोचना गर्छन्, तब मात्र उनीहरूको जीवनमा सुधारको नयाँ किरण देखा पर्छ <span class="ref">[८]</span>।</p>
+
+            <p>आत्मआलोचनाले स्वतः स्वरूपान्तरणको मार्ग प्रशस्त गर्दछ <span class="ref">[८]</span>। स्वरूपान्तरण भनेको केवल बाह्य देखावट होइन, यो त सोच, चिन्तन र आचरणमा आउने गुणात्मक परिवर्तन हो <span class="ref">[८]</span>। जबसम्म हामी आफ्ना पुराना, संकुचित र पूर्वाग्रही बानीहरू स्वीकार गर्दैनौँ, तबसम्म हाम्रो स्वरूपान्तरण सम्भव छैन <span class="ref">[८]</span>। हरेक दिन परिवर्तनको प्रयास जारी राख्ने, जोखिम उठाउन तयार रहने, र झुटा प्रशंसा गर्नेहरूबाट टाढा रही सत्य ओकल्ने साथीहरूको सङ्गत गर्नाले मात्र व्यक्ति वास्तविक रूपमा स्वरूपान्तरित हुन सक्छ <span class="ref">[८]</span>।</p>
+
+            <p>अतः, देशको समृद्धिको नेतृत्व गर्ने युवा पुस्तालाई अहङ्कारमुक्त र जिम्मेवार बनाउन विद्यालय तहदेखि नै आत्मआलोचना र स्वरूपान्तरणको अभ्यास गराउनु जरुरी छ। आफ्ना कमजोरी लुकाएर अरूमाथि दोषारोपण गर्ने बानी त्यागी स्व-परिवर्तनको शङ्खघोष गर्नु नै आजको सभ्य समाजको पहिचान हो।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> समालोचनात्मक चिन्तन भनेको के हो?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> कुनै पनि विषयवस्तु, विचार वा घटनाका सबल र दुर्बल पक्षहरूको निष्पक्षताका साथ मूल्याङ्कन गरी, तथ्य र प्रमाणका आधारमा स्पष्ट र तर्कसङ्गत ढङ्गले सोच्ने र निर्णय गर्ने मानसिक क्षमतालाई नै <strong>समालोचनात्मक चिन्तन (Critical Thinking)</strong> भनिन्छ <span class="ref">[८]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> समालोचनात्मक चिन्तनअन्तर्गतका सिपहरूमध्ये तपाईंलाई कुन सबैभन्दा महत्त्वपूर्ण लाग्छ? एक कारण दिनुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> समालोचनात्मक चिन्तनअन्तर्गतका सिपहरुमध्ये मलाई <strong>"आत्मनियमन सिप" (Self-regulation Skill)</strong> सबैभन्दा महत्त्वपूर्ण लाग्छ <span class="ref">[८]</span>।<br>
+                <strong>कारण:</strong> यो सिपले मानिसलाई आफ्नो सोच्ने तरिका र व्यवहार ठिक छ कि छैन भनी आफैँले निरन्तर अनुगमन र मूल्याङ्कन गर्न सिकाउँछ <span class="ref">[८]</span>। आफ्नै विचारहरू पूर्वाग्रही वा गलत छन् भनेर पत्ता लगाई आफैँलाई सच्याउन सिकाउने हुनाले यसले अन्य सबै सिपहरुलाई नियन्त्रण र मार्गनिर्देशन गर्दछ <span class="ref">[८]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> आत्मआलोचनालाई परिभाषित गर्नुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> आफ्ना सबल र कमजोर पक्षहरूलाई बिनाकुनै अहङ्कार केलाएर आफ्ना गल्ती तथा कमजोरीहरू महसुस गर्ने र त्यसलाई सुधार गर्नका लागि प्रतिबद्ध रहने कार्यलाई नै <strong>आत्मआलोचना (Self-criticism)</strong> भनिन्छ <span class="ref">[८]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> आत्मआलोचना र स्वरूपान्तरणबीच के सम्बन्ध छ? छोटकरीमा लेख्नुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> आत्मआलोचना र स्वरूपान्तरणबीच <strong>कार्यकारण र परिपूरक सम्बन्ध</strong> रहेको छ <span class="ref">[८]</span>:
+                <ul>
+                    <li>आत्मआलोचना <strong>'कारण'</strong> हो भने स्वरूपान्तरण त्यसको <strong>'परिणाम'</strong> हो <span class="ref">[८]</span>।</li>
+                    <li>जब व्यक्तिले आत्मआलोचना गरी आफ्ना कमजोरीहरू स्वीकार गर्छ, तब मात्र उसमा परिवर्तन हुने इच्छा जाग्छ र उनीहरूका सोच, व्यवहार र शैलीमा सकारात्मक एवं स्थायी 'स्वरूपान्तरण' आउँछ <span class="ref">[८]</span>। आत्मआलोचना बिनाको स्वरूपान्तरण दिगो र वास्तविक हुन सक्दैन <span class="ref">[८]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">(ङ)</span> समालोचनात्मक चिन्तनको महत्त्वलाई पाँच बुँदामा लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> दैनिक जीवनमा समालोचनात्मक चिन्तनको महत्त्व निम्नलिखित छ <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>वास्तविक निष्कर्षमा पुग्न:</strong> अफवाह वा व्यक्तिगत भावनाका आधारमा नभई कुनै पनि मुद्दा वा समस्याको वास्तविक निष्कर्षमा पुग्न सघाउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>पूर्वाग्रह र पक्षधरता हटाउन:</strong> निर्णय प्रक्रियामा प्रभाव पार्ने व्यक्तिगत स्वार्थ, रिस वा पूर्वाग्रहलाई हटाई निष्पक्ष न्याय सुनिश्चित गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>उत्तम विकल्प छनोट गर्न:</strong> उपलब्ध धेरै विकल्पहरूमध्ये सबैभन्दा उपयोगी र प्रभावकारी विकल्पको छनोट गरी व्यवहारमा उतार्न मद्दत गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>विविध दृष्टिकोणलाई सम्मान गर्न:</strong> समाजका सबै सरोकारवालाहरूको चासो, लक्ष्य र विचारलाई बुझेर समावेशी निर्णय लिन सिकाउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>असान्दर्भिक कुराहरू हटाउन:</strong> उपलब्ध जानकारीहरूमध्ये कुन सान्दर्भिक छ र कुन वाहियात हो भनी छुट्याउन मद्दत गर्छ <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">(च)</span> समालोचनात्मक चिन्तनमा प्रयोग हुने सिपहरूको सूची बनाउनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> समालोचनात्मक चिन्तनमा प्रयोग हुने मुख्य सिपहरुको सूची यस प्रकार छ <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li>विश्लेषण सिप (Analysis Skill) <span class="ref">[८]</span></li>
+                    <li>अर्थ निर्माण सिप (Interpretation Skill) <span class="ref">[८]</span></li>
+                    <li>निष्कर्ष अनुमान गर्ने सिप (Inference Skill) <span class="ref">[८]</span></li>
+                    <li>व्याख्या गर्ने सिप (Explanation Skill) <span class="ref">[८]</span></li>
+                    <li>आत्मनियमन सिप (Self-regulation Skill) <span class="ref">[८]</span></li>
+                    <li>खुला सोचाइ सिप (Open-mindedness Skill) <span class="ref">[८]</span></li>
+                    <li>समस्या समाधान सिप (Problem Solving Skill) <span class="ref">[८]</span></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">(छ)</span> "आत्मआलोचनाले व्यक्तिलाई कमजोर होइन सबल बनाउँछ।" यस भनाइलाई पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> "आत्मआलोचनाले व्यक्तिलाई कमजोर होइन सबल बनाउँछ" भन्ने भनाइ पूर्ण रूपमा सत्य र तार्किक छ, जसलाई निम्न बुँदाहरूद्वारा पुष्टि गर्न सकिन्छ <span class="ref">[८]</span>:</p>
+                <ul>
+                    <li><strong>वास्तविक आत्मबोध:</strong> आत्मआलोचना गर्दा व्यक्तिले आफ्ना सबल र कमजोर पक्षहरू बुझ्ने मौका पाउँछ <span class="ref">[८]</span>। आफ्ना कमजोरी थाहा पाउनु नै सुधारको पहिलो पाइला हो <span class="ref">[८]</span>।</li>
+                    <li><strong>गल्ती दोहोरिन नदिनु:</strong> आफ्ना कमजोरी महसुस गर्ने व्यक्तिले भविष्यमा सोही गल्ती दोहोर्‍याउँदैन, जसले उसलाई झन् बढी कुशल र आत्मविश्वासी बनाउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>अहङ्कारको नाश:</strong> यसले "म सधैँ सही छु" भन्ने भ्रम र अहङ्कारलाई तोड्छ र मानिसमा सिक्ने एवं अरूको दृष्टिकोण बुझ्ने क्षमता बढाउँछ, जुन सबल व्यक्तित्वको पहिचान हो <span class="ref">[८]</span>।</li>
+                    <li><strong>व्यावहारिक सफलताको आधार:</strong> कुशल जस्ता विद्यार्थीले गृहकार्य नगरेको र अल्छी गरेको कमजोरी स्वीकार गरेकै कारण आज कक्षा १२ मा अनुशासित र सफल बन्न सकेका हुन् <span class="ref">[८]</span>।</li>
+                </ul>
+                <p>अतः, कमजोरी स्वीकार गर्नु कायरता होइन, बरु आफैँलाई सुधारेर अझ बढी शक्तिशाली र सक्षम बन्ने साहसी कदम हो <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">१.</span> समालोचनात्मक चिन्तनमा 'कालो टोपी' ले के जनाउँछ?</div>
+            <div class="a"><strong>उत्तर:</strong> डा. एडवर्ड डि बोनोका अनुसार 'कालो टोपी' ले <strong>नकारात्मक चिन्तन</strong> अर्थात् समस्या वा निर्णयका सम्भावित चुनौती, जोखिम र हानि बुझाउँछ <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">२.</span> "जहाँ पनि सुधारका लागि ठाउँ रहन्छ।" यो भनाइ कुन जीवनोपयोगी सिपसँग सम्बन्धित छ?</div>
+            <div class="a"><strong>उत्तर:</strong> यो भनाइ <strong>स्वरूपान्तरण (Transformation)</strong> र आत्मआलोचना सिपसँग सम्बन्धित छ <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">३.</span> समालोचनात्मक चिन्तनको पहिलो र अनिवार्य सर्त के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> समालोचनात्मक चिन्तनको पहिलो सर्त <strong>समस्या, मुद्दा वा प्रश्नलाई सही रूपमा पहिचान गर्नु</strong> हो <span class="ref">[८]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">१.</span> सुवर्णको जीवनचर्या र निर्णय प्रक्रियाबाट विद्यार्थीहरूले के सिक्न सक्छन्? उदाहरणसहित व्याख्या गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> सुवर्ण पाठ्यपुस्तकको एक आदर्श पात्र हुन्, जसको जीवनचर्या र निर्णय प्रक्रिया समालोचनात्मक चिन्तनको व्यावहारिक स्वरूप हो <span class="ref">[८]</span>।</p>
+
+                <p><strong>मुख्य विश्लेषण बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>फजुलखर्चीको नियन्त्रण:</strong> सुवर्णका आमाबुबा सफल व्यवसायी भए पनि उनले आफ्नो भाइ जस्तो विनाकाम मोटरसाइकल मागेर पैसा फजुल खर्च गर्दिनन् <span class="ref">[८]</span>। उनले आवश्यकता र इच्छाबीचको भिन्नता बुझेकी छिन्।</li>
+                    <li><strong>नतिजाको पूर्वमूल्याङ्कन:</strong> सुवर्णले कुनै पनि काम गर्नुअघि त्यसको फाइदा र बेफाइदा स्पष्ट रूपमा विचार गरेर मात्र निर्णय लिने गर्छिन् <span class="ref">[८]</span>।</li>
+                    <li><strong>सम्पत्तिको उचित प्रयोग:</strong> उनी घरका सामानहरू जथाभाबी प्रयोग गर्दिनन् र अन्न तथा वस्तुहरूको फजुल दुरुपयोग हुन दिन्नन् <span class="ref">[८]</span>।</li>
+                    <li><strong>स्वस्थ आचरण:</strong> उनी बजारको अस्वस्थ खानाको सट्टा घरमै बनेको पोषिलो खानपान मन पराउँछिन् <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> अतः, सुवर्णको चरित्रबाट विद्यार्थीहरूले कसरी लोभ र फेसनको पछि नलागी आफ्नो विवेक प्रयोग गरेर सन्तुलित र आर्थिक रूपमा अनुशासित जीवन जिउन सकिन्छ भन्ने कुरा सिक्न सक्छन् <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color4" style="border-left-color:#6a8c2a;">
+            <div class="q"><span class="qnum">प्रश्न:</span> डा. एडवर्ड डि बोनोको '६ सोच्ने टोपीहरू' को अवधारणा स्पष्ट पार्दै दैनिक जीवनका असमझदारीहरू हल गर्न यसको प्रयोग कसरी गर्न सकिन्छ? विस्तृत चर्चा गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> हाम्रो दैनिक जीवनमा धेरैजसो असमझदारी र द्वन्द्वहरू एकपक्षीय सोचका कारण उत्पन्न हुन्छन्। जब मानिसले कुनै समस्यालाई केवल एउटा दृष्टिकोणबाट मात्र हेर्छ, तब उसले अरूको दृष्टिकोण देख्न सक्दैन। यसै मानवीय कमजोरीलाई हटाउन र चिन्तन प्रक्रियालाई बहुआयामिक र निष्पक्ष बनाउन प्रख्यात मनोवैज्ञानिक <strong>डा. एडवर्ड डि बोनो (Dr. Edward de Bono)</strong> ले '६ सोच्ने टोपीहरू' (Six Thinking Hats) को अवधारणा प्रतिपादन गरेका हुन् <span class="ref">[८]</span>।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span> डि बोनोका अनुसार ६ रङका टोपीहरूले ६ फरक-फरक सोच वा दृष्टिकोणलाई जनाउँछन्, जसलाई मानिसले पालैपालो लगाएर चिन्तन गर्नुपर्छ <span class="ref">[८]</span>:</p>
+                <ul>
+                    <li><strong>१. सेतो टोपी (वस्तुगत सोच - White Hat):</strong> यसले केवल तथ्य, तथ्याङ्क र वास्तविक सूचनाहरूमा ध्यान केन्द्रित गर्छ। यसमा कुनै भावना वा व्यक्तिगत तर्क हुँदैन <span class="ref">[८]</span>।</li>
+                    <li><strong>२. रातो टोपी (संवेगात्मक सोच - Red Hat):</strong> यसले रिस, डर, खुसी, माया वा अन्तर्ज्ञान (Intuition) जस्ता संवेगात्मक पक्षलाई बिनाकुनै प्रमाण व्यक्त गर्न अनुमति दिन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>३. कालो टोपी (नकारात्मक सोच - Black Hat):</strong> यसले योजना वा विचारका सम्भावित खतरा, चुनौती, जोखिम र नकारात्मक नतिजाहरू औँल्याउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>४. पहेँलो टोपी (सकारात्मक सोच - Yellow Hat):</strong> यसले विचारका अवसर, फाइदा, सकारात्मक पक्ष र आशावादी दृष्टिकोण प्रस्तुत गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>५. हरियो टोपी (सिर्जनात्मक सोच - Green Hat):</strong> यसले परम्परागत समाधानभन्दा बाहिर गएर नयाँ विकल्प, नयाँ उपाय र सिर्जनात्मक विचारहरू उत्पन्न गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>६. निलो टोपी (व्यापक/नियन्त्रक सोच - Blue Hat):</strong> यो सबै टोपीहरूको नियन्त्रक हो। यसले चिन्तन प्रक्रियाको समीक्षा गर्छ र सबै सरोकारवालाहरूको दृष्टिकोण समेटी अन्तिम निष्कर्ष निकाल्छ <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपाली ग्रामीण समाजमा वन संरक्षण गर्ने वा नगर्ने भन्ने द्वन्द्व हुँदा ६ टोपी प्रयोग गर्न सकिन्छ:</p>
+                <ul>
+                    <li><strong>सेतो टोपी:</strong> वनमा कति रूख छन् र कति वन फँडानी भयो भन्ने तथ्याङ्क हेर्ने।</li>
+                    <li><strong>रातो टोपी:</strong> स्थानीय मानिसहरूको वनसँग जोडिएको धार्मिक र भावनात्मक सम्बन्ध बुझ्ने।</li>
+                    <li><strong>कालो टोपी:</strong> वन फँडानी गर्दा बाढी, पहिरो र भुक्षयको जोखिम विश्लेषण गर्ने।</li>
+                    <li><strong>पहेँलो टोपी:</strong> वन संरक्षण गर्दा जडीबुटी र पर्यापर्यटनबाट प्राप्त हुने आर्थिक फाइदा औँल्याउने।</li>
+                    <li><strong>हरियो टोपी:</strong> काठ दाउराको सट्टा एलपीजी ग्यास वा विद्युतीय चुलो प्रयोग गर्ने विकल्प सिर्जना गर्ने।</li>
+                    <li><strong>निलो टोपी:</strong> यी सबैको आधारमा समुदाय र वातावरण दुवैलाई फाइदा हुने गरी "सामुदायिक वन व्यवस्थापन समिति" गठन गर्ने निर्णय लिने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, ६ सोच्ने टोपीहरूको अवधारणा केवल एक सिद्धान्त नभई दैनिक जीवनका जटिलताहरू सुल्झाउने एक व्यावहारिक मन्त्र हो <span class="ref">[८]</span>। यसको प्रयोगले मानिसमा हतारमा निर्णय लिने बानी हट्छ र उसले समाजका हरेक वर्ग र परिस्थितिको कदर गर्दै सन्तुलित र सर्वस्वीकार्य समाधान निकाल्न सक्छ <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#B8F45D; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#0b2b4a;"></i>
+            <strong>अन्तिम सल्लाह:</strong> समालोचनात्मक चिन्तनले हामीलाई सतही र एकपक्षीय सोचभन्दा माथि उठ्न मद्दत गर्छ। ६ सोच्ने टोपीहरूको अभ्यास गर्दा हामी कुनै पनि समस्या, विचार वा असमझदारीलाई बहुआयामिक ढङ्गले हेर्न र सबैको हित हुने सन्तुलित निष्कर्षमा पुग्न सक्छौं। आफैँलाई प्रश्न गर्नु, आत्मआलोचना गर्नु र स्वरूपान्तरणको बाटो हिँड्नु नै वास्तविक सिकाइ र व्यक्तिगत विकासको जग हो।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ३, पाठ २</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
