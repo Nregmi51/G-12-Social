@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ ४ – समानुभूति (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #fdf5f7;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fefcf7;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #AD1457;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #D81B60;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #D81B60;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #f5e8ec;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #d9c0c8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #D81B60;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #D81B60;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #D81B60;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #e8608a;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #D81B60 ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #D81B60;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(216, 27, 96, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #D81B60;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #AD1457;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #D81B60;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #D81B60;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #AD1457;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #D81B60;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #D81B60;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #D81B60;
+            background: #fcf0f4;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #d9c0c8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #d9c0c8;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #D81B60;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #f5e8ec;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #d9c0c8;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #D81B60;
+        }
+
+        .qa-block.color1 { border-left-color: #D81B60; background: #fcf0f4; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #AD1457;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #D81B60;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #AD1457;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #D81B60;
+        }
+
+        .glossary-item strong {
+            color: #AD1457;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #fcf0f4;
+            border-radius: 20px;
+            border: 2px dashed #e8608a;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #D81B60;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- SPEECH BOX ----- */
+        .speech-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9c0c8;
+            margin: 12px 0;
+        }
+
+        .speech-box .speech-title {
+            font-weight: 900;
+            color: #AD1457;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        .speech-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 8px;
+            line-height: 2;
+        }
+
+        .speech-box .salutation {
+            font-weight: 700;
+            color: #AD1457;
+        }
+
+        .speech-box .closing {
+            font-weight: 700;
+            color: #AD1457;
+            margin-top: 10px;
+        }
+
+        /* ----- GAME BOX ----- */
+        .game-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9c0c8;
+            margin: 12px 0;
+        }
+
+        .game-box .game-title {
+            font-weight: 900;
+            color: #AD1457;
+            font-size: 1.1rem;
+        }
+
+        .game-box p,
+        .game-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .game-box ul,
+        .game-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9c0c8;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #AD1457;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #D81B60;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(216, 27, 96, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #AD1457;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(216, 27, 96, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #D81B60;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #d9c0c8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #D81B60;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .speech-box p {
+                font-size: 1.02rem;
+            }
+            .game-box p,
+            .game-box li {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-heart"></i>
+                    एकाइ ३, पाठ ४: समानुभूति (Empathy)
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ३, पाठ ४
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दहरू
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> समानुभूति (Empathy)</strong>
+                <p>अरूले भोगिरहेका संवेगात्मक अनुभव, परिस्थिति वा दुःखलाई पहिचान गरी, उनीहरूकै दृष्टिकोणबाट कुरालाई बुझ्ने र सोहीअनुसार आफूले पनि बराबर महसुस गर्ने मानवीय क्षमता <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> सहानुभूति (Sympathy)</strong>
+                <p>अरूको दुःख वा कठिनाइप्रति बाहिरी रूपमा दया, सहानुभूति वा दयाभाव प्रकट गर्ने कार्य, जसमा अरूको पीडालाई आफैँले भित्री रूपमा महसुस गरिँदैन <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> संज्ञानात्मक समानुभूति (Cognitive Empathy)</strong>
+                <p>अरूको संवेगात्मक वा मानसिक अवस्था कस्तो छ भन्ने कुरालाई आफ्नो बौद्धिक क्षमता प्रयोग गरी पहिचान गर्ने वा बुझ्ने प्रक्रिया (मस्तिष्कको तहमा हुने बुझाइ) <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> संवेगात्मक समानुभूति (Emotional Empathy)</strong>
+                <p>अरूको दुःख, पीडा वा संवेग देखेर आफ्नो मनभित्र पनि वास्तविक रूपमै त्यस्तै पीडा वा संवेगात्मक कम्पन महसुस गर्ने अवस्था (मनको तहमा हुने अनुभूति) <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> दयालु समानुभूति (Compassionate Empathy)</strong>
+                <p>अरूको दुःख बुझिसकेपछि र त्यसलाई महसुस गरिसकेपछि सो दुःख निवारणका लागि प्रत्यक्ष रूपमा सहयोगी कदम चाल्ने कार्य (हात वा व्यवहारको तहमा हुने सहयोग) <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> गैरशाब्दिक सञ्चार (Non-verbal Communication)</strong>
+                <p>शब्दविना व्यक्त गरिने सञ्चार, जस्तै: अनुहारको हाउभाउ, आँखाको इसारा, शरीरको चाल वा शारीरिक हाउभाउ (Body Language), जसलाई बुझ्नु समानुभूतिका लागि अनिवार्य हुन्छ <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> समता (Equity)</strong>
+                <p>समानता (Equality) को सट्टा मानिसहरूको विशिष्ट अवस्था, आवश्यकता र क्षमताका आधारमा न्यायोचित रूपमा अवसर र स्रोतको वितरण गर्ने सिद्धान्त <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> विविधताको उपयोग (Leveraging Diversity)</strong>
+                <p>समाजमा रहेका फरक-फरक जाति, संस्कृति, लिङ्ग वा शारीरिक क्षमता भएका व्यक्तिहरूको फरकपनलाई आदर गर्दै उनीहरूको क्षमतालाई रचनात्मक रूपमा समाजको हितमा परिचालन गर्ने कला <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> राजनीतिक/सामाजिक सचेतना (Political/Social Awareness)</strong>
+                <p>कुनै पनि समूह, कार्यालय वा समुदायभित्र रहेको शक्ति सम्बन्ध, संवेगात्मक प्रवाह र मानिसहरूको सामाजिक स्थितिलाई बुझेर उपयुक्त व्यवहार गर्ने क्षमता <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> सक्रिय श्रवण (Active Listening)</strong>
+                <p>वक्ताका शब्दहरूलाई ध्यानपूर्वक सुन्ने, उनका गैरशाब्दिक सङ्केतहरू (हाउभाउ) पहिचान गर्ने र उनका भावनालाई विना कुनै पूर्वाग्रह बुझ्ने सञ्चार कला <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#D81B60; margin-right:4px;"></i> परिप्रेक्ष्य ग्रहण (Perspective-taking)</strong>
+                <p>आफ्नो व्यक्तिगत अडान वा दृष्टिकोण छाडेर क्षणभरका लागि अरूको दृष्टिकोणबाट वस्तुस्थिति वा घटनाको विश्लेषण गर्ने मानसिक क्षमता <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "समानुभूति" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. अर्थ र परिभाषा -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. समानुभूतिको अर्थ र परिभाषा</div>
+
+        <div class="content-box pink-light">
+            <ul>
+                <li><strong>व्युत्पत्ति:</strong> समानुभूति शब्द <strong>'सम'</strong> (बराबर) र <strong>'अनुभूति'</strong> (महसुस गर्नु) मिलेर बनेको छ। अङ्ग्रेजी शब्द <strong>'Empathy'</strong> जर्मन शब्द <em>'Einfühlung'</em> बाट प्रभावित छ, जसको अर्थ "आफैँलाई अरूको स्थानमा समाहित गर्नु" हो।</li>
+                <li><strong>दार्शनिक आधार:</strong> "अरूको जुत्तामा आफ्नो खुट्टा हालेर हिँड्नु" (Walking in someone else's shoes) अर्थात् आफूलाई पूर्ण रूपमा अर्को व्यक्तिको परिस्थिति र मानसिक अवस्थामा राखेर हेर्नु नै समानुभूति हो <span class="ref">[८]</span>।</li>
+                <li><strong>महत्त्व:</strong> यसले मानिसमा रहेको 'स्वार्थी र आत्मकेन्द्रित' प्रवृत्तिलाई हटाएर समाजमा पारस्परिक सहयोग, मैत्रीभाव र आत्मिक निकटता स्थापना गर्न मद्दत गर्दछ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- २. ५ तत्त्वहरू -->
+        <div class="sub-head"><i class="fas fa-list-check"></i> २. समानुभूतिका ५ वटा स्तम्भ वा तत्त्वहरू</div>
+
+        <div class="content-box blue-light">
+            <p>अमेरिकी मनोवैज्ञानिक तथा संवेगात्मक बुद्धिमत्ताका व्याख्याता <strong>ड्यानियल गोलम्यान (Daniel Goleman)</strong> का अनुसार समानुभूतिका पाँचवटा प्रमुख तत्त्वहरू रहेका छन् <span class="ref">[८]</span>:</p>
+            <ul>
+                <li><strong>(क) अरूलाई बुझ्नु (Understanding Others):</strong> अरूका भावना, दृष्टिकोण र आवश्यकतालाई ध्यानपूर्वक सुन्ने र बुझ्ने प्रयास गर्नु। यसका लागि गैरशाब्दिक सङ्केतहरू (जस्तै अनुहारको भाव) पहिचान गर्नु आवश्यक हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(ख) अरूलाई विकसित पार्नु (Developing Others):</strong> अरूको क्षमता र चासो पहिचान गरी उनीहरूलाई अघि बढ्न रचनात्मक सल्लाह, हौसला, कार्यभार (Assignments) र पृष्ठपोषण दिनु <span class="ref">[८]</span>।</li>
+                <li><strong>(ग) सेवाभाव राख्नु (Service Orientation):</strong> ग्राहक, सेवाग्राही वा सहयोगको अपेक्षा गर्ने व्यक्तिहरूको हित, सन्तुष्टि र आवश्यकतालाई प्राथमिकतामा राखेर कार्य गर्नु <span class="ref">[८]</span>।</li>
+                <li><strong>(घ) विविधताको उपयोग गर्नु (Leveraging Diversity):</strong> विभिन्न पृष्ठभूमि, संस्कृति र क्षमताका मानिसहरूबिचको भिन्नतालाई चुनौती मान्नुको सट्टा अवसरका रूपमा लिएर समतामूलक व्यवहार गर्नु <span class="ref">[८]</span>।</li>
+                <li><strong>(ङ) राजनीतिक/सामाजिक सचेतना (Political/Social Awareness):</strong> समूह, कार्यालय वा सङ्गठनको संवेगात्मक पक्ष र पदीय शक्ति सम्बन्धलाई बुझेर उपयुक्त निर्णय लिनु <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ३. ३ प्रकारहरू -->
+        <div class="sub-head"><i class="fas fa-layer-group"></i> ३. समानुभूतिका ३ प्रकारहरू</div>
+
+        <div class="content-box green-light">
+            <div class="mermaid-flow">
+                <div class="mermaid-step">१. संज्ञानात्मक समानुभूति<br><span style="font-weight:400;">(मस्तिष्कको तहमा बुझाइ)</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">२. संवेगात्मक समानुभूति<br><span style="font-weight:400;">(मनको तहमा महसुस)</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="mermaid-step">३. दयालु समानुभूति<br><span style="font-weight:400;">(व्यवहार/एक्सनको तहमा सहयोग)</span></div>
+            </div>
+
+            <ul>
+                <li><strong>१. संज्ञानात्मक समानुभूति (Cognitive Empathy):</strong> अरूको दृष्टिकोण र मानसिक अवस्था कस्तो छ भनी बौद्धिक रूपमा बुझ्नु। यसलाई 'Perspective-taking' भनिन्छ, जसमा मस्तिष्कको तार्किक पक्ष बढी सक्रिय हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>२. संवेगात्मक समानुभूति (Emotional Empathy):</strong> अरूको दुःख वा संवेगलाई आफ्नै संवेगात्मक प्रणालीमा सिधै महसुस गर्नु। यसलाई 'Affective Empathy' भनिन्छ, जसमा मानिस अरूको दुःखमा सँगै रुन वा भावुक बन्न सक्छ <span class="ref">[८]</span>।</li>
+                <li><strong>३. दयालु समानुभूति (Compassionate Empathy):</strong> अरूको दुःख बुझिसकेपछि र महसुस गरिसकेपछि त्यस दुःखलाई कम गर्नका लागि व्यावहारिक रूपमा सहयोगी कदम चाल्नु। यसलाई 'Empathic Concern' भनिन्छ, जहाँ भावना 'कर्म' (Action) मा परिणत हुन्छ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ४. समानुभूति र सहानुभूतिबिचको अन्तर -->
+        <div class="sub-head"><i class="fas fa-scale-balanced"></i> ४. समानुभूति र सहानुभूतिबिचको अन्तर</div>
+
+        <div class="content-box orange-light">
+            <ul>
+                <li><strong>सहानुभूति (Sympathy):</strong> यसमा अरूको पीडाप्रति बाहिरी रूपमा दया वा दुःखको भावना देखाइन्छ तर आफू भावनात्मक रूपमा पीडितको स्थानमा पुग्दैन। जस्तै: "तिमीलाई दुःख परेछ, मलाई दुःख लाग्यो" भन्नु <span class="ref">[८]</span>।</li>
+                <li><strong>समानुभूति (Empathy):</strong> यसमा आफूलाई पूर्ण रूपमा पीडितको ठाउँमा राखेर उसको पीडा आफैँले अनुभूत गरिन्छ। जस्तै: "तिम्रो स्थानमा म भएको भए मलाई पनि यस्तै पीडा हुन्थ्यो, म तिम्रो दुःख बुझ्न सक्छु र तिमीलाई सहयोग गर्छु" भन्नु <span class="ref">[८]</span>।</li>
+            </ul>
+
+            <div class="table-wrap">
+                <div class="table-caption">तुलना: सहानुभूति र समानुभूति <span class="ref">[८]</span></div>
+                <table>
+                    <thead>
+                        <tr><th>भिन्नताको आधार</th><th>सहानुभूति (Sympathy)</th><th>समानुभूति (Empathy)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>भावनात्मक गहिराइ</strong></td>
+                            <td>यो बाहिरी र सतही दयाभाव हो <span class="ref">[८]</span>।</td>
+                            <td>यो गहिरो र आत्मिक अनुभूति हो <span class="ref">[८]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>केन्द्रविन्दु</strong></td>
+                            <td>"मलाई तिम्रो अवस्था देखेर दुःख लाग्यो" (Sympathy is feeling <em>for</em> someone) <span class="ref">[८]</span>।</td>
+                            <td>"म तिम्रो दुःख आफैँभित्र महसुस गर्दैछु" (Empathy is feeling <em>with</em> someone) <span class="ref">[८]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>व्यावहारिक परिणाम</strong></td>
+                            <td>यसमा केवल सहानुभूतिपूर्ण शब्दहरू व्यक्त गरिन्छ <span class="ref">[८]</span>।</td>
+                            <td>यसले पीडा हटाउन ठोस र सहयोगी कदम चाल्न प्रेरित गर्छ (विशेष गरी दयालु समानुभूतिमा) <span class="ref">[८]</span>।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ५. फाइदाहरू -->
+        <div class="sub-head"><i class="fas fa-check-circle"></i> ५. समानुभूति सिपका फाइदाहरू</div>
+
+        <div class="content-box purple-light">
+            <ul>
+                <li><strong>पारिवारिक र वैवाहिक सुख:</strong> दम्पती र परिवारका सदस्यबिच एकआपसमा समानुभूति हुँदा असमझदारी र झगडा कम हुन्छ र पारिवारिक जीवन सुखमय हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>सामाजिक सम्बन्ध विस्तार:</strong> समानुभूति भएका व्यक्तिहरू मिलनसार र सहयोगी हुने भएकाले साथीभाइ र समाजमा सबैका प्रिय र विश्वसनीय हुन्छन् <span class="ref">[८]</span>।</li>
+                <li><strong>कार्यस्थलमा सफलता:</strong> संस्था वा कार्यालयमा कर्मचारी र व्यवस्थापकबिच समानुभूतिपूर्ण सम्बन्ध हुँदा उत्पादकत्व बढ्छ, द्वन्द्व व्यवस्थापन हुन्छ र कार्य वातावरण सहज हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>जिम्मेवार अभिभावकत्व:</strong> आमाबाबुले सन्तानको बाल्यकालीन र किशोरकालीन संवेग बुझ्न सकेमा उनीहरू असल, सन्तुलित र चरित्रवान् नागरिक बन्न सक्छन् <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १: वक्तृत्वकला -->
+        <div class="sub-head"><i class="fas fa-microphone"></i> क्रियाकलाप १: "समानुभूति" शीर्षकको वक्तृत्वकला प्रतियोगिताको मस्यौदा</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#D81B60; margin-right:8px;"></i> प्रश्न:</p>
+            <p>"समानुभूति: सामाजिक सद्भाव र आपसी सहकार्यको आधार" विषयमा वक्तृत्वकला प्रतियोगिताका लागि एक मस्यौदा तयार गर्नुहोस् <span class="ref">[८]</span>।</p>
+        </div>
+
+        <div class="speech-box">
+            <p class="speech-title"><i class="fas fa-pen-fancy" style="color:#D81B60; margin-right:8px;"></i> वक्तृत्वकलाको मस्यौदा</p>
+            <p style="font-weight:800; color:#AD1457; text-align:center; font-size:1.1rem;">विषय: समानुभूति: सामाजिक सद्भाव र आपसी सहकार्यको आधार</p>
+
+            <p class="salutation">आदरणीय सभापति महोदय, निर्णायक मण्डल, आदरणीय गुरुवर्ग र मेरा प्यारा सहपाठी मित्रहरू,</p>
+
+            <p>आज यस गरिमामय हलमा आयोजित वक्तृत्वकला प्रतियोगितामा म "समानुभूति: सामाजिक सद्भाव र आपसी सहकार्यको आधार" भन्ने शीर्षकमा आफ्ना तार्किक विचारहरू प्रस्तुत गर्न पाउँदा अत्यन्तै खुसी छु।</p>
+
+            <p>समानुभूति अर्थात् 'Empathy' मानव सभ्यताको सबैभन्दा सुन्दर आभूषण हो। यसको अर्थ केवल अरूको दुःखमा ओठे सहानुभूति देखाउनु होइन, बरु आफूलाई पूर्ण रूपमा अर्को व्यक्तिको कठिन परिस्थितिमा उभ्याएर उसको पीडा, आँसु र संवेगलाई आफ्नै मनभित्र महसुस गर्नु हो। जब हामी अरूको दृष्टिकोणबाट संसारलाई हेर्न थाल्छौँ, तब समाजमा रहेका धेरैजसो असमझदारी, द्वन्द्व र घृणाहरू स्वतः समाप्त भएर जान्छन्।</p>
+
+            <p><strong>आदरणीय श्रोतावृन्द,</strong> हाम्रो समाज बहुसांस्कृतिक, बहुजातीय, र बहुभाषिक छ। यस्तो विविधतायुक्त समाजलाई जोड्ने बलियो अदृश्य कडी नै समानुभूति हो। अमेरिकी लेखक ड्यानियल गोलम्यानका अनुसार समानुभूतिले हामीलाई अरूको भावना बुझ्न मात्र होइन, विविधताको आदर गर्दै समतामूलक समाज निर्माण गर्न पनि सघाउँछ। यदि हामीमा समानुभूति भएन भने हामी स्वार्थी र संवेदनहीन बन्छौँ। बाढी, पहिरो वा भूकम्प जस्ता प्राकृतिक विपत्तिमा परेका पीडितहरूको पीडा महसुस गरेर जब हाम्रो देशको कुनाकाप्चाबाट सहयोगका हातहरू अघि बढ्छन्, त्यो समानुभूतिको सबैभन्दा जीवन्त उदाहरण हो।</p>
+
+            <p>अन्तमा, केवल अरूको कुरा बौद्धिक रूपमा बुझ्नु मात्र पर्याप्त छैन, दुःख परेकालाई प्रत्यक्ष रूपमा सहयोग गर्ने 'दयालु समानुभूति' को अभ्यास आजको आवश्यकता हो। समाजमा शान्ति, भाइचारा र आपसी सहकार्य प्रवर्द्धन गर्न हामी प्रत्येकले "म उसको स्थानमा भएको भए के गर्थेँ?" भनी सोच्ने बानी बसाल्नुपर्छ। यिनै शब्दका साथ समानुभूतिपूर्ण व्यवहार आजैबाट आफ्नै घर र विद्यालयबाट सुरु गरौँ भन्दै म मेरा भनाइहरू यहीँ टुङ्ग्याउँछु।</p>
+
+            <p class="closing">धन्यवाद।</p>
+        </div>
+
+        <!-- क्रियाकलाप २: खेल -->
+        <div class="sub-head"><i class="fas fa-users"></i> क्रियाकलाप २: कक्षाकोठामा समानुभूतिपूर्ण खेल</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#D81B60; margin-right:8px;"></i> प्रश्न:</p>
+            <p>कक्षाका सबै विद्यार्थी एउटा गोलो घेरामा बस्नुहोस् वा उभिनुहोस् र दिइएको निर्देशनअनुसार खेल खेल्नुहोस् <span class="ref">[८]</span>।</p>
+        </div>
+
+        <div class="game-box">
+            <p class="game-title"><i class="fas fa-gamepad" style="color:#D81B60; margin-right:8px;"></i> खेलको अनुभव र सिकाई</p>
+
+            <p>हामीले कक्षा कोठामा शिक्षकको रोहवरमा यो खेल खेल्यौँ, जसको सक्षिप्त प्रतिवेदन र हाम्रो सिकाई अनुभव निम्न अनुसार छ:</p>
+
+            <p><strong>खेलको प्रक्रिया:</strong></p>
+            <ul>
+                <li>सबै विद्यार्थी गोलो घेरामा बस्यौँ <span class="ref">[८]</span>। एउटा सानो बल खेलाइयो। जसको हातमा बल जान्छ, उसले आफ्नो जीवनमा घटेको दुःख वा समस्या वा चिन्ताको विषय प्रस्तुत गर्नुपर्ने नियम थियो <span class="ref">[८]</span>।</li>
+                <li>बल हातमा लिने साथीले आफ्नो कुरा राख्दा अरू सबै साथीहरूले "सक्रिय श्रवण" (Active Listening) का साथ सुने <span class="ref">[८]</span>।</li>
+                <li>दोस्रो साथीले बल पाएपछि पहिलो साथीले राखेको दुःखमा आफू भएको भए कस्तो हुन्थ्यो र उसलाई कसरी सहयोग गर्न सकिन्थ्यो भनी "समानुभूतिपूर्ण विचार" प्रस्तुत गरे <span class="ref">[८]</span>।</li>
+            </ul>
+
+            <p><strong>हाम्रो अनुभव र सिकाई:</strong></p>
+            <ul>
+                <li>यो खेलले हामीलाई साथीहरूको केवल बाहिरी अनुहार मात्र होइन, उनीहरूको मनभित्र लुकेका पारिवारिक र व्यक्तिगत पीडाहरू बुझ्न सघायो <span class="ref">[८]</span>।</li>
+                <li>यस खेलबाट हामीले "सहानुभूति" र "समानुभूति" बीचको भिन्नता प्रयोगात्मक रूपमै बुझ्यौँ, र एकआपसमा भावनात्मक निकटता अझ प्रगाढ बन्यो <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्रमाणित समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> समानुभूति र सहानुभूतिबिचको भिन्नता उदाहरणसहित स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> समानुभूति र सहानुभूतिबिचको मुख्य भिन्नता निम्नलिखित छ <span class="ref">[८]</span>:</p>
+                <ul>
+                    <li><strong>सहानुभूति (Sympathy):</strong> यसमा अरूको दुःखप्रति बाहिरी रूपमा केवल दया र दुःख प्रकट गरिन्छ तर आफू पीडितको स्थानमा पुग्दैन <span class="ref">[८]</span>।<br><em>उदाहरण:</em> बाटोमा मागेर बसिरहेका दृष्टिविहीन व्यक्तिलाई देखेर "बिचरा! कति दुःख पाएका होलान्" भनी दयाको शब्द व्यक्त गर्नु वा केही पैसा फालेर हिँड्नु सहानुभूति हो <span class="ref">[८]</span>।</li>
+                    <li><strong>समानुभूति (Empathy):</strong> यसमा आफूलाई दृष्टिविहीन व्यक्तिको ठाउँमा उभ्याएर उसले व्यस्त सडक पार गर्दा भोग्नुपर्ने डर र कठिनाइ आफैँभित्र महसुस गरिन्छ र सहयोग गरिन्छ <span class="ref">[८]</span>।<br><em>उदाहरण:</em> दृष्टिविहीनको पीडा आफैँले महसुस गरी अघि बढेर उनको हात समाती सुरक्षित रूपमा सडक पार गराइदिनु समानुभूति (दयालु समानुभूति) हो <span class="ref">[८]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> समानुभूति सिपका फाइदाहरू उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> समानुभूति सिपका मुख्य फाइदाहरू निम्नलिखित छन् <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>सुमधुर सामाजिक सम्बन्ध:</strong> यसले व्यक्तिलाई मिलनसार बनाउने हुँदा साथीभाइ, छिमेकी र समाजमा सबैको आदर र विश्वास पाइन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>पारिवारिक सुख र सद्भाव:</strong> परिवारका सदस्यहरूबिच असमझदारी कम भई सुखी र सफल वैवाहिक एवं पारिवारिक जीवन कायम रहन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>कार्यस्थलमा उत्पादकत्व:</strong> कर्मचारी र सेवाग्राहीको भावना बुझ्न सकिने भएकाले कार्यालय वा संस्थाको वातावरण रचनात्मक र सफल बन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>सभ्य र समतामूलक समाज:</strong> यसले समाजमा पछाडि परेका वर्ग र समुदायको आवश्यकता बुझ्न सघाउने भएकाले समतामूलक समाज निर्माणमा सहयोग पुग्छ <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> संज्ञानात्मक समानुभूतिका दुईओटा उदाहरण दिनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> संज्ञानात्मक समानुभूति (Cognitive Empathy) का दुई उदाहरणहरू यस प्रकार छन् <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>शिक्षकको बुझाइ:</strong> कक्षाकोठामा सधैँ ध्यान दिएर पढ्ने विद्यार्थी एकाएक टोलाइरहेको वा गृहकार्य नगरेको देखेर शिक्षकले उसमाथि कुनै मानसिक तनाव वा घरायसी समस्या परेको छ भनी बौद्धिक रूपमा बुझ्नु <span class="ref">[८]</span>।</li>
+                    <li><strong>आमाको आकलन:</strong> विद्यालयबाट ढिलो फर्केको सन्तानको मलिन अनुहार र शारीरिक हाउभाउ हेरेर आमाले ऊ भोकाएको, थाकेको वा निराश छ भनी सहजै थाहा पाउनु <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> समानुभूतिका तत्त्वहरू उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अमेरिकी मनोवैज्ञानिक ड्यानियल गोलम्यानका अनुसार समानुभूतिका पाँचवटा मुख्य तत्त्वहरू निम्नलिखित छन् <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>अरूलाई बुझ्नु (Understanding Others)</strong> <span class="ref">[८]</span></li>
+                    <li><strong>अरूलाई विकसित पार्नु (Developing Others)</strong> <span class="ref">[८]</span></li>
+                    <li><strong>सेवाभाव राख्नु (Service Orientation)</strong> <span class="ref">[८]</span></li>
+                    <li><strong>विविधताको उपयोग गर्नु (Leveraging Diversity)</strong> <span class="ref">[८]</span></li>
+                    <li><strong>राजनीतिक/सामाजिक सचेतना (Political/Social Awareness)</strong> <span class="ref">[८]</span></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">(ङ)</span> संवेगात्मक समानुभूति र दयालु समानुभूतिबिचको भिन्नता उदाहरणसहित स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <div class="table-wrap" style="margin-top:6px;">
+                    <div class="table-caption">तुलना: संवेगात्मक समानुभूति र दयालु समानुभूति <span class="ref">[८]</span></div>
+                    <table>
+                        <thead>
+                            <tr><th>पक्ष</th><th>संवेगात्मक समानुभूति (Emotional Empathy)</th><th>दयालु समानुभूति (Compassionate Empathy)</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>मूल स्वरूप</strong></td>
+                                <td>यो <strong>मन र संवेगको तह</strong>मा हुने गहिरो अनुभूति हो, जसमा अरूको पीडा देखेर आफ्नो मन पग्लिन्छ <span class="ref">[८]</span>।</td>
+                                <td>यो <strong>व्यवहार र एक्सन (Action)</strong> को तहमा हुने सहयोग हो, जसमा पीडा महसुस भएपछि सहयोग गरिन्छ <span class="ref">[८]</span>।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>क्रियाशीलता</strong></td>
+                                <td>यसमा व्यक्ति अरूको दुःखमा सँगै दुःखी बन्छ वा आँसु बगाउँछ <span class="ref">[८]</span>।</td>
+                                <td>यसमा व्यक्ति दुःखी मात्र नभई दुःख हटाउने काममा सक्रिय रूपमा लाग्छ <span class="ref">[८]</span>।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>उदाहरण</strong></td>
+                                <td>चलचित्रमा आमा गुमाएको सानो बालक रोएको देखेर दर्शकको आँखाबाट पनि आँसु बग्नु <span class="ref">[८]</span>।</td>
+                                <td>सडकमा आमाबाबु गुमाएर रोइरहेको टुहुरो बालक भेटेपछि उसलाई बालआश्रम वा सुरक्षित स्थानमा लगेर पालनपोषणको व्यवस्था मिलाउनु <span class="ref">[८]</span>।</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">(च)</span> समानुभूति सिप विकास गर्ने कुनै पाँचओटा उपाय लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> दैनिक जीवनमा समानुभूति सिप विकास गर्ने पाँचवटा व्यावहारिक उपायहरू यस प्रकार छन् <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>अरूको स्थानमा आफूलाई राख्ने बानी बसाल्ने:</strong> कुनै पनि घटना वा असमझदारी हुँदा "म उसको ठाउँमा भएको भए के गर्थेँ?" भनी सोच्ने <span class="ref">[८]</span>।</li>
+                    <li><strong>सक्रिय श्रवण (Active Listening):</strong> अरूको कुरा काट्नुको सट्टा ध्यान दिएर सुन्ने र उनीहरूको भावनाको कदर गर्ने <span class="ref">[८]</span>।</li>
+                    <li><strong>विविधताको आदर र अन्तरक्रिया:</strong> फरक संस्कृति, भाषा वा क्षमता भएका मानिसहरूसँग कुराकानी गर्ने र उनीहरूको जीवनशैली बुझ्ने <span class="ref">[८]</span>।</li>
+                    <li><strong>पूर्वाग्रह त्याग्ने:</strong> जात, लिङ्ग, धर्म वा वर्गका आधारमा कसैलाई पनि पहिल्यै नराम्रो सोच्ने बानी (Stereotypes) त्याग्ने <span class="ref">[८]</span>।</li>
+                    <li><strong>साहित्य र जीवनीको अध्ययन:</strong> उत्कृष्ट कथा, उपन्यास वा समाजसुधारकहरूको जीवनी पढ्ने, जसले मानिसका विविध संवेग र सङ्घर्षलाई बुझ्न सघाउँछ <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">१.</span> समानुभूति सिप किन एक जीवनोपयोगी सिप हो?</div>
+            <div class="a"><strong>उत्तर:</strong> यसले मानिसलाई संवेदनावश अरूको दुःख बुझ्न, सामाजिक सम्बन्ध बलियो बनाउन र द्वन्द्व व्यवस्थापन गर्न सिकाउने हुनाले यो एक महत्त्वपूर्ण जीवनोपयोगी सिप हो <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">२.</span> समानुभूतिमा 'विविधताको उपयोग' भन्नाले के बुझिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> समाजमा रहेका फरक क्षमता वा वर्गका व्यक्तिहरूको भिन्नतालाई सम्मान गर्दै उनीहरूको क्षमतालाई रचनात्मक रूपमा समाजको विकासमा परिचालन गर्नु नै विविधताको उपयोग हो <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">३.</span> "अरूको दृष्टिकोणलाई स्वीकार गर्नु नै समानुभूति हो।" यो भनाइलाई पुष्टि गर्ने एक वाक्य लेख्नुहोस्।</div>
+            <div class="a"><strong>उत्तर:</strong> यो भनाइ सही छ, किनकि समानुभूतिले मानिसलाई आफ्नो अहङ्कार त्यागेर अरूको कोण वा दृष्टिकोणबाट वास्तविकता बुझ्न सघाउँछ <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">४.</span> 'जर्मन शब्द Einfühlung' को अर्थ के हो र यो कुन शब्दसँग सम्बन्धित छ?</div>
+            <div class="a"><strong>उत्तर:</strong> यसको अर्थ "आफैँलाई अरूको स्थानमा समाहित गर्नु" हो र यो <strong>समानुभूति (Empathy)</strong> शब्दसँग सम्बन्धित छ <span class="ref">[८]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">१.</span> समानुभूतिका प्रकारहरू कसरी क्रमशः एकअर्कासँग जोडिएका छन्? स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> समानुभूतिका तीन प्रकारहरू (संज्ञानात्मक, संवेगात्मक र दयालु) छुट्टाछुट्टै नभई मानव मस्तिष्क र मनको क्रमिक विकास प्रक्रियासँग जोडिएका छन् <span class="ref">[८]</span>।</p>
+
+                <p><strong>मुख्य बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>संज्ञानात्मक समानुभूति (मस्तिष्क):</strong> यो पहिलो चरण हो, जहाँ हाम्रो मस्तिष्कले अरूको हाउभाउ वा अवस्था हेरेर ऊ दुःखी छ भन्ने कुराको जानकारी प्राप्त गर्छ र विश्लेषण गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>संवेगात्मक समानुभूति (मन):</strong> दोस्रो चरणमा, सो बुझाइले हाम्रो मनलाई छुन्छ र हामी पीडितको दुःखलाई आफ्नै मनभित्र महसुस गर्छौँ <span class="ref">[८]</span>।</li>
+                    <li><strong>दयालु समानुभूति (हात/व्यवहार):</strong> अन्तिम चरणमा, मन पग्लिसकेपछि हामी पीडितको दुःख कम गर्नका लागि भौतिक वा व्यावहारिक सहयोगमा जुट्छौँ <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> यसरी, संज्ञानात्मक समानुभूतिले दुःखको <strong>ज्ञान</strong> दिन्छ, संवेगात्मकले दुःखको <strong>अनुभूति</strong> गराउँछ र दयालु समानुभूतिले सो दुःख निवारणका लागि <strong>समाधानको बाटो</strong> देखाउँछ <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">२.</span> समानुभूति र संवेगात्मक बुद्धिमत्ता (Emotional Intelligence) बीचको सम्बन्ध स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> समानुभूति संवेगात्मक बुद्धिमत्ताको एक अनिवार्य र सबैभन्दा महत्त्वपूर्ण खम्बा हो, जसले मानिसलाई सामाजिक रूपमा सफल र संवेदनशील बनाउँछ <span class="ref">[८]</span>।</p>
+
+                <p><strong>मुख्य बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>भावनाहरूको व्यवस्थापन:</strong> संवेगात्मक बुद्धिमत्ताले आफ्ना भावना बुझ्न सिकाउँछ भने समानुभूतिले अरूको भावना र मानसिक अवस्थालाई चिन्न सघाउँछ <span class="ref">[८]</span>।</li>
+                    <li><strong>गोलम्यानको सिद्धान्त:</strong> ड्यानियल गोलम्यानका अनुसार समानुभूति विनाको मानिस बौद्धिक रूपमा चलाख भए तापनि सामाजिक रूपमा असफल र क्रूर हुन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>सम्बन्ध र नेतृत्व:</strong> समानुभूतिपूर्ण दृष्टिकोणले मात्र एक नेता वा व्यवस्थापकले आफ्ना अनुयायीहरूको मन जितेर संस्थाको उत्पादकत्व बढाउन सक्छ <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> अतः, संवेगात्मक बुद्धिमत्ताको व्यावहारिक र सामाजिक रूप नै समानुभूति हो, जसले मानिसलाई मानव बनाइराख्न मद्दत गर्छ <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color5" style="border-left-color:#D81B60;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "समानुभूति सामाजिक सद्भाव, शान्ति र आपसी सहकार्यको बलियो आधार हो।" यस भनाइलाई समाजका विभिन्न आयाम र व्यावहारिक उदाहरणसहित पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> संसारका सबै मानिसहरूको सोच, क्षमता, पृष्ठभूमि र जीवन जिउने शैली एउटै हुँदैन। यस्तो विविधतायुक्त समाजमा घृणा, द्वन्द्व र स्वार्थलाई न्यूनीकरण गरी शान्ति र मेलमिलाप कायम राख्न समानुभूति (Empathy) ले मेरुदण्डको रूपमा काम गर्छ <span class="ref">[८]</span>। अरूको भावना र संवेगलाई आफ्नै सरह बुझ्नु र कदर गर्नु नै सामाजिक सद्भावको पहिलो सर्त हो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+
+                <ul>
+                    <li><strong>असमझदारी र द्वन्द्वको अन्त्य:</strong> समाजमा धेरैजसो विवादहरू "मेरो विचार मात्र सही हो" भन्ने हठ वा घमण्डका कारण हुन्छन्। समानुभूतिले मानिसलाई अरूको दृष्टिकोणबाट घटनालाई हेर्न सिकाउने भएकाले असमझदारीहरू छलफलकै माध्यमबाट शान्तिपूर्ण रूपमा टुङ्गिन्छन् <span class="ref">[८]</span>।</li>
+                    <li><strong>समतामूलक न्यायको स्थापना:</strong> समानुभूतिले समाजलाई समानता (Equality) भन्दा माथि उठेर समता (Equity) को बाटो देखाउँछ <span class="ref">[८]</span>। अपाङ्गता भएका, आर्थिक रूपमा विपन्न वा सामाजिक रूपमा पछाडि पारिएका वर्गहरूको वास्तविक पीडा महसुस गरेर उनीहरूलाई विशेष संरक्षण दिन समाज तयार हुन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>विपद्का समयमा सामाजिक एकता:</strong> जब समाजमा भूकम्प, महामारी वा बाढी जस्ता सङ्कटहरू आइपर्छन्, तब मानिसहरूमा हुने समानुभूतिले उनीहरूलाई स्वार्थभन्दा माथि उठ्न प्रेरित गर्छ। एक क्षेत्रको पीडामा सिङ्गो राष्ट्र एकजुट हुनु यसै सिपको देन हो <span class="ref">[८]</span>।</li>
+                    <li><strong>सहकार्य र सामूहिक कार्य (Teamwork):</strong> समाज वा संस्थामा कुनै पनि साझा विकासका काम गर्दा सबै सदस्यहरूको भावना र चासोलाई समेट्नुपर्छ। समानुभूतिले "म" भन्ने अहङ्कारलाई हटाएर "हामी" भन्ने सामूहिक भावना जागृत गराई सहकार्य प्रवर्द्धन गर्छ <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> हाम्रो समाजमा जब कसैको घरमा मृत्यु वा ठुलो दुर्घटना हुन्छ, तब छिमेकीहरूले आफ्ना सम्पूर्ण व्यक्तिगत काम र उत्सवहरू स्थगित गरेर पीडित परिवारको घरमा सहयोग गर्न पुग्छन् <span class="ref">[८]</span>। उनीहरूले पीडितको रुवाबासी र पीडालाई आफ्नै परिवारमा परेको विपत्ति सरह महसुस गर्छन् र काजक्रिया एवं व्यवस्थापनमा सक्रिय रूपमा सघाउँछन् <span class="ref">[८]</span>। यो 'संवेगात्मक' र 'दयालु' समानुभूतिको सबैभन्दा ठुलो व्यावहारिक उदाहरण हो, जसले नेपाली समाजलाई परापूर्वकालदेखि एकताबद्ध बनाएको छ <span class="ref">[८]</span>।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, समानुभूति विनाको मानव समाज केवल यन्त्रहरूको थुप्रो जस्तै संवेदनहीन र स्वार्थी बन्न पुग्छ। तसर्थ, समाजमा दिगो शान्ति, भ्रातृत्व, सद्भाव र आपसी सहकार्यको विकास गर्नका लागि विद्यालय तहदेखि नै विद्यार्थीहरूमा समानुभूति सिपको प्रवर्द्धन र व्यावहारिक अभ्यास गराउनु अपरिहार्य देखिन्छ <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#D81B60; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> समानुभूति केवल सैद्धान्तिक अवधारणा मात्र होइन, यो दैनिक जीवनको व्यावहारिक अभ्यास हो। अरूको पीडा बुझ्नु, महसुस गर्नु र सहयोग गर्नु नै साँचो समानुभूति हो। आफ्नो परिवार, विद्यालय र समाजमा यस सिपको अभ्यास गर्नुहोस् – यसले तपाईंलाई एक संवेदनशील, जिम्मेवार र सफल नागरिक बनाउनेछ।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ३, पाठ ४</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
