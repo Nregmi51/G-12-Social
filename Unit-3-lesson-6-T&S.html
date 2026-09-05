@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ ६ – संवेग व्यवस्थापन (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #fdf5ed;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fefcf7;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #D35400;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #E67E22;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #E67E22;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #f5ece3;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #d9c8b8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #E67E22;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #E67E22;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #E67E22;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #f0a050;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #E67E22 ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #E67E22;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(230, 126, 34, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #E67E22;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #D35400;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #E67E22;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #E67E22;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #D35400;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #E67E22;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #E67E22;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #E67E22;
+            background: #fcf3e8;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #d9c8b8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #d9c8b8;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #E67E22;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #f5ece3;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #d9c8b8;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #E67E22;
+        }
+
+        .qa-block.color1 { border-left-color: #E67E22; background: #fcf3e8; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #D35400;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #E67E22;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #D35400;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #E67E22;
+        }
+
+        .glossary-item strong {
+            color: #D35400;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #fcf3e8;
+            border-radius: 20px;
+            border: 2px dashed #f0a050;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #E67E22;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- ACTIVITY / REPORT BOX ----- */
+        .report-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9c8b8;
+            margin: 12px 0;
+        }
+
+        .report-box .report-title {
+            font-weight: 900;
+            color: #D35400;
+            font-size: 1.15rem;
+        }
+
+        .report-box p,
+        .report-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+        }
+
+        .report-box ul,
+        .report-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- CASE STUDY BOX ----- */
+        .case-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9c8b8;
+            margin: 12px 0;
+        }
+
+        .case-box .case-title {
+            font-weight: 900;
+            color: #D35400;
+            font-size: 1.1rem;
+        }
+
+        .case-box p,
+        .case-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .case-box ul,
+        .case-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- EDITORIAL BOX ----- */
+        .editorial-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #d9c8b8;
+            margin: 12px 0;
+        }
+
+        .editorial-box .editorial-title {
+            font-weight: 900;
+            color: #D35400;
+            font-size: 1.15rem;
+            text-align: center;
+        }
+
+        .editorial-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 8px;
+            line-height: 2;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #d9c8b8;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #D35400;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #E67E22;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(230, 126, 34, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #D35400;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(230, 126, 34, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #E67E22;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #d9c8b8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #E67E22;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .report-box p,
+            .report-box li {
+                font-size: 1.02rem;
+            }
+            .case-box p,
+            .case-box li {
+                font-size: 1.02rem;
+            }
+            .editorial-box p {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-heartbeat"></i>
+                    एकाइ ३, पाठ ६: संवेग व्यवस्थापन (Emotion Management)
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ३, पाठ ६
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> संवेग (Emotion)</strong>
+                <p>कुनै पनि बाह्य वा आन्तरिक उत्तेजना, परिस्थिति वा व्यक्तिका प्रति मानव मन, मस्तिष्क र शरीरले देखाउने तीव्र, चेतनायुक्त शारीरिक र मानसिक प्रतिक्रिया वा आवेग <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> संवेग व्यवस्थापन (Emotion Management)</strong>
+                <p>आफ्नो मनमा उत्पन्न हुने सकारात्मक र नकारात्मक संवेगहरूलाई चिनेर, तिनलाई नियन्त्रण गरी सामाजिक रूपमा स्वीकार्य, रचनात्मक र व्यावहारिक तरिकाले प्रकट गर्ने क्षमता <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> किशोरावस्था (Adolescence)</strong>
+                <p>मानव विकासको बाल्यावस्था र वयस्क अवस्थाबीचको संक्रमणकालीन, ऊर्जावान् र संवेगात्मक रूपमा संवेदनशील कालखण्ड (१० देखि १९ वर्षको उमेर समूह) <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> सकारात्मक सहपाठी सम्बन्ध (Positive Peer Relationship)</strong>
+                <p>आफ्ना साथीभाइहरूसँग पारस्परिक आदर, सहयोग, समानुभूति र स्वस्थ प्रतिस्पर्धामा आधारित सुमधुर सम्बन्ध, जसले कुलतबाट बचाउँछ <span class="ref">[७, १०]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> योगाभ्यास (Yoga Practice)</strong>
+                <p>मन, मस्तिष्क र शरीरलाई अनुशासित, स्वस्थ र एकीकृत बनाउने परम्परागत पूर्वीय चिन्तन पद्धति, जसमा विभिन्न शारीरिक आसन र श्वासप्रश्वासका नियमहरू समावेश हुन्छन् <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> ध्यान (Meditation)</strong>
+                <p>चञ्चल मनलाई नियन्त्रण गरी कुनै एक विचार वा बिन्दुमा केन्द्रित गराउने र मस्तिष्कलाई गहिरो विश्राम एवं सचेतना प्रदान गर्ने मानसिक अभ्यास <span class="ref">[७, १४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> प्राणायाम (Pranayama)</strong>
+                <p>श्वासप्रश्वासको गतिलाई नियन्त्रण र सन्तुलन गर्ने श्वासको व्यायाम, जसले शरीरमा अक्सिजन प्रवाह बढाएर तुरुन्तै आवेग शान्त बनाउन सघाउँछ <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> संवेगात्मक अस्थिरता (Emotional Instability)</strong>
+                <p>हर्मोनको तीव्र परिवर्तनका कारण किशोरावस्थामा छिट्टै उत्तेजित, भावुक, क्रुद्ध वा निराश हुने र संवेग क्षणभरमै परिवर्तन भइरहने अस्थिर मानसिक अवस्था <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> रचनात्मक रूपान्तरण (Sublimation)</strong>
+                <p>रिस, आक्रोश वा पीडा जस्ता नकारात्मक संवेगात्मक ऊर्जालाई दमित नगरी खेलकुद, संगीत, साहित्य, वा सिर्जनात्मक कला जस्ता सकारात्मक र समाज उपयोगी कार्यमा फर्काउने वैज्ञानिक प्रकृया <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#E67E22; margin-right:4px;"></i> तात्कालिक लाभ (Instant Gratification)</strong>
+                <p>क्षणिक सुख, रमाइलो वा आवेगको तृप्तिका लागि तत्काल गरिने व्यवहार (जस्तै रिस उठ्दा गाली गर्नु वा पढ्ने समयमा गेम खेल्नु), जसले दीर्घकालीन ठुलो क्षति पुर्‍याउन सक्छ <span class="ref">[७]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "संवेग व्यवस्थापन" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. संवेग र यसको बहुआयामिक स्वरूप -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. संवेग र यसको बहुआयामिक स्वरूप</div>
+
+        <div class="content-box orange-light">
+            <p>मानवीय जीवनमा सुख, खुसी, रिस, डर, चिन्ता र घृणा जस्ता मानसिक प्रतिक्रियाहरू स्वाभाविक रूपमा उत्पन्न हुन्छन्। यी प्रतिक्रियाहरूलाई नै <strong>संवेग (Emotion)</strong> भनिन्छ <span class="ref">[७]</span>। संवेग उत्पन्न हुँदा मानिसको शरीरमा विभिन्न रासायनिक र शारीरिक परिवर्तनहरू आउँछन्। जस्तै: रिस उठ्दा अनुहार रातो हुनु, मुटुको धड्कन बढ्नु, र शरीरमा विशेष रसायन उत्सर्जन हुनु <span class="ref">[७]</span>। संवेगलाई बलपूर्वक दबाउनु (Suppress) हानिकारक हुन्छ, यसलाई सचेत रूपमा बुझेर <strong>रचनात्मक व्यवस्थापन</strong> गर्नु नै बुद्धिमानी हो <span class="ref">[७]</span>।</p>
+        </div>
+
+        <!-- २. ५ मुख्य सिपहरु -->
+        <div class="sub-head"><i class="fas fa-list-check"></i> २. संवेग व्यवस्थापनका ५ मुख्य सिपहरु</div>
+
+        <div class="content-box blue-light">
+            <p>विश्व स्वास्थ्य सङ्गठन र सामाजिक अध्ययनको पाठ्यक्रम अनुसार संवेगलाई नियन्त्रण गर्न निम्न ५ सिपहरु आवश्यक पर्छन् <span class="ref">[७]</span>:</p>
+            <ul>
+                <li><strong>(क) संवेगात्मक सचेतना (Self-emotional Awareness):</strong> आफ्नो मनमा कस्तो संवेग (रिस, चिन्ता वा डर) उठिरहेको छ र त्यसले शरीरमा कस्तो प्रभाव पारेको छ भनी सुरुमै पहिचान गर्नु <span class="ref">[७]</span>।</li>
+                <li><strong>(ख) अरूको संवेग बुझ्ने सिप (Empathy in Emotion):</strong> आफ्नो व्यवहारप्रति अरूले देखाएको संवेगात्मक प्रतिक्रियालाई पूर्वाग्रह विना विवेकपूर्ण ढङ्गले बुझ्नु र समानुभूति राख्नु <span class="ref">[७, १०]</span>।</li>
+                <li><strong>(ग) शिष्ट र उपयुक्त शब्दावली प्रयोग (Scholastic Expression):</strong> आफ्नो असन्तुष्टि वा रिस व्यक्त गर्दा अश्लील वा उत्तेजक शब्दहरूको प्रयोग नगरी मर्यादित र शिष्ट भाषाको प्रयोग गर्नु <span class="ref">[७]</span>।</li>
+                <li><strong>(घ) आन्तरिक र बाह्य अभिव्यक्तिको व्यवस्थापन:</strong> मनभित्र पीडा, रिस वा उत्तेजना भए पनि बाह्य रूपमा शान्त र संयमित भएर प्रस्तुत हुन सक्ने क्षमता <span class="ref">[७]</span>।</li>
+                <li><strong>(ङ) संवेगको रचनात्मक रूपान्तरण:</strong> रिस वा आक्रोशको तीव्र ऊर्जालाई खेलकुद, मार्सल आर्ट, सिर्जनात्मक लेखन, वा संगीत जस्ता उत्पादनशील विधामा रूपान्तरण गर्नु <span class="ref">[७]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ३. प्रक्रिया -->
+        <div class="sub-head"><i class="fas fa-sitemap"></i> ३. संवेग व्यवस्थापनको प्रक्रिया</div>
+
+        <div class="content-box green-light">
+            <div class="mermaid-flow">
+                <div class="mermaid-step">बाह्य घटना वा परिस्थिति</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div class="mermaid-step" style="background:#fce4ec;">तीव्र संवेगको उत्पत्ति: रिस/डर/चिन्ता</div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; width:100%;">
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+                        <div class="mermaid-step" style="background:#ffcdd2;">अव्यवस्थित बाटो:<br>क्षणिक आवेग</div>
+                        <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="mermaid-step" style="background:#ffcdd2;">गालीगलौज, झगडा, पलायन</div>
+                        <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="mermaid-step" style="background:#ffab91;">दीर्घकालीन नोक्सान</div>
+                    </div>
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:4px;">
+                        <div class="mermaid-step" style="background:#c8e6c9;">व्यवस्थित बाटो:<br>जीवनोपयोगी सिप</div>
+                        <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="mermaid-step" style="background:#c8e6c9;">लामो श्वास, पानी, मौनता, योग/ध्यान</div>
+                        <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                        <div class="mermaid-step" style="background:#81d4fa;">दीर्घकालीन लाभ:<br>सन्तुलित स्वास्थ्य, सुमधुर सम्बन्ध</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ४. किशोरावस्था र चुनौतीहरू -->
+        <div class="sub-head"><i class="fas fa-users"></i> ४. किशोरावस्था र संवेगात्मक चुनौतीहरू</div>
+
+        <div class="content-box purple-light">
+            <p>१० देखि १९ वर्षसम्मको <strong>किशोरावस्था</strong> मानव जीवनको सबैभन्दा संक्रमणकालीन र जटिल उमेर हो <span class="ref">[७]</span>। यस अवस्थामा किशोरकिशोरीहरूमा निम्न संवेगात्मक विशेषता तथा चुनौतीहरू देखिन्छन् <span class="ref">[७]</span>:</p>
+            <ul>
+                <li><strong>हर्मोनल परिवर्तन:</strong> हर्मोनको तीव्र विकासले गर्दा संवेगहरू असाध्यै तीव्र र अस्थिर हुन्छन् <span class="ref">[७]</span>।</li>
+                <li><strong>सहपाठी दबाब (Peer Pressure):</strong> साथीहरूको संगत र दृष्टिकोणको प्रभाव बुबाआमाको भन्दा बढी हुन्छ, जसले गर्दा कहिलेकाहीँ कुलतमा फस्ने जोखिम रहन्छ <span class="ref">[७]</span>।</li>
+                <li><strong>अभिभावकसँग दूरी:</strong> स्वतन्त्रता र आफ्नै पहिचान खोज्ने क्रममा आमाबाबु र शिक्षकको सल्लाहलाई बन्धन ठान्ने र विद्रोह गर्ने प्रवृत्ति हुन्छ <span class="ref">[७]</span>।</li>
+                <li><strong>अपरीपक्व निर्णय शैली:</strong> तात्कालिक सानो फाइदा वा रमाइलोका लागि भविष्यको दीर्घकालीन फाइदालाई बेवास्ता गर्ने जोखिम उच्च हुन्छ <span class="ref">[७]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ५. योग र ध्यानको महत्त्व -->
+        <div class="sub-head"><i class="fas fa-spa"></i> ५. संवेग व्यवस्थापनका लागि योग र ध्यानको वैज्ञानिक महत्त्व</div>
+
+        <div class="content-box gold-light">
+            <p>प्राचीन पूर्वीय चिन्तन परम्पराबाट प्राप्त योग र ध्यान किशोरकिशोरीहरूको संवेग नियन्त्रणका लागि संसारकै सबैभन्दा प्रभावकारी र वैज्ञानिक उपाय मानिएको छ <span class="ref">[७]</span>:</p>
+            <ul>
+                <li><strong>चित्तवृत्ति निरोध (मनको नियन्त्रण):</strong> योगले चञ्चल मनलाई अनुशासित बनाउँछ र मस्तिष्कलाई शान्त पार्छ <span class="ref">[७]</span>।</li>
+                <li><strong>प्राणायामको भूमिका:</strong> अनुलोम-विलोम वा कपालभाति जस्ता प्राणायामले उत्तेजित भएको स्नायु प्रणालीलाई सामान्य बनाई तत्काल रिस र चिन्ता कम गर्छ <span class="ref">[७]</span>।</li>
+                <li><strong>एकाग्रता र स्मरणशक्ति सुधार:</strong> ध्यानको नियमित अभ्यासले पढाइमा एकाग्रता बढाउँछ र परीक्षाको डर हटाउँछ <span class="ref">[७, १४]</span>।</li>
+                <li><strong>हर्मोनल सन्तुलन:</strong> यसले रिस र तनाव उत्पन्न गराउने रसायनहरू कम गरी सकारात्मक संवेगहरू प्रवर्द्धन गर्छ <span class="ref">[७]</span>।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १: योगाभ्यास प्रतिवेदन -->
+        <div class="sub-head"><i class="fas fa-spa"></i> क्रियाकलाप १: दैनिक योगाभ्यास र प्राणायाम सम्बन्धी सिकाई प्रतिवेदन</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#E67E22; margin-right:8px;"></i> प्रश्न:</p>
+            <p>नियमित रूपमा दैनिक कम्तीमा पाँचओटा योगासन र कम्तीमा तीनओटा प्राणायामको अभ्यास गर्नुहोस्। यसका लागि विज्ञ व्यक्तिहरूको सहयोग लिन वा सामाजिक सञ्जालबाट भिडियो डाउनलोड गरी त्यसअनुसार अभ्यास गर्न सकिन्छ। यसले सुरुको पहिलो वा दोस्रो हप्तामा पारेको प्रभाव वा असरको अनुभव सुनाउनुहोस् र कक्षामा छलफल गर्नुहोस् <span class="ref">[७]</span>।</p>
+        </div>
+
+        <div class="report-box">
+            <p class="report-title"><i class="fas fa-pen-fancy" style="color:#E67E22; margin-right:8px;"></i> योगाभ्यास तथा प्राणायाम सिकाई अनुभव प्रतिवेदन</p>
+
+            <p><strong>१. उद्देश्य:</strong> दैनिक रूपमा योगासन र प्राणायामको अभ्यास गरी यसले मानसिक शान्ति, संवेग नियन्त्रण र पढाइको एकाग्रतामा पारेको प्रभावको स्व-अध्ययन गर्नु <span class="ref">[७]</span>।</p>
+
+            <p><strong>२. अभ्यास गरिएका ५ योगासनहरू र ३ प्राणायामहरू <span class="ref">[७]</span>:</strong></p>
+            <ul>
+                <li><strong>योगासनहरू:</strong> भुजङ्गासन, मर्कटासन, धनुरासन, वज्रासन, र मयुरासन <span class="ref">[७]</span>।</li>
+                <li><strong>प्राणायामहरू:</strong> अनुलोम-विलोम, भस्त्रिका, र कपालभाति <span class="ref">[७]</span>।</li>
+            </ul>
+
+            <p><strong>३. अभ्यास विधि:</strong> विद्यालयको अतिरिक्त कक्षा र युट्युब च्यानलका प्रमाणित योग प्रशिक्षकहरूको मार्गदर्शनमा हरेक बिहान ५:३० देखि ६:०० बजेसम्म (३० मिनेट) नियमित अभ्यास गरियो।</p>
+
+            <p><strong>४. दुई हप्ताको व्यावहारिक अनुभव र सकारात्मक प्रभावहरू <span class="ref">[७]</span>:</strong></p>
+            <ul>
+                <li><strong>पहिलो हप्ताको अनुभव:</strong> सुरुका २-३ दिन शरीरका मांसपेशीहरू अलि दुखेको महसुस भयो र ध्यान गर्दा मन चञ्चल भई एकाग्र हुन कठिन भयो। तर चौथो दिनदेखि वज्रासन र प्राणायाम गर्दा शरीर हल्का र फुर्तिलो हुन थाल्यो।</li>
+                <li><strong>दोस्रो हप्ताको अनुभव (सकारात्मक स्वरूपान्तरण):</strong>
+                    <ul>
+                        <li><strong>संवेग नियन्त्रण:</strong> रिस उठ्ने वा झनक्क रिसाउने बानीमा उल्लेख्य कमी आयो। रिस उठेको बेला स्वतः लामो श्वास फेर्ने चेतना जागृत भयो <span class="ref">[७]</span>।</li>
+                        <li><strong>शैक्षिक सुधार:</strong> बिहानको पढाइमा हिजोआज एकाग्रता बढेको छ। पढेको कुरा सम्झन सजिलो भएको र परीक्षाको अनावश्यक डर र चिन्ता घटेको छ <span class="ref">[७]</span>।</li>
+                        <li><strong>शारीरिक स्फूर्ति:</strong> अनिद्राको समस्या हटेको छ र दिनभर शरीरमा सकारात्मक ऊर्जा कायम रहन्छ <span class="ref">[७]</span>।</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><strong>५. निष्कर्ष:</strong> योग र ध्यान केवल व्यायाम मात्र नभएर किशोरकिशोरीहरूको संवेगात्मक सन्तुलन र शैक्षिक विकासका लागि एक अचूक कडी हो <span class="ref">[७]</span>।</p>
+        </div>
+
+        <!-- क्रियाकलाप २: घटना अध्ययन -->
+        <div class="sub-head"><i class="fas fa-search"></i> क्रियाकलाप २: घटना अध्ययन र समीक्षा</div>
+
+        <!-- घटना १ -->
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#E67E22; margin-right:8px;"></i> घटना १: रामविलास र पूर्वाको विवादको समीक्षा</p>
+            <p>रामविलास र पूर्वाबिचको विवादको घटना अध्ययन गरी समीक्षा गर्नुहोस् <span class="ref">[७]</span>।</p>
+        </div>
+
+        <div class="case-box">
+            <ul>
+                <li><strong>पूर्वाको व्यवहारको समीक्षा:</strong> पूर्वाले एउटा सानो कुरामा आफ्नो रिस नियन्त्रण गर्न नसकी मिल्ने साथी रामविलासलाई ठुलो स्वरमा गाली गरिन् र पछि गल्ती महसुस गर्दागर्दै पनि आफ्नो 'मिथ्या अहंकार' (False Ego) का कारण माफी मागिनन्। यो संवेग व्यवस्थापनको गम्भीर अभावको उदाहरण हो <span class="ref">[७]</span>।</li>
+                <li><strong>रामविलासको व्यवहारको समीक्षा:</strong> रामविलासले पूर्वाको रिसलाई व्यक्तिगत रूपमा लिएर चित्त दुखाए र समस्याको सामना गर्नुको सट्टा विद्यालय आउनै छाडे, जुन पलायनवादी व्यवहार हो <span class="ref">[७]</span>।</li>
+                <li><strong>उचित समाधान <span class="ref">[७, १०]</span>:</strong>
+                    <ol>
+                        <li>पूर्वाले आफ्नो अहंकार त्यागी तुरुन्तै रामविलासको घरमा गएर वा फोन गरेर आफूबाट गल्ती भएको स्वीकार गर्दै क्षमायाचना गर्नुपर्छ <span class="ref">[७]</span>।</li>
+                        <li>रामविलासले पूर्वाको रिस क्षणिक आवेग थियो भनी बुझेर (समानुभूति राखी) उसलाई माफी दिनुपर्छ र तत्काल विद्यालय फर्किनुपर्छ <span class="ref">[७, १०]</span>।</li>
+                        <li>विद्यालयको बाल क्लब वा शिक्षकले दुवैबीच मध्यस्थता गराई पुनः मित्रता स्थापित गराउनुपर्छ <span class="ref">[७, १२]</span>।</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+
+        <!-- घटना २ -->
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#E67E22; margin-right:8px;"></i> घटना २: माधुरी, सबनम र करिश्माको असमझदारीको समीक्षा</p>
+            <p>माधुरी र सबनमको घटना अध्ययन गरी समीक्षा गर्नुहोस् <span class="ref">[७]</span>।</p>
+        </div>
+
+        <div class="case-box">
+            <ul>
+                <li><strong>करिश्माको व्यवहारको समीक्षा:</strong> करिश्माले आफ्नो निहित स्वार्थ वा बानीका कारण सबनम नआएको मौका छोपी माधुरीलाई सबनम्का बारेमा झुटा र नकारात्मक कुराहरू लगाई दुई साथीबीच असमझदारी सिर्जना गराइन्, जुन अनैतिक कार्य हो।</li>
+                <li><strong>माधुरीको व्यवहारको समीक्षा:</strong> माधुरीले करिश्माको कुरा सुनेपछि समालोचनात्मक चिन्तन (Critical Thinking) को प्रयोग गरिनन् <span class="ref">[७]</span>। उनले सबनमसँग कुरा बुझ्ने प्रयास नगरी सोझै बोल्न छोडिन्, जसले गर्दा उनी संवेगात्मक भ्रम र चिन्ताको सिकार भइन् <span class="ref">[७]</span>।</li>
+                <li><strong>सम्बन्ध र मानसिक स्वास्थ्यमा परेको असर:</strong> माधुरी र सबनम दुवै एकअर्कासँग बोल्न नपाउँदा मानसिक रूपमा चिन्तित भए, पढाइमा ध्यान जान छाड्यो र उनीहरू विद्यालयमा एक्लो महसुस गर्न थाले <span class="ref">[७]</span>।</li>
+                <li><strong>उचित समाधान <span class="ref">[७, १०]</span>:</strong>
+                    <ol>
+                        <li>माधुरीले सबनमसँग एकान्तमा भेटेर "करिश्माले मलाई तिम्रो बारेमा यस्तो भनेकी थिई, के यो साँचो हो?" भनी खुला र प्रत्यक्ष कुराकानी (Open Communication) गर्नुपर्छ।</li>
+                        <li>सबनमले वास्तविक सत्य बताएपछि माधुरीले आफ्नो हतारमा निर्णय लिने बानीप्रति पश्चात्ताप गर्दै सबनमसँग सम्बन्ध सुधार गर्नुपर्छ।</li>
+                        <li>दुवैले भविष्यमा तेस्रो व्यक्तिको कुरा सुनेर आफ्नो निर्णय नलिन समालोचनात्मक सोचको अभ्यास गर्ने प्रतिबद्धता जनाउनुपर्छ <span class="ref">[७]</span>।</li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण र प्रमाणित समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> संवेग भन्नाले के बुझिन्छ?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> कुनै पनि बाह्य वस्तु, व्यक्ति वा विशेष परिस्थितिप्रति मानव मस्तिष्कको स्नायु प्रणाली र शरीरले देखाउने तीव्र, सचेत र तत्काल उत्पन्न हुने मानसिक तथा शारीरिक प्रतिक्रिया वा आवेग नै <strong>संवेग (Emotion)</strong> हो। जस्तै: खुसी, रिस, डर, चिन्ता, घृणा आदि <span class="ref">[७]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> संवेग व्यवस्थापन भनेको के हो?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> आफ्नो मनमा उठ्ने तीव्र संवेगहरूप्रति सचेत रहँदै तिनलाई रचनात्मक रूपमा सामाजिक मापदण्ड अनुकूल हुने गरी नियन्त्रण, परिचालन वा अभिव्यक्त गर्ने व्यावहारिक कला नै <strong>संवेग व्यवस्थापन (Emotion Management)</strong> हो <span class="ref">[७]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> किशोरावस्थामा किन सहपाठी समूह महत्त्वपूर्ण हुन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> किशोरावस्थामा निम्न कारणहरूले गर्दा सहपाठी समूह (Peer Group) अत्यधिक महत्त्वपूर्ण हुन्छ <span class="ref">[७]</span>:</p>
+                <ol>
+                    <li>यस उमेरमा किशोरकिशोरीहरू परिवारभन्दा आफ्ना साथीहरूसँग बढी सुरक्षित र स्वतन्त्र महसुस गर्छन् <span class="ref">[७]</span>।</li>
+                    <li>उनीहरू आफ्ना उमेरगत परिवर्तन, संवेगात्मक उतारचढाव र कौतुहलताहरू साथीहरूसँग विनासंकोच साटासाट गर्न सक्छन् <span class="ref">[७]</span>।</li>
+                    <li>सकारात्मक सहपाठी सम्बन्धले किशोरकिशोरीलाई कुलत र डिप्रेसनबाट बचाई सिर्जनात्मक कार्यमा अघि बढ्न मद्दत गर्दछ <span class="ref">[७]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> योगाभ्यासमा के के पर्छन्?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> योगाभ्यासमा मुख्य रूपमा देहायका पक्षहरू पर्दछन् <span class="ref">[७]</span>:</p>
+                <ol>
+                    <li><strong>योगासनहरू (Physical Postures):</strong> जस्तै भुजङ्गासन, वज्रासन, मर्कटासन, धनुरासन, पद्मासन आदि <span class="ref">[७]</span>।</li>
+                    <li><strong>प्राणायामहरू (Breathing Exercises):</strong> जस्तै अनुलोम-विलोम, भस्त्रिका, कपालभाति, भ्रामरी आदि <span class="ref">[७]</span>।</li>
+                    <li><strong>ध्यान र आराम गर्ने तरिकाहरू (Meditation & Relaxation):</strong> जस्तै शवासन <span class="ref">[७]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">(ङ)</span> संवेग व्यवस्थापन गर्ने कुनै पाँचओटा उपाय लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> दैनिक जीवनमा संवेग व्यवस्थापन गर्ने पाँचवटा व्यावहारिक उपायहरू यस प्रकार छन् <span class="ref">[७]</span>:</p>
+                <ol>
+                    <li><strong>योगासन र ध्यान:</strong> दैनिक बिहान योग र ध्यान गरी मन र मस्तिष्कलाई शान्त राख्ने <span class="ref">[७]</span>।</li>
+                    <li><strong>लामो श्वास र पानी पिउने:</strong> रिस वा डर लागेको बेला तत्कालै लामो श्वास फेर्ने र चिसो पानी पिउने <span class="ref">[७]</span>।</li>
+                    <li><strong>परिस्थिति वा स्थान परिवर्तन:</strong> आवेग उत्पन्न भएको अवस्थामा तत्कालै सो स्थानबाट केही समयका लागि टाढा जाने <span class="ref">[७]</span>।</li>
+                    <li><strong>नाइँ भन्न सक्ने क्षमता विकास:</strong> नराम्रो वा कुलततर्फ डोर्‍याउने साथीहरूको दबाबलाई स्पष्ट रूपमा 'नाइँ' भन्ने <span class="ref">[७]</span>।</li>
+                    <li><strong>रचनात्मक कार्यमा व्यस्त रहने:</strong> फुर्सदको समयमा संगीत, चित्रकला, खेलकुद वा सिर्जनात्मक लेखनमा संलग्न रहने <span class="ref">[७]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">(च)</span> 'किशोरावस्थामा संवेग नियन्त्रणका लागि योगाभ्यास' शीर्षकमा एक सम्पादकीय तयार पार्नुहोस्।</div>
+            <div class="a">
+                <div class="editorial-box">
+                    <p class="editorial-title"><i class="fas fa-pen-fancy" style="color:#E67E22; margin-right:8px;"></i> किशोरावस्थामा संवेग नियन्त्रणका लागि योगाभ्यासको अपरिहार्यता</p>
+
+                    <p>मानव जीवनको सबैभन्दा ऊर्जावान्, गतिशील तर सँगसँगै संवेगात्मक रूपमा संवेदनशील कालखण्ड किशोरावस्था हो <span class="ref">[७]</span>। यस उमेरमा किशोरकिशोरीहरूमा तीव्र शारीरिक र मानसिक परिवर्तनहरू त हुन्छन् नै, हर्मोनको प्रभावका कारण उनीहरूमा तीव्र संवेगात्मक अस्थिरता पनि देखा पर्छ <span class="ref">[७]</span>। आजको प्रविधिको अत्यधिक लत, परीक्षाको तीव्र प्रतिस्पर्धा, र सामाजिक सञ्जालको नकारात्मक प्रतिस्पर्धाले नेपाली किशोरकिशोरीहरू डिप्रेसन, एन्जाइटी र अनपेक्षित कुलतको गम्भीर जोखिममा परिरहेका छन्। यस्तो जटिल समयमा उनीहरूको अनियन्त्रित संवेगलाई सही दिशा दिन र सकारात्मक व्यक्तित्व निर्माण गर्न 'योगाभ्यास' र ध्यान सबैभन्दा वैज्ञानिक र भरपर्दो अचूक अस्त्र साबित भएको छ <span class="ref">[७]</span>।</p>
+
+                    <p>पूर्वीय दर्शन र आधुनिक चिकित्सा विज्ञान दुवैले योग र प्राणायामको संवेगात्मक महत्त्वलाई स्वीकार गरेका छन् <span class="ref">[७]</span>। जब किशोरकिशोरीहरूले नियमित रूपमा अनुलोम-विलोम वा कपालभाति जस्ता प्राणायाम गर्छन्, उनीहरूको शरीरमा अक्सिजनको प्रवाह अधिकतम हुन्छ, जसले मुटुको धड्कन सन्तुलित बनाई तत्काल रिस र चिन्ता कम गराउँछ <span class="ref">[७]</span>। भुजङ्गासन वा वज्रासन जस्ता योगासनले शारीरिक मांसपेसीको तनाव हटाई शरीरलाई स्फूर्ति दिन्छ भने ध्यानले एकाग्रता र स्मरणशक्ति तीखो बनाउँछ <span class="ref">[७, १४]</span>। योगले बालबालिकामा 'आत्मबोध' (Self-awareness) को विकास गराई सही र गलत छुट्याउन सक्ने विवेक प्रदान गर्छ <span class="ref">[७, १४]</span>।</p>
+
+                    <p>विडम्बनाको कुरा, हाम्रो आधुनिक शिक्षा प्रणाली अझै पनि केवल घोक्ने र प्रमाणपत्र सङ्कलन गर्ने परम्परागत दायराभित्रै सीमित छ। विद्यालयहरूमा खेलकुद र बौद्धिक विषयमा जोड दिइए तापनि संवेगात्मक स्वास्थ्य प्रवर्द्धन गर्ने योग र ध्यानलाई अझै पनि अनिवार्य व्यावहारिक अभ्यासको रूपमा समेट्न सकिएको छैन। फलतः, जानेका प्रश्नहरूको उत्तर पनि परीक्षाको डरले परीक्षा हलमा बिर्सने विद्यार्थीहरूको सङ्ख्या ठुलो छ।</p>
+
+                    <p>तसर्थ, अब ढिलो नगरी राष्ट्रिय पाठ्यक्रम प्रारूपले विद्यालय तहमा जीवनोपयोगी सिप र योगाभ्यासलाई केवल सैद्धान्तिक पानामा मात्र सीमित नराखी प्रत्येक विद्यालयको दैनिक प्रार्थना सभा (Assembly) वा साप्ताहिक कार्यतालिकामा अनिवार्य र प्रयोगात्मक रूपमा लागू गर्नु पर्दछ। अभिभावकहरूले पनि घरमा अनुशासित र योग-मैत्री वातावरण सिर्जना गरिदिनु पर्छ। किशोरकिशोरीहरूको संवेगात्मक ऊर्जालाई दमन गरेर होइन, योग र ध्यानको माध्यमबाट सिर्जनात्मक र राष्ट्र निर्माणको कार्यमा रूपान्तरण गर्नु नै आजको युगको टड्कारो आवश्यकता हो <span class="ref">[७]</span>।</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">१.</span> विश्व स्वास्थ्य सङ्गठनका अनुसार किशोरावस्थाको परिभाषा के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> विश्व स्वास्थ्य सङ्गठन (WHO) का अनुसार १० वर्षदेखि १९ वर्षसम्मको उमेर समूहलाई संक्रमणकालीन र संवेदनशील <strong>किशोरावस्था</strong> भनिन्छ <span class="ref">[७]</span>।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">२.</span> संवेग दमन (Emotion Suppression) को एउटा मुख्य शारीरिक वा मानसिक असर के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> संवेग दमन गर्दा मनमा मानसिक कुण्ठा पैदा भई कालान्तरमा <strong>डिप्रेसन, उच्च रक्तचाप र मुटुको रोग</strong> जस्ता गम्भीर असरहरू देखा पर्छन् <span class="ref">[७]</span>।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">३.</span> "नाइँ" भन्न सक्ने क्षमता (Refusal Skill) किशोरावस्थामा किन आवश्यक छ?</div>
+            <div class="a"><strong>उत्तर:</strong> साथीहरूको गलत वा नकारात्मक दबाब (Peer pressure) मा परेर धूम्रपान वा लागूऔषध जस्ता कुलतमा फस्नबाट जोगिनका लागि यो क्षमता आवश्यक छ <span class="ref">[७]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">१.</span> "तत्कालको सानो फाइदाका लागि दीर्घकालीन फाइदा गुमाउनु हुँदैन।" संवेग व्यवस्थापनको सन्दर्भमा यस कथनको औचित्य पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> मानव मन प्रायः तत्कालको क्षणिक सुख वा आवेगको तृप्तितर्फ आकर्षित हुन्छ, जसलाई संवेग व्यवस्थापनको भाषामा तात्कालिक लाभ (Instant Gratification) भनिन्छ <span class="ref">[७]</span>। तर यो आचरण दूरदर्शी हुँदैन।</p>
+
+                <p><strong>मुख्य बुँदाहरू:</strong></p>
+                <ul>
+                    <li><strong>रिसको आवेग र सम्बन्ध भंग:</strong> विवादको समयमा तत्कालै ठुलो स्वरमा गाली गर्दा वा कुटपिट गर्दा क्षणिक रूपमा आफ्नो घमण्ड सन्तुष्ट हुन्छ, तर यसले वर्षौँको अमूल्य मित्रता र पारिवारिक सम्बन्ध क्षणभरमै तोडिदिन्छ <span class="ref">[७]</span>।</li>
+                    <li><strong>अल्छीपन र भविष्य बर्बाद:</strong> पढ्ने समयमा मोबाइलमा गेम खेल्दा वा सामाजिक सञ्जाल चलाउँदा तत्कालै रमाइलो महसुस हुन्छ, तर यसले परीक्षा बिगार्छ र भविष्यको उज्ज्वल करियर ध्वस्त बनाउँछ <span class="ref">[७]</span>।</li>
+                    <li><strong>संवेगात्मक परिपक्वता:</strong> विवेकशील र संवेगात्मक रूपमा परिपक्व मानिसले क्षणिक संवेगलाई नियन्त्रण गर्छ र आफ्नो समय तथा ऊर्जालाई भविष्यको दिगो र दीर्घकालीन लाभमा लगानी गर्छ <span class="ref">[७]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> अतः, क्षणिक आवेगको दास बन्नु भन्दा त्यसलाई नियन्त्रण गरी सधैँ दीर्घकालीन हित र सफलताको मार्ग रोज्नु नै साँचो संवेग व्यवस्थापन हो <span class="ref">[७]</span>।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color3" style="border-left-color:#E67E22;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "संवेगलाई दबाउनु होइन, पहिचान गरी रचनात्मक रूपमा व्यवस्थापन गर्नुपर्छ।" यस भनाइलाई यसका वैज्ञानिक कारण र व्यावहारिक उदाहरणसहित सविस्तार व्याख्या गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> संवेग (Emotion) मानव अस्तित्वको एक सुन्दर र स्वाभाविक संवेगात्मक रङ हो, जसलाई रोक्न वा नष्ट गर्न सकिँदैन <span class="ref">[७]</span>। रिस, आक्रोश, चिन्ता वा दुःख जस्ता संवेगहरू उत्पन्न हुनु प्राकृतिक कुरा हो <span class="ref">[७]</span>। तर धेरै मानिसहरू संवेग व्यवस्थापन भन्नाले संवेगलाई जबर्जस्ती मनभित्रै दबाएर राख्नु (Suppress) भन्ने बुझ्छन्, जुन मानसिक र शारीरिक स्वास्थ्यका लागि अत्यन्त घातक हुन्छ। संवेगलाई दबाउनुको सट्टा त्यसको ऊर्जालाई पहिचान गरी रचनात्मक रूपमा सही मार्गमा परिचालन गर्नु नै स्वस्थ जीवनको कडी हो <span class="ref">[७]</span>।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+
+                <ul>
+                    <li><strong>संवेग ऊर्जा हो (Law of Emotional Energy):</strong> भौतिक विज्ञानको नियम जस्तै संवेग पनि एक प्रकारको मानसिक ऊर्जा हो, जसलाई नष्ट गर्न मिल्दैन, केवल रूपान्तरण मात्र गर्न सकिन्छ <span class="ref">[७]</span>। जब संवेगलाई दबाएर राखिन्छ, त्यो भित्रभित्रै कुण्ठामा परिणत भई एन्जाइटी, डिप्रेसन, अल्सर, उच्च रक्तचाप र हृदयघात जस्ता गम्भीर मानसिक तथा शारीरिक रोगको रूपमा विस्फोट हुन्छ <span class="ref">[७]</span>।</li>
+                    <li><strong>सचेत पहिचानको भूमिका (Emotional Awareness):</strong> संवेग व्यवस्थापनको पहिलो चरण संवेगात्मक सचेतना हो <span class="ref">[७]</span>। रिस वा डर उत्पन्न हुनासाथ लामो श्वास फेरेर, पानी पिएर वा ध्यान गरेर शरीर र मनलाई शान्त पार्नु पर्छ <span class="ref">[७]</span>। यसले तात्कालिक आवेगमा गलत निर्णय लिनबाट बचाउँछ <span class="ref">[७]</span>।</li>
+                    <li><strong>रचनात्मक रूपान्तरण (Sublimation):</strong> आक्रोश र आक्रामक संवेग भएका व्यक्तिहरूलाई खेलकुद (जस्तै: मार्सल आर्ट, फुटबल) मा संलग्न गराउँदा उनीहरूको आक्रामकता राष्ट्रकै शान बन्ने खेल प्रतिभामा बदलिन्छ <span class="ref">[७]</span>। त्यसै गरी, मनको गहिरो पीडा, आँसु वा दुःखलाई गीत, संगीत, कला, वा सिर्जनात्मक लेखनमा ढाल्दा कालजयी साहित्यिक र कलात्मक रचनाहरू जन्मिन्छन् <span class="ref">[७]</span>।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> विश्वप्रसिद्ध संगीतकार लुडविग भान बीथोभन (Ludwig van Beethoven) ले आफ्नो जीवनको उत्तरार्धमा बहिरोपन र चरम एकाकीपनको गहिरो मानसिक पीडा र निराशा भोग्नुपरेको थियो। उनले आफ्नो त्यस नकारात्मक संवेगलाई दबाएनन्, बरु त्यस पीडाको तीव्र ऊर्जालाई पियानोको धुन र शास्त्रीय संगीत सिर्जनामा रचनात्मक रूपमा रूपान्तरण गरे। परिणाम स्वरूप, उनले इतिहासकै सबैभन्दा कालजयी र संसारलाई मन्त्रमुग्ध पार्ने धुनहरू सिर्जना गरे, जुन संवेगको सफल रचनात्मक व्यवस्थापनको विश्वप्रसिद्ध व्यावहारिक उदाहरण हो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, संवेगहरू जंगली घोडा जस्तै हुन्, जसलाई थुनेर वा दबाएर राख्दा तिनीहरूले पिँजडा नै भत्काइदिन सक्छन्। तर यदि तिनीहरूको लगाम समातेर सहि दिशा र गति दिन सकियो भने तिनीहरूले मानिसलाई सफलताको शिखरमा पुर्‍याउँछन् <span class="ref">[७]</span>। तसर्थ, किशोरकिशोरीहरूलाई संवेग दबाउन होइन, बरु योग, ध्यान र सिर्जनात्मक माध्यमबाट संवेगात्मक ऊर्जालाई रचनात्मक र राष्ट्र निर्माणको कार्यमा परिचालन गर्न सिकाउनु नै आजको विद्यालय शिक्षाको वास्तविक ध्येय हुनुपर्दछ <span class="ref">[७]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#E67E22; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> संवेगहरू मानव जीवनका स्वाभाविक रंग हुन् – तिनलाई नदबाउनुहोस्, नियन्त्रण गर्नुहोस्। रिस, डर र चिन्ता आउँदा लामो श्वास फेर्नुहोस्, पानी पिउनुहोस्, र योग वा ध्यानको अभ्यास गर्नुहोस्। याद राख्नुहोस् – क्षणिक आवेगमा लिइएको निर्णयले दीर्घकालीन क्षति पुर्‍याउँछ, तर संयम र सिर्जनात्मक रूपान्तरणले जीवनलाई सफल र सन्तुलित बनाउँछ।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ३, पाठ ६</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
