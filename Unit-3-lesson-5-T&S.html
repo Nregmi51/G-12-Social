@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ३, पाठ ५ – आत्मबोध (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #eaf5f2;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #004D40;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #00897B;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #00897B;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e0ece8;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8d0c8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #00897B;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #00897B;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #00897B;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #4DB6AC;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #00897B ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #00897B;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(0, 137, 123, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #00897B;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #004D40;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #00897B;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #00897B;
+            font-size: 1.1rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #004D40;
+            margin: 18px 0 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sub-head-sm i {
+            color: #00897B;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #00897B;
+            font-weight: 500;
+            line-height: 2;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.19rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #00897B;
+            background: #e8f5f2;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1a3a5c;
+            background: #e8f0f8;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8d0c8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.05rem;
+            min-width: 280px;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8d0c8;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            background: #00897B;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.08rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.05rem;
+        }
+
+        .table-caption {
+            background: #e0ece8;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.08rem;
+            color: #0b2b4a;
+            border-bottom: 2px solid #b8d0c8;
+        }
+
+        /* ----- Q&A BLOCKS - Multi-color ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #00897B;
+        }
+
+        .qa-block.color1 { border-left-color: #00897B; background: #e8f5f2; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #004D40;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.22rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #00897B;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #1e2a3a;
+            font-weight: 500;
+            font-size: 1.19rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .qa-block .a strong {
+            color: #0b2b4a;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #004D40;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #00897B;
+        }
+
+        .glossary-item strong {
+            color: #004D40;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #e8f5f2;
+            border-radius: 20px;
+            border: 2px dashed #4DB6AC;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #0b2b4a;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #00897B;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        @media (max-width: 600px) {
+            .mermaid-step {
+                font-size: 0.85rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+            .mermaid-arrow {
+                transform: rotate(0deg);
+            }
+        }
+
+        /* ----- ASSESSMENT FORM BOX ----- */
+        .form-box {
+            background: #faf8f5;
+            border-radius: 16px;
+            padding: 20px 26px;
+            border: 2px solid #b8d0c8;
+            margin: 12px 0;
+        }
+
+        .form-box .form-title {
+            font-weight: 900;
+            color: #004D40;
+            font-size: 1.15rem;
+        }
+
+        .form-box .form-section {
+            font-weight: 700;
+            color: #00897B;
+            margin-top: 10px;
+        }
+
+        .form-box p,
+        .form-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 4px;
+        }
+
+        .form-box ul,
+        .form-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- ACTIVITY BOX ----- */
+        .activity-box {
+            background: #f5f0e8;
+            border-radius: 16px;
+            padding: 18px 22px;
+            border: 2px solid #b8d0c8;
+            margin: 12px 0;
+        }
+
+        .activity-box .act-title {
+            font-weight: 900;
+            color: #004D40;
+            font-size: 1.1rem;
+        }
+
+        .activity-box p,
+        .activity-box li {
+            font-weight: 500;
+            font-size: 1.12rem;
+        }
+
+        .activity-box ul,
+        .activity-box ol {
+            padding-left: 24px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #00897B;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 137, 123, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #004D40;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(0, 137, 123, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #00897B;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #0b2b4a;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8d0c8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #00897B;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.05rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.9rem;
+            }
+            th,
+            td {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .activity-box p,
+            .activity-box li {
+                font-size: 1.02rem;
+            }
+            .form-box p,
+            .form-box li {
+                font-size: 1.02rem;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-user-circle"></i>
+                    एकाइ ३, पाठ ५: आत्मबोध (Self-awareness)
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> परीक्षा विशेष क्याप्सुल</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ३, पाठ ५
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पारिभाषिक शब्दावली</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठको अवधारणात्मक नोट</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> क्रियाकलाप समाधान</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> अभ्यास समाधान</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> परीक्षा उपयोगी Q&A</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== १. पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-book-open"></i>
+            १. विषयगत पारिभाषिक शब्दावली
+            <span class="mark-badge blue">Glossary</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> आत्मबोध (Self-awareness)</strong>
+                <p>आफैँमाथि सचेत भएर ध्यान दिने तथा आफ्ना विचार, संवेग, भावना र कार्यहरू आन्तरिक मूल्य, आदर्श र मान्यताहरूसँग कत्तिको मेल खान्छन् भनी तटस्थ मूल्याङ्कन गर्ने मनोवैज्ञानिक क्षमता <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> आन्तरिक आत्मबोध (Internal Self-awareness)</strong>
+                <p>आफ्ना रुचि, इच्छा, आकांक्षा, शक्ति, कमजोरी, मूल्यमान्यता र संवेगहरू कस्ता छन् र तिनले वरपरको वातावरण वा समाजसँग कसरी सन्तुलन राख्छन् भनी आफैँले स्पष्टसँग बुझ्ने प्रक्रिया <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> बाह्य आत्मबोध (External Self-awareness)</strong>
+                <p>अरू मानिसहरूले मलाई कस्तो रूपमा हेर्छन्, मेरो व्यवहार र व्यक्तित्वलाई कसरी बुझ्छन् र उनीहरूको नजरमा मेरो मूल्यांकन कस्तो छ भनी थाहा पाउने क्षमता <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> आत्ममूल्याङ्कन (Self-evaluation)</strong>
+                <p>आफ्ना व्यक्तिगत कार्यहरू, व्यवहार र तिनको परिणामलाई व्यवस्थित रूपले अवलोकन, विश्लेषण र लेखाजोखा गरी आफैँलाई रचनात्मक अङ्क वा मूल्य प्रदान गर्ने लिखित वा मौखिक प्रक्रिया <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> मनोमापन परीक्षण (Psychometric Testing)</strong>
+                <p>मानिसको संज्ञानात्मक क्षमता, मानसिक लचकता, तार्किक स्तर र व्यक्तित्वका प्रवृत्तिहरू मापन गर्न प्रयोग गरिने वैज्ञानिक र साङ्ख्यिकीय साधन वा प्रश्नपत्र विधि <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> ३६० डिग्री पृष्ठपोषण विधि (360-degree Feedback Method)</strong>
+                <p>कार्यस्थल वा संगठनमा गरिने एक विस्तृत मूल्याङ्कन पद्धति, जसमा व्यक्तिलाई आफ्ना वरिष्ठ हाकिम, सहकर्मी, कनिष्ठ कर्मचारी, र सेवाग्राही (३६० डिग्री कोण) सबैबाट बहुआयामिक पृष्ठपोषण प्राप्त हुन्छ <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> मूल्य र मान्यता (Values and Beliefs)</strong>
+                <p>व्यक्तिको चरित्र, नैतिकता र जीवन शैलीलाई डोर्‍याउने आधारभूत विचार वा सिद्धान्तहरू <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> संवेगात्मक नियमन (Emotional Regulation)</strong>
+                <p>मनमा उत्पन्न हुने तीव्र संवेगहरू (जस्तै: रिस, भय, ईर्ष्या) लाई दबाउनुको सट्टा तिनको पहिचान गरी रचनात्मक रूपमा नियन्त्रण गर्ने र व्यक्त गर्ने कला <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> आत्मसम्मान (Self-esteem)</strong>
+                <p>आफ्नो योग्यता, मर्यादा र मानवअधिकारको कदर गर्दै आफैँप्रति गर्व र सकारात्मक आत्मविश्वास कायम राख्ने मानसिक प्रवृत्ति <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#00897B; margin-right:4px;"></i> मनोसामाजिक सुस्वास्थ्य (Psychosocial Well-being)</strong>
+                <p>व्यक्तिको मानसिक स्थिति र सामाजिक सम्बन्ध दुवै सन्तुलित, सुखमय र स्वस्थ रहने आदर्श अवस्था।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== २. पाठको अवधारणात्मक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-lightbulb"></i>
+            २. "आत्मबोध" — विस्तृत प्राज्ञिक नोट
+            <span class="mark-badge gold">Core Notes</span>
+        </div>
+
+        <!-- १. अर्थ र सैद्धान्तिक परिचय -->
+        <div class="sub-head"><i class="fas fa-gem"></i> १. आत्मबोधको अर्थ र सैद्धान्तिक परिचय</div>
+
+        <div class="content-box teal-light">
+            <p>मानव जीवनमा 'म को हुँ? मेरो सामर्थ्य र कमजोरी के छ?' भनी थाहा पाउनु नै सफलताको पहिलो कदम हो। विश्व स्वास्थ्य सङ्गठन (WHO) का अनुसार <strong>आत्मबोध (Self-awareness)</strong> एक आधारभूत जीवनोपयोगी सिप हो, जसभित्र <em>तनाव व्यवस्थापन, संवेगात्मक नियमन, सकारात्मक सोच र आत्मसम्मान</em> जस्ता चारवटा सहायक सिपहरु अन्तरनिहित हुन्छन् <span class="ref">[८]</span>। आत्मबोध भएका व्यक्तिहरूले आफ्ना भावनाहरूलाई छिट्टै पहिचान गर्छन् र तिनीहरूलाई आफ्नो नियन्त्रणमा राखेर विवेकपूर्ण निर्णय लिन सक्छन् <span class="ref">[८]</span>।</p>
+        </div>
+
+        <!-- २. प्रकारहरू -->
+        <div class="sub-head"><i class="fas fa-layer-group"></i> २. आत्मबोधका प्रकारहरू</div>
+
+        <div class="content-box blue-light">
+            <p>प्रख्यात अनुसन्धानकर्ता <strong>तासा युरिच (Tasha Eurich)</strong> र उनको टोलीको अध्ययन अनुसार आत्मबोध मुख्य रूपमा दुई प्रकारका हुन्छन् <span class="ref">[८]</span>:</p>
+
+            <div class="mermaid-flow">
+                <div class="mermaid-step">आत्मबोध<br><span style="font-weight:400;">Self-awareness</span></div>
+                <div class="mermaid-arrow"><i class="fas fa-arrow-down"></i></div>
+                <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:20px; width:100%;">
+                    <div class="mermaid-step" style="min-width:140px;">आन्तरिक आत्मबोध<br><span style="font-weight:400;">आफ्ना मूल्य, आकांक्षा र संवेगको बुझाइ</span></div>
+                    <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="mermaid-step" style="min-width:140px;">बाह्य आत्मबोध<br><span style="font-weight:400;">अरूको दृष्टिकोण र मूल्यांकनको बुझाइ</span></div>
+                </div>
+            </div>
+
+            <ul>
+                <li><strong>(क) आन्तरिक आत्मबोध (Internal Self-awareness):</strong> यो आफ्नो भित्री मनको ऐना हो। यसले हाम्रा आन्तरिक मूल्य, चाहना र संवेगहरू समाज र वातावरणसँग कत्तिको सुहाउँदा छन् भनी मूल्याङ्कन गर्छ <span class="ref">[८]</span>। यसको विकासले व्यक्तिलाई आत्मसन्तुष्टि र दृढता प्रदान गर्दछ।</li>
+                <li><strong>(ख) बाह्य आत्मबोध (External Self-awareness):</strong> यो सामाजिक सम्बन्धको जग हो। यसले अरू मानिसहरूले हाम्रो व्यवहार र संवेगलाई कसरी बुझिरहेका छन् भन्ने कुराको ज्ञान दिन्छ <span class="ref">[८]</span>। बाह्य आत्मबोध उच्च भएका व्यक्तिहरूमा <strong>समानुभूति (Empathy)</strong> बढी हुन्छ र उनीहरूले सहकर्मी र समाजसँग उत्कृष्ट सम्बन्ध बनाउन सक्छन् <span class="ref">[८]</span>।</li>
+            </ul>
+
+            <div class="table-wrap">
+                <div class="table-caption">आन्तरिक र बाह्य आत्मबोधको तुलनात्मक विश्लेषण <span class="ref">[८]</span></div>
+                <table>
+                    <thead>
+                        <tr><th>तुलनाको आधार</th><th>आन्तरिक आत्मबोध (Internal Self-awareness)</th><th>बाह्य आत्मबोध (External Self-awareness)</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>केन्द्रविन्दु</strong></td>
+                            <td>व्यक्तिको आफ्नै दृष्टिकोण र भित्री भावना <span class="ref">[८]</span>।</td>
+                            <td>अरू मानिसहरूको दृष्टिकोण र मूल्यांकन <span class="ref">[८]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>मुख्य प्रश्न</strong></td>
+                            <td>"मेरो वास्तविक मूल्य, शक्ति र कमजोरी के हो?"</td>
+                            <td>"अरू मानिसले मलाई कस्तो रूपमा हेरिरहेका छन्?" <span class="ref">[८]</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>फाइदा</strong></td>
+                            <td>व्यक्तिगत सन्तुष्टि, संवेग नियन्त्रण र आत्मविश्वास <span class="ref">[८]</span>।</td>
+                            <td>सुमधुर सामाजिक सम्बन्ध, समानुभूति र कुशल नेतृत्व <span class="ref">[८]</span>।</td>
+                        </tr>
+                        <tr>
+                            <td><strong>अभ्यासको साधन</strong></td>
+                            <td>योग, ध्यान, डायरी लेखन र आत्मसमीक्षा <span class="ref">[८]</span>।</td>
+                            <td>साथीभाइ, अभिभावक र ३६० डिग्री पृष्ठपोषण विधि <span class="ref">[८]</span>।</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ३. महत्त्व -->
+        <div class="sub-head"><i class="fas fa-check-circle"></i> ३. आत्मबोधको महत्त्व</div>
+
+        <div class="content-box green-light">
+            <p>व्यक्तिगत तथा सामाजिक जीवनमा सफलता प्राप्त गर्न र कुशल नेतृत्व विकास गर्न आत्मबोध अपरिहार्य छ। यसका मुख्य फाइदाहरू निम्नलिखित छन् <span class="ref">[८]</span>:</p>
+            <ul>
+                <li><strong>सीप र कमजोरीको पहिचान:</strong> आफूले के राम्रो गर्न सकिन्छ र के सुधार गर्नुपर्छ भनी पत्ता लगाई सीप सुधार गर्ने मौका मिल्छ <span class="ref">[८]</span>।</li>
+                <li><strong>आदर्श जीवनशैली:</strong> आफ्ना विचार र कार्यहरूलाई आफ्नो आदर्श र मूल्यमान्यतासँग मिलाएर खुसी जीवन जिउन सकिन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>कुशल नेतृत्व क्षमता:</strong> अनुयायी, सहकर्मी र कर्मचारीहरूको विचार र पृष्ठपोषण बुझेर असल नेतृत्व बन्न सघाउँछ <span class="ref">[८]</span>।</li>
+                <li><strong>कार्यक्षमता र संवेग व्यवस्थापन:</strong> कार्यक्षमतामा वृद्धि हुन्छ, सामाजिक सम्बन्ध बलियो बन्छ र संवेग नियन्त्रण गर्न सजिलो हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>करियर चयन:</strong> आफ्ना वास्तविक इच्छा, शक्ति र आकांक्षा महसुस गरी सोही अनुसारको उपयुक्त पेसा वा व्यवसाय छनोट गर्न मद्दत पुग्छ <span class="ref">[८]</span>।</li>
+                <li><strong>तनाव मुक्ति:</strong> आफ्ना संवेगहरू पहिचान गरी आफूलाई कम मन पर्ने कामहरू कम गर्दै मानसिक तनाव र बोझ घटाउन सकिन्छ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ४. तरिकाहरू र अभ्यास -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> ४. आत्मबोधका तरिकाहरू र अभ्यास</div>
+
+        <div class="content-box purple-light">
+            <p>दैनिक जीवनमा आत्मबोधको स्तर बढाउन निम्न पाँच तरिकाहरू प्रयोग गर्न सकिन्छ <span class="ref">[८]</span>:</p>
+            <ul>
+                <li><strong>(क) योग तथा ध्यान गर्ने:</strong> योग र ध्यानको समयमा मन शान्त हुन्छ, जसले गर्दा मानिसले आफ्नो लक्ष्य र क्रियाकलापहरू उचित रूपमा मूल्याङ्कन गर्ने मौका पाउँछ। यसले एकाग्रता बढाउँछ <span class="ref">[८]</span>।</li>
+                <li><strong>(ख) डायरी लेख्ने (Journaling):</strong> आफ्ना मुख्य योजना, प्राथमिकता र दैनिक कामहरू डायरीमा लेखेर समीक्षा गर्दा सबल र कमजोर पक्षहरू सजिलै पत्ता लाग्छन् <span class="ref">[८]</span>।</li>
+                <li><strong>(ग) मनोमापन परीक्षण गर्ने (Psychometric Testing):</strong> मानिसको संज्ञानात्मक र तार्किक स्तर नाप्नका लागि विशेषज्ञद्वारा मनोमापन परीक्षण गराई आफ्ना सीप र सुधारका पाटाहरू पत्ता लगाउन सकिन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(घ) विश्वासिलो साथीहरूसँग सोध्ने:</strong> आफ्ना कमिकमजोरीहरू आफैँलाई पत्ता लगाउन कठिन हुने हुँदा विश्वासिला साथीहरू वा गुरुहरूबाट निष्पक्ष राय र पृष्ठपोषण लिनुपर्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(ङ) कार्यस्थलमा पृष्ठपोषण लिने:</strong> अनौपचारिक रूपमा परिवार वा सहकर्मीबाट र औपचारिक रूपमा <strong>३६० डिग्री पृष्ठपोषण विधि</strong> प्रयोग गरी आफ्नो मूल्याङ्कन गराउनुपर्छ <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <!-- ५. आत्ममूल्याङ्कन -->
+        <div class="sub-head"><i class="fas fa-clipboard-list"></i> ५. आत्ममूल्याङ्कनको अर्थ र महत्त्व</div>
+
+        <div class="content-box gold-light">
+            <ul>
+                <li><strong>अर्थ:</strong> आफ्ना व्यक्तिगत काम, व्यवहार, निर्णय र तिनको परिणामलाई व्यवस्थित रूपले अवलोकन र विश्लेषण गरी मूल्य वा स्तर निर्धारण गर्ने प्रक्रिया नै <strong>आत्ममूल्याङ्कन</strong> हो <span class="ref">[८]</span>।</li>
+                <li><strong>महत्त्व <span class="ref">[८]</span>:</strong>
+                    <ul>
+                        <li>यसले मानिसलाई आफ्ना गल्तीहरू स्वीकार गर्ने र सुधार गर्ने अवसर प्रदान गर्दछ <span class="ref">[८]</span>।</li>
+                        <li>यसले आत्मअनुगमन (Self-monitoring) र उच्च मनोबलका साथ काम गर्ने शक्ति दिन्छ <span class="ref">[८]</span>।</li>
+                        <li>कार्यक्षमता सुधार गर्न र सहकर्मीहरूबीच एकआपसबाट सिक्ने संस्कृतिको विकास गर्न मद्दत गर्दछ <span class="ref">[८]</span>।</li>
+                        <li>समस्याहरूको सामना गर्दा मानसिक लचकता (Flexibility) र आत्मप्रेरणा जगाउँछ <span class="ref">[८]</span>।</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ६. व्यावहारिक तरिकाहरू -->
+        <div class="sub-head"><i class="fas fa-tasks"></i> ६. आत्ममूल्याङ्कनका व्यावहारिक तरिकाहरू र प्रयोग</div>
+
+        <div class="content-box orange-light">
+            <p>पाठ्यपुस्तक अनुसार दैनिक जीवनमा आत्ममूल्याङ्कनलाई प्रभावकारी रूपमा लागू गर्न निम्न व्यवहारहरू अवलम्बन गर्नुपर्छ <span class="ref">[८]</span>:</p>
+            <ol>
+                <li>कुनै पनि काम गर्दा आफ्नो पेसागत र व्यक्तिगत विकासबारे निरन्तर सकारात्मक चिन्तन गरिरहने <span class="ref">[८]</span>।</li>
+                <li>सहकर्मी, शिक्षक वा अभिभावकसँग आफ्नो व्यवहारबारे कुराकानी गर्ने र उनीहरूका आलोचना वा टिप्पणीहरू शान्तपूर्वक सुन्ने, प्रतिवाद नगर्ने <span class="ref">[८]</span>।</li>
+                <li>लिखित रूपमा आत्ममूल्याङ्कन गर्नका लागि फाराम वा चेकलिस्टहरू तयार पारी नियमित भर्ने <span class="ref">[८]</span>।</li>
+                <li>आफ्ना कमजोरीहरूप्रति कठोर नभई सत्य पत्ता लगाउन इमानदार प्रयत्न गर्ने <span class="ref">[८]</span>।</li>
+                <li>कुनै काममा असफलता वा धक्का लाग्दा त्यसलाई सिकाइको रूपमा लिने तर चिच्याएर वा हार मानेर नबस्ने <span class="ref">[८]</span>।</li>
+                <li>कमजोरीहरू अरूले भनिदिनुभन्दा पहिले आफैँले पत्ता लगाई सुधार गर्न थाल्ने <span class="ref">[८]</span>।</li>
+                <li>आफूलाई नजानेको काम गर्न कठिन भएमा वा असफलता हात लाग्न सक्ने भएमा तुरुन्त व्यावसायिक सहयोग वा तालिम माग गर्ने <span class="ref">[८]</span>।</li>
+                <li>आफ्ना हरेक साना-ठुला सफलता र उपलब्धिहरूको व्यवस्थित अभिलेख राख्ने <span class="ref">[८]</span>।</li>
+                <li>शिक्षक, अभिभावक वा गुरुहरूसँग कुनै दृष्टिकोणमा भिन्नता भएमा समयमै सौहार्दपूर्ण छलफल गरी स्पष्ट हुने <span class="ref">[८]</span>।</li>
+            </ol>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ३. क्रियाकलापहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-hands"></i>
+            ३. क्रियाकलापहरूको पूर्ण समाधान
+            <span class="mark-badge green">Activities</span>
+        </div>
+
+        <!-- क्रियाकलाप १: आत्मव्यवहार मूल्याङ्कन फाराम -->
+        <div class="sub-head"><i class="fas fa-clipboard-check"></i> क्रियाकलाप १: आत्मव्यवहार मूल्याङ्कन र समीक्षा फाराम</div>
+
+        <div class="activity-box">
+            <p class="act-title"><i class="fas fa-question-circle" style="color:#00897B; margin-right:8px;"></i> प्रश्न:</p>
+            <p>पाठ्यपुस्तकको पाना नं. ६६ मा दिइएको जस्तै फाराम तयार पारी आफ्नो व्यवहारसँग सम्बन्धित काम भर्नुहोस् र साथीसँग साटासाट गर्नुहोस् <span class="ref">[८]</span>।</p>
+        </div>
+
+        <div class="form-box">
+            <p class="form-title"><i class="fas fa-pen-fancy" style="color:#00897B; margin-right:8px;"></i> आत्मव्यवहार मूल्याङ्कन फाराम</p>
+            <p><em>कक्षा १२ का एक सचेत विद्यार्थीका रूपमा मैले मेरो दैनिक आचरण र व्यवहारलाई गहिरोसँग समीक्षा गरी तयार पारेको आत्मव्यवहार मूल्याङ्कन फाराम निम्न अनुसार छ:</em></p>
+
+            <p class="form-section">१. म यी काममा सबल छु (My Strengths):</p>
+            <ul>
+                <li><strong>(अ) रचनात्मक लेखन तथा नेपाली साहित्य सिर्जना गर्न:</strong> म फुर्सदको समयमा उत्कृष्ट कविता, निबन्ध र दैनिक डायरी लेख्ने गर्दछु <span class="ref">[८]</span>।</li>
+                <li><strong>(आ) गणितीय र तार्किक समस्याहरू समाधान गर्न:</strong> मलाई जटिल साङ्ख्यिकीय विश्लेषण र तार्किक खेलहरू खेल्न मन पर्छ र छिट्टै समाधान निकाल्छु <span class="ref">[८]</span>।</li>
+                <li><strong>(इ) समूहगत कार्यमा नेतृत्व लिन र प्रभावकारी सञ्चार गर्न:</strong> विद्यालयका परियोजना कार्यहरूमा समूहको नेतृत्व गर्दै सबैलाई मिलाएर अघि बढाउने क्षमता ममा छ <span class="ref">[८]</span>।</li>
+            </ul>
+
+            <p class="form-section">२. यी काम गर्न मैले अझ बढी मिहिनेत गर्नुपर्छ (Areas for Improvement):</p>
+            <ul>
+                <li><strong>(अ) समय व्यवस्थापन र दैनिक योजना कार्यान्वयनमा:</strong> म योजना त राम्रो बनाउँछु तर कहिलेकाहीँ मोबाइल वा डिजिटल साधनको बढी प्रयोगले गर्दा समयमै काम सक्न गाह्रो हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(आ) सार्वजनिक भाषण (Stage Presentation) मा:</strong> धेरै मानिसहरूको अगाडि उभिएर बोल्दा म अलि बढी आत्तिने गर्दछु, यसमा सुधार ल्याउनुपर्नेछ।</li>
+                <li><strong>(इ) संवेगात्मक नियन्त्रण र धैर्यता कायम राख्न:</strong> कामको अत्यधिक चाप हुँदा वा सोचेजस्तो नतिजा नआउँदा म छिट्टै हतोत्साहित हुने गर्दछु <span class="ref">[८]</span>।</li>
+            </ul>
+
+            <p class="form-section">३. मेरो विद्यालय जीवनका सबैभन्दा तनावपूर्ण दिनहरू यी हुन् (Most Stressful Days):</p>
+            <ul>
+                <li><strong>(अ) परीक्षाको अघिल्लो हप्ता:</strong> पाठ्यक्रम धेरै हुने र समयमै पुनरावलोकन गर्न नसक्दा परीक्षाको अघिल्लो रात अत्यधिक मानसिक दबाब महसुस हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(आ) परियोजना कार्य बुझाउने अन्तिम मिति:</strong> धेरै विषयका प्रयोगात्मक कार्यहरू एकै पटक बुझाउनुपर्ने हुँदा व्यवस्थापन गर्न कठिन हुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(इ) सहपाठीहरूसँग असमझदारी भएको दिन:</strong> कक्षाकोठामा साथीहरूसँग कुनै विषयमा वादविवाद वा मनमुटाव हुँदा सिङ्गो दिन तनावपूर्ण बन्दछ <span class="ref">[८]</span>।</li>
+            </ul>
+
+            <p class="form-section">४. यी काममा म अरूको सहयोग चाहन्छु (Where I Need Help):</p>
+            <ul>
+                <li><strong>(अ) भविष्यको करियर छनोट (Career Guidance):</strong> कक्षा १२ पछि उच्च शिक्षाका लागि कुन विषय पढ्दा मेरो रुचि र क्षमतासँग मेल खान्छ भनी सल्लाह लिन <span class="ref">[८]</span>।</li>
+                <li><strong>(आ) प्रविधिमैत्री सीपहरू सिक्न:</strong> कम्प्युटर कोडिङ, तथ्याङ्क प्रशोधनमा एक्सेलको उच्च प्रयोग र वेब डिजाइन जस्ता डिजिटल सीपहरू सिक्न <span class="ref">[८]</span>।</li>
+                <li><strong>(इ) वक्तृत्वकला सुधार गर्न:</strong> भीडको अगाडि निर्धक्कसँग आफ्ना कुराहरू राख्ने तरिका र सीप सिक्न।</li>
+            </ul>
+
+            <p class="form-section">५. सहयोग आवश्यक भएका बेला यी व्यक्तिबाट सहयोग माग्न मलाई सहज लाग्छ (Trusted People for Support):</p>
+            <ul>
+                <li><strong>(अ) मेरो कक्षा शिक्षक तथा परामर्शदाता गुरुहरू:</strong> उहाँहरूले शैक्षिक र व्यक्तिगत समस्याहरूलाई बुझेर सधैँ सकारात्मक मार्गनिर्देशन गर्नुहुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(आ) मेरा आमाबुबा र घरका अभिभावकहरू:</strong> जस्तोसुकै कठिन परिस्थिति वा असफलतामा पनि उहाँहरू मेरो बलियो समर्थन र मनोबल बढाउने मुख्य आधार हुनुहुन्छ <span class="ref">[८]</span>।</li>
+                <li><strong>(इ) मेरो मिल्ने साथी:</strong> जसलाई म मेरा मनका भावना र कमजोरीहरू विना कुनै हिचकिचाहट सुनाउन सक्छु र व्यावहारिक सल्लाह पाउँछु <span class="ref">[८]</span>।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ४. अभ्यास समाधान ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-check-double"></i>
+            ४. अभ्यासको पूर्ण समाधान
+            <span class="mark-badge purple">Exercise</span>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">(क)</span> आत्मबोध भनेको के हो?</div>
+            <div class="a">
+                <strong>उत्तर:</strong> आफ्नो ध्यान आफैँतिर केन्द्रित गरी आफ्ना विचार, भावना, संवेग, रुचि, आकांक्षा, शक्ति र कमिकमजोरीहरू आफ्ना आन्तरिक मूल्य र मान्यताहरूसँग कत्तिको मेल खान्छन् भनी तटस्थ र स्पष्ट रूपमा मूल्याङ्कन गर्ने मानसिक तथा मनोवैज्ञानिक क्षमता नै <strong>आत्मबोध (Self-awareness)</strong> हो <span class="ref">[८]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">(ख)</span> आत्मबोधको महत्त्व दुई बुँदामा लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> आत्मबोधका दुईवटा मुख्य महत्त्वहरू निम्नलिखित छन् <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li><strong>सीप सुधार र सबलतातर्फ अग्रसरता:</strong> यसले मानिसलाई आफ्नो वास्तविक सामर्थ्य र कमजोरीहरू चिन्न सघाउँछ, जसले गर्दा आफ्ना कमजोरी सच्याउँदै सीप तिखार्न मद्दत पुग्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>सन्तुलित संवेग र तनाव व्यवस्थापन:</strong> आफ्ना संवेगहरू कुन समयमा कसरी उत्पन्न हुन्छन् भन्ने कुरा थाहा पाउने भएकाले रिस, डर र चिन्तालाई नियन्त्रण गरी मानसिक तनाव कम गर्न सहज हुन्छ <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">(ग)</span> आत्ममूल्याङ्कन भन्नाले के बुझिन्छ, लेख्नुहोस्।</div>
+            <div class="a">
+                <strong>उत्तर:</strong> व्यक्तिले आफ्ना दैनिक कार्यहरू, व्यवहार, निर्णय, आचरण र तिनबाट प्राप्त हुने परिणामहरूलाई व्यवस्थित रूपमा अवलोकन, विश्लेषण र लेखाजोखा गरी आफैँलाई रचनात्मक पृष्ठपोषण दिने र सुधारको मार्ग तय गर्ने स्व-लेखाजोखा प्रक्रिया नै <strong>आत्ममूल्याङ्कन (Self-evaluation)</strong> हो <span class="ref">[८]</span>।
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">(घ)</span> आत्मबोधका तरिकाहरूबारे छोटकरीमा लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> आत्मबोध (स्वसचेतना) विकास गर्न अपनाइने मुख्य तरिकाहरू यस प्रकार छन् <span class="ref">[८]</span>:</p>
+                <ul>
+                    <li><strong>योग तथा ध्यान:</strong> बिहान नियमित योग र ध्यान गर्दा मन र मस्तिष्क एकाग्र हुन्छ, जसले गर्दा आफ्नो उद्देश्य र व्यवहार समीक्षा गर्न सहज हुन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>डायरी लेखन:</strong> दैनिक क्रियाकलाप र योजनाहरू डायरीमा लेखेर समीक्षा गर्दा आफ्ना सबल र निर्बल पक्षहरू सजिलै चिन्न सकिन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>मनोमापन परीक्षण:</strong> विशेषज्ञहरूको सहयोगमा संज्ञानात्मक र तार्किक परीक्षण गराई आफ्नो बौद्धिक र मानसिक स्तरको आत्मबोध गर्न सकिन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>विश्वासिलो साथीहरूसँग पृष्ठपोषण:</strong> आफ्ना कमजोरी आफैँलाई थाहा नहुन सक्ने हुनाले विश्वासिला साथी वा गुरुहरूसँग सोधेर आफ्ना बानीहरू सुधार्ने प्रयास गर्नुपर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>कार्यस्थलमा ३६० डिग्री पृष्ठपोषण:</strong> सहकर्मी, वरिष्ठ हाकिम र सेवाग्राही सबैबाट सामूहिक राय वा पृष्ठपोषण लिएर आफ्नो व्यावसायिक मूल्यांकन गर्नु आवश्यक छ <span class="ref">[८]</span>।</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">(ङ)</span> आत्ममूल्याङ्कनको महत्त्व कुनै पाँच बुँदामा लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानव जीवन र पेसागत विकासमा आत्ममूल्याङ्कनको महत्त्व निम्न पाँच बुँदामा स्पष्ट पारिएको छ <span class="ref">[८]</span>:</p>
+                <ol>
+                    <li>यसले व्यक्तिलाई आफ्नो गल्ती वा कमिकमजोरी अरूले औँल्याउनु अघि नै आफैँले पत्ता लगाएर सुधार गर्न सक्षम बनाउँछ <span class="ref">[८]</span>।</li>
+                    <li>यसले कार्यक्षमतामा निरन्तर सुधार ल्याउन र आफ्नो मनोबल उच्च राख्न सहयोग पुर्‍याउँछ <span class="ref">[८]</span>।</li>
+                    <li>यसले कठिन परिस्थितिमा मानसिक लचकता र समस्याको सामना गर्ने दृढ इच्छाशक्ति पैदा गर्छ <span class="ref">[८]</span>।</li>
+                    <li>यसले सहकर्मी र शिक्षकहरूबाट रचनात्मक कुराहरू सिक्ने बानीको विकास गराउँछ <span class="ref">[८]</span>।</li>
+                    <li>यसले व्यक्तिलाई आफ्ना कार्यहरू लक्ष्य र आदर्शसँग मेल खाएका छन् कि छैनन् भनी दिशा निर्देश गर्दछ <span class="ref">[८]</span>।</li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">(च)</span> आत्ममूल्याङ्कनले व्यक्तित्व विकासमा कसरी सहयोग पुर्‍याउँछ?</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> आत्ममूल्याङ्कन व्यक्तित्व विकासको मेरुदण्ड हो। यसले मानिसलाई अन्धकारबाट उज्यालोतिर लैजाने काम गर्छ <span class="ref">[८]</span>।</p>
+
+                <p><strong>व्यक्तित्व विकासमा पुर्‍याउने सहयोगहरू <span class="ref">[८]</span>:</strong></p>
+                <ul>
+                    <li><strong>व्यवहारमा सुधार:</strong> मानिसले आफ्नो बोली, व्यवहार र संवेगहरूको निरन्तर समीक्षा गर्ने हुँदा समाजमा सबैलाई मन पर्ने शिष्ट, नम्र र अनुशासित बानीको विकास हुन्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>आत्मविश्वास र स्वावलम्बन:</strong> आफ्नो क्षमता थाहा भएपछि मानिस अरूको सस्तो प्रशंसा वा आलोचनाको पछि लाग्दैन। उसमा उच्च आत्मविश्वास जाग्छ र आत्मनिर्भर बन्ने प्रेरणा मिल्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>असफलताबाट सिक्ने बानी:</strong> यसले असफलता वा गल्ती हुँदा हार मानेर बस्नुको सट्टा त्यसलाई सिकाईको कडी मान्दै झन् बलियो भएर उठ्ने मानसिक लचकता प्रदान गर्दछ <span class="ref">[८]</span>।</li>
+                    <li><strong>उत्कृष्ट निर्णय क्षमता:</strong> आफ्ना सीमाहरू बुझेको मानिसले हतारमा नभई सोचविचार गरेर मात्र सही र सन्तुलित निर्णयहरू लिन सक्छ <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> अतः, आत्ममूल्याङ्कनले मानिसको आन्तरिक र बाह्य दुवै पक्षलाई परिमार्जित गर्दै एउटा अनुशासित, नैतिकवान् र सफल नागरिकका रूपमा व्यक्तित्व विकास गराउन सहयोग पुर्‍याउँछ <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== ५. परीक्षा उपयोगी Q&A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-bullseye"></i>
+            ५. परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="mark-badge pink">High-Yield</span>
+        </div>
+
+        <!-- अति छोटो (१ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति छोटो उत्तर आउने प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">१.</span> तासा युरिचका अनुसार आन्तरिक आत्मबोधको मूल मर्म के हो?</div>
+            <div class="a"><strong>उत्तर:</strong> आन्तरिक आत्मबोधको मूल मर्म आफ्ना मूल्य, संवेग र चाहनाहरू कस्ता छन् भनी आफैँले स्पष्टसँग बुझ्नु र तिनलाई बाह्य वातावरणसँग सन्तुलित पार्नु हो <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">२.</span> कार्यस्थलमा ३६० डिग्री पृष्ठपोषण विधि किन अद्वितीय मानिन्छ?</div>
+            <div class="a"><strong>उत्तर:</strong> यो विधि अद्वितीय छ किनभने यसमा व्यक्तिले केवल हाकिमबाट मात्र नभई सहकर्मी, कनिष्ठ कर्मचारी र सेवाग्राही सबैबाट बहुआयामिक पृष्ठपोषण प्राप्त गर्छ <span class="ref">[८]</span>।</div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">३.</span> "आत्ममूल्याङ्कनले गल्तीहरूलाई अवसरमा बदल्छ।" कसरी?</div>
+            <div class="a"><strong>उत्तर:</strong> आत्ममूल्याङ्कनले असफलता वा गल्तीमाथि दुःख मनाउ गर्नुको सट्टा त्यसको कारण खोजेर भविष्यमा सच्याउने पाठ सिकाउने भएकाले यसले गल्तीलाई अवसरमा बदल्छ <span class="ref">[८]</span>।</div>
+        </div>
+
+        <!-- छोटो (५ अंक) -->
+        <div class="sub-head"><i class="fas fa-star"></i> छोटो उत्तर आउने प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">१.</span> आन्तरिक र बाह्य आत्मबोधबिचको भिन्नता केलाउँदै यी दुवैको सन्तुलन किन आवश्यक छ? स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>पृष्ठभूमि:</strong> तासा युरिचको अनुसन्धान अनुसार आत्मबोधका दुई परिपूरक पक्षहरू आन्तरिक र बाह्य आत्मबोध हुन् <span class="ref">[८]</span>। सफल जीवनका लागि यी दुवैबीच सन्तुलन हुनु अनिवार्य छ।</p>
+
+                <p><strong>मुख्य विश्लेषण:</strong></p>
+                <ul>
+                    <li><strong>आन्तरिक आत्मबोधको भूमिका:</strong> यसले हामीलाई आफ्ना रुचि, मूल्य र भावनाप्रति इमानदार रहन सिकाउँछ <span class="ref">[८]</span>। यदि यो मात्र बढी भयो भने मानिस अरूको दृष्टिकोणलाई बेवास्ता गर्ने र आफैँ मात्र सही हुँ भन्ने अहङ्कारी बन्न सक्छ।</li>
+                    <li><strong>बाह्य आत्मबोधको भूमिका:</strong> यसले अरू मानिसहरूले हामीलाई कसरी हेरिरहेका छन् भन्ने सामाजिक यथार्थ बुझ्न सघाउँछ <span class="ref">[८]</span>। तर यदि बाह्य आत्मबोध मात्र बढी भयो भने मानिस अरूलाई खुसी पार्न मात्र लाग्ने र आफ्नो वास्तविक पहिचान र खुसी गुमाउने स्थितिमा पुग्छ।</li>
+                    <li><strong>सन्तुलनको आवश्यकता:</strong> यी दुवैको सन्तुलनले मानिसलाई आफ्नो आन्तरिक स्वाभिमान र मूल्य कायम राख्दै समाजसँग सुमधुर सम्बन्ध बनाउन र कुशल नेतृत्व गर्न योग्य बनाउँछ <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><strong>निष्कर्ष:</strong> तसर्थ, आफ्ना भावनाप्रति इमानदार रहँदै अरूको सम्मानजनक मूल्यांकनलाई आत्मसात गर्नु नै सन्तुलित व्यक्तित्व र सफलताको वास्तविक साँचो हो <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <!-- लामो (८ अंक) -->
+        <div class="sub-head"><i class="fas fa-gem"></i> लामो उत्तर आउने प्रश्नहरू (८ अङ्क)</div>
+
+        <div class="qa-block color3" style="border-left-color:#00897B;">
+            <div class="q"><span class="qnum">प्रश्न:</span> "आत्मबोध र आत्ममूल्याङ्कन व्यक्तिगत रूपान्तरण र नेतृत्व विकासका दरिला स्तम्भहरू हुन्।" यस भनाइलाई पाठ्यपुस्तकका सन्दर्भहरू र व्यावहारिक समाजको उदाहरण दिँदै पुष्टि गर्नुहोस्।</div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">परिचय:</span> हाम्रो पूर्वीय चिन्तन परम्पराले हजारौँ वर्ष पहिले "आफूलाई चिन्नु नै सबैभन्दा ठुलो ज्ञान हो" (स्व-ज्ञान) भनी निर्देश गरेको थियो। आधुनिक समयमा पनि जीवनोपयोगी सिपको क्षेत्रमा आत्मबोध (Self-awareness) र आत्ममूल्याङ्कन (Self-evaluation) लाई व्यक्तिगत रूपान्तरण र सफल नेतृत्वको सबैभन्दा बलियो जग मानिन्छ <span class="ref">[८]</span>। यी दुई सिपहरु विना कुनै पनि व्यक्तिले न त आफ्नो आन्तरिक शक्ति चिन्न सक्छ, न त समाजमा आफ्नो सकारात्मक छाप छाड्न सक्छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">मुख्य विश्लेषण र तर्कहरू:</span></p>
+
+                <ul>
+                    <li><strong>व्यक्तिगत रूपान्तरणको प्रस्थानविन्दु:</strong> आत्मबोधले मानिसलाई आफ्ना संवेग र बानीहरूको बारेमा सचेत बनाउँछ <span class="ref">[८]</span>। जब व्यक्तिलाई आफ्ना कमजोरीहरू (जस्तै छिट्टै रिसाउने वा आलस्य गर्ने) को आत्मबोध हुन्छ, तब मात्र उसले आफूलाई सुधार्ने कदम चाल्छ।</li>
+                    <li><strong>गल्तीहरूको पहिचान र सुधार:</strong> आत्ममूल्याङ्कनले मानिसलाई आफ्ना गल्तीहरू इमानदारपूर्वक स्वीकार गर्न र अरूले भन्नुभन्दा पहिले नै सच्याउन प्रेरित गर्छ <span class="ref">[८]</span>। यसले मानिसमा अहङ्कारको नाश गरी विनयशीलता ल्याउँछ।</li>
+                    <li><strong>नेतृत्व विकासमा योगदान:</strong> तासा युरिचको अनुसन्धानले देखाए झैँ, बाह्य आत्मबोध उच्च भएको नेताले मात्र आफ्ना अनुयायी र सहकर्मीहरूको भावना, आवश्यकता र चासो बुझ्न सक्छ <span class="ref">[८]</span>। ३६० डिग्री पृष्ठपोषण विधिले नेता वा व्यवस्थापकलाई स्वेच्छाचारी बन्नबाट रोक्छ र संस्थामा प्रजातान्त्रिक वातावरण सिर्जना गर्छ <span class="ref">[८]</span>।</li>
+                    <li><strong>मानसिक लचकता र उत्थानशीलता (Resilience):</strong> जीवनमा असफलता वा चुनौती आउँदा आत्ममूल्याङ्कन गर्ने व्यक्ति विचलित हुँदैन। उसले आफ्नो कमजोरीको समीक्षा गर्छ, नयाँ विकल्पहरू खोज्छ र फेरि उत्कृष्ट ऊर्जाका साथ काममा जुट्छ <span class="ref">[८]</span>।</li>
+                </ul>
+
+                <p><span class="step-icon">💡</span> <span class="step-title">व्यावहारिक/वास्तविक उदाहरण:</span> नेपाली समाज र हाम्रो शैक्षिक वातावरणमा कतिपय विद्यार्थीहरू परीक्षामा कम अङ्क आउँदा वा असफल हुँदा निराश भएर कुलतमा लाग्ने वा आत्महत्या गर्नेसम्मका दुःखद निर्णय लिन्छन्। तर कक्षा १२ का विद्यार्थी कुशलको उदाहरणलाई हेर्दा, कक्षा ११ को अन्त्यमा परियोजना कार्य र गृहकार्य नसकेर तनावमा परेका कुशलले जब 'आत्मआलोचना' र 'आत्ममूल्याङ्कन' गरे, उनले आफ्ना कमजोरीहरू (समय व्यवस्थापन गर्न नसक्नु, हेलचेक्र्याइँ गर्नु) महसुस गरे <span class="ref">[८]</span>। उनले शिक्षकको मार्गनिर्देशन अनुसार आफ्नो दैनिक कार्यतालिका बदले र आज कक्षा १२ मा उनी उत्कृष्ट र अनुशासित विद्यार्थी साबित भएका छन् <span class="ref">[८]</span>। यो व्यक्तिगत रूपान्तरणको जीवन्त उदाहरण हो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">निष्कर्ष:</span> निष्कर्षमा, आत्मबोध र आत्ममूल्याङ्कन केवल कक्षाकोठामा पढेर परीक्षा उत्तीर्ण गर्ने पाठहरू मात्र होइनन् <span class="ref">[८]</span>। यी त जिन्दगीका हरेक मोडमा आइपर्ने आँधीबेहरीहरूलाई सफलतापूर्वक सामना गर्दै आफैँलाई एक असल, चरित्रवान्, संवेदनशील र सफल नेता वा नागरिकका रूपमा उभ्याउने अमोघ अस्त्र हुन् <span class="ref">[८]</span>। त्यसैले, हरेक विद्यार्थीले दैनिक रूपमा योग, ध्यान, डायरी लेखन र रचनात्मक आत्ममूल्याङ्कन गर्ने बानी बसाल्नु नितान्त आवश्यक छ <span class="ref">[८]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#00897B; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> आत्मबोध र आत्ममूल्याङ्कन केवल परीक्षाका लागि मात्र नभई जीवनभरि साथ दिने शक्तिशाली क्षमताहरू हुन्। दैनिक योग, ध्यान, डायरी लेखन र आत्मसमीक्षाको अभ्यास गर्नुहोस्। आफ्ना कमजोरीहरू स्वीकार गर्नु र तिनलाई सुधार्ने निरन्तर प्रयास गर्नु नै साँचो आत्मबोध हो – यसले तपाईंलाई एक सफल, सन्तुलित र उत्तरदायी नागरिक बनाउनेछ।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ३, पाठ ५</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
