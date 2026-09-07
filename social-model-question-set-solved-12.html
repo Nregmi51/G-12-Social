@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEB कक्षा १२ सामाजिक अध्ययन — आदर्श नमुना प्रश्नपत्र</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;600;700;800&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+    <style>
+        /* ─── Reset & Base ─── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #1a3a6b;
+            --primary-light: #2a5a9a;
+            --primary-dark: #0f2347;
+            --accent: #d4a84b;
+            --accent-light: #f0dfb0;
+            --bg: #f2f6fc;
+            --card-bg: #ffffff;
+            --text: #1e2a3a;
+            --text-light: #4a5a72;
+            --border: #dbe0e9;
+            --shadow: 0 12px 40px rgba(20, 40, 80, 0.10);
+            --radius: 16px;
+            --radius-sm: 10px;
+            --font-base: 20px;
+            --transition: 0.25s ease;
+        }
+        html {
+            scroll-behavior: smooth;
+            font-size: var(--font-base);
+        }
+        body {
+            font-family: 'Noto Sans Devanagari', 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 1.2rem;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 2rem 2.2rem 3rem;
+            position: relative;
+        }
+        @media (max-width: 720px) {
+            body {
+                padding: 0.6rem;
+            }
+            .container {
+                padding: 1.2rem 1rem 2rem;
+            }
+            :root {
+                --font-base: 18px;
+            }
+        }
+        @media (max-width: 480px) {
+            :root {
+                --font-base: 16px;
+            }
+            .container {
+                padding: 0.8rem 0.7rem 1.6rem;
+            }
+        }
+
+        /* ─── Typography ─── */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+        h1 {
+            font-size: 2.1rem;
+            color: var(--primary-dark);
+        }
+        h2 {
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 1.8rem 0 0.6rem;
+            border-bottom: 3px solid var(--accent-light);
+            padding-bottom: 0.3rem;
+        }
+        h3 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin: 1.2rem 0 0.4rem;
+        }
+        h4 {
+            font-size: 1.05rem;
+            color: var(--primary-light);
+            margin: 0.8rem 0 0.3rem;
+        }
+        p,
+        li,
+        .text-body {
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+        .text-small {
+            font-size: 0.85rem;
+        }
+        .text-muted {
+            color: var(--text-light);
+        }
+
+        /* ─── Header / Hero ─── */
+        .exam-header {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 80%);
+            color: #fff;
+            border-radius: var(--radius);
+            padding: 1.8rem 2.2rem 1.6rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .exam-header::after {
+            content: "☀️📘";
+            position: absolute;
+            right: 1.2rem;
+            bottom: 0.6rem;
+            font-size: 4rem;
+            opacity: 0.12;
+            pointer-events: none;
+        }
+        .exam-header .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--primary-dark);
+            font-weight: 700;
+            font-size: 0.75rem;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .exam-header h1 {
+            color: #fff;
+            font-size: 2rem;
+            margin: 0.2rem 0 0.1rem;
+        }
+        .exam-header .sub {
+            font-size: 1.05rem;
+            opacity: 0.92;
+            font-weight: 400;
+        }
+        .exam-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem 2rem;
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            padding-top: 0.8rem;
+        }
+        .exam-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .exam-meta .icon {
+            font-size: 1.1rem;
+        }
+
+        /* ─── Specification Grid ─── */
+        .grid-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.8rem;
+            background: var(--bg);
+            padding: 1.2rem 1.4rem;
+            border-radius: var(--radius-sm);
+            margin: 0.8rem 0 1.6rem;
+            border: 1px solid var(--border);
+        }
+        .grid-summary .item {
+            text-align: center;
+        }
+        .grid-summary .item .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        .grid-summary .item .value {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* ─── Question Groups ─── */
+        .group-badge {
+            display: inline-block;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.15rem 1.1rem;
+            border-radius: 30px;
+            background: var(--primary);
+            color: #fff;
+            margin-right: 0.4rem;
+        }
+        .group-badge.ka {
+            background: #2a6f7a;
+        }
+        .group-badge.kha {
+            background: #8a6e3b;
+        }
+        .group-badge.ga {
+            background: #9e3b5a;
+        }
+        .group-intro {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin: -0.2rem 0 1.2rem;
+            padding-left: 0.2rem;
+        }
+
+        /* ─── Question Card ─── */
+        .q-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius-sm);
+            padding: 1.2rem 1.6rem;
+            margin-bottom: 1rem;
+            background: #fafcff;
+            transition: border-color var(--transition), box-shadow var(--transition);
+            position: relative;
+        }
+        .q-card:hover {
+            border-color: #bbcbe0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+        }
+        .q-card .q-head {
+            display: flex;
+            align-items: baseline;
+            gap: 0.4rem 0.8rem;
+            flex-wrap: wrap;
+            cursor: pointer;
+            user-select: none;
+        }
+        .q-card .q-head .q-num {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.05rem;
+            min-width: 2.2rem;
+        }
+        .q-card .q-head .q-text {
+            font-weight: 600;
+            font-size: 1rem;
+            flex: 1;
+        }
+        .q-card .q-head .q-marks {
+            font-size: 0.75rem;
+            background: var(--accent-light);
+            color: var(--primary-dark);
+            padding: 0.05rem 0.8rem;
+            border-radius: 30px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+        .q-card .q-head .toggle-icon {
+            font-size: 1rem;
+            color: var(--text-light);
+            transition: transform var(--transition);
+            margin-left: auto;
+            opacity: 0.6;
+        }
+        .q-card .q-head:hover .toggle-icon {
+            opacity: 1;
+        }
+        .q-card .q-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s ease, padding 0.3s ease, opacity 0.25s ease;
+            opacity: 0;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .q-card.open .q-answer {
+            max-height: 3000px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 0.2rem;
+        }
+        .q-card.open .toggle-icon {
+            transform: rotate(180deg);
+        }
+        .q-card .q-answer-inner {
+            border-top: 2px dashed var(--accent-light);
+            padding-top: 0.8rem;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+        .q-card .q-answer-inner ul,
+        .q-card .q-answer-inner ol {
+            padding-left: 1.4rem;
+            margin: 0.3rem 0;
+        }
+        .q-card .q-answer-inner table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+        .q-card .q-answer-inner table th,
+        .q-card .q-answer-inner table td {
+            border: 1px solid var(--border);
+            padding: 0.4rem 0.6rem;
+            text-align: left;
+        }
+        .q-card .q-answer-inner table th {
+            background: var(--bg);
+            font-weight: 600;
+        }
+        .q-card .q-answer-inner .highlight-box {
+            background: #fef9e7;
+            padding: 0.6rem 1rem;
+            border-radius: var(--radius-sm);
+            border-left: 4px solid var(--accent);
+            margin: 0.5rem 0;
+        }
+        .q-card .q-answer-inner .code-block {
+            background: #1e2a3a;
+            color: #eaf0f8;
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.9rem;
+            display: inline-block;
+            margin: 0.2rem 0;
+        }
+
+        /* Highlight for Question 21 */
+        .q-card.highlight-q {
+            border: 2px solid var(--accent);
+            background: #fffcf0;
+            box-shadow: 0 4px 16px rgba(212, 168, 75, 0.15);
+        }
+        .q-card.highlight-q .q-head .q-num {
+            color: #b8860b;
+        }
+        .q-card.highlight-q .q-head .q-text {
+            color: var(--primary-dark);
+        }
+
+        /* ─── Buttons & Utilities ─── */
+        .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1.6rem 0 0.8rem;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.45rem 1.4rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            border: none;
+            background: var(--primary);
+            color: #fff;
+            cursor: pointer;
+            transition: background var(--transition), transform 0.1s;
+            font-family: inherit;
+            line-height: 1.4;
+        }
+        .btn:hover {
+            background: var(--primary-light);
+            transform: translateY(-1px);
+        }
+        .btn:active {
+            transform: scale(0.97);
+        }
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        .btn-accent {
+            background: var(--accent);
+            color: var(--primary-dark);
+        }
+        .btn-accent:hover {
+            background: #c49a3a;
+            color: var(--primary-dark);
+        }
+        .btn-sm {
+            font-size: 0.75rem;
+            padding: 0.25rem 1rem;
+        }
+        .btn .icon {
+            font-size: 1.1rem;
+        }
+
+        /* ─── Footer ─── */
+        .footer {
+            margin-top: 2.4rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+
+        /* ─── Scroll to top ─── */
+        .scroll-top {
+            position: fixed;
+            bottom: 1.8rem;
+            right: 1.8rem;
+            background: var(--primary);
+            color: #fff;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+            transition: opacity var(--transition), transform var(--transition);
+            opacity: 0;
+            pointer-events: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .scroll-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .scroll-top:hover {
+            transform: translateY(-3px);
+            background: var(--primary-light);
+        }
+
+        /* ─── Table responsive ─── */
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        /* ─── Print styles ─── */
+        @media print {
+            body {
+                background: #fff;
+                padding: 0.2in;
+                font-size: 14px;
+            }
+            .container {
+                box-shadow: none;
+                padding: 0.2in;
+                border-radius: 0;
+            }
+            .q-card .q-answer {
+                max-height: none !important;
+                opacity: 1 !important;
+                padding-top: 0.6rem !important;
+                padding-bottom: 0.2rem !important;
+            }
+            .q-card .toggle-icon,
+            .btn,
+            .scroll-top {
+                display: none !important;
+            }
+            .q-card {
+                break-inside: avoid;
+                border-color: #ccc;
+            }
+            .exam-header {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .grid-summary {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="top">
+
+        <!-- ─── HEADER ─── -->
+        <header class="exam-header">
+            <div class="badge">📋 राष्ट्रिय परीक्षा बोर्ड (NEB)</div>
+            <h1>कक्षा १२ · अनिवार्य सामाजिक अध्ययन</h1>
+            <div class="sub">तथा जीवनोपयोगी शिक्षा (Sol. 005) — ७५ पूर्णाङ्क</div>
+            <div class="exam-meta">
+                <span><span class="icon">⏱️</span> समय: ३ घण्टा</span>
+                <span><span class="icon">📊</span> पूर्णाङ्क: ७५</span>
+                <span><span class="icon">📘</span> आदर्श नमुना प्रश्नपत्र &amp; उत्तर कुञ्जी</span>
+            </div>
+        </header>
+
+        <!-- ─── SPECIFICATION GRID ─── -->
+        <div class="grid-summary">
+            <div class="item"><span class="label">🧠 ज्ञान</span><div class="value">१५ अङ्क</div></div>
+            <div class="item"><span class="label">📖 बोध</span><div class="value">२० अङ्क</div></div>
+            <div class="item"><span class="label">🛠️ प्रयोग</span><div class="value">२१ अङ्क</div></div>
+            <div class="item"><span class="label">⭐ उच्च दक्षता</span><div class="value">१९ अङ्क</div></div>
+        </div>
+
+        <!-- ─── TOOLBAR ─── -->
+        <div class="btn-group">
+            <button class="btn btn-accent" id="expandAllBtn">📖 सबै उत्तर खोल्नुहोस्</button>
+            <button class="btn btn-outline" id="collapseAllBtn">📕 सबै बन्द गर्नुहोस्</button>
+            <button class="btn btn-outline btn-sm" id="scrollToQ21Btn">⭐ प्रश्न २१ मा जानुहोस्</button>
+        </div>
+
+        <!-- ──────────────────────────────────────────── -->
+        <!--  GROUP क                                 -->
+        <!-- ──────────────────────────────────────────── -->
+
+        <h2><span class="group-badge ka">क</span> अति छोटा उत्तर आउने प्रश्नहरू</h2>
+        <div class="group-intro">सबै प्रश्नहरूको उत्तर दिनुहोस्। (११ × १ = ११ अङ्क)</div>
+
+        <!-- Q1 -->
+        <div class="q-card" data-q="1">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१.</span>
+                <span class="q-text">जीवनोपयोगी शिक्षाको सैद्धान्तिक अवधारणा विश्वमा कहिलेदेखि सुरु भएको मानिन्छ?</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> जीवनोपयोगी शिक्षाको सैद्धान्तिक अवधारणाको सुरुआत विश्वमा <strong>सन् १९६५</strong> तिरबाट भएको मानिन्छ।</p>
+            </div></div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="q-card" data-q="2">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">२.</span>
+                <span class="q-text">सामाजिक अनुसन्धानको सन्दर्भमा 'अध्ययन प्रस्तावना' (Research Proposal) भन्नाले के बुझिन्छ?</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> अनुसन्धान कार्य सुरु गर्नुपूर्व अनुसन्धानको योजना, औचित्य, उद्देश्य, र विधिको स्पष्ट मार्गचित्र तयार गरी स्वीकृतिका लागि पेस गरिने लिखित प्राज्ञिक खाका नै <strong>अध्ययन प्रस्तावना (Research Proposal)</strong> हो।</p>
+            </div></div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="q-card" data-q="3">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">३.</span>
+                <span class="q-text">संवेगात्मक समानुभूति (Emotional Empathy) को कुनै एक व्यावहारिक उदाहरण दिनुहोस्।</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> सडकमा सहाराविहीन भई रोइरहेको भोको बालकलाई देखेर आफ्नो मन पग्लिनु र आफ्नो आँखामा पनि वास्तविक आँसु भरिएर आउनु <strong>संवेगात्मक समानुभूति</strong> को व्यावहारिक उदाहरण हो।</p>
+            </div></div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="q-card" data-q="4">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">४.</span>
+                <span class="q-text">पूर्वीय चिन्तन परम्परा अनुसार 'गार्हपत्य' भन्नाले के बुझिन्छ?</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> वैदिक कालको सामाजिक-पारिवारिक संरचनामा गृहस्थ जीवनको पारिवारिक दायित्व, यज्ञको स्थापना र घरको मूल संरक्षकत्व सम्हाल्ने व्यवस्थालाई <strong>गार्हपत्य</strong> भनिन्छ।</p>
+            </div></div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="q-card" data-q="5">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">५.</span>
+                <span class="q-text">आधुनिक भौगोलिक प्रविधि अन्तर्गत जि.पि.एस. (GPS) को पूर्ण रूप (Full Form) लेख्नुहोस्।</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> जि.पि.एस. (GPS) को पूर्ण रूप <strong>Global Positioning System (ग्लोबल पोजिसनिङ सिस्टम)</strong> हो।</p>
+            </div></div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="q-card" data-q="6">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">६.</span>
+                <span class="q-text">नेपालको राजनीतिक इतिहासमा २०१७ साल पुस १ गते घटेको मुख्य राजनीतिक घटना के थियो?</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> २०१७ साल पुस १ गते तत्कालीन राजा महेन्द्रले सैनिक बलको आडमा जननिर्वाचित प्रधानमन्त्री बीपी कोइराला र मन्त्रिमण्डललाई बन्दी बनाई संसदीय व्यवस्था विघटन गरी <strong>निरङ्कुश पञ्चायती व्यवस्थाको बिजारोपण</strong> गरेका थिए।</p>
+            </div></div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="q-card" data-q="7">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">७.</span>
+                <span class="q-text">वर्तमान विश्वमा बहुभाषिक र बहुजातीय विशेषताले सामाजिक विविधतालाई कसरी प्रवर्द्धन गर्छ? एक वाक्यमा लेख्नुहोस्।</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> वर्तमान विश्वका बहुजातीय र बहुभाषिक विशेषताले फरक जाति र भाषाका मौलिक संस्कृति, ज्ञान र कलालाई एकसाथ फस्टाउन मद्दत गरी मानव समाजलाई सांस्कृतिक रूपमा धनी र सहअस्तित्वपूर्ण बनाउँछ।</p>
+            </div></div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="q-card" data-q="8">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">८.</span>
+                <span class="q-text">नेपालको संविधानको धारा ७६ को उपधारा (९) अनुसार मन्त्रिपरिषद् बढीमा कति सदस्यीय गठन हुने व्यवस्था छ?</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> नेपालको संविधान अनुसार प्रधानमन्त्रीसहित संघीय संसदका सदस्यहरूमध्येबाट समावेशी सिद्धान्त बमोजिम <strong>बढीमा २५ जना मन्त्रीहरू रहेको मन्त्रिपरिषद्</strong> गठन हुने व्यवस्था छ।</p>
+            </div></div>
+        </div>
+
+        <!-- Q9 -->
+        <div class="q-card" data-q="9">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">९.</span>
+                <span class="q-text">बसाइँसराइको सन्दर्भमा 'पुस फ्याक्टर' (Push Factors) भन्नाले के बुझिन्छ?</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> मानिसलाई आफ्नो थातथलो छोडेर अन्यत्र जान बाध्य पार्ने प्रतिकूल अवस्थाहरू, जस्तै: बाढीपहिरो, चरम गरिबी, सामाजिक असुरक्षा र बेरोजगारी आदिलाई <strong>'पुस फ्याक्टर'</strong> भनिन्छ।</p>
+            </div></div>
+        </div>
+
+        <!-- Q10 -->
+        <div class="q-card" data-q="10">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१०.</span>
+                <span class="q-text">नेपालमा पहिलो पटक 'राष्ट्रिय गौरवका आयोजना' को औपचारिक छनोट र घोषणा कुन आर्थिक वर्षको बजेट वक्तव्यमार्फत भएको थियो?</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> नेपालमा पहिलो पटक १७ वटा राष्ट्रिय गौरवका आयोजनाहरूको छनोट र औपचारिक घोषणा <strong>आर्थिक वर्ष २०६८/६९ को बजेट वक्तव्यमार्फत</strong> भएको थियो।</p>
+            </div></div>
+        </div>
+
+        <!-- Q11 -->
+        <div class="q-card" data-q="11">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">११.</span>
+                <span class="q-text">सामाजिक विकासमा शिक्षाको एउटा प्रमुख दार्शनिक योगदान उल्लेख गर्नुहोस्।</span>
+                <span class="q-marks">१ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> शिक्षाले व्यक्तिमा मानव मूल्य, नैतिकता, र प्रजातान्त्रिक संस्कारको विकास गराई वर्गविहीन, समतामूलक र सभ्य समाज निर्माण गर्न बलियो दार्शनिक आधार प्रदान गर्दछ।</p>
+            </div></div>
+        </div>
+
+        <!-- ──────────────────────────────────────────── -->
+        <!--  GROUP ख                                 -->
+        <!-- ──────────────────────────────────────────── -->
+
+        <h2 style="margin-top:2.6rem;"><span class="group-badge kha">ख</span> छोटा उत्तर आउने प्रश्नहरू</h2>
+        <div class="group-intro">सबै प्रश्नहरूको उत्तर दिनुहोस्। (८ × ५ = ४० अङ्क)</div>
+
+        <!-- Q12 -->
+        <div class="q-card" data-q="12">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१२.</span>
+                <span class="q-text">"जीवनोपयोगी सिप केवल पुस्तक पढेर मात्र प्राप्त हुँदैन, यो त निरन्तरको अभ्यास र प्रयोगबाट मात्र सम्भव हुन्छ।" यस भनाइलाई व्यावहारिक तर्कसहित पुष्टि गर्नुहोस्।</span>
+                <span class="q-marks">५ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong></p>
+                <p><strong>पृष्ठभूमि:</strong> जीवनोपयोगी सिप (Life Skills) भनेको सैद्धान्तिक ज्ञान वा कण्ठ गरिने पाठ्यसामग्री होइन। यो त दैनिक जीवनका अनेकौँ चुनौती र असमझदारीहरूलाई विवेकपूर्ण रूपमा हल गर्ने व्यावहारिक क्षमता हो।</p>
+                <ul>
+                    <li><strong>ज्ञान र व्यवहारको दूरी:</strong> किताब पढेर हामीले 'क्रोध मानिसको शत्रु हो' भन्ने बुझ्न सक्छौँ तर जबसम्म आक्रोशित क्षणमा मौन बस्ने अभ्यास गर्दैनौँ, तबसम्म त्यो सिप बन्दैन।</li>
+                    <li><strong>सक्रिय श्रवण र संवाद:</strong> प्रभावकारी सञ्चार जस्ता सिपहरू वास्तविक जीवनमा समाजका फरक व्यक्तित्वहरूसँग अन्तरक्रिया गरेर मात्र परिपक्व हुन्छन्।</li>
+                    <li><strong>अनुभव नै असल शिक्षक:</strong> निर्णय निर्माण र समस्या समाधानका सिपहरू पटक-पटक गल्तीबाट सिकेको अनुभव र समालोचनात्मक कसरतबाट तिखारिन्छन्।</li>
+                    <li><strong>चरित्र र बानीमा रूपान्तरण:</strong> निरन्तर अभ्यासले मात्र पुराना नकारात्मक आचरण हटेर चरित्रमा स्थायी सकारात्मक बानीको विकास हुन्छ।</li>
+                </ul>
+                <p><strong>निष्कर्ष:</strong> पौडी खेल्ने कला जस्तै जीवनोपयोगी सिप पनि केवल सिद्धान्त पढेर प्राप्त हुँदैन; यो त दैनिक जीवनको मैदानमा निरन्तर अभ्यासबाट मात्र हासिल हुने जीवन-कला हो।</p>
+            </div></div>
+        </div>
+
+        <!-- Q13 -->
+        <div class="q-card" data-q="13">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१३.</span>
+                <span class="q-text">सामाजिक अनुसन्धानमा स्वतन्त्र चर (Independent Variable) र निर्भर चर (Dependent Variable) बीचको भिन्नता उदाहरणसहित स्पष्ट पार्नुहोस्। <span style="font-weight:400;font-size:0.8rem;color:var(--text-light);">(अथवा बौद्धिक चोरीबाट बच्ने उपायहरू)</span></span>
+                <span class="q-marks">५ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong> सामाजिक अनुसन्धानमा चरहरूको भिन्नता निम्न तालिकामा प्रस्तुत गरिएको छ:</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>भिन्नताको आधार</th><th>स्वतन्त्र चर</th><th>निर्भर चर</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>परिभाषा</strong></td><td>कुनै घटनामा परिवर्तन ल्याउने कारणका रूपमा रहने चर</td><td>स्वतन्त्र चरमा भएको फेरबदलका कारण परिवर्तन हुने परिणामको रूपमा देखिने चर</td></tr>
+                            <tr><td><strong>नियन्त्रण</strong></td><td>अनुसन्धानकर्ताले आफ्नो इच्छा अनुसार हेरफेर गर्न सक्छ</td><td>सिधै हेरफेर गर्न सकिँदैन, स्वतन्त्र चरमा आश्रित हुन्छ</td></tr>
+                            <tr><td><strong>भूमिका</strong></td><td>'कारण' (Cause) को भूमिका</td><td>'असर वा परिणाम' (Effect/Outcome) को भूमिका</td></tr>
+                            <tr><td><strong>उदाहरण</strong></td><td>'विद्यार्थीको दैनिक अध्ययन समय'</td><td>'विद्यार्थीले प्राप्त गर्ने परीक्षाको प्राप्ताङ्क'</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="highlight-box">
+                    <p><strong>व्यावहारिक व्याख्या:</strong> "धूमपानले फोक्सोको स्वास्थ्यमा पार्ने असर" को अनुसन्धानमा धूमपानको मात्रा <em>स्वतन्त्र</em> र फोक्सोमा पर्ने क्षति <em>निर्भर</em> चर हो।</p>
+                </div>
+                <hr style="margin:0.8rem 0;border-color:var(--border);" />
+                <p><strong>अथवा — बौद्धिक चोरी (Plagiarism) बाट बच्ने चार उपायहरू:</strong></p>
+                <ol>
+                    <li><strong>सटिक उद्धरण:</strong> अर्काको लेखबाट साभार गर्दा लेखकको नाम, वर्ष र पाना नम्बर उल्लेख गरी APA/MLA ढाँचा अपनाउने।</li>
+                    <li><strong>पुनर्लेखन (Paraphrasing):</strong> अरूको विचार आफ्नै मौलिक शब्द र वाक्य संरचनामा प्रस्तुत गर्ने।</li>
+                    <li><strong>उद्धरण चिह्न ("...") को प्रयोग:</strong> जस्ताको तस्तै राख्दा दोहोरो उद्धरण चिह्न भित्र राख्ने।</li>
+                    <li><strong>सन्दर्भ सामग्रीको सूची:</strong> अध्ययन गरेका सबै स्रोतहरूको वर्णानुक्रम अनुसारको आधिकारिक सूची समावेश गर्ने।</li>
+                </ol>
+            </div></div>
+        </div>
+
+        <!-- Q14 -->
+        <div class="q-card" data-q="14">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१४.</span>
+                <span class="q-text">पूर्वीय चिन्तन परम्परा र पाश्चात्य चिन्तन परम्परा (दर्शन) का बीचमा रहेका पाँचवटा मुख्य भिन्नताहरू तुलनात्मक तालिकामा प्रस्तुत गर्नुहोस्।</span>
+                <span class="q-marks">५ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <div class="table-wrap">
+                    <table>
+                        <thead><tr><th>क्र.सं.</th><th>भिन्नताको आधार</th><th>पूर्वीय चिन्तन</th><th>पाश्चात्य चिन्तन</th></tr></thead>
+                        <tbody>
+                            <tr><td>१</td><td><strong>मूल दर्शन</strong></td><td>आध्यात्मिक विकास, आन्तरिक शान्ति, आत्मबोध</td><td>भौतिक विकास, तर्कशास्त्र, वैज्ञानिक खोजी</td></tr>
+                            <tr><td>२</td><td><strong>ज्ञानको स्रोत</strong></td><td>अन्तर्दृष्टि, ध्यान, योग, वेद/उपनिषद</td><td>तर्क, प्रत्यक्ष प्रमाण, इन्द्रियजन्य अनुभव</td></tr>
+                            <tr><td>३</td><td><strong>जीवनको दृष्टिकोण</strong></td><td>चक्रव्यूह (Cyclic) — पुनर्जन्म</td><td>एकरेखीय (Linear) — सुरुवात र अन्त्य</td></tr>
+                            <tr><td>४</td><td><strong>व्यक्ति र समाज</strong></td><td>सामूहिकता, "वसुधैव कुटुम्बकम्"</td><td>वैयक्तिकतावाद, व्यक्तिगत अधिकार</td></tr>
+                            <tr><td>५</td><td><strong>प्रकृतिसँग सम्बन्ध</strong></td><td>प्रकृतिसँग एकाकार भई सन्तुलनमा बाँच्ने</td><td>प्रकृतिको अधिकतम दोहन गर्ने</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div></div>
+        </div>
+
+        <!-- Q15 -->
+        <div class="q-card" data-q="15">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१५.</span>
+                <span class="q-text">नेपालको हावापानीमा प्रभाव पार्ने मुख्य भौगोलिक तत्त्वहरू के-के हुन्? ती तत्त्वहरूले कसरी नेपालको हावापानीलाई प्रभावित पार्छन्, चर्चा गर्नुहोस्।</span>
+                <span class="q-marks">५ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong></p>
+                <ul>
+                    <li><strong>धरातलीय उचाइ (Altitude):</strong> प्रत्येक १६५ मिटरको उचाइमा १°C तापक्रम घट्छ। तराईमा उष्ण, पहाडमा समशितोष्ण, हिमालमा ध्रुवीय हावापानी।</li>
+                    <li><strong>अक्षांश (Latitude):</strong> नेपाल २६°–३०° उत्तरी अक्षांशमा छ। तर उचाइले अक्षांशभन्दा बढी प्रभाव पार्छ।</li>
+                    <li><strong>पर्वतको दिशा (Mountain Barriers):</strong> हिमालयले दक्षिणी मनसुनी हावालाई रोकी वर्षा गराउँछ र उत्तरी चिसो हावालाई प्रवेश गर्न दिँदैन।</li>
+                    <li><strong>ढलोको दिशा (Slope):</strong> दक्षिणी ढाल न्यानो, उत्तरी ढाल चिसो र ओसिलो हुन्छ।</li>
+                    <li><strong>जलस्रोत र जङ्गल:</strong> विशाल जङ्गल र नदी किनारका क्षेत्रमा आद्रता कायम रही हावापानी सन्तुलित रहन्छ।</li>
+                </ul>
+            </div></div>
+        </div>
+
+        <!-- Q16 -->
+        <div class="q-card" data-q="16">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१६.</span>
+                <span class="q-text">पहिलो र दोस्रो विश्वयुद्धमा नेपाली युवाहरू (गोरखाली सैनिक) ले प्रदर्शन गरेको ऐतिहासिक वीरता र यसले नेपालको अन्तर्राष्ट्रिय पहिचानमा पारेको प्रभावको समीक्षा गर्नुहोस्। <span style="font-weight:400;font-size:0.8rem;color:var(--text-light);">(अथवा २००७ सालको क्रान्ति र दिल्ली सम्झौता)</span></span>
+                <span class="q-marks">५ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>उत्तर:</strong></p>
+                <ul>
+                    <li><strong>युद्धमैदानमा पराक्रम:</strong> गोरखाली सैनिकले कठिन रणभूमिमा अदम्य साहस, बफादारिता र "काँतर हुनुभन्दा मर्नु निको" को आदर्श चरितार्थ गरे।</li>
+                    <li><strong>अन्तर्राष्ट्रिय सम्मान:</strong> कुलानसिंह थापा, गजे घले, लालबहादुर थापा जस्ता योद्धाहरूले भिक्टोरिया क्रस जस्ता सर्वोच्च सम्मान प्राप्त गरे।</li>
+                    <li><strong>'वीर गोरखाली' पहिचान:</strong> नेपाल विश्वमा 'वीरहरूको देश' का रूपमा प्रख्यात भयो।</li>
+                    <li><strong>कूटनीतिक लाभ:</strong> सन् १९२३ को नेपाल-बेलायत सन्धिमार्फत नेपालको पूर्ण सार्वभौमसत्ता स्विकारियो।</li>
+                    <li><strong>सामाजिक-आर्थिक प्रभाव:</strong> हजारौँ वीरगति प्राप्त गरे, तर फर्केकाहरूले लाहुरे संस्कृति र नयाँ ज्ञान भित्र्याए।</li>
+                </ul>
+                <hr style="margin:0.8rem 0;border-color:var(--border);" />
+                <p><strong>अथवा — २००७ सालको क्रान्ति र दिल्ली सम्झौताका मुख्य सर्तहरू:</strong></p>
+                <ol>
+                    <li><strong>संविधान सभाको निर्वाचन:</strong> नेपाली जनताले चुनेका प्रतिनिधिहरूले नयाँ लोकतान्त्रिक संविधान निर्माण गर्ने।</li>
+                    <li><strong>अन्तरिम मन्त्रिमण्डल:</strong> १० सदस्यीय (५ राणा + ५ कांग्रेस) संयुक्त मन्त्रिमण्डल गठन।</li>
+                    <li><strong>राजा त्रिभुवनको पुनःस्थापना:</strong> राजा ज्ञानेन्द्रको गद्दी आरोहण अमान्य ठहर गरी त्रिभुवनलाई ससम्मान फर्काउने।</li>
+                    <li><strong>शाही अधिकार हस्तान्तरण:</strong> 'श्री ३' मा निहित सबै अधिकार राजा र मन्त्रिमण्डलमा निहित गर्ने।</li>
+                    <li><strong>आम माफी र निःशस्त्रीकरण:</strong> राजबन्दीहरू रिहा र मुक्ति सेनाले हतियार बुझाउने।</li>
+                </ol>
+            </div></div>
+        </div>
+
+        <!-- Q17 -->
+        <div class="q-card" data-q="17">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१७.</span>
+                <span class="q-text">नेपालको वर्तमान संघीय व्यवस्थापिका (प्रतिनिधि सभा र राष्ट्रिय सभा) को गठन प्रक्रिया र यसका मुख्य चारवटा कार्यहरू छोटकरीमा उल्लेख गर्नुहोस्।</span>
+                <span class="q-marks">५ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>गठन प्रक्रिया:</strong></p>
+                <ul>
+                    <li><strong>प्रतिनिधि सभा (तल्लो):</strong> २७५ सदस्य — १६५ FPTP, ११० PR; कार्यकाल ५ वर्ष।</li>
+                    <li><strong>राष्ट्रिय सभा (माथिल्लो):</strong> ५९ सदस्य — प्रत्येक प्रदेशबाट ८/८ (५६) + राष्ट्रपतिबाट मनोनीत ३; स्थायी सदन।</li>
+                </ul>
+                <p><strong>मुख्य चार कार्यहरू:</strong></p>
+                <ol>
+                    <li><strong>कानुन निर्माण:</strong> आवश्यक नयाँ ऐन, कानुन, नियम बनाउने तथा पुरानोमा संशोधन गर्ने।</li>
+                    <li><strong>बजेट पारित र वित्तीय नियन्त्रण:</strong> वार्षिक बजेट, कर विधेयक पारित गर्ने र सरकारी खर्चको अनुमोदन गर्ने।</li>
+                    <li><strong>कार्यपालिकामाथि निगरानी:</strong> अविश्वासको प्रस्ताव, प्रश्नोत्तर, संसदीय समिति मार्फत सरकारी कामको अनुगमन।</li>
+                    <li><strong>संविधान संशोधन र महाअभियोग:</strong> संविधान संशोधन तथा राष्ट्रपति, प्रधानन्यायाधीशलगायतका पदाधिकारीविरुद्ध महाअभियोग प्रस्ताव पारित गर्ने।</li>
+                </ol>
+            </div></div>
+        </div>
+
+        <!-- Q18 -->
+        <div class="q-card" data-q="18">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१८.</span>
+                <span class="q-text">वित्तीय साक्षरता (Financial Literacy) को अवधारणा स्पष्ट पार्दै आधुनिक जीवनमा बचत (Saving) र बिमा (Insurance) को आवश्यकता र औचित्यबारे विवेचना गर्नुहोस्।</span>
+                <span class="q-marks">५ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>वित्तीय साक्षरता:</strong> पैसाको सही व्यवस्थापन, बजेट, बचत, लगानी र ऋणको विवेकपूर्ण प्रयोग गर्ने ज्ञान, सिप र सचेतना नै <strong>वित्तीय साक्षरता</strong> हो।</p>
+                <p><strong>बचत (Saving) को आवश्यकता:</strong></p>
+                <ul>
+                    <li><strong>भविष्यको सुरक्षा:</strong> बुढ्यौली, रोगव्याधि, बेरोजगारी अवस्थामा बचतले जीवन रक्षा गर्छ।</li>
+                    <li><strong>पूँजी निर्माण:</strong> बचत नै भविष्यको पूँजी हो, जसलाई लगानी गरी थप आम्दानी गर्न सकिन्छ।</li>
+                    <li><strong>मानसिक शान्ति:</strong> पर्याप्त बचत हुँदा हीनताबोध हट्छ र आत्मविश्वास बढ्छ।</li>
+                </ul>
+                <p><strong>बिमा (Insurance) को आवश्यकता:</strong></p>
+                <ul>
+                    <li><strong>जोखिम हस्तान्तरण:</strong> दुर्घटना, आगलागी, प्राकृतिक विपत्तिको आर्थिक क्षतिपूर्ति बिमा कम्पनीले व्यहोर्छ।</li>
+                    <li><strong>आश्रित परिवारको हित:</strong> जीवन बिमाले कमाउने व्यक्तिको निधनपछि परिवारलाई आर्थिक सुरक्षा प्रदान गर्छ।</li>
+                </ul>
+            </div></div>
+        </div>
+
+        <!-- Q19 -->
+        <div class="q-card" data-q="19">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">१९.</span>
+                <span class="q-text">तीव्र र अनियोजित सहरीकरणले नेपालका सहरहरूमा निम्त्याएका कुनै पाँचवटा गम्भीर सामाजिक-वातावरणीय चुनौतीहरू उल्लेख गर्दै तिनको दिगो समाधानका लागि रचनात्मक व्यावहारिक उपायहरू सुझाउनुहोस्।</span>
+                <span class="q-marks">५ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>पाँच चुनौतीहरू:</strong></p>
+                <ol>
+                    <li><strong>प्रदूषण:</strong> सवारी, कलकारखाना, ढल, प्लास्टिक फोहोरका कारण वायु, जल, ध्वनि प्रदूषण चरम।</li>
+                    <li><strong>अव्यवस्थित सुकुम्बासी बस्ती:</strong> जग्गा अतिक्रमण गरी असुरक्षित बस्तीहरू बढेका।</li>
+                    <li><strong>अपर्याप्त पूर्वाधार:</strong> खानेपानी अभाव, लोडसेडिङ, सडक जाम, ढल निकासको समस्या।</li>
+                    <li><strong>कृषियोग्य जमिनको कंक्रिटीकरण:</strong> उर्वर जमिन प्लटिङ गरी घर बनाउँदा खाद्यान्न संकट।</li>
+                    <li><strong>सामाजिक विकृति:</strong> बेरोजगारी, कुलत, डिप्रेसन, चोरी डकैती, साइबर अपराध।</li>
+                </ol>
+                <p><strong>दिगो समाधानका उपायहरू:</strong></p>
+                <ul>
+                    <li><strong>भू-उपयोग नीति:</strong> कृषि, वन, औद्योगिक क्षेत्रको वर्गीकरण र एकीकृत सहरी गुरुयोजना अनुसार मात्र आवास अनुमति।</li>
+                    <li><strong>विकेन्द्रीकरण र स्मार्ट सिटी:</strong> ग्रामीण क्षेत्रमा रोजगारी सिर्जना गरी सहरको चाप घटाउने।</li>
+                    <li><strong>फोहोरको वैज्ञानिक व्यवस्थापन:</strong> कुहिने/नकुहिने वर्गीकरण, कम्पोस्ट मल र पुनरावृत्ति (Recycling)।</li>
+                    <li><strong>हरित पार्कको संरक्षण:</strong> सहरमा हरियाली पार्क र खेलमैदान निर्माण गरी सहरको फोक्सो पुनर्जीवित गर्ने।</li>
+                </ul>
+            </div></div>
+        </div>
+
+        <!-- ──────────────────────────────────────────── -->
+        <!--  GROUP ग                                 -->
+        <!-- ──────────────────────────────────────────── -->
+
+        <h2 style="margin-top:2.6rem;"><span class="group-badge ga">ग</span> लामो उत्तर आउने प्रश्नहरू</h2>
+        <div class="group-intro">सबै प्रश्नहरूको उत्तर दिनुहोस्। (३ × ८ = २४ अङ्क)</div>
+
+        <!-- Q20 -->
+        <div class="q-card" data-q="20">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">२०.</span>
+                <span class="q-text">सहसम्बन्ध (Correlation) र कार्यकारण सम्बन्ध (Causality) बीचको सैद्धान्तिक अवधारणा स्पष्ट पार्नुहोस्। सहसम्बन्ध सूचकाङ्कको स्तर वर्गीकरण गर्दै भिन्नतालाई व्यावहारिक उदाहरणसहित व्याख्या गर्नुहोस्। <span style="font-weight:400;font-size:0.8rem;color:var(--text-light);">(अथवा अध्ययन प्रस्तावनाका ६ अङ्ग)</span></span>
+                <span class="q-marks">८ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>सहसम्बन्ध:</strong> दुई चरहरू बीचको गुणात्मक/परिमाणात्मक सम्बन्धको दिशा र सामर्थ्य नाप्ने विधि।</p>
+                <p><strong>कार्यकारण सम्बन्ध:</strong> एउटा चरको परिवर्तनका कारण अर्को चरमा अनिवार्य परिवर्तन आउँछ भनी प्रमाणित गर्ने सम्बन्ध।</p>
+                <p><strong>सहसम्बन्ध सूचकाङ्क स्तर वर्गीकरण:</strong></p>
+                <ul>
+                    <li><strong>पूर्ण (+१.० वा –१.०):</strong> दुई चर पूर्ण रूपमा सन्तुलित</li>
+                    <li><strong>सबल/उच्च (०.७–०.९):</strong> अत्यधिक बलियो सम्बन्ध</li>
+                    <li><strong>मध्यम (०.४–०.६):</strong> सामान्य अन्तरसम्बन्ध</li>
+                    <li><strong>कमजोर (०.१–०.३):</strong> न्यून क्रियात्मक सम्बन्ध</li>
+                    <li><strong>शून्य (०.०):</strong> कुनै सम्बन्ध छैन</li>
+                </ul>
+                <div class="highlight-box">
+                    <p><strong>व्यावहारिक उदाहरण:</strong> "गर्मीमा आइसक्रिम बिक्री बढ्नु" र "बाढी पहिरो बढ्नु" — <em>सहसम्बन्ध</em> (सँगै घट्छन्) तर कार्यकारण होइन। "अत्यधिक वर्षा" र "पहिरो जानु" — <em>कार्यकारण</em> (वर्षाले नै पहिरो निम्त्याउँछ)।</p>
+                </div>
+                <hr style="margin:0.8rem 0;border-color:var(--border);" />
+                <p><strong>अथवा — अध्ययन प्रस्तावनाका ६ मुख्य अङ्गहरू:</strong></p>
+                <ol>
+                    <li><strong>परिचय:</strong> विषयको पृष्ठभूमि, उठान, औचित्य।</li>
+                    <li><strong>समस्याको कथन:</strong> अनुसन्धानले के सुल्झाउँछ र मुख्य प्रश्नहरू।</li>
+                    <li><strong>उद्देश्यहरू:</strong> सामान्य + ३–४ विशिष्ट, मापनयोग्य लक्ष्य।</li>
+                    <li><strong>साहित्य पुनरावलोकन:</strong> पूर्व–अध्ययनको समीक्षा र शोध–खाडल (Research Gap)।</li>
+                    <li><strong>अध्ययन विधि:</strong> तथ्याङ्क स्रोत, सङ्कलन विधि, प्रशोधन र विश्लेषण।</li>
+                    <li><strong>सन्दर्भ सामग्री:</strong> APA/MLA ढाँचामा साभार स्रोतहरूको आधिकारिक सूची।</li>
+                </ol>
+            </div></div>
+        </div>
+
+        <!-- Q21 — HIGHLIGHTED -->
+        <div class="q-card highlight-q" data-q="21" id="q21">
+            <div class="q-head" onclick="toggleQ(this)" style="background:transparent;">
+                <span class="q-num">⭐ २१.</span>
+                <span class="q-text" style="font-weight:700;">समालोचनात्मक चिन्तन (Critical Thinking) र सिर्जनात्मक चिन्तन (Creative Thinking) को अर्थ बुझाउनुहोस्। यी दुवै चिन्तन प्रक्रिया कसरी एकअर्काका परिपूरक हुन्? यिनीहरूको व्यावहारिक अभ्यासले दैनिक जीवनका समस्या समाधानमा कसरी मद्दत गर्छ, उदाहरणसहित पुष्टि गर्नुहोस्।</span>
+                <span class="q-marks" style="background:var(--accent);color:#1e2a3a;">८ अङ्क · ⭐ विशेष</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner" style="border-top-color:var(--accent);">
+                <p><strong>समालोचनात्मक चिन्तन:</strong> कुनै विचार, हल्ला, वा सूचनालाई जस्ताको तस्तै नस्विकारी त्यसका सबल–कमजोर पक्ष, प्रमाण, तर्कको निष्पक्ष र वस्तुगत विश्लेषण गर्ने क्षमता।</p>
+                <p><strong>सिर्जनात्मक चिन्तन:</strong> स्थापित परम्परागत नियमभन्दा बाहिर गई समस्याको नवीन, मौलिक, नौलो र उपयोगी समाधान वा विचारको खोजी गर्ने कल्पनाशीलता।</p>
+                <p><strong>परिपूरक सम्बन्ध:</strong></p>
+                <ul>
+                    <li><strong>सिर्जनात्मकता = विचारको 'उत्पादक' (Generator):</strong> विविध विकल्प, कल्पना, सम्भावना जन्माउँछ (Divergent Thinking)।</li>
+                    <li><strong>समालोचनात्मकता = विचारको 'परिशोधक' (Filter):</strong> हजारौँ विचारमध्ये कुन वैज्ञानिक, सत्य, सुरक्षित र व्यावहारिक छ भनी परीक्षण गर्छ (Convergent Thinking)।</li>
+                    <li><strong>एकविना अर्को अपूर्ण:</strong> सिर्जनात्मकता विना नयाँ विचार आउँदैनन्; समालोचनात्मकता विना तिनको सही मूल्याङ्कन हुँदैन।</li>
+                </ul>
+                <div class="highlight-box">
+                    <p><strong>व्यावहारिक उदाहरण — 'पठाओ' (Pathao) / 'टुटल' (Tootle) राइड शेयरिङ:</strong></p>
+                    <p>नेपालमा ट्याक्सी ठगी र ट्राफिक जामको समस्या समाधान गर्न केही युवाहरूले <strong>सिर्जनात्मक</strong> सोचबाट मोबाइल एपमार्फत राइड शेयरिङको परिकल्पना गरे। तर कानुन, यात्रु सुरक्षा, भाडा संरचना जस्ता पक्षको <strong>समालोचनात्मक</strong> विश्लेषण गरेर मात्र सेवा लागू गरे। यो दुवै सोचको मेलबाट प्राप्त सफलताको उदाहरण हो।</p>
+                </div>
+                <p><strong>निष्कर्ष:</strong> सिर्जनात्मक चिन्तनले पखेटा दिन्छ भने समालोचनात्मक चिन्तनले धरातलमा खुट्टा टेकाउन सिकाउँछ। आधुनिक जटिल समस्या समाधानका लागि यी दुवैको सन्तुलित अभ्यास अपरिहार्य छ।</p>
+            </div></div>
+        </div>
+
+        <!-- Q22 -->
+        <div class="q-card" data-q="22">
+            <div class="q-head" onclick="toggleQ(this)">
+                <span class="q-num">२२.</span>
+                <span class="q-text">"सन्तुलित शासन र नागरिक अधिकार संरक्षणका लागि राज्यका तीन अङ्गहरू — व्यवस्थापिका, कार्यपालिका र न्यायपालिका — बीच 'शक्ति पृथकीकरण तथा नियन्त्रण र सन्तुलन' को सिद्धान्त हुनु अनिवार्य छ।" यस भनाइलाई नेपालको वर्तमान संवैधानिक अभ्यासका आधारमा विस्तृत चर्चा गर्नुहोस्।</span>
+                <span class="q-marks">८ अङ्क</span>
+                <span class="toggle-icon">▾</span>
+            </div>
+            <div class="q-answer"><div class="q-answer-inner">
+                <p><strong>शक्ति पृथकीकरण:</strong> राज्यको शक्ति एउटै निकायमा केन्द्रित नगरी तीन स्वतन्त्र अङ्गमा विभाजन गर्ने सिद्धान्त।</p>
+                <p><strong>नियन्त्रण र सन्तुलन:</strong> अङ्गहरूले एकअर्काको सीमा नाघ्न नदिने गरी सन्तुलन कायम राख्ने व्यवस्था।</p>
+                <p><strong>नेपालको संवैधानिक अभ्यास:</strong></p>
+                <ul>
+                    <li><strong>व्यवस्थापिका ↔ कार्यपालिका:</strong> संसदले सरकारलाई उत्तरदायी बनाउँछ (अविश्वास, प्रश्नोत्तर); प्रधानमन्त्रीले संसद विघटन गर्न सक्छन्।</li>
+                    <li><strong>कार्यपालिका ↔ न्यायपालिका:</strong> प्रधानन्यायाधीश नियुक्तिमा कार्यपालिकाको भूमिका; सर्वोच्च अदालतले सरकारी निर्णय उत्प्रेषणमार्फत खारेज गर्न सक्छ।</li>
+                    <li><strong>व्यवस्थापिका ↔ न्यायपालिका:</strong> संसदले महाअभियोग पारित गरी न्यायाधीश पदमुक्त गर्न सक्छ; सर्वोच्च अदालतले संसदको ऐनलाई न्यायिक पुनरावलोकन (Judicial Review) मार्फत अमान्य घोषित गर्छ।</li>
+                </ul>
+                <div class="highlight-box">
+                    <p><strong>व्यावहारिक उदाहरण:</strong> संसद् विघटनसम्बन्धी विवादमा सर्वोच्च अदालतले कार्यपालिकाको निर्णय असंवैधानिक ठहर गर्दै संसद् पुनःस्थापना गरेको थियो — न्यायपालिकाले कार्यपालिका र व्यवस्थापिकामाथि गरेको सन्तुलनको बलियो उदाहरण।</p>
+                </div>
+                <p><strong>निष्कर्ष:</strong> शक्ति पृथकीकरण र सन्तुलन राज्यका अङ्गहरू बीचको द्वन्द्व होइन, लोकतन्त्रलाई जीवित राख्ने र निरङ्कुशतालाई परास्त गर्ने संवैधानिक पद्धति हो। नेपालको शासन प्रणालीले कानुनको शासन र जनचाहना अनुरुप दिगो शासन सुनिश्चित गरेको छ।</p>
+            </div></div>
+        </div>
+
+        <!-- ─── FOOTER ─── -->
+        <div class="footer">
+            <span>📘 NEB कक्षा १२ · सामाजिक अध्ययन — आदर्श नमुना प्रश्नपत्र</span>
+            <span>🔑 उत्तर कुञ्जी सहित · ७५ पूर्णाङ्क</span>
+        </div>
+
+    </div> <!-- /container -->
+
+    <!-- ─── SCROLL TO TOP ─── -->
+    <button class="scroll-top" id="scrollTopBtn" aria-label="माथि जानुहोस्">↑</button>
+
+    <script>
+        // ─── Toggle single question ───
+        function toggleQ(headElement) {
+            const card = headElement.closest('.q-card');
+            if (!card) return;
+            card.classList.toggle('open');
+        }
+
+        // ─── Expand all ───
+        document.getElementById('expandAllBtn').addEventListener('click', function() {
+            document.querySelectorAll('.q-card').forEach(el => el.classList.add('open'));
+        });
+
+        // ─── Collapse all ───
+        document.getElementById('collapseAllBtn').addEventListener('click', function() {
+            document.querySelectorAll('.q-card').forEach(el => el.classList.remove('open'));
+        });
+
+        // ─── Scroll to Question 21 ───
+        document.getElementById('scrollToQ21Btn').addEventListener('click', function() {
+            const q21 = document.getElementById('q21');
+            if (q21) {
+                q21.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                // also open it
+                q21.classList.add('open');
+                // highlight flash
+                q21.style.transition = 'background 0.4s';
+                q21.style.background = '#fff3d6';
+                setTimeout(() => { q21.style.background = ''; }, 1200);
+            }
+        });
+
+        // ─── Scroll to top button ───
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
+        scrollBtn.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // ─── Keyboard shortcut: Expand all with 'E', Collapse with 'C' ───
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'e' || e.key === 'E') {
+                if (!e.ctrlKey && !e.metaKey) {
+                    document.getElementById('expandAllBtn').click();
+                    e.preventDefault();
+                }
+            }
+            if (e.key === 'c' || e.key === 'C') {
+                if (!e.ctrlKey && !e.metaKey) {
+                    document.getElementById('collapseAllBtn').click();
+                    e.preventDefault();
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
