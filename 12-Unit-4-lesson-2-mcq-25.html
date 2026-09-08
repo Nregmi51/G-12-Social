@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>सामाजिक सम्बन्ध – एकाइ ४ पाठ २</title>
+    <style>
+        /* ─── RESET & BASE ─── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Noto Sans Devanagari', 'Mukta', system-ui, sans-serif;
+        }
+
+        body {
+            background: #fdf8f0;
+            /* creamy background */
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 16px;
+        }
+
+        .app-wrapper {
+            max-width: 820px;
+            width: 100%;
+            background: #fdf8f0;
+            border-radius: 32px;
+            padding: 0 0 24px 0;
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* ─── HEADER – Blue background, light skyblue text ─── */
+        .header-plate {
+            background: #0a2a5e;
+            /* deep blue */
+            border-radius: 24px 24px 12px 12px;
+            padding: 20px 24px 18px 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 16px rgba(10, 42, 94, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+        .header-plate::after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+        }
+        .header-plate .top-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 16px;
+            position: relative;
+            z-index: 2;
+        }
+        .header-plate .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .header-plate .brand h1 {
+            color: #b0d4ff;
+            /* light skyblue */
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 0.3px;
+            line-height: 1.3;
+            text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+        }
+        .header-plate .brand .narayan {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffe484;
+            font-weight: 800;
+            font-size: 13px;
+            padding: 4px 14px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.20);
+            letter-spacing: 0.5px;
+            white-space: nowrap;
+        }
+        .header-plate .badge-set {
+            background: rgba(255, 255, 255, 0.12);
+            color: #b0d4ff;
+            font-weight: 600;
+            font-size: 13px;
+            padding: 5px 16px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .header-plate .badge-set span {
+            background: #ffcc02;
+            color: #0a2a5e;
+            font-weight: 800;
+            padding: 0 8px;
+            border-radius: 20px;
+            font-size: 11px;
+            line-height: 20px;
+        }
+
+        /* ─── PROGRESS BAR ─── */
+        .progress-strip {
+            display: flex;
+            gap: 6px;
+            margin: 14px 0 8px 0;
+            position: relative;
+            z-index: 2;
+        }
+        .progress-strip .seg {
+            flex: 1;
+            height: 5px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.20);
+            transition: background 0.4s ease;
+        }
+        .progress-strip .seg.done {
+            background: #34c759;
+        }
+        .progress-strip .seg.active {
+            background: #ffcc02;
+        }
+        .progress-strip .seg.wrong {
+            background: #ff3b30;
+        }
+
+        /* ─── STATS ROW ─── */
+        .stats-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .stat-card {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 10px 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(10, 42, 94, 0.06);
+            text-align: center;
+        }
+        .stat-card .label {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #7a8a9e;
+        }
+        .stat-card .value {
+            font-size: 22px;
+            font-weight: 800;
+            color: #0a2a5e;
+            line-height: 1.2;
+            margin-top: 2px;
+        }
+        .stat-card .value small {
+            font-size: 14px;
+            font-weight: 600;
+            color: #7a8a9e;
+        }
+
+        /* ─── QUESTION CARD ─── */
+        .question-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 24px 20px 20px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(10, 42, 94, 0.06);
+            margin-bottom: 12px;
+            transition: opacity 0.25s ease;
+        }
+
+        .q-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+        .q-number {
+            background: #0a2a5e;
+            color: #b0d4ff;
+            font-weight: 800;
+            font-size: 15px;
+            padding: 4px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+        }
+        .q-set-tag {
+            font-size: 12px;
+            font-weight: 700;
+            color: #0a2a5e;
+            background: #e8edf5;
+            padding: 4px 14px;
+            border-radius: 40px;
+        }
+
+        .q-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0a2a5e;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            padding-right: 4px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 10px;
+        }
+        .option-btn {
+            background: #f8f6f2;
+            border: 2px solid #e8e4dc;
+            border-radius: 16px;
+            padding: 14px 18px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #0a2a5e;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            line-height: 1.4;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
+        }
+        .option-btn .opt-label {
+            background: #e8edf5;
+            color: #0a2a5e;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 2px 12px;
+            border-radius: 30px;
+            flex-shrink: 0;
+            min-width: 32px;
+            text-align: center;
+        }
+        .option-btn:active:not(.disabled-opt) {
+            transform: scale(0.98);
+        }
+        .option-btn:hover:not(.disabled-opt) {
+            border-color: #0a2a5e;
+            background: #f0f4fa;
+        }
+
+        .option-btn.correct {
+            border-color: #34c759;
+            background: #e8f9ed;
+            box-shadow: 0 0 0 3px rgba(52, 199, 89, 0.20);
+        }
+        .option-btn.correct .opt-label {
+            background: #34c759;
+            color: #fff;
+        }
+
+        .option-btn.wrong {
+            border-color: #ff3b30;
+            background: #fde8e6;
+            box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.18);
+        }
+        .option-btn.wrong .opt-label {
+            background: #ff3b30;
+            color: #fff;
+        }
+
+        .option-btn.reveal-correct {
+            border-color: #34c759;
+            background: #e8f9ed;
+        }
+        .option-btn.reveal-correct .opt-label {
+            background: #34c759;
+            color: #fff;
+        }
+
+        .option-btn.disabled-opt {
+            cursor: default;
+            opacity: 0.85;
+        }
+
+        /* ─── FEEDBACK PANEL ─── */
+        .feedback-panel {
+            margin-top: 16px;
+            padding: 14px 18px;
+            border-radius: 14px;
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.5;
+            display: none;
+        }
+        .feedback-panel.show {
+            display: block;
+        }
+        .feedback-panel.correct {
+            background: #e8f9ed;
+            border: 2px solid #34c759;
+            color: #0a5a1e;
+        }
+        .feedback-panel.wrong {
+            background: #fde8e6;
+            border: 2px solid #ff3b30;
+            color: #7a1a14;
+        }
+        .feedback-panel .fb-title {
+            font-weight: 800;
+            font-size: 17px;
+        }
+        .feedback-panel .fb-explain {
+            margin-top: 4px;
+            font-weight: 500;
+            opacity: 0.85;
+        }
+
+        /* ─── NAVIGATION ─── */
+        .nav-row {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .nav-left,
+        .nav-right {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            background: #f0f4fa;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            color: #0a2a5e;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .btn:active {
+            transform: scale(0.96);
+        }
+        .btn-primary {
+            background: #0a2a5e;
+            color: #b0d4ff;
+            border-color: #0a2a5e;
+        }
+        .btn-primary:hover {
+            background: #1a3a7e;
+        }
+        .btn-primary:disabled {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+        .btn-outline {
+            background: transparent;
+            border-color: #d0d8e4;
+        }
+        .btn-outline:hover {
+            background: #e8edf5;
+            border-color: #b0bcc8;
+        }
+        .btn-success {
+            background: #34c759;
+            color: #fff;
+            border-color: #34c759;
+        }
+        .btn-success:hover {
+            background: #2db84e;
+        }
+        .btn-danger {
+            background: #ff3b30;
+            color: #fff;
+            border-color: #ff3b30;
+        }
+        .btn-danger:hover {
+            background: #e6352a;
+        }
+        .btn-gold {
+            background: #ffcc02;
+            color: #0a2a5e;
+            border-color: #ffcc02;
+            font-weight: 800;
+        }
+        .btn-gold:hover {
+            background: #f5c000;
+        }
+        .btn-sm {
+            padding: 6px 14px;
+            font-size: 12px;
+        }
+        .btn:disabled {
+            opacity: 0.35;
+            pointer-events: none;
+        }
+
+        /* ─── RESULTS ─── */
+        .results-box {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 32px 24px;
+            border: 2px solid #0a2a5e;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(10, 42, 94, 0.10);
+        }
+        .results-box .big-score {
+            font-size: 56px;
+            font-weight: 900;
+            color: #0a2a5e;
+            line-height: 1.1;
+        }
+        .results-box .sub-score {
+            font-size: 20px;
+            font-weight: 700;
+            color: #3a5a7e;
+            margin-top: 4px;
+        }
+        .results-box .detail-msg {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0a2a5e;
+            margin-top: 12px;
+            padding: 8px 16px;
+            background: #f0f4fa;
+            border-radius: 40px;
+            display: inline-block;
+        }
+        .results-box .stars {
+            font-size: 32px;
+            letter-spacing: 6px;
+            margin: 12px 0 18px 0;
+        }
+        .results-box .btn-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        /* ─── HIDDEN ─── */
+        .hidden {
+            display: none !important;
+        }
+
+        /* ─── TOAST ─── */
+        .toast {
+            position: fixed;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0a2a5e;
+            color: #b0d4ff;
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 14px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+            z-index: 999;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            pointer-events: none;
+            text-align: center;
+            max-width: 90%;
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media (max-width: 600px) {
+            .header-plate {
+                padding: 16px 16px 14px 16px;
+            }
+            .header-plate .brand h1 {
+                font-size: 15px;
+            }
+            .header-plate .brand .narayan {
+                font-size: 11px;
+                padding: 3px 10px;
+            }
+            .header-plate .badge-set {
+                font-size: 11px;
+                padding: 4px 12px;
+            }
+            .q-text {
+                font-size: 18px;
+            }
+            .option-btn {
+                font-size: 16px;
+                padding: 12px 14px;
+            }
+            .stats-row {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 6px;
+            }
+            .stat-card .value {
+                font-size: 18px;
+            }
+            .nav-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .nav-left,
+            .nav-right {
+                justify-content: center;
+            }
+            .btn {
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+            .results-box .big-score {
+                font-size: 42px;
+            }
+        }
+        @media (max-width: 400px) {
+            .q-text {
+                font-size: 16px;
+            }
+            .option-btn {
+                font-size: 14px;
+                padding: 10px 12px;
+                gap: 10px;
+            }
+            .stat-card .value {
+                font-size: 16px;
+            }
+            .header-plate .brand h1 {
+                font-size: 13px;
+            }
+        }
+
+        /* ─── ANIMATIONS ─── */
+        @keyframes fadeSlide {
+            0% {
+                opacity: 0.3;
+                transform: translateY(6px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeSlide 0.3s ease;
+        }
+
+        @keyframes shake {
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+            20%,
+            60% {
+                transform: translateX(-6px);
+            }
+            40%,
+            80% {
+                transform: translateX(6px);
+            }
+        }
+        .shake {
+            animation: shake 0.4s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-wrapper" id="app">
+        <!-- ─── HEADER PLATE (Blue bg, light skyblue text) ─── -->
+        <div class="header-plate">
+            <div class="top-row">
+                <div class="brand">
+                    <h1>📚 सामाजिक सम्बन्धहरूको विकास</h1>
+                    <span class="narayan">🙏 Narayan Sir – Class 12, Unit 4, Lesson 2</span>
+                </div>
+                <div class="badge-set">
+                    <span id="qCountDisplay">२५</span> प्रश्न
+                </div>
+            </div>
+            <!-- progress segments -->
+            <div class="progress-strip" id="progressStrip">
+                <!-- 25 segments, will be generated by JS -->
+            </div>
+        </div>
+
+        <!-- ─── STATS ─── -->
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="label">📝 उत्तर</div>
+                <div class="value" id="answeredCount">0 <small>/ 25</small></div>
+            </div>
+            <div class="stat-card">
+                <div class="label">✅ सही</div>
+                <div class="value" id="correctCount">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">📈 प्रतिशत</div>
+                <div class="value" id="percentDisplay">0%</div>
+            </div>
+        </div>
+
+        <!-- ─── TOAST ─── -->
+        <div class="toast" id="toast"></div>
+
+        <!-- ─── QUIZ VIEW ─── -->
+        <div id="quizView">
+            <div class="question-card fade-in" id="questionCard">
+                <div class="q-header">
+                    <span class="q-number" id="qNumLabel">प्रश्न १</span>
+                    <span class="q-set-tag" id="qSetLabel">एकाइ ४, पाठ २</span>
+                </div>
+                <div class="q-text" id="qText">प्रश्न लोड हुँदै…</div>
+                <div class="options-grid" id="optionsGrid"></div>
+                <div class="feedback-panel" id="feedbackPanel">
+                    <div class="fb-title" id="fbTitle">✅ सही!</div>
+                    <div class="fb-explain" id="fbExplain">व्याख्या</div>
+                </div>
+                <div class="nav-row">
+                    <div class="nav-left">
+                        <button class="btn btn-outline" id="prevBtn">◀ अघिल्लो</button>
+                        <button class="btn btn-outline" id="resetBtn">↻ रिसेट</button>
+                    </div>
+                    <div class="nav-right">
+                        <span style="font-size:13px;font-weight:600;color:#7a8a9e;" id="progressLabel">१ / २५</span>
+                        <button class="btn btn-primary" id="nextBtn">पछिल्लो ▶</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ─── RESULTS VIEW ─── -->
+        <div id="resultsView" class="hidden">
+            <div class="results-box fade-in">
+                <div class="stars" id="resultStars">⭐⭐⭐</div>
+                <div class="big-score" id="resultScore">०%</div>
+                <div class="sub-score" id="resultSub">० / २५ सही</div>
+                <div class="detail-msg" id="resultMsg">राम्रो प्रयास! 💪</div>
+                <div class="btn-group">
+                    <button class="btn btn-gold" id="resultResetBtn">↻ पुनः सुरु गर्नुहोस्</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="height:12px;"></div>
+    </div>
+
+    <script>
+        // ═══════════════════════════════════════════════════
+        //  DATA — 25 Questions (Unit 4, Lesson 2)
+        // ═══════════════════════════════════════════════════
+
+        const ALL_QUESTIONS = [{
+            id: 1,
+            text: 'अथर्ववेदका अनुसार सबैभन्दा पहिले बनेको र दम्पत्य जीवन एवं परिवारको जग बसाल्ने प्राचीन सामाजिक संस्था कुन हो?',
+            options: [
+                { label: 'क', text: 'विदथ' },
+                { label: 'ख', text: 'गार्हपत्य' },
+                { label: 'ग', text: 'आहवनीय' },
+                { label: 'घ', text: 'दक्षिणाग्नी' }
+            ],
+            correct: 1,
+            explain: 'अथर्ववेद अनुसार दाम्पत्य जीवन र परिवारसँग सम्बन्धित मन्त्रहरू ऋग्वेदमा पनि छन् र परिवार सङ्गठनलाई सबैभन्दा पहिले स्थापित गर्ने मुख्य कडी "गार्हपत्य" हो।'
+        }, {
+            id: 2,
+            text: 'अथर्ववेदमा व्याख्या गरिएको "आवाहन गरिएको अवस्थामा जम्मा हुने संस्था वा सङ्गठन" कुन हो, जसलाई सम्भवतः प्राचीन ग्राम सङ्गठन (गाउँ सभा) मानिन्छ?',
+            options: [
+                { label: 'क', text: 'गार्हपत्य' },
+                { label: 'ख', text: 'दक्षिणाग्नी' },
+                { label: 'ग', text: 'विदथ' },
+                { label: 'घ', text: 'आहवनीय' }
+            ],
+            correct: 3,
+            explain: '"आहवनीय" को अर्थ "आवाहन गरिएको अवस्थामा जम्मा हुने संस्था" हो, जसले प्राचीन गाउँ वा ग्राम सङ्गठनको रूपमा आपसी छलफल गर्थ्यो।'
+        }, {
+            id: 3,
+            text: 'प्राचीन कालमा "आहवनीय" संस्थापछि विकास भएको र जहाँ ग्रामका प्रतिनिधिहरू एकत्रित भई जनपद तहको कार्य गर्दथे, त्यो संस्था कुन हो?',
+            options: [
+                { label: 'क', text: 'दक्षिणाग्नी' },
+                { label: 'ख', text: 'विदथ' },
+                { label: 'ग', text: 'गार्हपत्य' },
+                { label: 'घ', text: 'सभा' }
+            ],
+            correct: 0,
+            explain: 'आहवनीय (ग्राम) पछि "दक्षिणाग्नी" संस्थाको विकास भयो, जसले जिल्ला वा जनपद तहको प्रतिनिधित्व गर्थ्यो।'
+        }, {
+            id: 4,
+            text: 'ऋग्वेदमा उल्लेख भएको र प्राचीन कालमा महिला र पुरुष दुवै समान रूपमा सहभागी भई विचार-विमर्श गर्ने संस्था कुन थियो?',
+            options: [
+                { label: 'क', text: 'विश' },
+                { label: 'ख', text: 'जन' },
+                { label: 'ग', text: 'विदथ' },
+                { label: 'घ', text: 'गार्हपत्य' }
+            ],
+            correct: 2,
+            explain: 'ऋग्वेदमा उल्लिखित "विदथ" यस्तो ऐतिहासिक लोकतान्त्रिक सभा थियो जहाँ महिला र पुरुष दुवै समान रूपमा सहभागी हुन्थे।'
+        }, {
+            id: 5,
+            text: 'ऋग्वेदमा कुल वा कुटुम्बलाई क्रमशः कुन-कुन रूपमा जोडिएर ठुलो राजनीतिक एकाइ बन्ने क्रमिक प्रक्रियाको उल्लेख गरिएको छ?',
+            options: [
+                { label: 'क', text: 'जन्मन → विश → जन' },
+                { label: 'ख', text: 'जन → विश → जनपद' },
+                { label: 'ग', text: 'विदथ → आहवनीय → जन' },
+                { label: 'घ', text: 'गार्हपत्य → दक्षिणाग्नी → राष्ट्र' }
+            ],
+            correct: 0,
+            explain: 'प्राचीन कालमा धेरै "जन्मन" (कुल) मिलेर "विश" र धेरै विश मिलेर "जन" बन्ने क्रमिक राजनीतिक विकासक्रम थियो।'
+        }, {
+            id: 6,
+            text: 'वैदिक वाङ्मयमा राजनीतिक रूपले सङ्गठित जन (वा विश) लाई जनाउन प्रयोग गरिएको प्रामाणिक संज्ञा कुन हो?',
+            options: [
+                { label: 'क', text: 'जनपद' },
+                { label: 'ख', text: 'राष्ट्र' },
+                { label: 'ग', text: 'कुल' },
+                { label: 'घ', text: 'गार्हपत्य' }
+            ],
+            correct: 1,
+            explain: 'वैदिक वाङ्मयमा राजनीतिक रूपले पूर्ण सङ्गठित जन वा विशको राज्य स्वरूपलाई "राष्ट्र" भनी परिभाषित गरिएको छ।'
+        }, {
+            id: 7,
+            text: '"अतिप्राचीन कालमा राज्य, राजा वा दण्ड विधान केही नभई मानिसहरू परस्पर पालित र पोषित हुन्थे" भन्ने ऐतिहासिक तथ्य महाभारतको कुन पर्वबाट थाहा हुन्छ?',
+            options: [
+                { label: 'क', text: 'आदिपर्व' },
+                { label: 'ख', text: 'भीष्मपर्व' },
+                { label: 'ग', text: 'वनपर्व' },
+                { label: 'घ', text: 'शान्तिपर्व' }
+            ],
+            correct: 3,
+            explain: 'महाभारतको शान्तिपर्वमा समाजको प्रारम्भिक प्राकृतिक अवस्थाबारे चर्चा गर्दै राज्य र राजा विना नै मानिसहरू धर्मद्वारा अनुशासित भई बस्थे भनिएको छ।'
+        }, {
+            id: 8,
+            text: 'पूर्वीय चिन्तन परम्परा अनुसार "विश्वभरका सम्पूर्ण मानिसका लागि" पालना गर्नु अनिवार्य मानिएका सामान्य नैतिक नियमहरूलाई के भनिन्छ?',
+            options: [
+                { label: 'क', text: 'विशेष धर्म' },
+                { label: 'ख', text: 'वर्ण धर्म' },
+                { label: 'ग', text: 'साधारण धर्म' },
+                { label: 'घ', text: 'आश्रम धर्म' }
+            ],
+            correct: 2,
+            explain: '"साधारण धर्म" भनेको जुनसुकै स्थान, जात र समयका मानिसले पालना गर्नुपर्ने सार्वभौम नैतिक कर्तव्य (जस्तै सत्य बोल्नु, करुणा राख्नु) हो।'
+        }, {
+            id: 9,
+            text: 'मानिसको स्थान, समय, परिवेश र विशिष्ट परिस्थितिका आधारमा फरक पर्न सक्ने कर्तव्य र कानुनहरूलाई पूर्वीय दर्शनमा के भनिन्छ?',
+            options: [
+                { label: 'क', text: 'साधारण धर्म' },
+                { label: 'ख', text: 'विशेष धर्म' },
+                { label: 'ग', text: 'मोक्ष धर्म' },
+                { label: 'घ', text: 'गृहस्थ धर्म' }
+            ],
+            correct: 1,
+            explain: '"विशेष धर्म" ले व्यक्तिको पदीय दायित्व, समय, भूगोल र परिस्थिति अनुसार बद्लिने विशिष्ट कर्तव्यहरूलाई बुझाउँछ।'
+        }, {
+            id: 10,
+            text: 'हिन्दू जीवन पद्धतिमा व्यक्तिको सर्वोच्च र अन्तिम आध्यात्मिक लक्ष्य कुन पुरुषार्थलाई मानिएको छ?',
+            options: [
+                { label: 'क', text: 'धर्म' },
+                { label: 'ख', text: 'अर्थ' },
+                { label: 'ग', text: 'काम' },
+                { label: 'घ', text: 'मोक्ष' }
+            ],
+            correct: 3,
+            explain: 'हिन्दू जीवन पद्धतिमा धर्म, अर्थ र कामको सन्तुलन मिलाउँदै मोक्ष (संसारको बन्धन र अज्ञानताबाट मुक्ति) प्राप्त गर्नु नै परम लक्ष्य हो।'
+        }, {
+            id: 11,
+            text: 'युरोपेली वा पाश्चात्य सभ्यतामा व्यक्तिलाई मात्र केन्द्रमा राखी उसकै अधिकार र स्वतन्त्रतालाई प्राथमिकता दिने दृष्टिकोण कुन हो?',
+            options: [
+                { label: 'क', text: 'समुदायवादी दृष्टिकोण' },
+                { label: 'ख', text: 'वैयक्तिकतावादी दृष्टिकोण' },
+                { label: 'ग', text: 'समाजवादी दृष्टिकोण' },
+                { label: 'घ', text: 'मानवतावादी दृष्टिकोण' }
+            ],
+            correct: 1,
+            explain: 'पश्चिमा चिन्तनमा "वैयक्तिकतावादी दृष्टिकोण" (Individualistic View) ले व्यक्तिलाई समाजभन्दा माथि र केन्द्रमा राख्दछ।'
+        }, {
+            id: 12,
+            text: 'युरोपेली चिन्तन परम्परामा व्यक्तिभन्दा सामाजिक र राजनीतिक संरचना वा समुदायको हितलाई बढी महत्त्व दिने दृष्टिकोण कुन हो?',
+            options: [
+                { label: 'क', text: 'वैयक्तिकतावादी दृष्टिकोण' },
+                { label: 'ख', text: 'समुदायवादी दृष्टिकोण' },
+                { label: 'ग', text: 'पुँजीवादी दृष्टिकोण' },
+                { label: 'घ', text: 'आधुनिक दृष्टिकोण' }
+            ],
+            correct: 1,
+            explain: '"समुदायवादी दृष्टिकोण" (Communitarian View) ले व्यक्तिको अस्तित्व समाज र राजनीतिक संस्थाको विकासमा मात्र अर्थपूर्ण हुने ठान्छ।'
+        }, {
+            id: 13,
+            text: 'नेपाली संस्कृतिको मुख्य विशेषता कुन हो, जसले पश्चिमा वैयक्तिकतावादी र समुदायवादी दृष्टिकोणबीच सन्तुलन कायम गर्छ?',
+            options: [
+                { label: 'क', text: 'पूर्ण वैयक्तिकतावादी दृष्टिकोणको समर्थन' },
+                { label: 'ख', text: 'पश्चिमा समुदायवादको हुबहु नक्कल' },
+                { label: 'ग', text: 'वैयक्तिकतावादी र समुदायवादी दुवै दृष्टिकोणबीचको समन्वय र सामञ्जस्य' },
+                { label: 'घ', text: 'भौतिकवादी जीवनशैलीको पूर्ण अवलम्बन' }
+            ],
+            correct: 2,
+            explain: 'नेपाली सामाजिक संस्कृतिमा न त चरम वैयक्तिकतावादलाई काखी च्यापिन्छ, न त समुदायको नाममा व्यक्तिको स्वतन्त्रता हनन गरिन्छ; यहाँ दुवैको सन्तुलन (समन्वय) हुन्छ।'
+        }, {
+            id: 14,
+            text: '"समाजको आधारभूत एकाइ व्यक्ति हो भने आधारभूत संस्था परिवार हो।" हिन्दू समाजमा राष्ट्र र समाज विकासका लागि परिवारको यो महत्त्व कुन आश्रममार्फत स्पष्ट पारिएको छ?',
+            options: [
+                { label: 'क', text: 'ब्रह्मचर्याश्रम' },
+                { label: 'ख', text: 'गृहस्थाश्रम' },
+                { label: 'ग', text: 'वानप्रस्थाश्रम' },
+                { label: 'घ', text: 'सन्न्यासाश्रम' }
+            ],
+            correct: 1,
+            explain: '"गृहस्थाश्रम" लाई समाज र राष्ट्रको मेरुदण्ड मानिएको छ, किनकि यसै आश्रममार्फत बाँकी तीन आश्रमका मानिसहरूको पालनपोषण र आर्थिक अन्तरनिर्भरता चल्छ।'
+        }, {
+            id: 15,
+            text: 'सामाजिकीकरण र व्यक्तिको जीवनशैली, सोच, दृष्टिकोण एवं चरित्र निर्माणमा "संस्कारको प्राथमिक प्रयोग" कहाँ हुने गर्दछ?',
+            options: [
+                { label: 'क', text: 'कलेज वा कलेजका साथीहरूमा' },
+                { label: 'ख', text: 'परिवारमा' },
+                { label: 'ग', text: 'राज्यको प्रशासनिक निकायमा' },
+                { label: 'घ', text: 'मिडिया र सामाजिक सञ्जालमा' }
+            ],
+            correct: 1,
+            explain: 'परिवार नै संस्कार र नैतिकता सिकाउने पहिलो पाठशाला हो, जहाँ मानिसले समाजमा बाँच्ने प्रारम्भिक पाठहरू सिक्छ।'
+        }, {
+            id: 16,
+            text: 'प्राचीन पूर्वीय सामाजिक संरचनाको आधारभूत खुड्किलो "व्यक्ति र परिवार" पछि आउने "कुल" र आफ्ना कुलका मानिस एवं आफन्तसहितको समुदायलाई के भनिन्छ?',
+            options: [
+                { label: 'क', text: 'जनपद' },
+                { label: 'ख', text: 'कुटुम्ब' },
+                { label: 'ग', text: 'विश' },
+                { label: 'घ', text: 'सङ्घ' }
+            ],
+            correct: 1,
+            explain: 'आफ्नो कुल र नातागोता मिलेर बन्ने विस्तृत सामाजिक घेरालाई पूर्वीय समाजशास्त्रमा "कुटुम्ब" भनिएको छ।'
+        }, {
+            id: 17,
+            text: '"कुलभन्दा ग्राम (गाउँ) ठुलो एकाइ हो र एउटा ग्राममा अनेक कुलहरू रहन्छन्" भन्ने ऐतिहासिक तथ्य कुन-कुन ग्रन्थका श्लोकहरूबाट प्रमाणित हुन्छ?',
+            options: [
+                { label: 'क', text: 'विदुर नीति र चाणक्य नीति' },
+                { label: 'ख', text: 'शुक्र नीति र मनुस्मृति' },
+                { label: 'ग', text: 'भागवत गीता र ऋग्वेद' },
+                { label: 'घ', text: 'महाभारत र पुराणहरू' }
+            ],
+            correct: 0,
+            explain: 'विदुर नीति र चाणक्य नीति दुवैमा "कुलभन्दा ग्राम ठुलो एकाइ हो" भन्ने श्लोकहरू उल्लेख भई प्राचीन विकेन्द्रीकरणको सिद्धान्त पुष्टि गर्छन्।'
+        }, {
+            id: 18,
+            text: 'प्राचीन सामाजिक संरचनामा "कुल" र "गण" को सम्बन्ध क्रमशः केसँग गाँसिएको थियो?',
+            options: [
+                { label: 'क', text: 'कुल राजनीतिक दलसँग र गण धर्मसँग' },
+                { label: 'ख', text: 'कुल जन्मसँग र गण जनपदसँग' },
+                { label: 'ग', text: 'कुल व्यापारसँग र गण विवाहसँग' },
+                { label: 'घ', text: 'कुल प्रवाससँग र गण कुलसँग' }
+            ],
+            correct: 1,
+            explain: '"कुल" जन्म र जैविक वंशसँग जोडिएको थियो भने "गण" जनपद जस्तो वृहत् भौगोलिक र राजनीतिक क्षेत्रसँग जोडिएको थियो।'
+        }, {
+            id: 19,
+            text: 'प्राचीन कालमा सामाजिक अन्तरनिर्भरतालाई बलियो बनाउने तथा सहयोग आदानप्रदान गर्ने "गोष्ठी" (गुठी) जस्ता सामाजिक संस्थाहरूले कुन क्षेत्रमा काम गर्दथे?',
+            options: [
+                { label: 'क', text: 'केवल वैदेशिक व्यापारमा' },
+                { label: 'ख', text: 'सामाजिक, सांस्कृतिक र धार्मिक हित एवं अन्तरनिर्भरता सुदृढ गर्न' },
+                { label: 'ग', text: 'राजाको सैन्य सञ्चालनमा' },
+                { label: 'घ', text: 'आयात-निर्यात कर सङ्कलनमा' }
+            ],
+            correct: 1,
+            explain: '"गोष्ठी" (गुठी) परम्पराले धर्म, संस्कृति, चाडपर्व र मलामी जाने जस्ता सामाजिक विपद्का समयमा आपसी अन्तरनिर्भरता र सद्भाव कायम राख्थ्यो।'
+        }, {
+            id: 20,
+            text: 'प्राचीन व्यापारिक तथा शिल्प क्षेत्रमा "श्रेणी", "निगम" र "पूग" भन्नाले क्रमशः के बुझिन्थ्यो?',
+            options: [
+                { label: 'क', text: 'शिल्पीहरूको सङ्गठन (श्रेणी) र व्यापारीहरूको संस्था (निगम तथा पूग)' },
+                { label: 'ख', text: 'धार्मिक सम्प्रदायहरू र सैन्य दलहरू' },
+                { label: 'ग', text: 'राज्यका विभिन्न मन्त्रालयहरू र कर कार्यालयहरू' },
+                { label: 'घ', text: 'कृषकका समूहहरू र वन रक्षकहरू' }
+            ],
+            correct: 0,
+            explain: 'प्राचीन औद्योगिक इतिहासमा शिल्पी वा कालिगढहरूको सङ्गठनलाई "श्रेणी" र व्यापारीहरूको छाता सङ्गठनलाई "निगम" वा "पूग" भनिन्थ्यो।'
+        }, {
+            id: 21,
+            text: 'प्राचीन नेपाल र भारतवर्षमा सार्थ समवाय, सव्यावहारिक, र सम्भूय समुत्थान भन्नाले के बुझिन्थ्यो?',
+            options: [
+                { label: 'क', text: 'प्राचीन शैक्षिक संस्थाहरू' },
+                { label: 'ख', text: 'ठुला र व्यवस्थित व्यापारिक संस्थाहरू' },
+                { label: 'ग', text: 'साना घरेलु उद्योगहरू' },
+                { label: 'घ', text: 'वन व्यवस्थापन समितिहरू' }
+            ],
+            correct: 1,
+            explain: 'प्राचीन कालमा आन्तरिक र बाह्य व्यापार सञ्चालन गर्ने व्यावसायिक कम्पनी वा बहुराष्ट्रिय प्रकृतिका निगमहरूलाई सार्थ समवाय र सम्भूय समुत्थान भनिन्थ्यो।'
+        }, {
+            id: 22,
+            text: 'प्राचीन पूर्वीय समाजमा मानिसहरूको व्यक्तिगत "गुण र कर्मका आधारमा" समाजको कार्य विभाजन गर्न स्थापित गरिएको सामाजिक व्यवस्था कुन हो?',
+            options: [
+                { label: 'क', text: 'वर्ग व्यवस्था' },
+                { label: 'ख', text: 'वर्ण व्यवस्था' },
+                { label: 'ग', text: 'आश्रम व्यवस्था' },
+                { label: 'घ', text: 'लिङ्गीय व्यवस्था' }
+            ],
+            correct: 1,
+            explain: 'पूर्वीय दर्शनमा "वर्ण व्यवस्था" (ब्राह्मण, क्षत्रिय, वैश्य, शूद्र) जन्मका आधारमा नभई व्यक्तिको अन्तर्निहित गुण र कर्मका आधारमा समाजको कार्य विभाजन गर्न बनेको थियो।'
+        }, {
+            id: 23,
+            text: 'व्यक्तिको उमेर, परिपक्वता र जीवनको अवस्थाका आधारमा कर्तव्य, जिम्मेवारी र अनुशासन बाँडफाँड गर्ने प्राचीन पूर्वीय पद्धतिका ४ चरणहरूलाई के भनिन्छ?',
+            options: [
+                { label: 'क', text: 'वर्ण व्यवस्था' },
+                { label: 'ख', text: 'पुरुषार्थ व्यवस्था' },
+                { label: 'ग', text: 'आश्रम व्यवस्था' },
+                { label: 'घ', text: 'श्रेणी व्यवस्था' }
+            ],
+            correct: 2,
+            explain: 'जीवनका चार चरण (ब्रह्मचर्य, गृहस्थ, वानप्रस्थ, र सन्न्यास) लाई आश्रम व्यवस्था भनिन्छ, जसले जीवनलाई व्यवस्थित बनाउँथ्यो।'
+        }, {
+            id: 24,
+            text: 'आधुनिक युगमा विभिन्न राष्ट्रहरूबीचको पारस्परिक निर्भरता, पर्यटन, अन्तर्राष्ट्रिय व्यापार, र सूचनाको आदानप्रदान कुन अवधारणासँग प्रत्यक्ष रूपमा जोडिएका छन्?',
+            options: [
+                { label: 'क', text: 'आत्मनिर्भरता र एकाङ्कीपन' },
+                { label: 'ख', text: 'क्षेत्रीयतावाद र बन्द बजार' },
+                { label: 'ग', text: 'वैश्वीकरण र सामाजिक अन्तरनिर्भरता' },
+                { label: 'घ', text: 'प्राचीन सामाजिक संरचनाको संकुचन' }
+            ],
+            correct: 2,
+            explain: 'आधुनिक युगमा सूचना, पर्यटन र अन्तर्राष्ट्रिय बजारका कारण विश्वका सम्पूर्ण देशहरू एकअर्कासँग गहिरो रूपमा अन्तरनिर्भर (वैश्वीकरण) भएका छन्।'
+        }, {
+            id: 25,
+            text: 'आजको आधुनिक समाजमा मानिसहरू भौतिक रूपमा टाढा भए तापनि "भर्चुअल समुदाय" मा जोडिएर अन्तरनिर्भर हुन सघाउने मुख्य चालक के हो?',
+            options: [
+                { label: 'क', text: 'परम्परागत यातायात माध्यम' },
+                { label: 'ख', text: 'सामाजिक सञ्जाल, प्रविधि र इन्टरनेटको व्यापक पहुँच' },
+                { label: 'ग', text: 'हस्तलिखित चिठीपत्र प्रणाली' },
+                { label: 'घ', text: 'संयुक्त परिवार प्रणाली' }
+            ],
+            correct: 1,
+            explain: 'सूचना प्रविधि, इन्टरनेट र सामाजिक सञ्जालको असाधारण विकासले आधुनिक मानिसलाई "भर्चुअल" रूपमा २४सै घण्टा विश्वव्यापी समुदायसँग जोडेको छ।'
+        }];
+
+        // ─── STATE ────────────────────────────────────────
+        let currentIndex = 0;
+        let answers = {}; // { questionId: selectedIndex }
+        let revealed = {}; // { questionId: true }
+        let isAnswering = false;
+        let autoTimer = null;
+
+        // DOM refs
+        const qText = document.getElementById('qText');
+        const qNumLabel = document.getElementById('qNumLabel');
+        const qSetLabel = document.getElementById('qSetLabel');
+        const optionsGrid = document.getElementById('optionsGrid');
+        const feedbackPanel = document.getElementById('feedbackPanel');
+        const fbTitle = document.getElementById('fbTitle');
+        const fbExplain = document.getElementById('fbExplain');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const resetBtn = document.getElementById('resetBtn');
+        const progressLabel = document.getElementById('progressLabel');
+        const progressStrip = document.getElementById('progressStrip');
+        const answeredCount = document.getElementById('answeredCount');
+        const correctCount = document.getElementById('correctCount');
+        const percentDisplay = document.getElementById('percentDisplay');
+        const quizView = document.getElementById('quizView');
+        const resultsView = document.getElementById('resultsView');
+        const resultScore = document.getElementById('resultScore');
+        const resultSub = document.getElementById('resultSub');
+        const resultMsg = document.getElementById('resultMsg');
+        const resultStars = document.getElementById('resultStars');
+        const resultResetBtn = document.getElementById('resultResetBtn');
+
+        // ─── INIT PROGRESS STRIP ─────────────────────────
+        function initProgress() {
+            const total = ALL_QUESTIONS.length;
+            progressStrip.innerHTML = '';
+            for (let i = 0; i < total; i++) {
+                const seg = document.createElement('div');
+                seg.className = 'seg';
+                seg.dataset.idx = i;
+                progressStrip.appendChild(seg);
+            }
+        }
+        initProgress();
+
+        // ─── UPDATE PROGRESS ─────────────────────────────
+        function updateProgress() {
+            const segs = progressStrip.querySelectorAll('.seg');
+            segs.forEach((seg, i) => {
+                const q = ALL_QUESTIONS[i];
+                seg.className = 'seg';
+                if (answers[q.id] !== undefined) {
+                    if (answers[q.id] === q.correct) {
+                        seg.classList.add('done');
+                    } else {
+                        seg.classList.add('wrong');
+                    }
+                }
+                if (i === currentIndex && answers[q.id] === undefined) {
+                    seg.classList.add('active');
+                }
+            });
+        }
+
+        // ─── UPDATE STATS ─────────────────────────────────
+        function updateStats() {
+            const total = ALL_QUESTIONS.length;
+            const answered = ALL_QUESTIONS.filter(q => answers[q.id] !== undefined).length;
+            const correct = ALL_QUESTIONS.filter(q => answers[q.id] === q.correct).length;
+            const pct = answered ? Math.round((correct / answered) * 100) : 0;
+
+            answeredCount.innerHTML = `${answered} <small>/ ${total}</small>`;
+            correctCount.textContent = correct;
+            percentDisplay.textContent = pct + '%';
+        }
+
+        // ─── SHOW TOAST ──────────────────────────────────
+        function showToast(msg, dur) {
+            const t = document.getElementById('toast');
+            t.textContent = msg;
+            t.classList.add('show');
+            clearTimeout(t._timer);
+            t._timer = setTimeout(() => t.classList.remove('show'), dur || 1800);
+        }
+
+        // ─── RENDER QUESTION ─────────────────────────────
+        function renderQuestion() {
+            const q = ALL_QUESTIONS[currentIndex];
+            if (!q) return;
+
+            qNumLabel.textContent = `प्रश्न ${q.id}`;
+            qSetLabel.textContent = 'एकाइ ४, पाठ २';
+            qText.textContent = q.text;
+
+            optionsGrid.innerHTML = '';
+            q.options.forEach((opt, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'option-btn';
+                btn.dataset.idx = idx;
+                const isAnswered = answers[q.id] !== undefined;
+                const selected = answers[q.id] === idx;
+                const isCorrect = idx === q.correct;
+                const showReveal = revealed[q.id] && isCorrect;
+
+                if (isAnswered) {
+                    btn.classList.add('disabled-opt');
+                    if (selected && isCorrect) btn.classList.add('correct');
+                    else if (selected && !isCorrect) btn.classList.add('wrong');
+                    else if (showReveal || (revealed[q.id] && isCorrect)) btn.classList.add('reveal-correct');
+                }
+
+                btn.innerHTML = `<span class="opt-label">${opt.label}</span> ${opt.text}`;
+                btn.addEventListener('click', () => handleOptionClick(q, idx));
+                optionsGrid.appendChild(btn);
+            });
+
+            // feedback
+            if (answers[q.id] !== undefined) {
+                const isCorrect = answers[q.id] === q.correct;
+                feedbackPanel.className = 'feedback-panel show ' + (isCorrect ? 'correct' : 'wrong');
+                fbTitle.textContent = isCorrect ? '✅ सही!' : '❌ गलत!';
+                fbExplain.textContent = q.explain;
+            } else {
+                feedbackPanel.className = 'feedback-panel';
+            }
+
+            progressLabel.textContent = `${currentIndex+1} / ${ALL_QUESTIONS.length}`;
+            updateProgress();
+            updateStats();
+
+            // scroll to top of card on mobile
+            document.getElementById('questionCard').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // update nav buttons
+            prevBtn.disabled = currentIndex === 0;
+        }
+
+        // ─── HANDLE OPTION CLICK ─────────────────────────
+        function handleOptionClick(q, idx) {
+            if (isAnswering) return;
+            if (answers[q.id] !== undefined) {
+                showToast('यो प्रश्नको जवाफ दिइसकियो।');
+                return;
+            }
+            isAnswering = true;
+            answers[q.id] = idx;
+            revealed[q.id] = true;
+
+            const isCorrect = idx === q.correct;
+
+            // re-render question with feedback
+            renderQuestion();
+
+            // Show toast feedback
+            showToast(isCorrect ? '✅ सही उत्तर!' : '❌ गलत! सही उत्तर हेर्नुहोस्।', 1200);
+
+            // auto advance after 1.5 seconds
+            clearTimeout(autoTimer);
+            autoTimer = setTimeout(() => {
+                if (currentIndex < ALL_QUESTIONS.length - 1) {
+                    // find next unanswered if any, else go to next sequential
+                    let nextIdx = currentIndex + 1;
+                    for (let i = nextIdx; i < ALL_QUESTIONS.length; i++) {
+                        if (answers[ALL_QUESTIONS[i].id] === undefined) {
+                            nextIdx = i;
+                            break;
+                        }
+                    }
+                    currentIndex = nextIdx;
+                    renderQuestion();
+                } else {
+                    // all questions done? check if all answered
+                    const allAnswered = ALL_QUESTIONS.every(qq => answers[qq.id] !== undefined);
+                    if (allAnswered) {
+                        showResults();
+                    } else {
+                        // move to next unanswered
+                        const nextUnanswered = ALL_QUESTIONS.findIndex(qq => answers[qq.id] === undefined);
+                        if (nextUnanswered !== -1) {
+                            currentIndex = nextUnanswered;
+                            renderQuestion();
+                        } else {
+                            showResults();
+                        }
+                    }
+                }
+                isAnswering = false;
+            }, 1500);
+        }
+
+        // ─── SHOW RESULTS ─────────────────────────────────
+        function showResults() {
+            quizView.classList.add('hidden');
+            resultsView.classList.remove('hidden');
+
+            const total = ALL_QUESTIONS.length;
+            const correct = ALL_QUESTIONS.filter(q => answers[q.id] === q.correct).length;
+            const pct = Math.round((correct / total) * 100);
+
+            resultScore.textContent = pct + '%';
+            resultSub.textContent = `${correct} / ${total} सही`;
+
+            let msg = '';
+            let stars = '';
+            if (pct === 100) { msg = '🌟 उत्कृष्ट! सबै सही!';
+                stars = '⭐⭐⭐⭐⭐'; } else if (pct >= 80) { msg = '👏 धेरै राम्रो!';
+                stars = '⭐⭐⭐⭐'; } else if (pct >= 60) { msg = '💪 राम्रो प्रयास! अझ सुधार गर्नुहोस्।';
+                stars = '⭐⭐⭐'; } else if (pct >= 40) { msg = '📖 अभ्यास जारी राख्नुहोस्!';
+                stars = '⭐⭐'; } else { msg = '🔄 पुनः प्रयास गर्नुहोस्!';
+                stars = '⭐'; }
+            resultMsg.textContent = msg;
+            resultStars.textContent = stars;
+
+            // reset button
+            resultResetBtn.onclick = resetAll;
+        }
+
+        // ─── RESET ALL ──────────────────────────────────
+        function resetAll() {
+            answers = {};
+            revealed = {};
+            currentIndex = 0;
+            isAnswering = false;
+            clearTimeout(autoTimer);
+            resultsView.classList.add('hidden');
+            quizView.classList.remove('hidden');
+            renderQuestion();
+            showToast('सबै रिसेट गरियो, फेरि सुरु गर्नुहोस्!');
+        }
+
+        // ─── NAVIGATION ──────────────────────────────────
+        prevBtn.addEventListener('click', () => {
+            if (isAnswering) return;
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderQuestion();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (isAnswering) return;
+            const q = ALL_QUESTIONS[currentIndex];
+            if (answers[q.id] === undefined) {
+                showToast('कृपया पहिले यो प्रश्नको उत्तर दिनुहोस्।');
+                return;
+            }
+            if (currentIndex < ALL_QUESTIONS.length - 1) {
+                // go to next unanswered if any, else just next
+                let nextIdx = currentIndex + 1;
+                for (let i = nextIdx; i < ALL_QUESTIONS.length; i++) {
+                    if (answers[ALL_QUESTIONS[i].id] === undefined) {
+                        nextIdx = i;
+                        break;
+                    }
+                }
+                currentIndex = nextIdx;
+                renderQuestion();
+            } else {
+                // last question, if all answered show results else stay
+                const allAnswered = ALL_QUESTIONS.every(qq => answers[qq.id] !== undefined);
+                if (allAnswered) {
+                    showResults();
+                } else {
+                    showToast('अझै केही प्रश्नहरू बाँकी छन्, कृपया उत्तर दिनुहोस्।');
+                }
+            }
+        });
+
+        resetBtn.addEventListener('click', resetAll);
+
+        // ─── INIT ──────────────────────────────────────────
+        renderQuestion();
+        showToast('🙏 Narayan Sir – एकाइ ४, पाठ २ MCQ', 2000);
+    </script>
+
+</body>
+</html>
