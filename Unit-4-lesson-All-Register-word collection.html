@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>एकाइ ४ – सम्पूर्ण पारिभाषिक शब्दावली सङ्ग्रह (कक्षा १२)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f5f0f8;
+            color: #1a1a2e;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fefcf7;
+            color: #1a1a2e;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #4A148C;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #7B1FA2;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #4d5f72;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #7B1FA2;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #f0eaf4;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #d8c8e0;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #7B1FA2;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #7B1FA2;
+            margin-right: 6px;
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #7B1FA2;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #AB47BC;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- SECTION HEADERS - #7B1FA2 ----- */
+        .section-head {
+            font-size: 1.7rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #7B1FA2;
+            margin: 42px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(123, 31, 162, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.5rem;
+            color: #f5d742;
+        }
+
+        .section-head .mark-badge {
+            color: #7B1FA2;
+            font-size: 0.7rem;
+            font-weight: 800;
+            padding: 3px 14px;
+            border-radius: 40px;
+            margin-left: 4px;
+            background: #ffffff;
+        }
+
+        .section-head .mark-badge.gold { background: #f5d742; color: #0b2b4a; }
+        .section-head .mark-badge.green { background: #7dcea0; color: #0b2b4a; }
+        .section-head .mark-badge.purple { background: #b39ddb; color: #0b2b4a; }
+        .section-head .mark-badge.blue { background: #81d4fa; color: #0b2b4a; }
+        .section-head .mark-badge.pink { background: #f48fb1; color: #0b2b4a; }
+
+        .sub-head {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: #4A148C;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #7B1FA2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #7B1FA2;
+            font-size: 1.1rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #7B1FA2;
+            transition: all 0.2s ease;
+        }
+
+        .glossary-item:hover {
+            box-shadow: 0 4px 12px rgba(123, 31, 162, 0.12);
+            transform: translateX(4px);
+        }
+
+        .glossary-item strong {
+            color: #4A148C;
+            font-size: 1.15rem;
+            font-weight: 900;
+        }
+
+        .glossary-item p {
+            margin-top: 3px;
+            font-size: 1.125rem;
+            color: #2d3a4a;
+            font-weight: 500;
+        }
+
+        .glossary-item .english {
+            color: #7B1FA2;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #7B1FA2;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(123, 31, 162, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #4A148C;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(123, 31, 162, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #7B1FA2;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #4A148C;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #d8c8e0;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #7B1FA2;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        .info-box {
+            background: #f0eaf4;
+            border-radius: 16px;
+            padding: 18px 24px;
+            border: 2px solid #d8c8e0;
+            margin: 12px 0;
+            text-align: center;
+        }
+
+        .info-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            color: #4A148C;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.5rem;
+            }
+
+            .section-head {
+                font-size: 1.35rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.15rem;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .glossary-item strong {
+                font-size: 1.05rem;
+            }
+            .glossary-item p {
+                font-size: 0.98rem;
+            }
+            .glossary-item .english {
+                font-size: 0.85rem;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+            .info-box p {
+                font-size: 1.02rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-book"></i>
+                    एकाइ ४: समाजको विकास र दर्शन
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-graduation-cap"></i> सम्पूर्ण शब्दावली सङ्ग्रह</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ४
+            </span>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#section1"><i class="fas fa-chevron-right"></i> पाठ १ – सामाजिक विविधता</a>
+                <a href="#section2"><i class="fas fa-chevron-right"></i> पाठ २ – सामाजिक सम्बन्ध</a>
+                <a href="#section3"><i class="fas fa-chevron-right"></i> पाठ ३ – जीवन दर्शन</a>
+                <a href="#section4"><i class="fas fa-chevron-right"></i> पाठ ४ – दर्शनको उपयोगिता</a>
+                <a href="#section5"><i class="fas fa-chevron-right"></i> पाठ ५ – सामाजिक रूपान्तरण</a>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <p><i class="fas fa-info-circle" style="color:#7B1FA2;"></i> यस सङ्ग्रहमा एकाइ ४ का सम्पूर्ण ५ वटा पाठहरूका <strong>५४</strong> वटा मुख्य पारिभाषिक, सामाजिक, दार्शनिक र प्राविधिक शब्दहरूको आधिकारिक, प्राज्ञिक र विस्तृत परिभाषा समावेश गरिएको छ।</p>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ १ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section1">
+            <i class="fas fa-globe-asia"></i>
+            पाठ १: वर्तमान विश्वका सामाजिक विविधता र विशेषता
+            <span class="mark-badge gold">१२ शब्द</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> सामाजिक विविधता</strong>
+                <span class="english">(Social Diversity)</span>
+                <p>समाजमा अनेक जातजाति, भाषा, धर्म, संस्कृति, प्रजाति, लिङ्ग र भूगोल भएका मानिसहरू सँगसँगै बसोबास गरेको र तिनका आफ्नै मौलिक पहिचान रहेको सामाजिक अवस्था <span class="ref">[१, २]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> बहुजातीय समाज</strong>
+                <span class="english">(Multi-ethnic Society)</span>
+                <p>एउटै भौगोलिक वा राष्ट्रिय सिमानाभित्र विभिन्न सांस्कृतिक, भाषिक र ऐतिहासिक पृष्ठभूमि बोकेका फरक-फरक जातीय समुदायहरू बसोबास गर्ने समाज <span class="ref">[१, २]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> बहुभाषिक समाज</strong>
+                <span class="english">(Multilingual Society)</span>
+                <p>समाजका नागरिकहरूले दैनिक व्यवहार र सञ्चारका लागि अनेकौँ मातृभाषा वा भाषाहरू प्रयोग गर्ने बहुसांस्कृतिक सामाजिक संरचना <span class="ref">[१, ३]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> बहुसांस्कृतिक समाज</strong>
+                <span class="english">(Multicultural Society)</span>
+                <p>विभिन्न धर्म, परम्परा, रीतिरिवाज, चाडपर्व र जीवनशैली भएका मानिसहरूको साझा बसोबास र अन्तरक्रिया रहेको समृद्ध समाज <span class="ref">[१, ३]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> बहुधार्मिक समाज</strong>
+                <span class="english">(Multireligious Society)</span>
+                <p>हिन्दू, बौद्ध, इस्लाम, किराँत, इसाई जस्ता विभिन्न धार्मिक आस्था र सम्प्रदायका मानिसहरू एकापसमा धार्मिक सहिष्णुता कायम गरी बस्ने समाज <span class="ref">[१, २]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> धार्मिक आस्थाजन्य विविधता</strong>
+                <span class="english">(Religious Diversity)</span>
+                <p>ईश्वर, अध्यात्म र पूजापाठका सन्दर्भमा विभिन्न धर्म, सम्प्रदाय (जस्तै: थेरवादी/महायानी, सुन्नी/शिया, क्याथोलिक/प्रोटेस्टेन्ट) र शाखाहरूमा विभाजन भई आ-आफ्नो आस्था पालना गर्ने अवस्था <span class="ref">[१, २]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> प्रजातीय विविधता</strong>
+                <span class="english">(Racial Diversity)</span>
+                <p>मानिसका बाह्य शारीरिक बनावट, छालाको रङ (जस्तै: काला, सेता, मङ्गोलोइड), कपाल र अनुहारको मोडावटका आधारमा पाइने प्राकृतिक मानवीय भिन्नता <span class="ref">[२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> भाषिक विविधता</strong>
+                <span class="english">(Linguistic Diversity)</span>
+                <p>भावना र विचार अभिव्यक्त गर्ने माध्यमका रूपमा समाजमा धेरै भाषाहरू बोलिनु र तिनको संरक्षण गरिनु <span class="ref">[२, ३]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> सांस्कृतिक विविधता</strong>
+                <span class="english">(Cultural Diversity)</span>
+                <p>विभिन्न जातजाति र भूगोल अनुसार मानिसका खानपान, भेषभूषा, चाडपर्व, कला र जीवनशैलीमा पाइने मौलिक भिन्नता <span class="ref">[३]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> समावेशीकरण</strong>
+                <span class="english">(Inclusion)</span>
+                <p>समाजमा रहेका विविधतालाई स्वीकार गर्दै राज्य र समाजका हरेक संरचनामा सबै वर्ग, लिङ्ग, जाति र भाषाका मानिसलाई न्यायोचित प्रतिनिधित्व र अवसर प्रदान गर्ने प्रक्रिया <span class="ref">[१]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> भर्चुअल समुदाय</strong>
+                <span class="english">(Virtual Community)</span>
+                <p>प्रविधिको विकाससँगै इन्टरनेट, मिडिया र सामाजिक सञ्जालका माध्यमबाट भौगोलिक दुरीभन्दा टाढा रहेर पनि वैचारिक र सामाजिक रूपमा जोडिएका मानिसहरूको अनलाइन समूह <span class="ref">[४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> धार्मिक सहिष्णुता</strong>
+                <span class="english">(Religious Tolerance)</span>
+                <p>आफ्नो धर्मप्रति आस्था राख्दै अरूका धर्म, सम्प्रदाय र धार्मिक परम्पराप्रति आदर र सम्मान व्यक्त गर्ने उच्च नैतिक सामाजिक संस्कृति <span class="ref">[२]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ २ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section2">
+            <i class="fas fa-handshake"></i>
+            पाठ २: सामाजिक सम्बन्धहरूको विकास र सामाजिक अन्तरनिर्भरता
+            <span class="mark-badge green">१४ शब्द</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> गार्हपत्य</strong>
+                <span class="english">(Garhapatya)</span>
+                <p>अथर्ववेद अनुसार दाम्पत्य जीवन, विवाह र पारिवारिक जग बसाल्ने सबैभन्दा प्राचीन आधारभूत सामाजिक संस्था <span class="ref">[६]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> आहवनीय</strong>
+                <span class="english">(Ahavaniya)</span>
+                <p>प्राचीन वैदिक कालमा गाउँ वा समुदाय तहमा मानिसहरू भेला भई सामाजिक निर्णयहरू गर्ने गाउँ सङ्गठन वा सभा <span class="ref">[६]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> दक्षिणाग्नी</strong>
+                <span class="english">(Dakshinagni)</span>
+                <p>प्राचीन वैदिक कालमा जनपद वा क्षेत्र तहमा गाउँका प्रतिनिधिहरू एकत्र भई साझा पहिचान र सुरक्षाका लागि बनाइएको सामाजिक-राजनीतिक संस्था <span class="ref">[६]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> विदथ</strong>
+                <span class="english">(Vidatha)</span>
+                <p>ऋग्वेदकालीन सबैभन्दा प्राचीन लोकतान्त्रिक सभा, जहाँ महिला र पुरुष दुवै समान रूपमा सहभागी भई उपभोग्य वस्तुको वितरण, धार्मिक कार्य र सुरक्षाबारे विचार-विमर्श गर्थे <span class="ref">[६]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> जन्मन / विश / जन / राष्ट्र</strong>
+                <span class="english">(Janman/Vish/Jana/Rashtra)</span>
+                <p>ऋग्वेदकालीन समाजमा परिवारको गोष्ठी (जन्मन) बाट सुरु भई विश, जन हुँदै पूर्ण राजनीतिक स्वरूप 'राष्ट्र' सम्म सामाजिक-राजनीतिक संस्था विकास हुने क्रमिक चरणहरू <span class="ref">[६]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> पुरुषार्थ चतुष्टय</strong>
+                <span class="english">(Purushartha Chatushtaya)</span>
+                <p>पूर्वीय वैदिक जीवन पद्धतिमा मानिसले जीवनमा हासिल गर्नुपर्ने चार मुख्य लक्ष्यहरू: <strong>धर्म</strong> (कर्तव्य/नैतिकता), <strong>अर्थ</strong> (आर्थिक उपार्जन), <strong>काम</strong> (इच्छा/पारिवारिक सुख), र <strong>मोक्ष</strong> (परममुक्ति) <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> साधारण धर्म</strong>
+                <span class="english">(General Moral Duties)</span>
+                <p>देश, काल वा परिस्थितिभन्दा माथि उठेर विश्वभरका सम्पूर्ण मानव जातिले पालना गर्नुपर्ने सार्वभौमिक नैतिक नियमहरू (जस्तै: सत्य, अहिंसा, दया, इमानदारिता) <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> विशेष धर्म</strong>
+                <span class="english">(Contextual Duties)</span>
+                <p>व्यक्तिको उमेर, पद, क्षमता, समय, र परिवेश अनुसार निर्धारण हुने विशिष्ट कर्तव्यहरू (जस्तै: राष्ट्रपति, शिक्षक वा विद्यार्थीका कर्तव्य) <span class="ref">[७]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> वैयक्तिकतावादी दृष्टिकोण</strong>
+                <span class="english">(Individualistic Approach)</span>
+                <p>समाजको तुलनामा व्यक्ति, उसको स्वतन्त्रता र व्यक्तिगत अधिकारलाई प्राथमिकता दिने पश्चिमा सामाजिक-राजनीतिक विचारधारा <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> समुदायवादी दृष्टिकोण</strong>
+                <span class="english">(Communitarian Approach)</span>
+                <p>व्यक्तिको तुलनामा समाज, समुदाय र सामूहिक हितलाई प्राथमिक मान्ने पूर्वीय सामाजिक चिन्तन धारा <span class="ref">[८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> गोष्ठी / गुठी</strong>
+                <span class="english">(Guthi/Gosthi)</span>
+                <p>सामाजिक, धार्मिक र सांस्कृतिक कार्यहरू सम्पन्न गर्न तथा सामूहिक अन्तरनिर्भरता सुदृढ पार्न परापूर्वकालदेखि सञ्चालित परम्परागत सामाजिक सङ्गठन <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> श्रेणी</strong>
+                <span class="english">(Shreni)</span>
+                <p>प्राचीन कालमा काठ, माटो, धातु वा कपडाका काम गर्ने शिल्पीहरू तथा कालीगडहरूले आफ्नो हित र व्यवसाय व्यवस्थित गर्न बनाएको व्यापारिक सङ्गठन/सङ्घ <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> निगम / पूग</strong>
+                <span class="english">(Nigama/Puga)</span>
+                <p>प्राचीन कालमा व्यापारीहरूले आफ्ना व्यावसायिक हकहित र बजार व्यवस्थापनका लागि खडा गरेका ठुला व्यावसायिक संस्थाहरू <span class="ref">[९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> सार्थ समवाय / सम्भूय समुत्थान</strong>
+                <span class="english">(Sartha Samavaya / Sambhuya Samutthana)</span>
+                <p>प्राचीन कालमा विभिन्न देश वा दूरदराजमा बहुराष्ट्रिय व्यापार र संयुक्त लगानी गर्न गठित ठुला व्यापारिक निगमहरू <span class="ref">[९]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ३ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section3">
+            <i class="fas fa-brain"></i>
+            पाठ ३: जीवन दर्शन, सामाजिक मूल्य मान्यताहरू र सामाजिक व्यवहार
+            <span class="mark-badge purple">१६ शब्द</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> दर्शन</strong>
+                <span class="english">(Philosophy)</span>
+                <p>ग्रीक शब्द 'Philosophia' (ज्ञानप्रतिको अनुराग) र संस्कृतको 'दृश्' धातु (देख्ने/साक्षात्कार गर्ने साधन) बाट बनेको, जसले ब्रह्माण्ड, ईश्वर, सत्य, ज्ञान र जीवनसम्बन्धी तर्कपूर्ण विश्लेषण गर्दछ <span class="ref">[११, १२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> जीवन दर्शन</strong>
+                <span class="english">(Philosophy of Life)</span>
+                <p>मानिसले आफ्नो जीवनको कारण, प्रयोजन, अस्तित्व र लक्ष्यका बारेमा अवलम्बन गर्ने र दैनिक व्यवहारलाई निर्देशित गर्ने मार्गनिर्देशक दार्शनिक सिद्धान्त <span class="ref">[१४, १५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> विश्वदृष्टिकोण</strong>
+                <span class="english">(Worldview)</span>
+                <p>मानिसले आफ्नो जीवनको भोगाइ, सामाजिकीकरण, संस्कृति र शिक्षाका आधारमा समग्र विश्व वा जगत्‌लाई हेर्ने, बुझ्ने र सोबारे बनाउने दृष्टिकोण <span class="ref">[१३, १४]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> तत्त्वमीमांसा / तत्त्वविज्ञान</strong>
+                <span class="english">(Metaphysics)</span>
+                <p>दर्शनशास्त्रको त्यो प्रमुख शाखा जसले ब्रह्माण्डको सृष्टि, अस्तित्व, ईश्वर, चेतना र भौतिक जगत्‌को अन्तिम यथार्थताका बारेमा विश्लेषण गर्दछ <span class="ref">[११]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> ज्ञानमीमांसा / प्रमाणविज्ञान</strong>
+                <span class="english">(Epistemology)</span>
+                <p>मानव ज्ञानको उत्पत्ति, सीमा, प्रकृति, आधिकारिकता र सत्यताको परीक्षण गर्ने दर्शनको विधा <span class="ref">[११]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> मूल्यमीमांसा</strong>
+                <span class="english">(Axiology)</span>
+                <p>मानव जीवनका मूल्य, मान्यता, नैतिकता, आचरण र सौन्दर्यको अध्ययन गर्ने दर्शनको शाखा <span class="ref">[११]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> आस्तिक दर्शन</strong>
+                <span class="english">(Orthodox/Theistic Philosophy)</span>
+                <p>ईश्वरीय सत्ता, वैदिक प्रामाणिकता वा परलोकको अस्तित्वलाई स्विकार्ने ६ वटा पूर्वीय दर्शनहरू (साङ्ख्य, योग, न्याय, वैशेषिक, मीमांसा, वेदान्त) <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> नास्तिक दर्शन</strong>
+                <span class="english">(Heterodox/Atheistic Philosophy)</span>
+                <p>ईश्वरीय सत्ता वा वेदको अकाट्य प्रामाणिकतालाई अस्वीकार गर्ने दर्शनहरू (बौद्ध, जैन, चार्वाक/लोकायत) <span class="ref">[१२]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> चेतनावादी दर्शन</strong>
+                <span class="english">(Idealist Philosophy)</span>
+                <p>ब्रह्माण्डको मूल तत्व 'चेतना, विचार वा आत्मा' हो र भौतिक जगत् चेतनाकै प्रतिबिम्ब मात्र हो भन्ने मान्यता <span class="ref">[१२, १३]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> पदार्थवादी / भौतिकवादी दर्शन</strong>
+                <span class="english">(Materialist Philosophy)</span>
+                <p>ब्रह्माण्डको मूल तत्व 'पदार्थ' (Matter) हो र चेतना वा विचार पदार्थकै विकासको उच्च रूप मात्र हो भन्ने कार्ल मार्क्स लगायतका दार्शनिकहरूको दृष्टिकोण <span class="ref">[१२, १५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> द्विधा विभाजन दृष्टिकोण</strong>
+                <span class="english">(Binary Division Approach)</span>
+                <p>जगत्‌लाई दुई विपरीत कित्तामा मात्र विभाजन गरेर हेर्ने चिन्तन शैली (जस्तै: चेतना भर्सेज पदार्थ, असल भर्सेज खराब) <span class="ref">[१२, १५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> समन्वयात्मक दृष्टिकोण</strong>
+                <span class="english">(Integrative Approach)</span>
+                <p>चेतना र पदार्थ, विचार र व्यवहारबीच द्वन्द्व गराउनुको सट्टा तिनीहरूबीचको सहअस्तित्व, सातत्य र समन्वयमा जोड दिने सन्तुलित दृष्टिकोण <span class="ref">[१५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> समता</strong>
+                <span class="english">(Equity)</span>
+                <p>समानताको सट्टा मानिसको विशिष्ट आवश्यकता, अवस्था र संवेदनशीलतालाई बुझेर सोही अनुसार न्यायोचित र विभेदरहित व्यवहार वा अवसर प्रदान गर्नु <span class="ref">[१६]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> समतामूलक विश्व दृष्टिकोण</strong>
+                <span class="english">(Equitable Worldview)</span>
+                <p>जाति, लिङ्ग, धर्म वा वर्गका आधारमा हुने भेदभाव अन्त्य गरी सबैलाई समान मानवीय गरिमा प्रदान गर्ने फराकिलो मानवीय दृष्टिकोण <span class="ref">[१६]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> किरात दर्शन / मुन्धुम</strong>
+                <span class="english">(Kirat Philosophy/Mundhum)</span>
+                <p>येहाङदेखि महागुरु फाल्गुनन्दसम्मको मौलिक, प्रकृतिपूजक र मानवीय पूर्वीय दर्शन परम्परा <span class="ref">[१३]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> बोन दर्शन</strong>
+                <span class="english">(Bon Philosophy)</span>
+                <p>तोन्पा शेनराव मिवाका उपदेशमा आधारित हिमाली क्षेत्रको प्राचीन प्रकृतिपूजक दर्शन <span class="ref">[१३]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ४ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section4">
+            <i class="fas fa-spa"></i>
+            पाठ ४: दैनिक जीवनमा दर्शनको उपयोगिता
+            <span class="mark-badge blue">५ शब्द</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> पञ्चशील</strong>
+                <span class="english">(Panchasheel)</span>
+                <p>भगवान् बुद्धद्वारा प्रतिपादित दैनिक जीवनका ५ नैतिक नियमहरू: अहिंसा (हिंसा नगर्नु), अस्तेय (चोरी नगर्नु), सत्य (झुटो नबोल्नु), व्यभिचार नगर्नु, र मद्यपान/लागुपदार्थ नखानु <span class="ref">[१८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> भिक्षाटन</strong>
+                <span class="english">(Bhikshatan)</span>
+                <p>बौद्ध भिक्षुहरूले आफ्नो अहङ्कार नष्ट गर्न र सादगी जीवनयापनका लागि शारीरिक स्वास्थ्य र नियम पालन गरी भिक्षा मागेर भोजन ग्रहण गर्ने वैदिक/बौद्ध परम्परा <span class="ref">[१८]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> संयम</strong>
+                <span class="english">(Self-Restraint / Temperance)</span>
+                <p>हानिकारक विषयवस्तु, लोभ, रिस, ईर्ष्या र घमण्डबाट मन र इन्द्रियहरूलाई रोकेर अनुशासित बनाउने नैतिक गुण <span class="ref">[१९]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> करुणा र प्रज्ञा</strong>
+                <span class="english">(Compassion &amp; Wisdom)</span>
+                <p>बुद्ध दर्शनका दुई मेरुदण्ड; जसमध्ये <strong>प्रज्ञा</strong> ले सत्य ज्ञान दिन्छ भने <strong>करुणा</strong> ले सम्पूर्ण प्राणीप्रति दया र मैत्रीभाव जगाउँछ <span class="ref">[१९, २०]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> व्यावहारिक दर्शन</strong>
+                <span class="english">(Practical Philosophy)</span>
+                <p>दार्शनिक ज्ञानलाई केवल बौद्धिक बहस वा पुस्तकीय ज्ञानमा सीमित नराखी दैनिक कार्य, निर्णय र समस्या समाधानमा प्रयोग गर्ने अभ्यास <span class="ref">[२०, २१]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ५ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head" id="section5">
+            <i class="fas fa-arrow-trend-up"></i>
+            पाठ ५: समुदायमा आएका परिवर्तन र सामाजिक रूपान्तरण
+            <span class="mark-badge pink">७ शब्द</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> सूचना समाज</strong>
+                <span class="english">(Information Society)</span>
+                <p>ड्यानियल बेलद्वारा प्रतिपादित अवधारणा; जहाँ वस्तु उत्पादनभन्दा सूचनाको पहुँच, ज्ञान, प्रविधि र सेवा व्यवसाय प्रधान मानिन्छ <span class="ref">[२३]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> उत्तर औद्योगिक समाज</strong>
+                <span class="english">(Post-Industrial Society)</span>
+                <p>परम्परागत कलकारखाना र वस्तु उत्पादनभन्दा प्रविधि, सूचना, अनुसन्धान र सेवा क्षेत्रको दबदबा रहेको आधुनिक समाज <span class="ref">[२३]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> सामाजिक रूपान्तरण</strong>
+                <span class="english">(Social Transformation)</span>
+                <p>शिक्षा, प्रविधि र चेतनाको पहुँच वृद्धि भएसँगै समाजका पुराना सोच, विभेद, संरचना र जीवनशैलीमा आउने व्यापक सकारात्मक परिवर्तन <span class="ref">[२३]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> वैचारिक विस्तार</strong>
+                <span class="english">(Ideological Diffusion)</span>
+                <p>मिडिया र सामाजिक सञ्जालका माध्यमबाट नयाँ विचार, सिद्धान्त, मानव अधिकार र लोकतान्त्रिक मूल्यहरू द्रुत गतिमा विश्वभर फैलिने प्रक्रिया <span class="ref">[२५]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> खुला बजार अर्थतन्त्र</strong>
+                <span class="english">(Open Market Economy)</span>
+                <p>वैश्वीकरणसँगै विश्व नै एउटा साझा बजारमा परिणत भई वैदेशिक लगानी, आयात-निर्यात र व्यापारिक सञ्जाल विस्तार हुने आर्थिक व्यवस्था <span class="ref">[२५, २६]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> प्रसंसस्कृतिकरण</strong>
+                <span class="english">(Acculturation)</span>
+                <p>सञ्चार, मिडिया वा बसाइँसराइका कारण अर्काको संस्कृति वा जीवनशैली अपनाउने र आफ्नो परम्परागत संस्कृतिमा परिवर्तन आउने सामाजिक प्रक्रिया <span class="ref">[२६]</span>।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><i class="fas fa-arrow-right" style="color:#7B1FA2; margin-right:6px;"></i> अन्तर्राष्ट्रिय गैरसरकारी संस्था</strong>
+                <span class="english">(INGOs)</span>
+                <p>विभिन्न देशहरूमा क्षेत्रीय तथा अन्तर्राष्ट्रिय तहमा विकास, मानव अधिकार, प्रविधि र सहयोगको सञ्जाल सञ्चालन गर्ने वैश्विक संस्थाहरू <span class="ref">[२४, २५]</span>।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#7B1FA2; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> यो शब्दावली सङ्ग्रह एकाइ ४ का सम्पूर्ण पाठहरूको आधारशिला हो। प्रत्येक शब्दको अर्थ र सन्दर्भ राम्ररी बुझ्नुहोस्, तिनलाई वाक्यमा प्रयोग गर्ने अभ्यास गर्नुहोस्, र परीक्षामा यी शब्दहरूलाई सटीक रूपमा प्रयोग गरेर आफ्ना उत्तरहरूलाई प्राज्ञिक र आधिकारिक बनाउनुहोस्। यसले तपाईंलाई उत्कृष्ट अङ्क प्राप्त गर्न मद्दत गर्नेछ।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ४</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
