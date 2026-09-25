@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>NEB कक्षा १२ – सामाजिक अध्ययन नमुना सेट ४ (पूर्ण समाधान)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- EXAM INFO CARD ----- */
+        .exam-info {
+            background: #eef0f0;
+            border: 2px solid #5C6BC0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 24px;
+        }
+
+        .exam-info h3 {
+            color: #1A237E;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exam-info h3 i {
+            color: #1A237E;
+        }
+
+        .exam-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .exam-info ul li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #374210;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-info ul li i {
+            color: #1A237E;
+            margin-top: 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .exam-info ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- GROUP HEADERS ----- */
+        .group-head {
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+            margin: 44px 0 8px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 4px 16px rgba(26, 35, 126, 0.35);
+        }
+
+        .group-head i {
+            font-size: 1.6rem;
+            color: #f5d742;
+        }
+
+        .group-head .marks {
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 4px 16px;
+            border-radius: 40px;
+            margin-left: auto;
+        }
+
+        .group-sub {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #1A237E;
+            background: #eef0f0;
+            border-left: 6px solid #1A237E;
+            padding: 8px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 10px 0 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .group-sub i {
+            color: #1A237E;
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #1A237E;
+            margin: 36px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(26, 35, 126, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.4rem;
+            color: #f5d742;
+        }
+
+        .sub-head {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.02rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.18rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.15rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #1A237E;
+            font-size: 1.08rem;
+        }
+
+        .qa-block .a p {
+            color: #374210;
+        }
+
+        /* ----- ALTERNATIVE DIVIDER ----- */
+        .alt-divider {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 22px 0;
+            color: #1A237E;
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        .alt-divider::before,
+        .alt-divider::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background: repeating-linear-gradient(
+                90deg,
+                #1A237E 0, #1A237E 8px,
+                transparent 8px, transparent 16px
+            );
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        /* ----- BRANCH FLOW (Tree Diagram) ----- */
+        .branch-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            padding: 18px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .branch-root {
+            background: #1A237E;
+            color: #ffffff;
+            border-color: #1A237E;
+            font-size: 1.05rem;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 800;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .branch-children {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .branch-children {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .branch-children {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ----- MARKS TAG ----- */
+        .marks-tag {
+            display: inline-block;
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 40px;
+            margin-left: 8px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.08rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .group-head {
+                font-size: 1.3rem;
+                padding: 12px 16px;
+            }
+
+            .group-head .marks {
+                font-size: 0.68rem;
+                padding: 3px 12px;
+            }
+
+            .section-head {
+                font-size: 1.25rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.12rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.02rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.88rem;
+            }
+            th,
+            td {
+                font-size: 0.88rem;
+                padding: 6px 8px;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .branch-root {
+                font-size: 0.9rem;
+                padding: 8px 18px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-file-pen"></i>
+                    नमुना प्रश्नपत्र सेट ४ — पूर्ण समाधान
+                </h1>
+                <div class="subtitle">
+                    NEB कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा (Sub. Code: 005)
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> Case Study &amp; Contemporary Issues</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – मोडल सेट ४
+            </span>
+        </div>
+
+        <!-- ===== EXAM INFO ===== -->
+        <div class="exam-info">
+            <h3><i class="fas fa-circle-info"></i> परीक्षार्थीका लागि जानकारी</h3>
+            <ul>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय:</strong> सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा (कक्षा १२)</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>पूर्णाङ्क:</strong> ७५ | <strong>समय:</strong> ३ घण्टा</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय कोड:</strong> Sol. 005</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>उत्तर प्रस्तुति:</strong> NEB मापदण्ड अनुसार ५ र ८ अङ्कका उत्तरहरू ३-स्तरीय ढाँचामा</span></li>
+            </ul>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#groupA"><i class="fas fa-chevron-right"></i> समूह 'क' – अति संक्षिप्त</a>
+                <a href="#groupB"><i class="fas fa-chevron-right"></i> समूह 'ख' – संक्षिप्त उत्तर</a>
+                <a href="#groupC"><i class="fas fa-chevron-right"></i> समूह 'ग' – विस्तृत उत्तर</a>
+                <a href="#q12"><i class="fas fa-chevron-right"></i> प्रश्न १२ – अन्तर्वार्ता मार्गदर्शन</a>
+                <a href="#q12b"><i class="fas fa-chevron-right"></i> प्रश्न १२ (ख) – प्रतिलिपि अधिकार ऐन</a>
+                <a href="#q13"><i class="fas fa-chevron-right"></i> प्रश्न १३ – जीवन दर्शन</a>
+                <a href="#q14"><i class="fas fa-chevron-right"></i> प्रश्न १४ – सुदूरपश्चिम संस्कृति</a>
+                <a href="#q15"><i class="fas fa-chevron-right"></i> प्रश्न १५ – बाईसी-चौबीसी</a>
+                <a href="#q16"><i class="fas fa-chevron-right"></i> प्रश्न १६ – अपाङ्गता र LGBTQIA+</a>
+                <a href="#q17"><i class="fas fa-chevron-right"></i> प्रश्न १७ – नागरिक शक्ति र कर्तव्य</a>
+                <a href="#q18"><i class="fas fa-chevron-right"></i> प्रश्न १८ – शिक्षित बेरोजगारी</a>
+                <a href="#q19"><i class="fas fa-chevron-right"></i> प्रश्न १९ – जलवायु परिवर्तन</a>
+                <a href="#q20"><i class="fas fa-chevron-right"></i> प्रश्न २० – ६ सोच्ने टोपीहरू</a>
+                <a href="#q21"><i class="fas fa-chevron-right"></i> प्रश्न २१ – लुम्बिनी प्रदेश</a>
+                <a href="#q22"><i class="fas fa-chevron-right"></i> प्रश्न २२ – शिक्षा मार्गचित्र</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== GROUP A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="group-head" id="groupA">
+            <i class="fas fa-a"></i>
+            समूह 'क' — अति संक्षिप्त उत्तरात्मक प्रश्नहरू
+            <span class="marks">११ × १ = ११</span>
+        </div>
+
+        <div class="group-sub">
+            <i class="fas fa-circle-info"></i>
+            अति संक्षिप्त उत्तर: १०–२० शब्द | तलका सबै प्रश्नहरूको छोटो उत्तर दिनुहोस्।
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्र.न. १:</span> 'ओटावा बडापत्र' (Ottawa Charter - 1986) कुन विषयसँग सम्बन्धित छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> विश्व स्वास्थ्य सङ्गठन (WHO) द्वारा जारी 'ओटावा बडापत्र' मानिसको <strong>स्वास्थ्य प्रवर्धन (Health Promotion)</strong> र <strong>सबल जीवनशैलीका लागि जीवनोपयोगी सिपहरू</strong> को विकास तथा कार्यान्वयनसँग सम्बन्धित छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्र.न. २:</span> अनुसन्धानमा 'प्रश्नावली विधि' (Questionnaire Method) प्रयोग गर्दा ध्यान दिनुपर्ने मुख्य कुरा के हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> प्रश्नावली निर्माण गर्दा प्रश्नहरू <strong>सरल, स्पष्ट, निष्पक्ष (Unbiased) र दोहोरो अर्थ नलाग्ने</strong> हुनुपर्छ ताकि उत्तरदाताले विना कुनै अलमल सही सूचना दिन सकून्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्र.न. ३:</span> APA उद्धरण ढाँचा (APA Citation Style) अनुसार पुस्तकको सन्दर्भ सूची लेख्दा लेखकको नाम कसरी लेखिन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> APA ढाँचामा लेखकको <strong>थर (Last Name) पहिले र नामको पहिलो अक्षर (First Initial)</strong> लेखिन्छ।</p>
+                <p><em>उदा:</em> Sharma, A. (2022). <em>Social Studies</em>. Kathmandu: Heritage Publication.</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्र.न. ४:</span> चार्वाक दर्शनको मुख्य भौतिकवादी सिद्धान्त के हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> चार्वाक दर्शनको मुख्य सिद्धान्त <strong>"ऋणं कृत्वा घृतं पिबेत्"</strong> (ऋण गरेर भए पनि सुखसँग बाँच) अर्थात् प्रत्यक्ष देखिने भौतिक जगत् र सुख नै सत्य हो, आत्मा वा परलोक असत्य हो भन्ने हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्र.न. ५:</span> नेपालको इतिहासमा 'सुगौली सन्धि' (Sugauli Treaty) कहिले भएको थियो? (सन्/वि.सं.)</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नेपाल र इस्ट इन्डिया कम्पनीबिच सुगौली सन्धि <strong>सन् १८१६ मार्च ४</strong> (वि.सं. १८७२ फागुन २२ गते) मा आधिकारिक रूपमा लागू भएको थियो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">प्र.न. ६:</span> भू-सूचना प्रणाली (GIS) ले सामाजिक नक्साङ्कनमा कसरी सहयोग पुर्‍याउँछ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> GIS ले उपग्रहीय प्रविधिको प्रयोग गरी कुनै पनि क्षेत्रको भौगोलिक, जनसाङ्ख्यिक र भौतिक पूर्वाधारको <strong>डिजिटल नक्साङ्कन र स्थानिक तथ्याङ्क विश्लेषण</strong> गर्न सहयोग पुर्‍याउँछ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">प्र.न. ७:</span> सूचनाको हक सम्बन्धी ऐन, २०६४ अनुसार सूचना अधिकारीले कति दिनभित्र सूचना उपलब्ध गराउनुपर्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सूचनाको हक सम्बन्धी ऐन अनुसार नागरिकले मागेको सूचना सूचना अधिकारीले <strong>तत्काल वा बढीमा १५ दिनभित्र</strong> उपलब्ध गराउनुपर्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">प्र.न. ८:</span> नेपालमा गरिबीको बहुआयामिक सूचकाङ्क (MPI) मा समेटिने मुख्य तीन आयामहरू के-के हुन्?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> बहुआयामिक गरिबी सूचकाङ्क (MPI) मा समेटिने ३ आयामहरू: <strong>१. स्वास्थ्य (Health), २. शिक्षा (Education), र ३. जीवनस्तर (Living Standards)</strong> हुन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्र.न. ९:</span> प्रसंस्कृतिकरण (Acculturation) भनेको के हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> विभिन्न संस्कृति भएका समूहहरूबिचको प्रत्यक्ष र दीर्घकालीन सम्पर्कका कारण एउटा समूहले अर्को समूहको सांस्कृतिक ढाँचा र जीवनशैली अपनाउने वा रूपान्तरण हुने प्रक्रियालाई <strong>प्रसंस्कृतिकरण</strong> भनिन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्र.न. १०:</span> मानव अधिकारको विश्वव्यापी घोषणापत्र (UDHR) कहिले जारी भएको थियो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> संयुक्त राष्ट्रसङ्घको महासभाबाट मानव अधिकारको विश्वव्यापी घोषणापत्र <strong>सन् १९४८ डिसेम्बर १० (10th December 1948)</strong> मा जारी भएको थियो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्र.न. ११:</span> 'भर्चुअल समुदाय' (Virtual Community) को एक उदाहरण दिनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> इन्टरनेटका माध्यमबाट विश्वभरका मानिसहरू जोडिएर विचार आदानप्रदान गर्ने <strong>'फेसबुक अध्ययन समूह' (Facebook Learning Group)</strong> वा <strong>'भिडियो कन्फरेन्सिङ एप' (Zoom Group)</strong> भर्चुअल समुदायका उदाहरण हुन्।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== GROUP B ===== -->
+        <!-- ========================================================== -->
+
+        <div class="group-head" id="groupB">
+            <i class="fas fa-b"></i>
+            समूह 'ख' — संक्षिप्त उत्तरात्मक प्रश्नहरू
+            <span class="marks">८ × ५ = ४०</span>
+        </div>
+
+        <div class="group-sub">
+            <i class="fas fa-circle-info"></i>
+            संक्षिप्त उत्तर: १५०–२०० शब्द | तलका प्रश्नहरूको संक्षिप्त उत्तर दिनुहोस्।
+        </div>
+
+        <!-- प्रश्न १२ -->
+        <div class="qa-block color4" id="q12">
+            <div class="q"><span class="qnum">प्र.न. १२:</span> मानौँ तपाईं आफ्नो गाउँ/टोलको सांस्कृतिक सम्पदाको अध्ययन गर्दै हुनुहुन्छ। सो अनुसन्धानका लागि अन्तर्वार्ता मार्गदर्शन (Interview Guide) तयार गर्दा सोधिने कुनै पाँचवटा प्रश्नहरूको नमुना तयार पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> स्थानीय तहमा रहेका मूर्त तथा अमूर्त सांस्कृतिक सम्पदाको ऐतिहासिक, धार्मिक र सामाजिक महत्त्व बुझ्नका लागि गुणात्मक अनुसन्धानअन्तर्गत अन्तर्वार्ता विधि (Interview Method) अत्यन्तै उपयोगी हुन्छ। यसका लागि स्थानीय जानकार, गुठीयार वा वयोवृद्ध नागरिकलाई सोधिने संरचित वा अर्धसंरचित प्रश्नहरूको सूची नै अन्तर्वार्ता मार्गदर्शन (Interview Guide) हो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> गाउँ/टोलको सांस्कृतिक सम्पदा अध्ययनका लागि तयार पारिएको ५-बुँदे अन्तर्वार्ता मार्गदर्शनको नमुना:</p>
+
+                <ul>
+                    <li><strong>१. ऐतिहासिक पृष्ठभूमि सम्बन्धी प्रश्न:</strong> "यस सांस्कृतिक सम्पदा (मन्दिर/जात्रा/पाटी) को स्थापना कहिले, कसद्वारा र कुन ऐतिहासिक/धार्मिक पृष्ठभूमिमा भएको मानिन्छ?"</li>
+                    <li><strong>२. सांस्कृतिक रीतिरिवाज र विधि सम्बन्धी प्रश्न:</strong> "यस सम्पदासँग सम्बन्धित मुख्य चाडपर्व वा पूजाआजा कुन-कुन समयमा र कसरी सम्पन्न गरिन्छ?"</li>
+                    <li><strong>३. सामाजिक अन्तरनिर्भरता र सहभागिता सम्बन्धी प्रश्न:</strong> "यस सम्पदाको सञ्चालन र संरक्षणमा स्थानीय गुठी, समुदाय वा विभिन्न जातजातिको भूमिका कस्तो रहने गरेको छ?"</li>
+                    <li><strong>४. वर्तमान अवस्था र सङ्कट सम्बन्धी प्रश्न:</strong> "आधुनिकता, वैश्वीकरण र युवा पुस्ताको अनिच्छाका कारण यस सम्पदाको परम्परा जोगाउन कस्ता-कस्ता चुनौतीहरू देखा परेका छन्?"</li>
+                    <li><strong>५. संरक्षण र भावी पुस्ता सम्बन्धी प्रश्न:</strong> "यस ऐतिहासिक सांस्कृतिक सम्पदालाई जीवन्त राख्न र पर्यटकीय स्थलका रूपमा विकास गर्न स्थानीय सरकार र युवाहरूले के-कस्ता कदम चाल्नुपर्छ होला?"</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> यसरी तयार पारिएको अन्तर्वार्ता मार्गदर्शनले अनुसन्धानकर्तालाई विषयवस्तुबाट बाहिर जान नदिई स्थानीय सांस्कृतिक सम्पदाको प्रामाणिक र गहिरो तथ्याङ्क सङ्कलन गर्न पूर्ण मद्दत पुर्‍याउँछ।</p>
+            </div>
+        </div>
+
+        <div class="alt-divider">[ अथवा ]</div>
+
+        <div class="qa-block color5" id="q12b">
+            <div class="q"><span class="qnum">प्र.न. १२ (ख):</span> नेपालको प्रतिलिपि अधिकार ऐन, २०५९ अनुसार बौद्धिक चोरी (Plagiarism) गरेमा हुने कानुनी सजाय र जरिवानाका व्यवस्थाहरू स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> अरूको श्रम, खोज, साहित्य वा विचारलाई स्रोत नखुलाई अनधिकृत रूपमा प्रयोग गरी आफ्नै दाबी गर्नु बौद्धिक चोरी (Plagiarism) हो। नेपालमा स्रष्टा र अनुसन्धानकर्ताको बौद्धिक सम्पत्ति अधिकारको संरक्षण गर्न <strong>प्रतिलिपि अधिकार ऐन, २०५९</strong> र नियमवली २०६१ लागू गरिएको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> प्रतिलिपि अधिकार ऐन, २०५९ को दफा २७ अनुसार बौद्धिक चोरी वा प्रतिलिपि अधिकार उल्लङ्घन गर्ने कसुरदारलाई हुने कानुनी सजाय र जरिवानाका व्यवस्थाहरू देहाय बमोजिम छन्:</p>
+
+                <ul>
+                    <li><strong>१. पहिलो पटक कसुर गरेमा:</strong> कसुरको मात्रा हेरी <strong>रु. १०,००० (दस हजार) देखि रु. १,००,००० (एक लाख) सम्म जरिवाना</strong> वा <strong>६ महिनासम्म कैद</strong> वा दुवै सजाय हुनेछ।</li>
+                    <li><strong>२. दोस्रो पटक वा सोभन्दा बढी कसुर गरेमा:</strong> पटकैपिच्छे <strong>रु. २०,००० (बीस हजार) देखि रु. २,००,००० (दुई लाख) सम्म जरिवाना</strong> वा <strong>१ वर्षसम्म कैद</strong> वा दुवै सजाय हुनेछ।</li>
+                    <li><strong>३. गैरकानुनी सामग्री जफत:</strong> बौद्धिक चोरी गरी प्रकाशन वा उत्पादन गरिएका सबै पुस्तक, प्रतिवेदन, अडियो/भिडियो वा डिजिटल सामग्रीहरू राज्यद्वारा जफत गरिनेछ।</li>
+                    <li><strong>४. क्षतिपूर्तिको व्यवस्था:</strong> बौद्धिक चोरीका कारण मूल रचनाकार वा स्रष्टालाई पुग्न गएको आर्थिक तथा मानहानिको नोक्सानी कसुरदारबाटै असुल गरी पीडितलाई क्षतिपूर्ति भराइनेछ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः बौद्धिक चोरी केवल अनैतिक कार्य मात्र नभई गम्भीर कानुनी अपराध हो। प्राज्ञिक मर्यादा जोगाउन र कानुनी कारबाहीबाट बच्न अनिवार्य रूपमा स्रोतको सही उद्धरण (Citation) गर्नुपर्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १३ -->
+        <div class="qa-block color6" id="q13">
+            <div class="q"><span class="qnum">प्र.न. १३:</span> "जीवन दर्शन मानिसको नैतिक र निष्पक्ष व्यवहारको कसी हो।" यस भनाइलाई दार्शनिक तर्कसहित पुष्टि गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> मानिसले आफ्नो जीवनको मूल्य, अस्तित्व, लक्ष्य र कर्तव्यबारे निर्माण गरेको मार्गदर्शन नै <strong>जीवन दर्शन</strong> (Philosophy of Life) हो। दर्शनले मानिसलाई केवल जीवित रहन मात्र होइन, समाजमा नैतिक, न्यायपूर्ण र निष्पक्ष व्यवहार गर्दै सार्थक जीवन जिउन सिकाउने आन्तरिक कसी (Touchstone) को काम गर्दछ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> जीवन दर्शन मानिसको नैतिक र निष्पक्ष व्यवहारको कसी हो भन्ने कुरालाई पुष्टि गर्ने ५ दार्शनिक तर्कहरू:</p>
+
+                <ul>
+                    <li><strong>१. सही र गलत छुट्याउने विवेक (Moral Discrimination):</strong> जीवन दर्शनले मानिसलाई लोभ, मोह र स्वार्थभन्दा माथि उठेर के सही र के गलत (Right vs Wrong) हो भनी विवेकपूर्ण निर्णय लिन सिकाउँछ।</li>
+                    <li><strong>२. पूर्वीय 'कर्म र धर्म' को चेतना:</strong> पूर्वीय दर्शनको 'पुरुषार्थ चतुष्टय' (धर्म, अर्थ, काम, मोक्ष) र बौद्ध दर्शनको 'अष्टाङ्गिक मार्ग' ले मानिसलाई सत्य, अहिंसा, करुणा र निष्पक्ष आचरण अपनाउन प्रेरित गर्छ।</li>
+                    <li><strong>३. पाश्चात्य 'मानवतावाद र न्याय' को सिद्धान्त:</strong> पाश्चात्य दर्शनको कान्टवादी नीतिशास्त्र (Kantian Ethics) ले अरू मानिसलाई साधन होइन, साध्य मानेर समान मानवीय गरिमा र न्यायपूर्ण व्यवहार गर्न सिकाउँछ।</li>
+                    <li><strong>४. संवेग र आत्मनियमन:</strong> सुदृढ जीवन दर्शन भएको व्यक्तिले क्रोध, ईर्ष्या र पक्षपात जस्ता नकारात्मक संवेगहरूलाई नियन्त्रण गरी सामाजिक व्यवहारमा सन्तुलन र निष्पक्षता कायम गर्छ।</li>
+                    <li><strong>५. समता र विश्वदृष्टिकोण (Worldview):</strong> दर्शनले मानिसलाई जाति, लिङ्ग वा वर्गका आधारमा हुने पूर्वाग्रह त्यागी 'वसुधैव कुटुम्बकम्' (संसार नै एक परिवार हो) को भावनासहित निष्पक्ष व्यवहार गर्न मार्गदर्शन गर्छ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः जीवन दर्शन मानिसको चरित्र निर्माण गर्ने र नैतिक पथबाट विचलित हुन नदिने प्रकाशपुञ्ज हो, जसले व्यक्तिको व्यवहारलाई समाजीकृत र निष्पक्ष बनाउँछ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १४ -->
+        <div class="qa-block color7" id="q14">
+            <div class="q"><span class="qnum">प्र.न. १४:</span> सुदूरपश्चिम प्रदेशको देउडा संस्कृति, गौरा पर्व र भौगोलिक विशेषताहरू समेटेर एक संक्षिप्त परिचयात्मक लेख तयार पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपालको सुदूरपश्चिम प्रदेश भौगोलिक विविधता, प्राकृतिक सौन्दर्य र विशिष्ट सांस्कृतिक सम्पदाले परिपूर्ण क्षेत्र हो। अपि र सापालगायतका हिमश्रृङ्खला, खप्तडको पठार, र सेती-महाकालीजस्ता विशाल नदीहरूले सिञ्चित यो प्रदेश आफ्नो मौलिक 'देउडा संस्कृति' र 'गौरा पर्व' का लागि विश्वभर प्रसिद्ध छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <div class="branch-flow">
+                    <div class="branch-root">सुदूरपश्चिम प्रदेशको मौलिक पहिचान</div>
+                    <div class="branch-children">
+                        <div class="mermaid-step">१. भौगोलिक विशेषता<br><span style="font-weight:400;font-size:0.85rem;">हिमाल, खप्तड, शुक्लाफाँटा, महाकाली</span></div>
+                        <div class="mermaid-step">२. गौरा पर्व<br><span style="font-weight:400;font-size:0.85rem;">बिरुडा पूजा र भदौरे अष्टमी</span></div>
+                        <div class="mermaid-step">३. देउडा संस्कृति<br><span style="font-weight:400;font-size:0.85rem;">लोकभाका र न्यौले खेल</span></div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><strong>१. भौगोलिक विशेषता:</strong> सुदूरपश्चिम प्रदेशमा हिमाली (दार्चुला, बझाङ), पहाडी (बैतडी, डडेल्धुरा, डोटी, अछाम, बाजुरा) र तराईका दुई समृद्ध जिल्ला (कैलाली, कञ्चनपुर) रहेका छन्। यहाँ खप्तड राष्ट्रिय निकुञ्ज, शुक्लाफाँटा वन्यजन्तु आरक्ष र रामारोशन जस्ता अनुपम पर्यटकीय स्थलहरू छन्।</li>
+                    <li><strong>२. गौरा पर्व:</strong> भाद्र शुक्ल पक्षमा विशेष हर्षोल्लासका साथ मनाइने गौरा पर्व सुदूरपश्चिमको मुख्य धार्मिक-सांस्कृतिक पर्व हो। यस पर्वमा महिलाहरूले पाँच थरीका अन्नहरू (गहुँ, केराउ, गहत, मास, गुरुस) भिजाएर 'बिरुडा' बनाउँछन् र शिव-पार्वती (गौरा) को पूजा गरी अखण्ड सौभाग्यको कामना गर्छन्।</li>
+                    <li><strong>३. देउडा संस्कृति:</strong> देउडा सुदूरपश्चिमको प्राण हो। जात्रा, पर्व र मेलाहरूमा महिला र पुरुषहरू हातमा हात समातेर गोलबद्ध भई पाइलाको तालमा देउडा गीत गाउँदै नाच्दछन्। यसमा पौराणिक, सामाजिक, मायाप्रेम र राजनीतिक विषयवस्तुमा आधारित सवाल-जवाफ (न्यौले खेल) गरिन्छ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः सुदूरपश्चिमको भौगोलिक विकटताका बाबजुद यहाँको देउडा र गौरा संस्कृतिले सम्पूर्ण नेपालीहरूलाई भातृत्व र राष्ट्रिय एकताको सूत्रमा बाँध्ने काम गरेको छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १५ -->
+        <div class="qa-block color8" id="q15">
+            <div class="q"><span class="qnum">प्र.न. १५:</span> बाईसी र चौबीसी राज्यहरूको उदय र तिनको पतन भई नेपालको भौगोलिक एकीकरण हुनुका ऐतिहासिक कारणहरू विश्लेषण गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> मध्यकालमा खस मल्ल साम्राज्यको पतन र काठमाडौँ उपत्यकाको विभाजनपछि कर्णाली क्षेत्रमा 'बाईसी' (२२ वटा) र गण्डकी क्षेत्रमा 'चौबीसी' (२४ वटा) भनिने साना-साना राज्यहरूको उदय भएको थियो। वि.सं. १८०१ देखि श्री ५ पृथ्वीनारायण शाहले सुरु गरेको भौगोलिक एकीकरण अभियानले यी विखण्डित राज्यहरूलाई एकीकृत गरी आधुनिक नेपालको निर्माण गर्‍यो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> बाईसी-चौबीसी राज्यहरूको पतन र एकीकरण हुनुका मुख्य ऐतिहासिक कारणहरू:</p>
+
+                <ul>
+                    <li><strong>१. आन्तरिक कलह र राजनीतिक कमजोरी:</strong> बाईसी र चौबीसी राज्यहरूबिच सीमा, व्यापार र अहङ्कारलाई लिएर निरन्तर दाउपेच र लडाइँ भइरहन्थ्यो। यिनमा दूरदर्शी नेतृत्व र राष्ट्रिय एकताको अभाव थियो।</li>
+                    <li><strong>२. आर्थिक दरिद्रता र साना भूगोल:</strong> यी अधिकांश राज्यहरू आर्थिक रूपमा विपन्न र भौगोलिक रूपमा साना थिए। यिनको आफ्नै मजबुत सेना र आधुनिक हातहतियार थिएनन्।</li>
+                    <li><strong>३. औपनिवेशिक खतरा (इस्ट इन्डिया कम्पनीको विस्तार):</strong> भारतमा ब्रिटिस साम्राज्यको तीव्र विस्तार भइरहेको अवस्थामा विभाजित साना राज्यहरूले विदेशी आक्रमणको सामना गर्न असम्भवप्रायः थियो, जसले गर्दा शक्तिशाली एकीकृत राष्ट्र निर्माण गर्नु अनिवार्य बन्यो।</li>
+                    <li><strong>४. पृथ्वीनारायण शाहको दूरदर्शी नेतृत्व र कूटनीति:</strong> गोर्खाली राजा पृथ्वीनारायण शाहले 'दिव्योपदेश' को मार्गदर्शन, दह्रो सैनिक सङ्गठन, कालु पाँडे जस्ता योग्य काजीहरू, र कुटनीतिक वैवाहिक/मित्रता सम्बन्धमार्फत एकीकरण अभियान चलाए।</li>
+                    <li><strong>५. जनचाहना र 'नेपाल' राष्ट्रको आवश्यकता:</strong> बाईसी-चौबीसीका आम जनता निरन्तरको युद्ध र करको बोझबाट आजित भएकाले उनीहरूले शक्तिशाली र शान्त एकीकृत नेपाल राज्यको निर्माणलाई समर्थन गरे।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः बाईसी र चौबीसी राज्यहरूको पतन र नेपालको भौगोलिक एकीकरण केवल एक राज्यको विजय मात्र नभई विदेशी औपनिवेशिक उपनिवेशबाट देश जोगाउने ऐतिहासिक राष्ट्रिय आवश्यकता थियो।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १६ -->
+        <div class="qa-block color1" id="q16">
+            <div class="q"><span class="qnum">प्र.न. १६:</span> अपाङ्गता भएका व्यक्तिहरू र लैङ्गिक तथा यौनिक अल्पसङ्ख्यक (LGBTQIA+) हरूको अधिकार र समावेशीकरणका लागि राज्यले गरेका प्रयासहरूको समीक्षा गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> सभ्य र समतामूलक लोकतन्त्रमा समाजका सबै वर्ग र समुदायले समान मानवीय गरिमाका साथ जिउन पाउनुपर्छ। नेपालले अपाङ्गता भएका व्यक्तिहरू र यौनिक तथा लैङ्गिक अल्पसङ्ख्यक (LGBTQIA+) हरूको अधिकार संरक्षण र समावेशीकरणका लागि नीतिगत तथा संवैधानिक कदमहरू चालेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>राज्यद्वारा गरिएका प्रमुख प्रयासहरू:</strong></p>
+
+                <ul>
+                    <li><strong>१. संवैधानिक ग्यारेन्टी:</strong> नेपालको संविधानको धारा १८ (समानताको हक) मा अपाङ्गता भएका र लैङ्गिक तथा यौनिक अल्पसङ्ख्यकहरूलाई विशेष संरक्षण (सकारात्मक विभेद) को व्यवस्था गरिएको छ। धारा १२ अनुसार यौनिक अल्पसङ्ख्यकलाई 'अन्य' लिङ्गका आधारमा नागरिकता दिने संवैधानिक प्रावधान छ।</li>
+                    <li><strong>२. कानुनी तथा प्रशासनिक सुधार:</strong> 'अपाङ्गता भएका व्यक्तिको अधिकार सम्बन्धी ऐन, २०७४' लागू गरी शिक्षा, स्वास्थ्य र यातायातमा आरक्षण र छुट दिइएको छ। साथै, राहदानी र नागरिकतामा 'अन्य' (O) उल्लेख गर्ने कानुनी बाटो खुलेको छ।</li>
+                    <li><strong>३. सामाजिक सुरक्षा र बजेट:</strong> अपाङ्गताको गम्भीरताका आधारमा परिचयपत्र (लाल, नीलो, पहेंलो, सेतो) वितरण गरी भत्ता उपलब्ध गराउनु र निजामती सेवामा आरक्षण (५%) तोकिनु।</li>
+                    <li><strong>४. सर्वोच्च अदालतका ऐतिहासिक आदेशहरू:</strong> सन् २००७ मा सुनिलबाबु पन्तको मुद्दामा सर्वोच्च अदालतले तेस्रोलिङ्गीहरूलाई समान अधिकार र समलिङ्गी विवाहबारे अध्ययन गर्न ऐतिहासिक फैसला सुनाउनु।</li>
+                </ul>
+
+                <p><strong>समीक्षा र विद्यमान चुनौतीहरू:</strong></p>
+                <p>प्रयासहरू सकारात्मक भए तापनि सार्वजनिक पूर्वाधारहरू अपाङ्गतामैत्री (Ramp/Disability-friendly) हुन नसक्नु, यौनिक अल्पसङ्ख्यकहरूलाई परिवार र समाजले अझै पूर्ण स्वीकार नगर्नु, र रोजगारीमा विभेद कायम रहनु प्रमुख चुनौती हुन्।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः बनेका कानुनहरूको कडाइका साथ पालना गराउँदै सामाजिक चेतना अभिवृद्धि र पहुँचयुक्त पूर्वाधार निर्माण गरेर मात्र वास्तविक समावेशीकरण हासिल गर्न सकिन्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १७ -->
+        <div class="qa-block color2" id="q17">
+            <div class="q"><span class="qnum">प्र.न. १७:</span> लोकतान्त्रिक शासन व्यवस्थामा नागरिकको शक्ति र कर्तव्यबिचको सन्तुलन कसरी कायम गर्न सकिन्छ? <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> लोकतान्त्रिक प्रणालीमा जनता नै राज्यसत्ताको अन्तिम स्रोत हुन्। लोकतन्त्रमा नागरिकले मौलिक हकमार्फत 'शक्ति' (Power) उपभोग गर्छन् भने 'कर्तव्य' (Duties) को पालनामार्फत राज्यप्रति दायित्व पुरा गर्छन्। हक र कर्तव्य एउटै सिक्काका दुई पाटा हुन्; यिनीहरूबिचको सन्तुलनले नै लोकतन्त्रलाई जीवन्त बनाउँछ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> नागरिकको शक्ति र कर्तव्यबिच सन्तुलन कायम गर्ने ५ मुख्य उपायहरू:</p>
+
+                <ul>
+                    <li><strong>१. 'अधिकारसँगै कर्तव्य' को सचेतना (Rights with Responsibilities):</strong> नागरिकले राज्यसँग अधिकार माग्दै गर्दा संविधानको धारा ४८ मा उल्लिखित कर्तव्यहरू (कर तिर्ने, कानुन पालना गर्ने, सार्वजनिक सम्पत्तिको रक्षा गर्ने) अनिवार्य पुरा गर्नुपर्छ।</li>
+                    <li><strong>२. नागरिक बडापत्र र सुशासन:</strong> सार्वजनिक निकायहरूले नागरिक बडापत्र (Citizen Charter) मार्फत सेवाको समय र गुणस्तर ग्यारेन्टी गरी नागरिकलाई शक्तिशाली बनाउने र नागरिकले पनि प्रक्रियागत नियम पालना गर्ने।</li>
+                    <li><strong>३. आवधिक निर्वाचनमा विवेकपूर्ण मताधिकार:</strong> नागरिकले निर्वाचनमा भोट हाल्ने शक्ति प्रयोग गर्दा दलीय/जातीय स्वार्थभन्दा माथि उठेर योग्य र निष्ठावान् प्रतिनिधि छान्ने नागरिक कर्तव्य पुरा गर्ने।</li>
+                    <li><strong>४. रचनात्मक खबरदारी र सूचनाको हक:</strong> सरकारका गलत काममाथि सूचनाको हक प्रयोग गरी खबरदारी (शक्ति) गर्ने तर खबरदारी गर्दा अशान्ति र तोडफोड नगर्ने (कर्तव्य)।</li>
+                    <li><strong>५. कानुनी साक्षरता र नागरिक शिक्षा:</strong> विद्यालय तहदेखि नै नागरिकलाई आफ्ना हक-अधिकार र कर्तव्यबारे सचेत गराउने शिक्षा दिने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नागरिकले अधिकारको उपभोग गर्दा अरूको अधिकार हनन नगर्ने र कर्तव्यको पालना निष्ठापूर्वक गर्नाले मात्र लोकतन्त्र दिगो, पारदर्शी र अनुशासित बन्न सक्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १८ -->
+        <div class="qa-block color3" id="q18">
+            <div class="q"><span class="qnum">प्र.न. १८:</span> नेपालमा साक्षरता दर बढे तापनि दक्ष र शिक्षित युवाहरू बेरोजगार हुनुका कारणहरू र ती समस्या समाधानका पाँच उपायहरू लेख्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपालमा हालैका वर्षहरूमा साक्षरता दर (करिब ७७.४%) बढेको भए तापनि उत्पादित शिक्षित युवाहरू रोजगारी नपाई विदेशिन बाध्य छन्। शिक्षा प्रणाली र श्रम बजारबिच सामञ्जस्यता हुन नसक्दा यो विरोधाभासपूर्ण शिक्षित बेरोजगारी (Educated Unemployment) को समस्या सिर्जना भएको हो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>शिक्षित बेरोजगारीका मुख्य कारणहरू:</strong></p>
+                <ul>
+                    <li><strong>सैद्धान्तिक शिक्षा:</strong> शिक्षा व्यावहारिक र प्रविधिमैत्री नभई केवल 'प्रमाणपत्रमुखी' र घोक्ने हुनु।</li>
+                    <li><strong>श्रम र सीपको बेमेल (Skill Mismatch):</strong> बजारमा प्राविधिक र व्यावसायिक सीपयुक्त जनशक्तिको माग हुनु तर विश्वविद्यालयहरूले परम्परागत कला/मानविकी जनशक्ति मात्र उत्पादन गर्नु।</li>
+                    <li><strong>उद्यमशीलताको अभाव:</strong> युवाहरूमा रोजगारी सिर्जना गर्ने (Job creators) भन्दा जागिर खोज्ने (Job seekers) मानसिकता हुनु।</li>
+                </ul>
+
+                <p><strong>समस्या समाधानका ५ उपायहरू:</strong></p>
+                <ul>
+                    <li><strong>१. प्राविधिक तथा व्यावसायिक शिक्षामा जोड:</strong> माध्यमिक तहदेखि नै 'एक विद्यार्थी-एक सीप' को नीति लागू गरी TVET र आईटी/कोडिङ शिक्षा अनिवार्य गर्ने।</li>
+                    <li><strong>२. शैक्षिक प्रणालीलाई श्रम बजारसँग जोड्ने:</strong> विश्वविद्यालयका पाठ्यक्रमहरूलाई राष्ट्रिय तथा अन्तर्राष्ट्रिय उद्योग र प्रविधिको माग अनुसार परिमार्जन गर्ने।</li>
+                    <li><strong>३. युवा उद्यमीका लागि 'सहुलियतपूर्ण कर्जा' र बीउ पुँजी:</strong> नवीन सोच (Startups) भएका शिक्षित युवाहरूलाई विनाधितो सहुलियतपूर्ण ऋण र कर छुटको व्यवस्था गर्ने।</li>
+                    <li><strong>४. श्रमको सम्मान र न्यूनतम ज्याला ग्यारेन्टी:</strong> समाजमा शारीरिक तथा प्राविधिक श्रमलाई हेर्ने परम्परागत दृष्टिकोणमा परिवर्तन गरी उचित पारिश्रमिक तोक्ने।</li>
+                    <li><strong>५. साना तथा मझौला उद्योग (SMEs) को विस्तार:</strong> स्थानीय कृषि, जडीबुटी, जलविद्युत् र पर्यटन क्षेत्रमा उद्योगहरू खोलेर स्वदेशमै रोजगारी सिर्जना गर्ने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः प्रमाणपत्र बाँड्ने शिक्षालाई परिमार्जन गरी 'सीप र उत्पादनसँग जोडिएको शिक्षा' दिन सकेमा मात्र युवा बेरोजगारीको स्थायी समाधान हुन सक्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १९ -->
+        <div class="qa-block color4" id="q19">
+            <div class="q"><span class="qnum">प्र.न. १९:</span> जलवायु परिवर्तन (Climate Change) ले नेपालको हिमाली क्षेत्रको वातावरण, जैविक विविधता र पर्यटनमा पारेको नकारात्मक प्रभावहरू उल्लेख गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपाल विश्वमै जलवायु परिवर्तनको उच्च जोखिममा रहेको मुलुक हो। विश्वव्यापी तापमान वृद्धिका कारण नेपालको हिमाली क्षेत्रमा तापक्रम विश्व औसतभन्दा तीव्र गतिमा (वार्षिक ०.०६ डिग्री सेल्सियस) बढिरहेको छ, जसले वातावरणीय र सामाजिक-आर्थिक क्षेत्रमा गम्भीर सङ्कट ल्याएको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> जलवायु परिवर्तनले हिमाली क्षेत्रमा पारेका नकारात्मक प्रभावहरू:</p>
+
+                <ul>
+                    <li><strong>१. हिमनदी पग्लिने र हिमताल विस्फोटको जोखिम (GLOF):</strong> तीव्र तापमान वृद्धिले गर्दा सेतो हिमालहरू काला चट्टानमा परिणत हुँदैछन्। चामे, इम्जा जस्ता हिमतालहरू फुटने जोखिम बढेको छ।</li>
+                    <li><strong>२. जैविक विविधतामा ह्रास:</strong> तापक्रम बढेपछि हिमाली वनस्पति र जीवजन्तुहरू (जस्तै: हिउँचितुवा, कस्तुरी मृग, यार्सागुम्बा) माथिल्लो भेगमा सर्न बाध्य भएका छन् र तिनको बासस्थान नासिँदैछ।</li>
+                    <li><strong>३. हिमाली पर्यटन र साहसिक खेलमा असर:</strong> हिउँ पघ्लिएर हिमपहिरो (Avalanche) जाने र बाटो भत्किने हुँदा सगरमाथा, अन्नपूर्ण जस्ता क्षेत्रमा आउने पदयात्री (Trekkers) र आरोहीहरूको सुरक्षा खतरामा परेको छ।</li>
+                    <li><strong>४. जलस्रोत र कृषिमा सङ्कट:</strong> हिमाल पग्लिएपछि तल्लो भेगका नदीहरूमा पानीको बहाव घटी जलविद्युत्, सिँचाइ र पिउने पानीको सङ्कट सुरु भएको छ।</li>
+                    <li><strong>५. प्राकृतिक विपद् र मौसमी परिवर्तन:</strong> बेमौसमी भारी हिमपात, अतिवृष्टि र मनाङ-मुस्ताङ जस्ता हिमाली जिल्लाहरूमा भीषण बाढी र पहिरो जाने क्रम बढेको छ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नेपालले अन्तर्राष्ट्रिय मञ्चहरूमा जलवायु न्यायको आवाज उठाउँदै हिमाली क्षेत्रमा अनुकूलन (Adaptation) र विपद् जोखिम न्यूनीकरणका रणनीतिहरू तुरुन्त लागू गर्नुपर्छ।</p>
+            </div>
+        </div>
+
+        <div class="alt-divider">[ अथवा ]</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्र.न. १९ (ख):</span> नेपाल-चीन सम्बन्धका ऐतिहासिक आयामहरू र वर्तमान आर्थिक सहकार्यका क्षेत्रहरू स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपाल र चीनबिच प्राचीन कालदेखि नै हिमालयपारको सुमधुर, शान्तिपूर्ण र छिमेकी सम्बन्ध रहिआएको छ। सन् १९५५ अगस्ट १ मा औपचारिक कूटनीतिक सम्बन्ध स्थापना भएपछि पञ्चशीलको सिद्धान्तमा आधारित यो सम्बन्ध थप प्रगाढ बनेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>नेपाल-चीन सम्बन्धका ऐतिहासिक आयामहरू:</strong></p>
+                <ul>
+                    <li><strong>धार्मिक र सांस्कृतिक आदानप्रदान:</strong> पाँचौँ शताब्दीमा चिनियाँ भिक्षु फाहियान र ह्वेनसाङको लुम्बिनी भ्रमण तथा नेपाली भिक्षु बुद्धभद्रको चीन यात्रा।</li>
+                    <li><strong>वैवाहिक र कूटनीतिक सम्बन्ध:</strong> सातौँ शताब्दीमा लिच्छवि राजकुमारी भृकुटीको तिब्बतका राजा स्रङचङ गम्पोसँग विवाह र कलाकार अरानिकोले चीनमा श्वेत चैत्य निर्माण गर्नु।</li>
+                    <li><strong>व्यापारिक सम्बन्ध:</strong> प्राचीन कालदेखि नै काठमाडौँ उपत्यका तिब्बत र भारतबिचको प्रमुख व्यापारिक नाका (Transit) का रूपमा रहनु।</li>
+                </ul>
+
+                <p><strong>वर्तमान आर्थिक सहकार्यका क्षेत्रहरू:</strong></p>
+                <ul>
+                    <li><strong>१. पूर्वाधार र यातायात सञ्जाल (BRI Initiative):</strong> बेल्ट एण्ड रोड इनिसिएटिभ (BRI) अन्तर्गत क्रस-बोर्डर रेलवे, तातोपानी र रसुवागढी नाकाको स्तरोन्नति, र केरुङ-काठमाडौँ सडक।</li>
+                    <li><strong>२. ऊर्जा र जलविद्युत् लगानी:</strong> चिनियाँ कम्पनीहरूद्वारा नेपालका विभिन्न जलविद्युत् आयोजना र सिमेन्ट उद्योगहरूमा प्रत्यक्ष वैदेशिक लगानी (FDI)।</li>
+                    <li><strong>३. पोखरा अन्तर्राष्ट्रिय विमानस्थल:</strong> चिनियाँ ऋण र प्राविधिक सहयोगमा निर्माण भएको पोखरा क्षेत्रीय अन्तर्राष्ट्रिय विमानस्थल।</li>
+                    <li><strong>४. व्यापार र भन्सार सुविधा:</strong> चीनले नेपालका ८,००० भन्दा बढी वस्तुहरूलाई शून्य भन्सार दरमा प्रवेश सुविधा (Duty-free access) दिएको छ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नेपालले चीनसँगको आर्थिक सहकार्यलाई विस्तार गर्दै भूपरिवेष्ठित अवस्थाबाट 'भू-जडित' (Land-linked) राष्ट्र बन्ने लक्ष्य हासिल गर्नुपर्छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== GROUP C ===== -->
+        <!-- ========================================================== -->
+
+        <div class="group-head" id="groupC">
+            <i class="fas fa-c"></i>
+            समूह 'ग' — विस्तृत उत्तरात्मक प्रश्नहरू
+            <span class="marks">३ × ८ = २४</span>
+        </div>
+
+        <div class="group-sub">
+            <i class="fas fa-circle-info"></i>
+            विस्तृत उत्तर: २५०–३०० शब्द | तलका प्रश्नहरूको विस्तृत उत्तर दिनुहोस्।
+        </div>
+
+        <!-- प्रश्न २० -->
+        <div class="qa-block color6" id="q20">
+            <div class="q"><span class="qnum">प्र.न. २०:</span> "कक्षा १२ का विद्यार्थीमाझ मोबाइल र इन्टरनेटको अत्यधिक प्रयोगले एकातिर अध्ययनमा प्रविधिसँग जोडिने अवसर दिएको छ भने अर्कोतिर ध्यान भङ्ग हुने, साइबर अपराधमा पर्ने र सामाजिक सञ्जालको लत बस्ने जोखिम बढाएको छ।" यस समस्यालाई समालोचनात्मक चिन्तनका ६ सोच्ने टोपीहरू (Six Thinking Hats) को सिद्धान्त प्रयोग गरी विश्लेषण गर्नुहोस् र समाधानको निलो टोपी (Blue Hat) निष्कर्ष दिनुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> डा. एडवर्ड डि बोनो (Dr. Edward de Bono) द्वारा प्रतिपादित <strong>'६ सोच्ने टोपीहरू' (Six Thinking Hats)</strong> समालोचनात्मक चिन्तनको एक उत्कृष्ट औजार हो। यसले कुनै पनि समस्यालाई बहुआयामिक र बहुकोणबाट विश्लेषण गर्न मद्दत गर्छ। कक्षा १२ का विद्यार्थीमाझ मोबाइल र इन्टरनेटको प्रयोगले ल्याएका अवसर र जोखिमहरूलाई ६ वटा टोपीहरूको सिद्धान्त अनुसार विश्लेषण गरिएको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <div class="branch-flow">
+                    <div class="branch-root">इन्टरनेट र मोबाइल प्रयोगको बहुपक्षीय विश्लेषण</div>
+                    <div class="branch-children">
+                        <div class="mermaid-step">१. सेतो टोपी<br><span style="font-weight:400;font-size:0.85rem;">तथ्य र तथ्याङ्क</span></div>
+                        <div class="mermaid-step">२. रातो टोपी<br><span style="font-weight:400;font-size:0.85rem;">भावना र संवेग</span></div>
+                        <div class="mermaid-step">३. कालो टोपी<br><span style="font-weight:400;font-size:0.85rem;">जोखिम र नकारात्मक</span></div>
+                        <div class="mermaid-step">४. पहेँलो टोपी<br><span style="font-weight:400;font-size:0.85rem;">फाइदा र सकारात्मक</span></div>
+                        <div class="mermaid-step">५. हरियो टोपी<br><span style="font-weight:400;font-size:0.85rem;">सिर्जनात्मक समाधान</span></div>
+                        <div class="mermaid-step">६. निलो टोपी<br><span style="font-weight:400;font-size:0.85rem;">निष्कर्ष र व्यवस्थापन</span></div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><strong>१. सेतो टोपी (White Hat - निष्पक्ष तथ्य र तथ्याङ्क):</strong> कक्षा १२ का करिब ९०% भन्दा बढी विद्यार्थीहरूसँग स्मार्टफोन र इन्टरनेटको पहुँच छ। उनीहरू दैनिक औसत ३ देखि ५ घण्टा अनलाइन बिताउँछन्, जसमा अध्ययन, गेमिङ र सामाजिक सञ्जाल समावेश छन्।</li>
+                    <li><strong>२. रातो टोपी (Red Hat - भावना र संवेग):</strong> इन्टरनेट चलाउँदा विद्यार्थीहरूले तुरुन्तै मनोरञ्जन र खुसी महसुस गर्छन्। तर मोबाइल नहुँदा छटपटी (FOMO - Fear of Missing Out), एकाकीपन र चिन्ता (Anxiety) बढेको पाइन्छ।</li>
+                    <li><strong>३. कालो टोपी (Black Hat - जोखिम र नकारात्मक पक्ष):</strong> अत्यधिक प्रयोगले ध्यान केन्द्रित नहुने (Distraction), आँखा र निद्राको समस्या, सामाजिक सञ्जालको लत, साइबर बुलिङ, अश्लील सामग्रीको जोखिम र अध्ययनको नतिजा खस्किने गम्भीर खतरा छ।</li>
+                    <li><strong>४. पहेँलो टोपी (Yellow Hat - फाइदा र सकारात्मक पक्ष):</strong> डिजिटल साक्षरता बढ्नु, अनलाइन कक्षा, युट्युब/ई-लाइब्रेरीबाट नि:शुल्क अध्ययन सामग्री पाउनु, अनुसन्धानमा सहजता र विश्वव्यापी ज्ञानसँग क्षणभरमै जोडिन पाउनु।</li>
+                    <li><strong>५. हरियो टोपी (Green Hat - नयाँ र सिर्जनात्मक विकल्प):</strong> मोबाइललाई केवल स्क्रोलिङमा सीमित नराखी कोडर, कन्टेन्ट क्रिएटर वा अनलाइन अनुसन्धानकर्ता बन्ने। 'डिजिटल डिटक्स' (Digital Detox) अभियान चलाउने र कलेजमा मोबाइल प्रयोगको निश्चित समय तोक्ने।</li>
+                    <li><strong>६. निलो टोपी (Blue Hat - नियन्त्रण, समन्वय र अन्तिम निष्कर्ष):</strong>
+                        <p style="margin-top:6px;"><strong>निलो टोपी निष्कर्ष:</strong> प्रविधि आफैँमा खराब वा असल हुँदैन, यसको प्रयोग कसरी गरिन्छ भन्ने कुरा मुख्य हो। विद्यार्थीहरूले <strong>'डिजिटल अनुशासन'</strong> अपनाई दैनिक २ घण्टा अध्ययनका लागि मात्र प्रविधि प्रयोग गर्ने, कलेजले डिजिटल साक्षरता र साइबर सुरक्षा शिक्षा दिने, र अभिभावकले प्रविधिको अनुगमन गर्ने सन्तुलित मार्गचित्र नै यस समस्याको स्थायी समाधान हो।</p>
+                    </li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः ६ सोच्ने टोपीहरूको विश्लेषणले देखाउँछ कि प्रविधिका जोखिमहरूलाई हरियो र निलो टोपीको प्रयोगमार्फत नियन्त्रण गर्दै मोबाइल र इन्टरनेटलाई विद्यार्थीको उज्ज्वल भविष्य निर्माण गर्ने औजार बनाउन सकिन्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न २१ -->
+        <div class="qa-block color7" id="q21">
+            <div class="q"><span class="qnum">प्र.न. २१:</span> बागमती प्रदेश वा लुम्बिनी प्रदेशको भौगोलिक बनोट, जलस्रोत, धार्मिक-पर्यटकीय स्थलहरू र आर्थिक समृद्धिका सम्भावनाहरूको विस्तृत प्रादेशिक अध्ययन प्रतिवेदन प्रस्तुत गर्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपालको सङ्घीय ढाँचामा लुम्बिनी प्रदेश ऐतिहासिक, धार्मिक, भौगोलिक र आर्थिक दृष्टिकोणले अत्यन्तै महत्त्वपूर्ण प्रदेश हो। पूर्वमा गण्डकी र बागमती, पश्चिममा सुदूरपश्चिम, उत्तरमा कर्णाली र दक्षिणमा भारतसँग जोडिएको यो प्रदेश समृद्धिका अनेकौँ सम्भावनाहरूले युक्त छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>लुम्बिनी प्रदेशको प्रादेशिक अध्ययन प्रतिवेदन:</strong></p>
+
+                <ul>
+                    <li><strong>१. भौगोलिक बनोट र धरातल:</strong> लुम्बिनी प्रदेशमा कुल १२ वटा जिल्लाहरू (पहाडी र तराई) रहेका छन्। उत्तरमा उत्तर-पूर्वी पहाडी भूभाग (गुल्मी, अर्घाखाँची, पाल्पा, प्युठान, रोल्पा, पूर्वी रुकुम) र दक्षिणमा दाङ, बाँके, बर्दिया, रूपन्देही, कपिलवस्तु, र नवलपरासी (सुस्ता पश्चिम) का विशाल उब्जाउ तराई मैदानहरू छन्। दाङ उपत्यका एसियाकै सबैभन्दा ठुलो उपत्यका हो।</li>
+                    <li><strong>२. जलस्रोत र नदीनालाहरू:</strong> यस प्रदेशमा कर्णाली, राप्ती, बबई, तिनाउ, र कालीगण्डकी जस्ता ठुला र सदाबहार नदीहरू बहन्छन्। यी नदीहरू सिँचाइ, जलविद्युत् उत्पादन र खानेपानीका प्रमुख स्रोत हुन्। सिक्टा सिँचाइ र बबई डाइभर्सन जस्ता राष्ट्रिय गौरवका आयोजनाहरू यहीँ छन्।</li>
+                    <li><strong>३. धार्मिक तथा पर्यटकीय स्थलहरू:</strong>
+                        <ul>
+                            <li><strong>विश्वशान्तिको मुहान लुम्बिनी:</strong> भगवान् बुद्धको जन्मस्थल लुम्बिनी (युनेस्को विश्व सम्पदा सूची) विश्वभरका बौद्ध धर्मावलम्बीहरूको प्रमुख आस्थाको केन्द्र हो।</li>
+                            <li><strong>अन्य धार्मिक/ऐतिहासिक स्थलहरू:</strong> कपिलवस्तुको तिलौराकोट (प्राचीन शाक्य राज्य), रेसुङ्गा (गुल्मी), स्वर्गद्वारी (प्युठान), ठाकुरद्वारा (बर्दिया), र पाल्पाको रानीमहल।</li>
+                            <li><strong>जैविक पर्यटन:</strong> बर्दिया राष्ट्रिय निकुञ्ज र बाँके राष्ट्रिय निकुञ्ज (पाटेबाघका लागि प्रसिद्ध)।</li>
+                        </ul>
+                    </li>
+                    <li><strong>४. आर्थिक समृद्धिका सम्भावनाहरू:</strong>
+                        <ul>
+                            <li><strong>कृषि क्रान्ति:</strong> तराईका ५ वटा जिल्लाहरू अन्न उत्पादनका भण्डार हुन्। अत्याधुनिक सिँचाइ र यान्त्रीकीकरण गरी खाद्यान्न निर्यात गर्न सकिने।</li>
+                            <li><strong>धार्मिक पर्यटन र गौतम बुद्ध अन्तर्राष्ट्रिय विमानस्थल:</strong> भैरहवा विमानस्थल सञ्चालनसँगै वार्षिक लाखौँ अन्तर्राष्ट्रिय पर्यटक भित्र्याई विदेशी मुद्रा आर्जन गर्न सकिने।</li>
+                            <li><strong>औद्योगिक विकास:</strong> बुटवल-भैरहवा र नेपालगञ्ज-कोहलपुर औद्योगिक करिडोरमार्फत भारतसँगको सीमा व्यापार र उत्पादन बढाउने।</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः लुम्बिनी प्रदेशलाई 'धार्मिक पर्यटन, आधुनिक कृषि र औद्योगिक हब' का रूपमा एकीकृत रूपमा विकास गर्न सकेमा यस प्रदेशले सिङ्गो नेपालको आर्थिक रूपान्तरणमा नेतृत्वदायी भूमिका खेल्न सक्छ।</p>
+            </div>
+        </div>
+
+        <div class="alt-divider">[ अथवा ]</div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">प्र.न. २१ (ख):</span> नेपालको इतिहासमा राणा शासनको उदय (कोतपर्व, भण्डारखाल पर्व), राणाकालीन हुकुमी शासनको प्रकृति र वि.सं. २००७ सालमा राणा शासन ढल्नुका आन्तरिक तथा बाह्य कारणहरूको विस्तृत ऐतिहासिक समीक्षा गर्नुहोस्।</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> वि.सं. १९०३ असोज ३ गते भएको विभत्स <strong>कोतपर्व</strong> मार्फत जङ्गबहादुर राणाले सत्ता कब्जा गरी १०४ वर्षे पारिवारिक, निरङ्कुश र हुकुमी राणाशासनको जग बसालेका थिए। वि.सं. २००७ फागुन ७ गते जनक्रान्ति मार्फत यस निरङ्कुश शासनको अन्त्य भई नेपालमा प्रजातन्त्रको स्थापना भयो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>१. राणा शासनको उदय:</strong></p>
+                <ul>
+                    <li><strong>कोतपर्व (वि.सं. १९०३ असोज ३):</strong> गगनसिंहको हत्यापछि रानी राज्यलक्ष्मीको रिसको फाइदा उठाउँदै जङ्गबहादुरले हनुमानढोका कोतमा चौतारिया र भारदारहरूको सामूहिक हत्या गराए।</li>
+                    <li><strong>भण्डारखाल पर्व (वि.सं. १९०३ कात्तिक १२):</strong> जङ्गबहादुरलाई मार्न रचिएको षड्यन्त्र विफल पारी जङ्गबहादुरले आफ्ना विरोधीहरूको सफाइ गरे र प्रधानमन्त्री तथा कमान्डर-इन-चिफ बने।</li>
+                    <li><strong>अलौ पर्व (वि.सं. १९०४):</strong> राजा राजेन्द्रले सत्ता पुन: प्राप्त गर्न गरेको प्रयास विफल भई जङ्गबहादुरले श्री ३ र 'रुल अफ रोल' (A, B, C वर्ग) को पारिवारिक शासन सुरु गरे।</li>
+                </ul>
+
+                <p><strong>२. राणाकालीन हुकुमी शासनको प्रकृति:</strong></p>
+                <ul>
+                    <li><strong>पारिवारिक र निरङ्कुश अधिकार:</strong> श्री ३ महाराज नै कार्यपालिका, व्यवस्थापिका र न्यायपालिकाका प्रमुख हुन्थे। राजा (श्री ५) लाई 'पिँजडाको पक्षी' बनाइएको थियो।</li>
+                    <li><strong>शोषणकारी अर्थतन्त्र:</strong> राज्यको ढुकुटीलाई व्यक्तिगत सम्पत्ति सरह प्रयोग गरिनु र जनतालाई शिक्षा एवं अधिकारबाट वञ्चित राखिनु।</li>
+                </ul>
+
+                <p><strong>३. वि.सं. २००७ मा राणा शासन ढल्नुका कारणहरू:</strong></p>
+
+                <div class="branch-flow">
+                    <div class="branch-root">राणा शासन ढल्नुका कारणहरू (२००७)</div>
+                    <div class="branch-children">
+                        <div class="mermaid-step">आन्तरिक कारणहरू<br><span style="font-weight:400;font-size:0.85rem;">प्रजा परिषद्, कांग्रेस, A-B-C असन्तोष</span></div>
+                        <div class="mermaid-step">बाह्य कारणहरू<br><span style="font-weight:400;font-size:0.85rem;">भारत स्वतन्त्रता, लोकतन्त्रको लहर</span></div>
+                    </div>
+                </div>
+
+                <ul>
+                    <li><strong>(क) आन्तरिक कारणहरू:</strong>
+                        <ul>
+                            <li><strong>राजनीतिक चेतना र दलहरूको उदय:</strong> नेपाल प्रजा परिषद् (१९९३) र नेपाली कांग्रेस (२००६) को नेतृत्वमा भएको जनआन्दोलन र मुक्तिसेनाको सशस्त्र क्रान्ति।</li>
+                            <li><strong>राणा परिवारभित्रको आन्तरिक फुट:</strong> C वर्गका राणाहरूलाई शासनको रोलक्रमबाट हटाइएकाले उनीहरूले क्रान्तिलाई आर्थिक सहयोग गर्नु।</li>
+                            <li><strong>राजा त्रिभुवनको ऐतिहासिक कदम:</strong> राजा त्रिभुवन वि.सं. २००७ कात्तिक २१ मा भारतीय दूतावास भई दिल्ली गएर क्रान्तिलाई समर्थन गर्नु।</li>
+                        </ul>
+                    </li>
+                    <li><strong>(ख) बाह्य कारणहरू:</strong>
+                        <ul>
+                            <li><strong>भारतमा ब्रिटिस शासनको अन्त्य (सन् १९४७):</strong> राणाहरूको मुख्य संरक्षक बेलायती साम्राज्य भारतबाट हटेपछि राणाहरू कमजोर बन्नु।</li>
+                            <li><strong>एसियामा लोकतन्त्रको लहर:</strong> दोस्रो विश्वयुद्धपछि विश्वभर निरङ्कुशता ढल्नु र स्वतन्त्र भारतको दबाब।</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः १०४ वर्षे निरङ्कुश राणाशासनको अन्त्य हुनु नेपालको इतिहासमा प्रजातन्त्र, नागरिक अधिकार र आधुनिक युगको सुरुवात गर्ने ऐतिहासिक प्रस्थानविन्दु थियो।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न २२ -->
+        <div class="qa-block color1" id="q22">
+            <div class="q"><span class="qnum">प्र.न. २२:</span> "शिक्षा र मानव संसाधन विकास मुलुकको समग्र रूपान्तरणको मेरुदण्ड हो।" यस भनाइलाई ध्यानमा राखी नेपालको वर्तमान शिक्षा प्रणालीलाई श्रम बजार, प्रविधि र उत्पादनसँग जोड्न कस्ता नीतिगत र व्यावहारिक सुधारहरू गर्नुपर्छ? स्पष्ट मार्गचित्र (Roadmap) प्रस्तुत गर्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> कुनै पनि देशको आर्थिक, सामाजिक र प्रविधिगत विकास सो देशमा उपलब्ध मानव संसाधन (Human Resources) को गुणस्तरमा निर्भर गर्छ। मानव संसाधन निर्माण गर्ने मुख्य कारखाना शिक्षा हो। नेपालको वर्तमान शिक्षा प्रणाली सैद्धान्तिक र प्रमाणपत्रमुखी भएकाले यसलाई <strong>'श्रम बजार, प्रविधि र उत्पादन'</strong> सँग जोड्ने एकीकृत मार्गचित्र (Roadmap) अपरिहार्य बनेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <div class="branch-flow">
+                    <div class="branch-root">शिक्षा र मानव संसाधन सुधार मार्गचित्र</div>
+                    <div class="branch-children">
+                        <div class="mermaid-step">१. नीतिगत सुधारहरू<br><span style="font-weight:400;font-size:0.85rem;">'एक विद्यार्थी-एक सीप', TVET बजेट २०%</span></div>
+                        <div class="mermaid-step">२. पाठ्यक्रम र प्रविधि<br><span style="font-weight:400;font-size:0.85rem;">STEM, AI, कोडिङ, प्रयोगात्मक मूल्याङ्कन</span></div>
+                        <div class="mermaid-step">३. उत्पादन र श्रम बजार<br><span style="font-weight:400;font-size:0.85rem;">Industry-Academia, Earn while Learn</span></div>
+                    </div>
+                </div>
+
+                <p><strong>१. नीतिगत सुधारहरू (Policy Reforms):</strong></p>
+                <ul>
+                    <li><strong>'एक विद्यार्थी-एक सीप' को कानुनी ग्यारेन्टी:</strong> माध्यमिक तह (कक्षा ९-१२) पूरा गर्दा प्रत्येक विद्यार्थीले कम्तीमा एउटा बजारयोग्य प्राविधिक सीप (जस्तै: इलेक्ट्रोनिक्स, प्लम्बिङ, कृषि, एप डेभलपमेन्ट) को प्रमाणपत्र पाउने नीति लागू गर्ने।</li>
+                    <li><strong>प्राविधिक शिक्षामा बजेट वृद्धि:</strong> कुल शिक्षा बजेटको कम्तीमा २०% हिस्सा प्राविधिक तथा व्यावसायिक शिक्षा (CTEVT/TVET) मा विनियोजन गर्ने।</li>
+                    <li><strong>राष्ट्रिय जनशक्ति योजना (National Manpower Planning):</strong> आगामी १० वर्षमा नेपाललाई कति डाक्टर, इन्जिनियर, कृषि प्रविधिविद्, र आईटी विज्ञ चाहिन्छ सोको प्रक्षेपण गरी सोही अनुसार विश्वविद्यालयमा सिट तोक्ने।</li>
+                </ul>
+
+                <p><strong>२. पाठ्यक्रम र प्रविधिगत सुधारहरू (Curriculum &amp; Tech Reforms):</strong></p>
+                <ul>
+                    <li><strong>STEM र डिजिटल साक्षरता:</strong> विद्यालय तहदेखि नै विज्ञान, प्रविधि, इन्जिनियरिङ, र गणित (STEM) का साथै आर्टिफिसियल इन्टेलिजेन्स (AI), कोडिङ र रोबोटिक्सको व्यावहारिक ज्ञान दिने।</li>
+                    <li><strong>'कमाउँदै पढ्दै' (Earn while Learn) मोडल:</strong> उच्च शिक्षाका विद्यार्थीहरूलाई अध्ययनकै क्रममा साताको २० घण्टा पार्ट-टाइम काम गर्ने र इन्टर्नसिप गर्ने कानुनी बाटो खोल्ने।</li>
+                    <li><strong>प्रयोगात्मक र अनुसन्धानमुखी मूल्याङ्कन:</strong> ५०% अङ्क सैद्धान्तिक र ५०% अङ्क प्रत्यक्ष प्रयोगशाला, क्षेत्र भ्रमण र अनुसन्धान परियोजनामा आधारित बनाउने।</li>
+                </ul>
+
+                <p><strong>३. उत्पादन र श्रम बजार सहकार्य (Industry-Academia Linkage):</strong></p>
+                <ul>
+                    <li><strong>उद्योग र कलेजको साझेदारी:</strong> निजी क्षेत्रका उद्योगहरू र विश्वविद्यालयहरूबिच सम्झौता गरी उद्योगको माग अनुसारको जनशक्ति तयार पार्ने।</li>
+                    <li><strong>युवा उद्यमी बीउ पुँजी (Incubation Centers):</strong> प्रत्येक कलेजमा 'उद्यमशीलता विकास केन्द्र' खोलेर नवीन सोच भएका विद्यार्थीलाई बिनाधितो सहुलियत ऋण उपलब्ध गराउने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः शिक्षालाई केवल बेरोजगारी सिर्जना गर्ने थलो हुन नदिई श्रम, प्रविधि र उत्पादनसँग जोड्ने यो मार्गचित्र लागू गर्न सकेमा नेपाली युवाहरू स्वदेशमै स्वरोजगार बन्नेछन् र 'समृद्ध नेपाल, सुखी नेपाली' को राष्ट्रिय सङ्कल्प साकार हुनेछ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> NEB परीक्षामा ५ र ८ अङ्कका उत्तरहरू अनिवार्य रूपमा <strong>३-स्तरीय ढाँचा</strong> (📌 परिचय → 📊 विश्लेषण → 🎯 निष्कर्ष) मा लेख्नुहोस्। उदाहरण, तथ्य, मिति र नामहरू शुद्ध रूपमा समावेश गर्नुहोस्। जति बुँदा मागिएको छ त्यति नै बुँदा स्पष्ट रूपमा लेख्नुहोस्। नियमित अभ्यासले मात्र आत्मविश्वास, गति र शुद्धता बढ्छ।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – NEB मोडल सेट ४</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

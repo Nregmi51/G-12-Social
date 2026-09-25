@@ -1,0 +1,1460 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>NEB कक्षा १२ – सामाजिक अध्ययन नमुना सेट २ (पूर्ण समाधान)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- EXAM INFO CARD ----- */
+        .exam-info {
+            background: #eef0f0;
+            border: 2px solid #5C6BC0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 24px;
+        }
+
+        .exam-info h3 {
+            color: #1A237E;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exam-info h3 i {
+            color: #1A237E;
+        }
+
+        .exam-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .exam-info ul li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #374210;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-info ul li i {
+            color: #1A237E;
+            margin-top: 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .exam-info ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- GROUP HEADERS ----- */
+        .group-head {
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+            margin: 44px 0 8px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 4px 16px rgba(26, 35, 126, 0.35);
+        }
+
+        .group-head i {
+            font-size: 1.6rem;
+            color: #f5d742;
+        }
+
+        .group-head .marks {
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 4px 16px;
+            border-radius: 40px;
+            margin-left: auto;
+        }
+
+        .group-sub {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #1A237E;
+            background: #eef0f0;
+            border-left: 6px solid #1A237E;
+            padding: 8px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 10px 0 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .group-sub i {
+            color: #1A237E;
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #1A237E;
+            margin: 36px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(26, 35, 126, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.4rem;
+            color: #f5d742;
+        }
+
+        .sub-head {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.02rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.18rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.15rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #1A237E;
+            font-size: 1.08rem;
+        }
+
+        .qa-block .a p {
+            color: #374210;
+        }
+
+        /* ----- ALTERNATIVE DIVIDER ----- */
+        .alt-divider {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 22px 0;
+            color: #1A237E;
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        .alt-divider::before,
+        .alt-divider::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background: repeating-linear-gradient(
+                90deg,
+                #1A237E 0, #1A237E 8px,
+                transparent 8px, transparent 16px
+            );
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        /* ----- BRANCH FLOW (Tree Diagram) ----- */
+        .branch-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            padding: 18px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .branch-root {
+            background: #1A237E;
+            color: #ffffff;
+            border-color: #1A237E;
+            font-size: 1.05rem;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 800;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .branch-children {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .branch-children {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .branch-children {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ----- MARKS TAG ----- */
+        .marks-tag {
+            display: inline-block;
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 40px;
+            margin-left: 8px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.08rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .group-head {
+                font-size: 1.3rem;
+                padding: 12px 16px;
+            }
+
+            .group-head .marks {
+                font-size: 0.68rem;
+                padding: 3px 12px;
+            }
+
+            .section-head {
+                font-size: 1.25rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.12rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.02rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.88rem;
+            }
+            th,
+            td {
+                font-size: 0.88rem;
+                padding: 6px 8px;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .branch-root {
+                font-size: 0.9rem;
+                padding: 8px 18px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-file-pen"></i>
+                    नमुना प्रश्नपत्र सेट २ — पूर्ण समाधान
+                </h1>
+                <div class="subtitle">
+                    NEB कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा (Sub. Code: 005)
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> Complete Model Solution</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – मोडल सेट २
+            </span>
+        </div>
+
+        <!-- ===== EXAM INFO ===== -->
+        <div class="exam-info">
+            <h3><i class="fas fa-circle-info"></i> परीक्षार्थीका लागि जानकारी</h3>
+            <ul>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय:</strong> सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा (कक्षा १२)</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>पूर्णाङ्क:</strong> ७५ | <strong>समय:</strong> ३ घण्टा</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय कोड:</strong> Sol. 005</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>उत्तर प्रस्तुति:</strong> NEB मापदण्ड अनुसार ५ र ८ अङ्कका उत्तरहरू ३-स्तरीय ढाँचामा</span></li>
+            </ul>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#groupA"><i class="fas fa-chevron-right"></i> समूह 'क' – अति संक्षिप्त</a>
+                <a href="#groupB"><i class="fas fa-chevron-right"></i> समूह 'ख' – संक्षिप्त उत्तर</a>
+                <a href="#groupC"><i class="fas fa-chevron-right"></i> समूह 'ग' – विस्तृत उत्तर</a>
+                <a href="#q12"><i class="fas fa-chevron-right"></i> प्रश्न १२ – प्राथमिक/द्वितीयक स्रोत</a>
+                <a href="#q12b"><i class="fas fa-chevron-right"></i> प्रश्न १२ (ख) – Excel Mean/Median</a>
+                <a href="#q13"><i class="fas fa-chevron-right"></i> प्रश्न १३ – दर्शन र विश्वदृष्टिकोण</a>
+                <a href="#q14"><i class="fas fa-chevron-right"></i> प्रश्न १४ – प्रादेशिक आर्थिक विविधता</a>
+                <a href="#q15"><i class="fas fa-chevron-right"></i> प्रश्न १५ – २०३६ को जनमत सङ्ग्रह</a>
+                <a href="#q16"><i class="fas fa-chevron-right"></i> प्रश्न १६ – लैङ्गिक समानता</a>
+                <a href="#q17"><i class="fas fa-chevron-right"></i> प्रश्न १७ – सुशासन र नागरिक बडापत्र</a>
+                <a href="#q18"><i class="fas fa-chevron-right"></i> प्रश्न १८ – गाउँ-सहर सम्बन्ध</a>
+                <a href="#q19"><i class="fas fa-chevron-right"></i> प्रश्न १९ – वैदेशिक रोजगारी</a>
+                <a href="#q20"><i class="fas fa-chevron-right"></i> प्रश्न २० – सिर्जनात्मक चिन्तन</a>
+                <a href="#q21"><i class="fas fa-chevron-right"></i> प्रश्न २१ – विपद् व्यवस्थापन</a>
+                <a href="#q22"><i class="fas fa-chevron-right"></i> प्रश्न २२ – SDG र गरिबी</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== GROUP A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="group-head" id="groupA">
+            <i class="fas fa-a"></i>
+            समूह 'क' — अति संक्षिप्त उत्तरात्मक प्रश्नहरू
+            <span class="marks">११ × १ = ११</span>
+        </div>
+
+        <div class="group-sub">
+            <i class="fas fa-circle-info"></i>
+            अति संक्षिप्त उत्तर: १०–२० शब्द | तलका सबै प्रश्नहरूको छोटो उत्तर दिनुहोस्।
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्र.न. १:</span> पूर्वीय ६४ कला र आधुनिक जीवनोपयोगी सिपबिचको मुख्य समानता एक वाक्यमा लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> पूर्वीय ६४ कला र आधुनिक जीवनोपयोगी सिप दुवैले मानिसलाई केवल सैद्धान्तिक ज्ञानमा सीमित नराखी व्यवहारिक, आत्मनिर्भर, सिर्जनशील र अनुशासित जीवन जिउन सक्षम बनाउने साझा लक्ष्य राख्दछन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्र.न. २:</span> स्वतन्त्र चर (Independent Variable) र निर्भर चर (Dependent Variable) बिचको एक मुख्य भिन्नता लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अनुसन्धानमा <strong>स्वतन्त्र चर</strong> कार्य-कारण सम्बन्धको 'कारण' (Cause) हो जसलाई अनुसन्धानकर्ताले परिवर्तन गर्न सक्छ भने <strong>निर्भर चर</strong> सो परिवर्तनबाट देखा पर्ने 'परिणाम' (Effect) वा नतिजा हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्र.न. ३:</span> बौद्धिक चोरी (Plagiarism) बाट बच्न अपनाउनुपर्ने कुनै एक कानुनी वा नैतिक उपाय लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अरूको लेख-रचना, विचार वा तथ्याङ्क प्रयोग गर्दा APA वा MLA जस्ता मान्यता प्राप्त ढाँचामा अनिवार्य रूपमा <strong>स्रोतको उद्धरण (In-text Citation &amp; Reference)</strong> उल्लेख गर्नु बौद्धिक चोरीबाट बच्ने मुख्य उपाय हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्र.न. ४:</span> डा. एडवर्ड डि बोनोको '६ सोच्ने टोपीहरू' (Six Thinking Hats) मा 'हरियो टोपी' ले कुन सोचलाई जनाउँछ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> डा. एडवर्ड डि बोनोका अनुसार <strong>'हरियो टोपी'</strong> (Green Hat) ले परम्परागत दायराभन्दा बाहिर गएर नयाँ विकल्प, नवीन विचार र सिर्जनात्मक सोच (Creative Thinking) लाई जनाउँछ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्र.न. ५:</span> लिच्छविकालमा व्यापारिक र आर्थिक गतिविधि सञ्चालन गर्ने मुख्य संस्थालाई के भनिन्थ्यो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> लिच्छविकालमा व्यापारिक, आर्थिक र व्यावसायिक गतिविधिहरू सञ्चालन एवं नियन्त्रण गर्ने मुख्य संस्थालाई <strong>'सङ्घ'</strong> वा <strong>'निगम'</strong> भनिन्थ्यो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">प्र.न. ६:</span> नेपालको कुन प्रशासनिक प्रदेश जनसङ्ख्याको घनत्वका हिसाबले सबैभन्दा घना र कुन सबैभन्दा पातलो छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नेपालमा जनगणना २०७८ अनुसार जनसङ्ख्याको घनत्वका हिसाबले सबैभन्दा घना प्रदेश <strong>मधेश प्रदेश</strong> (६३६ जना/वर्ग किमी) र सबैभन्दा पातलो प्रदेश <strong>कर्णाली प्रदेश</strong> (२९ जना/वर्ग किमी) हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">प्र.न. ७:</span> मौलिक हक र नागरिक कर्तव्यबिचको सम्बन्धलाई एक वाक्यमा स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मौलिक हक र नागरिक कर्तव्य एउटै सिक्काका दुई पाटा हुन्; नागरिकले कर्तव्य पालना गरेमा मात्र मौलिक हकको उपभोग र संरक्षण सम्भव हुन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">प्र.न. ८:</span> 'सार्क' (SAARC) को पूर्ण रूप लेख्दै यसको मुख्य उद्देश्य एक वाक्यमा लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सार्कको पूर्ण रूप <strong>South Asian Association for Regional Cooperation</strong> (दक्षिण एसियाली क्षेत्रीय सहयोग सङ्गठन) हो र यसको मुख्य उद्देश्य दक्षिण एसियाली क्षेत्रमा आर्थिक वृद्धि, सामाजिक प्रगति र सांस्कृतिक विकासमा तीव्र ल्याउनु हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्र.न. ९:</span> वैदेशिक रोजगारीलाई सुरक्षित र मर्यादित बनाउन सरकारले अपनाएको कुनै एक मुख्य नीति उल्लेख गर्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सरकारले गन्तव्य मुलुकहरूसँग अनिवार्य द्विपक्षीय श्रम सम्झौता (Bilateral Labour Agreement) गरी 'फ्री भिसा फ्री टिकट' र अनलाइन श्रम स्वीकृति प्रणाली लागू गर्ने नीति अपनाएको छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्र.न. १०:</span> समावेशी शिक्षा (Inclusive Education) भनेको के हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> जाति, लिङ्ग, भाषा, धर्म वा शारीरिक क्षमताका आधारमा कुनै विभेद नगरी सबै बालबालिकालाई एउटै कक्षाकोठामा समान र सहज रूपमा सिक्ने अवसर दिने शैक्षिक प्रणालीलाई <strong>समावेशी शिक्षा</strong> भनिन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्र.न. ११:</span> सामाजिक सञ्जालको प्रयोगमा 'साइबर बुलिङ' (Cyberbullying) बाट बच्ने कुनै एक उपाय लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> आफ्नो सामाजिक सञ्जालको प्रोफाइल गोप्य (Private) राख्ने, अपरिचित व्यक्तिहरूका सन्देश/अनुरोध स्वीकार नगर्ने र अनावश्यक टीका-टिप्पणी गर्नेहरूलाई ब्लक वा रिपोर्ट (Report) गर्ने।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== GROUP B ===== -->
+        <!-- ========================================================== -->
+
+        <div class="group-head" id="groupB">
+            <i class="fas fa-b"></i>
+            समूह 'ख' — संक्षिप्त उत्तरात्मक प्रश्नहरू
+            <span class="marks">८ × ५ = ४०</span>
+        </div>
+
+        <div class="group-sub">
+            <i class="fas fa-circle-info"></i>
+            संक्षिप्त उत्तर: १५०–२०० शब्द | तलका प्रश्नहरूको संक्षिप्त उत्तर दिनुहोस्।
+        </div>
+
+        <!-- प्रश्न १२ -->
+        <div class="qa-block color4" id="q12">
+            <div class="q"><span class="qnum">प्र.न. १२:</span> सामाजिक अनुसन्धानमा तथ्याङ्क सङ्कलन गर्दा प्राथमिक स्रोत (Primary Source) र द्वितीयक स्रोत (Secondary Source) प्रयोग गर्दा ध्यान दिनुपर्ने कुराहरू तुलनात्मक रूपमा स्पष्ट पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> सामाजिक अनुसन्धानलाई वस्तुगत र प्रमाणिक बनाउन तथ्याङ्क सङ्कलन पहिलो खुड्किलो हो। अनुसन्धानकर्ता आफैँले क्षेत्र भ्रमण गरी सङ्कलन गरेको प्रथम हातको तथ्याङ्क <strong>प्राथमिक स्रोत</strong> हो भने अन्य व्यक्ति वा संस्थाले पहिले नै प्रकाशित/अप्रकाशित गरेका सामग्रीहरू <strong>द्वितीयक स्रोत</strong> हुन्।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> दुवै स्रोत प्रयोग गर्दा ध्यान दिनुपर्ने कुराहरूको तुलनात्मक तालिका:</p>
+
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width:24%;">ध्यान दिनुपर्ने पक्ष</th>
+                                <th>प्राथमिक स्रोत (Primary Source)</th>
+                                <th>द्वितीयक स्रोत (Secondary Source)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>१. वस्तुनिष्ठता र पूर्वाग्रह</strong></td>
+                                <td>उत्तरदाताको भावना वा पूर्वाग्रह आउन नदिन प्रश्नावली र अन्तर्वार्ता निष्पक्ष बनाउनुपर्छ।</td>
+                                <td>लेखक वा संस्थाको पूर्वाग्रह हुन सक्ने भएकाले तथ्याङ्कको आधिकारिकता जाँच्नुपर्छ।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>२. नैतिक पक्ष र सहमति</strong></td>
+                                <td>उत्तरदाताको स्वीकृति (Consent) लिनुपर्छ र गोपनीयता कायम राख्नुपर्छ।</td>
+                                <td>मूल अनुसन्धानकर्ताको नाम, वर्ष र स्रोत अनिवार्य रूपमा उद्धरण (Citation) गर्नुपर्छ।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>३. साधनको शुद्धता</strong></td>
+                                <td>प्रश्नावली, अन्तर्वार्ता मार्गदर्शन वा रुजुसूची पूर्व-परीक्षण (Pilot Testing) गराउनुपर्छ।</td>
+                                <td>सामग्री कुन उद्देश्यका लागि र कहिले तयार पारिएको हो (सापेक्षता) हेर्नुपर्छ।</td>
+                            </tr>
+                            <tr>
+                                <td><strong>४. समय र लागत</strong></td>
+                                <td>क्षेत्र भ्रमण गर्दा समय, बजेट र सुरक्षा व्यवस्थामा ध्यान दिनुपर्छ।</td>
+                                <td>पुराना वा अप्रचलित तथ्याङ्क त्यागी अद्यावधिक (Latest) तथ्याङ्क रोज्नुपर्छ।</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः प्राथमिक र द्वितीयक दुवै स्रोतका आ-आफ्नै सबल र दुर्बल पक्षहरू छन्। अनुसन्धानकर्ताले यी दुवै स्रोतको सन्तुलित प्रयोग गरी तथ्याङ्कको विश्वसनीयता सुनिश्चित गर्नुपर्छ।</p>
+            </div>
+        </div>
+
+        <div class="alt-divider">[ अथवा ]</div>
+
+        <div class="qa-block color5" id="q12b">
+            <div class="q"><span class="qnum">प्र.न. १२ (ख):</span> माइक्रोसफ्ट एक्सेल (MS Excel) सफ्टवेयरको प्रयोग गरी सामाजिक तथ्याङ्कको मध्यक (Mean) र मध्यिका (Median) गणना गर्ने चरणबद्ध प्रक्रिया लेख्नुहोस्।</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> सामाजिक अनुसन्धानबाट प्राप्त परिमाणात्मक तथ्याङ्कको छिटोछरितो, शुद्ध र व्यवस्थित प्रशोधनका लागि माइक्रोसफ्ट एक्सेल (MS Excel) एक अत्यन्त उपयोगी स्प्रेडसिट सफ्टवेयर हो। यसमा पूर्व-निर्धारित सूत्रहरू (Formulas) प्रयोग गरी तथ्याङ्कको केन्द्रीय प्रवृत्ति (Mean &amp; Median) गणना गरिन्छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> एक्सेलमा मध्यक र मध्यिका गणना गर्ने चरणबद्ध प्रक्रिया:</p>
+
+                <div class="mermaid-flow">
+                    <div class="mermaid-step">चरण १: MS Excel खोल्ने र डाटा एन्ट्री गर्ने</div>
+                    <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="mermaid-step">चरण २: नतिजा सेल (Cell) छनोट गर्ने</div>
+                    <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="mermaid-step">चरण ३: '=' चिन्ह टाइप गर्ने</div>
+                    <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="mermaid-step">चरण ४: AVERAGE / MEDIAN प्रयोग गर्ने</div>
+                    <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="mermaid-step">चरण ५: Enter थिची नतिजा प्राप्त गर्ने</div>
+                </div>
+
+                <ul>
+                    <li><strong>चरण १ (डाटा एन्ट्री):</strong> कम्प्युटरमा MS Excel खोलेर कुनै एक कोलममा (जस्तै Cell <code>A2</code> देखि <code>A11</code> सम्म) १० जना विद्यार्थीको प्राप्ताङ्क प्रविष्टि गर्ने।</li>
+                    <li><strong>चरण २ (सेल चयन):</strong> गणना गरिएको मान राख्न खाली सेल छनोट गर्ने (जस्तै मध्यकका लागि Cell <code>B2</code> र मध्यिकाका लागि Cell <code>B3</code>)।</li>
+                    <li><strong>चरण ३ (मध्यक - Mean गणना):</strong> Cell <code>B2</code> मा गई <code>=AVERAGE(A2:A11)</code> टाइप गरी किबोर्डको <code>Enter</code> थिच्ने। यसो गर्दा औसत मान (Mean) स्वतः प्रदर्शित हुन्छ।</li>
+                    <li><strong>चरण ४ (मध्यिका - Median गणना):</strong> Cell <code>B3</code> मा गई <code>=MEDIAN(A2:A11)</code> टाइप गरी <code>Enter</code> थिच्ने। यसो गर्दा तथ्याङ्कको मध्यबिन्दु (Median) प्राप्त हुन्छ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> यसरी कम्प्युटर सफ्टवेयर एक्सेलको प्रयोगले ठुला-ठुला साङ्ख्यिकीय तथ्याङ्कहरूलाई विना कुनै गल्ती छोटो समयमा प्रशोधन गरी सामाजिक अनुसन्धानलाई सरल र विश्वसनीय बनाउन सकिन्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १३ -->
+        <div class="qa-block color6" id="q13">
+            <div class="q"><span class="qnum">प्र.न. १३:</span> "दैनिक जीवनका हरेक निर्णयमा दर्शन र विश्वदृष्टिकोण (Worldview) को प्रत्यक्ष प्रभाव परेको हुन्छ।" यस भनाइलाई उदाहरणसहित पाँच बुँदामा स्पष्ट पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> मानिसले आफ्नो जीवनको भोगाइ, शिक्षा र संस्कृतिका आधारमा जगत्‌लाई हेर्ने र बुझ्ने जुन धारणा बनाउँछ, त्यसलाई विश्वदृष्टिकोण भनिन्छ। मानिसले सचेत वा अचेत रूपमा लिने हरेक दैनिक निर्णयहरू उसको यही आन्तरिक जीवन दर्शन र विश्वदृष्टिकोणबाट निर्देशित हुन्छन्।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> दैनिक निर्णयमा दर्शन र विश्वदृष्टिकोणको प्रभाव दर्शाउने ५ मुख्य आधारहरू:</p>
+
+                <ul>
+                    <li><strong>१. खानपान र जीवनशैलीको छनोटमा:</strong> सात्त्विक वा अहिंसावादी दर्शन मान्ने व्यक्तिले शाकाहारी भोजन रोज्छ भने भौतिकवादी वा चार्वाक दर्शनबाट प्रभावित मानिसले क्षणिक उपभोग र शारीरिक सुखलाई प्राथमिकता दिन्छ।</li>
+                    <li><strong>२. आर्थिक निर्णय र खर्च गर्ने बानीमा:</strong> पूर्वीय सन्तुलित दर्शन अपनाउने व्यक्ति (जस्तै सुवर्णको चरित्र) ले फजुल खर्च नियन्त्रण गरी बचत गर्छ भने देखावटी र उपभोगवादी विश्वदृष्टिकोण भएको व्यक्तिले अनावश्यक फेसनमा पैसा उडाउँछ।</li>
+                    <li><strong>३. नैतिक तथा सामाजिक व्यवहारमा:</strong> बुद्धको 'पञ्चशील' र करुणाको दर्शन मान्ने मानिसले समाजमा असहायलाई सहयोग गर्छ भने वैयक्तिकतावादी दर्शन मान्नेले केवल आफ्नै स्वार्थ मात्र हेर्छ।</li>
+                    <li><strong>४. संकट र असफलताको सामनामा:</strong> कर्मवादी र सकारात्मक जीवन दर्शन भएको व्यक्ति परीक्षामा अनुत्तीर्ण हुँदा वा व्यापारमा घाटा लाग्दा आत्मआलोचना गरी सम्हालिन्छ भने निराशावादी व्यक्ति विचलित हुन्छ।</li>
+                    <li><strong>५. वातावरण र प्रकृतिप्रतिको दृष्टिकोणमा:</strong> बोन वा किरात मुन्धुम जस्ता प्रकृतिपूजक दर्शन मान्नेले रूख, नदी र जलको संरक्षण गर्छ भने पूर्ण दोहनकारी दृष्टिकोण भएको व्यक्तिले वातावरण विनाश गर्छ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः मानिसको सोच, बोली, चरित्र र दैनिक निर्णयको पछाडि उसको जीवन दर्शन नै चालक शक्तिका रूपमा रहेको हुन्छ, तसर्थ सकारात्मक र समतामूलक विश्वदृष्टिकोण निर्माण गर्नु अपरिहार्य छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १४ -->
+        <div class="qa-block color7" id="q14">
+            <div class="q"><span class="qnum">प्र.न. १४:</span> नेपालका प्रदेशहरूबिच पाइने आर्थिक विविधता र अन्तरप्रादेशिक व्यापारिक अन्तरनिर्भरताको चर्चा गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपालको सङ्घीय ढाँचामा रहेका सातवटा प्रदेशहरू भौगोलिक, जलस्रोत, कृषि र औद्योगिक उत्पादनका दृष्टिले फरक-फरक विशेषतायुक्त छन्। कुनै पनि प्रदेश पूर्ण रूपमा आत्मनिर्भर नभएकाले प्रदेशहरूबिच आर्थिक सहयोग र अन्तरप्रादेशिक व्यापारिक अन्तरनिर्भरता (Inter-provincial Interdependence) उच्च रहेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> प्रदेशहरूबिचको आर्थिक विविधता र अन्तरनिर्भरता:</p>
+
+                <ul>
+                    <li><strong>खाद्यान्न र कृषिजन्य अन्तरनिर्भरता:</strong> मधेश र लुम्बिनी प्रदेश नेपालका 'अन्नका भण्डार' हुन्। यी प्रदेशबाट धान, गहुँ र तेलहन बागमती, गण्डकी र कर्णाली प्रदेशमा आपूर्ति हुन्छ भने कर्णाली र गण्डकीका अर्गानिक जडीबुटी, स्याउ र पशुजन्य उत्पादन तराईका प्रदेशमा बिक्री हुन्छ।</li>
+                    <li><strong>जलविद्युत् र औद्योगिक ऊर्जा:</strong> गण्डकी, बागमती र कोशी प्रदेशमा ठुला जलविद्युत् आयोजनाहरू छन्। यहाँबाट उत्पादित बिजुली मधेश र लुम्बिनीका औद्योगिक करिडोरहरू (जस्तै वीरगञ्ज, भैरहवा) का कलकारखाना चलाउन आपूर्ति गरिन्छ।</li>
+                    <li><strong>वैदेशिक व्यापार र भन्सार नाका:</strong> बागमती (तातोपानी/रसुवागढी नाका) र मधेश (वीरगञ्ज सुख्खा बन्दरगाह) ले अन्य प्रदेशका लागि कच्चा पदार्थ र आयातित सामानको मुख्य नाकाको काम गर्छन्।</li>
+                    <li><strong>पर्यटन र श्रम बजार:</strong> गण्डकी (पोखरा) र बागमतीका पर्यटकीय स्थलहरूले अन्य प्रदेशका युवाहरूलाई रोजगारी दिन्छन् भने सुदूरपश्चिम र कर्णालीका मानिसहरू व्यापार र वैदेशिक रोजगारीका लागि अन्तरप्रादेशिक आवतजावत गर्छन्।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नेपालका प्रदेशहरूबिचको आर्थिक विविधता विभाजनको कारण नभई आपसी सहयोग र व्यापारिक अन्तरनिर्भरताको बलियो कडी हो, जसले राष्ट्रिय अर्थतन्त्रलाई समृद्ध बनाउँछ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १५ -->
+        <div class="qa-block color8" id="q15">
+            <div class="q"><span class="qnum">प्र.न. १५:</span> नेपालको आधुनिक राजनीतिक इतिहासमा वि.सं. २०३६ को विद्यार्थी आन्दोलन र जनमत सङ्ग्रहको ऐतिहासिक महत्त्व विश्लेषण गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> निरङ्कुश पञ्चायती व्यवस्थाविरुद्ध वि.सं. २०३५/३६ मा भएको शक्तिशाली विद्यार्थी आन्दोलनको दबाबका कारण राजा वीरेन्द्रले २०३६ जेठ १० गते 'सुधारिएको पञ्चायत' वा 'बहुदलीय प्रजातन्त्र' मध्ये एक छनोट गर्न <strong>जनमत सङ्ग्रह</strong> (Referendum) को घोषणा गरेका थिए। यो नेपालको इतिहासमा पहिलो प्रत्यक्ष प्रजातान्त्रिक अभ्यास थियो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> २०३६ को आन्दोलन र जनमत सङ्ग्रहको ऐतिहासिक महत्त्वका ५ मुख्य बुँदाहरू:</p>
+
+                <ul>
+                    <li><strong>१. प्रत्यक्ष जनमतको वैधानिकता:</strong> इतिहासमै पहिलो पटक नेपाली जनताले आफ्नो शासन प्रणाली आफैँ छनोट गर्ने ऐतिहासिक अधिकार (सार्वभौमसत्ताको प्रारम्भिक अभ्यास) प्राप्त गरे।</li>
+                    <li><strong>२. बहुदलीय चेतना र राजनीतिक जागरण:</strong> प्रतिबन्धित राजनीतिक दलहरूले खुला रूपमा आमसभा, भाषण र प्रचार-प्रसार गर्ने मौका पाए, जसले सर्वसाधारणमा प्रजातान्त्रिक चेतना तीव्र रूपमा फैलियो।</li>
+                    <li><strong>३. पञ्चायतमा सुधारको बाध्यता:</strong> जनमत सङ्ग्रहमा 'सुधारिएको पञ्चायत' विजयी भए पनि राजाले बालिग मताधिकारका आधारमा राष्ट्रिय पञ्चायतको निर्वाचन गराउने र प्रधानमन्त्री व्यवस्थापिकाप्रति उत्तरदायी हुने सुधार गर्न बाध्य भए।</li>
+                    <li><strong>४. भावी आन्दोलनको आधार निर्माण:</strong> यस आन्दोलनले बहुदलीय व्यवस्थाका समर्थकहरूलाई एकजुट बनायो, जसले वि.सं. २०४६ को ऐतिहासिक जनआन्दोलन र प्रजातन्त्र पुनर्वहालीको बलियो जग बसायो।</li>
+                    <li><strong>५. विद्यार्थी शक्तिको उदय:</strong> नेपालको राजनीतिमा विद्यार्थी सङ्गठनहरू एक निर्णायक सामाजिक र राजनीतिक दबाब समूहका रूपमा स्थापित भए।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> यद्यपि जनमत सङ्ग्रहमा धाँधली गरी पञ्चायतलाई जिताइएको आरोप लागे तापनि यसले नेपाली जनतामा राजनीतिक चेतनाको नयाँ युग सुरुवात गरेको ऐतिहासिक मोड मानिन्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १६ -->
+        <div class="qa-block color1" id="q16">
+            <div class="q"><span class="qnum">प्र.न. १६:</span> लैङ्गिक समानता र सामाजिक समावेशीकरणका लागि नेपालको संविधानमा गरिएका प्रमुख संवैधानिक व्यवस्थाहरू पाँच बुँदामा लेख्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपालको संविधान (२०७२) ले सबै प्रकारका जातीय, लैङ्गिक, क्षेत्रीय र सामाजिक विभेदहरूको अन्त्य गर्दै समतामूलक समाज निर्माण गर्ने सङ्कल्प गरेको छ। संविधानले महिला, दलित, अपाङ्गता भएका व्यक्ति र सीमान्तकृत वर्गका लागि व्यापक हक र समावेशी नीतिको व्यवस्था गरेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> संविधानमा गरिएका ५ मुख्य संवैधानिक व्यवस्थाहरू:</p>
+
+                <ul>
+                    <li><strong>१. समानताको हक (धारा १८):</strong> कानुनको दृष्टिमा सबै नागरिक समान हुनेछन्। धर्म, जातजाति, लिङ्ग वा शारीरिक अवस्थाका आधारमा भेदभाव गर्न नपाइने र महिला तथा पछाडि पारिएका वर्गका लागि 'सकारात्मक विभेद' (Special provisions) गर्न सकिने व्यवस्था।</li>
+                    <li><strong>२. महिलाको हक (धारा ३८):</strong> राज्यका सबै निकायमा महिलालाई समानुपातिक समावेशी सिद्धान्तका आधारमा सहभागी हुने हक, सम्पत्ति र पारिवारिक मामिलामा दम्पतिको समान हक, र लैङ्गिक हिंसाविरुद्धको हक।</li>
+                    <li><strong>३. दलितको हक (धारा २४ र ४०):</strong> जातीय छुवाछूत र भेदभावलाई कडा दण्डनीय अपराध मानिएको छ। दलितहरूलाई प्राथमिकदेखि उच्च शिक्षासम्म छात्रवृत्ति र राज्यका सबै अङ्गमा समानुपातिक प्रतिनिधित्वको हक।</li>
+                    <li><strong>४. राष्ट्रपति/उपराष्ट्रपति र सभामुख/उपसभामुखमा लैङ्गिक भिन्नता:</strong> राष्ट्रपति र उपराष्ट्रपति फरक-फरक लिङ्ग वा समुदायको हुनुपर्ने तथा प्रतिनिधि सभाको सभामुख र उपसभामुखमध्ये एक जना महिला हुनुपर्ने संवैधानिक बाध्यता।</li>
+                    <li><strong>५. समावेशी प्रतिनिधित्व र संवैधानिक आयोगहरू:</strong> सङ्घीय संसदमा कम्तीमा ३३ प्रतिशत महिला अनिवार्य हुनुपर्ने व्यवस्था, तथा राष्ट्रिय महिला आयोग, दलित आयोग, समावेशी आयोग जस्ता स्वायत्त आयोगहरूको गठन।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नेपालको संविधानले लैङ्गिक समानता र समावेशीकरणका लागि विश्वकै उत्कृष्ट व्यवस्थाहरू गरेको छ, जसको निष्पक्ष कार्यान्वयनले मात्र वास्तविक समतामूलक समाज निर्माण हुन सक्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १७ -->
+        <div class="qa-block color2" id="q17">
+            <div class="q"><span class="qnum">प्र.न. १७:</span> सुशासन (Good Governance) का मुख्य तत्वहरू उल्लेख गर्दै नेपालमा नागरिक बडापत्र (Citizen Charter) को भूमिका स्पष्ट पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> राज्यका सबै अङ्गहरूलाई नागरिकप्रति जिम्मेवार, पारदर्शी, ढिलासुस्तीमुक्त र उत्तरदायी बनाएर दिइने कुशल शासन नै <strong>सुशासन</strong> हो। सार्वजनिक निकायहरूबाट दिइने सेवा-सुविधा, लाग्ने समय, शुल्क र अधिकारीको नाम स्पष्ट तोकी राखिएको पाटीलाई <strong>नागरिक बडापत्र</strong> भनिन्छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>सुशासनका मुख्य तत्वहरू:</strong></p>
+                <p>विधिको शासन, पारदर्शिता, जवाफदेहिता, जनसहभागिता, भ्रष्टाचार शून्य सहनशीलता, र उत्तरदायी प्रशासन सुशासनका मेरुदण्ड हुन्।</p>
+
+                <p><strong>नेपालमा नागरिक बडापत्रको भूमिका:</strong></p>
+                <ul>
+                    <li><strong>१. सेवामा पारदर्शिता र सूचनाको हक:</strong> नागरिक बडापत्रले सेवा लिन चाहिने कागजात, दस्तुर र लाग्ने समय स्पष्ट देखाउने भएकाले बिचौलिया र भ्रष्टाचार रोक्न मद्दत गर्छ।</li>
+                    <li><strong>२. ढिलासुस्ती र अनियमितता नियन्त्रण:</strong> कुन कोठामा कति समयमा काम हुन्छ भन्ने स्पष्ट तोकिने हुनाले कर्मचारीमा काम छिटो गर्ने तत्परता र अनुशासन आउँछ।</li>
+                    <li><strong>३. नागरिकको समय र पैसाको बचत:</strong> अनावश्यक कागजात र पटक-पटक धाउनुपर्ने बाध्यता अन्त्य भई नागरिकले बिनाझन्झट सेवा प्राप्त गर्छन्।</li>
+                    <li><strong>४. क्षतिपूर्तिसहितको नागरिक बडापत्र (Compensatory Charter):</strong> तोकिएको समयमा सेवा नदिएमा ढिलासुस्ती गर्ने कर्मचारीबाट सेवाग्राहीलाई क्षतिपूर्ति दिने व्यवस्थाले प्रशासनलाई थप जिम्मेवार बनाएको छ।</li>
+                    <li><strong>५. नागरिक सशक्तिकरण:</strong> यसले नागरिकलाई केवल 'दयाको पात्र' नभई राज्यको करदाता र अधिकार सम्पन्न 'सेवाग्राही' को रूपमा स्थापित गर्छ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नागरिक बडापत्र सुशासन कायम गर्ने एक बलियो औजार हो। यसको प्रभावकारी कार्यान्वयनले राज्य र नागरिकबिचको विश्वास अभिवृद्धि गर्दछ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १८ -->
+        <div class="qa-block color3" id="q18">
+            <div class="q"><span class="qnum">प्र.न. १८:</span> गाउँ-सहर सम्बन्ध (Rural-Urban Linkage) ले दुवै क्षेत्रको आर्थिक विकासमा कसरी योगदान पुर्‍याउँछ? पाँच बुँदामा लेख्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> गाउँ र सहर एकापसमा विरोधी नभई एक-अर्काका परिपूरक हुन्। गाउँबाट कच्चा पदार्थ र खाद्यान्न सहरतर्फ जाने र सहरबाट निर्मित वस्तु, प्रविधि, पुँजी र सेवा गाउँतर्फ प्रवाह हुने दुईतर्फी अन्तरसम्बन्धलाई <strong>गाउँ-सहर सम्बन्ध</strong> (Rural-Urban Linkage) भनिन्छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> दुवै क्षेत्रको आर्थिक विकासमा गाउँ-सहर सम्बन्धको योगदान:</p>
+
+                <ul>
+                    <li><strong>१. कृषि उपजको बजार र खाद्य सुरक्षा:</strong> गाउँमा उत्पादित धान, तरकारी, दूध र फलफूलले सहरको विशाल बजार पाउँछन्, जसले किसानको आम्दानी बढाउँछ र सहरमा खाद्य सुरक्षा कायम गर्छ।</li>
+                    <li><strong>२. औद्योगिक कच्चा पदार्थ र निर्मित वस्तुको प्रवाह:</strong> गाउँले सहरका उद्योगहरूका लागि कच्चा पदार्थ (जस्तै जुट, उखु, चिया, जडीबुटी) आपूर्ति गर्छ भने सहरले गाउँका लागि मल, बिउ, ट्र्याक्टर र कपडा जस्ता उत्पादित वस्तुहरू पठाउँछ।</li>
+                    <li><strong>३. श्रम बजार र रोजगारीको अवसर:</strong> गाउँका युवाहरूले सहरका निर्माण, उद्योग र सेवा क्षेत्रमा श्रम र सीप दिएर रोजगारी पाउँछन् भने सहरका उद्योगहरूले आवश्यक जनशक्ति प्राप्त गर्छन्।</li>
+                    <li><strong>४. पुँजी र विप्रेषण (Remittance) को प्रवाह:</strong> सहरमा कमाएको पुँजी र बैंकिङ सुविधा गाउँमा लगानीका रूपमा भित्रिन्छ, जसले गाउँमा साना कृषि र पर्यटन उद्योगहरू खोल्न सघाउँछ।</li>
+                    <li><strong>५. प्रविधि, शिक्षा र स्वास्थ्यको विस्तार:</strong> सहरमा विकसित आधुनिक प्रविधि, सञ्चार, गुणस्तरीय शिक्षा र अस्पतालको सुविधा गाउँसम्म पुगेर ग्रामीण जीवनस्तर माथि उठाउँछ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः गाउँ र सहरबिच सन्तुलित पूर्वाधार निर्माण गरी यो अन्तरसम्बन्ध सुदृढ बनाएमा मात्र मुलुकको समग्र र दिगो आर्थिक विकास सम्भव हुन्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १९ -->
+        <div class="qa-block color4" id="q19">
+            <div class="q"><span class="qnum">प्र.न. १९:</span> वैदेशिक रोजगारीले नेपालको अर्थतन्त्रमा पारेको सकारात्मक र नकारात्मक प्रभावहरूको सन्तुलित समीक्षा गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपालमा आन्तरिक रोजगारीको अवसर सीमित हुनाले वार्षिक लाखौँ युवाहरू वैदेशिक रोजगारीमा जाने गरेका छन्। वर्तमान नेपालको अर्थतन्त्रको मुख्य अडान नै वैदेशिक रोजगारीबाट भित्रिने <strong>विप्रेषण</strong> (Remittance) बनेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>सकारात्मक प्रभावहरू:</strong></p>
+                <ul>
+                    <li><strong>१. गरिबी न्यूनीकरण र विदेशी मुद्राको सञ्चिति:</strong> विप्रेषणले देशको कुल गार्हस्थ उत्पादन (GDP) को करिब २५-३० प्रतिशत हिस्सा ओगटेको छ, जसले गरिबी घटाउन र विदेशी मुद्रा सञ्चय गर्न मद्दत गरेको छ।</li>
+                    <li><strong>२. जीवनस्तर र सामाजिक सूचकमा सुधार:</strong> विप्रेषणको पैसाले ग्रामीण परिवारको शिक्षा, स्वास्थ्य, पोषण र आवासको स्तरमा उल्लेख्य सुधार आएको छ।</li>
+                    <li><strong>३. सीप र प्रविधिको आगमन:</strong> विदेशमा काम गरेर फर्किएका युवाहरूले नयाँ प्रविधि, सीप र कार्यसंस्कृति ल्याएर स्वदेशमै कृषि वा अन्य व्यवसाय सुरु गरेका छन्।</li>
+                </ul>
+
+                <p><strong>नकारात्मक प्रभावहरू:</strong></p>
+                <ul>
+                    <li><strong>१. गाउँघर रित्तिनु र कृषिमा ह्रास:</strong> उत्पादनशील युवा जनशक्ति विदेश जाँदा पहाडी गाउँहरू रित्तिएका छन्, उब्जाउ जमिन बाँझो बनेको छ र नेपाल खाद्यान्नमा आयातमुखी बनेको छ।</li>
+                    <li><strong>२. सामाजिक र पारिवारिक समस्या:</strong> श्रीमान-श्रीमती लामो समय टाढा रहँदा सम्बन्धविच्छेद, बालबालिकाको हेरचाहमा कमी, र वृद्धवृद्धा एक्लो हुने सामाजिक समस्या बढेको छ।</li>
+                    <li><strong>३. जोखिमपूर्ण काम र मानव अधिकार हनन:</strong> विदेशमा नेपाली श्रमिकले कठिन र जोखिमपूर्ण काम (Dangerous, Difficult, Dirty) गर्दा अंगभंग हुने वा शव बनेर बाकसमा फर्किनुपर्ने दर्दनाक स्थिति हुनु।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः वैदेशिक रोजगारी तत्कालीन राहत भए पनि दीर्घकालीन समाधान होइन। सरकारले विदेशबाट फर्किएकाहरूको सीप र पुँजी प्रयोग गरी स्वदेशमै स्वरोजगारका अवसर सिर्जना गर्नुपर्छ।</p>
+            </div>
+        </div>
+
+        <div class="alt-divider">[ अथवा ]</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्र.न. १९ (ख):</span> मानव संसाधन विकास (Human Resource Development) मा शिक्षा र तालिमको भूमिका उदाहरणसहित स्पष्ट पार्नुहोस्।</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> कुनै पनि देशका नागरिकहरूलाई ज्ञान, सीप, दक्षता, प्रविधि र सकारात्मक दृष्टिकोणले युक्त बनाई उत्पादनशील जनशक्तिमा रूपान्तरण गर्नु नै <strong>मानव संसाधन विकास</strong> हो। शिक्षा र तालिम यसका दुई मुख्य मेरुदण्ड हुन्।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> मानव संसाधन विकासमा शिक्षा र तालिमको भूमिका:</p>
+
+                <ul>
+                    <li><strong>१. सैद्धान्तिक ज्ञान र बौद्धिक क्षमता अभिवृद्धि (शिक्षाको भूमिका):</strong> शिक्षाले मानिसलाई साक्षर बनाउने, समालोचनात्मक सोच विकास गर्ने, सही र गलत छुट्याउने क्षमता दिने र सामाजिक-नैतिक मूल्य सिकाउँछ।
+                        <br><em>उदाहरण:</em> विश्वविद्यालयको शिक्षाले इन्जिनियर, डाक्टर, र शिक्षकको सैद्धान्तिक जग बसाल्छ।
+                    </li>
+                    <li><strong>२. व्यावसायिक र प्रयोगात्मक सीप प्रदान (तालिमको भूमिका):</strong> तालिमले शिक्षाबाट प्राप्त ज्ञानलाई कार्यस्थलमा प्रयोग गर्ने विशिष्ट व्यवहारिक सीप दिन्छ, जसले कार्यक्षमता र उत्पादनशीलता बढाउँछ।
+                        <br><em>उदाहरण:</em> प्लम्बिङ, इलेक्ट्रिसियन, कम्प्युटर कोडिङ वा होटेल म्यानेजमेन्टको छोटो अवधिको तालिमले युवालाई सिधै बजारयोग्य बनाउँछ।
+                    </li>
+                    <li><strong>३. नवप्रवर्तन र प्रविधि अपनाउने क्षमता:</strong> शिक्षित र तालिमप्राप्त जनशक्तिले आधुनिक प्रविधि र एआई (AI) सहजै चलाएर नयाँ-नयाँ आविष्कार (Innovation) गर्न सक्छन्।</li>
+                    <li><strong>४. श्रम बजारमा प्रतिस्पर्धी र स्वरोजगार निर्माण:</strong> यसले युवाहरूलाई जागिर खोज्ने मात्र होइन, आफैँ 'उद्यमी' (Entrepreneur) बनेर अरूलाई रोजगारी दिने सक्षम बनाउँछ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः शिक्षाले 'ज्ञानको जग' बसाल्छ भने तालिमले 'सीपको धार' तिखार्छ। समृद्ध र आधुनिक नेपाल निर्माणका लागि व्यावहारिक शिक्षा र गुणस्तरीय तालिममा राज्यको लगानी बढाउनु अपरिहार्य छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== GROUP C ===== -->
+        <!-- ========================================================== -->
+
+        <div class="group-head" id="groupC">
+            <i class="fas fa-c"></i>
+            समूह 'ग' — विस्तृत उत्तरात्मक प्रश्नहरू
+            <span class="marks">३ × ८ = २४</span>
+        </div>
+
+        <div class="group-sub">
+            <i class="fas fa-circle-info"></i>
+            विस्तृत उत्तर: २५०–३०० शब्द | तलका प्रश्नहरूको विस्तृत उत्तर दिनुहोस्।
+        </div>
+
+        <!-- प्रश्न २० -->
+        <div class="qa-block color6" id="q20">
+            <div class="q"><span class="qnum">प्र.न. २०:</span> सिर्जनात्मक चिन्तनका ५ क्रमिक चरणहरू (तयारी, विकास, प्रदीप्ति, मूल्याङ्कन, प्रमाणीकरण) को व्याख्या गर्दै यसले समाजमा नवप्रवर्तन (Innovation) ल्याउन कसरी मद्दत गर्छ? नेपालकै कुनै नयाँ उद्यम वा प्रविधिको उदाहरण दिएर पुष्टि गर्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> परम्परागत वा स्थापित नियमभन्दा बाहिर गएर कुनै पनि समस्याको नयाँ, नौलो, मौलिक र उपयोगी समाधान खोज्ने क्षमता नै <strong>सिर्जनात्मक चिन्तन</strong> (Creative Thinking) हो। मनोवैज्ञानिक ग्राहम वालासका अनुसार सिर्जनात्मक चिन्तन एक व्यवस्थित र ५ क्रमिक चरणहरू पार गर्ने मानसिक यात्रा हो, जसले समाजमा नयाँ आविष्कार र नवप्रवर्तन (Innovation) ल्याउँछ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <div class="mermaid-flow">
+                    <div class="mermaid-step">१. तयारी चरण (Preparation)</div>
+                    <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="mermaid-step">२. विकास चरण (Incubation)</div>
+                    <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="mermaid-step">३. प्रदीप्ति चरण (Illumination)</div>
+                    <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="mermaid-step">४. मूल्याङ्कन चरण (Evaluation)</div>
+                    <div class="mermaid-arrow"><i class="fas fa-arrow-right"></i></div>
+                    <div class="mermaid-step">५. प्रमाणीकरण चरण (Verification)</div>
+                </div>
+
+                <p><strong>सिर्जनात्मक चिन्तनका ५ क्रमिक चरणहरू:</strong></p>
+                <ul>
+                    <li><strong>१. तयारी चरण (Preparation Phase):</strong> समस्याको गहन अध्ययन गरी आवश्यक तथ्याङ्क, ज्ञान, सूचना र कच्चा सामग्रीहरू सङ्कलन गर्ने प्रारम्भिक खुड्किलो।</li>
+                    <li><strong>२. विकास चरण (Incubation Phase):</strong> सचेत मनले समस्याबारे सोच्न छाडेर दिमागलाई आराम दिइन्छ। यस बेला अचेतन मन (Subconscious mind) मा सुसुप्त रूपमा विचारहरूको प्रशोधन भइरहेको हुन्छ।</li>
+                    <li><strong>३. प्रदीप्ति चरण (Illumination Phase):</strong> विश्रामको समयमा अचानक वा एक्कासि दिमागमा चम्किलो र नौलो विचार वा समाधान झुल्किने क्षण (यसलाई 'Aha! moment' वा अन्तर्दृष्टि भनिन्छ)।</li>
+                    <li><strong>४. मूल्याङ्कन चरण (Evaluation Phase):</strong> फुत्त आएको उक्त नयाँ विचार साँच्चै व्यावहारिक, उपयोगी र सम्भव छ कि छैन भनी तार्किक कसीमा दाँज्ने काम।</li>
+                    <li><strong>५. प्रमाणीकरण चरण (Verification Phase):</strong> विचारलाई वास्तविक कार्य वा प्रयोगशालामा परीक्षण गरी अन्तिम र उपयोगी रूप दिने अन्तिम चरण।</li>
+                </ul>
+
+                <p><strong>नेपालको नवप्रवर्तनको व्यावहारिक उदाहरण (राइड सेयरिङ एप 'पठाओ / इनड्राइभ'):</strong></p>
+                <p>नेपालको काठमाडौँ उपत्यकामा दैनिक यातायातको सास्ती र ट्याक्सीको ठगी ठुलो समस्या थियो। केही सिर्जनात्मक युवाहरूले यस समस्याको <strong>तयारी</strong> गरी तथ्याङ्क बटुले, <strong>अचेतन प्रशोधन</strong> गरे र अचानक <strong>प्रदीप्ति</strong> मार्फत मोबाइल एपबाटै बाइक/ट्याक्सी मगाउने डिजिटल सोच ल्याए। यसलाई <strong>मूल्याङ्कन</strong> र <strong>प्रमाणीकरण</strong> गरेर 'पठाओ/इनड्राइभ' सञ्चालन गरे। यस नवप्रवर्तनले लाखौँ नागरिकको यात्रा सहज बनायो र हजारौँ युवालाई स्वरोजगार बनायो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः सिर्जनात्मक चिन्तन केवल काल्पनिक सोच नभई समाजका जटिल समस्याहरू सुल्झाएर नवप्रवर्तन र समृद्धि ल्याउने सबैभन्दा शक्तिशाली बौद्धिक औजार हो।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न २१ -->
+        <div class="qa-block color7" id="q21">
+            <div class="q"><span class="qnum">प्र.न. २१:</span> नेपालमा विपद् व्यवस्थापन (Disaster Management) को अवधारणा स्पष्ट पार्दै विपद् पूर्व, विपद्का बेला र विपद् पछि राज्य तथा स्थानीय समुदायले खेल्नुपर्ने भूमिकाहरू उदाहरणसहित विस्तृत रूपमा लेख्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> प्राकृतिक वा मानवीय कारणले नेपालमा विपद् (जस्तै भूकम्प, बाढी, पहिरो, आगलागी) बाट हुने धनजनको क्षति न्यूनीकरण गर्न, उद्धार गर्न र पुनर्निर्माण गर्न गरिने एकीकृत र व्यवस्थित प्रयास नै <strong>विपद् व्यवस्थापन</strong> हो। नेपाल भौगोलिक रूपमा विपद्‌को उच्च जोखिममा रहेकाले यसका तीनवटै चरणमा पूर्वतयारी र सहकार्य अपरिहार्य छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>विपद् व्यवस्थापनका ३ चरणहरू र राज्य तथा समुदायको भूमिका:</strong></p>
+
+                <ul>
+                    <li><strong>१. विपद् पूर्वको चरण (Pre-Disaster Phase - तयारी र न्यूनीकरण):</strong>
+                        <ul>
+                            <li><strong>राज्यको भूमिका:</strong> विपद् जोखिमको नक्साङ्कन गर्ने, भूकम्पप्रतिरोधी भवन आचारसंहिता लागू गर्ने, बाढीको पूर्वसूचना प्रणाली (Early Warning System) जडान गर्ने र आपत्कालीन खाद्यान्न/औषधि भण्डारण गर्ने।</li>
+                            <li><strong>समुदायको भूमिका:</strong> स्थानीय विपद् व्यवस्थापन समिति गठन गर्ने, समुदायलाई प्राथमिक उपचार र खोज-उद्धारको तालिम दिने, र जोखिमयुक्त ठाउँमा बस्ती नबसाउने।</li>
+                        </ul>
+                    </li>
+                    <li><strong>२. विपद्को समयको चरण (During Disaster Phase - खोज, उद्धार र राहत):</strong>
+                        <ul>
+                            <li><strong>राज्यको भूमिका:</strong> सुरक्षा निकाय (नेपाल प्रहरी, सेना, सशस्त्र बल) द्रुत गतिमा खटाउने, हेलिकप्टर र आधुनिक उपकरणबाट उद्धार गर्ने, आपत्कालीन चिकित्सा सेवा दिने र अस्थायी त्रिपाल/राहत बाँड्ने।</li>
+                            <li><strong>समुदायको भूमिका:</strong> नआत्तिई धैर्य धारण गर्ने, घाइतेहरूको उद्धारमा छिमेकीलाई सहयोग गर्ने, र राहत वितरणमा निष्पक्षता कायम गर्न सघाउने।</li>
+                        </ul>
+                    </li>
+                    <li><strong>३. विपद् पछिको चरण (Post-Disaster Phase - पुनरोत्थान र पुनर्निर्माण):</strong>
+                        <ul>
+                            <li><strong>राज्यको भूमिका:</strong> क्षति पुगेका सडक, बिजुली, खानेपानी र विद्यालयको पुनर्निर्माण गर्ने, 'उत्थानशील पुनर्निर्माण' (Build Back Better) नीति अनुसार सहुलियत ऋण दिने र मनोसामाजिक परामर्श दिने।</li>
+                            <li><strong>समुदायको भूमिका:</strong> गाउँको सरसफाइ गरी महामारी फैलिन नदिने, पुनर्निर्माणमा श्रमदान गर्ने र दीर्घकालीन जीविकोपार्जनमा जुट्ने।</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः विपद् रोक्न नसकिए पनि सही व्यवस्थापन र राज्य-नागरिकबिचको बलियो सहकार्यबाट क्षति न्यूनतम गर्न सकिन्छ, तसर्थ 'विपद् पर्दा होइन, अघि नै तयारी' गर्ने संस्कृति बसाल्नुपर्छ।</p>
+            </div>
+        </div>
+
+        <div class="alt-divider">[ अथवा ]</div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">प्र.न. २१ (ख):</span> नेपालको आधुनिक इतिहासमा वि.सं. २०६२/६३ को दोस्रो जनआन्दोलनका प्रमुख कारण, ऐतिहासिक उपलब्धिहरू र त्यसपछिको राजनीतिक रूपान्तरणको विस्तृत समीक्षा गर्नुहोस्।</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> राजा ज्ञानेन्द्रको २०६१ माघ १९ को असंवैधानिक शाही कदम र निरङ्कुश प्रत्यक्ष शासनविरुद्ध सात राजनीतिक दल (SPA) र तत्कालीन माओवादीबिच भएको १२ बुँदे समझदारीको जगमा <strong>वि.सं. २०६२ चैत २४ देखि २०६३ वैशाख ११ गतेसम्म (१९ दिन)</strong> भएको ऐतिहासिक जनक्रान्ति नै <strong>दोस्रो जनआन्दोलन</strong> हो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>१. दोस्रो जनआन्दोलनका प्रमुख कारणहरू:</strong></p>
+                <ul>
+                    <li><strong>शाही कूमार्फत प्रजातन्त्रको अपहरण:</strong> राजा ज्ञानेन्द्रले २०६१ माघ १९ मा शासन सत्ता आफ्नो हातमा लिई मौलिक हक, प्रेस स्वतन्त्रता र राजनीतिक दलहरूमाथि प्रतिबन्ध लगाउनु।</li>
+                    <li><strong>सशस्त्र द्वन्द्व र हिंसाको पराकाष्ठा:</strong> तत्कालीन माओवादी र राज्यपक्षबिचको १० वर्षे सशस्त्र द्वन्द्वले हजारौँको ज्यान जानु र देश अस्तव्यस्त हुनु।</li>
+                    <li><strong>ऐतिहासिक १२ बुँदे समझदारी:</strong> २०६२ मंसिरमा दिल्लीमा सात दल र माओवादीबिच निरङ्कुश राजतन्त्र अन्त्य गरी शान्ति र लोकतन्त्र ल्याउने सम्झौता हुनु।</li>
+                </ul>
+
+                <p><strong>२. जनआन्दोलन-२ का ऐतिहासिक उपलब्धिहरू:</strong></p>
+                <ul>
+                    <li><strong>२४० वर्षे निरङ्कुश राजतन्त्रको अन्त्य:</strong> वि.सं. २०६५ जेठ १५ गते नेपाललाई <strong>सङ्घीय लोकतान्त्रिक गणतन्त्र</strong> घोषणा गरिनु।</li>
+                    <li><strong>संसद् पुनर्वहाली र संविधान सभाको निर्वाचन:</strong> पुनर्वहाली प्रतिनिधि सभाले राजाका अधिकार खोस्दै ऐतिहासिक संविधान सभाको निर्वाचन गराउनु।</li>
+                    <li><strong>शान्ति प्रक्रिया र माओवादीको मूलधारमा आगमन:</strong> विस्तृत शान्ति सम्झौता (२०६३ मंसिर ५) मार्फत माओवादी लडाकु र हतियारको व्यवस्थापन भई देशमा स्थायी शान्ति आउनु।</li>
+                </ul>
+
+                <p><strong>३. त्यसपछिको राजनीतिक रूपान्तरण:</strong></p>
+                <p>नेपाल धर्मनिरपेक्ष, सङ्घीय, र समावेशी राज्यमा रूपान्तरण भयो। वि.सं. २०७२ असोज ३ गते जनताका प्रतिनिधिले बनाएको 'नेपालको संविधान' जारी भई ३ तहका सरकारहरू (सङ्घ, प्रदेश र स्थानीय) मार्फत सङ्घीय लोकतन्त्र कार्यान्वयनमा आयो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः २०६२/६३ को जनआन्दोलन नेपाली इतिहासको सबैभन्दा युगान्तकारी मोड हो, जसले जनतालाई वास्तविक सार्वभौमसत्ता सम्पन्न बनाएर नयाँ नेपालको चित्र कोरेको छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न २२ -->
+        <div class="qa-block color1" id="q22">
+            <div class="q"><span class="qnum">प्र.न. २२:</span> "दिगो विकास लक्ष्य (SDGs) र गरिबी निवारणबिच परिपूरक सम्बन्ध रहेको हुन्छ।" यस भनाइलाई आधार मानी नेपालमा गरिबी न्यूनीकरणका लागि अवलम्बन गरिएका नीतिगत प्रयास र सुझावहरू समेटेर एक प्राज्ञिक निबन्ध/लेख तयार पार्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> संयुक्त राष्ट्रसङ्घले सन् २०१६ देखि २०३० सम्मका लागि तय गरेका १७ वटा विश्वव्यापी लक्ष्यहरू नै <strong>दिगो विकास लक्ष्य</strong> (Sustainable Development Goals - SDGs) हुन्। यसको पहिलो र मुख्य लक्ष्य नै <strong>'सबै ठाउँबाट सबै प्रकारका गरिबीको अन्त्य गर्ने'</strong> (No Poverty) हो। गरिबी निवारण विना अन्य दिगो विकास लक्ष्यहरू पूरा हुन सक्दैनन् भने दिगो विकास विना गरिबीको स्थायी अन्त्य असम्भव छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <div class="branch-flow">
+                    <div class="branch-root">दिगो विकास लक्ष्य १: गरिबीको अन्त्य (No Poverty)</div>
+                    <div class="branch-children">
+                        <div class="mermaid-step">SDG 2: भोकमरीको अन्त्य</div>
+                        <div class="mermaid-step">SDG 4: गुणस्तरीय शिक्षा</div>
+                        <div class="mermaid-step">SDG 8: मर्यादित काम र आर्थिक वृद्धि</div>
+                        <div class="mermaid-step">SDG 10: असमानता न्यूनीकरण</div>
+                    </div>
+                </div>
+
+                <p><strong>दिगो विकास लक्ष्य र गरिबी निवारणबिचको परिपूरक सम्बन्ध:</strong></p>
+                <p>गरिबी केवल आम्दानीको कमी मात्र होइन; यो शिक्षा, स्वास्थ्य, स्वच्छ खानेपानी र अवसरहरूबाट वञ्चित हुनु (बहुआयामिक गरिबी) हो। SDGs का लक्ष्यहरू (जस्तै: भोकमरी अन्त्य, गुणस्तरीय शिक्षा, लैङ्गिक समानता, मर्यादित काम) ले गरिबीका कारक तत्वहरूलाई निर्मूल पार्छन्। तसर्थ, यी दुईबिच परिपूरक सम्बन्ध छ।</p>
+
+                <p><strong>नेपालमा गरिबी न्यूनीकरणका लागि गरिएका नीतिगत प्रयासहरू:</strong></p>
+                <ul>
+                    <li><strong>१. आवधिक योजना र बजेट:</strong> १५ औँ योजनामा गरिबीको दरलाई ११.२% मा झार्ने लक्ष्य र बजेटमा गरिबी निवारण कोष, प्रधानमन्त्री रोजगार कार्यक्रम जस्ता योजनाहरू।</li>
+                    <li><strong>२. सामाजिक सुरक्षा र समावेशीकरण:</strong> ज्येष्ठ नागरिक, एकल महिला, र अपाङ्गता भएकाहरूलाई सामाजिक सुरक्षा भत्ता तथा दलित र पिछडिएका वर्गका लागि आरक्षणको व्यवस्था।</li>
+                    <li><strong>३. सहुलियतपूर्ण ऋण र साना उद्योग:</strong> महिला र युवा उद्यमीका लागि बिनाधितो सहुलियतपूर्ण ऋण र कृषि अनुदानको व्यवस्था।</li>
+                </ul>
+
+                <p><strong>गरिबी निवारणका लागि व्यावहारिक सुझावहरू:</strong></p>
+                <ul>
+                    <li><strong>१. व्यावसायिक शिक्षा र सीपमूलक रोजगारी:</strong> परम्परागत शिक्षालाई बदलेर प्राविधिक र सीपमूलक शिक्षा दिने ताकि युवाहरू स्वदेशमै उद्यमी बन्न सकून्।</li>
+                    <li><strong>२. कृषि औद्योगिकीकरण र भू-उपयोग नीति:</strong> बाँझो जमिनमा व्यावसायिक खेती, चिस्यान केन्द्र (Cold Storage) र कृषि बजारको ग्यारेन्टी गर्ने।</li>
+                    <li><strong>३. सुशासन र भ्रष्टाचार नियन्त्रण:</strong> गरिबका नाममा आउने अनुदान र लक्षित कार्यक्रमहरू बिचौलियाले हडप्ने परिपाटीको पूर्ण अन्त्य गर्ने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नेपालले सन् २०३० सम्ममा दिगो विकास लक्ष्य हासिल गर्दै गरिबीलाई शून्यनजिक पुर्‍याउन शिक्षा, कृषि, ऊर्जा र सुशासनमा एकीकृत रूपमा अघि बढ्नु अपरिहार्य छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> NEB परीक्षामा ५ र ८ अङ्कका उत्तरहरू अनिवार्य रूपमा <strong>३-स्तरीय ढाँचा</strong> (📌 परिचय → 📊 विश्लेषण → 🎯 निष्कर्ष) मा लेख्नुहोस्। उदाहरण र तथ्यहरू समावेश गर्नुहोस्। जति बुँदा मागिएको छ त्यति नै बुँदा स्पष्ट रूपमा लेख्नुहोस्। नियमित अभ्यासले मात्र आत्मविश्वास र गति बढ्छ।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – NEB मोडल सेट २</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>

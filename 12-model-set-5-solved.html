@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>NEB कक्षा १२ – सामाजिक अध्ययन नमुना सेट ५ (पूर्ण समाधान)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- EXAM INFO CARD ----- */
+        .exam-info {
+            background: #eef0f0;
+            border: 2px solid #5C6BC0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 24px;
+        }
+
+        .exam-info h3 {
+            color: #1A237E;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exam-info h3 i {
+            color: #1A237E;
+        }
+
+        .exam-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .exam-info ul li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #374210;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-info ul li i {
+            color: #1A237E;
+            margin-top: 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .exam-info ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 14px;
+            }
+        }
+
+        /* ----- GROUP HEADERS ----- */
+        .group-head {
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+            margin: 44px 0 8px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 4px 16px rgba(26, 35, 126, 0.35);
+        }
+
+        .group-head i {
+            font-size: 1.6rem;
+            color: #f5d742;
+        }
+
+        .group-head .marks {
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 4px 16px;
+            border-radius: 40px;
+            margin-left: auto;
+        }
+
+        .group-sub {
+            font-size: 1.08rem;
+            font-weight: 700;
+            color: #1A237E;
+            background: #eef0f0;
+            border-left: 6px solid #1A237E;
+            padding: 8px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 10px 0 22px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .group-sub i {
+            color: #1A237E;
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: #1A237E;
+            margin: 36px 0 16px;
+            padding: 12px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(26, 35, 126, 0.35);
+        }
+
+        .section-head i {
+            font-size: 1.4rem;
+            color: #f5d742;
+        }
+
+        .sub-head {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.02rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.18rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.15rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #1A237E;
+            font-size: 1.08rem;
+        }
+
+        .qa-block .a p {
+            color: #374210;
+        }
+
+        /* ----- ALTERNATIVE DIVIDER ----- */
+        .alt-divider {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 22px 0;
+            color: #1A237E;
+            font-weight: 900;
+            font-size: 1.1rem;
+        }
+
+        .alt-divider::before,
+        .alt-divider::after {
+            content: "";
+            flex: 1;
+            height: 2px;
+            background: repeating-linear-gradient(
+                90deg,
+                #1A237E 0, #1A237E 8px,
+                transparent 8px, transparent 16px
+            );
+        }
+
+        /* ----- FLOW CHART (CSS) ----- */
+        .mermaid-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            margin: 16px 0;
+            padding: 14px 10px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 1rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        .mermaid-arrow {
+            font-size: 1.6rem;
+            color: #7f8fa6;
+            line-height: 1;
+        }
+
+        /* ----- BRANCH FLOW (Tree Diagram) ----- */
+        .branch-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            padding: 18px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .branch-root {
+            background: #1A237E;
+            color: #ffffff;
+            border-color: #1A237E;
+            font-size: 1.05rem;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 800;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .branch-children {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+
+        @media (min-width: 640px) {
+            .branch-children {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .branch-children {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ----- SPEECH BOX ----- */
+        .speech-box {
+            background: #faf8f5;
+            border: 2px solid #b8c0a8;
+            border-radius: 16px;
+            padding: 22px 28px;
+            margin: 16px 0;
+        }
+
+        .speech-box .speech-title {
+            font-weight: 900;
+            color: #1A237E;
+            font-size: 1.15rem;
+            text-align: center;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 2px dashed #b8c0a8;
+        }
+
+        .speech-box p {
+            font-weight: 500;
+            font-size: 1.12rem;
+            margin-bottom: 10px;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .speech-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .speech-box .greeting {
+            font-style: italic;
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        /* ----- TIMELINE ----- */
+        .timeline-box {
+            background: #ffffff;
+            border: 2px dashed #1A237E;
+            border-radius: 14px;
+            padding: 22px 26px;
+            margin: 16px 0;
+            font-family: 'Courier New', 'Noto Sans Devanagari', monospace;
+            font-size: 0.98rem;
+            line-height: 1.9;
+            color: #1a1a2e;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        /* ----- MARKS TAG ----- */
+        .marks-tag {
+            display: inline-block;
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 40px;
+            margin-left: 8px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.08rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .group-head {
+                font-size: 1.3rem;
+                padding: 12px 16px;
+            }
+
+            .group-head .marks {
+                font-size: 0.68rem;
+                padding: 3px 12px;
+            }
+
+            .section-head {
+                font-size: 1.25rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.12rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.02rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.88rem;
+            }
+            th,
+            td {
+                font-size: 0.88rem;
+                padding: 6px 8px;
+            }
+            .mermaid-step {
+                font-size: 0.8rem;
+                padding: 4px 12px;
+                min-width: 100px;
+            }
+            .branch-root {
+                font-size: 0.9rem;
+                padding: 8px 18px;
+            }
+            .speech-box {
+                padding: 16px 18px;
+            }
+            .speech-box p {
+                font-size: 1.02rem;
+            }
+            .timeline-box {
+                font-size: 0.78rem;
+                padding: 14px 16px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+            .mermaid-flow {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 4px 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-file-pen"></i>
+                    नमुना प्रश्नपत्र सेट ५ — पूर्ण समाधान
+                </h1>
+                <div class="subtitle">
+                    NEB कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा (Sub. Code: 005)
+                    <span class="badge-class"><i class="fas fa-check-circle"></i> Creative, Futurology &amp; Scenario-Based</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – मोडल सेट ५
+            </span>
+        </div>
+
+        <!-- ===== EXAM INFO ===== -->
+        <div class="exam-info">
+            <h3><i class="fas fa-circle-info"></i> परीक्षार्थीका लागि जानकारी</h3>
+            <ul>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय:</strong> सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा (कक्षा १२)</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>पूर्णाङ्क:</strong> ७५ | <strong>समय:</strong> ३ घण्टा</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय कोड:</strong> Sol. 005</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विशेषता:</strong> सिर्जनशील, भविष्यविज्ञान र परिदृश्यमूलक प्रश्नहरूमा आधारित</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>उत्तर प्रस्तुति:</strong> ५ र ८ अङ्कका उत्तरहरू ३-स्तरीय ढाँचामा</span></li>
+            </ul>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#groupA"><i class="fas fa-chevron-right"></i> समूह 'क' – अति संक्षिप्त</a>
+                <a href="#groupB"><i class="fas fa-chevron-right"></i> समूह 'ख' – संक्षिप्त उत्तर</a>
+                <a href="#groupC"><i class="fas fa-chevron-right"></i> समूह 'ग' – विस्तृत उत्तर</a>
+                <a href="#q12"><i class="fas fa-chevron-right"></i> प्रश्न १२ – डिजिटल साक्षरता सर्वेक्षण</a>
+                <a href="#q12b"><i class="fas fa-chevron-right"></i> प्रश्न १२ (ख) – AI को नैतिक सतर्कता</a>
+                <a href="#q13"><i class="fas fa-chevron-right"></i> प्रश्न १३ – वसुधैव कुटुम्बकम्</a>
+                <a href="#q14"><i class="fas fa-chevron-right"></i> प्रश्न १४ – कर्णाली पर्यटन रणनीति</a>
+                <a href="#q15"><i class="fas fa-chevron-right"></i> प्रश्न १५ – कोतपर्व नभएको भए</a>
+                <a href="#q16"><i class="fas fa-chevron-right"></i> प्रश्न १६ – LGBTQIA+ सुधार</a>
+                <a href="#q17"><i class="fas fa-chevron-right"></i> प्रश्न १७ – फेक न्यूज नियन्त्रण</a>
+                <a href="#q18"><i class="fas fa-chevron-right"></i> प्रश्न १८ – ई-भिलेज कार्यक्रम</a>
+                <a href="#q19"><i class="fas fa-chevron-right"></i> प्रश्न १९ – GRID रणनीति</a>
+                <a href="#q20"><i class="fas fa-chevron-right"></i> प्रश्न २० – राष्ट्रिय युवा सम्मेलन</a>
+                <a href="#q21"><i class="fas fa-chevron-right"></i> प्रश्न २१ – नेपाल गतिशील पुल</a>
+                <a href="#q22"><i class="fas fa-chevron-right"></i> प्रश्न २२ – विकास गुरुयोजना २०३०</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== GROUP A ===== -->
+        <!-- ========================================================== -->
+
+        <div class="group-head" id="groupA">
+            <i class="fas fa-a"></i>
+            समूह 'क' — अति संक्षिप्त उत्तरात्मक प्रश्नहरू
+            <span class="marks">११ × १ = ११</span>
+        </div>
+
+        <div class="group-sub">
+            <i class="fas fa-circle-info"></i>
+            अति संक्षिप्त उत्तर: १०–२० शब्द | तलका सबै प्रश्नहरूको छोटो उत्तर दिनुहोस्।
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्र.न. १:</span> सन् २०३५ सम्ममा मानिसले आर्टिफिसियल इन्टेलिजेन्स (AI) को प्रयोग गर्दा अपनाउनुपर्ने नैतिक जीवनोपयोगी सिप कुन हुन सक्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> AI प्रविधिको प्रयोग गर्दा सत्य र भ्रम छुट्याउन <strong>समालोचनात्मक चिन्तन (Critical Thinking)</strong> तथा नैतिक दायित्वबोधसहितको <strong>डिजिटल साक्षरता एवं विवेकशीलता</strong> मुख्य जीवनोपयोगी सिप हुन सक्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्र.न. २:</span> कुनै अनुसन्धानकर्ताले 'ड्रोन' (Drone) प्रविधि प्रयोग गरी बाढीग्रस्त क्षेत्रको तथ्याङ्क सङ्कलन गर्छ भने त्यो कुन प्रकारको तथ्याङ्क सङ्कलन विधि मानिन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> ड्रोन प्रविधिमार्फत प्रत्यक्ष रूपमा बाढीग्रस्त भूभागको तस्बिर र नक्सा सङ्कलन गरिने हुनाले यो <strong>प्राथमिक तथ्याङ्क सङ्कलनअन्तर्गतको प्रत्यक्ष प्रविधिमा आधारित क्षेत्र अवलोकन विधि (Remote Sensing Observation)</strong> मानिन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्र.न. ३:</span> मानौँ तपाईंको कलेजले अनलाइन पुस्तकालय (E-Library) सञ्चालन गरेको छ। त्यहाँबाट अरूको शोधपत्र प्रयोग गर्दा बौद्धिक चोरी हुन नदिन विद्यार्थीले के गर्नुपर्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> अरूको शोधपत्र वा विचार प्रयोग गर्दा APA/MLA ढाँचामा सही तरिकाले <strong>लेखक र स्रोतको नाम उद्धरण (Citation &amp; Reference)</strong> गर्ने र आफ्नै भाषामा पुनर्लेखन (Paraphrasing) गर्नुपर्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्र.न. ४:</span> 'सबैका लागि शिक्षा' (Education for All) को अवधारणालाई आत्मसात् गर्दै अपाङ्गता भएका विद्यार्थीका लागि प्रविधिमैत्री कक्षाकोठा बनाउने एक उपाय लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> दृष्टिविहीन विद्यार्थीका लागि <strong>स्क्रीन रिडर (Screen Reader) सफ्टवेयर र ब्रेल-डिजिटल किबोर्ड</strong> तथा बहिरा विद्यार्थीका लागि साङ्केतिक भाषाको स्मार्ट डिस्प्ले बोर्ड जडान गर्नु मुख्य उपाय हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्र.न. ५:</span> यदि पृथ्वीनारायण शाहको 'दिव्योपदेश' लाई modern management theory सँग तुलना गरियो भने यसको मुख्य आर्थिक सन्देश के हुन सक्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> स्वदेशी स्रोत र उत्पादनको प्रवर्धन गर्दै आयात प्रतिस्थापन गर्ने र विदेशी कपडा/व्यापारीलाई नियन्त्रण गरी <strong>आत्मनिर्भर तथा संरक्षणवादी अर्थतन्त्र (Self-reliant Economy)</strong> निर्माण गर्नु नै यसको मुख्य सन्देश हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">प्र.न. ६:</span> जलवायु परिवर्तनका कारण कालापत्थर वा सगरमाथा आधार शिविर सार्नुपर्ने बहस चलेको छ, यसले नेपालको अन्तर्राष्ट्रिय पहिचानमा कस्तो प्रभाव पार्ला?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> यसले नेपाल जलवायु परिवर्तनको प्रत्यक्ष जोखिममा रहेको सन्देश दिँदै वैश्विक मञ्चमा <strong>हरित कूटनीति र जलवायु न्याय (Climate Justice)</strong> को नेतृत्व गर्ने अवसर र पहिचान दिलाउँछ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">प्र.न. ७:</span> नेपालमा डिजिटल नागरिकता वा ई-गभर्नेन्स (e-Governance) लागू हुँदा नागरिकको कर्तव्यमा कस्तो परिवर्तन आउँछ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नागरिकले कानुनी नियम पालना गर्नुका साथै <strong>डिजिटल साक्षर बन्ने, साइबर अपराध र नक्कली सूचना (Fake News) बाट बच्ने र अनलाइन सेवाको उत्तरदायी प्रयोग गर्ने</strong> थप कर्तव्य जोडिन पुग्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">प्र.न. ८:</span> 'सिटिजन साइन्स' (Citizen Science) भनेको के हो? यसले आम नागरिकलाई अनुसन्धानमा कसरी जोड्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> वैज्ञानिक वा अनुसन्धानकर्ताहरूसँगै आम नागरिकले मोबाइल एप र सेन्सरमार्फत जैविक विविधता वा वातावरणीय तथ्याङ्क सङ्कलनमा प्रत्यक्ष सहभागी भई अनुसन्धान गर्ने विधिलाई <strong>सिटिजन साइन्स</strong> भनिन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्र.न. ९:</span> यदि नेपालले कार्बन व्यापार (Carbon Trading) बाट वार्षिक अर्बौँ आम्दानी गर्छ भने यो कुन प्रकारको दिगो अर्थतन्त्र हो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> वन र वातावरणको संरक्षण गर्दै कार्बन उत्सर्जन घटाएबापत वित्तीय लाभ प्राप्त गरिने भएकाले यो <strong>हरित अर्थतन्त्र (Green Economy) तथा परिस्थितिकीय अर्थतन्त्र</strong> हो।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्र.न. १०:</span> जेनेरेसन जेड (Gen Z) युवाहरूमाझ सामाजिक सञ्जालमार्फत हुने 'डिजिटल आन्दोलन' ले नागरिक सचेतना बढाएको छ कि विकृति? एक वाक्यमा तर्क दिनुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> सत्य तथ्य र खबरदारीका दृष्टिले यसले नागरिक सचेतना र जवाफदेहिता बढाएको छ, तर भ्रामक प्रचार र सामाजिक ध्रुवीकरणका दृष्टिले विकृति पनि निम्त्याएको छ, तसर्थ यो सन्तुलित प्रयोगमा निर्भर गर्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्र.न. ११:</span> मानौँ तपाईं २० वर्षपछिको काठमाडौँ सहरमा हुनुहुन्छ। त्यहाँको सवारी व्यवस्थापनमा मेट्रो रेल र विद्युतीय गाडीले ल्याएको सकारात्मक परिवर्तनबारे एक वाक्य लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मेट्रो रेल र विद्युतीय गाडीको व्यापक प्रयोगले काठमाडौँ उपत्यकाको ट्राफिक जाम र वायु प्रदूषण पूर्ण रूपमा अन्त्य भई सहरी जीवनशैली स्वस्थ, द्रुत र वातावरणमैत्री बनेको छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== GROUP B ===== -->
+        <!-- ========================================================== -->
+
+        <div class="group-head" id="groupB">
+            <i class="fas fa-b"></i>
+            समूह 'ख' — संक्षिप्त उत्तरात्मक प्रश्नहरू
+            <span class="marks">८ × ५ = ४०</span>
+        </div>
+
+        <div class="group-sub">
+            <i class="fas fa-circle-info"></i>
+            संक्षिप्त उत्तर: १५०–२०० शब्द | तलका प्रश्नहरूको संक्षिप्त उत्तर दिनुहोस्।
+        </div>
+
+        <!-- प्रश्न १२ -->
+        <div class="qa-block color4" id="q12">
+            <div class="q"><span class="qnum">प्र.न. १२:</span> मानौँ तपाईं कक्षा १२ को 'डिजिटल नेपाल र युवा अनुसन्धानकर्ता' परियोजनाको संयोजक हुनुहुन्छ। आफ्नो स्थानीय तहमा डिजिटल साक्षरता सम्बन्धी सर्वेक्षण गर्न एउटा ५-बुँदे अनुसन्धान प्रश्न (Research Questions) को सेट तयार पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> डिजिटल नेपालको राष्ट्रिय लक्ष्य पूरा गर्न स्थानीय तहका नागरिकमाझ इन्टरनेट, स्मार्टफोन र डिजिटल सेवाहरूको पहुँच एवं क्षमता बुझ्नु अपरिहार्य हुन्छ। 'डिजिटल नेपाल र युवा अनुसन्धानकर्ता' परियोजना अन्तर्गत नागरिकको डिजिटल साक्षरता मापन गर्न ५ वटा विशिष्ट अनुसन्धान प्रश्नहरू तयार पारिएको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>डिजिटल साक्षरता सर्वेक्षणका ५ अनुसन्धान प्रश्नहरू:</strong></p>
+
+                <ul>
+                    <li><strong>१. प्रविधिको पहुँच सम्बन्धी प्रश्न:</strong> "तपाईंको पालिकाभित्रका कति प्रतिशत घरधुरीमा इन्टरनेट/वाइफाई र स्मार्टफोन वा कम्प्युटरको पहुँच पुगेको छ?"</li>
+                    <li><strong>२. डिजिटल सिप र क्षमता सम्बन्धी प्रश्न:</strong> "स्थानीय नागरिकहरू अनलाइन बैंकिङ, ई-सेवा, डिजिटल भुक्तानी र अनलाइन सरकारी सेवाहरू (नागरिक एप) प्रयोग गर्न कत्तिको सक्षम छन्?"</li>
+                    <li><strong>३. शिक्षा र अनलाइन सिकाइ सम्बन्धी प्रश्न:</strong> "स्थानीय विद्यालयका विद्यार्थी र युवाहरूले शैक्षिक तथा अनुसन्धानमूलक कार्यका लागि डिजिटल माध्यम र प्रविधिको प्रयोग कसरी गरिरहेका छन्?"</li>
+                    <li><strong>४. साइबर सुरक्षा र सचेतना सम्बन्धी प्रश्न:</strong> "नागरिकहरूमाझ अनलाइन ठगी, ओटीपी (OTP) सेयरिङ, साइबर अपराध र भ्रामक सूचना (Fake News) बाट बच्ने सुरक्षा सचेतनाको स्तर कस्तो छ?"</li>
+                    <li><strong>५. समस्या र चुनौती सम्बन्धी प्रश्न:</strong> "जेष्ठ नागरिक, महिला र सीमान्तकृत वर्गलाई डिजिटल सेवा उपभोग गर्न मुख्य समस्याहरू (जस्तै: भाषा, लागत, विद्युत् वा प्राविधिक दक्षताको कमी) के-के हुन्?"</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> यी अनुसन्धान प्रश्नहरूले स्थानीय तहमा डिजिटल साक्षरताको वास्तविक स्थिति उजागर गरी पालिकालाई 'डिजिटल साक्षर पालिका' बनाउन नीतिगत योजना निर्माण गर्न ठोस मद्दत पुर्‍याउँछन्।</p>
+            </div>
+        </div>
+
+        <div class="alt-divider">[ अथवा ]</div>
+
+        <div class="qa-block color5" id="q12b">
+            <div class="q"><span class="qnum">प्र.न. १२ (ख):</span> आर्टिफिसियल इन्टेलिजेन्स (AI tools जस्तै ChatGPT) को सहयोगमा गृहकार्य वा प्रतिवेदन तयार गर्दा हुने फाइदा र यसले निम्त्याउन सक्ने 'बौद्धिक चोरी र मौलिकताको ह्रास' सम्बन्धी पाँचवटा नैतिक सतर्कताहरू लेख्नुहोस्।</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> आर्टिफिसियल इन्टेलिजेन्स (AI) आधुनिक शिक्षा र अनुसन्धानको शक्तिशाली सहयोगी माध्यम हो। यसले द्रुत सूचना र विचार सिर्जनामा मद्दत गरे पनि विद्यार्थीले विवेकविहीन प्रयोग गर्दा बौद्धिक चोरी हुने र मौलिक सोच गुम्ने गम्भीर जोखिम रहन्छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>फाइदाहरू:</strong> AI ले अनुसन्धानको ढाँचा तयार पार्न, व्याकरण सच्याउन, जटिल अवधारणा सम्झाउन र समयको बचत गर्न मद्दत गर्छ।</p>
+
+                <p><strong>पाँच नैतिक सतर्कताहरू:</strong></p>
+                <ul>
+                    <li><strong>१. हुबहु प्रतिलिपि नगर्ने (No Direct Copy-Paste):</strong> AI ले दिएको उत्तरलाई जस्ताको तस्तै गृहकार्य वा प्रतिवेदनमा नसारी आफ्नै भाषा, शैली र तर्कमा पुनर्लेखन गर्नुपर्छ।</li>
+                    <li><strong>२. स्रोत र तथ्यको प्रमाणीकरण (Fact-checking):</strong> AI ले कहिलेकाहीँ भ्रमपूर्ण वा गलत तथ्याङ्क (Hallucination) दिन सक्ने भएकाले पाठ्यपुस्तक वा आधिकारिक स्रोतसँग तथ्य जुधाएर मात्र प्रयोग गर्नुपर्छ।</li>
+                    <li><strong>३. पारदर्शिता र स्वीकारोक्ति (AI Disclosure):</strong> प्रतिवेदन तयार पार्दा कुन खण्डमा र कति मात्रामा AI टुल्सको सहयोग लिइएको हो, सो कुरा पादटिप्पणी वा अनुसन्धान विधिमा प्रस्ट रूपमा स्वीकार गर्नुपर्छ।</li>
+                    <li><strong>४. आफ्नै समालोचनात्मक चिन्तनको प्रयोग:</strong> AI लाई उत्तर लेखिदिने 'लेखक' नबनाई केवल एउटा 'सहायक' वा 'मार्गदर्शक' को रूपमा मात्र प्रयोग गरी निष्कर्ष आफ्नै मौलिक सोचबाट निकाल्नुपर्छ।</li>
+                    <li><strong>५. गोपनीयता र तथ्याङ्क सुरक्षा (Data Privacy):</strong> AI टूलमा व्यक्तिगत, संवेदनशील वा अरूको गोप्य तथ्याङ्क प्रविष्ट गर्नु हुँदैन।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः AI लाई ज्ञान अभिवृद्धिको साधनका रूपमा आत्मसात् गर्दै नैतिक सतर्कता अपनाउन सकेमा मात्र विद्यार्थीको मौलिकता र प्राज्ञिक निष्ठा जोगिन सक्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १३ -->
+        <div class="qa-block color6" id="q13">
+            <div class="q"><span class="qnum">प्र.न. १३:</span> "संसारका विभिन्न महाद्वीपहरूमा प्रविधिको विस्तार भए पनि मानवीय संवेदनशीलता र पूर्वीय 'वसुधैव कुटुम्बकम्' (संसार नै एक परिवार हो) को दर्शन झन् बढी सान्दर्भिक बनेको छ।" यस भनाइलाई आधुनिक विश्वको सन्दर्भमा पुष्टि गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> सूचना प्रविधि र भूमण्डलीकरणले संसारलाई एउटै 'ग्लोबल भिलेज' मा बदलेको छ। तर प्रविधिको भौतिक विस्तारसँगै मानिसमा एकाकीपन, युद्ध, जलवायु सङ्कट र साम्प्रदायिक विद्वेष बढिरहेका बेला पूर्वीय दर्शनको <strong>"वसुधैव कुटुम्बकम्"</strong> (समग्र जगत् नै एउटा साझा परिवार हो) को मानवतावादी चिन्तन झन् सान्दर्भिक बनेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> आधुनिक विश्वमा यो दर्शन सान्दर्भिक हुनाका ५ मुख्य आधारहरू:</p>
+
+                <ul>
+                    <li><strong>१. जलवायु परिवर्तन र साझा वातावरणीय सङ्कट:</strong> जलवायु परिवर्तनले गर्दा परेको असर (बाढी, खडेरी, विश्वव्यापी तापक्रम वृद्धि) ले कुनै एक देशलाई मात्र नभई पूरै पृथ्वीलाई असर पारेको छ। 'वसुधैव कुटुम्बकम्' ले पृथ्वीका सबै प्राणीको रक्षाका लागि वैश्विक सहकार्यको सन्देश दिन्छ।</li>
+                    <li><strong>२. महाव्याधि र वैश्विक स्वास्थ्य सुरक्षा:</strong> कोभिड-१९ जस्ता महामारीका बेला कुनै एक देश सुरक्षित भएर मात्र नपुग्ने र पूरै विश्वका मानिसलाई खोप र औषधि पुर्‍याउनुपर्ने पाठले संसार एउटै परिवार हो भन्ने पुष्टि गर्‍यो।</li>
+                    <li><strong>३. प्रविधिको मानवीय र नैतिक प्रयोग:</strong> AI र आणविक हतियारको अनियन्त्रित होडबाजीलाई रोक्न मानवीय संवेदना र कल्याणकारी पूर्वीय दर्शनको अनुशासन आवश्यक परेको छ।</li>
+                    <li><strong>४. युद्ध, शरणार्थी सङ्कट र मानवीय सहायता:</strong> युक्रेन वा मध्यपूर्वको युद्ध र शरणार्थी सङ्कटले विश्वभर आर्थिक र मानवीय असर पारेको छ। यसलाई सुल्झाउन अन्तर्राष्ट्रिय भ्रातृत्व र समानुभूति अपरिहार्य छ।</li>
+                    <li><strong>५. सांस्कृतिक आदानप्रदान र सहअस्तित्व:</strong> डिजिटल सञ्जालमार्फत संसारभरका मानिसहरू जोडिँदा आपसी सहिष्णुता र सद्भाव कायम राख्न यो दर्शनले मार्गदर्शन गर्छ।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः प्रविधिले मानिसलाई जोडिसकेको आधुनिक युगमा पूर्वीय दर्शनको 'वसुधैव कुटुम्बकम्' ले हृदय र विचारलाई जोड्दै विश्व शान्ति र दिगो विकासको आधार तयार पार्दछ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १४ -->
+        <div class="qa-block color7" id="q14">
+            <div class="q"><span class="qnum">प्र.न. १४:</span> मानौँ तपाईं कर्णाली प्रदेशको पर्यटन तथा संस्कृति मन्त्रीको सल्लाहकार हुनुहुन्छ। कर्णालीको 'मार्सी धान, जडीबुटी, रारा र मानसरोवर मार्ग' लाई विश्वसामु चिनाउन कस्तो ५-बुँदे रणनीति बनाउनुहुन्छ? <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> कर्णाली प्रदेश जैविक विविधता, मौलिक संस्कृति, ऐतिहासिक सम्पदा र प्राकृतिक सौन्दर्यको विशाल भण्डार हो। यहाँको जुम्ली मार्सी धान, बहुमूल्य जडीबुटी (यार्सागुम्बा), रारा ताल र कैलाश-मानसरोवर प्रवेशद्वारलाई अन्तर्राष्ट्रिय मञ्चमा ब्राण्डिङ गर्न दूरदर्शी रणनीतिको आवश्यकता छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>कर्णालीको पर्यटन र उत्पादन प्रवर्धनका ५ रणनीतिक बुँदाहरू:</strong></p>
+
+                <ul>
+                    <li><strong>१. 'जुम्ली मार्सी र अर्गानिक कर्णाली' ब्रान्डिङ:</strong> मार्सी धान, कागुनो, चिनो र च्याङ्ग्राको मासुलाई GI (Geographical Indication) ट्याग दिई अन्तर्राष्ट्रिय अर्गानिक प्रमाणपत्र दिलाउने र विश्व बजारमा निर्यात प्रवर्धन गर्ने।</li>
+                    <li><strong>२. जडीबुटी प्रशोधन तथा अनुसन्धान केन्द्र:</strong> यार्सागुम्बा, पाँचऔँले, र गुच्छी च्याउको अवैध निर्यात रोक्न कर्णालीमै आधुनिक प्रशोधन कारखाना र 'जडीबुटी अध्ययन संस्थान' स्थापना गर्ने।</li>
+                    <li><strong>३. 'रारा-फोक्सुण्डो' इको-टुरिजम र होमस्टे करिडोर:</strong> रारा र शे-फोक्सुण्डो ताल वरपर वातावरणमैत्री 'कम्युनिटी होमस्टे' सञ्चालन गरी स्थानीय खस र भोटे-बोन संस्कृतिको प्रत्यक्ष अनुभव गराउने।</li>
+                    <li><strong>४. 'मानसरोवर धार्मिक पर्यटन मार्ग' निर्माण:</strong> सिमकोट-हिल्सा सडकलाई स्तरोन्नति गरी भारत र विश्वभरका तीर्थयात्रीका लागि 'कैलाश-मानसरोवर छोटो प्रवेशद्वार' का रूपमा पूर्वाधार विकास र बजारीकरण गर्ने।</li>
+                    <li><strong>५. डिजिटल मार्केटिङ र अन्तर्राष्ट्रिय बजारीकरण:</strong> विश्व प्रसिद्ध ट्राभल ब्लगरहरू र मिडियामार्फत कर्णालीको वृत्तचित्र प्रदर्शन गर्ने र 'कर्णाली इन्भेस्टमेन्ट एन्ड टुरिजम समिट' आयोजना गर्ने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> यी ५ रणनीतिहरूको प्रभावकारी कार्यान्वयनले कर्णालीको गरिबी अन्त्य गर्दै यसलाई विश्वकै उत्कृष्ट दिगो पर्यटन र अर्गानिक कृषि हबका रूपमा स्थापित गर्नेछ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १५ -->
+        <div class="qa-block color8" id="q15">
+            <div class="q"><span class="qnum">प्र.न. १५:</span> यदि नेपालको इतिहासमा कोतपर्व र राणाशासनको उदय नभएको भए नेपालको लोकतान्त्रिक र औद्योगिक विकास कस्तो हुन्थ्यो होला? काल्पनिक तर तार्किक ऐतिहासिक विश्लेषण प्रस्तुत गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> वि.सं. १९०३ असोज ३ गते भएको विभत्स 'कोतपर्व' बाट जङ्गबहादुर राणाको उदय भई नेपालमा १०४ वर्षे पारिवारिक र निरङ्कुश राणाशासन कायम भयो। यदि यो कालजयी दुर्घटना नभएको भए नेपालको राजनीतिक, शैक्षिक र औद्योगिक इतिहास बिल्कुलै फरक र प्रगतिशील हुन सक्दथ्यो।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>राणाशासनको उदय नभएको भए नेपालको सम्भावित परिदृश्य:</strong></p>
+
+                <ul>
+                    <li><strong>१. प्रारम्भिक लोकतान्त्रिक र संवैधानिक विकास:</strong> राजा र चौतारीया/भारदारहरूबिच शक्ति सन्तुलन कायम भई बेलायतमा जस्तै १९ औँ शताब्दीमै संवैधानिक राजतन्त्र र भारदारी सभाको लोकतान्त्रिक अभ्यास सुरु हुन सक्थ्यो।</li>
+                    <li><strong>२. आधुनिक शिक्षाको चाँडो विस्तार:</strong> राणाहरूले जनतालाई अशिक्षित राख्ने नीति लिएका थिए। यदि राणाशासन नभएको भए १९ औँ शताब्दीको मध्यतिर नै देशभर सार्वजनिक विद्यालय र विश्वविद्यालयहरू खोली आधुनिक शिक्षा र साक्षरता दर तीव्र गतिमा बढ्ने थियो।</li>
+                    <li><strong>३. औद्योगिक क्रान्ति र पूर्वाधार विकास:</strong> युरोपमा औद्योगिक क्रान्ति भइरहेका बेला नेपालमा जलविद्युत्, खानी उत्खनन, हाटबजार र सडक सञ्जालको विकास भई नेपाल दक्षिण एसियाकै प्रारम्भिक औद्योगिक मुलुक बन्न सक्थ्यो।</li>
+                    <li><strong>४. कूटनीतिक सम्बन्ध र वैदेशिक व्यापार:</strong> बेलायतको पछि मात्र नलागी नेपालले चीन, रुस, फ्रान्स र अन्य देशहरूसँग सोझै कूटनीतिक सम्बन्ध विस्तार गरी वैदेशिक व्यापारमा विविधता ल्याउने थियो।</li>
+                    <li><strong>५. सामाजिक कुरीतिको चाँडो अन्त्य:</strong> सतीप्रथा, दासप्रथा र जातीय विभेद १९ औँ शताब्दीको सुरुवातमै कानुन बनाएर पूर्ण रूपमा अन्त्य भई सामाजिक समता चाँडो कायम हुने थियो।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> यसरी कोतपर्व र राणाशासन नभएको भए नेपालले १०४ वर्षको अमूल्य समय गुमाउनुपर्ने थिएन र आज नेपाल एक विकसित, शिक्षित र औद्योगिक रूपमा समृद्ध लोकतान्त्रिक मुलुक बनिसक्ने थियो।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १६ -->
+        <div class="qa-block color1" id="q16">
+            <div class="q"><span class="qnum">प्र.न. १६:</span> नेपालमा तेस्रोलिङ्गी तथा यौनिक अल्पसङ्ख्यकहरूलाई नागरिकता र सरकारी सेवामा समावेश गर्दा समाजमा आएको सकारात्मक परिवर्तन र अझै सुधार गर्नुपर्ने ५ वटा व्यवस्थाहरू लेख्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपालको संविधानको धारा १२ र सामाजिक न्यायको हकले यौनिक तथा लैङ्गिक अल्पसङ्ख्यक (LGBTQIA+) समुदायलाई उनीहरुकै पहिचान (अन्य/O) अनुसार नागरिकता र अधिकार प्रदान गरेको छ। यसले नेपाली समाजमा मानव अधिकार र समावेशीकरणको नयाँ ढोका खोलेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>आएको सकारात्मक परिवर्तन:</strong> उनीहरूले कानुनी पहिचान पाएका छन्, राहदानी र मताधिकार प्राप्त गरेका छन्, र लोकसेवा आयोगमा आरक्षणका कारण सरकारी सेवा र प्रहरीमा प्रवेश पाएका छन्।</p>
+
+                <p><strong>अझै सुधार गर्नुपर्ने ५ मुख्य व्यवस्थाहरू:</strong></p>
+                <ul>
+                    <li><strong>१. समलिङ्गी विवाहको स्पष्ट कानुनी मान्यता:</strong> अदालतको आदेश बमोजिम मुलुकी अपराध/देवानी संहितामा संशोधन गरी विवाह र सम्पत्तिको समान अधिकार कानुनी रूपमा सुनिश्चित गर्ने।</li>
+                    <li><strong>२. सार्वजनिक स्थल र पूर्वाधारमा लैङ्गिक तटस्थता:</strong> विद्यालय, कलेज, अस्पताल र सरकारी कार्यालयहरूमा पुरुष र महिलाका अतिरिक्त 'लैङ्गिक तटस्थ शौचालय' (Gender-neutral Toilets) निर्माण गर्ने।</li>
+                    <li><strong>३. स्वास्थ्य सेवा र यौन पुनःनिर्धारण सर्जरीमा सहुलियत:</strong> उनीहरूका लागि विशेष परामर्श, मानसिक स्वास्थ्य सेवा र लैङ्गिक पुनःनिर्धारण शल्यक्रिया (Gender Reassignment Surgery) मा सरकारी अनुदान दिने।</li>
+                    <li><strong>४. सामाजिक सचेतना र भेदभावविरोधी कानुन:</strong> विद्यालयको पाठ्यपुस्तकमा यौनिक विविधता समेट्ने र कार्यस्थल वा समाजमा हुने विभेद र दुर्व्यवहार (Bullying) विरुद्ध कडा कानुनी कारबाही गर्ने।</li>
+                    <li><strong>५. स्वरोजगार र उद्यमशीलता प्रवर्धन:</strong> यौनिक अल्पसङ्ख्यक युवाहरूका लागि विशेष सीपमूलक तालिम, सहुलियतपूर्ण ऋण र व्यापारिक अवसरहरू प्रदान गर्ने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः लैङ्गिक अल्पसङ्ख्यकहरूलाई केवल कानुनी पहिचानमा सीमित नराखी सामाजिक र आर्थिक रूपमा पूर्ण समावेश गराउन सकेमा मात्र वास्तविक समतामूलक समाज निर्माण हुन सक्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १७ -->
+        <div class="qa-block color2" id="q17">
+            <div class="q"><span class="qnum">प्र.न. १७:</span> "आधुनिक सञ्चार माध्यम र सामाजिक सञ्जालले जनतालाई खबरदारी गर्ने 'चौथो अङ्ग' को काम गरेका छन् तर भ्रामक सूचना (Fake News) ले लोकतन्त्रलाई नै खतरामा पारेको छ।" यस समस्या समाधानका लागि नागरिक र सरकारको भूमिका स्पष्ट पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> आधुनिक डिजिटल सञ्चार माध्यम र सामाजिक सञ्जालले सर्वसाधारणलाई सूचना दिने, सरकारका कामको खबरदारी गर्ने र अभिव्यक्ति स्वतन्त्रताको उपयोग गर्ने 'चौथो अङ्ग' को काम गरेका छन्। तर, असत्य र भ्रामक सूचना (Fake News / Deepfake) ले सामाजिक सद्भाव बिगार्ने र लोकतन्त्रलाई कमजोर बनाउने जोखिम बढाएको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <div class="branch-flow">
+                    <div class="branch-root">भ्रामक सूचना (Fake News) नियन्त्रण रणनीति</div>
+                    <div class="branch-children">
+                        <div class="mermaid-step">१. नागरिकको भूमिका<br><span style="font-weight:400;font-size:0.85rem;">Fact-checking, Report, सचेतता</span></div>
+                        <div class="mermaid-step">२. सरकारको भूमिका<br><span style="font-weight:400;font-size:0.85rem;">कानुन, Fact-Check सेन्टर, साक्षरता</span></div>
+                    </div>
+                </div>
+
+                <p><strong>(क) नागरिकको भूमिका:</strong></p>
+                <ul>
+                    <li><strong>१. तथ्य जाँच (Fact-checking) गर्ने बानी:</strong> सामाजिक सञ्जालमा देखिने कुनै पनि उत्तेजक समाचार शेयर गर्नुअघि आधिकारिक मिडिया वा Fact-check वेबसाइटबाट त्यसको सत्यता जाँच्ने।</li>
+                    <li><strong>२. जिम्मेवार डिजिटल आचरण:</strong> नक्कली एकाउन्ट नबनाउने, घृणास्पद अभिव्यक्ति (Hate Speech) नफैलाउने र शंकास्पद पोष्टहरूलाई रिपोर्ट (Report) गर्ने।</li>
+                    <li><strong>३. समालोचनात्मक सोचको प्रयोग:</strong> अनलाइनका विषयवस्तुलाई सिधै पत्याउनुको सट्टा 'स्रोत के हो? किन लेखियो?' भनी विवेक प्रयोग गर्ने।</li>
+                </ul>
+
+                <p><strong>(ख) सरकारको भूमिका:</strong></p>
+                <ul>
+                    <li><strong>१. कडा साइबर कानुन र कार्यान्वयन:</strong> भ्रामक सूचना, साइबर अपराध र चरित्र हत्या गर्नेहरूलाई कानुन बमोजिम कडा सजाय दिने तर नागरिकको अभिव्यक्ति स्वतन्त्रता भने नकुण्ठित गर्ने।</li>
+                    <li><strong>२. राष्ट्रिय 'फ्याक्ट चेक' सेन्टर स्थापना:</strong> आम सञ्चार माध्यम र प्रेस काउन्सिलमार्फत अनलाइन अफवाहहरूको तत्काल खण्डन गर्ने आधिकारिक संयन्त्र चलाउने।</li>
+                    <li><strong>३. डिजिटल साक्षरता अभियान:</strong> विद्यालय तहदेखि नै विद्यार्थी र नागरिकहरूलाई अनलाइन सुरक्षा र सूचना प्रविधिको सही प्रयोगबारे सचेतना जगाउने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नागरिकको सजगता र सरकारको नियमनबिचको सन्तुलनले मात्र भ्रामक सूचनाको जोखिम अन्त्य गरी डिजिटल युगमा लोकतन्त्रलाई सुदृढ बनाउन सकिन्छ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १८ -->
+        <div class="qa-block color3" id="q18">
+            <div class="q"><span class="qnum">प्र.न. १८:</span> सन् २०३० सम्ममा नेपालका ग्रामीण क्षेत्रहरूलाई 'ई-भिलेज' (E-Village) र दिगो कृषि पर्यटन केन्द्रमा बदल्न स्थानीय सरकारले कस्ता ५ वटा नवीन कार्यक्रमहरू सञ्चालन गर्नुपर्छ? <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपालका गाउँहरूलाई परम्परागत र विपन्न अवस्थाबाट मुक्त गरी प्रविधि र समृद्धिसँग जोड्न 'ई-भिलेज' (E-Village) र दिगो कृषि पर्यटनको अवधारणा आवश्यक छ। यसले गाउँबाट हुने बाह्य बसाइँसराइ रोकी ग्रामीण अर्थतन्त्रलाई आत्मनिर्भर बनाउँछ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>स्थानीय सरकारले सञ्चालन गर्नुपर्ने ५ नवीन कार्यक्रमहरू:</strong></p>
+
+                <ul>
+                    <li><strong>१. 'हाई-स्पीड फाइबर इन्टरनेट र डिजिटल सेवा केन्द्र':</strong> गाउँका प्रत्येक घरधुरी, विद्यालय र स्वास्थ्य चौकीमा तीव्र गतिको इन्टरनेट पुर्‍याउने र वडा कार्यालयमा ई-सिफारिस एवं डिजिटल भुक्तानी प्रणाली लागू गर्ने।</li>
+                    <li><strong>२. 'स्मार्ट एग्रि-टेक र अनलाइन कृषि बजार' एप:</strong> किसानहरूलाई मौसम, माटोको गुणस्तर, मल-बीउको जानकारी र बालीको बजार मूल्य देखाउने 'पालिका कृषि एप' बनाउने र बिचौलियाविना सोझै उपभोक्तासम्म उत्पादन पुर्‍याउने।</li>
+                    <li><strong>३. 'कम्युनिटी एग्रो-होमस्टे' (Agro-Homestay):</strong> गाउँका मौलिक घरहरूलाई सफा होमस्टेमा बदल्ने, जहाँ पर्यटकले अर्गानिक खेती, स्थानीय खाना र सांस्कृतिक जीवनशैलीको अनुभव लिन सकुन्।</li>
+                    <li><strong>४. सोधघर र 'ई-लाइब्रेरी' सहितको मोडल डिजिटल स्कूल:</strong> गाउँका विद्यालयहरूमा कम्प्युटर ल्याब, रोबोटिक्स र ई-लाइब्रेरी स्थापना गरी बालबालिकालाई गाउँमै गुणस्तरीय डिजिटल शिक्षा दिने।</li>
+                    <li><strong>५. नवीकरणीय सौर्य ऊर्जा र 'स्मार्ट फोहोर व्यवस्थापन':</strong> गाउँमा सोलार मिनी-ग्रिडबाट २४ सै घण्टा बिजुली पुर्‍याउने र कम्पोस्ट मल बनाउने जैविक फोहोर व्यवस्थापन प्रणाली सञ्चालन गर्ने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> यी ५ कार्यक्रमहरूको सफल कार्यान्वयनले सन् २०३० सम्ममा नेपालका गाउँहरूलाई प्रविधिमैत्री, हरियाली र आर्थिक रूपमा आत्मनिर्भर 'ई-भिलेज' मा रूपान्तरण गर्नेछ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न १९ -->
+        <div class="qa-block color4" id="q19">
+            <div class="q"><span class="qnum">प्र.न. १९:</span> नेपालले 'ग्रिड' (Green, Resilient, and Inclusive Development - GRID) रणनीति अपनाएर हरित अर्थतन्त्र निर्माण गर्दा साना तथा मझौला उद्योगीहरूले पाउने अवसरहरू स्पष्ट पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपाल सरकार र विकास साझेदारहरूले अघि सारेको <strong>GRID रणनीति</strong> (हरित, उत्थानशील र समावेशी विकास) ले वातावरण संरक्षण गर्दै आर्थिक वृद्धि हासिल गर्ने लक्ष्य राखेको छ। यस रणनीतिले साना तथा मझौला उद्योगीहरू (SMEs) का लागि नवीन र दिगो व्यापारिक अवसरहरू सिर्जना गरेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>साना तथा मझौला उद्योगीहरूले पाउने मुख्य अवसरहरू:</strong></p>
+
+                <ul>
+                    <li><strong>१. 'हरित वित्तीय पहुँच' र सहुलियतपूर्ण कर्जा:</strong> नवीकरणीय ऊर्जा, अर्गानिक खेती, र वातावरणमैत्री उद्योग चलाउने साना उद्यमीहरूले सहुलियतपूर्ण ब्याजदरमा 'ग्रीन बन्ड' (Green Bonds) र जलवायु कोषबाट ऋण पाउने।</li>
+                    <li><strong>२. नवीकरणीय ऊर्जा र विद्युतीय सवारी (EV) व्यवसाय:</strong> सौर्य ऊर्जा जडान, चार्जिङ स्टेशन, विद्युतीय टेम्पो/गाडी एसेम्बल र ब्याट्री रिसाइक्लिङ उद्योगमा लगानी गर्ने अवसर।</li>
+                    <li><strong>३. अर्गानिक कृषि र प्रशोधन उद्योग:</strong> रासायनिक मलमुक्त अर्गानिक खाद्यान्न, जुस, जडीबुटी र हस्तकलाका वस्तुहरू उत्पादन गरी उच्च मूल्यमा अन्तर्राष्ट्रिय बजारमा निर्यात गर्ने।</li>
+                    <li><strong>४. पुनर्चक्रण र 'सर्कुलर इकोनोमी' (Circular Economy):</strong> प्लास्टिक, काँच र कपडाका फोहोरलाई पुनःप्रशोधन (Recycling/Upcycling) गरी नयाँ सामान बनाउने नयाँ प्रकृतिका उद्योगहरू चलाउने।</li>
+                    <li><strong>५. अन्तर्राष्ट्रिय प्राविधिक सहयोग र ब्राण्डिङ:</strong> हरित उद्योगीहरूले वैदेशिक अनुदान, आधुनिक प्रविधि र 'इको-फ्रेन्डली' ब्राण्डिङको अवसर पाई बजारमा प्रतिस्पर्धी बन्न सक्ने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः GRID रणनीति नेपालका साना उद्यमीहरूका लागि परम्परागत उद्योग छोडेर वातावरणमैत्री, लाभदायी र भविष्य-सुरक्षित हरित अर्थतन्त्रतर्फ लाग्ने सुनौलो अवसर हो।</p>
+            </div>
+        </div>
+
+        <div class="alt-divider">[ अथवा ]</div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्र.न. १९ (ख):</span> भविष्यको श्रम बजारमा रोबोटिक्स, अटोमेसन र AI ले कब्जा जमाउँदा नेपाली युवाहरूले बेरोजगारीबाट बच्न अहिल्यैदेखि कस्ता-कस्ता 'फ्युचर स्किल्स' (Future Skills) सिक्नुपर्छ?</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> चौथो औद्योगिक क्रान्तिसँगै रोबोटिक्स, अटोमेसन र आर्टिफिसियल इन्टेलिजेन्स (AI) ले परम्परागत साधारण रोजगारीहरू खोस्दै छन्। यस आधुनिक परिदृश्यमा नेपाली युवाहरूले श्रम बजारमा प्रतिस्पर्धी बन्न र बेरोजगारीबाट बच्न २१ औँ शताब्दीका <strong>'फ्युचर स्किल्स'</strong> (Future Skills) सिक्नु अनिवार्य बनेको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>नेपाली युवाहरूले सिक्नुपर्ने मुख्य 'फ्युचर स्किल्स':</strong></p>
+
+                <ul>
+                    <li><strong>१. जटिल समस्या समाधान र समालोचनात्मक चिन्तन (Complex Problem Solving &amp; Critical Thinking):</strong> रोबोटले गर्न नसक्ने अप्ठ्यारा समस्याहरूको गहिरो विश्लेषण गरी तार्किक निर्णय लिने क्षमता।</li>
+                    <li><strong>२. डाटा साक्षरता र AI/कोडिङ सिप (Data Literacy, AI &amp; Coding):</strong> डाटा एनालिटिक्स, पाइथन/जाभा कोडिङ, मेसिन लर्निङ र AI टुल्सहरूलाई कुशलतापूर्वक प्रयोग गर्न सक्ने प्राविधिक दक्षता।</li>
+                    <li><strong>३. सिर्जनात्मकता र नवप्रवर्तन (Creativity &amp; Innovation):</strong> मेसिन वा AI ले हुबहु नक्कल गर्न नसक्ने नयाँ सोच, कला, डिजाइन, लेखन र मौलिक उत्पादन सिर्जना गर्ने क्षमता।</li>
+                    <li><strong>४. संवेगात्मक बुद्धिमत्ता र नेतृत्व सिप (Emotional Intelligence &amp; Leadership):</strong> मानिसहरूसँग सम्बन्ध गाँस्ने, समानुभूति राख्ने, समूहको नेतृत्व गर्ने र अन्तरवैयक्तिक सञ्चार गर्ने मानवीय कौशल।</li>
+                    <li><strong>५. लचकता र निरन्तर सिकाइ (Adaptability &amp; Lifelong Learning):</strong> प्रविधिमा आउने द्रुत परिवर्तनसँगै आफूलाई ढाल्ने, नयाँ सिप सिक्ने र पुराना अप्रचलित सिप त्याग्ने (Reskilling &amp; Upskilling) बानी।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नेपाली युवाहरूले घोक्ने र साधारण शारीरिक श्रममा मात्र सीमित नरही यी 'फ्युचर स्किल्स' मा आफूलाई पोख्त बनाएमा रोबोटिक्स र AI को युगमा पनि उच्च आम्दानी हुने रोजगारी प्राप्त गर्न सक्नेछन्।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== GROUP C ===== -->
+        <!-- ========================================================== -->
+
+        <div class="group-head" id="groupC">
+            <i class="fas fa-c"></i>
+            समूह 'ग' — विस्तृत उत्तरात्मक प्रश्नहरू
+            <span class="marks">३ × ८ = २४</span>
+        </div>
+
+        <div class="group-sub">
+            <i class="fas fa-circle-info"></i>
+            विस्तृत उत्तर: २५०–३०० शब्द | तलका प्रश्नहरूको विस्तृत उत्तर दिनुहोस्।
+        </div>
+
+        <!-- प्रश्न २० -->
+        <div class="qa-block color6" id="q20">
+            <div class="q"><span class="qnum">प्र.न. २०:</span> मानौँ तपाईंको कलेजले '२० वर्षपछिको नेपाल र युवा जीवनोपयोगी सिप' विषयमा राष्ट्रिय युवा सम्मेलन आयोजना गर्दैछ। सो सम्मेलनमा प्रस्तुत गर्नका लागि समालोचनात्मक चिन्तन, सिर्जनात्मक चिन्तन, प्रविधि साक्षरता, र मानसिक स्वास्थ्य व्यवस्थापनलाई समेटेर एक उत्कृष्ट मुख्य सम्बोधन मस्यौदा (Keynote Speech Draft) तयार पार्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> <strong>कार्यक्रम:</strong> राष्ट्रिय युवा सम्मेलन २०८२ | <strong>विषय:</strong> २० वर्षपछिको नेपाल र युवा जीवनोपयोगी सिप | <strong>सम्बोधनकर्ता:</strong> अध्यक्ष, युवा कलेज युनियन</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>मुख्य सम्बोधन मस्यौदा (Keynote Speech Draft):</strong></p>
+
+                <div class="speech-box">
+                    <p class="speech-title"><i class="fas fa-microphone" style="color:#1A237E; margin-right:6px;"></i> २० वर्षपछिको नेपाल र युवा जीवनोपयोगी सिप</p>
+                    <p class="greeting">आदरणीय सभाध्यक्ष महोदय, आदरणीय गुरुवर्ग, विभिन्न कलेजबाट पधार्नुभएका युवा साथीहरू तथा उपस्थित प्रबुद्ध व्यक्तित्वहरू!</p>
+
+                    <p>सबैमा मेरो हार्दिक अभिवादन र नमस्ते!</p>
+
+                    <p>आज हामी सन् २०४५ अर्थात् <strong>२० वर्षपछिको नेपाल</strong> कस्तो हुनेछ र सो समयमा नेपाली युवाहरूलाई कस्ता जीवनोपयोगी सिपहरू चाहिन्छ भन्ने अत्यन्तै गम्भीर र सामयिक विषयमा छलफल गर्न यहाँ एकत्र भएका छौँ।</p>
+
+                    <p>आजभन्दा २० वर्षपछि नेपाल केवल भौगोलिक रूपमा मात्र होइन, प्रविधि, अर्थतन्त्र र सामाजिक संरचनाका दृष्टिले पूर्ण रूपमा रूपान्तरित भइसकेको हुनेछ। अटोमेसन, AI र डिजिटल प्रविधिले हाम्रा घर, कार्यालय र उद्योगहरू सञ्चालन गरिरहेका हुनेछन्। तर, साथीहरू! प्रश्न उठ्छ—के त्यस युगमा केवल शैक्षिक डिग्री वा प्राविधिक प्रमाणपत्र मात्र हाम्रा युवाहरूका लागि पर्याप्त हुनेछन्? कदापि हुने छैनन्। त्यस भावी युगमा हामीलाई चारवटा मुख्य <strong>जीवनोपयोगी स्तम्भहरू</strong> (Life Skill Pillars) चाहिन्छ:</p>
+
+                    <p><strong>१. समालोचनात्मक चिन्तन (Critical Thinking):</strong> भविष्यको संसारमा सूचनाको कमी हुने छैन, बरु असीमित सूचना र भ्रामक समाचारको बाढी आउनेछ। यस्तो अवस्थामा के सत्य हो र के भ्रम हो भनी छुट्याउन, प्रविधिका निर्णयहरूलाई नैतिकताको कसीमा जाँच्न र जटिल सामाजिक समस्याहरूको निष्पक्ष विश्लेषण गर्न समालोचनात्मक चिन्तन नै युवाहरूको मुख्य हतियार बन्नेछ।</p>
+
+                    <p><strong>२. सिर्जनात्मक चिन्तन र नवप्रवर्तन (Creative Thinking):</strong> रोबोट र मेसिनले दोहोरिने कामहरू सहजै गरिदिनेछन्। तर, मेसिनसँग 'भावना' र 'मौलिक सिर्जनात्मकता' हुँदैन। तसर्थ, हाम्रा युवाहरूले नयाँ सोच, कला, नवप्रवर्तन र उद्यमशीलताका माध्यमबाट समाजलाई नयाँ दिशा दिने सिर्जनात्मक क्षमता विकास गर्नैपर्छ।</p>
+
+                    <p><strong>३. उच्च प्रविधि साक्षरता (Advanced Digital Literacy):</strong> २० वर्षपछिको नेपालमा प्रविधि साक्षरता भनेको केवल फेसबुक चलाउनु हुने छैन; बरु AI, बिग डाटा, कोडिङ र डिजिटल गभर्नेन्सलाई मानवकल्याणका लागि प्रयोग गर्न सक्ने प्राविधिक निपुणता हुनेछ।</p>
+
+                    <p><strong>४. मानसिक स्वास्थ्य व्यवस्थापन र उत्थानशीलता (Mental Health &amp; Resilience):</strong> तीव्र प्रतिस्पर्धा, एकाकीपन र प्रविधिको अत्यधिक चापले भविष्यका युवाहरूमा मानसिक तनाव र चिन्ता बढाउनेछ। यस्तो अवस्थामा ध्यान, योग, आत्मबोध, समानुभूति र संवेगात्मक नियमनका माध्यमबाट आफ्नो मानसिक स्वास्थ्यलाई सन्तुलित र मजबुत राख्न सक्नु नै जीवनको सबैभन्दा ठुलो विजय हुनेछ।</p>
+
+                    <p><strong>आदरणीय साथीहरू!</strong> २० वर्षपछिको नेपाललाई समृद्ध, आत्मनिर्भर र न्यायपूर्ण बनाउने जिम्मेवारी आज हाम्रै काँधमा छ। आउनुहोस्, आजैदेखि यी चार जीवनोपयोगी सिपहरूलाई आफ्नो जीवनमा ढाल्दै अघि बढौँ।</p>
+
+                    <p style="text-align:right; font-weight:800; color:#1A237E;">धन्यवाद! जय नेपाल!</p>
+                </div>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> यो मुख्य सम्बोधनले भविष्यको रूपान्तरित नेपालका लागि युवाहरूले प्राविधिक ज्ञानका साथै समालोचनात्मक, सिर्जनात्मक र मानसिक रूपमा सबल बन्नुपर्ने स्पष्ट मार्गचित्र प्रस्तुत गर्दछ।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न २१ -->
+        <div class="qa-block color7" id="q21">
+            <div class="q"><span class="qnum">प्र.न. २१:</span> नेपालको भौगोलिक अवस्थितिलाई ध्यानमा राख्दै 'नेपाल भारत र चीनबिचको गतिशील पुल (Dynamic Bridge)' बन्न सक्ने सम्भावना, फाइदाहरू र दुवै छिमेकी मुलुकहरूसँग सन्तुलित कूटनीति कायम राख्दा आइपर्ने सामरिक चुनौतीहरूको विस्तृत विश्लेषणात्मक प्रतिवेदन तयार पार्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपाल विश्वका दुई उदीयमान आर्थिक महाशक्तिहरू—दक्षिणमा भारत र उत्तरमा चीनका बिचमा अवस्थित एक रणनीतिक भूराननीतिक (Geopolitically Strategic) मुलुक हो। विगतमा नेपाललाई 'दुई ढुङ्गाबिचको तरुल' का रूपमा हेरिए तापनि आधुनिक प्रविधि, सडक, र रेल सञ्जालको विकाससँगै नेपाल दुवै छिमेकीबिचको <strong>'गतिशील पुल'</strong> (Dynamic Bridge / Transit Hub) बन्न सक्ने विशाल सम्भावना छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>(क) 'गतिशील पुल' बन्न सक्ने सम्भावना र फाइदाहरू:</strong></p>
+                <ul>
+                    <li><strong>१. उत्तर-दक्षिण व्यापारिक पारवहन (Transit Trade Hub):</strong> चीनको केरुङ/तातोपानी नाका र भारतको रक्सौल/जोगबनी नाकालाई नेपालको मध्यपहाडी र उत्तर-दक्षिण करिडोरमार्फत जोडेर चीन र भारतबिचको खर्बौँको व्यापारमा नेपाल मुख्य पारवहन मार्ग बन्न सक्छ।</li>
+                    <li><strong>२. पारवहन शुल्क र पूर्वाधार विकास:</strong> दुवै देशका मालवाहक गाडीहरू नेपाल भई आवतजावत गर्दा नेपालले ठुलो रकम पारवहन शुल्क (Transit Royalty) र सेवा शुल्क आर्जन गर्न सक्छ।</li>
+                    <li><strong>३. विद्युत् व्यापार र क्षेत्रीय ऊर्जा ग्रिड:</strong> नेपालका ठुला जलविद्युत् आयोजनाहरूबाट बिजुली निकालेर भारत, बङ्गलादेश र चीनतर्फ निर्यात गरी क्षेत्रीय ऊर्जा व्यापारको केन्द्र बन्न सक्ने।</li>
+                    <li><strong>४. त्रिदेशीय पर्यटन करिडोर:</strong> चीनका पर्यटकलाई नेपाल हुँदै भारतका बुद्ध र हिन्दू धार्मिक स्थलहरूमा र भारतका तीर्थयात्रीलाई नेपाल हुँदै कैलाश मानसरोवर पुर्‍याउने त्रिदेशीय पर्यटन सर्किट बनाउन सकिने।</li>
+                </ul>
+
+                <p><strong>(ख) सन्तुलित कूटनीति कायम राख्दा आइपर्ने सामरिक चुनौतीहरू:</strong></p>
+                <ul>
+                    <li><strong>१. भूराननीतिक प्रतिस्पर्धा र दबाब:</strong> भारत र चीनबिचको सीमा विवाद र प्रतिस्पर्धाका कारण नेपाललाई दुवै पक्षबाट आ-आफ्नो सुरक्षा र आर्थिक गुट (जस्तै: BRI वा IPS/MCC) मा तान्ने दबाब हुनु।</li>
+                    <li><strong>२. सीमा व्यवस्थापन र सुरक्षा चासो:</strong> उत्तरतर्फ तिब्बती शरणार्थी र दक्षिणतर्फ खुल्ला सिमानाका कारण हुने सीमापार अपराध, तस्करी र सुरक्षा संवेदनशीलतालाई सन्तुलित राख्नु।</li>
+                    <li><strong>३. कूटनीतिक असंलग्नता र असन्तुलनको जोखिम:</strong> कुनै एक छिमेकीतर्फ अलिकति ढल्कँदा अर्को छिमेकी सशङ्कित हुने र आर्थिक नाकाबन्दी वा व्यापारिक अवरोधको जोखिम रहनु।</li>
+                    <li><strong>४. आन्तरिक राजनीतिक अस्थिरता र वैदेशिक हस्तक्षेप:</strong> नेपालका राजनीतिक दलहरूले परराष्ट्र नीतिमा साझा न्यूनतम राष्ट्रिय सहमति बनाउन नसक्दा छिमेकी देशहरूको हस्तक्षेप बढ्ने खतरा।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः नेपालले 'दुई ढुङ्गाबिचको तरुल' को हीनग्रन्थी त्यागेर असंलग्न परराष्ट्र नीति, पञ्चशीलका सिद्धान्त र त्रिदेशीय साझेदारीलाई अपनाउँदै भारत र चीनबिचको भरपर्दो 'गतिशील सेतु' बनेर राष्ट्रिय हित र समृद्धि हासिल गर्नुपर्छ।</p>
+            </div>
+        </div>
+
+        <div class="alt-divider">[ अथवा ]</div>
+
+        <div class="qa-block color8">
+            <div class="q"><span class="qnum">प्र.न. २१ (ख):</span> नेपालको २ सय ५० वर्षको आधुनिक राजनीतिक यात्रा (एकीकरण, राणाशासन, प्रजातन्त्र, पञ्चायत, बहुदल, र सङ्घीय लोकतान्त्रिक गणतन्त्र) को मुख्य-मुख्य राजनीतिक मोडहरूलाई एक विस्तृत समयरेखा (Timeline) मा ढाली ऐतिहासिक सफलता र शिक्षाहरूको विस्तृत विवेचना गर्नुहोस्।</div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> वि.सं. १८२५ मा पृथ्वीनारायण शाहले काठमाडौँ उपत्यका विजय गरेसँगै सुरु भएको आधुनिक नेपालको २५० वर्षभन्दा लामो राजनीतिक इतिहास अनेकौँ क्रान्ति, सङ्घर्ष, निरङ्कुशता र लोकतान्त्रिक रूपान्तरणको उतारचढावले भरिएको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> <strong>नेपालको आधुनिक राजनीतिक यात्राको समयरेखा (Timeline):</strong></p>
+
+                <div class="timeline-box">[वि.सं. १८२५] ───► राष्ट्रिय एकीकरण (पृथ्वीनारायण शाहद्वारा आधुनिक नेपालको जग)
+      │
+[वि.सं. १९०३] ───► कोतपर्व र १०४ वर्षे पारिवारिक निरङ्कुश राणाशासनको उदय
+      │
+[वि.सं. २००७] ───► ऐतिहासिक जनक्रान्ति र प्रजातन्त्रको प्रथम बहाली
+      │
+[वि.सं. २०१७] ───► राजा महेन्द्रको शाही कु (Coup) र ३० वर्षे निरङ्कुश पञ्चायती व्यवस्था
+      │
+[वि.सं. २०४६] ───► प्रथम जनआन्दोलन र संवैधानिक राजतन्त्रात्मक बहुदलीय प्रजातन्त्र
+      │
+[वि.सं. २०६२/६३] ──► दोस्रो जनआन्दोलन (१९ दिने आन्दोलन) र राजतन्त्रको अन्त्य
+      │
+[वि.सं. २०७२] ───► संविधान सभाबाट सङ्घीय लोकतान्त्रिक गणतन्त्र नेपालको संविधान जारी</div>
+
+                <p><strong>ऐतिहासिक सफलताहरू:</strong></p>
+                <ul>
+                    <li><strong>१. भौगोलिक र सांस्कृतिक एकीकरण:</strong> साना बाईसी-चौबीसी राज्यहरूलाई जोडेर सार्वभौम र अखण्ड नेपाल राष्ट्र निर्माण हुनु।</li>
+                    <li><strong>२. निरङ्कुशताको अन्त्य र नागरिक सार्वभौमसत्ता:</strong> १०४ वर्षे राणाशासन, ३० वर्षे पञ्चायत र २४० वर्षे निरङ्कुश राजतन्त्रलाई अन्त्य गरी जनताका प्रतिनिधिले बनाएको संविधानमार्फत जनता नै राज्यको सार्वभौमसत्ता सम्पन्न बन्नु।</li>
+                    <li><strong>३. सङ्घीयता, समावेशीकरण र गणतन्त्र:</strong> राज्यका हरेक अङ्गमा महिला, दलित, जनजाति र मधेशीको समानुपातिक प्रतिनिधित्व सुनिश्चित हुनु।</li>
+                </ul>
+
+                <p><strong>ऐतिहासिक शिक्षाहरू:</strong></p>
+                <ul>
+                    <li><strong>१. राजनीतिक स्थिरता र सुशासनको आवश्यकता:</strong> निरन्तरको राजनीतिक अस्थिरता र सत्ताको खिचातानीले देशको आर्थिक विकास ठप्प हुने पाठ।</li>
+                    <li><strong>२. विधिको शासन र जनमतको कदर:</strong> जनभावना विपरीत निरङ्कुश हुन खोज्ने जस्तोसुकै शासक वा व्यवस्थालाई पनि नेपाली जनताले फ्याँकिदिन्छन् भन्ने इतिहासको शिक्षा।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः २५० वर्षको राजनीतिक सङ्घर्षबाट प्राप्त सङ्घीय लोकतान्त्रिक गणतन्त्रलाई संस्थागत गर्दै आर्थिक समृद्धि र सामाजिक न्याय कायम गर्नु नै आजको मुख्य ऐतिहासिक दायित्व हो।</p>
+            </div>
+        </div>
+
+        <!-- प्रश्न २२ -->
+        <div class="qa-block color1" id="q22">
+            <div class="q"><span class="qnum">प्र.न. २२:</span> "सन् २०३० सम्ममा नेपाललाई अति कम विकसित मुलुक (LDC) बाट मध्यम आयभएको मुलुकमा स्तरोन्नति गर्न र गरिबीलाई शून्यनजिक पुर्‍याउन शिक्षा, पूर्वाधार, ऊर्जा, र जलविद्युत् निर्यातलाई एकीकृत रूपमा जोड्नुपर्छ।" यस राष्ट्रिय सङ्कल्पलाई पूरा गर्न बनेको एकीकृत 'राष्ट्रिय विकास गुरुयोजना २०३०' को नमुना मस्यौदा (Model Blueprint) तयार पार्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> नेपालले सन् २०२६ सम्ममा अति कम विकसित मुलुक (LDC) बाट स्तरोन्नति हुने र सन् २०३० सम्ममा <strong>दिगो विकास लक्ष्य (SDGs)</strong> हासिल गर्दै मध्यम आयभएको विकसित मुलुक बन्ने राष्ट्रिय सङ्कल्प लिएको छ। यस सङ्कल्पलाई साकार पार्न शिक्षा, पूर्वाधार, ऊर्जा र व्यापारलाई एकीकृत रूपमा जोड्ने <strong>'राष्ट्रिय विकास गुरुयोजना २०३०'</strong> को नमुना मस्यौदा तयार पारिएको छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <div class="branch-flow">
+                    <div class="branch-root">🏛️ राष्ट्रिय विकास गुरुयोजना २०३०</div>
+                    <div class="branch-children">
+                        <div class="mermaid-step">१. गुणस्तरीय र प्रविधिमैत्री शिक्षा<br><span style="font-weight:400;font-size:0.85rem;">STEM शिक्षा र प्रविधि साक्षरता</span></div>
+                        <div class="mermaid-step">२. दिगो पूर्वाधार र CONNECTIVITY<br><span style="font-weight:400;font-size:0.85rem;">सडक, रेल, द्रुतमार्ग, इको-सिटी</span></div>
+                        <div class="mermaid-step">३. जलविद्युत्, हरित ऊर्जा र निर्यात<br><span style="font-weight:400;font-size:0.85rem;">१० वर्षमा १० हजार MW निर्यात</span></div>
+                        <div class="mermaid-step">४. एकीकृत गरिबी निवारण र सुशासन<br><span style="font-weight:400;font-size:0.85rem;">शून्य गरिबी र सामाजिक सुरक्षा</span></div>
+                    </div>
+                </div>
+
+                <p><strong>१. गुणस्तरीय र प्रविधिमैत्री शिक्षा क्षेत्र (Education Sector):</strong></p>
+                <ul>
+                    <li><strong>रणनीति:</strong> साक्षरतामा मात्र सीमित नरही विद्यालय र विश्वविद्यालयहरूमा STEM (Science, Tech, Engineering, Math) र व्यावसायिक प्राविधिक शिक्षा अनिवार्य गर्ने।</li>
+                    <li><strong>लक्ष्य:</strong> ८०% युवाहरूलाई बजारयोग्य प्राविधिक सीप दिई बेरोजगारी शून्य बनाउने र अनुसन्धानमा बजेट २% पुर्‍याउने।</li>
+                </ul>
+
+                <p><strong>२. दिगो पूर्वाधार विकास क्षेत्र (Infrastructure Development):</strong></p>
+                <ul>
+                    <li><strong>रणनीति:</strong> उत्तर-दक्षिण आर्थिक करिडोर, पूर्व-पश्चिम मदन भण्डारी/हुलाकी राजमार्ग, र काठमाडौँ-तराई द्रुतमार्ग समयमै सम्पन्न गर्ने।</li>
+                    <li><strong>लक्ष्य:</strong> ७५३ वटै पालिकालाई बाह्रैमास चल्ने पक्की सडकले जोड्ने र ५ वटा नयाँ 'स्मार्ट इको-सिटी' निर्माण गर्ने।</li>
+                </ul>
+
+                <p><strong>३. जलविद्युत्, हरित ऊर्जा र निर्यात प्रवर्धन (Hydro-energy &amp; Export):</strong></p>
+                <ul>
+                    <li><strong>रणनीति:</strong> रन-अफ-रिभर र जलाशययुक्त (माथिल्लो अरुण, बुढीगण्डकी) आयोजना द्रुत गतिमा बनाई भारत र बङ्गलादेशमा विद्युत् निर्यात गर्ने।</li>
+                    <li><strong>लक्ष्य:</strong> सन् २०३० सम्ममा १५,००० मेगावाट बिजुली उत्पादन गरी १०,००० मेगावाट निर्यात गर्ने र वार्षिक २ खर्बभन्दा बढी वैदेशिक मुद्रा आर्जन गरी व्यापार घाटा सन्तुलनमा ल्याउने।</li>
+                </ul>
+
+                <p><strong>४. एकीकृत गरिबी निवारण र सामाजिक सुरक्षा (Poverty Alleviation):</strong></p>
+                <ul>
+                    <li><strong>रणनीति:</strong> लक्षित वर्गलाई 'जमिन, पुँजी, प्रविधि र बजार' को एकीकृत प्याकेज दिई अर्गानिक कृषि र घरेलु उद्योगमार्फत स्वरोजगार बनाउने।</li>
+                    <li><strong>लक्ष्य:</strong> निरपेक्ष गरिबीलाई ५ प्रतिशतभन्दा तल (शून्यनजिक) झार्ने र शतप्रतिशत नागरिकलाई सामाजिक सुरक्षा कोषमा आवद्ध गर्ने।</li>
+                </ul>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः यो एकीकृत गुरुयोजना केवल कागजमा सीमित नरही राजनीतिक प्रतिबद्धता, भ्रष्टाचार नियन्त्रण र सुशासनका साथ लागू गरिएमा सन् २०३० सम्ममा नेपाल एक समृद्ध, मध्यम आयभएको र गरिबीमुक्त स्वाभिमानी राष्ट्र बन्ने निश्चित छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> यो सेट सिर्जनशील, भविष्यविज्ञान र परिदृश्यमूलक प्रश्नहरूमा आधारित छ। यस्ता प्रश्नहरूमा उत्तर दिँदा <strong>काल्पनिक परिदृश्यलाई तार्किक र व्यावहारिक आधार</strong> दिनुहोस्। ५ र ८ अङ्कका उत्तरहरू अनिवार्य रूपमा <strong>३-स्तरीय ढाँचा</strong> (📌 परिचय → 📊 विश्लेषण → 🎯 निष्कर्ष) मा लेख्नुहोस्। नवीनतम तथ्य, प्रविधि र भविष्यका सम्भावनाहरू समेट्नुहोस्।
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – NEB मोडल सेट ५</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
