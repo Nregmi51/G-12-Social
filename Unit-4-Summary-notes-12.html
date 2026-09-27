@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>कक्षा १२ – एकाइ ४: समाजको विकास र दर्शन (पूर्ण पुनरावलोकन नोट)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- INFO CARD ----- */
+        .exam-info {
+            background: #eef0f0;
+            border: 2px solid #5C6BC0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 24px;
+        }
+
+        .exam-info h3 {
+            color: #1A237E;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exam-info h3 i {
+            color: #1A237E;
+        }
+
+        .exam-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .exam-info ul li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #374210;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-info ul li i {
+            color: #1A237E;
+            margin-top: 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .exam-info ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        /* ----- SECTION HEADERS (Different colors) ----- */
+        .section-head {
+            font-size: 1.65rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 44px 0 8px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-head i {
+            font-size: 1.55rem;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.22);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .section-head .section-num {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 900;
+            padding: 3px 14px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-head.sh1 { background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%); }
+        .section-head.sh2 { background: linear-gradient(135deg, #1f7a4a 0%, #2e9e63 100%); }
+        .section-head.sh3 { background: linear-gradient(135deg, #6A1B9A 0%, #8E24AA 100%); }
+        .section-head.sh4 { background: linear-gradient(135deg, #b45309 0%, #d97706 100%); }
+
+        /* ----- LESSON SUB HEADERS ----- */
+        .lesson-sub {
+            font-size: 1.35rem;
+            font-weight: 900;
+            color: #ffffff;
+            background: linear-gradient(135deg, #0f7a7a 0%, #14a0a0 100%);
+            margin: 32px 0 12px;
+            padding: 10px 22px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 3px 12px rgba(15, 122, 122, 0.3);
+        }
+
+        .lesson-sub i {
+            color: #f5d742;
+            font-size: 1.15rem;
+        }
+
+        .lesson-sub .chapter-num {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 0.7rem;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 40px;
+            margin-left: auto;
+        }
+
+        /* ----- SUB HEADERS ----- */
+        .sub-head {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 26px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.05rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 20px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sub-head-sm i {
+            color: #1A237E;
+            font-size: 1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.13rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- FACT BOX ----- */
+        .fact-box {
+            background: #fff8e1;
+            border: 2px dashed #d97706;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 16px 0;
+            font-weight: 600;
+        }
+
+        .fact-box .fact-title {
+            color: #b45309;
+            font-weight: 900;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .fact-box .fact-title i {
+            color: #b45309;
+        }
+
+        .fact-box p,
+        .fact-box ul,
+        .fact-box li {
+            font-size: 1.08rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        .fact-box ul {
+            padding-left: 24px;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.02rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f6f8f3;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A BLOCKS ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.15rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.13rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-icon {
+            display: inline-block;
+            margin-right: 6px;
+            font-weight: 900;
+        }
+
+        .qa-block .a .step-title {
+            font-weight: 700;
+            color: #1A237E;
+            font-size: 1.08rem;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1A237E;
+        }
+
+        .glossary-item strong {
+            color: #1A237E;
+            font-size: 1.08rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .glossary-item p {
+            font-size: 1.02rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        .glossary-item .num {
+            display: inline-block;
+            background: #1A237E;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.78rem;
+            font-weight: 900;
+            margin-right: 6px;
+        }
+
+        @media (max-width: 700px) {
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- BRANCH FLOW (Tree Diagram) ----- */
+        .branch-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            padding: 18px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .branch-root {
+            background: #1A237E;
+            color: #ffffff;
+            font-size: 1.05rem;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 800;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .branch-children {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 0.98rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        @media (min-width: 640px) {
+            .branch-children {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .branch-children {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ----- MARKS TAG ----- */
+        .marks-tag {
+            display: inline-block;
+            background: #f5d742;
+            color: #0b2b4a;
+            font-size: 0.78rem;
+            font-weight: 900;
+            padding: 2px 12px;
+            border-radius: 40px;
+            margin-left: 8px;
+        }
+
+        /* ----- MEMORY HACK BOX ----- */
+        .memory-hack {
+            background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin: 18px 0;
+            box-shadow: 0 4px 16px rgba(26, 35, 126, 0.3);
+        }
+
+        .memory-hack h4 {
+            color: #f5d742;
+            font-size: 1.15rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .memory-hack h4 i {
+            color: #f5d742;
+        }
+
+        .memory-hack ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .memory-hack ul li {
+            font-size: 1.08rem;
+            color: #ffffff;
+            font-weight: 500;
+            padding-left: 22px;
+            position: relative;
+            line-height: 1.9;
+        }
+
+        .memory-hack ul li::before {
+            content: "\f0eb";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #f5d742;
+            position: absolute;
+            left: 0;
+            top: 3px;
+        }
+
+        .memory-hack .formula {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 3px 10px;
+            border-radius: 20px;
+            color: #f5d742;
+            font-weight: 900;
+            margin-left: 4px;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.08rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .section-head {
+                font-size: 1.22rem;
+                padding: 12px 16px;
+            }
+
+            .section-head i {
+                width: 34px;
+                height: 34px;
+                font-size: 1.1rem;
+            }
+
+            .section-head .section-num {
+                font-size: 0.66rem;
+                padding: 2px 10px;
+            }
+
+            .lesson-sub {
+                font-size: 1.12rem;
+                padding: 10px 16px;
+            }
+
+            .sub-head {
+                font-size: 1.1rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1.02rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.86rem;
+            }
+            th,
+            td {
+                font-size: 0.86rem;
+                padding: 6px 8px;
+            }
+            .mermaid-step {
+                font-size: 0.82rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+            .branch-root {
+                font-size: 0.9rem;
+                padding: 8px 18px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+            .memory-hack ul li {
+                font-size: 0.98rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-landmark-dome"></i>
+                    एकाइ ४: समाजको विकास र दर्शन
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-star"></i> पूर्ण पुनरावलोकन नोट</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ४
+            </span>
+        </div>
+
+        <!-- ===== EXAM INFO ===== -->
+        <div class="exam-info">
+            <h3><i class="fas fa-circle-info"></i> परीक्षार्थीहरूका लागि विशेष निर्देशन</h3>
+            <ul>
+                <li><i class="fas fa-caret-right"></i> <span><strong>एकाइ:</strong> ४ – समाजको विकास र दर्शन (कुल ५ पाठहरू)</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>परीक्षा उपयोगिता:</strong> १, ५ र ८ अङ्कका प्रश्नहरूका लागि</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>उत्तर मानक:</strong> ५ र ८ अङ्कका लागि ३-स्तरीय ढाँचा</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>आधार:</strong> NEB नयाँ पाठ्यक्रम र Specification Grid</span></li>
+            </ul>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#glossary"><i class="fas fa-chevron-right"></i> खण्ड १: पारिभाषिक शब्दावली</a>
+                <a href="#notes"><i class="fas fa-chevron-right"></i> खण्ड २: पाठगत प्राज्ञिक नोट</a>
+                <a href="#exam-qa"><i class="fas fa-chevron-right"></i> खण्ड ३: सम्भावित प्रश्नोत्तर</a>
+                <a href="#memory"><i class="fas fa-chevron-right"></i> खण्ड ४: छिटो सम्झिने सुत्रहरू</a>
+                <a href="#lesson1"><i class="fas fa-chevron-right"></i> पाठ १: सामाजिक विविधता</a>
+                <a href="#lesson2"><i class="fas fa-chevron-right"></i> पाठ २: सामाजिक अन्तरनिर्भरता</a>
+                <a href="#lesson3"><i class="fas fa-chevron-right"></i> पाठ ३: जीवन दर्शन</a>
+                <a href="#lesson4"><i class="fas fa-chevron-right"></i> पाठ ४: दर्शनको उपयोगिता</a>
+                <a href="#lesson5"><i class="fas fa-chevron-right"></i> पाठ ५: सामाजिक रूपान्तरण</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड १: पारिभाषिक शब्दावली ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh1" id="glossary">
+            <i class="fas fa-book-open"></i>
+            खण्ड १: सम्पूर्ण पारिभाषिक शब्दावली
+            <span class="section-num">Unit 4 Glossary</span>
+        </div>
+
+        <!-- पाठ १ -->
+        <div class="lesson-sub" id="lesson1">
+            <i class="fas fa-people-group"></i>
+            पाठ १: वर्तमान विश्वका सामाजिक विविधता र विशेषता
+            <span class="chapter-num">Lesson 1</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><span class="num">१</span> सामाजिक विविधता (Social Diversity)</strong>
+                <p>समाजमा अनेकौँ जातजाति, भाषा, धर्म, संस्कृति, लिङ्ग र फरक क्षमता भएका मानिसहरू सहअस्तित्वका साथ मिलेर बस्ने बहुआयामिक सामाजिक अवस्था।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२</span> धार्मिक आस्थाजन्य विविधता</strong>
+                <p>एउटै वा फरक-फरक धर्मभित्र विभिन्न सम्प्रदाय, पन्थ वा दर्शन (जस्तै: हिन्दूमा शैव/वैष्णव, बौद्धमा थेरवादी/महायानी) मान्ने मानिसहरूको उपस्थिति।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">३</span> प्रजातीय विविधता (Racial Diversity)</strong>
+                <p>मानिसको बाह्य शारीरिक बनावट, छालाको रङ (गोरा, काला, मङ्गोलोइड) र वंशानुगत शारीरिक गुणका आधारमा पाइने प्राकृतिक भिन्नता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">४</span> भर्चुअल समुदाय (Virtual Community)</strong>
+                <p>इन्टरनेट, मिडिया र सामाजिक सञ्जालका माध्यमबाट भौगोलिक दुरीभन्दा बाहिर रहेर अनलाइन जोडिएका मानिसहरूको अभौतिक डिजिटल समूह।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">५</span> धार्मिक सहिष्णुता (Religious Tolerance)</strong>
+                <p>आफ्नो धर्मप्रति आस्थावान् रहँदै अन्य धर्म, विचार र सम्प्रदायप्रति सम्मान, सद्भाव र उदारता देखाउने नैतिक आचरण।</p>
+            </div>
+        </div>
+
+        <!-- पाठ २ -->
+        <div class="lesson-sub" id="lesson2">
+            <i class="fas fa-people-arrows"></i>
+            पाठ २: सामाजिक सम्बन्धहरूको विकास र सामाजिक अन्तरनिर्भरता
+            <span class="chapter-num">Lesson 2</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><span class="num">६</span> गार्हपत्य (Garhapatya)</strong>
+                <p>अथर्ववेद अनुसार पारिवारिक जग, विवाह र दाम्पत्य जीवन सञ्चालन गर्ने सबैभन्दा प्राचीन सामाजिक संस्था।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">७</span> आहवनीय (Ahavaniya)</strong>
+                <p>प्राचीन वैदिक कालमा गाउँ वा समुदाय तहमा मानिसहरू भेला भई साझा निर्णयहरू गर्ने गाउँ सभा/सङ्गठन।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">८</span> दक्षिणाग्नी (Dakshinagni)</strong>
+                <p>प्राचीन वैदिक कालमा जनपद वा क्षेत्र तहमा गाउँका प्रतिनिधिहरू एकत्र भई सुरक्षा र साझा हितका लागि बनाइएको क्षेत्रीय संस्था।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">९</span> विदथ (Vidatha)</strong>
+                <p>ऋग्वेदकालीन सबैभन्दा प्राचीन लोकतान्त्रिक सभा, जहाँ महिला र पुरुष दुवै सहभागी भई उपभोग्य वस्तुको वितरण र सुरक्षाबारे निर्णय गर्थे।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">१०</span> पुरुषार्थ चतुष्टय (Purushartha Chatushtaya)</strong>
+                <p>पूर्वीय वैदिक जीवन पद्धतिमा मानिसले हासिल गर्नुपर्ने चार मुख्य लक्ष्यहरू: धर्म (कर्तव्य), अर्थ (सम्पत्ति), काम (सुख), र मोक्ष (परममुक्ति)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">११</span> साधारण धर्म (General Moral Duties)</strong>
+                <p>देश, काल वा परिस्थितिभन्दा माथि उठेर सम्पूर्ण मानव जातिले पालना गर्नुपर्ने सार्वभौम नियमहरू (सत्य, अहिंसा, दया, इमानदारिता)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">१२</span> विशेष धर्म (Contextual Duties)</strong>
+                <p>व्यक्तिको पद, उमेर, क्षमता र परिस्थिति अनुसार निर्धारण हुने विशिष्ट कर्तव्यहरू (जस्तै: शिक्षक, विद्यार्थी, राष्ट्रपतिको कर्तव्य)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">१३</span> गोष्ठी / गुठी (Guthi/Gosthi)</strong>
+                <p>सामाजिक, धार्मिक र सांस्कृतिक कार्यहरू सम्पन्न गर्न तथा सामूहिक अन्तरनिर्भरता सुदृढ पार्न सञ्चालित परम्परागत सामाजिक सङ्गठन।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">१४</span> श्रेणी (Shreni)</strong>
+                <p>प्राचीन कालमा काठ, माटो, धातु वा कपडाका काम गर्ने शिल्पीहरू तथा कालीगडहरूले आफ्नो हित र व्यवसाय व्यवस्थित गर्न बनाएको सङ्घ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">१५</span> निगम / पूग (Nigama/Puga)</strong>
+                <p>प्राचीन कालमा व्यापारीहरूले आफ्ना व्यावसायिक हकहित र बजार व्यवस्थापनका लागि खडा गरेका व्यापारिक संस्थाहरू।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">१६</span> सार्थ समवाय / सम्भूय समुत्थान</strong>
+                <p>प्राचीन कालमा वैदेशिक व्यापार र संयुक्त लगानी गर्न गठित ठुला व्यापारिक निगमहरू।</p>
+            </div>
+        </div>
+
+        <!-- पाठ ३ -->
+        <div class="lesson-sub" id="lesson3">
+            <i class="fas fa-brain"></i>
+            पाठ ३: जीवन दर्शन, सामाजिक मूल्य मान्यताहरू र सामाजिक व्यवहार
+            <span class="chapter-num">Lesson 3</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><span class="num">१७</span> दर्शन (Philosophy)</strong>
+                <p>ग्रीक शब्द 'Philosophia' (ज्ञानप्रतिको अनुराग) र संस्कृतको 'दृश्' धातु (देख्ने साधन) बाट बनेको, जसले ब्रह्माण्ड, सत्य, ज्ञान र जीवनबारे तर्कपूर्ण विश्लेषण गर्दछ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">१८</span> जीवन दर्शन (Philosophy of Life)</strong>
+                <p>मानिसले आफ्नो जीवनको कारण, प्रयोजन, अस्तित्व र लक्ष्यका बारेमा अवलम्बन गर्ने मार्गनिर्देशक दार्शनिक सिद्धान्त।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">१९</span> विश्वदृष्टिकोण (Worldview)</strong>
+                <p>मानिसले आफ्नो जीवन भोगाइ, संस्कृति र शिक्षाका आधारमा समग्र जगत्‌लाई हेर्ने र बुझ्ने धारणा।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२०</span> तत्त्वमीमांसा (Metaphysics)</strong>
+                <p>ब्रह्माण्डको सृष्टि, अस्तित्व, ईश्वर, चेतना र भौतिक जगत्‌को अन्तिम यथार्थताका बारेमा विश्लेषण गर्ने दर्शनको शाखा।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२१</span> ज्ञानमीमांसा (Epistemology)</strong>
+                <p>मानव ज्ञानको उत्पत्ति, सीमा, प्रकृति, आधिकारिकता र सत्यताको परीक्षण गर्ने दर्शनको शाखा।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२२</span> मूल्यमीमांसा (Axiology)</strong>
+                <p>मानव जीवनका मूल्य, मान्यता, नैतिकता (Ethics) र सौन्दर्यशास्त्र (Aesthetics) को अध्ययन गर्ने दर्शनको शाखा।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२३</span> आस्तिक दर्शन (Orthodox)</strong>
+                <p>ईश्वरीय सत्ता, वैदिक प्रामाणिकता वा परलोकको अस्तित्वलाई स्विकार्ने ६ वटा पूर्वीय दर्शनहरू (साङ्ख्य, योग, न्याय, वैशेषिक, मीमांसा, वेदान्त)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२४</span> नास्तिक दर्शन (Heterodox)</strong>
+                <p>ईश्वरीय सत्ता वा वेदको अकाट्य प्रामाणिकतालाई अस्वीकार गर्ने दर्शनहरू (बौद्ध, जैन, चार्वाक/लोकायत)।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२५</span> चेतनावादी दर्शन (Idealist)</strong>
+                <p>ब्रह्माण्डको मूल तत्व 'चेतना, विचार वा आत्मा' हो र भौतिक जगत् चेतनाकै प्रतिबिम्ब मात्र हो भन्ने मान्यता।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२६</span> पदार्थवादी/भौतिकवादी दर्शन</strong>
+                <p>ब्रह्माण्डको मूल तत्व 'पदार्थ' (Matter) हो र चेतना पदार्थकै विकासको उच्च रूप हो भन्ने कार्ल मार्क्स लगायतको दृष्टिकोण।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२७</span> समता (Equity)</strong>
+                <p>मानिसको विशिष्ट आवश्यकता, अवस्था र संवेदनशीलतालाई बुझेर सोही अनुसार न्यायोचित व्यवहार वा अवसर प्रदान गर्नु।</p>
+            </div>
+        </div>
+
+        <!-- पाठ ४ -->
+        <div class="lesson-sub" id="lesson4">
+            <i class="fas fa-praying-hands"></i>
+            पाठ ४: दैनिक जीवनमा दर्शनको उपयोगिता
+            <span class="chapter-num">Lesson 4</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><span class="num">२८</span> पञ्चशील (Panchasheel)</strong>
+                <p>भगवान् बुद्धद्वारा प्रतिपादित दैनिक जीवनका ५ नैतिक नियमहरू: अहिंसा, अस्तेय, सत्य, व्यभिचार नगर्नु, र मद्यपान नगर्नु।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">२९</span> भिक्षाटन (Bhikshatan)</strong>
+                <p>बौद्ध भिक्षुहरूले अहङ्कार नष्ट गर्न र सादगी जीवनका लागि भिक्षा मागेर भोजन ग्रहण गर्ने परम्परा।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">३०</span> संयम (Self-Restraint)</strong>
+                <p>हानिकारक विषयवस्तु, लोभ, रिस र घमण्डबाट मन र इन्द्रियहरूलाई रोकेर अनुशासित बनाउने नैतिक गुण।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">३१</span> करुणा र प्रज्ञा (Compassion &amp; Wisdom)</strong>
+                <p>बुद्ध दर्शनका दुई मेरुदण्ड; जसमध्ये प्रज्ञाले सत्य ज्ञान दिन्छ भने करुणाले प्राणीप्रति दया र मैत्रीभाव जगाउँछ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">३२</span> व्यावहारिक दर्शन (Practical Philosophy)</strong>
+                <p>दार्शनिक ज्ञानलाई दैनिक कार्य, निर्णय र समस्या समाधानमा प्रयोग गर्ने अभ्यास।</p>
+            </div>
+        </div>
+
+        <!-- पाठ ५ -->
+        <div class="lesson-sub" id="lesson5">
+            <i class="fas fa-arrows-spin"></i>
+            पाठ ५: समुदायमा आएका परिवर्तन र सामाजिक रूपान्तरण
+            <span class="chapter-num">Lesson 5</span>
+        </div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong><span class="num">३३</span> सूचना समाज (Information Society)</strong>
+                <p>ड्यानियल बेलद्वारा प्रतिपादित अवधारणा; जहाँ वस्तु उत्पादनभन्दा सूचनाको पहुँच, ज्ञान, प्रविधि र सेवा क्षेत्र प्रधान मानिन्छ।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">३४</span> उत्तर औद्योगिक समाज (Post-Industrial Society)</strong>
+                <p>परम्परागत कलकारखानाभन्दा प्रविधि, सूचना, अनुसन्धान र सेवा क्षेत्रको दबदबा रहेको आधुनिक समाज।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">३५</span> वैचारिक विस्तार (Ideological Diffusion)</strong>
+                <p>मिडिया र सामाजिक सञ्जालका माध्यमबाट नयाँ विचार, सिद्धान्त र लोकतान्त्रिक मूल्यहरू विश्वभर फैलिने प्रक्रिया।</p>
+            </div>
+            <div class="glossary-item">
+                <strong><span class="num">३६</span> प्रसंस्कृतिकरण (Acculturation)</strong>
+                <p>सञ्चार, मिडिया वा बसाइँसराइका कारण अर्काको संस्कृति अपनाउने र आफ्नो परम्परामा परिवर्तन ल्याउने प्रक्रिया।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड २: पाठगत प्राज्ञिक नोट ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh2" id="notes">
+            <i class="fas fa-book"></i>
+            खण्ड २: पाठगत कसिलो प्राज्ञिक नोट
+            <span class="section-num">Core Notes</span>
+        </div>
+
+        <!-- पाठ १ नोट -->
+        <div class="sub-head"><i class="fas fa-globe"></i> पाठ १: वर्तमान विश्वका सामाजिक विविधता र विशेषता</div>
+
+        <div class="content-box blue-light">
+            <p><strong>सामाजिक विविधताको अवधारणा:</strong></p>
+            <ul>
+                <li><strong>अनेकौँ पहिचानको सङ्गम:</strong> समाजमा जातजाति, भाषा, धर्म र संस्कृति फरक भए पनि मिलेर बस्ने स्वाभाविक अवस्था हो।</li>
+                <li><strong>समावेशीकरणको आधार:</strong> विविधतालाई स्वीकार गर्दा राज्यका हरेक अङ्गमा सबै वर्गको न्यायोचित प्रतिनिधित्व सुनिश्चित हुन्छ।</li>
+            </ul>
+
+            <p><strong>सामाजिक विविधताका ५ मुख्य आयामहरू:</strong></p>
+            <ol>
+                <li><strong>धार्मिक विविधता:</strong> विभिन्न धर्म र तिनका आन्तरिक सम्प्रदायहरू (शैव, वैष्णव, थेरवादी, सुन्नी आदि) को सहअस्तित्व रहनु।</li>
+                <li><strong>प्रजातीय र जातीय विविधता:</strong> बाह्य शारीरिक बनावटका आधारमा प्रजाति र साझा संस्कृति/भाषाका आधारमा जाति विभाजन हुनु।</li>
+                <li><strong>भाषिक विविधता:</strong> भावना अभिव्यक्तिका लागि समाजमा अनेकौँ मातृभाषाहरू बोलिनु (नेपालमा १२५ भन्दा बढी मातृभाषाहरू)।</li>
+                <li><strong>सांस्कृतिक विविधता:</strong> भौगोलिक हावापानी र परम्परा अनुसार खानपान, भेषभूषा र चाडपर्वमा पाइने भिन्नता।</li>
+                <li><strong>लैङ्गिक र अपाङ्गताजन्य विविधता:</strong> महिला, पुरुष, यौनिक अल्पसङ्ख्यक तथा फरक क्षमता भएका व्यक्तिहरूको उपस्थिति।</li>
+            </ol>
+        </div>
+
+        <div class="fact-box">
+            <div class="fact-title"><i class="fas fa-chart-simple"></i> नेपाल र चीन तुलना + वैश्विक तथ्याङ्क</div>
+            <ul>
+                <li><strong>नेपाल र चीन तुलना:</strong> नेपाल भौगोलिक रूपमा सानो भए पनि <strong>१२५ जातीय समूह</strong> छन् भने चीन विशाल भए पनि <strong>५६ जातीय समूह</strong> मात्र छन्।</li>
+                <li>संसारमा करिब <strong>६५० जातीय समुदाय</strong>, <strong>४३०० धार्मिक सम्प्रदाय</strong>, र <strong>७१०० भाषाहरू</strong> अस्तित्वमा छन्।</li>
+                <li><em>लन्डन सहरको अनुसन्धान (२०२१):</em> लन्डनमा २७० भन्दा बढी जातिका मानिस बस्छन् र ३०० भन्दा बढी भाषा बोलिन्छन्।</li>
+            </ul>
+        </div>
+
+        <!-- पाठ २ नोट -->
+        <div class="sub-head"><i class="fas fa-seedling"></i> पाठ २: सामाजिक सम्बन्धहरूको विकास र सामाजिक अन्तरनिर्भरता</div>
+
+        <div class="content-box green-light">
+            <p><strong>प्राचीन वैदिक संस्थाहरूको विकासक्रम:</strong></p>
+            <ul>
+                <li><strong>गार्हपत्य:</strong> पारिवारिक जग र दाम्पत्य जीवन बसाल्ने वैदिक संस्था।</li>
+                <li><strong>आहवनीय:</strong> गाउँ तहमा सामाजिक निर्णयहरू गर्ने स्थानीय सभा।</li>
+                <li><strong>दक्षिणाग्नी:</strong> क्षेत्र वा जनपद तहमा सुरक्षा र साझा पहिचानका लागि बनाइएको संस्था।</li>
+                <li><strong>विदथ:</strong> ऋग्वेदकालीन सबैभन्दा प्राचीन लोकतान्त्रिक सभा, जहाँ महिला-पुरुष दुवै सहभागी हुन्थे।</li>
+            </ul>
+
+            <p><strong>सामाजिक विकासका ४ चरणहरू:</strong> जन्मन (गोष्ठी) → विश → जन → राष्ट्र</p>
+
+            <p><strong>व्यक्तित्वका आधार र धर्म:</strong></p>
+            <ul>
+                <li><strong>साधारण धर्म:</strong> सत्य, अहिंसा, दया र इमानदारिता जस्ता सार्वभौम नियमहरू।</li>
+                <li><strong>विशेष धर्म:</strong> उमेर, पद र परिस्थिति अनुसार फरक हुने कर्तव्यहरू।</li>
+                <li><strong>पुरुषार्थ चतुष्टय:</strong> धर्म (नैतिकता), अर्थ (सम्पत्ति), काम (सुख) र मोक्ष (परममुक्ति) को सन्तुलन।</li>
+            </ul>
+        </div>
+
+        <div class="content-box gold-light">
+            <p><strong>दृष्टिकोणहरू र प्राचीन अन्तरनिर्भरताका संस्थाहरू:</strong></p>
+            <ul>
+                <li><strong>वैयक्तिकतावादी भर्सेज समुदायवादी:</strong> पश्चिमाहरू व्यक्ति र व्यक्तिगत अधिकारलाई प्राथमिक मान्छन् भने पूर्वीयहरू समाज र सामूहिक हितलाई प्राथमिक मान्छन्।</li>
+                <li><strong>गुठी, श्रेणी, निगम, र सम्भूय समुत्थान:</strong> सामाजिक कार्यका लागि गुठी, शिल्पीहरूका लागि श्रेणी, व्यापारीहरूका लागि निगम र संयुक्त व्यापारका लागि सम्भूय समुत्थान सञ्चालित थिए।</li>
+            </ul>
+        </div>
+
+        <!-- पाठ ३ नोट -->
+        <div class="sub-head"><i class="fas fa-brain"></i> पाठ ३: जीवन दर्शन, सामाजिक मूल्य मान्यताहरू र सामाजिक व्यवहार</div>
+
+        <div class="content-box purple-light">
+            <p><strong>दर्शनको परिचय र शाखाहरू:</strong></p>
+            <ul>
+                <li><strong>दर्शन र जीवन दर्शन:</strong> 'Philosophia' (ज्ञानप्रतिको अनुराग) बाट बनेको दर्शनले सत्यको खोजी गर्छ भने जीवन दर्शनले व्यक्तिको दैनिकीलाई दिशा दिन्छ।</li>
+                <li><strong>३ शाखाहरू:</strong> तत्त्वमीमांसा (सृष्टि र ईश्वर), ज्ञानमीमांसा (ज्ञानको स्रोत र सीमा), र मूल्यमीमांसा (नैतिकता र सौन्दर्य)।</li>
+            </ul>
+
+            <p><strong>पूर्वीय र पाश्चात्य दर्शन परम्परा:</strong></p>
+            <ul>
+                <li><strong>पूर्वीय आस्तिक (षड्दर्शन):</strong> साङ्ख्य, योग, न्याय, वैशेषिक, मीमांसा, र वेदान्त (वेद मान्ने)।</li>
+                <li><strong>पूर्वीय नास्तिक:</strong> बौद्ध, जैन, चार्वाक, किरात (मुन्धुम), र बोन दर्शन (वेद नमान्ने)।</li>
+                <li><strong>पाश्चात्य दर्शन:</strong> सुकरात, प्लेटो, एरिस्टोटल, कान्ट, र कार्ल मार्क्सको द्वन्द्वात्मक भौतिकवाद।</li>
+            </ul>
+
+            <p><strong>दृष्टिकोण र समता:</strong></p>
+            <ul>
+                <li><strong>द्विधा विभाजन भर्सेज समन्वयात्मक:</strong> जगत्‌लाई २ विरोधी कित्तामा हेर्नु द्विधा विभाजन हो भने चेतना र पदार्थबिच समन्वय देख्नु समन्वयात्मक दृष्टिकोण हो।</li>
+                <li><strong>समानता भर्सेज समता:</strong> समानताले सबैलाई एउटै चीज दिन्छ, तर समता (Equity) ले व्यक्तिको आवश्यकता बुझेर थप सहयोग वा न्याय दिन्छ।</li>
+            </ul>
+        </div>
+
+        <!-- पाठ ४ नोट -->
+        <div class="sub-head"><i class="fas fa-praying-hands"></i> पाठ ४: दैनिक जीवनमा दर्शनको उपयोगिता</div>
+
+        <div class="content-box orange-light">
+            <p><strong>बुद्ध दर्शन र नैतिक नियमहरू:</strong></p>
+            <ul>
+                <li><strong>पञ्चशील:</strong> अहिंसा, अस्तेय, सत्य, संयम, र मद्यपान नगर्नु।</li>
+                <li><strong>भिक्षाटन:</strong> अहङ्कार नष्ट गरी सादगी जीवन जिउने अभ्यास।</li>
+            </ul>
+
+            <p><strong>करुणा, प्रज्ञा र संयम:</strong></p>
+            <ul>
+                <li><strong>प्रज्ञा र करुणा:</strong> प्रज्ञाले विवेक/ज्ञान दिन्छ र करुणाले दया जगाउँछ।</li>
+                <li><strong>संयम:</strong> रिस, लोभ र घमण्डबाट मनलाई रोक्ने क्षमता।</li>
+            </ul>
+
+            <p><strong>व्यावहारिक दर्शन:</strong> दार्शनिक विचारलाई केवल सिद्धान्तमा नराखी निर्णय र जीवनशैलीमा ढाल्ने कार्य।</p>
+        </div>
+
+        <!-- पाठ ५ नोट -->
+        <div class="sub-head"><i class="fas fa-arrows-spin"></i> पाठ ५: समुदायमा आएका परिवर्तन र सामाजिक रूपान्तरण</div>
+
+        <div class="content-box teal-light">
+            <p><strong>उत्तर औद्योगिक र सूचना समाज:</strong></p>
+            <ul>
+                <li><strong>ड्यानियल बेलको अवधारणा:</strong> भौतिक वस्तु उत्पादनभन्दा सूचना, ज्ञान र प्रविधि प्रधान हुने आधुनिक समाज।</li>
+            </ul>
+
+            <p><strong>सामाजिक रूपान्तरणका कारकहरू:</strong></p>
+            <ul>
+                <li><strong>शिक्षा, प्रविधि, वैचारिक विस्तार, खुला बजार अर्थतन्त्र, प्रसंस्कृतिकरण र INGOs:</strong> यिनले पुराना विभेद र संकुचित सोच हटाई समाजलाई आधुनिक बनाउँछन्।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ३: सम्भावित प्रश्नोत्तर ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh3" id="exam-qa">
+            <i class="fas fa-bullseye"></i>
+            खण्ड ३: परीक्षा विशेष सम्भावित प्रश्नोत्तर
+            <span class="section-num">Exam Practice</span>
+        </div>
+
+        <!-- अति संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> अति संक्षिप्त उत्तरात्मक प्रश्नहरू (१ अङ्क)</div>
+
+        <div class="qa-block color1">
+            <div class="q"><span class="qnum">प्र.न. १:</span> जीवन दर्शन भन्नाले के बुझिन्छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> मानिसले आफ्नो जीवनको अस्तित्व, कारण, प्रयोजन र अन्तिम लक्ष्यबारे निर्माण गरेको वा मार्गनिर्देशकका रूपमा अपनाएको दार्शनिक धारणालाई <strong>जीवन दर्शन</strong> भनिन्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color2">
+            <div class="q"><span class="qnum">प्र.न. २:</span> नेपाल र चीनको जातीय विविधतामा के मुख्य भिन्नता छ?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> नेपाल भौगोलिक रूपमा सानो भए पनि यहाँ <strong>१२५ जातीय समूह</strong> छन् भने चीन विशाल भए पनि आधिकारिक रूपमा केवल <strong>५६ जातीय समूह</strong> मात्र छन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color3">
+            <div class="q"><span class="qnum">प्र.न. ३:</span> ऋग्वेदकालीन 'विदथ' (Vidatha) को मुख्य विशेषता के थियो?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> 'विदथ' ऋग्वेदकालीन सबैभन्दा प्राचीन लोकतान्त्रिक सभा थियो, जहाँ महिला र पुरुष दुवै समान रूपमा सहभागी भई उपभोग्य वस्तु वितरण र सुरक्षाबारे निर्णय गर्थे।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color4">
+            <div class="q"><span class="qnum">प्र.न. ४:</span> 'पुरुषार्थ चतुष्टय' का चार मुख्य लक्ष्यहरू के-के हुन्?</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> पूर्वीय दर्शन अनुसार मानिसका चार लक्ष्यहरू: <strong>धर्म</strong> (नैतिकता), <strong>अर्थ</strong> (सम्पत्ति), <strong>काम</strong> (सुख) र <strong>मोक्ष</strong> (परममुक्ति) हुन्।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color5">
+            <div class="q"><span class="qnum">प्र.न. ५:</span> समानता (Equality) र समता (Equity) बिचको मुख्य फरक एक वाक्यमा लेख्नुहोस्।</div>
+            <div class="a">
+                <p><strong>उत्तर:</strong> समानताले सबैलाई विनाभेदभाव एउटै अवसर दिन्छ भने समताले मानिसको विशिष्ट आवश्यकता र अवस्था बुझेर न्यायोचित थप सहयोग वा अवसर प्रदान गर्छ।</p>
+            </div>
+        </div>
+
+        <!-- संक्षिप्त -->
+        <div class="sub-head"><i class="fas fa-star"></i> संक्षिप्त उत्तरात्मक प्रश्नहरू (५ अङ्क)</div>
+
+        <div class="qa-block color6">
+            <div class="q"><span class="qnum">प्र.न. ६:</span> सामाजिक विविधताको सम्मानले समाजमा सद्भाव र सहिष्णुता कायम गर्न कसरी मद्दत गर्छ? उदाहरणसहित स्पष्ट पार्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> समाजमा अनेकौँ जातजाति, भाषा, धर्म र संस्कृति भएका मानिसहरू आपसी आदरका साथ सँगै बस्ने अवस्था सामाजिक विविधता हो। विविधतालाई विभेदको स्रोत नमानी समृद्धिको सम्पत्ति मान्दा समाजमा दिगो सद्भाव, सहिष्णुता र राष्ट्रिय एकता कायम हुन्छ।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> सामाजिक विविधताको सम्मानले सद्भाव बढाउने ५ मुख्य आधारहरू:</p>
+
+                <ul>
+                    <li><strong>१. सांस्कृतिक आदानप्रदान र सहअस्तित्व:</strong> एक समुदायले अर्को समुदायको चाडपर्व (जस्तै: दसैँ, छठ, इद, ल्होसार, क्रिसमस) मा सहभागिता जनाउँदा आपसी अविश्वास हट्छ।</li>
+                    <li><strong>२. साम्प्रदायिक द्वन्द्वको अन्त्य:</strong> सबै धर्म र विचारलाई समान आदर गर्दा धार्मिक वा जातीय दङ्गा भड्किने सम्भावना पूर्ण रूपमा अन्त्य हुन्छ।</li>
+                    <li><strong>३. समतामूलक अवसर र अपनत्व:</strong> राज्यले भाषिक र सांस्कृतिक अल्पसङ्ख्यकलाई सम्मान गर्दा नागरिकमा राष्ट्रप्रति उच्च अपनत्व र निष्ठा जाग्छ।</li>
+                    <li><strong>४. बहुभाषिक सम्मान र सञ्चार:</strong> एकअर्काको मातृभाषाप्रति आदर गर्दा समाजमा भाषिक अहङ्कार हट्छ र भ्रातृत्व कायम हुन्छ।</li>
+                    <li><strong>५. पूर्वाग्रह र भ्रमको निवारण:</strong> विविधताको अध्ययनले अन्य जाति वा धर्मप्रतिको गलत सामाजिक धारणा (Stereotypes) हटाई फराकिलो दृष्टिकोण बनाउँछ।</li>
+                </ul>
+
+                <p><strong>व्यावहारिक उदाहरण:</strong> नेपालको तराईमा मनाइने छठ पर्वमा पहाडी समुदायका मानिसहरू सामेल हुनु वा हिमाली क्षेत्रको ल्होसारमा सबै नेपालीले शुभकामना साटासाट गर्नु सामाजिक विविधताको सम्मान र सद्भावको उत्कृष्ट उदाहरण हो।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः "विविधतामा एकता" नै समृद्ध समाजको आधार हो। प्रत्येक नागरिकले अरूको पहिचानलाई सम्मान गरेमा मात्र सभ्य, शान्त र सहिष्णु समाज निर्माण हुन सक्छ।</p>
+            </div>
+        </div>
+
+        <div class="qa-block color7">
+            <div class="q"><span class="qnum">प्र.न. ७:</span> प्राचीन कालका 'गुठी', 'श्रेणी' र 'निगम' जस्ता संस्थाहरूले सामाजिक अन्तरनिर्भरतामा खेलेको भूमिका विश्लेषण गर्नुहोस्। <span class="marks-tag">५ अङ्क</span></div>
+            <div class="a">
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> प्राचीन पूर्वीय समाजमा मानिसहरू एकापसमा सहयोग, व्यापार र सांस्कृतिक कार्यका लागि विभिन्न सामाजिक तथा व्यावसायिक सङ्गठनहरूमा बाँधिएका थिए। गुठी, श्रेणी र निगम जस्ता संस्थाहरू प्राचीन अन्तरनिर्भरताका बलिया मेरुदण्ड थिए।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span> यी संस्थाहरूको सामाजिक अन्तरनिर्भरतामा भूमिका:</p>
+
+                <ul>
+                    <li><strong>१. गुठी (गोष्ठी):</strong> सामाजिक, धार्मिक र सांस्कृतिक कार्यहरू (जस्तै: जात्रा सञ्चालन, पाटी-पौवा निर्माण, मन्दिर मर्मत र दाहसंस्कार) सामूहिक रूपमा सम्पन्न गरी कुल र समुदायलाई एकाकार गराउने।</li>
+                    <li><strong>२. श्रेणी (Shreni):</strong> काठ, माटो, धातु वा कपडाका काम गर्ने कालीगडहरू (शिल्पीहरू) ले आफ्नो सीप, प्रविधि र पेशागत हित संरक्षण गर्न बनाएको सङ्घ, जसले श्रमको विभाजन र व्यवसायीबिच सहयोग बढाउँथ्यो।</li>
+                    <li><strong>३. निगम / पूग (Nigama):</strong> प्राचीन बजारमा व्यापारीहरूले आफ्ना व्यावसायिक हकहित, मूल्य निर्धारण र बजार व्यवस्थापनका लागि खडा गरेका संस्थाहरू।</li>
+                    <li><strong>४. सार्थ समवाय:</strong> दूरदराज वा वैदेशिक व्यापारका लागि ठुला व्यापारीहरूले संयुक्त लगानी गरी जोखिम साझा गर्ने प्राचीन व्यापारिक निगम।</li>
+                </ul>
+
+                <div class="branch-flow">
+                    <div class="branch-root">प्राचीन अन्तरनिर्भरताका संस्थाहरू</div>
+                    <div class="branch-children">
+                        <div class="mermaid-step">गुठी<br><span style="font-weight:400;font-size:0.85rem;">सांस्कृतिक/धार्मिक सहकार्य</span></div>
+                        <div class="mermaid-step">श्रेणी<br><span style="font-weight:400;font-size:0.85rem;">कालीगड/शिल्पी सङ्घ</span></div>
+                        <div class="mermaid-step">निगम<br><span style="font-weight:400;font-size:0.85rem;">व्यापारिक बजार सङ्गठन</span></div>
+                        <div class="mermaid-step">सार्थ समवाय<br><span style="font-weight:400;font-size:0.85rem;">संयुक्त लगानी/वैदेशिक व्यापार</span></div>
+                    </div>
+                </div>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> यसरी प्राचीन कालमै स्थापित यी परम्परागत संस्थाहरूले मानिसलाई एकाङ्गी हुन नदिई सामूहिक हित र आर्थिक-सांस्कृतिक अन्तरनिर्भरताको सुदृढ जग बसालेका थिए।</p>
+            </div>
+        </div>
+
+        <!-- लामो -->
+        <div class="sub-head"><i class="fas fa-star"></i> विस्तृत उत्तरात्मक प्रश्न (८ अङ्क)</div>
+
+        <div class="qa-block color8" style="border-left-color:#1A237E;">
+            <div class="q"><span class="qnum">प्र.न. ८:</span> "दैनिक जीवनमा दर्शनको उपयोगिता अत्यन्तै महत्त्वपूर्ण छ।" यस भनाइलाई भगवान् बुद्धका उपदेशहरू (पञ्चशील, करुणा, प्रज्ञा) र व्यावहारिक जीवनका उदाहरणहरूसहित विस्तृत रूपमा स्पष्ट पार्नुहोस्। <span class="marks-tag">८ अङ्क</span></div>
+            <div class="a">
+
+                <p><span class="step-icon">📌</span> <span class="step-title">१. परिचय:</span> दर्शनशास्त्र केवल पुस्तकीय सिद्धान्त वा बौद्धिक बहसको विषय मात्र होइन, यो त मानिसको सोच्ने शैली, निर्णय क्षमता र दैनिक व्यवहारलाई मार्गदर्शन गर्ने व्यावहारिक जीवनपद्धति हो। दार्शनिक ज्ञानलाई दैनिक कार्य र समस्या समाधानमा प्रयोग गर्नु नै <strong>व्यावहारिक दर्शन</strong> हो। भगवान् बुद्धका दार्शनिक उपदेशहरू (पञ्चशील, करुणा, प्रज्ञा) आधुनिक मानव जीवनका लागि व्यावहारिक मार्गदर्शनका उत्कृष्ट स्रोत हुन्।</p>
+
+                <p><span class="step-icon">📊</span> <span class="step-title">२. विषय प्रवेश तथा मुख्य विश्लेषण:</span></p>
+
+                <p><strong>(क) बुद्ध दर्शनका उपदेश र दैनिक जीवनमा प्रयोग:</strong></p>
+                <ul>
+                    <li><strong>१. पञ्चशीलको पालना (Five Precepts):</strong>
+                        <ul>
+                            <li><em>अहिंसा:</em> मन, वचन र कर्मले कसैलाई दुःखी नबनाउनु।</li>
+                            <li><em>अस्तेय:</em> अरूको हक वा सम्पत्ति चोरी नगर्नु।</li>
+                            <li><em>सत्य:</em> सधैँ इमानदार र शुद्ध वाणी बोल्नु।</li>
+                            <li><em>सदाचार/संयम:</em> कामवासना र अस्वस्थ सम्बन्धबाट टाढा रहनु।</li>
+                            <li><em>मद्यपान निषेध:</em> लागुपदार्थ र मदिराबाट मुक्त भई स्वस्थ मन राख्नु।</li>
+                        </ul>
+                    </li>
+                    <li><strong>२. करुणा र प्रज्ञाको सन्तुलन (Compassion &amp; Wisdom):</strong>
+                        <ul>
+                            <li><strong>प्रज्ञा (Wisdom):</strong> यसले मानिसलाई सही र गलत छुट्याउने विवेक र तर्कशक्ति दिन्छ।</li>
+                            <li><strong>करुणा (Compassion):</strong> यसले सम्पूर्ण प्राणीप्रति दया, माया र मैत्रीभाव जगाउँछ। विवेकहीन दया वा दयाहीन विवेक दुवै घातक हुने भएकाले बुद्धले यी दुवैको सन्तुलनमा जोड दिए।</li>
+                        </ul>
+                    </li>
+                    <li><strong>३. भिक्षाटन र अहङ्कारको नाश:</strong> अहङ्कार र घमण्ड त्यागेर सादगी जीवन जिउने अभ्यास।</li>
+                </ul>
+
+                <p><strong>(ख) दैनिक जीवनमा दर्शनको व्यावहारिक उपयोगिताका क्षेत्रहरू:</strong></p>
+                <ol>
+                    <li><strong>सही निर्णय क्षमतामा वृद्धि:</strong> दर्शनले मानिसलाई तत्कालको लोभमा नपरी दूरगामी र नैतिक निर्णय लिन सिकाउँछ।</li>
+                    <li><strong>मानसिक तनाव र संवेग व्यवस्थापन:</strong> जीवनका अप्ठ्यारा परिस्थितिहरूमा विचलित नभई बुद्धको मध्यम मार्ग (Middle Path) अपनाएर शान्त रहन मद्दत गर्छ।</li>
+                    <li><strong>समालोचनात्मक सोचको विकास:</strong> अन्धविश्वास वा अफवाहका पछाडि नलागी तर्क र प्रमाणका आधारमा सत्य पत्ता लगाउन सिकाउँछ।</li>
+                    <li><strong>स्वस्थ सामाजिक सम्बन्ध निर्माण:</strong> समानुभूति, अहिंसा र क्षमाशीलताले परिवार र समाजमा आपसी प्रेम बढाउँछ।</li>
+                </ol>
+
+                <p><strong>(ग) व्यावहारिक उदाहरण:</strong></p>
+                <p>मानौँ एक विद्यार्थीलाई परीक्षामा चोर्ने (अनैतिक) अवसर मिलेको छ। तर उसको <strong>जीवन दर्शन</strong> ले उसलाई भन्छ—"अनैतिक बाटोबाट ल्याएको अङ्कभन्दा आफ्नै मिहिनेतको सानो नतिजा सत्य र दिगो हुन्छ।" यही दार्शनिक चेतनाले उसलाई गलत कदम चाल्नबाट रोक्छ।</p>
+
+                <p><span class="step-icon">🎯</span> <span class="step-title">३. निष्कर्ष:</span> अतः दर्शन जीवन जिउने कला हो। बुद्धका पञ्चशील, करुणा र प्रज्ञा जस्ता सिद्धान्तहरूलाई दैनिक जीवनमा उतार्न सकेमा व्यक्ति स्वयं शान्त बन्छ र समाजमा दिगो शान्ति र सद्भाव कायम हुन्छ।</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== खण्ड ४: छिटो सम्झिने सुत्रहरू ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh4" id="memory">
+            <i class="fas fa-bolt"></i>
+            खण्ड ४: परीक्षाका लागि छिटो सम्झिने सुत्रहरू
+            <span class="section-num">Memory Hacks</span>
+        </div>
+
+        <div class="memory-hack">
+            <h4><i class="fas fa-lightbulb"></i> छिटो सम्झिने सुत्रहरू (Quick Memory Hacks)</h4>
+            <ul>
+                <li><strong>६४ कलाका ७ क्षेत्रहरू:</strong> <span class="formula">गि-का-इ-चा-स-सा-ह</span> — (गीत/नृत्य, काव्य, इन्जिनियरिङ, चित्रकला, सामरिक, साङ्ख्यिक, हस्तकला)</li>
+                <li><strong>वैदिक ४ संस्थाहरूको क्रम:</strong> <span class="formula">ग-आ-द-वि</span> — (गार्हपत्य → आहवनीय → दक्षिणाग्नी → विदथ)</li>
+                <li><strong>पुरुषार्थ चतुष्टय:</strong> <span class="formula">ध-अ-का-मो</span> — (धर्म, अर्थ, काम, मोक्ष)</li>
+                <li><strong>वैदिक षड्दर्शन (आस्तिक):</strong> <span class="formula">सा-यो-न्या-वै-मी-वे</span> — (साङ्ख्य, योग, न्याय, वैशेषिक, मीमांसा, वेदान्त)</li>
+                <li><strong>बुद्धका ५ पञ्चशील:</strong> <span class="formula">अ-अ-स-सं-म</span> — (अहिंसा, अस्तेय, सत्य, संयम, मद्यपान निषेध)</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> यो एकाइ ४ को पूर्ण पुनरावलोकन नोट हो। ३६ वटा पारिभाषिक शब्दहरू, ५ पाठका मुख्य बुँदाहरू र ८ वटा सम्भावित प्रश्नोत्तरहरू राम्ररी अभ्यास गर्नुहोस्। NEB परीक्षामा ५ र ८ अङ्कका उत्तरहरू अनिवार्य रूपमा <strong>३-स्तरीय ढाँचा</strong> (📌 परिचय → 📊 विश्लेषण → 🎯 निष्कर्ष) मा लेख्नुहोस्। छिटो सम्झिने सुत्रहरू (Memory Hacks) मार्फत महत्त्वपूर्ण सूचीहरू सजिलै सम्झनुहोस्। शुभकामना!
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ४</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
