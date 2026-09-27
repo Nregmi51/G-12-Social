@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>कक्षा १२ – एकाइ ४: समाजको विकास र दर्शन (पूर्ण नोट)</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f0f2ed;
+            color: #374210;
+            padding: 16px 12px 30px;
+            line-height: 2;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: 0 auto;
+            background: #fcfdfc;
+            color: #374210;
+            border-radius: 32px;
+            box-shadow: 0 16px 56px rgba(0, 0, 0, 0.08);
+            padding: 28px 22px 40px;
+            position: relative;
+        }
+
+        /* ----- HEADER ----- */
+        .main-header {
+            border-bottom: 4px solid #d0c4b8;
+            padding-bottom: 16px;
+            margin-bottom: 16px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .main-header h1 {
+            font-size: 1.9rem;
+            font-weight: 900;
+            color: #1A237E;
+            line-height: 1.2;
+        }
+
+        .main-header h1 i {
+            color: #1A237E;
+            margin-right: 10px;
+        }
+
+        .main-header .subtitle {
+            font-size: 1.16rem;
+            color: #374210;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .badge-class {
+            background: #1A237E;
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 800;
+            padding: 4px 18px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            display: inline-block;
+            margin-left: 6px;
+        }
+
+        .credit-bar {
+            background: #e8ece0;
+            border-radius: 60px;
+            padding: 14px 28px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px 20px;
+            margin: 6px 0 24px;
+            border: 2px solid #b8c0a8;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #374210;
+        }
+
+        .credit-bar .name {
+            color: #0b2b4a;
+            font-weight: 800;
+            font-size: 1.15rem;
+        }
+
+        .credit-bar .email {
+            color: #1A237E;
+            font-weight: 700;
+        }
+
+        .credit-bar i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        /* ----- INFO CARD ----- */
+        .exam-info {
+            background: #eef0f0;
+            border: 2px solid #5C6BC0;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 24px;
+        }
+
+        .exam-info h3 {
+            color: #1A237E;
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .exam-info h3 i {
+            color: #1A237E;
+        }
+
+        .exam-info ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 20px;
+        }
+
+        .exam-info ul li {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #374210;
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .exam-info ul li i {
+            color: #1A237E;
+            margin-top: 8px;
+            font-size: 0.7rem;
+        }
+
+        @media (max-width: 600px) {
+            .exam-info ul {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- TABLE OF CONTENTS ----- */
+        .toc-section {
+            background: #1A237E;
+            border-radius: 20px;
+            padding: 18px 24px;
+            margin: 6px 0 28px;
+            border: 2px solid #5C6BC0;
+        }
+
+        .toc-section h3 {
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.36rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toc-section h3 i {
+            color: #f5d742;
+            font-size: 1.3rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 16px;
+        }
+
+        .toc-grid a {
+            color: #e0e8f0;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16.5px;
+            padding: 4px 0 4px 6px;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .toc-grid a:hover {
+            color: #f5d742;
+            border-bottom-color: #f5d742;
+            transform: translateX(4px);
+        }
+
+        .toc-grid a i {
+            color: #f5d742;
+            font-size: 0.6rem;
+            min-width: 14px;
+        }
+
+        @media (max-width: 700px) {
+            .toc-grid {
+                grid-template-columns: 1fr;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+        }
+
+        /* ----- LESSON HEADERS (Different colors) ----- */
+        .lesson-head {
+            font-size: 1.65rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 44px 0 8px;
+            padding: 14px 24px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .lesson-head i {
+            font-size: 1.55rem;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.22);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .lesson-head .lesson-num {
+            background: rgba(255, 255, 255, 0.25);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 900;
+            padding: 3px 14px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+        }
+
+        .lesson-head.lesson1 { background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%); }
+        .lesson-head.lesson2 { background: linear-gradient(135deg, #1f7a4a 0%, #2e9e63 100%); }
+        .lesson-head.lesson3 { background: linear-gradient(135deg, #6A1B9A 0%, #8E24AA 100%); }
+        .lesson-head.lesson4 { background: linear-gradient(135deg, #b45309 0%, #d97706 100%); }
+        .lesson-head.lesson5 { background: linear-gradient(135deg, #0f7a7a 0%, #14a0a0 100%); }
+        .lesson-head.lessonExtra { background: linear-gradient(135deg, #a03a5a 0%, #c44a6b 100%); }
+
+        /* ----- SUB HEADERS ----- */
+        .sub-head {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 28px 0 12px;
+            padding-left: 14px;
+            border-left: 6px solid #1A237E;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: #1A237E;
+            font-size: 1.05rem;
+        }
+
+        .sub-head-sm {
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: #1A237E;
+            margin: 22px 0 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .sub-head-sm i {
+            color: #1A237E;
+            font-size: 1rem;
+        }
+
+        /* ----- CONTENT BOXES ----- */
+        .content-box {
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+            font-weight: 500;
+            line-height: 2;
+            color: #374210;
+        }
+
+        .content-box p,
+        .content-box ul,
+        .content-box ol,
+        .content-box li {
+            font-size: 1.13rem;
+            font-weight: 500;
+            margin-bottom: 8px;
+            color: #374210;
+        }
+
+        .content-box ul,
+        .content-box ol {
+            padding-left: 28px;
+            margin: 8px 0 8px;
+        }
+
+        .content-box li {
+            margin-bottom: 6px;
+        }
+
+        .content-box strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        .content-box.blue-light {
+            border-left-color: #1A237E;
+            background: #eef0f0;
+        }
+
+        .content-box.gold-light {
+            border-left-color: #b45309;
+            background: #fef8ee;
+        }
+
+        .content-box.green-light {
+            border-left-color: #1f7a4a;
+            background: #eef8f2;
+        }
+
+        .content-box.purple-light {
+            border-left-color: #6A1B9A;
+            background: #f4eef8;
+        }
+
+        .content-box.pink-light {
+            border-left-color: #a03a5a;
+            background: #f8eef2;
+        }
+
+        .content-box.teal-light {
+            border-left-color: #0f7a7a;
+            background: #eef8f8;
+        }
+
+        .content-box.orange-light {
+            border-left-color: #d97706;
+            background: #fef6ed;
+        }
+
+        /* ----- FACT BOX ----- */
+        .fact-box {
+            background: #fff8e1;
+            border: 2px dashed #d97706;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 16px 0;
+            font-weight: 600;
+        }
+
+        .fact-box .fact-title {
+            color: #b45309;
+            font-weight: 900;
+            font-size: 1.08rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .fact-box .fact-title i {
+            color: #b45309;
+        }
+
+        .fact-box p,
+        .fact-box ul,
+        .fact-box li {
+            font-size: 1.08rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        .fact-box ul {
+            padding-left: 24px;
+        }
+
+        /* ----- TABLES ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 16px 0 14px;
+            border-radius: 14px;
+            border: 2px solid #b8c0a8;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1.02rem;
+            min-width: 280px;
+            color: #374210;
+        }
+
+        th,
+        td {
+            padding: 12px 16px;
+            border: 1px solid #b8c0a8;
+            text-align: left;
+            vertical-align: top;
+            color: #374210;
+        }
+
+        th {
+            background: #1A237E;
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 1.05rem;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 1.02rem;
+        }
+
+        tbody tr:nth-child(even) {
+            background: #f6f8f3;
+        }
+
+        .table-caption {
+            background: #e8ece0;
+            padding: 10px 18px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: #1A237E;
+            border-bottom: 2px solid #b8c0a8;
+        }
+
+        /* ----- Q&A / QUESTION BOX ----- */
+        .qa-block {
+            border-radius: 16px;
+            padding: 18px 24px;
+            margin: 14px 0 18px;
+            border-left: 6px solid #1A237E;
+        }
+
+        .qa-block.color1 { border-left-color: #1A237E; background: #eef0f0; }
+        .qa-block.color2 { border-left-color: #1a3a5c; background: #f0f5fa; }
+        .qa-block.color3 { border-left-color: #1f7a4a; background: #f2f8f5; }
+        .qa-block.color4 { border-left-color: #6b3fa0; background: #f6f2f8; }
+        .qa-block.color5 { border-left-color: #b45309; background: #fcf9f4; }
+        .qa-block.color6 { border-left-color: #0f7a7a; background: #eef8f8; }
+        .qa-block.color7 { border-left-color: #a03a5a; background: #fcf5f8; }
+        .qa-block.color8 { border-left-color: #d97706; background: #fef8ef; }
+
+        .qa-block .q {
+            font-weight: 900;
+            color: #1A237E;
+            display: flex;
+            gap: 10px;
+            align-items: baseline;
+            font-size: 1.12rem;
+        }
+
+        .qa-block .q .qnum {
+            color: #1A237E;
+            font-weight: 900;
+            min-width: 30px;
+        }
+
+        .qa-block .a {
+            margin-top: 6px;
+            padding-left: 46px;
+            color: #374210;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .qa-block .a ul,
+        .qa-block .a ol {
+            padding-left: 24px;
+            margin: 6px 0 6px;
+        }
+
+        .qa-block .a li {
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #374210;
+        }
+
+        .qa-block .a strong {
+            color: #1A237E;
+            font-weight: 900;
+        }
+
+        /* ----- PROBABLE QUESTIONS BOX ----- */
+        .probable-questions {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin: 20px 0 10px;
+        }
+
+        .probable-questions h4 {
+            color: #f5d742;
+            font-size: 1.1rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .probable-questions h4 i {
+            color: #f5d742;
+        }
+
+        .probable-questions ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .probable-questions ul li {
+            font-size: 1.05rem;
+            color: #ffffff;
+            font-weight: 500;
+            padding-left: 22px;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .probable-questions ul li::before {
+            content: "\f105";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #f5d742;
+            position: absolute;
+            left: 0;
+            top: 2px;
+        }
+
+        /* ----- GLOSSARY GRID ----- */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 16px 0 8px;
+        }
+
+        .glossary-item {
+            background: #faf8f5;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 5px solid #1A237E;
+        }
+
+        .glossary-item strong {
+            color: #1A237E;
+            font-size: 1.08rem;
+            font-weight: 900;
+            display: block;
+            margin-bottom: 3px;
+        }
+
+        .glossary-item p {
+            font-size: 1.02rem;
+            color: #374210;
+            font-weight: 500;
+        }
+
+        @media (max-width: 700px) {
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- BRANCH FLOW (Tree Diagram) ----- */
+        .branch-flow {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin: 18px 0;
+            padding: 18px 14px;
+            background: #eef0f0;
+            border-radius: 20px;
+            border: 2px dashed #5C6BC0;
+        }
+
+        .branch-root {
+            background: #1A237E;
+            color: #ffffff;
+            font-size: 1.05rem;
+            padding: 10px 28px;
+            border-radius: 40px;
+            font-weight: 800;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(26, 35, 126, 0.3);
+        }
+
+        .branch-children {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
+            width: 100%;
+        }
+
+        .mermaid-step {
+            background: #ffffff;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 800;
+            font-size: 0.98rem;
+            color: #374210;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+            border: 2px solid #1A237E;
+            text-align: center;
+            min-width: 160px;
+        }
+
+        @media (min-width: 640px) {
+            .branch-children {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width: 980px) {
+            .branch-children {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        /* ----- QUICK REVISION BOX ----- */
+        .revision-box {
+            background: linear-gradient(135deg, #1A237E 0%, #3949AB 100%);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 22px 28px;
+            margin: 20px 0;
+            box-shadow: 0 6px 20px rgba(26, 35, 126, 0.3);
+        }
+
+        .revision-box h3 {
+            color: #f5d742;
+            font-size: 1.25rem;
+            font-weight: 900;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .revision-box h3 i {
+            color: #f5d742;
+        }
+
+        .revision-box ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .revision-box ul li {
+            font-size: 1.08rem;
+            color: #ffffff;
+            font-weight: 500;
+            padding-left: 28px;
+            position: relative;
+            line-height: 1.9;
+        }
+
+        .revision-box ul li::before {
+            content: "\f0da";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #f5d742;
+            position: absolute;
+            left: 0;
+            top: 3px;
+            font-size: 1.1rem;
+        }
+
+        .revision-box ul li strong {
+            color: #f5d742;
+            font-weight: 900;
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            background: #1A237E;
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(26, 35, 126, 0.4);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            background: #0D1445;
+            transform: scale(1.08);
+            box-shadow: 0 6px 28px rgba(26, 35, 126, 0.5);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 40px;
+            padding-top: 18px;
+            border-top: 3px solid #d0c4b8;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #5f6f80;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 6px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: #1A237E;
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: #1A237E;
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #b8c0a8;
+            margin: 28px 0 10px;
+        }
+
+        .tip-box {
+            background: #1A237E;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            margin: 12px 0;
+            font-weight: 500;
+            font-size: 1.08rem;
+        }
+
+        .tip-box i {
+            margin-right: 8px;
+        }
+
+        .tip-box strong {
+            color: #f5d742;
+        }
+
+        .tip-box p {
+            color: #ffffff;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 600px) {
+            .container {
+                padding: 16px 12px 24px;
+                border-radius: 20px;
+            }
+
+            .main-header h1 {
+                font-size: 1.35rem;
+            }
+
+            .lesson-head {
+                font-size: 1.2rem;
+                padding: 12px 16px;
+            }
+
+            .lesson-head i {
+                width: 34px;
+                height: 34px;
+                font-size: 1.1rem;
+            }
+
+            .lesson-head .lesson-num {
+                font-size: 0.66rem;
+                padding: 2px 10px;
+            }
+
+            .sub-head {
+                font-size: 1.1rem;
+            }
+
+            .qa-block .a {
+                padding-left: 12px;
+            }
+
+            .qa-block .q {
+                font-size: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .credit-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+                font-size: 0.9rem;
+                padding: 10px 16px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 18px;
+                right: 18px;
+            }
+
+            .toc-section {
+                padding: 14px 16px;
+            }
+
+            .content-box {
+                padding: 14px 16px;
+            }
+            .content-box p,
+            .content-box ul,
+            .content-box ol,
+            .content-box li {
+                font-size: 1.02rem;
+            }
+            .qa-block .a {
+                font-size: 1.02rem;
+            }
+            table {
+                font-size: 0.86rem;
+            }
+            th,
+            td {
+                font-size: 0.86rem;
+                padding: 6px 8px;
+            }
+            .mermaid-step {
+                font-size: 0.82rem;
+                padding: 6px 14px;
+                min-width: 120px;
+            }
+            .branch-root {
+                font-size: 0.9rem;
+                padding: 8px 18px;
+            }
+            .toc-grid a {
+                font-size: 15px;
+            }
+            .probable-questions ul li {
+                font-size: 0.98rem;
+            }
+            .revision-box ul li {
+                font-size: 1rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 36px 46px 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== HEADER ===== -->
+        <div class="main-header">
+            <div>
+                <h1>
+                    <i class="fas fa-landmark-dome"></i>
+                    एकाइ ४: समाजको विकास र दर्शन
+                </h1>
+                <div class="subtitle">
+                    कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+                    <span class="badge-class"><i class="fas fa-star"></i> पूर्ण नोट</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== CREDIT BAR ===== -->
+        <div class="credit-bar">
+            <span>
+                <i class="fas fa-user-edit"></i>
+                <span class="name">Prepared by: Narayan Sir</span>
+            </span>
+            <span>
+                <i class="fas fa-envelope"></i>
+                <span class="email">nregmi511@gmail.com</span>
+            </span>
+            <span>
+                <i class="fas fa-copyright"></i>
+                कक्षा १२ – एकाइ ४
+            </span>
+        </div>
+
+        <!-- ===== EXAM INFO ===== -->
+        <div class="exam-info">
+            <h3><i class="fas fa-circle-info"></i> नोट विवरण</h3>
+            <ul>
+                <li><i class="fas fa-caret-right"></i> <span><strong>विषय:</strong> सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>एकाइ:</strong> ४ – समाजको विकास र दर्शन</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>पाठ संख्या:</strong> ५ वटा मुख्य पाठ</span></li>
+                <li><i class="fas fa-caret-right"></i> <span><strong>सन्दर्भ:</strong> पाठ्यपुस्तक पृ. ७४–१०१</span></li>
+            </ul>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== TABLE OF CONTENTS ===== -->
+        <!-- ========================================================== -->
+
+        <div class="toc-section" id="toc">
+            <h3><i class="fas fa-list-ul"></i> विषयसूची</h3>
+            <div class="toc-grid">
+                <a href="#lesson1"><i class="fas fa-chevron-right"></i> पाठ १: वर्तमान विश्वका सामाजिक विविधता र विशेषता</a>
+                <a href="#lesson2"><i class="fas fa-chevron-right"></i> पाठ २: सामाजिक सम्बन्धहरूको विकास र सामाजिक अन्तरनिर्भरता</a>
+                <a href="#lesson3"><i class="fas fa-chevron-right"></i> पाठ ३: जीवन दर्शन, सामाजिक मूल्यमान्यता र सामाजिक व्यवहार</a>
+                <a href="#lesson4"><i class="fas fa-chevron-right"></i> पाठ ४: दैनिक जीवनमा दर्शनको उपयोगिता</a>
+                <a href="#lesson5"><i class="fas fa-chevron-right"></i> पाठ ५: समुदायमा आएका परिवर्तन र सामाजिक रूपान्तरण</a>
+                <a href="#quick-revision"><i class="fas fa-chevron-right"></i> एकाइभरिको द्रुत पुनरावलोकन</a>
+            </div>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ १ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson1" id="lesson1">
+            <i class="fas fa-people-group"></i>
+            पाठ १: वर्तमान विश्वका सामाजिक विविधता र विशेषता
+            <span class="lesson-num">Lesson 1</span>
+        </div>
+
+        <!-- १.१ अवधारणा -->
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> १.१ सामाजिक विविधता भनेको के हो?</div>
+
+        <div class="content-box blue-light">
+            <p>समाजमा अनेक जातजाति, भाषा, धर्म एवम् संस्कृति भएका थरी-थरीका मानिसहरू सँगसँगै बसेको अवस्थालाई <strong>सामाजिक विविधता</strong> भनिन्छ।</p>
+            <ul>
+                <li>सामाजिक विविधता विश्वको स्वाभाविक विशेषता हो; नेपाल <strong>बहुजातीय, बहुभाषिक, बहुसांस्कृतिक र बहुधार्मिक</strong> देश हो।</li>
+                <li>समाजमा <strong>एकता</strong> पनि हुन्छ र <strong>विविधता</strong> पनि — दुवैलाई सन्तुलनमा राख्नु महत्त्वपूर्ण।</li>
+                <li>विविधताबारे राम्रो जानकारी भए सामाजिक एकताका लागि नीति बनाउन सजिलो हुन्छ र समुदायहरूबीच सम्मानपूर्ण व्यवहार बढ्छ।</li>
+            </ul>
+        </div>
+
+        <!-- १.२ आयामहरू -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> १.२ सामाजिक विविधताका आयामहरू</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: सामाजिक विविधताका प्रमुख आयामहरू</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:30%;">आयाम</th>
+                        <th>संक्षिप्त व्याख्या</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>(क) धार्मिक आस्थाजन्य विविधता</strong></td>
+                        <td>हिन्दु (शैव, वैष्णव, शाक्त), बौद्ध (हीनयानी, महायानी, वज्रयानी), इस्लाम (सुन्नी, शिया), ख्रिस्चियन (क्याथोलिक, प्रोटेस्टेन्ट) आदि। नेपालमा धार्मिक सहिष्णुताको संस्कृति छ।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>(ख) प्रजातीय तथा जातीय विविधता</strong></td>
+                        <td>जातिको निर्धारण साझा भाषा, संस्कृति र इतिहासका आधारमा हुन्छ। नेपाल सानो भए पनि १२५ जातीय समूह छन्; चीन ठूलो भए पनि ५६ मात्र।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>(ग) भाषिक विविधता</strong></td>
+                        <td>भाषा पहिचान र सञ्चारको प्रमुख माध्यम हो। नेपाल बहुभाषिक देश हो।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>(घ) सांस्कृतिक विविधता</strong></td>
+                        <td>जाति, भाषा, धर्मको विविधताले सांस्कृतिक विविधता बढाउँछ; बसाइँसराइ, शिक्षा, व्यापार, पर्यटन, मिडियाले पनि यसलाई बढाउँछन्।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>(ङ) कला</strong></td>
+                        <td>चित्रकला, मूर्तिकला, स्थापत्य, सङ्गीत, नृत्य, साहित्य, नाटक आदि। प्रविधिले कलाको प्रचार-प्रसार बढाएको छ।</td>
+                    </tr>
+                    <tr>
+                        <td><strong>(च) लैङ्गिक तथा क्षमताजन्य विविधता</strong></td>
+                        <td>लैङ्गिक विविधता र अपाङ्गता/फरक क्षमताजन्य विविधता पनि महत्त्वपूर्ण पक्ष हुन्।</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- १.३ तथ्याङ्क -->
+        <div class="sub-head"><i class="fas fa-globe"></i> १.३ वर्तमान विश्वमा विविधताको झलक</div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: वर्तमान विश्वमा विविधताको तथ्याङ्क</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:60%;">विवरण</th>
+                        <th style="width:40%;">सङ्ख्या</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>जातीय समुदाय</td>
+                        <td>करिब <strong>६५०</strong></td>
+                    </tr>
+                    <tr>
+                        <td>धार्मिक सम्प्रदाय</td>
+                        <td>करिब <strong>४,३००</strong></td>
+                    </tr>
+                    <tr>
+                        <td>भाषाहरू</td>
+                        <td>करिब <strong>७,१००</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="fact-box">
+            <div class="fact-title"><i class="fas fa-city"></i> लन्डनको उदाहरण</div>
+            <ul>
+                <li>सन् २०२१ अध्ययनअनुसार करिब <strong>२७० प्रकारका जातिका</strong> मानिस बस्छन्।</li>
+                <li><strong>३०० भन्दा बढी भाषा</strong> बोलिन्छन्।</li>
+                <li>रोजगारी, व्यापार, शिक्षा, पर्यटनका कारण बसाइँसराइले विविधता झन् बढाइरहेको छ।</li>
+                <li>प्रविधि (सामाजिक सञ्जाल) ले टाढा-टाढाका मानिसलाई पनि भर्चुअल समुदायमा जोडेको छ।</li>
+            </ul>
+        </div>
+
+        <!-- १.४ समन्वय -->
+        <div class="sub-head"><i class="fas fa-handshake"></i> १.४ विविधताको समन्वय किन आवश्यक?</div>
+
+        <div class="content-box gold-light">
+            <ul>
+                <li>विविधता बढ्दै जाँदा समन्वयको आवश्यकता पनि बढ्छ।</li>
+                <li>समन्वय नभए <strong>द्वन्द्व/गृहयुद्ध</strong>सम्म पुग्न सक्छ।</li>
+                <li>राष्ट्रिय एकता, सामाजिक सामञ्जस्य र विश्व शान्तिका लागि समन्वय आवश्यक।</li>
+            </ul>
+        </div>
+
+        <!-- सम्भावित प्रश्नहरू -->
+        <div class="probable-questions">
+            <h4><i class="fas fa-question-circle"></i> सम्भावित परीक्षा प्रश्न (पाठ १)</h4>
+            <ul>
+                <li>सामाजिक विविधता भन्नाले के बुझिन्छ? उदाहरणसहित चर्चा गर्नुहोस्।</li>
+                <li>वर्तमान विश्व विविधतापूर्ण छ भन्ने तथ्य उदाहरणसहित स्पष्ट पार्नुहोस्।</li>
+                <li>सामाजिक विविधतालाई समन्वय गर्नु किन आवश्यक छ?</li>
+                <li>'सामाजिक विविधता र एकता: आजको आवश्यकता' शीर्षकमा एक लेख तयार पार्नुहोस्।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ २ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson2" id="lesson2">
+            <i class="fas fa-people-arrows"></i>
+            पाठ २: सामाजिक सम्बन्धहरूको विकास र सामाजिक अन्तरनिर्भरता
+            <span class="lesson-num">Lesson 2</span>
+        </div>
+
+        <!-- २.१ सम्बन्धको विकास -->
+        <div class="sub-head"><i class="fas fa-seedling"></i> २.१ सामाजिक सम्बन्धको विकास</div>
+
+        <div class="content-box green-light">
+            <ul>
+                <li>व्यक्ति समाजको आधारभूत <strong>एकाइ</strong>, परिवार समाजको आधारभूत <strong>संस्था</strong>।</li>
+                <li>परिवार, कुल, कुटुम्ब, ग्राम, गण — राज्यभन्दा निकै प्राचीन संरचना।</li>
+                <li>अथर्ववेदअनुसार सबैभन्दा पहिले बनेको संस्था परिवार हो — यसलाई <strong>गार्हपत्य</strong> भनिएको छ।</li>
+                <li>गार्हपत्यपछि <strong>आहवनीय</strong> संस्थाको विकास भयो (आह्वान गरिँदा जम्मा हुने संस्था, जस्तै गाउँ सभा)।</li>
+                <li>ऋग्वेदमा <strong>विदथ</strong>को उल्लेख — महिला र पुरुष दुवै सहभागी हुने वैदिक संस्था (विषयवस्तु विचार-विमर्श, वस्तु वितरण, क्रीडा, धार्मिक क्रियाकलाप, युद्धको तयारी)।</li>
+                <li>क्रमशः परिवार → ग्राम → जनपद हुँदै सभा-समिति जस्ता राष्ट्रिय संस्थाको विकास भयो।</li>
+                <li>समाज बन्ने बारे मत: (१) ईश्वरीय इच्छा (२) आपसी सम्झौता/करार (अराजकताबाट बच्न) (३) उत्पादनका साधनमा स्वामित्व।</li>
+            </ul>
+        </div>
+
+        <!-- २.२ व्यक्तित्व -->
+        <div class="sub-head"><i class="fas fa-user-tie"></i> २.२ व्यक्तित्वका आधार, कर्तव्य र अधिकार</div>
+
+        <div class="content-box blue-light">
+            <ul>
+                <li>व्यक्तित्व निर्माणमा <strong>देश, काल (समय), परिस्थिति</strong>को प्रभाव पर्छ।</li>
+                <li><strong>साधारण धर्म:</strong> सबैका लागि लागु हुने नीति-नियम। <strong>विशेष धर्म:</strong> व्यक्ति/समय/स्थानअनुसार फरक पर्ने।</li>
+                <li><strong>पुरुषार्थ चतुष्टय</strong> (हिन्दु जीवन पद्धति): धर्म, अर्थ, काम, मोक्ष।</li>
+                <li>बौद्ध मतअनुसार जीवनको अन्तिम लक्ष्य <strong>मोक्ष/निर्वाण</strong>।</li>
+                <li><strong>वैयक्तिकतावादी (Individualist)</strong> दृष्टिकोण: व्यक्तिलाई केन्द्रमा राख्ने। <strong>समुदायवादी (Communitarian)</strong> दृष्टिकोण: सामाजिक/राजनीतिक संरचनालाई बढी महत्त्व दिने।</li>
+                <li>नेपाली संस्कृतिमा दुवैको समन्वय: सामाजिक व्यवहारमा समाजलाई, आध्यात्मिक व्यवहारमा व्यक्तिलाई प्राथमिकता।</li>
+            </ul>
+        </div>
+
+        <!-- २.३ परिवार -->
+        <div class="sub-head"><i class="fas fa-house-chimney"></i> २.३ परिवार र पारिवारिक आदर्श</div>
+
+        <div class="content-box purple-light">
+            <ul>
+                <li>परिवार सामाजिकीकरण र संस्कृतिकरणको प्रमुख संस्था।</li>
+                <li>पारिवारिक आदर्शको निर्धारणमा धर्म, संस्कृति, दर्शन, अर्थतन्त्रको प्रभाव पर्छ।</li>
+                <li>हिन्दु समाजमा <strong>गृहस्थाश्रम</strong>लाई विशेष महत्त्व।</li>
+                <li>आधुनिकीकरण/वैदेशिक रोजगारीले पारिवारिक संरचनामा परिवर्तन ल्याएको।</li>
+            </ul>
+        </div>
+
+        <!-- २.४ अन्तरनिर्भरता -->
+        <div class="sub-head"><i class="fas fa-handshake"></i> २.४ सामाजिक अन्तरनिर्भरता</div>
+
+        <div class="content-box teal-light">
+            <ul>
+                <li>संरचना: व्यक्ति → परिवार → <strong>कुल</strong> → <strong>कुटुम्ब</strong> → ग्राम → जनपद।</li>
+                <li><strong>गोष्ठी (गुठी)</strong>, श्रेणी (शिल्पीको), निगम (व्यापारीको), सार्थ, सम्भूय समुह जस्ता संस्थाले अन्तरनिर्भरतालाई व्यवस्थित गर्थे।</li>
+                <li><strong>वर्ण व्यवस्था</strong> (गुण-कर्मका आधारमा) र <strong>आश्रम व्यवस्था</strong> (उमेर अवस्थाअनुसार) ले पनि अन्तरनिर्भरतालाई व्यवस्थित गर्थ्यो।</li>
+                <li>आधुनिक कालमा मानवअधिकार/मानवतावादले समतामूलक अन्तरसम्बन्धमा जोड।</li>
+                <li>अन्तर्राष्ट्रिय व्यापार, पर्यटन, वैदेशिक रोजगारी, प्रविधिले अन्तरनिर्भरता अझ विस्तारित बनाएको छ — समुदाय → क्षेत्र → राष्ट्र → <strong>अन्तर्राष्ट्रिय तह</strong> (संयुक्त राष्ट्रसंघ, सार्क आदि)।</li>
+            </ul>
+        </div>
+
+        <!-- शब्दावली -->
+        <div class="sub-head"><i class="fas fa-bookmark"></i> सम्झनुपर्ने शब्दावली (पाठ २)</div>
+
+        <div class="glossary-grid">
+            <div class="glossary-item">
+                <strong>गार्हपत्य</strong>
+                <p>अथर्ववेदमा उल्लेखित सबैभन्दा पहिलेको संस्था — परिवार</p>
+            </div>
+            <div class="glossary-item">
+                <strong>आहवनीय</strong>
+                <p>आह्वान गरिँदा जम्मा हुने संस्था/संगठन</p>
+            </div>
+            <div class="glossary-item">
+                <strong>विदथ</strong>
+                <p>महिला-पुरुष दुवै सहभागी वैदिक संस्था</p>
+            </div>
+            <div class="glossary-item">
+                <strong>कुल / कुटुम्ब</strong>
+                <p>आफ्नो कुलका मानिस र आफन्तसहितको समुदाय</p>
+            </div>
+            <div class="glossary-item">
+                <strong>गोष्ठी (गुठी)</strong>
+                <p>सामाजिक अन्तरनिर्भरता व्यवस्थित गर्ने परम्परागत संस्था</p>
+            </div>
+            <div class="glossary-item">
+                <strong>वर्ण व्यवस्था</strong>
+                <p>गुण-कर्मका आधारमा समूह विभाजन</p>
+            </div>
+            <div class="glossary-item">
+                <strong>आश्रम व्यवस्था</strong>
+                <p>उमेर अवस्थाअनुसार जीवनचरणको विभाजन</p>
+            </div>
+            <div class="glossary-item">
+                <strong>पुरुषार्थ चतुष्टय</strong>
+                <p>धर्म, अर्थ, काम, मोक्ष</p>
+            </div>
+        </div>
+
+        <!-- सम्भावित प्रश्नहरू -->
+        <div class="probable-questions">
+            <h4><i class="fas fa-question-circle"></i> सम्भावित परीक्षा प्रश्न (पाठ २)</h4>
+            <ul>
+                <li>गार्हपत्य, आहवनीय र विदथ भन्नाले के के बुझिन्छ?</li>
+                <li>वैयक्तिकतावादी र समुदायवादी दृष्टिकोणमा के भिन्नता छ? नेपाली संस्कृतिमा तिनीहरूको समन्वय कसरी गरिएको छ?</li>
+                <li>सामाजिक अन्तरनिर्भरता भन्नाले के बुझिन्छ? उदाहरणसहित चर्चा गर्नुहोस्।</li>
+                <li>सामाजिक सम्बन्धले सामाजिक अन्तरनिर्भरता वृद्धि गर्न मदत गर्छ। उदाहरणसहित पुष्टि गर्नुहोस्।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ३ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson3" id="lesson3">
+            <i class="fas fa-brain"></i>
+            पाठ ३: जीवन दर्शन, सामाजिक मूल्यमान्यता र सामाजिक व्यवहार
+            <span class="lesson-num">Lesson 3</span>
+        </div>
+
+        <!-- ३.१ दर्शन परिचय -->
+        <div class="sub-head"><i class="fas fa-lightbulb"></i> ३.१ दर्शन र जीवन दर्शनको परिचय</div>
+
+        <div class="content-box purple-light">
+            <ul>
+                <li><strong>दर्शन:</strong> प्रकृति, ईश्वर, ज्ञान, विज्ञान, वस्तु, जीवन र चेतनासम्बन्धी विवेचन/विश्लेषण। संस्कृत 'दृश्' धातुबाट व्युत्पन्न — हेर्ने/देख्ने कार्य।</li>
+                <li>अङ्ग्रेजीमा <strong>Philosophy</strong> (ग्रिक "फिलोसफिया" = ज्ञानको प्रेम/ज्ञानप्रतिको अनुराग)।</li>
+                <li>दर्शनका विषयवस्तु: ईश्वर, सृष्टि, अस्तित्व, चेतना, पदार्थ, विश्व, समाज, कर्तव्य, धर्म, आस्तिकता/नास्तिकता, पाप-पुण्य, मरणोत्तर अवस्था, सामाजिक सम्बन्ध आदि।</li>
+                <li>दर्शनका मुख्य क्षेत्र (शाखा): <strong>तत्त्वविज्ञान/तत्त्वमीमांसा</strong>, <strong>ज्ञानमीमांसा/प्रमाणमीमांसा</strong>, <strong>सत्त्वमीमांसा</strong>, <strong>तर्कशास्त्र</strong>, <strong>नीतिशास्त्र</strong>, <strong>सौन्दर्यमीमांसा</strong>।</li>
+            </ul>
+
+            <p><strong>वर्गीकरणका आधार:</strong></p>
+            <ul>
+                <li>ईश्वरीय सत्ता मान्ने/नमान्ने → <strong>आस्तिक</strong> वा <strong>नास्तिक</strong> दर्शन</li>
+                <li>चेतना/पदार्थको प्राथमिकता → पश्चिममा <strong>द्विविभाजन (Binary division)</strong>; वैदिक परम्परामा चेतना+पदार्थको <strong>संयोग</strong>बाट सृष्टि</li>
+                <li>भूभागअनुसार → पूर्वीय, भारतवर्षीय, चिनियाँ, पश्चिमी, ग्रिसेली, युरोपेली दर्शन</li>
+                <li>धर्मअनुसार → हिन्दु, बौद्ध, जैन, किरात, बोन, इसाई, इस्लाम दर्शन</li>
+            </ul>
+        </div>
+
+        <!-- ३.२ दार्शनिक परम्पराहरू -->
+        <div class="sub-head"><i class="fas fa-scroll"></i> ३.२ प्रमुख दार्शनिक परम्पराहरू</div>
+
+        <div class="content-box gold-light">
+            <ul>
+                <li><strong>वैदिक षड्दर्शन:</strong> साङ्ख्य (सूत्रकार कपिल), योग (पतञ्जलि), न्याय (गौतम), वैशेषिक (कणाद), मीमांसा (जैमिनि), वेदान्त/उत्तरमीमांसा (बादरायण)।</li>
+                <li>हिन्दु दर्शनका महान् दार्शनिक: कुमारिल भट्ट, शङ्कर, अभिनव गुप्त, निम्बार्क, रामानुज, मध्व, बल्लभ।</li>
+                <li><strong>जैन दर्शन:</strong> प्रथम तीर्थङ्कर ऋषभदेव, चौबीसौं तीर्थङ्कर महावीर।</li>
+                <li><strong>बौद्ध दर्शन:</strong> मूल स्रोत गौतम बुद्धका उपदेश; पद्मसम्भव, नागार्जुन, असङ्ग, वसुबन्धु आदि महान् दार्शनिक।</li>
+                <li><strong>चार्वाक/लोकायत दर्शन:</strong> संस्थापक चार्वाक।</li>
+                <li><strong>किरात दर्शन</strong> (मुन्धुम): महागुरु फाल्गुनन्दसम्मको परम्परा। <strong>बोन दर्शन:</strong> तोन्पा शेनराप मिवोकाका उपदेशबाट प्रारम्भ।</li>
+                <li><strong>चिनियाँ दर्शन:</strong> कन्फुसियस दर्शन, ताओ दर्शन।</li>
+                <li><strong>पश्चिमी दर्शन</strong>को मुख्य स्रोत: प्राचीन ग्रिस (सोक्रेटस, प्लेटो, एरिस्टोटल)।</li>
+            </ul>
+        </div>
+
+        <!-- ३.३ विश्वदृष्टिकोण -->
+        <div class="sub-head"><i class="fas fa-eye"></i> ३.३ विभिन्न विश्वदृष्टिकोणको बोध</div>
+
+        <div class="content-box blue-light">
+            <p><strong>विश्वदृष्टिकोण:</strong> विश्व/जगतको अवलोकन र विश्लेषण गरी आफ्नो अनुभूतिसमेतका आधारमा बनाइएको धारणा।</p>
+
+            <p><strong>३ फरक विश्वदृष्टिकोण:</strong></p>
+            <ol>
+                <li>चेतनालाई प्रधान मान्ने (जस्तै इसाई दर्शन — ईश्वर)</li>
+                <li>पदार्थलाई मात्र प्रधान मान्ने (जस्तै मार्क्सवाद)</li>
+                <li>चेतना र पदार्थ दुवैको सातत्यको सम्बन्ध मान्ने (जस्तै साङ्ख्य दर्शन)</li>
+            </ol>
+
+            <p>विश्वलाई हेर्ने ४ दृष्टिकोण: <strong>सुखमय</strong>, <strong>दुःखमय</strong>, <strong>पापमय</strong>, वा भौतिक पदार्थहरूको द्वन्द्वात्मक सम्बन्धबाट अस्तित्वमा आएको (सुख-दुःख-पाप-पुण्यबाट निरपेक्ष)।</p>
+
+            <p>विश्वदृष्टिकोण <strong>जन्मजात होइन</strong> — सामाजिकीकरण, संस्कृतिकरण, शिक्षा र जीवनभोगाइबाट सिकिने हो।</p>
+
+            <p>फरक-फरक विश्वदृष्टिकोण हुँदा समन्वय नभए <strong>अन्तरद्वन्द्व</strong>को सम्भावना।</p>
+        </div>
+
+        <div class="content-box pink-light">
+            <p><strong>दार्शनिक उदाहरणहरू:</strong></p>
+            <ul>
+                <li><strong>अगस्टिन:</strong> ईश्वरको अनुग्रहबाट मात्र मुक्ति सम्भव भन्ने।</li>
+                <li><strong>कान्ट:</strong> बुद्धिको प्रयोगले सत्यको साक्षात्कार सम्भव भन्ने।</li>
+                <li><strong>मार्क्स:</strong> धर्मलाई अफिमसँग तुलना गर्ने, पदार्थवादी व्याख्या।</li>
+            </ul>
+
+            <p><strong>द्विविभाजन (द्वन्द्वात्मक) दृष्टिकोण vs समन्वयात्मक दृष्टिकोण:</strong> वैभिन्न्यवादीले विविधतालाई समस्या मान्छन्; समन्वयात्मक दृष्टिकोणले विविधतालाई समाजको सम्पन्नताको चोतक मान्छ।</p>
+        </div>
+
+        <!-- ३.४ जीवन दर्शन -->
+        <div class="sub-head"><i class="fas fa-compass"></i> ३.४ जीवन दर्शन</div>
+
+        <div class="content-box green-light">
+            <ul>
+                <li><strong>जीवन दर्शन:</strong> मानिसले आफ्नो जीवनको कारण, प्रयोजन र लक्ष्यबारे राख्ने दार्शनिक मान्यता।</li>
+                <li>कुनै दर्शनलाई मार्गनिर्देशक मानी अवलम्बन गर्दा दैनिक क्रियाकलाप पनि सोही दर्शनको विधि/मान्यताअनुसार हुन्छन्।</li>
+                <li>भौतिकवादी र अध्यात्मवादी व्यक्तिको जीवनशैली, सोच, आचारविचारमा फरक देखिन्छ।</li>
+            </ul>
+        </div>
+
+        <!-- ३.५ समतामूलक दृष्टिकोण -->
+        <div class="sub-head"><i class="fas fa-scale-balanced"></i> ३.५ समतामूलक विश्व दृष्टिकोण</div>
+
+        <div class="content-box orange-light">
+            <ul>
+                <li><strong>समता:</strong> समानता, एकनासेपन, वरबरी, पक्षपात नगर्ने ढाँचा र निष्पक्षता।</li>
+                <li>समता र समानता पर्यायवाची जस्ता लागे पनि सामाजिक/राजनीतिक/कानुनी क्षेत्रमा अलग अर्थ राख्छन्।</li>
+                <li><strong>समता:</strong> वञ्चित/उत्पीडित वर्गलाई विशेष व्यवस्था गरी अवसर, न्याय र क्षमता अभिवृद्धि गराई समानताको लक्ष्यमा पुग्ने प्रयास (सकारात्मक विभेद)।</li>
+                <li><strong>समतामूलक दृष्टिकोण:</strong> कुनै पनि व्यक्ति/जाति/समुदायलाई शरीरको बनावट, जात, लिङ्ग, धर्मका आधारमा भेदभाव नगरी समान दृष्टिले हेर्नु।</li>
+                <li>मानवअधिकारको विश्वव्यापी मान्यता र नेपालको सहृदयता दर्शनले समतामूलक विश्वदृष्टिकोणलाई टेवा दिएको छ।</li>
+            </ul>
+        </div>
+
+        <!-- सम्भावित प्रश्नहरू -->
+        <div class="probable-questions">
+            <h4><i class="fas fa-question-circle"></i> सम्भावित परीक्षा प्रश्न (पाठ ३)</h4>
+            <ul>
+                <li>दर्शन भन्नाले के बुझिन्छ?</li>
+                <li>दर्शनको महत्त्व उल्लेख गर्नुहोस्।</li>
+                <li>विश्व दृष्टिकोण भन्नाले के बुझिन्छ?</li>
+                <li>द्विधा विभाजन दृष्टिकोण र समन्वयात्मक दृष्टिकोणको फरक उदाहरणसहित स्पष्ट पार्नुहोस्।</li>
+                <li>विभिन्न दार्शनिकहरूको योगदानको सूची तयार पार्नुहोस्।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ४ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson4" id="lesson4">
+            <i class="fas fa-praying-hands"></i>
+            पाठ ४: दैनिक जीवनमा दर्शनको उपयोगिता
+            <span class="lesson-num">Lesson 4</span>
+        </div>
+
+        <!-- ४.१ बुद्धको जीवन -->
+        <div class="sub-head"><i class="fas fa-dharmachakra"></i> ४.१ बुद्धको जीवनको उदाहरण</div>
+
+        <div class="content-box orange-light">
+            <ul>
+                <li>बुद्धले जीवनका पछिल्ला <strong>४५ वर्ष</strong> भारतवर्षका विभिन्न स्थान भ्रमण गरी उपदेश दिए (पैदल यात्रा, वर्षा ऋतुमा एकै ठाउँमा बास)।</li>
+                <li><strong>दिनचर्या:</strong> बिहान शौच-स्नान → भिक्षाटन → मध्यान्न भोजन (दिनको एक पटक मात्र खाने नियम) → ध्यान/विश्राम → अपराह्नमा धर्मदेशना/भेटघाट → रात्री ध्यान → मध्यरातसम्म व्यस्त।</li>
+                <li>भिक्षाटनमा हिँड्दा शारीरिक स्वास्थ्यमा पनि सकारात्मक प्रभाव पर्थ्यो।</li>
+            </ul>
+        </div>
+
+        <!-- ४.२ पञ्चशील -->
+        <div class="sub-head"><i class="fas fa-list-ol"></i> ४.२ पञ्चशील</div>
+
+        <div class="content-box purple-light">
+            <p>बुद्धका उपदेशबाट मानिसहरूलाई ज्ञान भएको आचरणका ५ नियम:</p>
+            <ol>
+                <li>कुनै पनि अवस्थामा <strong>प्राणी हिंसा नगर्नु</strong></li>
+                <li>कुनै अवस्थामा <strong>चोरी नगर्नु</strong></li>
+                <li>कुनै परिस्थितिमा <strong>झुटो नबोल्नु</strong></li>
+                <li><strong>व्यभिचार नगर्नु</strong></li>
+                <li><strong>मद्यपानलगायतका लागु पदार्थ नखानु</strong></li>
+            </ol>
+
+            <ul>
+                <li><strong>संयम</strong>लाई नैतिक दृष्टिले महत्त्वपूर्ण गुण मानिएको — मन, बोली, व्यवहार सबैमा संयम आवश्यक। संयमित मानिस नैतिकवान् हुन्छ।</li>
+                <li>बुद्धले धनी-गरिब, महिला-पुरुष, सबल-अपाङ्ग, कालो-गोरो नभनी सबैलाई <strong>समान व्यवहार</strong> गर्थे — करुणा सबैका लागि समान।</li>
+            </ul>
+        </div>
+
+        <!-- ४.३ दर्शन बौद्धिक + प्रायोगिक -->
+        <div class="sub-head"><i class="fas fa-star"></i> ४.३ दर्शन: बौद्धिक + प्रायोगिक विधा</div>
+
+        <div class="content-box teal-light">
+            <ul>
+                <li>दर्शन बौद्धिक विधाका साथसाथै <strong>प्रायोगिक विधा</strong> पनि हो — जीवन पद्धतिका लागि पनि मार्गनिर्देशन दिन्छ।</li>
+                <li>दर्शनको अध्ययनले:
+                    <ul>
+                        <li>तथ्यको पहिचान, तर्कको प्रयोग, <strong>समालोचनात्मक विचार</strong> क्षमता विकास हुन्छ।</li>
+                        <li>मानव क्रियाकलाप र व्यवहारलाई <strong>नैतिकताको कसीमा जाँचपरख</strong> गर्ने क्षमता विकास हुन्छ।</li>
+                        <li><strong>समस्या समाधान</strong>, सुसूचित निर्णय, सञ्चार दक्षता, अभिप्रेरणात्मक क्षमता र लेखन दक्षतामा वृद्धि हुन्छ।</li>
+                        <li>अनुसन्धानअनुसार दर्शनशास्त्रसहित पढ्ने विद्यार्थीले उच्चशिक्षा/रोजगारीका परीक्षामा बढी सफलता पाएको देखिन्छ।</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- सम्भावित प्रश्नहरू -->
+        <div class="probable-questions">
+            <h4><i class="fas fa-question-circle"></i> सम्भावित परीक्षा प्रश्न (पाठ ४)</h4>
+            <ul>
+                <li>दर्शन बौद्धिक साथसाथै प्रायोगिक विधा पनि हो किन? कारण उल्लेख गर्नुहोस्।</li>
+                <li>दैनिक जीवनका क्रियाकलापसँग दर्शन कसरी सम्बन्धित हुन्छ?</li>
+                <li>दैनिक जीवनमा दर्शनको उपयोगिताका केही उदाहरणहरू दिनुहोस्।</li>
+                <li>तपाईंको जीवनमा कुन दर्शनका कस्ता प्रभावहरू परेका छन्? उल्लेख गर्नुहोस्।</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== पाठ ५ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lesson5" id="lesson5">
+            <i class="fas fa-arrows-spin"></i>
+            पाठ ५: समुदायमा आएका परिवर्तन र सामाजिक रूपान्तरण
+            <span class="lesson-num">Lesson 5</span>
+        </div>
+
+        <!-- ५.१ शिक्षा र सूचना -->
+        <div class="sub-head"><i class="fas fa-graduation-cap"></i> ५.१ शिक्षा र सूचनामा पहुँचमा वृद्धि</div>
+
+        <div class="content-box blue-light">
+            <ul>
+                <li>संसारभरि साक्षर/शिक्षित मानिसको सङ्ख्या बढ्दो; निरक्षरता उन्मूलन प्राथमिकतामा।</li>
+                <li>आधुनिक युगमा <strong>सूचना नै ज्ञान हो, ज्ञान नै शक्ति हो</strong>; सूचना अहिले बिक्रीयोग्य वस्तु बनेको छ।</li>
+                <li><strong>ड्यानियल बेल</strong>ले सन् १९७३ मा <strong>"सूचना समाज" (उत्तर-औद्योगिक समाज)</strong> को अवधारणा अघि सारे।</li>
+                <li><strong>Information Society</strong> शब्दावलीको प्रथम प्रयोगको श्रेय जापानी लेखक <strong>योनेजी मासुदा</strong>लाई।</li>
+            </ul>
+        </div>
+
+        <!-- ५.२ अन्तरक्रिया -->
+        <div class="sub-head"><i class="fas fa-plane-departure"></i> ५.२ बढ्दो मानव अन्तरक्रिया, अन्तर्निर्भरता तथा बसाइँसराइ</div>
+
+        <div class="content-box green-light">
+            <ul>
+                <li>अन्तरक्रिया र अन्तर्निर्भरता मानव समाजको अभिन्न पाटो — आपसी अन्तर्निर्भरताले नै समाज चलेको हो।</li>
+                <li>प्रविधिको विकासले भौगोलिक दूरी र समयको अन्तरलाई घटाएको छ।</li>
+                <li>बसाइँसराइका कारण: कूटनीतिक सम्बन्ध, व्यापार, वैदेशिक रोजगारी, तीर्थाटन, पर्यटन, खेलकुद, कला।</li>
+                <li>भौगोलिक दृष्टिले वैश्विक अन्तरक्रियाका २ स्वरूप: (१) स्थानीय ठाउँमै रहेर वैश्विक अन्तरक्रिया गर्ने (प्रविधि/मिडियामार्फत), (२) बसाइँसराइ गरी नयाँ ठाउँमा गई अन्तरक्रिया गर्ने।</li>
+            </ul>
+        </div>
+
+        <!-- ५.३ प्रविधि -->
+        <div class="sub-head"><i class="fas fa-microchip"></i> ५.३ प्रविधि</div>
+
+        <div class="content-box gold-light">
+            <ul>
+                <li><strong>सकारात्मक प्रभाव:</strong> टेलिमेडिसिन, खुला विद्यालय/विश्वविद्यालय, नयाँ रोजगारीका अवसर, सफ्टवेयर निर्यात (नेपालमै बसेर विश्वका लागि काम)।</li>
+                <li><strong>नकारात्मक प्रभाव:</strong> श्रमिक जनशक्तिको आवश्यकतामा कटौती, रोजगारी गुम्ने/बेरोजगार हुने चिन्ता, व्यक्तिको निजतामा खलल, प्रत्यक्ष अन्तरक्रिया घट्नु, परिवार-कुल-कुटुम्बका सम्बन्धको स्वरूप परिवर्तन।</li>
+            </ul>
+        </div>
+
+        <!-- ५.४ मिडिया -->
+        <div class="sub-head"><i class="fas fa-tower-broadcast"></i> ५.४ मिडिया</div>
+
+        <div class="content-box purple-light">
+            <ul>
+                <li>सूचना, शिक्षा, सामाजिकीकरण र मनोरञ्जनमा भूमिका।</li>
+                <li>मिडियाले जनचेतना फैलाउन, सामाजिक/राजनीतिक परिवर्तनका लागि जनमानस प्रेरित गर्न, सद्भाव-सामञ्जस्य बढाउन प्रयोग हुन सक्छ।</li>
+                <li>मिडियाको <strong>दुरुपयोग</strong> भएमा समाजमा नकारात्मक असर पर्छ (घृणापरक अभिव्यक्ति, अश्लील सामग्री, आक्रामक/आतङ्कवादी सोचलाई दुरुत्साहन)।</li>
+            </ul>
+        </div>
+
+        <!-- ५.५ वैचारिक विस्तार -->
+        <div class="sub-head"><i class="fas fa-comments"></i> ५.५ वैचारिक विस्तारमा सहजता</div>
+
+        <div class="content-box pink-light">
+            <ul>
+                <li>मिडिया र सामाजिक सञ्जालको विकासले विचार/सिद्धान्तको प्रचार-प्रसार अगाडिको तुलनामा निकै सहज भएको छ।</li>
+                <li>मानवअधिकार, वातावरण, दिगो विकास, राजनीतिक अभियान, धार्मिक आस्थाजन्य अभियानसँग सम्बद्ध विचारले विश्वका मानिसलाई एक सूत्रमा बाँध्न सक्छन्; कतिपय अवस्थामा विभाजन पनि गराउन सक्छन्।</li>
+            </ul>
+        </div>
+
+        <!-- ५.६ अन्तर्राष्ट्रिय संस्था -->
+        <div class="sub-head"><i class="fas fa-globe-asia"></i> ५.६ अन्तर्राष्ट्रिय संस्थाहरू</div>
+
+        <div class="content-box teal-light">
+            <ul>
+                <li>संयुक्त राष्ट्रसङ्घ अन्तर्गतका निकाय, विभिन्न देशका अन्तर्राष्ट्रिय गतिविधि/सहयोगका निकाय र अन्तर्राष्ट्रिय गैरसरकारी संस्थाले मानिस, शिक्षा, स्वास्थ्य, प्रविधि, मालसामान र विचारको प्रवाहलाई एक देशबाट अर्को देशमा सहज बनाएका छन्।</li>
+            </ul>
+        </div>
+
+        <!-- ५.७ खुला बजार -->
+        <div class="sub-head"><i class="fas fa-store"></i> ५.७ खुला बजार अर्थतन्त्र</div>
+
+        <div class="content-box orange-light">
+            <ul>
+                <li>साराविश्व नै एक बजार भन्ने मान्यताले वैश्विक बजारको अवधारणा अगाडि आएको हो।</li>
+                <li>बहुराष्ट्रिय कम्पनीले एउटै उत्पादनका फरक-फरक चरण (डिजाइन, उत्पादन, प्याकेजिङ) फरक-फरक देशमा गर्न सक्छन्।</li>
+                <li><strong>फाइदा:</strong> वैश्विक अन्तर्सम्बद्धता र अन्तर्निर्भरता वृद्धि, रोजगारी सिर्जना, अर्थतन्त्रको विस्तार। <strong>आलोचना:</strong> उपभोगवाद बढाउने भनी।</li>
+            </ul>
+        </div>
+
+        <!-- ५.८ सामाजिकीकरण -->
+        <div class="sub-head"><i class="fas fa-users-rectangle"></i> ५.८ सामाजिकीकरण र संस्कृतिकरणका परिवर्तित प्रवृत्ति</div>
+
+        <div class="content-box gold-light">
+            <ul>
+                <li>पहिले परिवार, धार्मिक उपासना स्थल, परम्परागत सांस्कृतिक स्थल र विद्यालयको भूमिका निर्णायक थियो।</li>
+                <li>अचेल <strong>मिडिया र सामाजिक सञ्जाल</strong>ले सामाजिकीकरण र संस्कृतिकरणमा व्यापक प्रभाव पारिरहेका छन् — स्वसंस्कृतिकरण र परसंस्कृतिकरण दुवै प्रवृत्ति देखिन्छन् (जस्तै जन्मदिन/नयाँ वर्ष मनाउने तरिकामा अरूको देखासिकी)।</li>
+            </ul>
+        </div>
+
+        <!-- सम्भावित प्रश्नहरू -->
+        <div class="probable-questions">
+            <h4><i class="fas fa-question-circle"></i> सम्भावित परीक्षा प्रश्न (पाठ ५)</h4>
+            <ul>
+                <li>सूचना समाज भन्नाले के बुझिन्छ?</li>
+                <li>बसाइँसराइले सामाजिक विविधतामा पार्ने प्रभावहरू विश्लेषण गर्नुहोस्।</li>
+                <li>प्रविधिको विकास र सामाजिक सञ्जालको बढ्दो प्रयोगले पारेका सकारात्मक प्रभाव र नकारात्मक असर विश्लेषण गर्नुहोस्।</li>
+                <li>समाजमा आएको परिवर्तनले सामाजिक रुपान्तरणमा मदत पुर्‍याउँछ, कसरी?</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== द्रुत पुनरावलोकन ===== -->
+        <!-- ========================================================== -->
+
+        <div class="lesson-head lessonExtra" id="quick-revision">
+            <i class="fas fa-bolt"></i>
+            एकाइभरिको द्रुत पुनरावलोकन
+            <span class="lesson-num">Quick Revision</span>
+        </div>
+
+        <div class="revision-box">
+            <h3><i class="fas fa-lightbulb"></i> ५ पाठको सारांश — छिटो सम्झिने सुत्र</h3>
+            <ul>
+                <li><strong>पाठ १ → विविधता:</strong> धर्म, जाति, भाषा, संस्कृति, कला, लैङ्ग/क्षमता + तथ्याङ्क (६५० जाति, ४,३०० धर्म, ७,१०० भाषा) + समन्वयको आवश्यकता</li>
+                <li><strong>पाठ २ → सामाजिक सम्बन्ध:</strong> गार्हपत्य/आहवनीय/विदथ + पुरुषार्थ चतुष्टय + वैयक्तिकतावादी vs समुदायवादी + वर्ण-आश्रम व्यवस्था + अन्तरनिर्भरता</li>
+                <li><strong>पाठ ३ → जीवन दर्शन:</strong> दर्शनको अर्थ र शाखा + षड्दर्शन + विश्वदृष्टिकोणका प्रकार + जीवन दर्शन + समतामूलक दृष्टिकोण</li>
+                <li><strong>पाठ ४ → दर्शनको उपयोगिता:</strong> बुद्धको दिनचर्या + पञ्चशील + संयम + दर्शन बौद्धिक-प्रायोगिक दुवै विधा</li>
+                <li><strong>पाठ ५ → सामाजिक रूपान्तरण:</strong> सूचना समाज (ड्यानियल बेल, योनेजी मासुदा) + अन्तरक्रिया/बसाइँसराइ + प्रविधि + मिडिया + खुला बजार + सामाजिकीकरणमा परिवर्तन</li>
+            </ul>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="tip-box" style="background:#1A237E; margin-top:20px;">
+            <i class="fas fa-lightbulb" style="color:#f5d742;"></i>
+            <strong>अन्तिम सल्लाह:</strong> यो एकाइ ४ को पूर्ण नोट हो। ५ वटै पाठका मुख्य बुँदाहरू, तथ्याङ्क, दार्शनिक नाम र अवधारणाहरू शुद्ध रूपमा याद गर्नुहोस्। NEB परीक्षामा ५ र ८ अङ्कका उत्तरहरू अनिवार्य रूपमा <strong>३-स्तरीय ढाँचा</strong> (परिचय → विश्लेषण → निष्कर्ष) मा लेख्नुहोस्। परीक्षा दिनुअघि पाठ्यपुस्तकसँग दाँजेर हेर्नुहोस्। शुभकामना!
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ४</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
