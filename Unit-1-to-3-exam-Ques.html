@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>कक्षा १२ — सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा | एकाइ १–३ पूर्ण समाधान</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ============ ROOT & RESET ============ */
+:root{
+  --bg:#eef3fa;
+  --card:#ffffff;
+  --text:#131c2b;
+  --muted:#54677f;
+  --line:#dbe4f0;
+
+  --u1:#7c3aed;  --u1b:#a855f7;  --u1soft:#f3ecff;
+  --u2:#0d9488;  --u2b:#06b6d4;  --u2soft:#e6fbf8;
+  --u3:#e04a2f;  --u3b:#f59e0b;  --u3soft:#fff2ec;
+
+  --s1:#16a34a;  --s1soft:#e9fbef;
+  --s2:#2563eb;  --s2soft:#e9f1ff;
+  --s3:#db2777;  --s3soft:#ffecf5;
+
+  --radius:20px;
+  --shadow:0 8px 30px rgba(15,30,60,.09);
+  --shadow-sm:0 3px 12px rgba(15,30,60,.07);
+}
+
+*{box-sizing:border-box;}
+html{
+  font-size:21px;              /* ← आधार फन्ट २१px */
+  scroll-behavior:smooth;
+  scroll-padding-top:110px;
+}
+body{
+  margin:0;
+  font-family:'Mukta','Noto Sans Devanagari','Kalimati','Segoe UI',system-ui,-apple-system,sans-serif;
+  font-size:1rem;
+  line-height:1.9;
+  color:var(--text);
+  background:
+     radial-gradient(1200px 600px at 100% -10%, #dce9ff 0%, transparent 60%),
+     radial-gradient(900px 500px at -10% 110%, #ffe7dd 0%, transparent 55%),
+     var(--bg);
+  background-attachment:fixed;
+  -webkit-font-smoothing:antialiased;
+}
+p{margin:.55rem 0 .9rem;}
+ul,ol{margin:.5rem 0 1rem; padding-left:1.35rem;}
+li{margin:.35rem 0;}
+strong,b{font-weight:800; color:#0b1420;}
+a{color:inherit; text-decoration:none;}
+hr{border:none;border-top:2px dashed var(--line);margin:1.5rem 0;}
+
+/* ============ TOP PROGRESS BAR ============ */
+#progress{
+  position:fixed; top:0; left:0; height:6px; width:0%;
+  background:linear-gradient(90deg,#7c3aed,#06b6d4,#f59e0b,#e04a2f);
+  z-index:200; transition:width .1s linear;
+  border-radius:0 6px 6px 0;
+}
+
+/* ============ SIDEBAR ============ */
+.sidebar{
+  position:fixed; top:0; left:0; bottom:0; width:370px;
+  background:linear-gradient(170deg,#0d1729 0%, #16243d 55%, #1b2c49 100%);
+  color:#c9d6e8;
+  overflow-y:auto;
+  z-index:120;
+  padding:0 0 3rem;
+  box-shadow:6px 0 30px rgba(8,16,32,.25);
+  transition:transform .3s ease;
+  scrollbar-width:thin;
+  scrollbar-color:#3c5170 transparent;
+}
+.sidebar::-webkit-scrollbar{width:10px;}
+.sidebar::-webkit-scrollbar-thumb{background:#38506f;border-radius:10px;}
+.sidebar::-webkit-scrollbar-track{background:transparent;}
+
+.sb-head{
+  padding:1.15rem 1.1rem 1rem;
+  background:linear-gradient(135deg,#1e3a8a,#7c3aed 55%,#db2777);
+  position:sticky; top:0; z-index:5;
+  box-shadow:0 6px 18px rgba(0,0,0,.28);
+}
+.sb-head .flag{font-size:1.25rem;}
+.sb-head h1{
+  margin:.15rem 0 .25rem;
+  font-size:1.06rem; line-height:1.45; font-weight:800; color:#fff;
+  letter-spacing:.2px;
+}
+.sb-head p{
+  margin:0; font-size:.72rem; color:#dbe7ff; line-height:1.5; font-weight:600;
+}
+
+.sb-search{
+  padding:.85rem .95rem .55rem;
+  position:sticky; top:0; z-index:4;
+  background:linear-gradient(180deg,#16243d 70%, rgba(22,36,61,0));
+}
+.sb-search input{
+  width:100%; padding:.55rem .8rem;
+  border-radius:12px; border:2px solid #2f4463;
+  background:#0b1526; color:#e8f0ff;
+  font-family:inherit; font-size:.8rem; font-weight:600;
+  outline:none;
+}
+.sb-search input::placeholder{color:#7d93b1;font-weight:500;}
+.sb-search input:focus{border-color:#38bdf8; box-shadow:0 0 0 4px rgba(56,189,248,.18);}
+
+#toc{padding:.3rem .7rem 1rem;}
+.toc-unit{margin-bottom:.85rem;}
+.toc-unit-link{
+  display:block;
+  padding:.55rem .7rem;
+  border-radius:12px;
+  font-weight:800; font-size:.82rem; line-height:1.45;
+  color:#fff;
+  background:linear-gradient(135deg,#243a5e,#1a2b46);
+  border-left:6px solid #38bdf8;
+  transition:.2s;
+}
+.toc-unit-link:hover{background:linear-gradient(135deg,#2f4c7c,#22375a); transform:translateX(3px);}
+.toc-unit.u1 .toc-unit-link{border-left-color:var(--u1b);}
+.toc-unit.u2 .toc-unit-link{border-left-color:var(--u2b);}
+.toc-unit.u3 .toc-unit-link{border-left-color:var(--u3b);}
+
+.toc-sect{margin:.35rem 0 .35rem .55rem; padding-left:.55rem; border-left:2px dotted #3a5273;}
+.toc-sect > a{
+  display:block;
+  font-size:.74rem; font-weight:800; letter-spacing:.2px;
+  color:#8fd3ff; padding:.28rem .3rem; border-radius:8px;
+}
+.toc-sect > a:hover{background:#1d3050; color:#fff;}
+.toc-q{
+  display:block;
+  font-size:.71rem; font-weight:600; line-height:1.5;
+  color:#9db1cc; padding:.22rem .45rem .22rem .55rem;
+  border-radius:8px; margin:.08rem 0;
+  border-left:2px solid transparent;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap;
+}
+.toc-q:hover{background:#1b2c48; color:#fff; border-left-color:#38bdf8;}
+.toc-q.active{background:linear-gradient(90deg,#1e3a8a,#2b4b7d); color:#fff; border-left-color:#fbbf24;}
+
+/* ============ MAIN ============ */
+.main{margin-left:370px; min-height:100vh; padding-bottom:5rem;}
+
+.topbar{
+  position:sticky; top:0; z-index:100;
+  background:rgba(255,255,255,.86);
+  backdrop-filter:blur(14px);
+  border-bottom:2px solid #dbe6f5;
+  padding:.7rem 1.3rem;
+  display:flex; align-items:center; gap:.9rem; flex-wrap:wrap;
+  box-shadow:0 4px 20px rgba(15,30,60,.06);
+}
+.menu-btn{
+  display:none;
+  background:linear-gradient(135deg,#1e3a8a,#7c3aed);
+  color:#fff; border:none; border-radius:12px;
+  padding:.45rem .8rem; font-size:.85rem; font-weight:800;
+  cursor:pointer; font-family:inherit;
+}
+.crumbs{font-size:.78rem; font-weight:800; color:var(--muted); flex:1 1 auto;}
+.crumbs span{color:#1e3a8a;}
+
+.jump{display:flex; gap:.4rem; flex-wrap:wrap;}
+.jump a{
+  font-size:.75rem; font-weight:800;
+  padding:.35rem .75rem; border-radius:999px;
+  border:2px solid transparent; transition:.2s;
+  color:#fff;
+}
+.jump a.j1{background:linear-gradient(135deg,var(--u1),var(--u1b));}
+.jump a.j2{background:linear-gradient(135deg,var(--u2),var(--u2b));}
+.jump a.j3{background:linear-gradient(135deg,var(--u3),var(--u3b));}
+.jump a:hover{transform:translateY(-2px); box-shadow:0 6px 16px rgba(20,40,80,.28);}
+
+.wrap{max-width:1180px; margin:0 auto; padding:1.6rem 1.5rem 2rem;}
+
+/* ============ HERO ============ */
+.hero{
+  border-radius:26px;
+  padding:2rem 1.8rem;
+  color:#fff;
+  background:
+     radial-gradient(700px 300px at 90% -20%, rgba(255,255,255,.28), transparent 60%),
+     linear-gradient(135deg,#1e3a8a 0%, #6d28d9 48%, #db2777 100%);
+  box-shadow:0 18px 50px rgba(60,30,120,.32);
+  position:relative; overflow:hidden;
+}
+.hero::after{
+  content:""; position:absolute; right:-60px; bottom:-70px;
+  width:240px; height:240px; border-radius:50%;
+  background:rgba(255,255,255,.10);
+}
+.hero .kicker{
+  display:inline-block;
+  font-size:.72rem; font-weight:800; letter-spacing:1.5px;
+  background:rgba(255,255,255,.2);
+  padding:.3rem .85rem; border-radius:999px; margin-bottom:.6rem;
+}
+.hero h1{
+  margin:.2rem 0 .4rem;
+  font-size:1.75rem; line-height:1.35; font-weight:800;
+  text-shadow:0 3px 14px rgba(0,0,0,.25);
+}
+.hero h2{
+  margin:0 0 .8rem; font-size:1.02rem; font-weight:700; color:#ffe9b8; line-height:1.55;
+}
+.hero p{margin:0; font-size:.82rem; color:#e8ecff; font-weight:500;}
+
+/* ============ UNIT SECTION ============ */
+.unit{margin-top:3rem;}
+.unit-head{
+  border-radius:22px 22px 0 0;
+  padding:1.35rem 1.5rem;
+  color:#fff;
+  box-shadow:var(--shadow);
+  position:relative;
+}
+.unit-head .badge{
+  display:inline-block; font-size:.68rem; font-weight:800; letter-spacing:1.2px;
+  background:rgba(255,255,255,.22); padding:.25rem .75rem; border-radius:999px;
+  margin-bottom:.45rem;
+}
+.unit-head h2{margin:0; font-size:1.3rem; font-weight:800; line-height:1.4;}
+.unit-head p{margin:.35rem 0 0; font-size:.78rem; color:rgba(255,255,255,.92); font-weight:600;}
+
+#unit1 .unit-head{background:linear-gradient(135deg,#5b21b6,#7c3aed 45%,#a855f7);}
+#unit2 .unit-head{background:linear-gradient(135deg,#065f56,#0d9488 45%,#06b6d4);}
+#unit3 .unit-head{background:linear-gradient(135deg,#9a3412,#e04a2f 45%,#f59e0b);}
+
+.unit-body{
+  background:var(--card);
+  border-radius:0 0 22px 22px;
+  padding:1.4rem 1.5rem 1.8rem;
+  box-shadow:var(--shadow);
+  border:2px solid var(--line);
+  border-top:none;
+}
+
+/* ============ INFO BOX ============ */
+.infobox{
+  border-radius:18px;
+  padding:1.1rem 1.25rem;
+  margin:1.1rem 0 1.6rem;
+  border:2px dashed #c7b3ff;
+  background:linear-gradient(135deg,#faf5ff,#f0f4ff);
+  box-shadow:var(--shadow-sm);
+}
+.infobox h3{
+  margin:0 0 .55rem; font-size:.95rem; font-weight:800; color:#5b21b6;
+}
+.infobox ul{margin:.4rem 0 0; padding-left:1.3rem;}
+.infobox li{font-size:.82rem; line-height:1.85; color:#2c3a52;}
+.infobox li strong{color:#7c3aed;}
+
+/* ============ SECTION (खण्ड) ============ */
+.sect{margin-top:2.2rem;}
+.sect-title{
+  display:flex; align-items:center; gap:.75rem; flex-wrap:wrap;
+  font-size:1.1rem; font-weight:800; line-height:1.45;
+  margin:0 0 .3rem;
+  padding:.85rem 1.1rem;
+  border-radius:16px;
+  color:#fff;
+  box-shadow:var(--shadow-sm);
+}
+.sect-title .sicon{font-size:1.25rem;}
+.sect.s1 .sect-title{background:linear-gradient(135deg,#15803d,#22c55e);}
+.sect.s2 .sect-title{background:linear-gradient(135deg,#1d4ed8,#3b82f6);}
+.sect.s3 .sect-title{background:linear-gradient(135deg,#be185d,#ec4899);}
+
+.sect-meta{
+  font-size:.76rem; font-weight:800; color:#43536b;
+  background:#eef4ff;
+  border-left:6px solid #6366f1;
+  padding:.5rem .9rem; border-radius:0 12px 12px 0;
+  margin:0 0 1.3rem;
+}
+.sect.s1 .sect-meta{background:var(--s1soft); border-left-color:var(--s1);}
+.sect.s2 .sect-meta{background:var(--s2soft); border-left-color:var(--s2);}
+.sect.s3 .sect-meta{background:var(--s3soft); border-left-color:var(--s3);}
+
+/* ============ QUESTION CARD ============ */
+.qcard{
+  background:#fff;
+  border:2px solid var(--line);
+  border-radius:18px;
+  padding:1.15rem 1.3rem 1.3rem;
+  margin:0 0 1.5rem;
+  box-shadow:var(--shadow-sm);
+  position:relative;
+  overflow:hidden;
+  transition:box-shadow .25s, transform .25s, border-color .25s;
+}
+.qcard::before{
+  content:""; position:absolute; left:0; top:0; bottom:0; width:8px;
+  background:linear-gradient(180deg,#6366f1,#38bdf8);
+}
+.sect.s1 .qcard::before{background:linear-gradient(180deg,#16a34a,#4ade80);}
+.sect.s2 .qcard::before{background:linear-gradient(180deg,#2563eb,#60a5fa);}
+.sect.s3 .qcard::before{background:linear-gradient(180deg,#db2777,#f472b6);}
+.qcard:hover{box-shadow:0 14px 40px rgba(20,40,80,.14); transform:translateY(-2px); border-color:#b9cdf0;}
+.qcard:target{
+  border-color:#f59e0b;
+  box-shadow:0 0 0 6px rgba(245,158,11,.22), 0 14px 40px rgba(20,40,80,.16);
+  animation:flash 1.6s ease;
+}
+@keyframes flash{
+  0%{background:#fffbe8;} 100%{background:#fff;}
+}
+
+.qtitle{
+  margin:0 0 .8rem;
+  font-size:1rem; font-weight:800; line-height:1.6;
+  color:#0f1c30;
+  display:flex; flex-wrap:wrap; gap:.5rem; align-items:baseline;
+}
+.qnum{
+  display:inline-block;
+  font-size:.72rem; font-weight:800; letter-spacing:.4px;
+  color:#fff; background:linear-gradient(135deg,#1e3a8a,#7c3aed);
+  padding:.22rem .7rem; border-radius:999px;
+  white-space:nowrap;
+}
+.sect.s1 .qnum{background:linear-gradient(135deg,#15803d,#22c55e);}
+.sect.s2 .qnum{background:linear-gradient(135deg,#1d4ed8,#3b82f6);}
+.sect.s3 .qnum{background:linear-gradient(135deg,#be185d,#ec4899);}
+.marks{
+  margin-left:auto;
+  font-size:.68rem; font-weight:800;
+  color:#8a5a00; background:#fff4d6;
+  border:2px solid #ffd77a;
+  padding:.15rem .6rem; border-radius:999px;
+  white-space:nowrap;
+}
+
+.ans{font-size:.93rem; line-height:1.95;}
+.ans > p:first-child{margin-top:.2rem;}
+
+/* ============ 3-BLOCK STRUCTURE ============ */
+.block{
+  border-radius:14px;
+  padding:.85rem 1.05rem;
+  margin:.85rem 0;
+  border-left:8px solid #94a3b8;
+  background:#f8fafc;
+}
+.block .btag{
+  display:inline-block;
+  font-size:.74rem; font-weight:800; letter-spacing:.3px;
+  padding:.18rem .7rem; border-radius:999px;
+  margin-bottom:.5rem;
+  color:#fff;
+}
+.block.intro{background:linear-gradient(135deg,#eef6ff,#e6f0ff); border-left-color:#2563eb;}
+.block.intro .btag{background:linear-gradient(135deg,#1d4ed8,#3b82f6);}
+.block.body{background:linear-gradient(135deg,#fdfbff,#f6f2ff); border-left-color:#7c3aed;}
+.block.body .btag{background:linear-gradient(135deg,#6d28d9,#a855f7);}
+.block.concl{background:linear-gradient(135deg,#f1fdf5,#e7fbef); border-left-color:#16a34a;}
+.block.concl .btag{background:linear-gradient(135deg,#15803d,#22c55e);}
+.block p{margin:.35rem 0;}
+.block ul{margin:.4rem 0 .3rem;}
+
+/* ============ LISTS ============ */
+ul.tick{list-style:none; padding-left:0;}
+ul.tick > li{
+  position:relative;
+  padding:.5rem .8rem .5rem 2.1rem;
+  margin:.45rem 0;
+  background:#f8fbff;
+  border-radius:12px;
+  border:1px solid #e2ecfa;
+  font-size:.88rem;
+  line-height:1.85;
+}
+ul.tick > li::before{
+  content:"◆";
+  position:absolute; left:.7rem; top:.5rem;
+  color:#7c3aed; font-size:.85rem;
+}
+ul.tick > li strong{color:#5b21b6;}
+
+ol.num{padding-left:1.5rem;}
+ol.num > li{
+  margin:.45rem 0; padding-left:.25rem; font-size:.88rem; line-height:1.9;
+}
+ol.num > li::marker{font-weight:800; color:#0d9488;}
+
+/* ============ TABLES ============ */
+.table-wrap{overflow-x:auto; margin:1rem 0; border-radius:14px; box-shadow:var(--shadow-sm);}
+table.tbl{
+  width:100%; border-collapse:collapse; min-width:640px;
+  font-size:.8rem; background:#fff;
+}
+table.tbl thead th{
+  background:linear-gradient(135deg,#1e3a8a,#4f46e5);
+  color:#fff; font-weight:800; text-align:left;
+  padding:.7rem .8rem; font-size:.78rem; letter-spacing:.2px;
+  border:1px solid #2b3f74;
+}
+table.tbl td{
+  padding:.65rem .8rem; border:1px solid #e2eaf5; vertical-align:top;
+  line-height:1.8; color:#20304a;
+}
+table.tbl tbody tr:nth-child(odd){background:#f7faff;}
+table.tbl tbody tr:nth-child(even){background:#ffffff;}
+table.tbl tbody tr:hover{background:#fff8e6;}
+table.tbl td:first-child{font-weight:800; color:#1e3a8a;}
+
+/* ============ FLOW DIAGRAM ============ */
+.flow{
+  background:linear-gradient(135deg,#f6f9ff,#eef4ff);
+  border:2px dashed #b7c9ea;
+  border-radius:18px;
+  padding:1.1rem 1rem;
+  margin:1.1rem 0;
+  text-align:center;
+}
+.flow-root{
+  display:inline-block;
+  background:linear-gradient(135deg,#1e3a8a,#7c3aed);
+  color:#fff; font-weight:800; font-size:.84rem;
+  padding:.6rem 1.15rem; border-radius:14px;
+  box-shadow:0 8px 20px rgba(60,40,160,.28);
+}
+.flow-arrow{font-size:1.1rem; color:#7c3aed; margin:.35rem 0; font-weight:800;}
+.flow-grid{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:.85rem; margin-top:.5rem; text-align:left;
+}
+.flow-card{
+  border-radius:14px; padding:.8rem .9rem; background:#fff;
+  border-top:6px solid #7c3aed; box-shadow:var(--shadow-sm);
+}
+.flow-card h5{margin:0 0 .35rem; font-size:.82rem; font-weight:800; color:#4c1d95;}
+.flow-card p{margin:0; font-size:.76rem; line-height:1.8; color:#3a4a63;}
+.flow-card.fc1{border-top-color:#7c3aed;} .flow-card.fc1 h5{color:#5b21b6;}
+.flow-card.fc2{border-top-color:#0d9488;} .flow-card.fc2 h5{color:#0f766e;}
+.flow-card.fc3{border-top-color:#e04a2f;} .flow-card.fc3 h5{color:#b91c1c;}
+
+.steps{display:flex; flex-direction:column; gap:.55rem; margin:1rem 0;}
+.step{
+  display:flex; gap:.75rem; align-items:flex-start;
+  background:#fff; border-radius:14px; padding:.7rem .9rem;
+  border:2px solid #e3ecf9; box-shadow:var(--shadow-sm);
+}
+.step .n{
+  flex:0 0 auto;
+  width:2rem; height:2rem; border-radius:50%;
+  display:grid; place-items:center;
+  font-weight:800; font-size:.8rem; color:#fff;
+  background:linear-gradient(135deg,#1d4ed8,#7c3aed);
+}
+.step .t{font-size:.82rem; line-height:1.8;}
+.step .t b{display:block; color:#1e3a8a; margin-bottom:.1rem;}
+
+/* ============ MISC ============ */
+.hidden{display:none !important;}
+.note{
+  font-size:.78rem; font-weight:700; color:#7a4a00;
+  background:#fff8e1; border:2px solid #ffe08a;
+  padding:.6rem .9rem; border-radius:12px; margin:.8rem 0;
+}
+.pill{
+  display:inline-block; font-size:.72rem; font-weight:800;
+  padding:.2rem .65rem; border-radius:999px; margin:.1rem .25rem .1rem 0;
+  background:#eef2ff; color:#3730a3; border:1px solid #c7d2fe;
+}
+
+#toTop{
+  position:fixed; right:1.2rem; bottom:1.2rem; z-index:150;
+  width:3.1rem; height:3.1rem; border-radius:50%;
+  border:none; cursor:pointer;
+  background:linear-gradient(135deg,#1e3a8a,#7c3aed);
+  color:#fff; font-size:1.1rem; font-weight:800;
+  box-shadow:0 10px 26px rgba(50,30,140,.4);
+  opacity:0; pointer-events:none; transition:.3s;
+}
+#toTop.show{opacity:1; pointer-events:auto;}
+#toTop:hover{transform:translateY(-4px) scale(1.06);}
+
+.overlay{
+  position:fixed; inset:0; background:rgba(8,14,26,.5);
+  backdrop-filter:blur(2px); z-index:110; display:none;
+}
+.overlay.show{display:block;}
+
+footer{
+  margin-left:370px; padding:2rem 1.5rem 3rem;
+  text-align:center; font-size:.76rem; color:#6b7c93; font-weight:700;
+}
+footer b{color:#1e3a8a;}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1180px){
+  .sidebar{transform:translateX(-100%);}
+  .sidebar.open{transform:translateX(0);}
+  .main{margin-left:0;}
+  footer{margin-left:0;}
+  .menu-btn{display:inline-block;}
+}
+@media (max-width:640px){
+  .wrap{padding:1.1rem .85rem 2rem;}
+  .hero{padding:1.4rem 1.1rem;}
+  .hero h1{font-size:1.3rem;}
+  .unit-body{padding:1rem .9rem 1.3rem;}
+  .qcard{padding:1rem .9rem 1.1rem;}
+  .topbar{padding:.6rem .8rem;}
+  .jump a{font-size:.68rem; padding:.3rem .6rem;}
+  .crumbs{font-size:.7rem;}
+}
+@media print{
+  .sidebar,.topbar,#toTop,#progress,.overlay{display:none !important;}
+  .main,footer{margin-left:0;}
+  .qcard{break-inside:avoid; box-shadow:none;}
+}
+</style>
+</head>
+<body>
+
+<div id="progress"></div>
+
+<!-- ================= SIDEBAR ================= -->
+<aside class="sidebar" id="sidebar">
+  <div class="sb-head">
+    <div class="flag">🇳🇵</div>
+    <h1>कक्षा १२ — सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</h1>
+    <p>एकाइ १, २ र ३ — पूर्ण प्रश्न सङ्ग्रह + नमुना समाधान</p>
+  </div>
+
+  <div class="sb-search">
+    <input type="search" id="search" placeholder="🔍 प्रश्न वा शब्द खोज्नुहोस्...">
+  </div>
+
+  <nav id="toc"></nav>
+</aside>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- ================= MAIN ================= -->
+<div class="main">
+
+  <div class="topbar">
+    <button class="menu-btn" id="menuBtn">☰ सूची</button>
+    <div class="crumbs">📚 <span>NEB कक्षा १२</span> › सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</div>
+    <div class="jump">
+      <a class="j1" href="#unit1">एकाइ १</a>
+      <a class="j2" href="#unit2">एकाइ २</a>
+      <a class="j3" href="#unit3">एकाइ ३</a>
+    </div>
+  </div>
+
+  <div class="wrap">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <span class="kicker">राष्ट्रिय परीक्षा बोर्ड (NEB) — कक्षा १२</span>
+      <h1>सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा</h1>
+      <h2>📑 एकाइ १ – ३ : पूर्ण प्रश्न सङ्ग्रह तथा प्रामाणिक नमुना समाधान</h2>
+      <p>
+        <span class="pill" style="background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.35);">१ अङ्क</span>
+        <span class="pill" style="background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.35);">५ अङ्क</span>
+        <span class="pill" style="background:rgba(255,255,255,.2);color:#fff;border-color:rgba(255,255,255,.35);">८ अङ्क</span>
+        &nbsp;— अनिवार्य <b style="color:#ffe9b8;">३-स्तरीय ढाँचा</b> : 📌 परिचय → 📊 विश्लेषण → 🎯 निष्कर्ष
+      </p>
+    </header>
+
+    <!-- ============================================================ -->
+    <!-- ======================== UNIT 1 ============================ -->
+    <!-- ============================================================ -->
+    <section class="unit" id="unit1" data-unit="एकाइ १" data-sub="सामाजिक तथा जीवनोपयोगी शिक्षाको अवधारणा">
+      <div class="unit-head">
+        <span class="badge">📑 एकाइ १</span>
+        <h2>सामाजिक तथा जीवनोपयोगी शिक्षाको अवधारणा</h2>
+        <p>🎯 प्रश्न सङ्ग्रह र प्रामाणिक नमुना समाधान</p>
+      </div>
+
+      <div class="unit-body">
+
+        <div class="infobox">
+          <h3>📘 विद्यार्थीहरूका लागि उपयोगिता निर्देशिका</h3>
+          <ul>
+            <li><strong>१ अङ्कका प्रश्नहरू (अति संक्षिप्त):</strong> १०–२० शब्दको १–२ वाक्यको सिधै सटिक उत्तर।</li>
+            <li><strong>५ अङ्कका प्रश्नहरू (संक्षिप्त):</strong> १५०–२०० शब्द (१२–१५ मिनेट समय अनुकूल) अनिवार्य ३-स्तरीय ढाँचामा।</li>
+            <li><strong>८ अङ्कका प्रश्नहरू (विस्तृत):</strong> २५०–३०० शब्द (२०–२५ मिनेट समय अनुकूल) अनिवार्य ३-स्तरीय ढाँचामा।</li>
+            <li><strong>उत्तर संरचना:</strong> 📌 १. परिचय, 📊 २. विषय प्रवेश तथा मुख्य विश्लेषण, र 🎯 ३. निष्कर्ष।</li>
+          </ul>
+        </div>
+
+        <!-- ---------- SECTION 1 ---------- -->
+        <section class="sect s1" id="u1-s1" data-title="खण्ड १ : अति संक्षिप्त (१ अङ्क)">
+          <h2 class="sect-title"><span class="sicon">📄</span> खण्ड १: अति संक्षिप्त उत्तरात्मक प्रश्नहरू</h2>
+          <p class="sect-meta">अति संक्षिप्त उत्तर: १०–२० शब्द | अङ्क भार: १ × ८ = ८</p>
+
+          <article class="qcard" id="u1-s1-q1" data-label="प्र.न. १ : जीवन उपयोगी सिप भनेको के हो?">
+            <h4 class="qtitle"><span class="qnum">प्र.न. १</span> जीवन उपयोगी सिप भनेको के हो? (एक वाक्यमा) <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>मानिसलाई दैनिक जीवनका विविध चुनौती, तनाव र समस्याहरू सुल्झाउँदै अनुकूल, सन्तुलित र सुखद जीवनयापन गर्न सक्षम बनाउने मानसिक, सामाजिक र संवेगात्मक क्षमता वा कौशललाई <strong>जीवन उपयोगी सिप</strong> भनिन्छ।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s1-q2" data-label="प्र.न. २ : स्वस्थ जीवनशैली कस्तो हुन्छ?">
+            <h4 class="qtitle"><span class="qnum">प्र.न. २</span> कस्तो जीवनशैलीलाई स्वस्थ जीवनशैली भनिन्छ? <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>सन्तुलित खानपान, नियमित शारीरिक व्यायाम, पर्याप्त निद्रा, तनावमुक्त मन, र हानिकारक दुर्व्यसनहरूबाट मुक्त भई शारीरिक, मानसिक र सामाजिक रूपमा तन्दुरुस्त रहने दैनिकीलाई <strong>स्वस्थ जीवनशैली</strong> भनिन्छ।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s1-q3" data-label="प्र.न. ३ : जीवनोपयोगी शिक्षाको अर्थ">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ३</span> जीवनोपयोगी शिक्षाको अर्थ एक वाक्यमा लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>व्यक्तिमा सकारात्मक सोच, व्यावहारिक सीप, नैतिक आचरण र असल चरित्र निर्माण गरी समाजमा सफलताका साथ जीवनयापन गर्न सिकाउने व्यावहारिक शिक्षा नै <strong>जीवनोपयोगी शिक्षा</strong> हो।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s1-q4" data-label="प्र.न. ४ : पूर्वीय चिन्तनका दुई परम्परा">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ४</span> पूर्वीय चिन्तन अन्तर्गतका कुनै दुई परम्पराको नाम लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>पूर्वीय चिन्तन परम्परा अन्तर्गतका दुई मुख्य परम्पराहरू <strong>वैदिक चिन्तन परम्परा</strong> (वेद तथा उपनिषद् आधारित) र <strong>बौद्ध चिन्तन परम्परा</strong> (अष्टाङ्गिक मार्ग तथा पञ्चशील आधारित) हुन्।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s1-q5" data-label="प्र.न. ५ : पाश्चात्य चिन्तनका दुई विशेषता">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ५</span> पाश्चात्य चिन्तन परम्पराका दुईवटा विशेषता लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>पाश्चात्य चिन्तन परम्पराका दुई मुख्य विशेषताहरू <strong>तार्किक एवं वैज्ञानिक दृष्टिकोण</strong> (Logic and Scientific Inquiry) र <strong>वैयक्तिकता एवं स्वतन्त्रतामा जोड</strong> (Individualism and Freedom) हुन्।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s1-q6" data-label="प्र.न. ६ : जीवनोपयोगी शिक्षाका चार सीप">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ६</span> जीवनोपयोगी शिक्षाका कुनै चारवटा सीपहरूको नाम लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>जीवनोपयोगी शिक्षाका चार मुख्य सीपहरू:</p>
+              <ol class="num">
+                <li>समालोचनात्मक चिन्तन (Critical Thinking)</li>
+                <li>सिर्जनात्मक चिन्तन (Creative Thinking)</li>
+                <li>निर्णय निर्माण सिप (Decision Making Skill)</li>
+                <li>समानुभूति (Empathy)</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s1-q7" data-label="प्र.न. ७ : सामाजिक अध्ययनको परिभाषा">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ७</span> सामाजिक अध्ययनको परिभाषा एक वाक्यमा लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>मानव र उसले बसोबास गर्ने भौतिक, सामाजिक, राजनीतिक र सांस्कृतिक वातावरणबिचको अन्तरक्रिया तथा अन्तरसम्बन्धको एकीकृत एवं व्यवस्थित अध्ययन नै <strong>सामाजिक अध्ययन</strong> हो।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s1-q8" data-label="प्र.न. ८ : WHO का दुई जीवनोपयोगी सीप">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ८</span> WHO ले पहिचान गरेका कुनै दुई जीवनोपयोगी सीपहरूको नाम लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>विश्व स्वास्थ्य सङ्गठन (WHO - 1999) ले पहिचान गरेका दुई मुख्य जीवनोपयोगी सीपहरू <strong>सञ्चार र अन्तरवैयक्तिक सिप</strong> (Communication and Interpersonal Skills) तथा <strong>तनाव र संवेग व्यवस्थापन सिप</strong> (Coping with Stress and Emotions) हुन्।</p>
+            </div>
+          </article>
+        </section>
+
+        <!-- ---------- SECTION 2 ---------- -->
+        <section class="sect s2" id="u1-s2" data-title="खण्ड २ : संक्षिप्त उत्तर (५ अङ्क)">
+          <h2 class="sect-title"><span class="sicon">📝</span> खण्ड २: संक्षिप्त उत्तरात्मक प्रश्नहरू</h2>
+          <p class="sect-meta">संक्षिप्त उत्तर: १५०–२०० शब्द | अङ्क भार: ५ × ७ = ३५</p>
+
+          <article class="qcard" id="u1-s2-q1" data-label="प्र.न. १ : जीवनोपयोगी शिक्षाको अर्थ र महत्त्व">
+            <h4 class="qtitle"><span class="qnum">प्र.न. १</span> जीवनोपयोगी शिक्षाको अर्थ र महत्त्व लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>मानिसलाई केवल सिद्धान्त र किताबी ज्ञानमा सीमित नराखी दैनिक जीवनमा आइपर्ने समस्या सुल्झाउने, नैतिक आचरण अपनाउने र असल चरित्र निर्माण गर्ने व्यावहारिक शिक्षा नै <strong>जीवनोपयोगी शिक्षा</strong> हो। यसले सिद्धान्त र व्यवहारबिच पुलको काम गर्दछ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p><strong>जीवनोपयोगी शिक्षाको अर्थ:</strong><br>
+                जीवनका लागि आवश्यक व्यावहारिक सीप, मनोसामाजिक क्षमता र नैतिक मूल्य-मान्यताहरू सिकाउने प्रक्रिया नै जीवनोपयोगी शिक्षा हो। यसले व्यक्तिको शारीरिक, मानसिक, संवेगात्मक र आध्यात्मिक विकासमा जोड दिन्छ।</p>
+                <p><strong>जीवनोपयोगी शिक्षाको महत्त्व (५ मुख्य बुँदाहरू):</strong></p>
+                <ul class="tick">
+                  <li><strong>१. व्यावहारिक समस्या समाधानमा मद्दत:</strong> दैनिक जीवनमा आइपर्ने जटिल चुनौती र तनावलाई समालोचनात्मक र सिर्जनात्मक चिन्तनमार्फत बुद्धिमतापूर्वक सुल्झाउन मद्दत गर्छ।</li>
+                  <li><strong>२. सकारात्मक सोच र चरित्र निर्माण:</strong> व्यक्तिमा आत्मबोध, आत्मसम्मान र संवेग नियमनको विकास गरी अनुशासित र नैतिक नागरिक बनाउँछ।</li>
+                  <li><strong>३. स्वस्थ सामाजिक सम्बन्ध स्थापना:</strong> समानुभूति र प्रभावकारी सञ्चार सिपमार्फत परिवार, समुदाय र साथीभाइबिच सुमधुर र सहयोगात्मक सम्बन्ध कायम गर्छ।</li>
+                  <li><strong>४. स्वस्थ जीवनशैलीको अवलम्बन:</strong> सन्तुलित आहार, योग, ध्यान र तनाव व्यवस्थापनका माध्यमबाट शारीरिक र मानसिक तन्दुरुस्ती कायम राख्न सघाउँछ।</li>
+                  <li><strong>५. निर्णय क्षमता र नेतृत्व विकास:</strong> जीवनका जटिल मोडहरूमा सही र गलत छुट्याएर विवेकपूर्ण निर्णय लिन र नेतृत्वदायी भूमिका खेल्न सक्षम बनाउँछ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः जीवनोपयोगी शिक्षा व्यक्तिलाई सक्षम, नैतिकवान् र उत्थानशील बनाई समाजमा सफल र मर्यादित जीवनयापन गराउने आधुनिक जीवनको अपरिहार्य आधार हो।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s2-q2" data-label="प्र.न. २ : सामाजिक अध्ययन र जीवनोपयोगी शिक्षाबिचको भिन्नता">
+            <h4 class="qtitle"><span class="qnum">प्र.न. २</span> सामाजिक अध्ययन र जीवनोपयोगी शिक्षाबीचको भिन्नता छुट्याउनुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>सामाजिक अध्ययन र जीवनोपयोगी शिक्षा दुवै नागरिक सक्षमता विकास गर्ने परिपूरक विषयहरू हुन्। सामाजिक अध्ययनले समाज, वातावरण र ज्ञानको क्षेत्रलाई समेट्छ भने जीवनोपयोगी शिक्षाले व्यक्तिको आन्तरिक सीप, व्यवहार र कार्यकुशलतामा जोड दिन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>सामाजिक अध्ययन र जीवनोपयोगी शिक्षाबिचका मुख्य भिन्नताहरूलाई निम्न तालिकामा स्पष्ट पारिएको छ:</p>
+                <div class="table-wrap">
+                  <table class="tbl">
+                    <thead>
+                      <tr>
+                        <th>भिन्नताको आधार</th>
+                        <th>सामाजिक अध्ययन (Social Studies)</th>
+                        <th>जीवनोपयोगी शिक्षा (Life Skills Education)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>१. मुख्य विषयवस्तु</td><td>मानव, समाज, इतिहास, भूगोल, संस्कृति र वातावरणबिचको अन्तरसम्बन्ध।</td><td>समस्या समाधान, निर्णय क्षमता, तनाव व्यवस्थापन जस्ता मनोसामाजिक सीप।</td></tr>
+                      <tr><td>२. मुख्य उद्देश्य</td><td>समाज र संसारबारे सुसूचित, सचेत र जिम्मेवार नागरिक तयार गर्नु।</td><td>व्यक्तिलाई व्यावहारिक रूपमा सक्षम, उत्थानशील र कुशल बनाउनु।</td></tr>
+                      <tr><td>३. ज्ञानको प्रकृति</td><td>मुख्यतया सिद्धान्त, ज्ञान र सूचना-प्रधान (Knowledge-oriented)।</td><td>मुख्यतया व्यवहार, अभ्यास र सीप-प्रधान (Skill &amp; Practice-oriented)।</td></tr>
+                      <tr><td>४. कार्यक्षेत्र</td><td>बाह्य सामाजिक, राजनीतिक र प्राकृतिक वातावरण।</td><td>आन्तरिक मानसिक, संवेगात्मक र व्यक्तिगत व्यवहार।</td></tr>
+                      <tr><td>५. मूल्याङ्कन आधार</td><td>सामाजिक ज्ञान, विषयवस्तुको बुझाइ र विश्लेषणात्मक क्षमता।</td><td>दैनिक व्यवहारमा देखिने सीपको प्रयोग, आचरण र चरित्र।</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>यी दुईबिच सिद्धान्त र व्यवहारको भिन्नता रहे तापनि सामाजिक अध्ययनले प्रदान गर्ने ज्ञानलाई जीवनोपयोगी शिक्षाका सीपमार्फत व्यवहारमा उतार्न सकिने हुनाले यी दुवै विषय एक-अर्काका अभिन्न अङ्ग हुन्।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s2-q3" data-label="प्र.न. ३ : पूर्वीय चिन्तनका पाँच सिद्धान्त">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ३</span> पूर्वीय चिन्तन परम्पराअन्तर्गतका कुनै पाँचवटा मुख्य सिद्धान्तहरू उल्लेख गर्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>एसियाको पूर्वी, दक्षिण-पूर्वी र दक्षिणी भूभागमा विकसित धर्म, दर्शन, कला, संस्कार र मूल्य-मान्यतामा आधारित ज्ञान-परम्परा नै पूर्वीय चिन्तन परम्परा हो। यसले मानव जीवनमा आत्मशान्ति, प्रकृतिसँगको तादात्म्य र नैतिक अनुशासनलाई उच्च प्राथमिकता दिएको छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>पूर्वीय चिन्तन परम्पराका मुख्य ५ वटा सिद्धान्तहरू निम्नलिखित छन्:</p>
+                <ul class="tick">
+                  <li><strong>१. पुरुषार्थ चतुष्टय (चार पुरुषार्थ):</strong> मानव जीवनका चार मुख्य लक्ष्यहरू—<b>धर्म</b> (कर्तव्य र नैतिकता), <b>अर्थ</b> (न्यायोचित आर्थिक उपार्जन), <b>काम</b> (पारिवारिक सुख), र <b>मोक्ष</b> (परममुक्ति) हासिल गर्नु।</li>
+                  <li><strong>२. वैदिक १० लक्षण (धर्मका १० लक्षण):</strong> धृति (धैर्य), क्षमा, दम (वासना नियन्त्रण), अस्तेय (चोरी नगर्नु), शौच (शुद्धता), इन्द्रिय निग्रह, धी (बुद्धिमत्ता), विद्या, सत्य र अक्रोध गरी १० नैतिक नियमहरूको पालना गर्नु।</li>
+                  <li><strong>३. आर्य अष्टाङ्गिक मार्ग (बौद्ध दर्शन):</strong> भगवान् बुद्धका आठ मार्गहरू—सम्यक दृष्टि, सम्यक सङ्कल्प, सम्यक वाक्, सम्यक कर्म, सम्यक जीविका, सम्यक प्रयास, सम्यक स्मृति र सम्यक समाधिको अनुसरण गर्नु।</li>
+                  <li><strong>४. पञ्चशीलको सिद्धान्त:</strong> अहिंसा (हिंसा नगर्नु), सत्य (झुटो नबोल्नु), अस्तेय (चोरी नगर्नु), व्यभिचार नगर्नु र मद्यपान नगर्नु जस्ता ५ आचरण नियमहरू।</li>
+                  <li><strong>५. प्रकृति र पर्यावरणमैत्री जीवनशैली:</strong> मानिस र प्रकृतिबिच तादात्म्य राख्ने, 'वसुधैव कुटुम्बकम्' (संसार नै एक परिवार हो) को भावना र सहअस्तित्वमा आधारित जीवनशैली।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः पूर्वीय चिन्तनका यी सिद्धान्तहरूले मानिसलाई भौतिक सुखमा मात्र नभई मानसिक शान्ति, भातृत्व र उच्च नैतिक आचरणमा बाँधेर सन्तुलित जीवन जिउन मार्गदर्शन गर्छन्।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s2-q4" data-label="प्र.न. ४ : पाश्चात्य चिन्तनका मुख्य विशेषता">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ४</span> पाश्चात्य चिन्तन परम्पराका मुख्य विशेषताहरू के के हुन्? व्याख्या गर्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>प्राचीन ग्रीस (युनान) का दार्शनिकहरू (सुकरात, प्लेटो, अरस्तु) बाट सुरु भई युरोप र अमेरिकामा विकसित भएको, तर्क, विज्ञान र आधुनिकतामा आधारित चिन्तन धारालाई पाश्चात्य चिन्तन परम्परा भनिन्छ। यसले भौतिक प्रगति र लोकतान्त्रिक मूल्यहरूलाई प्रवर्धन गरेको छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>पाश्चात्य चिन्तन परम्पराका मुख्य विशेषताहरू:</p>
+                <ul class="tick">
+                  <li><strong>१. तार्किक बहस र वैज्ञानिक खोज (Rationalism &amp; Scientific Method):</strong> कुनै पनि कुरालाई अन्धविश्वासका आधारमा नमानी तर्क, प्रमाण, परीक्षण र वैज्ञानिक विधिबाट मात्र स्वीकार गर्ने।</li>
+                  <li><strong>२. वैयक्तिकता र व्यक्तिगत स्वतन्त्रता (Individualism):</strong> व्यक्ति, उसको स्वतन्त्रता, व्यक्तिगत अधिकार, र आत्म-अभिव्यक्तिलाई समाज र राज्यभन्दा प्राथमिक मान्ने।</li>
+                  <li><strong>३. भौतिक विकास र प्रविधिमा जोड (Material Development &amp; Technology):</strong> प्रकृतिलाई नियन्त्रण र उपयोग गर्दै औद्योगिक, प्रविधिगत र आर्थिक समृद्धि हासिल गर्ने लक्ष्य राख्ने।</li>
+                  <li><strong>४. लोकतान्त्रिक मूल्य र मानव अधिकार (Democratic Values &amp; Human Rights):</strong> स्वतन्त्रता, समानता, कानुनी शासन, धर्मनिरपेक्षता र मानव अधिकारको वकालत गर्ने।</li>
+                  <li><strong>५. समालोचनात्मक एवं खुला सोच (Critical &amp; Open Thinking):</strong> स्थापित परम्परा र चर्चका धार्मिक नियमहरूलाई प्रश्न गर्दै पुनर्जागरण (Renaissance) र प्रबोधन युगका नयाँ विचारहरू अपनाउने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>यसरी पाश्चात्य चिन्तनले संसारलाई आधुनिक प्रविधि, लोकतन्त्र र तार्किक चिन्तन दिएको छ, जसलाई पूर्वीय नैतिकतासँग जोड्दा विश्वमै सन्तुलित विकास सम्भव हुन्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s2-q5" data-label="प्र.न. ५ : स्वस्थ जीवनशैलीमा जीवनोपयोगी शिक्षा">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ५</span> स्वस्थ जीवनशैली अपनाउन जीवनोपयोगी शिक्षाले कसरी मद्दत गर्छ? बुँदागत रूपमा लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>स्वस्थ जीवनशैली केवल रोग नहुनु मात्र नभई शारीरिक, मानसिक, संवेगात्मक र सामाजिक रूपमा पूर्ण रूपमा तन्दुरुस्त हुनु हो। जीवनोपयोगी शिक्षाले व्यक्तिमा सही आचरण र सीपहरू विकास गरी स्वस्थ जीवन जिउन प्रत्यक्ष सहयोग पुर्‍याउँछ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>स्वस्थ जीवनशैली अपनाउन जीवनोपयोगी शिक्षाले निम्न अनुसार मद्दत गर्छ:</p>
+                <ul class="tick">
+                  <li><strong>१. सन्तुलित आहार र आचारविचारको ज्ञान:</strong> पूर्वीय र आधुनिक सिद्धान्त अनुसार सात्त्विक खानपान, समयमै भोजन र स्वस्थ आहारविहार चयन गर्ने सीप दिन्छ।</li>
+                  <li><strong>२. मानसिक तनाव र संवेग नियन्त्रण:</strong> दैनिक जीवनका चिन्ता र रिस/डर जस्ता संवेगहरूलाई योग, ध्यान र संवेग व्यवस्थापनका सीपमार्फत नियन्त्रण गरी मानसिक शान्ति दिन्छ।</li>
+                  <li><strong>३. दुर्व्यसन र अस्वस्थ बानीबाट मुक्ति:</strong> धूमपान, मद्यपान, लागुऔषध, र सामाजिक सञ्जालको लत जस्ता हानिकारक बानीहरूबाट टाढा रहने आत्मआलोचना र दृढता (Assertiveness) सिप प्रदान गर्छ।</li>
+                  <li><strong>४. शारीरिक व्यायाम र योग/ध्यानको बानी:</strong> शरीरलाई निरोगी र फुर्तिलो बनाउन नियमित शारीरिक अभ्यास, प्राणायाम र खेलकुदमा सहभागी हुने प्रेरणा दिन्छ।</li>
+                  <li><strong>५. समस्या र निर्णय क्षमताको विकास:</strong> स्वास्थ्य सम्बन्धी चुनौतीहरू आइपर्दा नआत्तिई सही समयमा उपयुक्त निर्णय लिन सक्षम बनाउँछ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः जीवनोपयोगी शिक्षाले ज्ञानलाई व्यावहारिक आचरणमा बदलेर व्यक्तिलाई दीर्घायु, निरोगी र ऊर्जावान् जीवनशैली अपनाउन सक्षम बनाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s2-q6" data-label="प्र.न. ६ : दैनिक जीवनमा जीवनोपयोगी शिक्षाको प्रयोग">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ६</span> तपाईंको दैनिक जीवनमा जीवनोपयोगी शिक्षाको प्रयोग र महत्त्वबारे चर्चा गर्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>एक विद्यार्थीका रूपमा मेरो दैनिक जीवनमा अध्ययन, पारिवारिक सम्बन्ध, साथीभाइसँगको अन्तरक्रिया र व्यक्तिगत तनाव व्यवस्थापनमा जीवनोपयोगी शिक्षाका सीपहरू अत्यन्तै व्यावहारिक र उपयोगी सिद्ध भएका छन्।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>मैले आफ्नो दैनिक जीवनमा जीवनोपयोगी शिक्षा प्रयोग गरेका मुख्य क्षेत्रहरू र सोको महत्त्व:</p>
+                <ul class="tick">
+                  <li><strong>समय र तनाव व्यवस्थापन (Time &amp; Stress Management):</strong> परीक्षाको बेला आत्तिनुको सट्टा समय तालिका बनाएर अध्ययन गर्छु र बिहान १० मिनेट प्राणायाम गर्छु, जसले मेरो परीक्षाको तनाव कम गरेको छ।</li>
+                  <li><strong>समालोचनात्मक चिन्तन (Critical Thinking):</strong> इन्टरनेट र सामाजिक सञ्जालमा आउने भ्रामक खबरहरूलाई सिधै पत्याउनुको सट्टा 'स्रोत के हो?' भनी सत्यता जाँचेर मात्र विश्वास गर्दछु।</li>
+                  <li><strong>समानुभूति र सुमधुर सम्बन्ध (Empathy &amp; Relationship):</strong> घरमा अभिभावकको समस्या वा कक्षामा साथी बिरामी पर्दा उनीहरूको भावना बुझेर सहयोग गर्छु, जसले गर्दा मेरो सामाजिक सम्बन्ध सुमधुर बनेको छ।</li>
+                  <li><strong>निर्णय निर्माण र सिर्जनात्मकता (Decision Making &amp; Creativity):</strong> फुर्सदको समयमा बेकार वस्तुहरूबाट उपयोगी सामान बनाउने (Upcycling) र अध्ययनमा आइपर्ने अप्ठ्याराहरूको नयाँ विकल्प खोज्ने गर्छु।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>यसरी जीवनोपयोगी शिक्षाले मलाई केवल परीक्षामा अङ्क ल्याउन मात्र नभई एक अनुशासित, विवेकशील र उत्तरदायी युवा बन्न निरन्तर मार्गदर्शन गरिरहेको छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s2-q7" data-label="प्र.न. ७ : संयुक्त अध्ययनले असल नागरिक निर्माण">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ७</span> सामाजिक अध्ययन र जीवनोपयोगी शिक्षाको संयुक्त अध्ययनले कसरी असल नागरिक निर्माण गर्न मद्दत गर्छ? <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>असल नागरिक त्यो हो जो आफ्नो अधिकारप्रति सचेत, कर्तव्यप्रति निष्ठावान्, नैतिकवान् र समाजको विकासमा योगदान दिन सक्षम हुन्छ। सामाजिक अध्ययन र जीवनोपयोगी शिक्षाको एकीकृत अध्ययनले असल नागरिक निर्माणको दरो आधार तयार पार्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>यी दुई विषयको संयुक्त अध्ययनले असल नागरिक बनाउन पुर्‍याउने योगदान:</p>
+                <ul class="tick">
+                  <li><strong>१. सामाजिक ज्ञान र चेतनाको अभिवृद्धि:</strong> सामाजिक अध्ययनले देशको संविधान, कानुन, इतिहास, भूगोल, अर्थतन्त्र र नागरिक कर्तव्यको ज्ञान दिन्छ, जसले नागरिकलाई सचेत बनाउँछ।</li>
+                  <li><strong>२. व्यावहारिक सीप र आचरणको विकास:</strong> जीवनोपयोगी शिक्षाले हासिल गरेको ज्ञानलाई समाजमा प्रयोग गर्ने सीप (सञ्चार, नेतृत्व, समस्या समाधान) र नैतिक आचरण सिकाउँछ।</li>
+                  <li><strong>३. लोकतान्त्रिक मूल्य र सहिष्णुताको प्रवर्धन:</strong> पूर्वीय र पाश्चात्य चिन्तनको अध्ययनबाट विविधताको सम्मान, धार्मिक सहिष्णुता र लोकतान्त्रिक संस्कारको विकास हुन्छ।</li>
+                  <li><strong>४. विवेकपूर्ण निर्णय र समालोचनात्मक सोच:</strong> समाजका कुरीति, भ्रष्टाचार र भ्रामक सूचना विरुद्ध आवाज उठाउन र सही निर्णय लिन नागरिकलाई सक्षम बनाउँछ।</li>
+                  <li><strong>५. सामाजिक सद्भाव र देशभक्ति:</strong> 'वसुधैव कुटुम्बकम्' र राष्ट्रियताको भावना जगाएर राष्ट्र निर्माणमा समर्पित हुन प्रेरित गर्छ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः सामाजिक अध्ययनले 'के गर्ने?' भन्ने सामाजिक ज्ञान दिन्छ भने जीवनोपयोगी शिक्षाले 'कसरी गर्ने?' भन्ने सीप दिन्छ; त्यसैले यी दुवैको संयुक्त अध्ययन असल नागरिक निर्माणको मेरुदण्ड हो।</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- ---------- SECTION 3 ---------- -->
+        <section class="sect s3" id="u1-s3" data-title="खण्ड ३ : विस्तृत उत्तर (८ अङ्क)">
+          <h2 class="sect-title"><span class="sicon">📚</span> खण्ड ३: विस्तृत उत्तरात्मक प्रश्नहरू</h2>
+          <p class="sect-meta">विस्तृत उत्तर: २५०–३०० शब्द | अङ्क भार: ८ × ५ = ४०</p>
+
+          <article class="qcard" id="u1-s3-q1" data-label="प्र.न. १ : सामाजिक अध्ययन र जीवनोपयोगी शिक्षाको अन्तरसम्बन्ध">
+            <h4 class="qtitle"><span class="qnum">प्र.न. १</span> सामाजिक अध्ययन र जीवनोपयोगी शिक्षाबीचको अन्तरसम्बन्धलाई उदाहरणसहित स्पष्ट पार्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>सामाजिक अध्ययन र जीवनोपयोगी शिक्षा मानव समाज र व्यक्तिको सर्वाङ्गीण विकासका लागि एकीकृत गरिएका दुई परिपूरक विषयहरू हुन्। सामाजिक अध्ययनले मानव र उसको भौतिक, सामाजिक, सांस्कृतिक तथा राजनीतिक वातावरणबिचको सम्बन्धको ज्ञान दिन्छ भने जीवनोपयोगी शिक्षाले सो ज्ञानलाई दैनिक जीवनमा प्रयोग गर्ने व्यावहारिक सीप र क्षमता प्रदान गर्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <div class="flow">
+                  <div class="flow-root">सक्षम र नैतिक असल नागरिक</div>
+                  <div class="flow-arrow">▲</div>
+                  <div class="flow-grid">
+                    <div class="flow-card fc1">
+                      <h5>सामाजिक अध्ययन</h5>
+                      <p>ज्ञान र चेतना — समाज, संस्कृति, कानुन, इतिहास र वातावरणको बोध</p>
+                    </div>
+                    <div class="flow-card fc2">
+                      <h5>जीवनोपयोगी शिक्षा</h5>
+                      <p>सीप र आचरण — सञ्चार, निर्णय, समानुभूति र तनाव व्यवस्थापन</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p><strong>सामाजिक अध्ययन र जीवनोपयोगी शिक्षाबिचको अन्तरसम्बन्धका मुख्य आयामहरू:</strong></p>
+
+                <ul class="tick">
+                  <li><strong>१. ज्ञान र सीपको परिपूरक सम्बन्ध:</strong> सामाजिक अध्ययनले समाजका विषयवस्तु, नियम, कानुन र वातावरणको 'ज्ञान' (Knowledge) दिन्छ। तर ज्ञान मात्र हुनु पर्याप्त छैन, त्यसलाई व्यवहारमा उतार्न 'सीप' (Skill) चाहिन्छ जुन जीवनोपयोगी शिक्षाले दिन्छ।
+                    <br><em><b>उदाहरण:</b> सामाजिक अध्ययनले "जातीय छुवाछूत र लैङ्गिक विभेद सामाजिक अपराध हो" भन्ने कानुनी ज्ञान दिन्छ भने जीवनोपयोगी शिक्षाको 'समानुभूति' (Empathy) र 'सञ्चार सिप' ले व्यक्तिलाई समाजमा विभेद विरुद्ध उभिन र सम्मानपूर्ण व्यवहार गर्न सिकाउँछ।</em></li>
+
+                  <li><strong>२. शिक्षण क्रियाकलापमा सहकार्य:</strong> सामाजिक अध्ययनका पाठ्यवस्तुहरू पढाउँदा प्रयोग गरिने परियोजना कार्य, क्षेत्र भ्रमण, समूह छलफल र नाटक प्रदर्शनीमा विद्यार्थीहरूले नेतृत्व, सहकार्य, समस्या समाधान र समालोचनात्मक चिन्तन जस्ता जीवनोपयोगी सीपहरू प्रत्यक्ष रूपमा अभ्यास गर्छन्।</li>
+
+                  <li><strong>३. दायित्व र कर्तव्यको व्यावहारिक पालना:</strong> सामाजिक अध्ययनले नागरिकका अधिकार र कर्तव्यको बोध गराउँछ। जीवनोपयोगी शिक्षाको 'आत्मबोध' र 'संवेग नियमन' ले नागरिकलाई अनुशासित भई सार्वजनिक सम्पत्तिको रक्षा गर्न र कर्तव्य पालना गर्न सक्षम बनाउँछ।</li>
+
+                  <li><strong>४. असल नागरिक निर्माणको साझा लक्ष्य:</strong> दुवै विषयको अन्तिम लक्ष्य समाजमा मेलमिलाप, सुशासन, दिगो विकास र शान्ति कायम गर्ने नैतिक र सक्षम नागरिक तयार गर्नु हो।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः सामाजिक अध्ययन विना जीवनोपयोगी शिक्षा दिशाहीन बन्छ भने जीवनोपयोगी शिक्षा विना सामाजिक अध्ययन सिद्धान्तमा मात्र सीमित हुन्छ। तसर्थ, यी दुवै विषय एक-अर्काका अभिन्न र अनिवार्य अङ्ग हुन्।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s3-q2" data-label="प्र.न. २ : 'ज्ञान बिनाको सीप र सीप बिनाको ज्ञान दुवै अपूर्ण'">
+            <h4 class="qtitle"><span class="qnum">प्र.न. २</span> 'ज्ञान बिनाको सीप र सीप बिनाको ज्ञान दुवै अपूर्ण हुन्छन्' — यस भनाइलाई सामाजिक अध्ययन र जीवनोपयोगी शिक्षाको सन्दर्भमा विश्लेषण गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>ज्ञान (Knowledge) ले विषयवस्तुको बुझाइ र सिद्धान्तलाई जनाउँछ भने सीप (Skill) ले सो ज्ञानलाई कार्यरूपमा उतार्ने क्षमतालाई जनाउँछ। मानव जीवनमा ज्ञान र सीप गाडीका दुई पाङ्ग्रा जस्तै हुन्; एउटाको अभावमा अर्को उपयोगी हुन सक्दैन। सामाजिक अध्ययन र जीवनोपयोगी शिक्षाको सन्दर्भमा यो भनाइ पूर्णतया सत्य र व्यावहारिक छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>१. 'सीप बिनाको ज्ञान अपूर्ण हुन्छ' (Knowledge without Skill is incomplete):</strong></p>
+                <ul class="tick">
+                  <li>सामाजिक अध्ययनले मानिसलाई समाज, इतिहास, भूगोल, वातावरण, राजनीति र कानुनी अधिकारका बारेमा प्रचुर ज्ञान दिन्छ।</li>
+                  <li>तर यदि व्यक्तिसँग सो ज्ञानलाई प्रयोग गर्ने जीवनोपयोगी सीप (जस्तै: सञ्चार, समस्या समाधान, निर्णय क्षमता) छैन भने त्यो ज्ञान सिद्धान्तमा मात्र सीमित हुन्छ।</li>
+                  <li><strong>उदाहरण:</strong> कसैलाई "वातावरण प्रदूषण रोक्नुपर्छ र फोहोर व्यवस्थापन गर्नुपर्छ" भन्ने पूर्ण ज्ञान छ, तर उसमा फोहोर वर्गीकरण गर्ने, मोहर बनाउने वा छमेकीलाई बुझाउने व्यावहारिक सीप र तत्परता छैन भने सो ज्ञानको कुनै व्यावहारिक उपयोगिता रहँदैन।</li>
+                </ul>
+
+                <p><strong>२. 'ज्ञान बिनाको सीप अपूर्ण हुन्छ' (Skill without Knowledge is incomplete):</strong></p>
+                <ul class="tick">
+                  <li>जीवनोपयोगी शिक्षाले मानिसलाई समालोचनात्मक चिन्तन, निर्णय क्षमता र तनाव व्यवस्थापनका सीपहरू सिकाउँछ।</li>
+                  <li>तर यदि व्यक्तिसँग सामाजिक परिवेश, कानुनी सीमा, र तथ्यहरूको सही ज्ञान (सामाजिक अध्ययनको ज्ञान) छैन भने उसको सीपको गलत प्रयोग हुन सक्छ वा नतिजा नकारात्मक आउन सक्छ।</li>
+                  <li><strong>उदाहरण:</strong> कसैमा 'प्रविधि प्रयोग गर्ने र मानिसलाई प्रभावित पार्ने' उच्च सीप छ, तर उसमा कानुनी र सामाजिक उत्तरदायित्वको ज्ञान छैन भने उसले सो सीपको दुरुपयोग गरी साइबर अपराध वा भ्रामक सूचना फैलाउन सक्छ।</li>
+                </ul>
+
+                <p><strong>३. ज्ञान र सीपको एकीकृत रूप: पूर्णता</strong></p>
+                <ul class="tick">
+                  <li>जब सामाजिक अध्ययनको 'ज्ञान' र जीवनोपयोगी शिक्षाको 'सीप' आपसमा जोडिन्छन्, तब मात्र व्यक्ति विवेकशील, उत्पादक र उपयोगी बन्छ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः ज्ञानले सही दिशा देखाउँछ भने सीपले गन्तव्यसम्म पुर्‍याउँछ। तसर्थ, सामाजिक अध्ययनको ज्ञान र जीवनोपयोगी शिक्षाको सीपको सन्तुलित प्रयोगबाट मात्र व्यक्ति र समाजको वास्तविक रूपान्तरण सम्भव छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s3-q3" data-label="प्र.न. ३ : पूर्वीय र पाश्चात्य चिन्तनको तुलना र उपयोगिता">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ३</span> पूर्वीय र पाश्चात्य चिन्तन परम्पराको तुलनात्मक अध्ययन गरी जीवनोपयोगी शिक्षामा यी चिन्तनको उपयोगिता प्रष्ट पार्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>मानव सभ्यताको विकाससँगै ज्ञान र जीवनशैलीका दुई प्रमुख दार्शनिक धाराहरू विकसित भए—पूर्वीय चिन्तन परम्परा (जसको जग अध्यात्म, नैतिकता र आन्तरिक शान्ति हो) र पाश्चात्य चिन्तन परम्परा (जसको जग तर्क, प्रविधि र भौतिक प्रगति हो)। आधुनिक जीवनोपयोगी शिक्षामा यी दुवै चिन्तनको अतुलनीय योगदान रहेको छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>पूर्वीय र पाश्चात्य चिन्तन परम्पराको तुलनात्मक तालिका:</strong></p>
+                <div class="table-wrap">
+                  <table class="tbl">
+                    <thead>
+                      <tr>
+                        <th>तुलनाको आधार</th>
+                        <th>पूर्वीय चिन्तन परम्परा (Eastern Tradition)</th>
+                        <th>पाश्चात्य चिन्तन परम्परा (Western Tradition)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>१. मुख्य केन्द्रविन्दु</td><td>आन्तरिक शान्ति, अध्यात्म, र आत्मबोध।</td><td>भौतिक विकास, प्रविधि, र तार्किक अनुसन्धान।</td></tr>
+                      <tr><td>२. जोड दिइएको पक्ष</td><td>कर्तव्य, धर्म, समूह/समुदाय र सहअस्तित्व।</td><td>अधिकार, वैयक्तिकता, र व्यक्तिगत स्वतन्त्रता।</td></tr>
+                      <tr><td>३. मुख्य दार्शनिक आधार</td><td>वेद, उपनिषद्, बौद्ध पञ्चशील, किरात/मुन्धुम।</td><td>सुकरात, प्लेटो, अरस्तुका तर्क र प्रबोधन युग।</td></tr>
+                      <tr><td>४. प्रकृतिसँगको सम्बन्ध</td><td>प्रकृतिलाई पूज्य मान्ने, पर्यावरणमैत्री।</td><td>प्रकृतिलाई उपयोग र नियन्त्रण गर्ने।</td></tr>
+                      <tr><td>५. मुख्य नतिजा</td><td>आत्मसंयम, योग, ध्यान र मानसिक सन्तुलन।</td><td>वैज्ञानिक आविष्कार, लोकतन्त्र र कानुनी शासन।</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p><strong>जीवनोपयोगी शिक्षामा यी दुवै चिन्तनको उपयोगिता:</strong></p>
+                <ul class="tick">
+                  <li><strong>पूर्वीय चिन्तनको उपयोगिता:</strong>
+                    <ul>
+                      <li><b>संवेग र तनाव व्यवस्थापन:</b> योग, ध्यान र प्राणायामले आधुनिक जीवनको मानसिक तनाव र चिन्ता कम गर्न मद्दत गर्छन्।</li>
+                      <li><b>नैतिकता र समानुभूति:</b> 'वसुधैव कुटुम्बकम्' र पञ्चशीलले मानिसमा दया, करुणा, र सामाजिक उत्तरदायित्व जगाउँछन्।</li>
+                      <li><b>६४ कलाको योगदान:</b> पूर्वीय ६४ कलाहरूले प्राचीन कालदेखि नै व्यावहारिक जीवनका सीपहरू सिकाउँदै आएका छन्।</li>
+                    </ul>
+                  </li>
+                  <li><strong>पाश्चात्य चिन्तनको उपयोगिता:</strong>
+                    <ul>
+                      <li><b>समालोचनात्मक र सिर्जनात्मक चिन्तन:</b> सुकरातको प्रश्नोत्तर विधि र आधुनिक वैज्ञानिक पद्धतिले अन्धविश्वास हटाई तार्किक निर्णय लिन सिकाउँछ।</li>
+                      <li><b>अधिकार र लोकतान्त्रिक सहभागिता:</b> नागरिक अधिकार, समानता र मानव अधिकारप्रति सचेत गराउँछ।</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः आधुनिक जीवनोपयोगी शिक्षाले पूर्वीय चिन्तनको 'नैतिकता र आन्तरिक शान्ति' तथा पाश्चात्य चिन्तनको 'वैज्ञानिकता र प्रविधि' लाई जोडेर 'वैश्विक समन्वय' (Glocalization) कायम गर्नुपर्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s3-q4" data-label="प्र.न. ४ : स्वस्थ जीवनशैलीमा जीवनोपयोगी शिक्षा (विस्तृत)">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ४</span> जीवनोपयोगी शिक्षाले कसरी व्यक्तिलाई स्वस्थ जीवनशैली अपनाउन मद्दत गर्छ? विस्तृत वर्णन गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>आधुनिक युगमा तीव्र यान्त्रिकता, व्यस्त दैनिकी, अस्वस्थ खानपान र अत्यधिक तनावका कारण मानिसहरू विभिन्न शारीरिक तथा मानसिक रोगको शिकार बनिरहेका छन्। यस्तो परिवेशमा जीवनोपयोगी शिक्षाले ज्ञान, सीप र आचरणमा परिवर्तन ल्याएर व्यक्तिलाई स्वस्थ जीवनशैली अपनाउन महत्त्वपूर्ण मार्गदर्शन गर्दछ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <div class="flow">
+                  <div class="flow-root">जीवनोपयोगी शिक्षा</div>
+                  <div class="flow-arrow">▼</div>
+                  <div class="flow-grid">
+                    <div class="flow-card fc1"><h5>१. शारीरिक स्वास्थ्य</h5><p>सन्तुलित आहार, व्यायाम, योग र अनुशासित दिनचर्या</p></div>
+                    <div class="flow-card fc2"><h5>२. मानसिक स्वास्थ्य</h5><p>ध्यान, तनाव व्यवस्थापन र सकारात्मक सोच</p></div>
+                    <div class="flow-card fc3"><h5>३. संवेगात्मक सन्तुलन</h5><p>रिस, डर र उत्तेजनाको नियन्त्रण तथा रूपान्तरण</p></div>
+                    <div class="flow-card fc1"><h5>४. सामाजिक स्वास्थ्य</h5><p>समानुभूति, सद्भाव, सरसफाइ र सहयोग</p></div>
+                  </div>
+                  <div class="flow-arrow">▼</div>
+                  <div class="flow-root" style="background:linear-gradient(135deg,#15803d,#22c55e);">💪 सम्पूर्ण स्वस्थ जीवनशैली</div>
+                </div>
+
+                <p><strong>जीवनोपयोगी शिक्षाले स्वस्थ जीवनशैलीमा पुर्‍याउने बहुआयामिक योगदान:</strong></p>
+
+                <ul class="tick">
+                  <li><strong>१. सन्तुलित आहार र खानपानको छनोट (Nutritional Awareness):</strong> पूर्वीय आचारविचार र आधुनिक पोषण विज्ञान अनुसार शरीरलाई आवश्यक पर्ने सात्त्विक र सन्तुलित भोजन छनोट गर्ने सीप दिन्छ। जङ्क फुड र प्रशोधित खानाको नकारात्मक असर बुझाएर ताजा र प्राकृतिक खानपानमा प्रेरित गर्छ।</li>
+
+                  <li><strong>२. तनाव र मानसिक स्वास्थ्य व्यवस्थापन (Mental Health Care):</strong> दैनिक जीवनमा आइपर्ने चिन्ता, निराशा र मानसिक दबाबलाई सुल्झाउन जीवनोपयोगी शिक्षाका 'तनाव व्यवस्थापन' र 'संवेग नियमन' सीपहरू उपयोगी हुन्छन्। नियमित योग, प्राणायाम र ध्यानका माध्यमबाट मनलाई शान्त र एकाग्र बनाउन सिकाउँछ।</li>
+
+                  <li><strong>३. दुर्व्यसन र हानिकारक बानीको त्याग (Prevention of Substance Abuse):</strong> धूमपान, मद्यपान, लागुऔषध र मोबाइल/सामाजिक सञ्जालको अत्यधिक लत जस्ता हानिकारक व्यवहारबाट बच्नका लागि दृढता (Assertiveness) र 'नाईँ भन्न सक्ने सीप' (Refusal Skills) विकास गर्छ।</li>
+
+                  <li><strong>४. नियमित शारीरिक व्यायाम र अनुशासन:</strong> शरीरलाई निरोगी बनाउन दैनिक शारीरिक श्रम, खेलकुद, र अनुशासित दिनचर्या (समयमै सुत्ने र उठ्ने) अपनाउने आचरण बसाल्छ।</li>
+
+                  <li><strong>५. समानुभूति र स्वस्थ सामाजिक सम्बन्ध:</strong> मानिस सामाजिक प्राणी भएकाले परिवार र समुदायमा सुमधुर सम्बन्ध रहँदा मानसिक प्रसन्नता मिल्छ। समानुभूति र प्रभावकारी सञ्चारले सामाजिक तनाव हटाउँछ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः जीवनोपयोगी शिक्षाले रोग लागिसकेपछि उपचार गर्नुभन्दा रोग लाग्नै नदिने 'रोकथामयुक्त' (Preventive) र सकारात्मक जीवनशैली निर्माण गरी निरोगी, दीर्घायु र सुखी जीवन जिउन मद्दत गर्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u1-s3-q5" data-label="प्र.न. ५ : ज्ञानलाई सीपमार्फत व्यवहारमा उतार्ने तरिका">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ५</span> सामाजिक अध्ययनले प्रदान गर्ने ज्ञानलाई जीवनोपयोगी सीपहरू प्रयोग गरेर दैनिक जीवनमा कसरी व्यवहारमा उतार्न सकिन्छ? उदाहरणसहित वर्णन गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>सामाजिक अध्ययनले मानिसलाई समाज, संस्कृति, कानुनी व्यवस्था, वातावरण र अर्थतन्त्रको गहन ज्ञान दिन्छ। यो ज्ञानलाई दिमागमा मात्र सीमित नराखी जीवनोपयोगी सीपहरू (समालोचनात्मक चिन्तन, सञ्चार, समानुभूति, निर्णय क्षमता) को प्रयोगमार्फत दैनिक व्यवहारमा उतार्दा मात्र अध्ययन सार्थक बन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>सामाजिक अध्ययनको ज्ञानलाई जीवनोपयोगी सीपमार्फत व्यवहारमा उतार्ने व्यावहारिक तरिकाहरू:</p>
+
+                <ul class="tick">
+                  <li><strong>१. नागरिक अधिकार र कर्तव्यको ज्ञान ➜ उत्तरदायी व्यवहार (सञ्चार र निर्णय सिप):</strong>
+                    <ul>
+                      <li><b>ज्ञान:</b> सामाजिक अध्ययनले नेपालको संविधान, नागरिक कर्तव्य र सरसफाइको महत्त्व सिकाउँछ।</li>
+                      <li><b>व्यवहारमा रूपान्तरण:</b> जीवनोपयोगी शिक्षाको 'निर्णय क्षमता' र 'नेतृत्व सिप' प्रयोग गरी आफ्नो टोलमा युवा क्लब गठन गरेर हप्ताको एक दिन सरसफाइ अभियान चलाउने र सार्वजनिक सम्पत्तिको रक्षा गर्ने।</li>
+                    </ul>
+                  </li>
+
+                  <li><strong>२. सामाजिक कुरीति र विभेदको ज्ञान ➜ समानुभूति र सामाजिक सुधार (समानुभूति सिप):</strong>
+                    <ul>
+                      <li><b>ज्ञान:</b> सामाजिक अध्ययनले छुवाछूत, छाउपडी र लैङ्गिक विभेद कानुनी र सामाजिक अपराध हो भन्ने ज्ञान दिन्छ।</li>
+                      <li><b>व्यवहारमा रूपान्तरण:</b> 'समानुभूति' (Empathy) सिप प्रयोग गरी घर र समुदायमा महिला, दलित वा फरक क्षमता भएका व्यक्तिहरूसँग बराबरीको सम्मानजनक व्यवहार गर्ने र कुरीति विरुद्ध सचेतना फैलाउने।</li>
+                    </ul>
+                  </li>
+
+                  <li><strong>३. वातावरणीय संरक्षण र जलवायु परिवर्तनको ज्ञान ➜ दिगो जीवनशैली (सिर्जनात्मक चिन्तन):</strong>
+                    <ul>
+                      <li><b>ज्ञान:</b> सामाजिक अध्ययनले वन विनाश र फोहोरका कारण वातावरणीय सङ्कट बढेको ज्ञान दिन्छ।</li>
+                      <li><b>व्यवहारमा रूपान्तरण:</b> 'सिर्जनात्मक चिन्तन' (Creative Thinking) प्रयोग गरी घरको जैविक फोहोरबाट कम्पोस्ट मल बनाउने, प्लाष्टिकको प्रयोग घटाउने र बोटबिरुवा रोप्ने।</li>
+                    </ul>
+                  </li>
+
+                  <li><strong>४. वित्तीय साक्षरता र अर्थतन्त्रको ज्ञान ➜ बजेट र बचत व्यवस्थापन (समस्या समाधान सिप):</strong>
+                    <ul>
+                      <li><b>ज्ञान:</b> सामाजिक अध्ययनले बैंक, बचत, कर र बजेटको ज्ञान दिन्छ।</li>
+                      <li><b>व्यवहारमा रूपान्तरण:</b> जीवनोपयोगी शिक्षाको 'समस्या समाधान' र 'आत्मनियमन' सिप प्रयोग गरी फजुल खर्च नियन्त्रण गर्ने र आफ्नो पकेट मनीको केही हिस्सा बचत गर्ने।</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>यसरी सामाजिक अध्ययनको सैद्धान्तिक ज्ञानलाई जीवनोपयोगी शिक्षाको सीपको साँचोमा ढालेर व्यवहारमा उतार्दा मात्र व्यक्ति एक परिपक्व, उत्तरदायी र व्यावहारिक रूपमा कुशल नागरिक बन्न सक्छ।</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ======================== UNIT 2 ============================ -->
+    <!-- ============================================================ -->
+    <section class="unit" id="unit2" data-unit="एकाइ २" data-sub="डिजिटल तथा अनुसन्धान सिपहरू">
+      <div class="unit-head">
+        <span class="badge">📑 एकाइ २</span>
+        <h2>डिजिटल तथा अनुसन्धान सिपहरू</h2>
+        <p>🎯 Digital Skills and General Research Skills — प्रश्न सङ्ग्रह पूर्ण समाधान</p>
+      </div>
+
+      <div class="unit-body">
+
+        <div class="infobox">
+          <h3>📘 विद्यार्थीहरूका लागि अध्ययन निर्देशिका</h3>
+          <ul>
+            <li><strong>सम्बन्धित एकाइ:</strong> एकाइ २ (डिजिटल तथा अनुसन्धान सिपहरू)।</li>
+            <li><strong>प्रस्तुति ढाँचा:</strong> ५ अङ्क र ८ अङ्कका उत्तरहरूलाई परीक्षाको तोकिएको मानक अनुसार अनिवार्य <strong>३-स्तरीय ढाँचा</strong> (📌 १. परिचय, 📊 २. विषय प्रवेश तथा मुख्य विश्लेषण, 🎯 ३. निष्कर्ष) मा विभाजन गरिएको छ।</li>
+            <li><strong>उद्देश्य:</strong> NEB बोर्ड परीक्षामा अति छोटो, छोटो र लामो प्रश्नहरू हल गर्दा उच्च अङ्क (High Score) प्राप्त गर्न सकिने गरी प्रामाणिक पाठ्यसामग्री (<code>Unit-2.pdf</code>) मा आधारित उत्तरहरू।</li>
+          </ul>
+        </div>
+
+        <!-- ---------- SECTION 1 ---------- -->
+        <section class="sect s1" id="u2-s1" data-title="खण्ड १ : अति संक्षिप्त (१ अङ्क)">
+          <h2 class="sect-title"><span class="sicon">📄</span> खण्ड १: अति संक्षिप्त उत्तरात्मक प्रश्नहरू</h2>
+          <p class="sect-meta">अति संक्षिप्त उत्तर: १०–२० शब्द | अङ्क भार: ८ × १ = ८</p>
+
+          <article class="qcard" id="u2-s1-q1" data-label="प्र.न. १ : अनुसन्धान भनेको के हो?">
+            <h4 class="qtitle"><span class="qnum">प्र.न. १</span> अनुसन्धान भनेको के हो? (एक वाक्यमा) <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>कुनै पनि सामाजिक समस्या, घटना वा क्षेत्रमा केन्द्रित भई नयाँ ज्ञानको खोज गर्न, समस्याको निकास निकाल्न वा स्थापित तथ्यहरूको पुनःपरीक्षण गर्न गरिने वस्तुगत, वैज्ञानिक र क्रमबद्ध अध्ययनलाई <strong>अनुसन्धान</strong> भनिन्छ।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s1-q2" data-label="प्र.न. २ : बौद्धिक चोरी भनेको के हो?">
+            <h4 class="qtitle"><span class="qnum">प्र.न. २</span> बौद्धिक चोरी (Plagiarism) भनेको के हो? <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>अरू कुनै व्यक्ति वा अनुसन्धानकर्ताको विचार, लेख, रचना, तथ्याङ्क वा सिर्जनालाई उसको अनुमति विना र स्रोत उल्लेख नगरी हुबहु नक्कल गरी आफ्नै रचनाका रूपमा प्रस्तुत गर्ने कार्यलाई <strong>बौद्धिक चोरी</strong> भनिन्छ।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s1-q3" data-label="प्र.न. ३ : अनुसन्धान प्रस्तावनाका दुई भाग">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ३</span> अनुसन्धान प्रस्तावनाको कुनै दुई भागहरूको नाम लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>अनुसन्धान प्रस्तावनाका कुनै दुई मुख्य भागहरू:</p>
+              <ol class="num">
+                <li><strong>समस्याको कथन (Statement of the Problem)</strong></li>
+                <li><strong>अध्ययनका उद्देश्यहरू (Research Objectives)</strong></li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s1-q4" data-label="प्र.न. ४ : तथ्याङ्क सङ्कलनका दुई प्राथमिक विधि">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ४</span> तथ्याङ्क सङ्कलनका कुनै दुई प्राथमिक विधिहरूको नाम लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>तथ्याङ्क सङ्कलनका दुई प्राथमिक विधिहरू:</p>
+              <ol class="num">
+                <li><strong>अन्तर्वार्ता विधि (Interview Method)</strong></li>
+                <li><strong>अवलोकन विधि (Observation Method)</strong></li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s1-q5" data-label="प्र.न. ५ : सहसम्बन्ध भनेको के हो?">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ५</span> सहसम्बन्ध (Correlation) भनेको के हो? <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>सामाजिक अध्ययनमा दुई वा दुईभन्दा बढी चरहरू (Variables) बिच कस्तो प्रकारको र कति परिमाणको गणितीय वा साङ्ख्यिकीय सम्बन्ध छ भनी मापन गर्ने विधि नै <strong>सहसम्बन्ध</strong> हो।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s1-q6" data-label="प्र.न. ६ : कार्यकारण सम्बन्ध भनेको के हो?">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ६</span> कार्यकारण सम्बन्ध (Causation) भनेको के हो? <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>एउटा चरमा आएको परिवर्तन वा घटना (कारण) ले अर्को चर वा नतिजामा प्रत्यक्ष रूपमा कस्तो प्रभाव (परिणाम) पार्छ भन्ने बिचको प्रत्यक्ष कार्य-कारण सम्बन्धलाई <strong>कार्यकारण सम्बन्ध</strong> भनिन्छ।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s1-q7" data-label="प्र.न. ७ : MS Excel का दुई प्रयोग">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ७</span> माइक्रोसफ्ट एक्सेलको कुनै दुई प्रयोगहरू लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>माइक्रोसफ्ट एक्सेल (MS Excel) का दुई मुख्य प्रयोगहरू:</p>
+              <ol class="num">
+                <li>सामाजिक तथ्याङ्कको मध्यक, मध्यिका र स्तरीय भिन्नता जस्ता साङ्ख्यिकीय मानहरू द्रुत रूपमा गणना गर्न।</li>
+                <li>तथ्याङ्कलाई स्तम्भचित्र (Bar Chart), वृत्तचित्र (Pie Chart) र तालिकामा रूपान्तरण गरी प्रस्तुत गर्न।</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s1-q8" data-label="प्र.न. ८ : नमुना अनुसन्धान शीर्षक">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ८</span> तपाईंलाई मन पर्ने एउटा विषयवस्तुको अनुसन्धान शीर्षक तयार पार्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p><strong>नमुना अनुसन्धान शीर्षक:</strong> <em>"काठमाडौँ उपत्यकामा कक्षा १२ का विद्यार्थीहरूमाझ सामाजिक सञ्जालको प्रयोग र यसको मानसिक स्वास्थ्यमा परेको प्रभाव: एक अध्ययन।"</em></p>
+            </div>
+          </article>
+        </section>
+
+        <!-- ---------- SECTION 2 ---------- -->
+        <section class="sect s2" id="u2-s2" data-title="खण्ड २ : संक्षिप्त उत्तर (५ अङ्क)">
+          <h2 class="sect-title"><span class="sicon">📝</span> खण्ड २: संक्षिप्त उत्तरात्मक प्रश्नहरू</h2>
+          <p class="sect-meta">संक्षिप्त उत्तर: १५०–२०० शब्द | अङ्क भार: ७ × ५ = ३५</p>
+
+          <article class="qcard" id="u2-s2-q1" data-label="प्र.न. १ : अनुसन्धान प्रस्तावनाको संरचना">
+            <h4 class="qtitle"><span class="qnum">प्र.न. १</span> अनुसन्धान प्रस्तावनाको संरचना वा भागहरूबारे वर्णन गर्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>कुनै पनि अनुसन्धान कार्य सुरु गर्नुभन्दा अगाडि सो अनुसन्धान कसरी, कुन विधिबाट र कति समयभित्र सम्पन्न गरिन्छ भनी तयार पारिने विस्तृत पूर्वयोजना वा नीलोनक्सा नै <strong>अनुसन्धान प्रस्तावना</strong> (Research Proposal) हो। यसले अनुसन्धानकर्तालाई निश्चित मार्गनिर्देशन प्रदान गर्दछ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>अनुसन्धान प्रस्तावनाका मुख्य ६ वटा संरचना वा भागहरू निम्नलिखित छन्:</p>
+                <ul class="tick">
+                  <li><strong>१. परिचय तथा पृष्ठभूमि (Introduction &amp; Background):</strong> यस खण्डमा अध्ययन गर्न खोजिएको विषयको सामान्य परिचय, यसको ऐतिहासिक पृष्ठभूमि र अनुसन्धानको औचित्य खुलाइन्छ।</li>
+                  <li><strong>२. समस्याको कथन (Statement of the Problem):</strong> अनुसन्धानमा अध्ययन गर्न लागिएको मूल समस्या के हो र सो समस्या समाधान गर्न कस्ता अनुसन्धान प्रश्नहरू (Research Questions) सोधिनेछन् भनी स्पष्ट पारिन्छ।</li>
+                  <li><strong>३. अध्ययनका उद्देश्यहरू (Objectives of the Study):</strong> अनुसन्धानले प्राप्त गर्न खोजेका मुख्य र विशिष्ट लक्ष्यहरू बुँदागत रूपमा तोकिन्छ।</li>
+                  <li><strong>४. साहित्य पुनरावलोकन (Literature Review):</strong> सम्बन्धित विषयमा पहिले भएका अध्ययन, पुस्तक र प्रतिवेदनहरूको समीक्षा गरी अनुसन्धानमा हुन सक्ने दोहोरोपना हटाइन्छ।</li>
+                  <li><strong>५. अध्ययन विधि (Research Methodology):</strong> तथ्याङ्कका स्रोतहरू (प्राथमिक र द्वितीयक), तथ्याङ्क सङ्कलनका साधनहरू (प्रश्नावली, अन्तर्वार्ता) र विश्लेषण गर्ने विधिको उल्लेख गरिन्छ।</li>
+                  <li><strong>६. सन्दर्भ सामग्री (References):</strong> प्रस्तावना तयार पार्दा प्रयोग गरिएका बाह्य स्रोतहरूको प्रामाणिक सूची (APA/MLA ढाँचामा) प्रस्तुत गरिन्छ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः यी अङ्गहरूले अनुसन्धान प्रस्तावनालाई सुव्यवस्थित र स्पष्ट बनाउँछन्, जसले अनुसन्धान कार्यलाई निर्धारित समय र उद्देश्यभित्र सम्पन्न गर्न मद्दत गर्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s2-q2" data-label="प्र.न. २ : बौद्धिक चोरी र बच्ने उपाय">
+            <h4 class="qtitle"><span class="qnum">प्र.न. २</span> बौद्धिक चोरी (Plagiarism) भनेको के हो? यसबाट बच्ने उपायहरू लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>अरू कुनै व्यक्ति वा संस्थाले सिर्जना गरेको विचार, तथ्याङ्क, लेख वा सामग्रीलाई स्रोतको नाम उल्लेख नगरी हुबहु सारेर आफ्नै रचनाका रूपमा दाबी गर्नु <strong>बौद्धिक चोरी</strong> (Plagiarism) हो। यो बौद्धिक सम्पत्ति अधिकारको उल्लङ्घन र गम्भीर प्राज्ञिक अपराध हो।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>बौद्धिक चोरी जानाजानी (Intentional) वा अन्जानमा (Accidental) हुन सक्छ। यसबाट बच्नका लागि निम्नलिखित ५ वटा उपायहरू अपनाउनुपर्छ:</p>
+
+                <div class="flow">
+                  <div class="flow-root">बौद्धिक चोरीबाट बच्ने उपायहरू</div>
+                  <div class="flow-arrow">▼</div>
+                  <div class="flow-grid">
+                    <div class="flow-card fc1"><h5>१. उपयुक्त स्रोत उद्धरण</h5><p>APA / MLA ढाँचामा लेखक, वर्ष र पृष्ठ नम्बर उल्लेख गर्ने</p></div>
+                    <div class="flow-card fc2"><h5>२. पुनर्लेखन</h5><p>आफ्नै शब्दमा Paraphrasing र Summarizing गर्ने</p></div>
+                    <div class="flow-card fc3"><h5>३. उद्धरण चिन्ह</h5><p>हुबहु सार्दा "..." भित्र राखी स्रोत जनाउने</p></div>
+                    <div class="flow-card fc1"><h5>४. सन्दर्भ सूची</h5><p>अन्त्यमा प्रयोग गरिएका सबै स्रोतको सूची राख्ने</p></div>
+                    <div class="flow-card fc2"><h5>५. प्लेजरिजम चेकर</h5><p>Turnitin / DupliChecker मार्फत जाँच गर्ने</p></div>
+                  </div>
+                </div>
+
+                <ul class="tick">
+                  <li><strong>१. उपयुक्त स्रोत उद्धरण (Proper Citation):</strong> अरूको कुनै पनि भनाइ, विचार वा तथ्याङ्क प्रयोग गर्दा लेखकको नाम, वर्ष र पृष्ठ नम्बर अनिवार्य रूपमा उद्धरण (Cite) गर्नुपर्छ।</li>
+                  <li><strong>२. पुनर्लेखन र संक्षेपीकरण (Paraphrasing &amp; Summarizing):</strong> अरूका सामग्री बुझेर त्यसको मूल मर्म नबिल्किने गरी आफ्नै शब्द र शैलीमा रूपान्तरण गरी लेख्नुपर्छ।</li>
+                  <li><strong>३. उद्धरण चिन्हको प्रयोग ("..."):</strong> अरूको भनाइ वा वाक्य हुबहु सार्नुपरेमा त्यसलाई उद्धरण चिन्ह भित्र राखेर स्रोत जनाउनुपर्छ।</li>
+                  <li><strong>४. सन्दर्भ सामग्रीको सूची (References):</strong> अध्ययन प्रतिवेदनको अन्त्यमा प्रयोग गरिएका सम्पूर्ण पुस्तक, जर्नल र वेबसाइटको पूर्ण विवरण सूचीकृत गर्नुपर्छ।</li>
+                  <li><strong>५. प्लेजरिजम चेकर सफ्टवेयरको प्रयोग:</strong> प्रतिवेदन बुझाउनु अघि Turnitin वा DupliChecker जस्ता सफ्टवेयरमार्फत जाँच गरी गल्ती सच्याउनुपर्छ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः बौद्धिक चोरीबाट बच्ने उपायहरूको पालनाले अनुसन्धानकर्ताको प्राज्ञिक निष्ठा कायम राख्नुका साथै प्रतिलिपि अधिकार ऐन, २०५९ को दण्ड-सजायबाट बचाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s2-q3" data-label="प्र.न. ३ : सहसम्बन्ध र कार्यकारण सम्बन्ध">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ३</span> सामाजिक अध्ययनमा सहसम्बन्ध (Correlation) तथा कार्यकारण (Causality) सम्बन्धको अवधारणा स्पष्ट पार्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>सामाजिक अध्ययनमा विभिन्न सामाजिक घटना, व्यवहार र परिघटनाहरूबिचको सम्बन्ध अध्ययन गर्न चरहरूको प्रयोग गरिन्छ। यस्ता चरहरूबिचको सम्बन्धको प्रकृति बुझ्न सहसम्बन्ध (Correlation) र कार्यकारण सम्बन्ध (Causality) दुई महत्त्वपूर्ण तथ्याङ्कशास्त्रीय अवधारणाहरू हुन्।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>१. सहसम्बन्ध (Correlation):</strong></p>
+                <ul class="tick">
+                  <li><strong>अवधारणा:</strong> दुई वा सोभन्दा बढी चरहरू (Variables) बिच कस्तो प्रकारको सम्बन्ध छ भनी मापन गर्ने गणितीय आधार सहसम्बन्ध हो।</li>
+                  <li><strong>प्रकार:</strong> सहसम्बन्ध सकारात्मक (+), नकारात्मक (−) वा शून्य (०) हुन सक्छ। उदाहरणका लागि, अध्ययन गर्ने समय र परीक्षाको प्राप्ताङ्कबारे सकारात्मक सहसम्बन्ध हुन्छ।</li>
+                  <li><strong>सीमा:</strong> सहसम्बन्धले दुई चरबिच सम्बन्ध छ भन्ने मात्र देखाउँछ, तर एउटाले गर्दा अर्को भएको हो भनी दाबी गर्दैन।</li>
+                </ul>
+
+                <p><strong>२. कार्यकारण सम्बन्ध (Causality):</strong></p>
+                <ul class="tick">
+                  <li><strong>अवधारणा:</strong> एउटा चरमा आएको परिवर्तनले अर्को चरमा प्रत्यक्ष असर वा नतिजा ल्याउँछ भने त्यसलाई कार्यकारण सम्बन्ध भनिन्छ।</li>
+                  <li><strong>सर्त:</strong> यसमा एउटा चर 'कारण' (Independent Variable) र अर्को चर 'परिणाम' (Dependent Variable) हुन्छ। उदाहरणका लागि, अत्यधिक धूमपान (कारण) ले फोक्सोको क्यान्सर (परिणाम) निम्त्याउनु।</li>
+                </ul>
+
+                <p><strong>दुईबिचको तुलनात्मक भिन्नता:</strong></p>
+                <div class="table-wrap">
+                  <table class="tbl">
+                    <thead>
+                      <tr><th>आधार</th><th>सहसम्बन्ध (Correlation)</th><th>कार्यकारण सम्बन्ध (Causality)</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>अर्थ</td><td>दुई चरबिचको सह-सम्बन्ध वा दिशा देखाउँछ।</td><td>कारण र परिणामबिचको प्रत्यक्ष सम्बन्ध देखाउँछ।</td></tr>
+                      <tr><td>सम्बन्ध</td><td>सबै सहसम्बन्ध कार्यकारण नहुन सक्छन्।</td><td>प्रत्येक कार्यकारण सम्बन्धमा सहसम्बन्ध अनिवार्य हुन्छ।</td></tr>
+                      <tr><td>उदाहरण</td><td>आइसक्रिम बिक्री र पौडी खेल्ने दर।</td><td>भारी वर्षा र बाढी आउनु।</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः सामाजिक अनुसन्धानमा चरहरूबिच केवल सम्बन्ध मात्र छ कि एउटाले अर्कोलाई प्रत्यक्ष असर पारेको छ भनी छुट्याउन यी दुवै अवधारणाको ज्ञान अपरिहार्य हुन्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s2-q4" data-label="प्र.न. ४ : तथ्याङ्क प्रशोधनमा MS Excel को प्रयोग">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ४</span> तथ्याङ्क प्रशोधन र विश्लेषणमा माइक्रोसफ्ट एक्सेलको प्रयोगबारे संक्षिप्त टिप्पणी लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>माइक्रोसफ्ट एक्सेल (MS Excel) एक कम्प्युटर स्प्रेडसिट (Spreadsheet) सफ्टवेयर हो। सामाजिक अध्ययन र अनुसन्धानका क्रममा सङ्कलन गरिएका ठुला परिमाणात्मक तथ्याङ्कहरूलाई व्यवस्थित गर्न, प्रशोधन गर्न र साङ्ख्यिकीय विश्लेषण गर्न एक्सेलको व्यापक प्रयोग गरिन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>तथ्याङ्क प्रशोधन र विश्लेषणमा MS Excel का मुख्य प्रयोग र फाइदाहरू:</p>
+                <ul class="tick">
+                  <li><strong>१. तथ्याङ्क प्रविष्टि र व्यवस्थापन (Data Entry &amp; Sorting):</strong> रो (Rows) र कोलम (Columns) को रूपमा बनेका सेलहरूमा तथ्याङ्क सजिलै प्रविष्टि गर्न, अकारादि (Alphabetical) वा क्रमबद्ध (Sorting/Filtering) रूपमा मिलाउन सकिन्छ।</li>
+                  <li><strong>२. साङ्ख्यिकीय गणना (Statistical Calculations):</strong> एक्सेलमा सूत्र (Formulas) प्रयोग गरी मध्यक (<code>=AVERAGE</code>), मध्यिका (<code>=MEDIAN</code>), रित (<code>=MODE</code>), र स्तरीय भिन्नता (<code>=STDEV</code>) जस्ता जटिल गणनाहरू सेकेन्डभरमै गर्न सकिन्छ।</li>
+                  <li><strong>३. चित्रात्मक प्रस्तुतीकरण (Data Visualization):</strong> सङ्कलित तथ्याङ्कलाई एकै क्लिकमा स्तम्भचित्र (Bar Chart), वृत्तचित्र (Pie Chart), र रेखाचित्र (Line Chart) मा ढालेर आकर्षक रूपमा प्रस्तुत गर्न सकिन्छ।</li>
+                  <li><strong>४. गल्तीको सजिलो सुधार:</strong> गणितीय सूत्रहरू आफैँ अद्यावधिक (Auto-update) हुने भएकाले तथ्याङ्क फेरिँदा पुनः गणना गरिरहनु पर्दैन।</li>
+                  <li><strong>५. समय र श्रमको बचत:</strong> हजारौँ उत्तरदाताका तथ्याङ्कहरूलाई हातैले हिसाब गर्नुको सट्टा सफ्टवेयरमार्फत त्रुटिरहित ढङ्गले प्रशोधन गर्न सकिन्छ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः आधुनिक अनुसन्धानमा एमएस एक्सेल एक सर्वसुलभ, उपयोगी र भरपर्दो प्रविधि हो, जसले तथ्याङ्क विश्लेषणलाई छिटो र प्रमाणिक बनाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s2-q5" data-label="प्र.न. ५ : शाब्दिक जानकारी प्रस्तुत गर्ने तरिका">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ५</span> शाब्दिक जानकारीलाई प्रस्तुत गर्ने तरिकाहरू के के हुन्? वर्णन गर्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>अनुसन्धान र प्रतिवेदन लेखनका क्रममा सङ्कलित गुणात्मक वा परिमाणात्मक तथ्यहरूलाई पाठकले सजिलै बुझ्न सक्ने गरी शब्द, वाक्य र तालिकाका माध्यमबाट व्यक्त गर्नु नै <strong>शाब्दिक जानकारीको प्रस्तुतीकरण</strong> हो।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>शाब्दिक जानकारीलाई मुख्यतया निम्नलिखित तरिकाहरूबाट प्रस्तुत गरिन्छ:</p>
+                <ul class="tick">
+                  <li><strong>१. संक्षिप्त र कसिलो अनुच्छेद लेखन (Textual/Paragraph Presentation):</strong> सङ्कलित तथ्यहरूलाई आलङ्कारिक र जटिल भाषा प्रयोग नगरी सरल, शुद्ध र स्पष्ट अनुच्छेदमा वर्णन गरिन्छ। यसमा विषयको मर्म र नतिजालाई सोझै लेखिन्छ।</li>
+                  <li><strong>२. बुँदागत प्रस्तुतीकरण (Bullet Point Format):</strong> लामा-लामा विवरणहरूलाई पाठकको ध्यान आकर्षित गर्न र याद गर्न सजिलो हुने गरी छोटो र प्रभावकारी बुँदाहरूमा विभाजन गरी प्रस्तुत गरिन्छ।</li>
+                  <li><strong>३. तालिका (Tabular Presentation):</strong> परिमाणात्मक तथ्याङ्क वा तुलनात्मक शाब्दिक जानकारीलाई रो र कोलम भएको तालिकामा शीर्षक, सङ्केत र एकाइसहित प्रस्तुत गरिन्छ।</li>
+                  <li><strong>४. पादटिप्पणी र अन्त्य टिप्पणी (Footnote &amp; Endnote):</strong> पाठभित्र आएका अप्ठ्यारा शब्द वा स्रोतको थप व्याख्या गर्न पृष्ठको तल्लो भाग (Footnote) वा प्रतिवेदनको अन्त्यमा (Endnote) टिप्पणी लेखिन्छ।</li>
+                  <li><strong>५. प्राविधिक शब्दावली सूची (Glossary):</strong> प्रतिवेदनमा प्रयोग भएका कठिन वा विशिष्ट प्राविधिक शब्दहरूको अर्थ स्पष्ट पार्न वर्णानुक्रम अनुसार शब्दकोश सूची राखिन्छ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः शाब्दिक जानकारीलाई दोहोरो अर्थ नलाग्ने गरी स्पष्ट र आकर्षक ढाँचामा प्रस्तुत गर्नाले प्रतिवेदनको प्राज्ञिक स्तर र पठनीयता अभिवृद्धि हुन्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s2-q6" data-label="प्र.न. ६ : अनुसन्धानका विधिहरू">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ६</span> अनुसन्धानका विभिन्न विधिहरूको नाम र संक्षिप्त परिचय दिनुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>सामाजिक अध्ययनमा अनुसन्धानको प्रकृति, उद्देश्य र उपलब्ध स्रोतसाधनका आधारमा तथ्याङ्क सङ्कलन र विश्लेषण गर्न फरक-फरक विधिहरू प्रयोग गरिन्छ। यी विधिहरूले अनुसन्धानलाई वस्तुगत र प्रमाणिक बनाउँछन्।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>सामाजिक अनुसन्धानका प्रमुख विधिहरू र तिनको परिचय:</p>
+                <ul class="tick">
+                  <li><strong>१. सर्वेक्षण विधि (Survey Method):</strong> ठुलो जनसङ्ख्या वा भूगोलबाट प्रतिनिधिमुलक नमुना (Sample) छनोट गरी प्रश्नावली वा अन्तर्वार्तामार्फत परिमाणात्मक तथ्याङ्क सङ्कलन गर्ने सबैभन्दा बढी प्रचलित विधि।</li>
+                  <li><strong>२. प्रयोग विधि (Experimental Method):</strong> नियन्त्रित वातावरणमा एउटा चरलाई हेरफेर (Manipulate) गरी अर्को चरमा परेको प्रभाव अध्ययन गरिने वैज्ञानिक विधि।</li>
+                  <li><strong>३. क्षेत्र अवलोकन विधि (Field Observation Method):</strong> अनुसन्धानकर्ता आफैँ अध्ययन स्थलमा पुगेर प्रत्यक्ष वा अप्रत्यक्ष रूपमा घटना वा व्यवहारको अवलोकन गरी रुजुसूची (Checklist) मा टिपोट गर्ने विधि।</li>
+                  <li><strong>४. अन्तर्वार्ता विधि (Interview Method):</strong> अनुसन्धानकर्ता र उत्तरदाताबिच आमनेसामने वा डिजिटल माध्यमबाट संवाद गरी गुणात्मक तथ्याङ्क र विचार सङ्कलन गर्ने विधि।</li>
+                  <li><strong>५. केस स्टडी / घटना अध्ययन (Case Study Method):</strong> कुनै एक व्यक्ति, संस्था, घटना वा समुदायको गहिराइमा पुगेर विस्तृत र सघन अध्ययन गर्ने गुणात्मक विधि।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अनुसन्धानकर्ताले आफ्नो अनुसन्धान प्रश्नको आवश्यकता अनुसार उपयुक्त विधि छनोट गरी वा मिश्रित विधि (Mixed Method) अपनाई अध्ययन पूरा गर्नुपर्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s2-q7" data-label="प्र.न. ७ : स्तम्भ चित्र, वृत्त चित्र र फ्लोचार्ट">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ७</span> स्तम्भ चित्र, वृत्त चित्र र फ्लोचार्ट बनाउने तरिकाबारे संक्षेपमा लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>जटिल र लामा साङ्ख्यिकीय तथ्याङ्कहरूलाई पाठकले एकै नजरमा सजिलै बुझ्न सक्ने गरी आकर्षक रूपमा ढाल्नु नै <strong>चित्रात्मक प्रस्तुतीकरण</strong> (Visual Presentation) हो। सामाजिक अध्ययनमा स्तम्भ चित्र, वृत्त चित्र र फ्लोचार्टको व्यापक प्रयोग हुन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>१. स्तम्भ चित्र (Bar Chart) बनाउने तरिका:</strong></p>
+                <ul class="tick">
+                  <li><strong>परिभाषा:</strong> परिमाणात्मक तथ्याङ्कको तुलना गर्न तेर्सो वा ठाडो आयताकार स्तम्भहरू प्रयोग गरिने चित्र।</li>
+                  <li><strong>बनाउने तरिका:</strong> ग्राफ पेपर वा कम्प्युटरमा X-अक्ष (आधार) र Y-अक्ष (मान) खिच्ने। X-अक्षमा वर्ग वा चर (जस्तै वर्ष वा देश) र Y-अक्षमा बराबर नापको पारिमाण राखेर उही चौडाइका स्तम्भहरू खिच्ने।</li>
+                </ul>
+
+                <p><strong>२. वृत्त चित्र / पाइ चार्ट (Pie Chart) बनाउने तरिका:</strong></p>
+                <ul class="tick">
+                  <li><strong>परिभाषा:</strong> कुल १००% मान वा ३६०° को वृत्तलाई विभिन्न खण्ड वा प्रतिशतमा विभाजन गरी प्रस्तुत गरिने चित्र।</li>
+                  <li><strong>बनाउने तरिका:</strong> सङ्कलित तथ्याङ्कका अंशहरूलाई डिग्रीमा रूपान्तरण गर्ने (अंश = (मान ÷ कुल मान) × ३६०°)। त्यसपछि ३६०° को वृत्त खिची भित्री कोण (Protractor) को सहायताले अंश अनुसारका क्षेत्रहरू (Slices) विभाजन गरी फरक रङ वा छायाँ भर्ने।</li>
+                </ul>
+
+                <p><strong>३. फ्लोचार्ट (Flowchart) बनाउने तरिका:</strong></p>
+                <ul class="tick">
+                  <li><strong>परिभाषा:</strong> कुनै पनि कार्यप्रक्रिया, चरण वा प्रणालीको क्रमिक प्रवाह दर्शाउन प्रयोग गरिने साङ्केतिक चित्र।</li>
+                  <li><strong>बनाउने तरिका:</strong> सुरु र अन्त्यका लागि अण्डाकार (Oval), प्रक्रियाका लागि आयत (Rectangle), र निर्णयका लागि हिरा (Diamond) आकारका सङ्केतहरू प्रयोग गरी तीर चिन्ह (Arrows) ले क्रमिक रूपमा जोड्ने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>यी चित्रात्मक साधनहरूले तथ्याङ्कलाई सरल, आकर्षक र तुलनायोग्य बनाउँछन्, जसले प्रतिवेदनको गुणस्तर बढाउँछ।</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- ---------- SECTION 3 ---------- -->
+        <section class="sect s3" id="u2-s3" data-title="खण्ड ३ : विस्तृत उत्तर (८ अङ्क)">
+          <h2 class="sect-title"><span class="sicon">📚</span> खण्ड ३: विस्तृत उत्तरात्मक प्रश्नहरू</h2>
+          <p class="sect-meta">विस्तृत उत्तर: २५०–३०० शब्द | अङ्क भार: ५ × ८ = ४०</p>
+
+          <article class="qcard" id="u2-s3-q1" data-label="प्र.न. १ : अनुसन्धान प्रस्तावना तयार पार्ने प्रक्रिया">
+            <h4 class="qtitle"><span class="qnum">प्र.न. १</span> सामाजिक अध्ययनमा अनुसन्धान प्रस्तावना तयार पार्ने प्रक्रियाको विस्तृत वर्णन गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>अनुसन्धान प्रस्तावना (Research Proposal) भनेको मूल अनुसन्धान सुरु गर्नुअघि तयार पारिने प्राज्ञिक र व्यवस्थित नीलोनक्सा (Blueprint) हो। यसले अनुसन्धानको लक्ष्य, औचित्य, अपनाइने विधि र सम्भावित नतिजाको रूपरेखा प्रस्तुत गर्छ। अध्ययनलाई दिशानिर्देश गर्न अनुसन्धान प्रस्तावना तयार पार्ने निश्चित प्रक्रिया हुन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>सामाजिक अध्ययनमा अनुसन्धान प्रस्तावना तयार पार्ने क्रमिक प्रक्रियाहरू निम्नलिखित छन्:</p>
+
+                <div class="steps">
+                  <div class="step"><div class="n">१</div><div class="t"><b>शीर्षक छनोट तथा समस्या पहिचान</b> अनुसन्धानकर्ताले समाजका लागि उपयोगी, नयाँ र आफ्नो क्षमताभित्रको विषय छनोट गर्छ। त्यसपछि अनुसन्धानले सम्बोधन गर्न खोजेको मुख्य समस्या र अनुसन्धान प्रश्नहरू (Research Questions) प्रस्ट रूपमा लेखिन्छ।</div></div>
+                  <div class="step"><div class="n">२</div><div class="t"><b>अध्ययनका उद्देश्य निर्धारण</b> अध्ययनले के प्राप्त गर्न खोजेको हो भनी मुख्य उद्देश्य (General Objective) र ३–४ वटा विशिष्ट उद्देश्यहरू (Specific Objectives) स्पष्ट रूपमा तोकिन्छ।</div></div>
+                  <div class="step"><div class="n">३</div><div class="t"><b>साहित्य पुनरावलोकन</b> छनोट गरिएको विषयमा पहिले भएका अध्ययन, प्रकाशित पुस्तक, जर्नल र सरकारी प्रतिवेदनहरूको अध्ययन गरी विद्यमान ज्ञानको ग्याप (Knowledge Gap) पत्ता लगाइन्छ।</div></div>
+                  <div class="step"><div class="n">४</div><div class="t"><b>अध्ययन पद्धतिको प्रारूप</b> तथ्याङ्कका स्रोत (प्राथमिक/द्वितीयक), नमुना छनोट (Sampling), सङ्कलनका साधन (प्रश्नावली, रुजुसूची, अन्तर्वार्ता) र विश्लेषण विधि (MS Excel/SPSS वा गुणात्मक) उल्लेख गरिन्छ।</div></div>
+                  <div class="step"><div class="n">५</div><div class="t"><b>समय तालिका र बजेट अनुमान</b> अनुसन्धानका विभिन्न चरणहरू पूरा गर्न लाग्ने समय (Gantt Chart) र लाग्ने सम्भावित खर्चको अनुमानित तालिका बनाइन्छ।</div></div>
+                  <div class="step"><div class="n">६</div><div class="t"><b>सन्दर्भ सामग्रीको सूची</b> प्रस्तावनामा उल्लेख गरिएका सबै बाह्य स्रोतहरूलाई APA वा MLA ढाँचामा वर्णानुक्रम अनुसार अन्त्यमा राखिन्छ।</div></div>
+                </div>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः अनुसन्धान प्रस्तावना तयार पार्ने यो क्रमबद्ध प्रक्रियाले अनुसन्धानलाई निरर्थक भौँतारिनबाट बचाई निश्चित समय र बजेटभित्र गुणस्तरीय नतिजा हासिल गर्न सक्षम बनाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s3-q2" data-label="प्र.न. २ : तथ्याङ्क र सूचना सङ्कलनका विधि र साधनको तुलना">
+            <h4 class="qtitle"><span class="qnum">प्र.न. २</span> सामाजिक तथ्याङ्क र सूचना सङ्कलनका विभिन्न विधि र साधनहरूको तुलनात्मक विश्लेषण गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>सामाजिक अनुसन्धानमा समाज, मानिसका व्यवहार, विचार र सामाजिक परिघटनासँग सम्बन्धित तथ्यहरू सङ्कलन गर्न विभिन्न विधि र साधनहरूको प्रयोग गरिन्छ। सङ्कलित तथ्याङ्कको शुद्धता र अनुसन्धानको सफलता प्रयोग गरिएका विधि र साधनको छनोटमा निर्भर हुन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>(क) तथ्याङ्क सङ्कलनका दुई मुख्य स्रोत/विधिहरू:</strong></p>
+                <ol class="num">
+                  <li><strong>प्राथमिक विधि (Primary Data Collection):</strong> अनुसन्धानकर्ता आफैँ क्षेत्रमा पुगेर उत्तरदाताबाट सिधै नयाँ र ताजा तथ्याङ्क सङ्कलन गर्ने विधि (जस्तै: सर्वेक्षण, अन्तर्वार्ता)।</li>
+                  <li><strong>द्वितीयक विधि (Secondary Data Collection):</strong> अरू कसैले पहिले नै सङ्कलन गरी प्रकाशन गरेका पुस्तक, प्रतिवेदन, वा इन्टरनेटबाट तथ्याङ्क लिने विधि।</li>
+                </ol>
+
+                <p><strong>(ख) तथ्याङ्क सङ्कलनका मुख्य साधनहरूको तुलनात्मक विश्लेषण:</strong></p>
+                <div class="table-wrap">
+                  <table class="tbl">
+                    <thead>
+                      <tr>
+                        <th>सङ्कलन साधन</th>
+                        <th>मुख्य विशेषता र प्रयोग</th>
+                        <th>सबल पक्ष (फाइदा)</th>
+                        <th>कमजोर पक्ष (सिमाना)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>प्रश्नावली (Questionnaire)</td>
+                        <td>लिखित प्रश्नहरूको सेट, उत्तरदाता आफैँले भर्ने वा गुगल फर्ममार्फत पठाइने।</td>
+                        <td>• कम समय र खर्चमा धेरै तथ्याङ्क।<br>• गोपनियता कायम रहने।</td>
+                        <td>• निरक्षर व्यक्तिमा प्रयोग गर्न नसकिने।<br>• नफर्कने वा आधा छाड्ने जोखिम।</td>
+                      </tr>
+                      <tr>
+                        <td>अन्तर्वार्ता (Interview Guide)</td>
+                        <td>अनुसन्धानकर्ता र उत्तरदाताबिच आमनेसामने वा फोनमा प्रत्यक्ष प्रश्नोत्तर।</td>
+                        <td>• निरक्षर व्यक्तिबाट पनि तथ्याङ्क पाइने।<br>• गहिरो र गुणात्मक विवरण प्राप्त हुने।</td>
+                        <td>• बढी खर्चिलो र समय लाग्ने।<br>• अनुसन्धानकर्ताको व्यक्तिगत पूर्वाग्रह पर्न सक्ने।</td>
+                      </tr>
+                      <tr>
+                        <td>अवलोकन रुजुसूची (Observation Checklist)</td>
+                        <td>अध्ययन स्थलमा पुगेर व्यवहार र घटनाको प्रत्यक्ष अवलोकन गरी टिपोट गर्ने।</td>
+                        <td>• वास्तविक र प्रत्यक्ष व्यवहार देखिने।<br>• बोलीमा ढाँट्न नसकिने तथ्याङ्क।</td>
+                        <td>• मानिसले थाहा पाए कृत्रिम व्यवहार देखाउन सक्ने।<br>• आन्तरिक सोच मापन गर्न नसकिने।</td>
+                      </tr>
+                      <tr>
+                        <td>लक्षित समूह छलफल (FGD Guide)</td>
+                        <td>६ देखि १२ जनाको समूह बनाएर निश्चित विषयमा छलफल गराउने।</td>
+                        <td>• छोटो समयमा धेरैका विचार पाइने।<br>• सामूहिक दृष्टिकोण प्राप्त हुने।</td>
+                        <td>• टाठाबाठाले मात्र बढी बोल्ने जोखिम।<br>• समूह नियन्त्रण गर्न कठिन।</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः कुनै पनि एउटा मात्र विधि वा साधन पूर्ण हुँदैन। तसर्थ अनुसन्धानको प्रकृति र आवश्यकता अनुसार बहु-विधि (Multi-method) वा साधनहरूको उपयुक्त संयोजन गरी तथ्याङ्क सङ्कलन गर्नु उत्तम हुन्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s3-q3" data-label="प्र.न. ३ : तथ्याङ्क विश्लेषण र प्रस्तुतीकरणका विधि">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ३</span> तथ्याङ्क तथा सूचनाको विश्लेषण र प्रस्तुतीकरणका विधिहरूबारे विस्तृत चर्चा गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>तथ्याङ्क सङ्कलन पछि प्राप्त काँचो तथ्याङ्क (Raw Data) लाई सफाइ गर्ने, वर्गीकरण गर्ने, गणितीय/साङ्ख्यिकीय विश्लेषण गर्ने र त्यसलाई पाठकले बुझ्ने गरी सरल ढाँचामा देखाउनु नै <strong>तथ्याङ्क विश्लेषण र प्रस्तुतीकरण</strong> हो। यसले कच्चा तथ्याङ्कलाई उपयोगी ज्ञानमा बदल्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>१. तथ्याङ्क विश्लेषणका मुख्य विधिहरू:</strong></p>
+                <ul class="tick">
+                  <li><strong>(क) परिमाणात्मक तथ्याङ्क विश्लेषण (Quantitative Analysis):</strong> सङ्ख्यात्मक तथ्याङ्कहरूलाई गणितीय र साङ्ख्यिकीय विधिबाट विश्लेषण गरिन्छ।
+                    <ul>
+                      <li><b>केन्द्रीय प्रवृत्ति (Central Tendency):</b> मध्यक (Average), मध्यिका (Median), र बहुलक (Mode) को प्रयोग।</li>
+                      <li><b>विक्षेपणको नाप (Dispersion):</b> स्तरीय भिन्नता (Standard Deviation) र भिन्नता (Variance)।</li>
+                      <li><b>सम्बन्ध मापन:</b> सहसम्बन्ध (Correlation) र रीग्रेसन (Regression) विश्लेषण।</li>
+                      <li><b>सफ्टवेयर प्रयोग:</b> MS Excel, IBM SPSS, Stata आदिको प्रयोग।</li>
+                    </ul>
+                  </li>
+                  <li><strong>(ख) गुणात्मक तथ्याङ्क विश्लेषण (Qualitative Analysis):</strong> शब्द, भनाइ, अन्तर्वार्ता वा दृश्य सामग्रीको विश्लेषण गरिन्छ।
+                    <ul>
+                      <li><b>कोडीकरण (Coding):</b> भनाइहरूलाई मुख्य विषय (Themes) मा वर्गीकरण गर्ने।</li>
+                      <li><b>सामग्री विश्लेषण (Content Analysis):</b> शब्द र भावनाको मर्म बुझ्ने।</li>
+                      <li><b>सफ्टवेयर प्रयोग:</b> NVivo, ATLAS.ti आदिको प्रयोग।</li>
+                    </ul>
+                  </li>
+                </ul>
+
+                <p><strong>२. तथ्याङ्क प्रस्तुतीकरणका मुख्य विधिहरू:</strong></p>
+                <div class="flow">
+                  <div class="flow-root">तथ्याङ्क प्रस्तुतीकरण</div>
+                  <div class="flow-arrow">▼</div>
+                  <div class="flow-grid">
+                    <div class="flow-card fc1"><h5>१. शाब्दिक (Textual)</h5><p>सरल, स्पष्ट र दोहोरो अर्थ नलाग्ने गरी अनुच्छेद र बुँदाहरूमा वर्णन</p></div>
+                    <div class="flow-card fc2"><h5>२. तालिकीय (Tabular)</h5><p>रो र कोलममा शीर्षकसहित राखेर तुलनायोग्य बनाउने</p></div>
+                    <div class="flow-card fc3"><h5>३. चित्रात्मक (Visual)</h5><p>स्तम्भ चित्र, वृत्त चित्र, रेखा चित्र, फ्लोचार्ट र अर्गोग्राम</p></div>
+                  </div>
+                </div>
+
+                <ul class="tick">
+                  <li><strong>(क) शाब्दिक प्रस्तुतीकरण (Textual Presentation):</strong> विश्लेषणबाट निस्किएको नतिजालाई सरल, स्पष्ट र दोहोरो अर्थ नलाग्ने गरी अनुच्छेद र बुँदाहरूमा वर्णन गरिन्छ।</li>
+                  <li><strong>(ख) तालिकीय प्रस्तुतीकरण (Tabular Presentation):</strong> तथ्याङ्कलाई रो र कोलममा शीर्षकसहित राखेर तुलना योग्य बनाइन्छ।</li>
+                  <li><strong>(ग) चित्रात्मक प्रस्तुतीकरण (Graphical/Visual Presentation):</strong>
+                    <ul>
+                      <li><b>स्तम्भ चित्र (Bar Chart):</b> विभिन्न समूह वा वर्षको मान तुलना गर्न।</li>
+                      <li><b>वृत्त चित्र (Pie Chart):</b> कुल १००% मा अंशको हिस्सा देखाउन।</li>
+                      <li><b>रेखा चित्र (Line Graph):</b> समय अनुसार परिवर्तनको गति देखाउन।</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>यसरी सुव्यवस्थित विश्लेषण र उपयुक्त चित्रात्मक प्रस्तुतीकरणले अनुसन्धान नतिजालाई सर्वसाधारण र नीति निर्माता दुवैका लागि बोधगम्य र निर्णय लिन योग्य बनाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s3-q4" data-label="प्र.न. ४ : लेखनकार्यका नैतिक पक्षहरू">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ४</span> लेखनकार्यमा अरूको लेखरचनाको प्रयोग गर्दा ध्यान दिनुपर्ने नैतिक पक्षहरू के के हुन्? विस्तृत वर्णन गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>प्राज्ञिक लेखन तथा अनुसन्धान कार्यमा अरू लेखक, अनुसन्धानकर्ता वा संस्थाको बौद्धिक सामग्री प्रयोग गर्दा तिनको मौलिकताको सम्मान गर्नु र ईमानदारी प्रस्तुत गर्नु नै <strong>प्राज्ञिक नैतिकता</strong> (Research Ethics) हो। अरूको विचार प्रयोग गर्दा निश्चित नियम र नैतिक दायित्व पालना गर्नुपर्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>लेखनकार्यमा ध्यान दिनुपर्ने मुख्य नैतिक पक्षहरूलाई देहाय बमोजिम विस्तृत रूपमा विभाजन गर्न सकिन्छ:</p>
+
+                <ul class="tick">
+                  <li><strong>१. बौद्धिक चोरी (Plagiarism) बाट पूर्ण मुक्ति:</strong> अरूको लेख, तथ्याङ्क, चित्र वा विचार हुबहु सारेर आफ्नै रचनाका रूपमा दाबी गर्नु नैतिक र कानुनी रूपमा गम्भीर अपराध हो। तसर्थ, अरूको सामग्री प्रयोग गर्दा अनिवार्य रूपमा स्रोत खुलाउनुपर्छ।</li>
+
+                  <li><strong>२. उपयुक्त उद्धरण ढाँचाको पालना (Standard Citation Styles):</strong> लेखनमा अरूको सामग्री प्रयोग गर्दा स्थापित उद्धरण प्रणालीहरू मध्ये कुनै एकको प्रयोग गर्नुपर्छ:
+                    <ul>
+                      <li><b>APA ढाँचा (American Psychological Association):</b> मुख्यतया सामाजिक विज्ञानमा प्रयोग हुने (जस्तै: शर्मा, २०७९, पृ. ४५)।</li>
+                      <li><b>MLA ढाँचा (Modern Language Association):</b> भाषा र साहित्यमा प्रयोग हुने।</li>
+                    </ul>
+                  </li>
+
+                  <li><strong>३. उद्धरण चिन्ह र पुनर्लेखनको सही प्रयोग (Quotation &amp; Paraphrasing):</strong>
+                    <ul>
+                      <li>यदि अरूका शब्दहरू हुबहु राखिएमा तिनलाई उद्धरण चिन्ह ("...") भित्र राखी लेखक र वर्ष उल्लेख गर्नुपर्छ।</li>
+                      <li>यदि आफ्नै शब्दमा रूपान्तरण गरिएमा (Paraphrasing) मूल भाव नबिल्किने गरी पुनर्लेखन गरेर स्रोत जनाउनुपर्छ।</li>
+                    </ul>
+                  </li>
+
+                  <li><strong>४. तथ्याङ्कको सत्यता र वस्तुनिष्ठता (Data Integrity):</strong> अनुसन्धानमा काल्पनिक वा नक्कली तथ्याङ्क बनाउने (Fabrication), तथ्याङ्क हेरफेर गर्ने (Falsification) वा आफू अनुकूल नतिजा निकाल्ने काम गर्नु घोर अनैतिक मानिन्छ।</li>
+
+                  <li><strong>५. नेपालको कानुनी व्यवस्थाको पालना:</strong> नेपालको <strong>प्रतिलिपि अधिकार ऐन, २०५९ को दफा २७</strong> अनुसार अरूको रचना अनाधिकृत रूपमा प्रयोग गरेमा:
+                    <ul>
+                      <li><b>पहिलो पटक:</b> रु. १०,००० देखि १,००,००० सम्म जरिवाना वा ६ महिनासम्म कैद वा दुवै।</li>
+                      <li><b>दोस्रो पटकदेखि:</b> रु. २०,००० देखि २,००,००० सम्म जरिवाना वा १ वर्षसम्म कैद वा दुवै।</li>
+                      <li>गैरकानुनी सामग्री जफत र पीडितलाई क्षतिपूर्ति भर्नुपर्ने व्यवस्था छ।</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः प्राज्ञिक नैतिकताको पालनाले लेखकको विश्वसनीयता बढाउनुका साथै अनुसन्धानलाई सर्वस्वीकार्य, सम्मानित र प्रमाणिक बनाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u2-s3-q5" data-label="प्र.न. ५ : समस्या निर्माण र अध्ययन विधि चयन प्रक्रिया">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ५</span> सामाजिक अध्ययनका लागि समस्या निर्माण र अध्ययन विधि चयन गर्ने प्रक्रियाको वर्णन गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>कुनै पनि अनुसन्धान कार्यको सफलता सही अनुसन्धान समस्याको चयन र सो समस्या समाधान गर्न उपयुक्त अध्ययन पद्धतिको छनोटमा निर्भर हुन्छ। दिशाहीन अनुसन्धानले समय र स्रोतको बर्बादी मात्र गराउने भएकाले यसको निश्चित वैज्ञानिक प्रक्रिया हुन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>(क) समस्या निर्माण प्रक्रिया (Problem Formulation Process):</strong></p>
+                <p>अनुसन्धान योग्य समस्या पहिचान तथा निर्माण गर्दा ध्यान दिनुपर्ने मुख्य चरणहरू:</p>
+                <ul class="tick">
+                  <li><strong>१. व्यापक क्षेत्रको पहिचान:</strong> सुरुमा अनुसन्धानकर्ताले आफ्नो चासोको व्यापक विषयक्षेत्र (जस्तै: शिक्षा, गरिबी, बसाइँसराइ) छनोट गर्छ।</li>
+                  <li><strong>२. क्षेत्रलाई सीमित/साँघुरो बनाउनु:</strong> ठुलो क्षेत्रबाट अध्ययन गर्न सकिने सानो र विशिष्ट मुद्दा (जस्तै: 'बालबालिकामा मोबाइलको लत') मा केन्द्रित भइन्छ।</li>
+                  <li><strong>३. ज्ञानको ग्याप पत्ता लगाउनु:</strong> पुराना अध्ययनहरूको समीक्षा गरी कुन विषयमा अध्ययन हुन बाँकी छ सो पत्ता लगाइन्छ।</li>
+                  <li><strong>४. दुई मुख्य कसी पूरा गर्नु:</strong>
+                    <ul>
+                      <li><b>नयाँ हुनुपर्ने (No Duplication):</b> अध्ययन दोहोरिएको हुनु हुँदैन।</li>
+                      <li><b>उपयोगी र नयाँ ज्ञान दिने हुनुपर्ने:</b> अध्ययन समाजका लागि फलदायी हुनुपर्छ।</li>
+                    </ul>
+                  </li>
+                  <li><strong>५. अनुसन्धान प्रश्नहरू बनाउनु:</strong> समस्याका आधारमा प्रस्ट अनुसन्धान प्रश्नहरू (Research Questions) तयार पारिन्छ।</li>
+                </ul>
+
+                <p><strong>(ख) अध्ययन विधि चयन गर्ने प्रक्रिया (Method Selection Process):</strong></p>
+                <p>अनुसन्धान प्रश्नको उत्तर खोज्न उपयुक्त पद्धति छनोट गरिन्छ:</p>
+                <ul class="tick">
+                  <li><strong>१. परिमाणात्मक पद्धति (Quantitative Method):</strong> यदि अध्ययनमा परिमाण, सङ्ख्या, प्राप्ताङ्क वा साङ्ख्यिकीय मापन गर्नुपर्ने छ भने <b>सर्वेक्षण (Survey)</b> वा <b>प्रयोग विधि (Experimental Method)</b> छनोट गरिन्छ।</li>
+                  <li><strong>२. गुणात्मक पद्धति (Qualitative Method):</strong> यदि मानिसका भावना, विचार, दृष्टिकोण वा सांस्कृतिक व्यवहारको गहिरो अध्ययन गर्नु छ भने <b>अन्तर्वार्ता</b>, <b>क्षेत्र अवलोकन</b> वा <b>केस स्टडी विधि</b> छनोट गरिन्छ।</li>
+                  <li><strong>३. मिश्रित पद्धति (Mixed Method):</strong> परिमाणात्मक र गुणात्मक दुवै तथ्याङ्क आवश्यक परेमा दुवै विधिको सन्तुलित प्रयोग गरिन्छ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः समस्याको सही पहिचान र सोही अनुकूलको अध्ययन पद्धतिको छनोट नै अनुसन्धानलाई नतिजामुखी र वैज्ञानिक बनाउने मुख्य कडी हो।</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+      </div>
+    </section>
+
+    <!-- ============================================================ -->
+    <!-- ======================== UNIT 3 ============================ -->
+    <!-- ============================================================ -->
+    <section class="unit" id="unit3" data-unit="एकाइ ३" data-sub="जीवनोपयोगी सिप">
+      <div class="unit-head">
+        <span class="badge">📑 एकाइ ३</span>
+        <h2>जीवनोपयोगी सिप (Life Skills)</h2>
+        <p>🎯 प्रश्न सङ्ग्रह पूर्ण नमुना समाधान</p>
+      </div>
+
+      <div class="unit-body">
+
+        <div class="infobox">
+          <h3>📘 परीक्षार्थीहरूका लागि विशेष जानकारी</h3>
+          <ul>
+            <li><strong>अङ्क भार तथा समय सन्तुलन:</strong>
+              <ul>
+                <li><strong>१ अङ्कका अति संक्षिप्त प्रश्नहरू:</strong> १०–२० शब्द (१–२ वाक्यको सटिक उत्तर)।</li>
+                <li><strong>५ अङ्कका संक्षिप्त प्रश्नहरू:</strong> १५०–२०० शब्द (तोकिएको अनिवार्य <b>३-स्तरीय ढाँचा</b>: 📌 १. परिचय, 📊 २. विषय प्रवेश तथा मुख्य विश्लेषण, 🎯 ३. निष्कर्ष)।</li>
+                <li><strong>८ अङ्कका विस्तृत प्रश्नहरू:</strong> २५०–३०० शब्द (कसिलो, प्राज्ञिक र ३-स्तरीय ढाँचा)।</li>
+              </ul>
+            </li>
+            <li><strong>सम्बन्धित स्रोत:</strong> पाठ्यपुस्तक <code>Unit-3.pdf</code> तथा प्रश्न सङ्ग्रह <code>unit-1-to 3-Exam-Questions (1).md</code> का आधारमा तयार पारिएको।</li>
+          </ul>
+        </div>
+
+        <!-- ---------- SECTION 1 ---------- -->
+        <section class="sect s1" id="u3-s1" data-title="खण्ड १ : अति संक्षिप्त (१ अङ्क)">
+          <h2 class="sect-title"><span class="sicon">📄</span> खण्ड १: अति संक्षिप्त उत्तरात्मक प्रश्नहरू</h2>
+          <p class="sect-meta">अति संक्षिप्त उत्तर: १०–२० शब्द | अङ्क भार: ८ × १ = ८</p>
+
+          <article class="qcard" id="u3-s1-q1" data-label="प्र.न. १ : जीवनोपयोगी सीप भनेको के हो?">
+            <h4 class="qtitle"><span class="qnum">प्र.न. १</span> जीवनोपयोगी सीप भनेको के हो? (एक वाक्यमा) <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>दैनिक जीवनका चुनौती, समस्या र तनावलाई बुद्धिमत्तापूर्वक सुल्झाउँदै अनुकूल, सन्तुलित र सकारात्मक जीवनयापन गर्न सक्षम बनाउने मानसिक तथा सामाजिक क्षमतालाई <strong>जीवनोपयोगी सिप</strong> (Life Skills) भनिन्छ।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s1-q2" data-label="प्र.न. २ : WHO का चार जीवनोपयोगी सीप">
+            <h4 class="qtitle"><span class="qnum">प्र.न. २</span> WHO ले पहिचान गरेका कुनै चारवटा जीवनोपयोगी सीपहरूको नाम लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>विश्व स्वास्थ्य सङ्गठन (WHO) ले पहिचान गरेका चार मुख्य जीवनोपयोगी सिपहरू:</p>
+              <ol class="num">
+                <li>समालोचनात्मक चिन्तन (Critical Thinking)</li>
+                <li>सिर्जनात्मक चिन्तन (Creative Thinking)</li>
+                <li>आत्मबोध (Self-awareness)</li>
+                <li>समानुभूति (Empathy)</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s1-q3" data-label="प्र.न. ३ : समालोचनात्मक चिन्तन भनेको के हो?">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ३</span> समालोचनात्मक चिन्तन भनेको के हो? <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>प्राप्त सूचना, विचार वा घटनालाई विना छानबिन पत्याउनुको सट्टा तथ्य, प्रमाण, तर्क र कारणका आधारमा जाँचेर निष्पक्ष निष्कर्षमा पुग्ने बौद्धिक क्षमतालाई <strong>समालोचनात्मक चिन्तन</strong> भनिन्छ।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s1-q4" data-label="प्र.न. ४ : सिर्जनात्मक चिन्तनका दुई विशेषता">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ४</span> सिर्जनात्मक चिन्तनको कुनै दुई विशेषता लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>सिर्जनात्मक चिन्तनका दुई मुख्य विशेषताहरू:</p>
+              <ol class="num">
+                <li>नयाँ, मौलिक र उपयोगी विचार वा वस्तुको सिर्जना गर्नु।</li>
+                <li>परम्परागत ढाँचाभन्दा बाहिर गएर (Out of the box) लचिलो र बहुआयामिक सोच राख्नु।</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s1-q5" data-label="प्र.न. ५ : आत्मबोध बढाउने दुई उपाय">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ५</span> आत्मबोध (Self-awareness) बढाउन सकिने कुनै दुई उपाय लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>आत्मबोध बढाउने दुई प्रभावकारी उपायहरू:</p>
+              <ol class="num">
+                <li>नियमित रूपमा आन्तरिक आत्मसमीक्षा (Self-reflection) र दैनिकी लेखन गर्नु।</li>
+                <li>३६० डिग्री पृष्ठपोषण विधि (360-degree Feedback) मार्फत अरूबाट आफ्नो व्यवहारबारे वस्तुनिष्ठ सुझाव माग्नु।</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s1-q6" data-label="प्र.न. ६ : समानुभूति भनेको के हो?">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ६</span> समानुभूति (Empathy) भनेको के हो? <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>अरूको दुःख, भावना र स्थितिलाई उनीहरुकै दृष्टिकोण र धरातलमा उभिएर (In their shoes) महसुस गर्ने र बुझ्ने मानवीय क्षमतालाई <strong>समानुभूति</strong> भनिन्छ।</p>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s1-q7" data-label="प्र.न. ७ : संवेग व्यवस्थापनका दुई विधि">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ७</span> संवेग व्यवस्थापनका कुनै दुई विधिहरूको नाम लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>संवेग व्यवस्थापनका दुई विधिहरू:</p>
+              <ol class="num">
+                <li>प्राणायाम, योगाभ्यास र ध्यान (Meditation) गरी मन शान्त राख्ने।</li>
+                <li>सकारात्मक पुनर्रचना (Positive Reframing) गरी उत्तेजनालाई रचनात्मक काममा मोड्ने।</li>
+              </ol>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s1-q8" data-label="प्र.न. ८ : समस्या समाधान सीपको दुई महत्त्व">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ८</span> समस्या समाधान सीपको कुनै दुई महत्त्व लेख्नुहोस्। <span class="marks">१ अङ्क</span></h4>
+            <div class="ans">
+              <p>समस्या समाधान सिपका दुई महत्त्वहरू:</p>
+              <ol class="num">
+                <li>जटिल परिस्थितिमा विचलित नभई सही विकल्प छनोट गरेर निकास दिनु।</li>
+                <li>मानसिक तनाव र अन्योल घटाई निर्णय क्षमता र आत्मविश्वास बढाउनु।</li>
+              </ol>
+            </div>
+          </article>
+        </section>
+
+        <!-- ---------- SECTION 2 ---------- -->
+        <section class="sect s2" id="u3-s2" data-title="खण्ड २ : संक्षिप्त उत्तर (५ अङ्क)">
+          <h2 class="sect-title"><span class="sicon">📝</span> खण्ड २: संक्षिप्त उत्तरात्मक प्रश्नहरू</h2>
+          <p class="sect-meta">कसिलो र परिमार्जित संक्षिप्त उत्तर: १५०–२०० शब्द | अङ्क भार: ८ × ५ = ४०</p>
+
+          <article class="qcard" id="u3-s2-q1" data-label="प्र.न. १ : समालोचनात्मक चिन्तनको अर्थ र महत्त्व">
+            <h4 class="qtitle"><span class="qnum">प्र.न. १</span> समालोचनात्मक चिन्तन (Critical Thinking) को अर्थ र महत्त्व लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>कुनै पनि विचार, सूचना वा घटनालाई विना परीक्षण पत्याउनुको सट्टा तर्क, तथ्य र प्रमाणका आधारमा वस्तुनिष्ठ मूल्याङ्कन गरी सही र गलतको निर्णय लिने बौद्धिक क्षमतालाई <strong>समालोचनात्मक चिन्तन</strong> भनिन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>समालोचनात्मक चिन्तनका मुख्य महत्त्वहरू निम्न अनुसार छन्:</p>
+                <ul class="tick">
+                  <li><strong>अफवाह र भ्रामक सूचनाको नियन्त्रण:</strong> सामाजिक सञ्जाल र मिडियामा आउने झूटा समाचार र अफवाहलाई 'स्रोत र प्रमाण' का आधारमा जाँचेर मात्र विश्वास गर्न सिकाउँछ।</li>
+                  <li><strong>विवेकपूर्ण निर्णय निर्माण:</strong> भावना वा बहकाउमा नबगी उपलब्ध तथ्य र विकल्पहरूको निष्पक्ष विश्लेषण गरी सही निर्णय लिन मद्दत गर्छ।</li>
+                  <li><strong>समस्याको मूल कारण पहिचान:</strong> कुनै पनि समस्याको बाह्य स्वरूप मात्र नहेरी त्यसको गहिराइ र मूल कारण पत्ता लगाउन मद्दत पुर्‍याउँछ।</li>
+                  <li><strong>डि बोनोको '६ सोच्ने टोपीहरू' को प्रयोग:</strong> कालो टोपी (जोखिम/खतरा) र सेतो टोपी (तथ्य) को प्रयोग गरी सन्तुलित र सुरक्षित सोच विकास गराउँछ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः समालोचनात्मक चिन्तनले मानिसलाई अन्धभक्त हुनबाट जोगाई एक सचेत, तार्किक, विवेकशील र उत्तरदायी नागरिक बनाउन मद्दत गर्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s2-q2" data-label="प्र.न. २ : सिर्जनात्मक चिन्तन विकास गर्ने उपाय">
+            <h4 class="qtitle"><span class="qnum">प्र.न. २</span> सिर्जनात्मक चिन्तन (Creative Thinking) विकास गर्ने उपायहरू लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>परम्परागत वा ढर्रागत सोचभन्दा बाहिर गएर (Out of the box) नयाँ, मौलिक, उपयोगी र नवप्रवर्द्धनात्मक विचार वा वस्तुको सिर्जना गर्ने मानसिक क्षमता नै <strong>सिर्जनात्मक चिन्तन</strong> हो।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>सिर्जनात्मक चिन्तन विकास गर्ने मुख्य उपायहरू:</p>
+                <ul class="tick">
+                  <li><strong>जिज्ञासु र खुला सोच राख्ने:</strong> हरेक घटनामा "किन, कसरी र के हुन्छ?" भन्ने जिज्ञासा राख्ने र नयाँ अनुभवहरू सिक्न सधैँ तत्पर रहने।</li>
+                  <li><strong>मस्तिष्क मन्थन (Brainstorming):</strong> कुनै समस्या समाधानका लागि धेरैभन्दा धेरै सम्भावित नवीन विचारहरू विना रोकतोक उत्पन्न गराउने।</li>
+                  <li><strong>डा. डि बोनोको 'हरियो टोपी' को प्रयोग:</strong> नयाँ सम्भावना, नवीन प्रविधि र वैकल्पिक समाधान खोज्न हरियो टोपीको सिद्धान्त अपनाउने।</li>
+                  <li><strong>असफलताबाट सिक्ने र लचिलोपन:</strong> गल्ती हुनबाट नडराउने र निरन्तर नयाँ प्रयोग तथा परीक्षण (Trial and Error) गर्ने।</li>
+                  <li><strong>सिर्जनात्मक चरणहरूको पालना:</strong> तयारी (Preparation), विकास (Incubation), प्रदीप्ति (Illumination), र प्रमाणीकरण (Verification) को प्रक्रिया अपनाउने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः निरन्तर अभ्यास, विचारको स्वतन्त्रता र नवप्रवर्तनलाई प्रोत्साहन दिएमा व्यक्तिमा सिर्जनात्मक चिन्तनको तीव्र विकास हुन्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s2-q3" data-label="प्र.न. ३ : आत्मबोध बढाउने उपायहरू">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ३</span> आत्मबोध (Self-awareness) बढाउन सकिने उपायहरूबारे चर्चा गर्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>आफ्ना भावना, विचार, रुचि, क्षमता, सबल पक्ष (Strengths) र कमजोर पक्ष (Weaknesses) हरूलाई निष्पक्ष रूपमा पहिचान गर्ने क्षमता नै <strong>आत्मबोध</strong> हो।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>आत्मबोध बढाउन सकिने मुख्य उपायहरू:</p>
+                <ul class="tick">
+                  <li><strong>आन्तरिक आत्मसमीक्षा (Self-reflection):</strong> दैनिक केही समय शान्त भई आफ्ना क्रियाकलाप, गल्ती र निर्णयहरूको निष्पक्ष समीक्षा गर्ने।</li>
+                  <li><strong>३६० डिग्री पृष्ठपोषण विधि (360-degree Feedback):</strong> परिवार, शिक्षक, साथीभाइ र सहकर्मीहरूबाट आफ्नो व्यवहार र कार्यशैलीबारे वस्तुनिष्ठ सुझाव माग्ने।</li>
+                  <li><strong>मनोमापन परीक्षण (Psychometric Testing):</strong> आफ्नो व्यक्तित्व, अभिरुचि र कार्यशैलीको वैज्ञानिक परीक्षण गर्ने।</li>
+                  <li><strong>दैनिकी लेखन (Journaling):</strong> आफ्ना दैनिक संवेग, रिस, खुसी र उपलब्धिहरू टिपोट गरी आफ्ना भावनाको ढाँचा बुझ्ने।</li>
+                  <li><strong>योग तथा ध्यान (Mindfulness &amp; Meditation):</strong> मनलाई वर्तमानमा केन्द्रित गरी आन्तरिक भावना र तनावलाई नजिकबाट नियाल्ने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>आत्मबोध बढाउनाले व्यक्तिमा आत्मविश्वास र आत्मसम्मान अभिवृद्धि भई जीवनमा सही निर्णय लिन र सही मार्ग छनोट गर्न सहज हुन्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s2-q4" data-label="प्र.न. ४ : समानुभूति र यसको विकास">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ४</span> समानुभूति (Empathy) भनेको के हो? यसलाई विकास गर्ने तरिकाहरू लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>अरूको दुःख, भावना र स्थितिलाई उनीहरुकै दृष्टिकोण र धरातलमा उभिएर (In their shoes) महसुस गर्ने र बुझ्ने मानवीय क्षमतालाई <strong>समानुभूति</strong> भनिन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>समानुभूति विकास गर्ने मुख्य तरिकाहरू:</p>
+                <ul class="tick">
+                  <li><strong>सक्रिय श्रवण (Active Listening):</strong> अरूका कुरालाई बिचैमा नकाटी ध्यानपूर्वक सुन्ने र उनीहरूको भावना बुझ्ने प्रयास गर्ने।</li>
+                  <li><strong>गैरशाब्दिक सञ्चारको सूक्ष्म अवलोकन:</strong> अरूको अनुहारको भाव, इसारा र शारीरिक भाषा (Body Language) लाई नियालेर तिनको दुःख बुझ्ने।</li>
+                  <li><strong>पूर्वाग्रह र धारणाको अन्त्य:</strong> जाति, लिङ्ग, धर्म वा वर्गका आधारमा कसैप्रति नकारात्मक पूर्वाग्रह नराखी सबैलाई समान दृष्टिले हेर्ने।</li>
+                  <li><strong>समानुभूतिका ३ प्रकारको अभ्यास:</strong> संज्ञानात्मक (विचार बुझ्ने), संवेगात्मक (भावना महसुस गर्ने), र दयालु (सहयोग गर्ने) समानुभूतिको पालना गर्ने।</li>
+                  <li><strong>सामाजिक सेवा र सहकार्य:</strong> अपाङ्गता भएका, विपन्न वा पीडित व्यक्तिहरूसँग घुलमिल भई उनीहरूको सहयोगमा अग्रसर हुने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः समानुभूतिले मानिसबिचको अविश्वास र द्वन्द्व हटाई समाजमा भातृत्व, सहिष्णुता र सुमधुर सम्बन्ध कायम गराउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s2-q5" data-label="प्र.न. ५ : संवेग व्यवस्थापनका पाँच उपाय">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ५</span> संवेग व्यवस्थापनका कुनै पाँचवटा प्रभावकारी उपायहरू लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>रिस, डर, चिन्ता, निराशा र उत्तेजना जस्ता आन्तरिक संवेगहरूलाई नियन्त्रण र सन्तुलन गरी सकारात्मक दिशामा मोडिने क्षमतालाई <strong>संवेग व्यवस्थापन</strong> भनिन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>संवेग व्यवस्थापनका ५ मुख्य प्रभावकारी उपायहरू:</p>
+                <ul class="tick">
+                  <li><strong>१. संवेगको पहिचान र स्वीकारोक्ति:</strong> आफूलाई रिस उठेको वा डर लागेको कुरा बेलैमा स्वीकार गरी त्यसको मूल कारण खोज्ने।</li>
+                  <li><strong>२. श्वासप्रश्वास र योगाभ्यास (Deep Breathing):</strong> अत्यधिक रिस वा तनाव हुँदा लामो श्वास फेर्ने (१० सम्म गन्ने) वा ध्यान/योग गर्ने।</li>
+                  <li><strong>३. सकारात्मक पुनर्रचना (Positive Reframing):</strong> प्रतिकूल परिस्थितिलाई पनि सिक्ने अवसरका रूपमा लिई सकारात्मक सोच राख्ने।</li>
+                  <li><strong>४. संवेगात्मक अभिव्यक्तिमा नियन्त्रण:</strong> रिसको प्रवाहमा सिधै प्रतिक्रिया (React) नगरी शान्त भएपछि सोचविचार गरेर मात्र उत्तर (Respond) दिने।</li>
+                  <li><strong>५. खेलकुद र रचनात्मक कार्य:</strong> संवेगात्मक ऊर्जालाई व्यायाम, सङ्गीत, चित्रकला वा सामाजिक सेवामा रूपान्तरण गर्ने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>संवेग व्यवस्थापनले व्यक्तिको मानसिक स्वास्थ्य जोगाउनुका साथै पारिवारिक र सामाजिक सम्बन्ध बिग्रनबाट बचाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s2-q6" data-label="प्र.न. ६ : समस्या समाधान सीप विकास गर्ने तरिका">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ६</span> समस्या समाधान सीप विकास गर्ने तरिकाहरूबारे संक्षिप्त टिप्पणी लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>दैनिक जीवनमा आइपर्ने साना-ठुला जटिलता, अवरोध वा अप्ठ्यारा परिस्थितिहरूलाई सुनियोजित ढङ्गले सुल्झाउने क्षमतालाई <strong>समस्या समाधान सीप</strong> भनिन्छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>समस्या समाधान सिप विकास गर्ने चरणबद्ध तरिकाहरू:</p>
+                <ul class="tick">
+                  <li><strong>१. समस्याको स्पष्ट पहिचान (Problem Definition):</strong> समस्याको मूल कारण के हो भनी स्पष्टसँग परिभाषित गर्ने।</li>
+                  <li><strong>२. सूचना तथा तथ्याङ्क सङ्कलन:</strong> समस्यासँग सम्बन्धित आवश्यक तथ्य, कारण र पृष्ठभूमि बुझ्ने।</li>
+                  <li><strong>३. सम्भावित विकल्पहरूको सिर्जना:</strong> समस्या समाधानका लागि धेरैभन्दा धेरै सम्भावित उपायहरू खोज्ने।</li>
+                  <li><strong>४. विकल्पहरूको मूल्याङ्कन र सर्वोत्तम छनोट:</strong> प्रत्येक विकल्पका फाइदा, जोखिम र लागत जोखेर उत्कृष्ट विकल्प छान्ने।</li>
+                  <li><strong>५. कार्यान्वयन र समीक्षा:</strong> छानिएको समाधान लागू गर्ने र त्यसबाट प्राप्त नतिजाको नियमित अनुगमन गर्ने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>समस्या समाधान सीपले व्यक्तिलाई अप्ठ्यारोमा नआत्तिई विवेकपूर्ण र व्यावहारिक निकास निकाल्न सक्षम बनाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s2-q7" data-label="प्र.न. ७ : निर्णय गर्ने सीपको प्रक्रिया">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ७</span> निर्णय गर्ने सीप (Decision Making) को प्रक्रियाका चरणहरू लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>उपलब्ध धेरै विकल्पहरूमध्येबाट परिस्थितिको ठोस विश्लेषण गरी सर्वोत्कृष्ट विकल्पको छनोट गर्ने प्रक्रिया नै <strong>निर्णय गर्ने सीप</strong> हो।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>निर्णय गर्ने सिपका ५ मुख्य चरणहरू:</p>
+                <ul class="tick">
+                  <li><strong>चरण १: निर्णय गर्नुपर्ने विषयको पहिचान:</strong> कुन विषयमा निर्णय लिनुपर्ने हो सोको स्पष्ट सीमाङ्कन गर्ने।</li>
+                  <li><strong>चरण २: सूचना तथा विकल्प सङ्कलन:</strong> सम्बन्धित विषयका सम्भावित सबै विकल्प र सूचनाहरू जम्मा गर्ने।</li>
+                  <li><strong>चरण ३: विकल्पहरूको विश्लेषण:</strong> प्रत्येक विकल्पका सबल, दुर्बल, फाइदा र जोखिमहरूको तार्किक लेखाजोखा गर्ने।</li>
+                  <li><strong>चरण ४: सर्वोत्तम विकल्पको चयन:</strong> उपलब्धमध्ये सबैभन्दा सुरक्षित, व्यावहारिक र फलदायी विकल्प छान्ने।</li>
+                  <li><strong>चरण ५: निर्णय कार्यान्वयन र मूल्याङ्कन:</strong> निर्णयलाई व्यवहारमा उतार्ने र त्यसबाट प्राप्त नतिजाको पुनरावलोकन गर्ने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>चरणबद्ध रूपमा लिइएको निर्णयले गल्ती हुने जोखिम घटाउँछ र जीवनमा सफलता प्राप्त गर्न मद्दत गर्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s2-q8" data-label="प्र.न. ८ : WHO को जीवनोपयोगी सीप वर्गीकरण">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ८</span> जीवनोपयोगी सीपहरूलाई WHO ले कसरी वर्गीकरण गरेको छ? संक्षेपमा लेख्नुहोस्। <span class="marks">५ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>विश्व स्वास्थ्य सङ्गठन (WHO) ले सन् १९९९ मा मानिसको समग्र मनोसामाजिक स्वास्थ्यका लागि १० वटा मुख्य जीवनोपयोगी सिपहरूलाई ३ वटा प्रमुख समूहमा वर्गीकरण गरेको छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+                <p>WHO को ३-समूहीय वर्गीकरण:</p>
+
+                <div class="flow">
+                  <div class="flow-root">WHO जीवनोपयोगी सिप वर्गीकरण (सन् १९९९)</div>
+                  <div class="flow-arrow">▼</div>
+                  <div class="flow-grid">
+                    <div class="flow-card fc1">
+                      <h5>१. सोचाई सिप (Thinking Skills)</h5>
+                      <p>समालोचनात्मक चिन्तन, सिर्जनात्मक चिन्तन, निर्णय गर्ने सिप, र समस्या समाधान सिप।</p>
+                    </div>
+                    <div class="flow-card fc2">
+                      <h5>२. सामाजिक/अन्तरवैयक्तिक सिप</h5>
+                      <p>प्रभावकारी सञ्चार, अन्तरवैयक्तिक सम्बन्ध, समानुभूति, र आत्मबोध।</p>
+                    </div>
+                    <div class="flow-card fc3">
+                      <h5>३. संवेगात्मक सिप (Emotional Skills)</h5>
+                      <p>संवेग व्यवस्थापन र तनाव व्यवस्थापन।</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>WHO को यो वर्गीकरणले व्यक्तिको मानसिक, सामाजिक र व्यावहारिक दक्षता विकास गरी स्वस्थ जीवनयापनको आधारशिला खडा गर्छ।</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- ---------- SECTION 3 ---------- -->
+        <section class="sect s3" id="u3-s3" data-title="खण्ड ३ : विस्तृत उत्तर (८ अङ्क)">
+          <h2 class="sect-title"><span class="sicon">📚</span> खण्ड ३: विस्तृत उत्तरात्मक प्रश्नहरू</h2>
+          <p class="sect-meta">कसिलो र परिमार्जित विस्तृत उत्तर: २५०–३०० शब्द | अङ्क भार: ५ × ८ = ४०</p>
+
+          <article class="qcard" id="u3-s3-q1" data-label="प्र.न. १ : जीवनोपयोगी सीपको पृष्ठभूमि, वर्गीकरण र अभ्यास">
+            <h4 class="qtitle"><span class="qnum">प्र.न. १</span> जीवनोपयोगी सीपको ऐतिहासिक पृष्ठभूमि, वर्गीकरण र अभ्यासबारे विस्तृत वर्णन गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>मानव जीवनलाई सुखी, सन्तुलित र अनुशासित बनाउन आवश्यक पर्ने मनोसामाजिक र व्यवहारिक क्षमताहरू नै <strong>जीवनोपयोगी सिप</strong> हुन्। यसको विकास प्राचीन दर्शनदेखि आधुनिक अन्तर्राष्ट्रिय महासन्धिहरूसम्म जोडिएको छ।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>१. ऐतिहासिक पृष्ठभूमि (Historical Milestones):</strong></p>
+                <ul class="tick">
+                  <li><strong>ओटावा बडापत्र (Ottawa Charter - 1986):</strong> स्वास्थ्य प्रवर्धनका लागि जीवनोपयोगी सिपको आवश्यकता औँल्याएको।</li>
+                  <li><strong>बाल अधिकार महासन्धि (CRC - 1989):</strong> बालबालिकाको समग्र व्यक्तित्व विकासका लागि सिपयुक्त शिक्षामा जोड दिएको।</li>
+                  <li><strong>जोम्तियन सम्मेलन (EFA - 1990):</strong> 'सबैका लागि शिक्षा' अन्तर्गत जीवनोपयोगी सिपलाई आधारभूत सिकाइको अङ्ग बनाएको।</li>
+                  <li><strong>WHO (1999) र डेलर्स प्रतिवेदन (1996):</strong> 'जान्नका लागि, गर्नका लागि, बन्नका लागि र सँगै जिउनका लागि सिकाइ' का ४ स्तम्भ प्रस्तुत गरेको।</li>
+                </ul>
+
+                <p><strong>२. वर्गीकरण (WHO Classification):</strong></p>
+                <ul class="tick">
+                  <li><strong>सोचाई सिप:</strong> समालोचनात्मक, सिर्जनात्मक, निर्णय निर्माण, र समस्या समाधान।</li>
+                  <li><strong>सामाजिक सिप:</strong> सञ्चार, अन्तरवैयक्तिक सम्बन्ध, आत्मबोध, र समानुभूति।</li>
+                  <li><strong>संवेगात्मक सिप:</strong> संवेग व्यवस्थापन र तनाव व्यवस्थापन।</li>
+                </ul>
+
+                <p><strong>३. दैनिक जीवनमा अभ्यास (Practical Application):</strong></p>
+                <ul class="tick">
+                  <li>परीक्षाको चिन्ता घटाउन योग र समय व्यवस्थापन गर्ने।</li>
+                  <li>सामाजिक सञ्जालका भ्रामक कुरा जाँच्न समालोचनात्मक चिन्तन अपनाउने।</li>
+                  <li>साथीहरूसँगको विवाद सुल्झाउन समानुभूति र संवेग व्यवस्थापन प्रयोग गर्ने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः जीवनोपयोगी सिप केवल किताबमा सीमित नभई मानिसलाई २१ औँ शताब्दीका चुनौतीहरूसँग जुध्न सक्षम बनाउने जीवनको व्यावहारिक मार्गदर्शन हो।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s3-q2" data-label="प्र.न. २ : समालोचनात्मक र सिर्जनात्मक चिन्तनको अन्तरसम्बन्ध">
+            <h4 class="qtitle"><span class="qnum">प्र.न. २</span> समालोचनात्मक चिन्तन (Critical Thinking) र सिर्जनात्मक चिन्तन (Creative Thinking) बीचको अन्तरसम्बन्ध विश्लेषण गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>समालोचनात्मक चिन्तनले प्राप्त सूचनाको सत्यता, तर्क र प्रमाण जाँच्ने काम गर्छ भने सिर्जनात्मक चिन्तनले नयाँ, मौलिक र नवप्रवर्द्धनात्मक विचारको सिर्जना गर्छ। यी दुवै उच्च तहका सोचाइ सिप (Higher Order Thinking Skills) हुन्।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>तुलनात्मक अन्तरसम्बन्ध तालिका:</strong></p>
+                <div class="table-wrap">
+                  <table class="tbl">
+                    <thead>
+                      <tr><th>पक्ष</th><th>समालोचनात्मक चिन्तन</th><th>सिर्जनात्मक चिन्तन</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>मुख्य कार्य</td><td>विचार वा तथ्याङ्कको वस्तुनिष्ठ मूल्याङ्कन गर्नु</td><td>नयाँ र मौलिक विचार उत्पादन गर्नु</td></tr>
+                      <tr><td>सोचको दिशा</td><td>केन्द्रीकृत (Convergent) सोच</td><td>विकेन्द्रीकृत (Divergent) सोच</td></tr>
+                      <tr><td>आधार</td><td>तर्क, प्रमाण, र कारण</td><td>कल्पनाशीलता, नवीनता र खुलापन</td></tr>
+                      <tr><td>डि बोनो टोपी</td><td>कालो टोपी (जोखिम) / सेतो (तथ्य)</td><td>हरियो टोपी (सिर्जना/सम्भावना)</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p><strong>एकअर्काका परिपूरक भूमिका (Complementary Nature):</strong></p>
+                <ul class="tick">
+                  <li>सिर्जनात्मक चिन्तनले समस्या समाधानका लागि अनेकौँ नयाँ विकल्पहरू जन्माउँछ।</li>
+                  <li>समालोचनात्मक चिन्तनले ती विकल्पहरूमध्ये कुन सुरक्षित, व्यावहारिक र उत्तम छ भनी परीक्षण र छनोट गर्छ।</li>
+                  <li><strong>व्यावहारिक उदाहरण (राइड सेयरिङ 'पठाओ/टुटल'):</strong> यातायातको सास्ती सुल्झाउन मोबाइल एपबाट बाइक राइड दिने सोच 'सिर्जनात्मक चिन्तन' हो भने यसको कानुनी, सुरक्षा र वित्तीय पाटो जाँच्नु 'समालोचनात्मक चिन्तन' हो।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>निष्कर्षमा, सिर्जनात्मक चिन्तन विना नयाँ सोच सम्भव छैन र समालोचनात्मक चिन्तन विना सो सोचको सही कार्यान्वयन सम्भव छैन; तसर्थ यी दुवै एकअर्काका परिपूरक हुन्।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s3-q3" data-label="प्र.न. ३ : आत्मबोध र समानुभूतिको सामाजिक प्रभाव">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ३</span> आत्मबोध (Self-awareness) र समानुभूति (Empathy) ले व्यक्तिको सामाजिक जीवनमा कसरी सकारात्मक प्रभाव पार्छन्? विस्तृत चर्चा गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>आफ्ना भावना, रुचि र क्षमताको वस्तुनिष्ठ पहिचान गर्नु 'आत्मबोध' हो भने अरूको दुःख र भावनालाई उनीहरुकै दृष्टिबाट महसुस गर्नु 'समानुभूति' हो। यी दुवै सिप अन्तरवैयक्तिक सम्बन्धका मुख्य आधार हुन्।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>आत्मबोधको सामाजिक प्रभाव:</strong></p>
+                <ul class="tick">
+                  <li>आफ्ना कमजोरी थाहा पाउँदा मानिसमा अहङ्कार घट्छ र नम्रता जाग्छ।</li>
+                  <li>आफ्ना संवेग नियन्त्रण गर्न सकिने भएकाले अरूसँग विनाकारण रिस र झगडा हुँदैन।</li>
+                  <li>आन्तरिक र बाह्य आत्मबोधले समाजमा आफ्नो उत्तरदायित्व र भूमिका बुझ्न सघाउँछ।</li>
+                </ul>
+
+                <p><strong>समानुभूतिको सामाजिक प्रभाव:</strong></p>
+                <ul class="tick">
+                  <li>विभेद (जातीय, लैङ्गिक, अपाङ्गता) अन्त्य गरी समतामूलक समाज निर्माणमा सहयोग पुग्छ।</li>
+                  <li>अरूको भावनाको आदर हुने भएकाले परिवार र समुदायमा मेलमिलाप र सहिष्णुता बढ्छ।</li>
+                  <li>अप्ठ्यारोमा परेका मानिसलाई बिनास्वार्थ सहयोग गर्ने दयालु सोचको विकास हुन्छ।</li>
+                </ul>
+
+                <p><strong>दुवैको संयुक्त प्रभाव:</strong></p>
+                <ul class="tick">
+                  <li>आत्मबोधले मानिसलाई 'आफैँलाई बुझ्न' (Know Yourself) सिकाउँछ।</li>
+                  <li>समानुभूतिले मानिसलाई 'अरूलाई बुझ्न' (Understand Others) सिकाउँछ।</li>
+                  <li>यसले समाजमा अविश्वास र द्वन्द्व हटाई दिगो शान्ति र भातृत्व कायम गर्छ।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः आत्मबोध र समानुभूतिको संयुक्त अभ्यासले व्यक्तिलाई नैतिकवान् बनाउनुका साथै सिङ्गो समाजलाई सहिष्णु, समावेशी र सौहार्दपूर्ण बनाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s3-q4" data-label="प्र.न. ४ : संवेग र तनाव व्यवस्थापनका विधि">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ४</span> संवेग व्यवस्थापन (Emotion Management) र तनाव व्यवस्थापन (Stress Management) का विधिहरूबारे विस्तृत वर्णन गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>दैनिक जीवनका तीव्र मानसिक उत्तेजना (रिस, डर, ईर्ष्या) लाई नियन्त्रण गर्नु संवेग व्यवस्थापन हो भने परिस्थिति र क्षमताबिचको असन्तुलनबाट उत्पन्न मानसिक चापलाई सन्तुलित बनाउनु तनाव व्यवस्थापन हो।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>संवेग व्यवस्थापनका मुख्य विधिहरू:</strong></p>
+                <ul class="tick">
+                  <li><strong>१. संवेगात्मक चेतना:</strong> आफूभित्र रिस वा चिन्ता उम्लिएको बेलैमा पहिचान गर्ने।</li>
+                  <li><strong>२. विलम्बित प्रतिक्रिया:</strong> रिस उठेको बेला तुरुन्त प्रतिक्रिया नदिई १० सम्म गन्ने वा स्थान बदल्ने।</li>
+                  <li><strong>३. सकारात्मक पुनर्रचना:</strong> नकारात्मक घटनालाई पनि आत्मसुधार र सिकाइको अवसरका रूपमा व्याख्या गर्ने।</li>
+                  <li><strong>४. संवेगात्मक रूपान्तरण:</strong> रिस वा उत्तेजनालाई खेलकुद, कला वा व्यायाममा रचनात्मक प्रयोग गर्ने।</li>
+                </ul>
+
+                <p><strong>तनाव व्यवस्थापनका मुख्य विधिहरू:</strong></p>
+                <ul class="tick">
+                  <li><strong>१. समय व्यवस्थापन:</strong> प्राथमिकताका आधारमा कार्यसूची (To-do list) बनाई काम गर्ने।</li>
+                  <li><strong>२. योगाभ्यास, प्राणायाम र ध्यान:</strong> ध्यान र गहिरो श्वासप्रश्वासले स्नायु प्रणालीलाई शान्त बनाउने।</li>
+                  <li><strong>३. सन्तुलित जीवनशैली:</strong> पर्याप्त निद्रा (७–८ घण्टा), स्वस्थ खानपान र दुर्व्यसनबाट टाढा रहने।</li>
+                  <li><strong>४. सामाजिक सहयोग र सञ्चार:</strong> आफ्ना पिरमर्का परिवार, शिक्षक वा मनोविमर्शकर्तासँग बाँड्ने।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>संवेग र तनावको सही व्यवस्थापनले मानिसलाई मानसिक रूपमा बलियो (Resilient) बनाई सुखद र दीर्घायु जीवन प्रदान गर्छ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s3-q5" data-label="प्र.न. ५ : समस्या समाधान र निर्णय गर्ने सीपको सम्बन्ध">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ५</span> समस्या समाधान (Problem-solving) र निर्णय गर्ने सीप (Decision Making) बीचको सम्बन्ध प्रष्ट पार्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>जीवनमा आइपर्ने अप्ठ्यारा र जटिल परिस्थितिहरूलाई निकास दिनु 'समस्या समाधान' हो भने उपलब्ध सम्भावित विकल्पहरूमध्येबाट सर्वोत्कृष्ट विकल्प छान्नु 'निर्णय गर्ने सिप' हो। यी दुवै सिप कार्यकारण रूपमा जोडिएका छन्।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>अवधारणागत भिन्नता तालिका:</strong></p>
+                <div class="table-wrap">
+                  <table class="tbl">
+                    <thead>
+                      <tr><th>पक्ष</th><th>समस्या समाधान (Problem Solving)</th><th>निर्णय गर्ने सिप (Decision Making)</th></tr>
+                    </thead>
+                    <tbody>
+                      <tr><td>मुख्य ध्यान</td><td>समस्याको मूल कारण खोजी निकास दिनु</td><td>उपलब्ध विकल्पहरूमध्ये उत्तम छान्नु</td></tr>
+                      <tr><td>प्रक्रिया</td><td>खोजमूलक र विश्लेषणात्मक</td><td>छनोटमूलक र मूल्याङ्कनकारी</td></tr>
+                      <tr><td>सम्बन्ध</td><td>यो ठुलो र फराकिलो प्रक्रिया हो</td><td>यो समस्या समाधानकै एक निर्णायक चरण हो</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <p><strong>अन्तरसम्बन्ध र परिपूरकता:</strong></p>
+                <ul class="tick">
+                  <li>कुनै समस्या आइपरेपछि त्यसलाई सुल्झाउने क्रममा विभिन्न विकल्पहरू सिर्जना गरिन्छ।</li>
+                  <li>ती विकल्पहरूमध्ये कुन लागू गर्ने भनी छनोट गर्न 'निर्णय गर्ने सिप' को प्रयोग हुन्छ।</li>
+                  <li><strong>उदाहरण:</strong> यदि कुनै विद्यार्थी गणितमा कमजोर छ भने यो 'समस्या' हो। यसलाई सुल्झाउन ट्युसन पढ्ने, युट्युब हेर्ने वा साथीसँग पढ्ने विकल्पहरू निकालिन्छ। यीमध्ये 'ट्युसन पढ्ने' विकल्प छान्नु 'निर्णय' हो।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः समस्या समाधानको प्रक्रियामा निर्णय निर्माण अन्तिम र निर्णायक कडी हो; यी दुवैको कुशलताले मानिसलाई सफल र व्यावहारिक बनाउँछ।</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="qcard" id="u3-s3-q6" data-label="प्र.न. ६ (अतिरिक्त) : आत्मालोचना र स्वरूपान्तरण">
+            <h4 class="qtitle"><span class="qnum">प्र.न. ६</span> [अतिरिक्त प्रश्न] आत्मालोचना र स्वरूपान्तरणले व्यक्तिको जीवनमा सकारात्मक परिवर्तन ल्याउन सहयोग गर्छ। यस भनाइलाई उदाहरणसहित पुष्टि गर्नुहोस्। <span class="marks">८ अङ्क</span></h4>
+            <div class="ans">
+              <div class="block intro">
+                <span class="btag">📌 १. परिचय</span>
+                <p>आफ्ना गल्ती र कमजोरीहरूलाई निष्पक्ष रूपमा स्वीकार गरी समीक्षा गर्नु 'आत्मालोचना' हो भने सोही समीक्षाका आधारमा आफ्ना विचार, बानी र व्यवहारमा सकारात्मक सुधार ल्याउनु 'स्वरूपान्तरण' हो।</p>
+              </div>
+              <div class="block body">
+                <span class="btag">📊 २. विषय प्रवेश तथा मुख्य विश्लेषण</span>
+
+                <p><strong>सकारात्मक परिवर्तनका आधारहरू:</strong></p>
+                <ul class="tick">
+                  <li>अहङ्कारको अन्त्य र वास्तविक आत्मबोध प्राप्त हुनु।</li>
+                  <li>गल्ती दोहोरिन नदिई कार्यक्षमता र आत्मविश्वास बढ्नु।</li>
+                  <li>अरूलाई दोष दिने प्रवृत्ति (Blame game) हटी आफैँभित्र निकास खोज्ने बानी बस्नु।</li>
+                </ul>
+
+                <p><strong>व्यावहारिक उदाहरणहरू:</strong></p>
+                <ul class="tick">
+                  <li><strong>विद्यार्थी जीवनको उदाहरण:</strong> परीक्षामा कम अङ्क आउँदा शिक्षक वा प्रश्नपत्रलाई दोष नदिई "मैले समय व्यवस्थापन गर्न सकिनँ" भनी आत्मसमीक्षा गर्ने र सोही अनुसार अध्ययन तालिका बदलेर सफलता प्राप्त गर्नु।</li>
+                  <li><strong>ऐतिहासिक उदाहरण (सम्राट अशोक):</strong> कलिङ्गको युद्धमा भीषण विनाश देखेपछि अशोकले गम्भीर आत्मालोचना गरे र हिंसा त्यागेर अहिंसा एवं जनसेवाको बाटोमा स्वरूपान्तरित भए।</li>
+                </ul>
+              </div>
+              <div class="block concl">
+                <span class="btag">🎯 ३. निष्कर्ष</span>
+                <p>अतः आत्मालोचना र स्वरूपान्तरण मानिसलाई गल्तीबाट सिकेर निरन्तर प्रगतिपथमा अघि बढाउने जीवनकै सबैभन्दा शक्तिशाली रूपान्तरणकारी सिपहरू हुन्।</p>
+              </div>
+            </div>
+          </article>
+        </section>
+
+      </div>
+    </section>
+
+  </div><!-- /wrap -->
+
+  <footer>
+    🇳🇵 <b>राष्ट्रिय परीक्षा बोर्ड (NEB) — कक्षा १२</b> · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा · एकाइ १–३ पूर्ण समाधान सङ्ग्रह
+  </footer>
+</div><!-- /main -->
+
+<button id="toTop" title="माथि जानुहोस्">▲</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- १. साइडबार TOC निर्माण ---------- */
+  const toc = document.getElementById('toc');
+  const units = document.querySelectorAll('.unit');
+
+  units.forEach(function(unit, ui){
+    const wrap = document.createElement('div');
+    wrap.className = 'toc-unit u' + (ui + 1);
+
+    const ua = document.createElement('a');
+    ua.href = '#' + unit.id;
+    ua.className = 'toc-unit-link';
+    ua.textContent = '📘 ' + unit.dataset.unit + ' — ' + unit.dataset.sub;
+    wrap.appendChild(ua);
+
+    unit.querySelectorAll('.sect').forEach(function(sect){
+      const sBox = document.createElement('div');
+      sBox.className = 'toc-sect';
+
+      const sa = document.createElement('a');
+      sa.href = '#' + sect.id;
+      sa.textContent = sect.dataset.title;
+      sBox.appendChild(sa);
+
+      sect.querySelectorAll('.qcard').forEach(function(q){
+        const qa = document.createElement('a');
+        qa.href = '#' + q.id;
+        qa.className = 'toc-q';
+        qa.textContent = q.dataset.label || q.id;
+        qa.title = q.dataset.label || '';
+        sBox.appendChild(qa);
+      });
+
+      wrap.appendChild(sBox);
+    });
+
+    toc.appendChild(wrap);
+  });
+
+  /* ---------- २. सक्रिय लिङ्क हाइलाइट ---------- */
+  const tocLinks = Array.prototype.slice.call(document.querySelectorAll('.toc-q'));
+  const qcards = Array.prototype.slice.call(document.querySelectorAll('.qcard'));
+  const linkMap = {};
+  tocLinks.forEach(function(l){
+    const id = l.getAttribute('href').slice(1);
+    linkMap[id] = l;
+  });
+
+  let ticking = false;
+  function highlight(){
+    const y = window.scrollY + 160;
+    let current = null;
+    for (let i = 0; i < qcards.length; i++){
+      if (qcards[i].offsetTop <= y) current = qcards[i];
+      else break;
+    }
+    tocLinks.forEach(function(l){ l.classList.remove('active'); });
+    if (current && linkMap[current.id]){
+      const link = linkMap[current.id];
+      link.classList.add('active');
+      // साइडबार भित्र देखिने गरी स्क्रोल
+      const sb = document.getElementById('sidebar');
+      const lr = link.getBoundingClientRect();
+      const sr = sb.getBoundingClientRect();
+      if (lr.top < sr.top + 120 || lr.bottom > sr.bottom - 20){
+        sb.scrollTop += (lr.top - sr.top) - 220;
+      }
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){
+    if (!ticking){ requestAnimationFrame(highlight); ticking = true; }
+  }, {passive:true});
+
+  /* ---------- ३. प्रगति पट्टी ---------- */
+  const bar = document.getElementById('progress');
+  const toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function(){
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    const p = h > 0 ? (window.scrollY / h) * 100 : 0;
+    bar.style.width = p + '%';
+    if (window.scrollY > 600) toTop.classList.add('show');
+    else toTop.classList.remove('show');
+  }, {passive:true});
+
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ---------- ४. खोज (Search) ---------- */
+  const search = document.getElementById('search');
+  search.addEventListener('input', function(){
+    const term = search.value.trim().toLowerCase();
+    qcards.forEach(function(c){
+      const hit = !term || c.textContent.toLowerCase().indexOf(term) !== -1;
+      c.classList.toggle('hidden', !hit);
+    });
+    document.querySelectorAll('.sect').forEach(function(s){
+      const any = Array.prototype.some.call(s.querySelectorAll('.qcard'), function(c){
+        return !c.classList.contains('hidden');
+      });
+      s.classList.toggle('hidden', !any);
+    });
+    document.querySelectorAll('.unit').forEach(function(u){
+      const any = Array.prototype.some.call(u.querySelectorAll('.qcard'), function(c){
+        return !c.classList.contains('hidden');
+      });
+      u.classList.toggle('hidden', !any);
+    });
+  });
+
+  /* ---------- ५. मोबाइल साइडबार ---------- */
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
+  const menuBtn = document.getElementById('menuBtn');
+
+  function openSidebar(){ sidebar.classList.add('open'); overlay.classList.add('show'); }
+  function closeSidebar(){ sidebar.classList.remove('open'); overlay.classList.remove('show'); }
+
+  menuBtn.addEventListener('click', function(){
+    if (sidebar.classList.contains('open')) closeSidebar(); else openSidebar();
+  });
+  overlay.addEventListener('click', closeSidebar);
+  sidebar.addEventListener('click', function(e){
+    if (e.target.tagName === 'A' && window.innerWidth <= 1180) closeSidebar();
+  });
+
+  /* ---------- ६. सुरुवाती हाइलाइट ---------- */
+  highlight();
+})();
+</script>
+</body>
+</html>
