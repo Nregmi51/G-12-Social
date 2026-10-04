@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>४४ बुँदामा राष्ट्रिय जनगणना २०७८ को नतिजा सारसंक्षेप</title>
+<style>
+  :root{
+    --primary:#0d5c63;
+    --primary-dark:#094347;
+    --accent:#d94f4f;
+    --accent-soft:#f7d9d9;
+    --bg:#f4f6f8;
+    --card:#ffffff;
+    --text:#1f2d30;
+    --muted:#5f6b6d;
+    --border:#e0e6e8;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  body{
+    font-family:"Noto Sans Devanagari","Mukta","Kalimati","Segoe UI",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
+    padding:0 0 60px;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    background:linear-gradient(135deg,var(--primary) 0%,var(--primary-dark) 100%);
+    color:#fff;
+    padding:60px 20px 50px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  header::after{
+    content:"";
+    position:absolute;
+    bottom:-60px;right:-60px;
+    width:220px;height:220px;
+    background:rgba(255,255,255,.06);
+    border-radius:50%;
+  }
+  header::before{
+    content:"";
+    position:absolute;
+    top:-80px;left:-40px;
+    width:180px;height:180px;
+    background:rgba(255,255,255,.05);
+    border-radius:50%;
+  }
+  header h1{
+    font-size:clamp(1.5rem,3.4vw,2.5rem);
+    font-weight:700;
+    letter-spacing:.4px;
+    position:relative;
+    z-index:1;
+  }
+  header .subtitle{
+    margin-top:14px;
+    font-size:1rem;
+    opacity:.9;
+    position:relative;
+    z-index:1;
+  }
+  header .meta{
+    display:inline-flex;
+    gap:10px;
+    margin-top:22px;
+    flex-wrap:wrap;
+    justify-content:center;
+    position:relative;
+    z-index:1;
+  }
+  header .meta span{
+    background:rgba(255,255,255,.15);
+    border:1px solid rgba(255,255,255,.25);
+    padding:5px 14px;
+    border-radius:50px;
+    font-size:.85rem;
+  }
+
+  /* ---------- Stats highlight ---------- */
+  .stats-strip{
+    max-width:1080px;
+    margin:-38px auto 0;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:14px;
+    position:relative;
+    z-index:2;
+  }
+  .stat-box{
+    background:var(--card);
+    border-radius:12px;
+    padding:18px 16px;
+    text-align:center;
+    box-shadow:0 6px 18px rgba(13,92,99,.10);
+    border-bottom:3px solid var(--accent);
+  }
+  .stat-box .num{
+    font-size:1.4rem;
+    font-weight:700;
+    color:var(--primary);
+    display:block;
+  }
+  .stat-box .lbl{
+    font-size:.82rem;
+    color:var(--muted);
+    margin-top:4px;
+    display:block;
+  }
+
+  /* ---------- Container ---------- */
+  .container{
+    max-width:1080px;
+    margin:0 auto;
+    padding:0 20px;
+  }
+
+  /* ---------- Intro note ---------- */
+  .note{
+    background:var(--accent-soft);
+    border-left:5px solid var(--accent);
+    border-radius:8px;
+    padding:16px 20px;
+    margin:44px 0 10px;
+    font-size:.95rem;
+    color:#5a2424;
+  }
+  .note strong{color:var(--accent);}
+
+  /* ---------- Sections ---------- */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:20px;
+    margin-top:26px;
+  }
+
+  .card{
+    background:var(--card);
+    border-radius:14px;
+    padding:24px 22px 22px;
+    box-shadow:0 3px 12px rgba(0,0,0,.055);
+    border-top:4px solid var(--primary);
+    transition:transform .22s ease,box-shadow .22s ease;
+    position:relative;
+  }
+  .card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 12px 26px rgba(13,92,99,.14);
+  }
+
+  .card .badge{
+    position:absolute;
+    top:-14px;
+    left:22px;
+    background:var(--primary);
+    color:#fff;
+    width:32px;height:32px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:.85rem;
+    font-weight:700;
+    box-shadow:0 3px 8px rgba(13,92,99,.35);
+  }
+
+  .card h2{
+    font-size:1.05rem;
+    color:var(--primary-dark);
+    margin:8px 0 12px;
+    padding-bottom:10px;
+    border-bottom:1px dashed var(--border);
+    line-height:1.5;
+  }
+  .card h2 .en{
+    display:block;
+    font-size:.78rem;
+    font-weight:400;
+    color:var(--muted);
+    margin-top:3px;
+  }
+
+  .card p{
+    font-size:.94rem;
+    color:#2c3a3d;
+    margin-bottom:10px;
+    text-align:justify;
+  }
+  .card p:last-child{margin-bottom:0;}
+
+  /* highlight numbers inside text */
+  .hl{
+    background:linear-gradient(transparent 62%, #ffe9a8 62%);
+    font-weight:600;
+    color:#4a3500;
+    padding:0 2px;
+    border-radius:2px;
+  }
+  .hl-red{
+    background:linear-gradient(transparent 62%, #f9cfcf 62%);
+    font-weight:600;
+    color:#7a1c1c;
+    padding:0 2px;
+    border-radius:2px;
+  }
+
+  /* mini table inside cards */
+  .mini-table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:.88rem;
+    margin-top:10px;
+  }
+  .mini-table th,
+  .mini-table td{
+    padding:8px 10px;
+    border-bottom:1px solid var(--border);
+    text-align:left;
+  }
+  .mini-table th{
+    background:#f0f5f5;
+    color:var(--primary-dark);
+    font-weight:600;
+    font-size:.83rem;
+  }
+  .mini-table tr:last-child td{border-bottom:none;}
+  .mini-table td.num{text-align:right;font-weight:600;color:var(--primary);}
+
+  /* progress bars */
+  .bar-row{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin:7px 0;
+    font-size:.86rem;
+  }
+  .bar-row .lbl{flex:0 0 130px;color:var(--muted);}
+  .bar-track{
+    flex:1;
+    background:#eef2f3;
+    border-radius:50px;
+    height:12px;
+    overflow:hidden;
+  }
+  .bar-fill{
+    height:100%;
+    background:linear-gradient(90deg,var(--primary),#2a9d8f);
+    border-radius:50px;
+    transition:width 1s ease;
+  }
+  .bar-fill.alt{
+    background:linear-gradient(90deg,var(--accent),#f08a5d);
+  }
+  .bar-row .val{
+    flex:0 0 62px;
+    text-align:right;
+    font-weight:600;
+    color:var(--primary-dark);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    margin-top:56px;
+    text-align:center;
+    padding:30px 20px 10px;
+    border-top:1px solid var(--border);
+    font-size:.88rem;
+    color:var(--muted);
+  }
+  footer strong{color:var(--primary-dark);display:block;margin-bottom:4px;}
+
+  /* ---------- Back to top ---------- */
+  .top-btn{
+    position:fixed;
+    bottom:26px;right:26px;
+    background:var(--primary);
+    color:#fff;
+    width:44px;height:44px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:1.2rem;
+    box-shadow:0 6px 16px rgba(13,92,99,.4);
+    transition:background .2s;
+    z-index:99;
+  }
+  .top-btn:hover{background:var(--accent);}
+
+  @media(max-width:520px){
+    .grid{grid-template-columns:1fr;}
+    .bar-row .lbl{flex:0 0 100px;font-size:.8rem;}
+    header{padding:44px 16px 38px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>४४ बुँदामा राष्ट्रिय जनगणना २०७८ को नतिजा सारसंक्षेप</h1>
+  <p class="subtitle">National Population and Housing Census 2021 — Key Results at a Glance</p>
+  <div class="meta">
+    <span>✍️ सुरेश भुसाल</span>
+    <span>📅 २८ मार्च, २०२३</span>
+    <span>📊 जनगणना सन्दर्भ दिन: २०७८ मंसिर ९</span>
+  </div>
+</header>
+
+<!-- ===== Highlight Stats ===== -->
+<div class="stats-strip">
+  <div class="stat-box">
+    <span class="num">२,९१,६४,५७८</span>
+    <span class="lbl">कुल जनसंख्या</span>
+  </div>
+  <div class="stat-box">
+    <span class="num">५१.०२%</span>
+    <span class="lbl">महिला जनसंख्या</span>
+  </div>
+  <div class="stat-box">
+    <span class="num">९५.५९</span>
+    <span class="lbl">लैङ्गिक अनुपात</span>
+  </div>
+  <div class="stat-box">
+    <span class="num">०.९२%</span>
+    <span class="lbl">वार्षिक वृद्धिदर</span>
+  </div>
+  <div class="stat-box">
+    <span class="num">७६.३%</span>
+    <span class="lbl">साक्षरता दर</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="note">
+    <strong>सारांश:</strong> राष्ट्रिय जनगणना २०७८ को नतिजा अनुसार नेपालको कुल जनसंख्या <strong>२,९१,६४,५७८</strong> पुगेको छ भने जनसंख्या वृद्धिदर घटेर <strong>०.९२%</strong> मा झरेको छ। लैङ्गिक अनुपात, साक्षरता, सुविधा पहुँच र जीवनस्तरमा उल्लेख्य सुधार देखिएको छ।
+  </div>
+
+  <div class="grid">
+
+    <!-- 1 -->
+    <div class="card">
+      <span class="badge">१</span>
+      <h2>जनसंख्या <span class="en">Population</span></h2>
+      <p>जनगणना सन्दर्भ दिन <span class="hl">२०७८ मंसिर ९</span> अनुसार नेपालको कुल जनसंख्या <span class="hl">२,९१,६४,५७८</span> रहेको छ। पुरुष <span class="hl">१,४२,५३,५५१</span> (४८.९८%) र महिला <span class="hl">१,४९,११,०२७</span> (५१.०२%) रहेका छन्।</p>
+      <p>लैङ्गिक अनुपात (प्रति १०० महिलामा पुरुष) <span class="hl">९५.५९</span> पुगेको छ, जुन २०६८ मा ९४.१६ थियो।</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="card">
+      <span class="badge">२</span>
+      <h2>अन्य लिङ्गीको जनसंख्या <span class="en">Other gender population</span></h2>
+      <p>कुल जनसंख्यामध्ये अन्य लिङ्गी (लैङ्गिक तथा यौनिक अल्पसंख्यक) को जनसंख्या <span class="hl">२,९२८</span> देखिएको छ, जुन कुल जनसंख्याको <span class="hl">०.०१%</span> हुन्छ।</p>
+      <p>सबैभन्दा बढी बागमती प्रदेशमा <span class="hl">३२.७%</span> र सबैभन्दा कम कर्णाली प्रदेशमा <span class="hl">२.८%</span> रहेको छ।</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="card">
+      <span class="badge">३</span>
+      <h2>वार्षिक जनसंख्या वृद्धिदर <span class="en">Average annual population growth rate</span></h2>
+      <p>जनगणना अवधिको वार्षिक औसत जनसंख्या वृद्धिदर <span class="hl">०.९२%</span> रहेको छ, जुन २०६८ मा <span class="hl">१.३५%</span> थियो।</p>
+      <table class="mini-table">
+        <tr><th>विवरण</th><th>जिल्ला</th><th class="num">दर</th></tr>
+        <tr><td>सबैभन्दा बढी</td><td>भक्तपुर</td><td class="num">३.३५%</td></tr>
+        <tr><td>सबैभन्दा कम</td><td>रामेछाप</td><td class="num">–१.६७%</td></tr>
+      </table>
+    </div>
+
+    <!-- 4 -->
+    <div class="card">
+      <span class="badge">४</span>
+      <h2>जनघनत्व <span class="en">Population density</span></h2>
+      <p>प्रति वर्ग किलोमिटर जनघनत्व <span class="hl">१९८</span> पुगेको छ, जुन २०६८ मा १८० थियो।</p>
+      <div class="bar-row">
+        <span class="lbl">तराई</span>
+        <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+        <span class="val">४६०</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">हिमाली</span>
+        <div class="bar-track"><div class="bar-fill" style="width:8%"></div></div>
+        <span class="val">३४</span>
+      </div>
+      <p style="margin-top:10px;">सबैभन्दा धेरै काठमाडौंमा <span class="hl">५,१६९</span> र सबैभन्दा कम मनाङमा <span class="hl-red">३</span> प्रति वर्ग कि.मि.।</p>
+    </div>
+
+    <!-- 5 -->
+    <div class="card">
+      <span class="badge">५</span>
+      <h2>बृहत उमेर समूहअनुसार जनसंख्या <span class="en">Population by broad age group</span></h2>
+      <div class="bar-row">
+        <span class="lbl">१५–५९ वर्ष</span>
+        <div class="bar-track"><div class="bar-fill" style="width:61.96%"></div></div>
+        <span class="val">६१.९६%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">१४ वर्ष वा कम</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:27.83%"></div></div>
+        <span class="val">२७.८३%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">६० वर्ष वा माथि</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:10.21%"></div></div>
+        <span class="val">१०.२१%</span>
+      </div>
+      <p style="margin-top:8px;">२०६८ मा १५–५९ वर्ष समूहको हिस्सा ५६.९६% मात्र थियो।</p>
+    </div>
+
+    <!-- 6 -->
+    <div class="card">
+      <span class="badge">६</span>
+      <h2>परिवार संख्या <span class="en">Number of households</span></h2>
+      <p>२०६८ मा ५४,२७,३०२ परिवार रहेकोमा हाल करिव <span class="hl">२३%</span> ले बढेर <span class="hl">६६,६६,९३७</span> पुगेको छ।</p>
+      <table class="mini-table">
+        <tr><th>प्रकार</th><th class="num">संख्या</th></tr>
+        <tr><td>व्यक्तिगत परिवार</td><td class="num">६६,६०,८४१</td></tr>
+        <tr><td>संस्थागत परिवार</td><td class="num">६,०९६</td></tr>
+      </table>
+    </div>
+
+    <!-- 7 -->
+    <div class="card">
+      <span class="badge">७</span>
+      <h2>परिवारको औसत आकार <span class="en">Average household size</span></h2>
+      <p>प्रति परिवार औसत सदस्य <span class="hl">४.३७</span> जना रहेको छ, जुन २०६८ मा ४.८८ जना थियो।</p>
+      <table class="mini-table">
+        <tr><th>भौगोलिक क्षेत्र</th><th class="num">औसत आकार</th></tr>
+        <tr><td>हिमाली</td><td class="num">४.३३</td></tr>
+        <tr><td>पहाड</td><td class="num">३.९९</td></tr>
+        <tr><td>तराई</td><td class="num">४.७३</td></tr>
+      </table>
+      <p style="margin-top:8px;">रौतहटमा सबैभन्दा बढी <span class="hl">५.९४</span>, गोरखा र दोलखामा सबैभन्दा कम <span class="hl-red">३.४९</span>।</p>
+    </div>
+
+    <!-- 8 -->
+    <div class="card">
+      <span class="badge">८</span>
+      <h2>नगरपालिका तथा गाउँपालिकाको जनसंख्या <span class="en">Urban / Rural municipality population</span></h2>
+      <div class="bar-row">
+        <span class="lbl">नगरपालिका</span>
+        <div class="bar-track"><div class="bar-fill" style="width:66.17%"></div></div>
+        <span class="val">६६.१७%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">गाउँपालिका</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:33.83%"></div></div>
+        <span class="val">३३.८३%</span>
+      </div>
+      <p style="margin-top:8px;">नगरपालिका क्षेत्रको लैङ्गिक अनुपात ९५.८९ बाट बढेर <span class="hl">९६.०६</span> र गाउँपालिकामा ९१.२७ बाट बढेर <span class="hl">९४.६८</span> पुगेको छ।</p>
+    </div>
+
+    <!-- 9 -->
+    <div class="card">
+      <span class="badge">९</span>
+      <h2>सबैभन्दा धेरै र कम जनसंख्या भएका जिल्ला <span class="en">Districts with highest &amp; lowest population</span></h2>
+      <table class="mini-table">
+        <tr><th>क्रम</th><th>धेरै जनसंख्या</th><th class="num">संख्या</th></tr>
+        <tr><td>१</td><td>काठमाडौं</td><td class="num">२०,४१,५८७</td></tr>
+        <tr><td>२</td><td>मोरङ</td><td class="num">—</td></tr>
+        <tr><td>३</td><td>रूपन्देही</td><td class="num">—</td></tr>
+        <tr><td>४</td><td>झापा</td><td class="num">—</td></tr>
+        <tr><td>५</td><td>सुनसरी</td><td class="num">—</td></tr>
+      </table>
+      <p style="margin-top:8px;">सबैभन्दा कम जनसंख्या मनाङमा <span class="hl-red">५,६५८</span>। त्यसपछि मुस्ताङ, डोल्पा, रसुवा र हुम्ला।</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="card">
+      <span class="badge">१०</span>
+      <h2>भौगोलिक क्षेत्रअनुसार जनसंख्या <span class="en">Population by ecological belt</span></h2>
+      <div class="bar-row">
+        <span class="lbl">तराई</span>
+        <div class="bar-track"><div class="bar-fill" style="width:53.61%"></div></div>
+        <span class="val">५३.६१%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">पहाड</span>
+        <div class="bar-track"><div class="bar-fill" style="width:40.31%"></div></div>
+        <span class="val">४०.३१%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">हिमाली</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:6.08%"></div></div>
+        <span class="val">६.०८%</span>
+      </div>
+      <p style="margin-top:8px;">संख्या: तराई १,५६,३४,००६ · पहाड १,१७,५७,६२४ · हिमाल १७,७२,९४८</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="card">
+      <span class="badge">११</span>
+      <h2>प्रदेश अनुसार जनसंख्या <span class="en">Population by province</span></h2>
+      <p>सबैभन्दा धेरै बागमती प्रदेशमा <span class="hl">२०.९७%</span> र सबैभन्दा कम कर्णाली प्रदेशमा <span class="hl">५.७९%</span> रहेको छ।</p>
+      <p>जनसंख्याको आकारअनुसार क्रम: बागमती, मधेश, कोशी, लुम्बिनी, सुदूरपश्चिम, गण्डकी र कर्णाली।</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="card">
+      <span class="badge">१२</span>
+      <h2>मुख्य प्रयोग अनुसार घरको संख्या <span class="en">Number of building structures by main use</span></h2>
+      <p>देशभर जम्मा <span class="hl">७५,५२,०६६</span> घर संरचना रहेका छन्।</p>
+      <table class="mini-table">
+        <tr><th>मुख्य प्रयोग</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>आवास</td><td class="num">७१.७%</td></tr>
+        <tr><td>गोठ/धन्सार/मतान</td><td class="num">१०.१%</td></tr>
+        <tr><td>खाली घर</td><td class="num">६.३%</td></tr>
+        <tr><td>अन्य (भान्सा घर आदि)</td><td class="num">५.९%</td></tr>
+        <tr><td>व्यापार</td><td class="num">३.१%</td></tr>
+        <tr><td>शैक्षिक</td><td class="num">१.१%</td></tr>
+      </table>
+    </div>
+
+    <!-- 13 -->
+    <div class="card">
+      <span class="badge">१३</span>
+      <h2>घर वा आवासीय एकाइको स्वामित्व <span class="en">Ownership of house / housing unit</span></h2>
+      <div class="bar-row">
+        <span class="lbl">आफ्नै स्वामित्व</span>
+        <div class="bar-track"><div class="bar-fill" style="width:86%"></div></div>
+        <span class="val">८६.०%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">भाडामा</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:12.8%"></div></div>
+        <span class="val">१२.८%</span>
+      </div>
+      <p style="margin-top:8px;">संस्थागत एकाइमा ०.६% र अन्य प्रकारमा ०.७% परिवार बसोबास गर्छन्।</p>
+    </div>
+
+    <!-- 14 -->
+    <div class="card">
+      <span class="badge">१४</span>
+      <h2>खानेपानीको मुख्य स्रोत <span class="en">Main source of drinking water</span></h2>
+      <table class="mini-table">
+        <tr><th>स्रोत</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>धारा / पाइप</td><td class="num">५७.०%</td></tr>
+        <tr><td>ट्युबवेल / हाते पम्प</td><td class="num">२९.८%</td></tr>
+        <tr><td>जार / बोतल</td><td class="num">४.६%</td></tr>
+        <tr><td>मूल धारा</td><td class="num">३.९%</td></tr>
+        <tr><td>ढाकिएको इनार / कुवा</td><td class="num">१.५%</td></tr>
+      </table>
+      <p style="margin-top:8px;">२०६८ मा धारा/पाइप प्रयोग गर्ने ४७.८% मात्र थियो।</p>
+    </div>
+
+    <!-- 15 -->
+    <div class="card">
+      <span class="badge">१५</span>
+      <h2>खाना पकाउन प्रयोग गरिने इन्धन <span class="en">Main source of cooking fuel</span></h2>
+      <div class="bar-row">
+        <span class="lbl">काठ / दाउरा</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:51%"></div></div>
+        <span class="val">५१.०%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">एल.पि. ग्याँस</span>
+        <div class="bar-track"><div class="bar-fill" style="width:44.3%"></div></div>
+        <span class="val">४४.३%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">गुईठा / गोरहा</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:2.9%"></div></div>
+        <span class="val">२.९%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">बायोग्याँस</span>
+        <div class="bar-track"><div class="bar-fill" style="width:1.2%"></div></div>
+        <span class="val">१.२%</span>
+      </div>
+      <p style="margin-top:8px;">२०६८ मा दाउरा प्रयोग गर्ने ६४.०% थियो।</p>
+    </div>
+
+    <!-- 16 -->
+    <div class="card">
+      <span class="badge">१६</span>
+      <h2>बत्ती बाल्न प्रयोग गरिने स्रोत <span class="en">Main source of lighting</span></h2>
+      <div class="bar-row">
+        <span class="lbl">बिजुली</span>
+        <div class="bar-track"><div class="bar-fill" style="width:92.2%"></div></div>
+        <span class="val">९२.२%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">सोलार</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:6.6%"></div></div>
+        <span class="val">६.६%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">मट्टितेल</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:0.6%"></div></div>
+        <span class="val">०.६%</span>
+      </div>
+      <p style="margin-top:8px;">२०६८ मा बिजुली प्रयोग गर्ने ६७.३% र मट्टितेल १८.३% थियो।</p>
+    </div>
+
+    <!-- 17 -->
+    <div class="card">
+      <span class="badge">१७</span>
+      <h2>परिवारले उपयोग गरेका साधन र सुविधा <span class="en">Household assets / amenities</span></h2>
+      <table class="mini-table">
+        <tr><th>सुविधा</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>साधारण मोबाइल</td><td class="num">७३.१५%</td></tr>
+        <tr><td>स्मार्ट मोबाइल</td><td class="num">७२.९४%</td></tr>
+        <tr><td>टेलिभिजन</td><td class="num">४९.३७%</td></tr>
+        <tr><td>इन्टरनेट</td><td class="num">३७.७२%</td></tr>
+        <tr><td>साइकल</td><td class="num">३५.२१%</td></tr>
+      </table>
+      <p style="margin-top:8px;">कुनै पनि सुविधा नभएका परिवार <span class="hl-red">३.८८%</span>।</p>
+    </div>
+
+    <!-- 18 -->
+    <div class="card">
+      <span class="badge">१८</span>
+      <h2>शौचालयको सुविधा <span class="en">Toilet facility</span></h2>
+      <div class="bar-row">
+        <span class="lbl">शौचालय पहुँच</span>
+        <div class="bar-track"><div class="bar-fill" style="width:95.5%"></div></div>
+        <span class="val">९५.५%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">पहुँच नभएका</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:4.5%"></div></div>
+        <span class="val">४.५%</span>
+      </div>
+      <p style="margin-top:8px;">२०६८ मा शौचालय पहुँच नभएका परिवार <span class="hl-red">३८.२%</span> थिए — उल्लेख्य सुधार।</p>
+    </div>
+
+    <!-- 19 -->
+    <div class="card">
+      <span class="badge">१९</span>
+      <h2>परिवारमा महिलाको नाममा घरजग्गा <span class="en">Female ownership in house &amp; land</span></h2>
+      <p>कुल परिवारमध्ये <span class="hl">२३.८%</span> परिवारमा महिलाको नाममा घर वा जग्गा वा दुवै रहेको छ।</p>
+      <p>११.८% परिवारमा महिलाको नाममा घर र जग्गा दुवै रहेको छ, जुन २०६८ को तुलनामा १.१ प्रतिशत बिन्दुले बढी हो।</p>
+    </div>
+
+    <!-- 20 -->
+    <div class="card">
+      <span class="badge">२०</span>
+      <h2>कृषि बाहेकका साना घरेलु व्यवसाय <span class="en">Small scale enterprises other than agriculture</span></h2>
+      <p>कुल <span class="hl">६,२७,८८७</span> (९.४%) परिवारले साना घरेलु व्यवसाय सञ्चालन गरेका छन्।</p>
+      <table class="mini-table">
+        <tr><th>प्रकार</th><th class="num">संख्या</th></tr>
+        <tr><td>व्यापार / व्यवसाय</td><td class="num">३,१०,६५१</td></tr>
+        <tr><td>घरेलु उद्योग</td><td class="num">१,३७,६४४</td></tr>
+        <tr><td>सेवा</td><td class="num">६९,१७७</td></tr>
+        <tr><td>यातायात</td><td class="num">३४,६५६</td></tr>
+      </table>
+      <p style="margin-top:8px;">पुरुष सञ्चालित ५५.०%, महिला सञ्चालित ४५.०%।</p>
+    </div>
+
+    <!-- 21 -->
+    <div class="card">
+      <span class="badge">२१</span>
+      <h2>परिवारमा अनुपस्थित (विदेश गएका) व्यक्ति <span class="en">Absentee abroad</span></h2>
+      <p>जम्मा <span class="hl">१५,५५,९६१</span> परिवारबाट <span class="hl">२१,९०,५९२</span> जना विदेशमा अक्सर बसोबास गर्छन्।</p>
+      <table class="mini-table">
+        <tr><th>लिङ्ग</th><th class="num">संख्या</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>पुरुष</td><td class="num">१७,९९,६७५</td><td class="num">८२.२%</td></tr>
+        <tr><td>महिला</td><td class="num">३,९०,९१७</td><td class="num">१७.८%</td></tr>
+      </table>
+    </div>
+
+    <!-- 22 -->
+    <div class="card">
+      <span class="badge">२२</span>
+      <h2>गत बाह्र महिनामा मृत्यु भएको परिवार <span class="en">Households with deaths in the last 12 months</span></h2>
+      <p>कुल <span class="hl">१,९२,१७८</span> परिवारमा कम्तिमा एक जनाको मृत्यु भएको थियो।</p>
+      <p>कुल मृत्यु <span class="hl">१,९८,४६३</span> जना — पुरुष ५७.९% र महिला ४२.१%।</p>
+      <p>नगरपालिका क्षेत्रबाट १,३२,६०८ र गाउँपालिका क्षेत्रबाट ६५,८५५ जनाको मृत्यु भएको छ।</p>
+    </div>
+
+    <!-- 23 -->
+    <div class="card">
+      <span class="badge">२३</span>
+      <h2>महिला परिवारमूली <span class="en">Female household head</span></h2>
+      <p>कुल <span class="hl">६६,६६,९३७</span> परिवारमध्ये <span class="hl">३१.५५%</span> परिवारमूली महिला रहेका छन्।</p>
+      <p>यो २०६८ को तुलनामा <span class="hl">५.८२</span> प्रतिशत बिन्दुले बढी हो।</p>
+    </div>
+
+    <!-- 24 -->
+    <div class="card">
+      <span class="badge">२४</span>
+      <h2>वैवाहिक अवस्था <span class="en">Marital status</span></h2>
+      <p>१० वर्ष वा सो भन्दा बढी उमेरका कुल जनसंख्याको <span class="hl">३३.१%</span> अविवाहित छन् — पुरुष ३८.२%, महिला २८.४%।</p>
+      <p><span class="hl">६१.८%</span> हाल विवाहित अवस्थामा छन् — पुरुष ५९.१%, महिला ६४.३%।</p>
+    </div>
+
+    <!-- 25 -->
+    <div class="card">
+      <span class="badge">२५</span>
+      <h2>पहिलो विवाह गर्दाको उमेर <span class="en">Age at first marriage</span></h2>
+      <table class="mini-table">
+        <tr><th>उमेर समूह</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>१८–२० वर्ष</td><td class="num">३४.४%</td></tr>
+        <tr><td>१५–१७ वर्ष</td><td class="num">२२.३%</td></tr>
+        <tr><td>१०–१४ वर्ष</td><td class="num">७.०%</td></tr>
+        <tr><td>१० वर्षमुनि</td><td class="num">०.३%</td></tr>
+      </table>
+      <p style="margin-top:8px;">पहिलो विवाहको औसत उमेर <span class="hl">१९ वर्ष</span> (पुरुष २१, महिला १८)।</p>
+    </div>
+
+    <!-- 26 -->
+    <div class="card">
+      <span class="badge">२६</span>
+      <h2>अपाङ्गता <span class="en">Disability</span></h2>
+      <p>कुल जनसंख्याको <span class="hl">२.२%</span> व्यक्तिमा कुनै न कुनै प्रकारको अपाङ्गता रहेको छ।</p>
+      <div class="bar-row">
+        <span class="lbl">पुरुष</span>
+        <div class="bar-track"><div class="bar-fill" style="width:54.2%"></div></div>
+        <span class="val">५४.२%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">महिला</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:45.8%"></div></div>
+        <span class="val">४५.८%</span>
+      </div>
+      <p style="margin-top:8px;">२०६८ मा यो दर १.९४% थियो।</p>
+    </div>
+
+    <!-- 27 -->
+    <div class="card">
+      <span class="badge">२७</span>
+      <h2>साक्षरता दर <span class="en">Literacy rate</span></h2>
+      <div class="bar-row">
+        <span class="lbl">कुल</span>
+        <div class="bar-track"><div class="bar-fill" style="width:76.3%"></div></div>
+        <span class="val">७६.३%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">पुरुष</span>
+        <div class="bar-track"><div class="bar-fill" style="width:83.6%"></div></div>
+        <span class="val">८३.६%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">महिला</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:69.4%"></div></div>
+        <span class="val">६९.४%</span>
+      </div>
+      <p style="margin-top:8px;">२०६८ मा कुल साक्षरता दर ६५.९% मात्र थियो।</p>
+    </div>
+
+    <!-- 28 -->
+    <div class="card">
+      <span class="badge">२८</span>
+      <h2>उत्तीर्ण गरेको शैक्षिक तह <span class="en">Education level completed</span></h2>
+      <table class="mini-table">
+        <tr><th>तह</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>प्राथमिक (१–५)</td><td class="num">२८.७%</td></tr>
+        <tr><td>निम्न माध्यमिक (६–८)</td><td class="num">१९.९%</td></tr>
+        <tr><td>एस.एल.सी. भन्दा माथिल्लो</td><td class="num">१९.५%</td></tr>
+        <tr><td>एस.एल.सी. वा सो सरह</td><td class="num">९.५%</td></tr>
+        <tr><td>अनौपचारिक शिक्षा</td><td class="num">१.८%</td></tr>
+      </table>
+    </div>
+
+    <!-- 29 -->
+    <div class="card">
+      <span class="badge">२९</span>
+      <h2>जन्मस्थानको आधारमा जनसंख्या <span class="en">Population by place of birth</span></h2>
+      <p>जन्मस्थान र हालको बसोबास एउटै पालिकामा भएका व्यक्ति <span class="hl">६९.०%</span> — पुरुष ७८.३%, महिला ६०.०%।</p>
+      <table class="mini-table">
+        <tr><th>जन्मस्थान</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>अर्को जिल्ला</td><td class="num">१९.५%</td></tr>
+        <tr><td>अर्को पालिका (उही जिल्ला)</td><td class="num">९.०%</td></tr>
+        <tr><td>विदेश</td><td class="num">२.५%</td></tr>
+      </table>
+    </div>
+
+    <!-- 30 -->
+    <div class="card">
+      <span class="badge">३०</span>
+      <h2>पछिल्लो बसाइँसराइको स्थान <span class="en">Former place of residence</span></h2>
+      <p>अर्को स्थानमा कहिल्यै बसोबास नगरेका व्यक्ति <span class="hl">६८.०%</span> — पुरुष ७७.०%, महिला ५९.४%।</p>
+      <table class="mini-table">
+        <tr><th>अघिल्लो बसोबास</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>अर्को जिल्ला</td><td class="num">१८.२%</td></tr>
+        <tr><td>अर्को पालिका (उही जिल्ला)</td><td class="num">१०.८%</td></tr>
+        <tr><td>विदेश</td><td class="num">३.१%</td></tr>
+      </table>
+    </div>
+
+    <!-- 31 -->
+    <div class="card">
+      <span class="badge">३१</span>
+      <h2>पछिल्लो बसाइँसराइको अवधि <span class="en">Duration of last migration</span></h2>
+      <p>कुल बसाइँ सरेका <span class="hl">९३,४१,४०८</span> जनामध्ये सबैभन्दा बढी <span class="hl">३१.८%</span> को अवधि १०–२४ वर्ष रहेको छ।</p>
+      <p>१ वर्षभन्दा कम अवधि <span class="hl">३.५%</span> र ५० वर्षभन्दा बढी <span class="hl">४.०%</span> रहेको छ।</p>
+    </div>
+
+    <!-- 32 -->
+    <div class="card">
+      <span class="badge">३२</span>
+      <h2>हाल बसाइँ सर्नुको कारण <span class="en">Reasons for current migration</span></h2>
+      <table class="mini-table">
+        <tr><th>कारण</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>विवाह</td><td class="num">३८.२%</td></tr>
+        <tr><td>आश्रित</td><td class="num">१९.५%</td></tr>
+        <tr><td>काम / रोजगारी</td><td class="num">१५.२%</td></tr>
+        <tr><td>अध्ययन / तालिम</td><td class="num">७.८%</td></tr>
+        <tr><td>घर फर्किएको</td><td class="num">४.१%</td></tr>
+        <tr><td>कृषि</td><td class="num">३.९%</td></tr>
+        <tr><td>व्यापार / व्यवसाय</td><td class="num">२.८%</td></tr>
+        <tr><td>प्राकृतिक प्रकोप</td><td class="num">०.७%</td></tr>
+      </table>
+    </div>
+
+    <!-- 33 -->
+    <div class="card">
+      <span class="badge">३३</span>
+      <h2>महिलाको प्रजनन् अवस्था <span class="en">Fertility status</span></h2>
+      <p>१५–४९ वर्षका विवाहित महिला <span class="hl">६१,४५,०३९</span> मध्ये १२% ले कुनै जीवित बच्चा जन्माएका छैनन्।</p>
+      <table class="mini-table">
+        <tr><th>जीवित बच्चा संख्या</th><th class="num">महिला %</th></tr>
+        <tr><td>२ जना</td><td class="num">३३.०%</td></tr>
+        <tr><td>१ जना</td><td class="num">२३.१%</td></tr>
+        <tr><td>९ वा बढी</td><td class="num">०.१%</td></tr>
+      </table>
+      <p style="margin-top:8px;">कुल जन्मेका बच्चा १,२७,९९,९६९ — छोरा ५२.७%, छोरी ४७.३%।</p>
+    </div>
+
+    <!-- 34 -->
+    <div class="card">
+      <span class="badge">३४</span>
+      <h2>महिलाको हालको प्रजनन् अवस्था <span class="en">Current fertility status</span></h2>
+      <p>गणनाको दिनदेखि १२ महिनाअघिको अवधिमा कुल <span class="hl">४,१२,९३५</span> बच्चाको जन्म भएको थियो।</p>
+      <div class="bar-row">
+        <span class="lbl">छोरा</span>
+        <div class="bar-track"><div class="bar-fill" style="width:52.8%"></div></div>
+        <span class="val">५२.८%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">छोरी</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:47.2%"></div></div>
+        <span class="val">४७.२%</span>
+      </div>
+      <p style="margin-top:8px;">सबैभन्दा धेरै ३६.८% बच्चाको जन्म २०–२४ वर्षका महिलाबाट भएको थियो।</p>
+    </div>
+
+    <!-- 35 -->
+    <div class="card">
+      <span class="badge">३५</span>
+      <h2>मातृमृत्यु सम्बन्धी विवरण <span class="en">Maternal mortality</span></h2>
+      <p>गणनाको सन्दर्भ अवधिमा १५–४९ वर्षका <span class="hl">१२,९७६</span> महिला मृत्युमध्ये <span class="hl">६५३</span> (५%) को मृत्यु गर्भावस्थासँग सम्बन्धित थियो।</p>
+      <p>भर्वल अटोप्सी अनुसार <span class="hl">६२२</span> (९५%) मातृमृत्युसँग सम्बन्धित रहेको पाइयो।</p>
+      <p>मातृमृत्यु दर <span class="hl-red">१५१</span> (प्रति लाख जीवित जन्ममा)।</p>
+    </div>
+
+    <!-- 36 -->
+    <div class="card">
+      <span class="badge">३६</span>
+      <h2>बालबालिकाको बसाइँको अवस्था <span class="en">Living arrangement of children</span></h2>
+      <p>१८ वर्षभन्दा कम उमेरका कुल <span class="hl">९८,६९,५८३</span> बालबालिका रहेका छन्।</p>
+      <table class="mini-table">
+        <tr><th>अवस्था</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>आमाबाबु दुवैसँग</td><td class="num">७७.९%</td></tr>
+        <tr><td>आमासँग मात्र</td><td class="num">१७.१%</td></tr>
+        <tr><td>अन्य नातेदारसँग</td><td class="num">३.०%</td></tr>
+        <tr><td>बाबुसँग मात्र</td><td class="num">१.०%</td></tr>
+      </table>
+    </div>
+
+    <!-- 37 -->
+    <div class="card">
+      <span class="badge">३७</span>
+      <h2>आर्थिक काम गरेको अवधि <span class="en">Duration of economic activities</span></h2>
+      <p>१० वर्ष वा बढी उमेरका <span class="hl">२,३९,५८,८६८</span> मध्ये <span class="hl">१,४९,८३,३१०</span> जनाले आर्थिक काम गरेका छन्।</p>
+      <div class="bar-row">
+        <span class="lbl">६ महिना वा बढी</span>
+        <div class="bar-track"><div class="bar-fill" style="width:41%"></div></div>
+        <span class="val">४१.०%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">६ महिनाभन्दा कम</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:21.5%"></div></div>
+        <span class="val">२१.५%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">काम नगरेका</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:37.5%"></div></div>
+        <span class="val">३७.५%</span>
+      </div>
+    </div>
+
+    <!-- 38 -->
+    <div class="card">
+      <span class="badge">३८</span>
+      <h2>आर्थिक क्रियाकलाप <span class="en">Economic activities</span></h2>
+      <table class="mini-table">
+        <tr><th>विवरण</th><th class="num">संख्या</th><th class="num">%</th></tr>
+        <tr><td>आर्थिक रुपले सक्रिय</td><td class="num">१,५६,८९,७७७</td><td class="num">६५.५%</td></tr>
+        <tr><td>आर्थिक रुपले निष्क्रिय</td><td class="num">८२,११,०१२</td><td class="num">३४.३%</td></tr>
+      </table>
+      <p style="margin-top:8px;">अक्सर रोजगार <span class="hl">१,०२,७०,४४७</span> (९३.०५%) र अक्सर बेरोजगार <span class="hl-red">७,६७,६५८</span> (६.९५%)।</p>
+    </div>
+
+    <!-- 39 -->
+    <div class="card">
+      <span class="badge">३९</span>
+      <h2>पेशागत वर्गीकरण अनुसारको जनसंख्या <span class="en">Economically active by main occupation</span></h2>
+      <p>आर्थिक काम गरेका कुल जनसंख्या <span class="hl">१,४९,८३,३१०</span> — पुरुष ५२.६%, महिला ४७.४%।</p>
+      <table class="mini-table">
+        <tr><th>पेशा</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>कृषि, वन र माछापालन</td><td class="num">५०.१%</td></tr>
+        <tr><td>सामान्य/प्राथमिक पेशा</td><td class="num">२३.०%</td></tr>
+        <tr><td>सेवा तथा वस्तु बिक्री</td><td class="num">५.८%</td></tr>
+        <tr><td>शिल्पकला तथा कालिगढ</td><td class="num">५.६%</td></tr>
+        <tr><td>व्यवस्थापक</td><td class="num">५.१%</td></tr>
+      </table>
+    </div>
+
+    <!-- 40 -->
+    <div class="card">
+      <span class="badge">४०</span>
+      <h2>औद्योगिक क्षेत्र वर्गीकरण अनुसारको जनसंख्या <span class="en">Economically active by main industry</span></h2>
+      <table class="mini-table">
+        <tr><th>क्षेत्र</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>कृषि, वन र माछापालन</td><td class="num">५७.३%</td></tr>
+        <tr><td>थोक एवं खुद्रा व्यापार</td><td class="num">१२.५%</td></tr>
+        <tr><td>निर्माण</td><td class="num">८.१%</td></tr>
+        <tr><td>अन्य सेवा</td><td class="num">३.९%</td></tr>
+        <tr><td>औद्योगिक उत्पादन</td><td class="num">३.८%</td></tr>
+      </table>
+    </div>
+
+    <!-- 41 -->
+    <div class="card">
+      <span class="badge">४१</span>
+      <h2>आर्थिक काममा संलग्नताको प्रकार <span class="en">Employment status</span></h2>
+      <div class="bar-row">
+        <span class="lbl">आफ्नै काम</span>
+        <div class="bar-track"><div class="bar-fill" style="width:55.3%"></div></div>
+        <span class="val">५५.३%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">अरुको काम</span>
+        <div class="bar-track"><div class="bar-fill" style="width:28.6%"></div></div>
+        <span class="val">२८.६%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">परिवारमा सघाउने</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:14.5%"></div></div>
+        <span class="val">१४.५%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">रोजगारदाता</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:1.4%"></div></div>
+        <span class="val">१.४%</span>
+      </div>
+    </div>
+
+    <!-- 42 -->
+    <div class="card">
+      <span class="badge">४२</span>
+      <h2>आर्थिक कामको संस्थागत क्षेत्र <span class="en">Institutional sector</span></h2>
+      <table class="mini-table">
+        <tr><th>क्षेत्र</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>घरायसी क्षेत्र</td><td class="num">६१.८%</td></tr>
+        <tr><td>गैर वित्तीय संस्था</td><td class="num">३२.७%</td></tr>
+        <tr><td>सरकारी</td><td class="num">३.९%</td></tr>
+        <tr><td>वित्तीय संस्था</td><td class="num">१.१%</td></tr>
+        <tr><td>नाफा नकमाउने संस्था</td><td class="num">०.४%</td></tr>
+      </table>
+    </div>
+
+    <!-- 43 -->
+    <div class="card">
+      <span class="badge">४३</span>
+      <h2>आर्थिक काम नगर्नुको कारण <span class="en">Reasons for not being economically active</span></h2>
+      <table class="mini-table">
+        <tr><th>कारण</th><th class="num">प्रतिशत</th></tr>
+        <tr><td>विद्यार्थी</td><td class="num">४६.९%</td></tr>
+        <tr><td>घरधन्दा</td><td class="num">२१.९%</td></tr>
+        <tr><td>वृद्ध अवस्था</td><td class="num">११.०%</td></tr>
+        <tr><td>पारिवारिक हेरचाह</td><td class="num">७.५%</td></tr>
+        <tr><td>अशक्त / बिरामी</td><td class="num">२.५%</td></tr>
+        <tr><td>पेन्सन / आयस्ता</td><td class="num">२.२%</td></tr>
+      </table>
+    </div>
+
+    <!-- 44 -->
+    <div class="card">
+      <span class="badge">४४</span>
+      <h2>बालबालिकाको जन्मदर्ता <span class="en">Birth registration status of children</span></h2>
+      <p>५ वर्ष वा सोभन्दा कम उमेरका कुल <span class="hl">३०,०७,६४८</span> बालबालिका मध्ये <span class="hl">७४.०%</span> को जन्मदर्ता भएको छ।</p>
+      <div class="bar-row">
+        <span class="lbl">हिमाल</span>
+        <div class="bar-track"><div class="bar-fill" style="width:81.9%"></div></div>
+        <span class="val">८१.९%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">पहाड</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:73.1%"></div></div>
+        <span class="val">७३.१%</span>
+      </div>
+      <div class="bar-row">
+        <span class="lbl">तराई</span>
+        <div class="bar-track"><div class="bar-fill alt" style="width:73.7%"></div></div>
+        <span class="val">७३.७%</span>
+      </div>
+      <p style="margin-top:8px;">कर्णालीमा सबैभन्दा बढी <span class="hl">८७.३%</span> र बागमतीमा सबैभन्दा कम <span class="hl-red">६७.०%</span>।</p>
+    </div>
+
+  </div><!-- /.grid -->
+</div><!-- /.container -->
+
+<footer>
+  <strong>श्रोत: राष्ट्रिय तथ्याङ्क कार्यालय</strong>
+  रामशाहपथ, थापाथली, काठमाडौँ, नेपाल<br>
+  राष्ट्रिय जनगणना २०७८ — सारसंक्षेप
+</footer>
+
+<a href="#" class="top-btn" title="माथि जानुहोस्">↑</a>
+
+</body>
+</html>
