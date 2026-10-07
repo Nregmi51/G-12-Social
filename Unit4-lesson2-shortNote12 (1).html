@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+<html lang="ne">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5, user-scalable=yes">
+    <title>कक्षा १२ – एकाइ ४, पाठ २: सामाजिक सम्बन्धहरूको विकास र सामाजिक अन्तरनिर्भरता</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            /* BRAND NEW PALETTE — Deep Sea Sunset Theme */
+            --sapphire-dark: #0A1929;
+            --sapphire-main: #1B3A5C;
+            --sapphire-light: #3A6B9E;
+            --sapphire-pale: #E8F0F7;
+
+            --coral-dark: #B03A2E;
+            --coral-main: #CD5B45;
+            --coral-light: #E8816D;
+            --coral-pale: #FBE9E4;
+
+            --aqua-dark: #0E5C63;
+            --aqua-main: #1A7C85;
+            --aqua-light: #4BA8B0;
+            --aqua-pale: #E0F2F3;
+
+            --marigold-dark: #B37A00;
+            --marigold-main: #D99E1A;
+            --marigold-light: #EBC04B;
+            --marigold-pale: #FDF6E1;
+
+            --wine-dark: #5C1F35;
+            --wine-main: #803454;
+            --wine-light: #B36A87;
+            --wine-pale: #F5E8ED;
+
+            --slate-dark: #2C3E50;
+            --slate-main: #4A6178;
+            --slate-light: #7A8FA3;
+            --slate-pale: #ECF0F4;
+        }
+
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            background: #f4f6f8;
+            color: #1a1a2e;
+            padding: 16px 12px 80px;
+            line-height: 1.9;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            padding: 32px 26px 46px;
+            position: relative;
+        }
+
+        /* ----- HEADER BANNER ----- */
+        .main-banner {
+            background: linear-gradient(135deg, var(--sapphire-dark) 0%, var(--sapphire-main) 40%, var(--coral-main) 100%);
+            color: #ffffff;
+            border-radius: 22px;
+            padding: 28px 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 32px rgba(27, 58, 92, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .main-banner::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 340px;
+            height: 340px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+        }
+
+        .main-banner .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-banner .badge i {
+            color: #F5D742;
+        }
+
+        .main-banner h1 {
+            font-size: 30px;
+            font-weight: 900;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+            line-height: 1.35;
+        }
+
+        .main-banner h1 i {
+            color: #F5D742;
+            margin-right: 12px;
+        }
+
+        .main-banner .subtitle {
+            font-size: 19px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.92);
+            position: relative;
+            z-index: 1;
+            line-height: 1.6;
+        }
+
+        /* ----- QUICK STATS ----- */
+        .quick-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-bottom: 26px;
+        }
+
+        .stat-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 18px 16px;
+            text-align: center;
+            border-top: 6px solid;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .stat-card.sc1 { border-top-color: var(--sapphire-main); }
+        .stat-card.sc2 { border-top-color: var(--coral-main); }
+        .stat-card.sc3 { border-top-color: var(--aqua-main); }
+
+        .stat-card .stat-num {
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 4px;
+        }
+
+        .stat-card.sc1 .stat-num { color: var(--sapphire-main); }
+        .stat-card.sc2 .stat-num { color: var(--coral-main); }
+        .stat-card.sc3 .stat-num { color: var(--aqua-main); }
+
+        .stat-card .stat-label {
+            font-size: 17px;
+            font-weight: 700;
+            color: #616161;
+            line-height: 1.45;
+        }
+
+        @media (max-width: 700px) {
+            .quick-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* ----- INTRODUCTION BOX ----- */
+        .intro-box {
+            background: linear-gradient(135deg, var(--sapphire-pale) 0%, var(--aqua-pale) 100%);
+            border: 3px solid var(--sapphire-main);
+            border-left: 8px solid var(--sapphire-main);
+            border-radius: 20px;
+            padding: 24px 28px;
+            margin-bottom: 28px;
+            position: relative;
+        }
+
+        .intro-box::before {
+            content: "📖";
+            position: absolute;
+            top: -18px;
+            left: 24px;
+            background: var(--sapphire-main);
+            font-size: 1.2rem;
+            padding: 5px 14px;
+            border-radius: 40px;
+        }
+
+        .intro-box h2 {
+            color: var(--sapphire-dark);
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            padding-left: 6px;
+        }
+
+        .intro-box p {
+            font-size: 20px;
+            font-weight: 500;
+            color: #1a1a2e;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        /* ----- SECTION HEADERS ----- */
+        .section-head {
+            font-size: 26px;
+            font-weight: 900;
+            color: #ffffff;
+            margin: 42px 0 14px;
+            padding: 16px 26px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            scroll-margin-top: 80px;
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-head::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 160px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: skewX(-20deg) translateX(50px);
+        }
+
+        .section-head i {
+            font-size: 24px;
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.22);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .section-head .section-num {
+            background: rgba(255, 255, 255, 0.28);
+            color: #ffffff;
+            font-size: 15px;
+            font-weight: 900;
+            padding: 4px 16px;
+            border-radius: 40px;
+            letter-spacing: 0.5px;
+            margin-left: auto;
+        }
+
+        .section-head.sh1 { background: linear-gradient(135deg, var(--sapphire-dark) 0%, var(--sapphire-light) 100%); }
+        .section-head.sh2 { background: linear-gradient(135deg, var(--coral-dark) 0%, var(--coral-light) 100%); }
+        .section-head.sh3 { background: linear-gradient(135deg, var(--aqua-dark) 0%, var(--aqua-light) 100%); }
+        .section-head.sh4 { background: linear-gradient(135deg, var(--marigold-dark) 0%, var(--marigold-light) 100%); }
+        .section-head.sh5 { background: linear-gradient(135deg, var(--wine-dark) 0%, var(--wine-light) 100%); }
+
+        /* ----- SUB HEADERS ----- */
+        .sub-head {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--sapphire-dark);
+            margin: 28px 0 14px;
+            padding-left: 18px;
+            border-left: 7px solid var(--coral-main);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            scroll-margin-top: 80px;
+        }
+
+        .sub-head i {
+            color: var(--coral-main);
+            font-size: 20px;
+        }
+
+        /* ----- QUESTION CARD ----- */
+        .question-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fbfd 100%);
+            border-radius: 20px;
+            padding: 26px 28px;
+            margin: 20px 0;
+            border-top: 6px solid var(--coral-main);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            scroll-margin-top: 80px;
+            position: relative;
+        }
+
+        .question-card .q-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--coral-main) 0%, var(--coral-dark) 100%);
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: 900;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            margin-right: 12px;
+            box-shadow: 0 4px 12px rgba(205, 91, 69, 0.35);
+            vertical-align: middle;
+            flex-shrink: 0;
+        }
+
+        .question-card .q-text {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--sapphire-dark);
+            line-height: 1.5;
+            display: inline;
+        }
+
+        /* ----- ANSWER BLOCK ----- */
+        .answer-block {
+            margin-top: 20px;
+            padding: 22px 26px;
+            background: var(--sapphire-pale);
+            border-left: 7px solid var(--sapphire-main);
+            border-radius: 16px;
+        }
+
+        .answer-block p,
+        .answer-block ul,
+        .answer-block ol,
+        .answer-block li {
+            font-size: 20px;
+            font-weight: 500;
+            color: #212121;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        .answer-block ul,
+        .answer-block ol {
+            padding-left: 32px;
+            margin: 10px 0;
+        }
+
+        .answer-block li {
+            margin-bottom: 8px;
+        }
+
+        .answer-block strong {
+            color: var(--coral-dark);
+            font-weight: 900;
+        }
+
+        /* ----- ANSWER SUB-CARDS ----- */
+        .answer-sub {
+            background: #ffffff;
+            border-radius: 14px;
+            padding: 18px 22px;
+            margin: 14px 0;
+            border-left: 5px solid var(--aqua-main);
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.25s ease;
+        }
+
+        .answer-sub:hover {
+            transform: translateX(4px);
+        }
+
+        .answer-sub.as1 { border-left-color: var(--coral-main); }
+        .answer-sub.as2 { border-left-color: var(--aqua-main); }
+        .answer-sub.as3 { border-left-color: var(--marigold-main); }
+        .answer-sub.as4 { border-left-color: var(--wine-main); }
+        .answer-sub.as5 { border-left-color: var(--sapphire-main); }
+
+        .answer-sub .as-title {
+            font-size: 21px;
+            font-weight: 900;
+            color: var(--sapphire-dark);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .answer-sub .as-title .num-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--coral-main);
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 900;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .answer-sub p,
+        .answer-sub ul,
+        .answer-sub ol,
+        .answer-sub li {
+            font-size: 20px;
+            font-weight: 500;
+            color: #212121;
+            line-height: 1.85;
+            margin-bottom: 6px;
+        }
+
+        .answer-sub strong {
+            color: var(--coral-dark);
+            font-weight: 900;
+        }
+
+        /* ----- COMPARISON TABLE ----- */
+        .table-wrap {
+            overflow-x: auto;
+            margin: 18px 0;
+            border-radius: 16px;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 19px;
+            min-width: 320px;
+            color: #212121;
+        }
+
+        th,
+        td {
+            padding: 14px 16px;
+            border: 1px solid #e0e0e0;
+            text-align: left;
+            vertical-align: top;
+            color: #212121;
+            line-height: 1.75;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--sapphire-dark) 0%, var(--sapphire-main) 100%);
+            font-weight: 800;
+            color: #ffffff;
+            font-size: 19px;
+        }
+
+        td {
+            font-weight: 500;
+            font-size: 19px;
+        }
+
+        tbody tr:nth-child(even) {
+            background: var(--sapphire-pale);
+        }
+
+        tbody tr:hover {
+            background: var(--marigold-pale);
+        }
+
+        .table-caption {
+            background: linear-gradient(135deg, var(--aqua-pale) 0%, #B2DFDB 100%);
+            padding: 12px 20px;
+            font-weight: 800;
+            font-size: 19px;
+            color: var(--aqua-dark);
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        /* ----- FLOWCHART ----- */
+        .flowchart-box {
+            background: linear-gradient(135deg, var(--aqua-pale) 0%, var(--sapphire-pale) 100%);
+            border: 3px dashed var(--aqua-main);
+            border-radius: 20px;
+            padding: 26px 20px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .flowchart-box .fc-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--aqua-dark);
+            margin-bottom: 16px;
+        }
+
+        .fc-chain {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .fc-item {
+            background: #ffffff;
+            padding: 12px 22px;
+            border-radius: 40px;
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--sapphire-dark);
+            border: 2px solid var(--sapphire-main);
+            box-shadow: 0 4px 12px rgba(27, 58, 92, 0.12);
+            transition: all 0.25s ease;
+        }
+
+        .fc-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(27, 58, 92, 0.2);
+        }
+
+        .fc-item.hi {
+            background: linear-gradient(135deg, var(--coral-main) 0%, var(--coral-dark) 100%);
+            color: #ffffff;
+            border-color: var(--coral-dark);
+        }
+
+        .fc-arrow {
+            font-size: 22px;
+            color: var(--coral-main);
+            font-weight: 900;
+        }
+
+        /* ----- LEVEL CARDS (स्तरहरू) ----- */
+        .level-cards {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 18px 0;
+        }
+
+        @media (min-width: 640px) {
+            .level-cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .level-cards {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .level-card {
+            background: #ffffff;
+            border-radius: 16px;
+            padding: 18px 20px;
+            text-align: center;
+            border-top: 6px solid;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+            transition: transform 0.25s ease;
+        }
+
+        .level-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+        }
+
+        .level-card.lc1 { border-top-color: var(--sapphire-main); }
+        .level-card.lc2 { border-top-color: var(--coral-main); }
+        .level-card.lc3 { border-top-color: var(--aqua-main); }
+        .level-card.lc4 { border-top-color: var(--marigold-main); }
+
+        .level-card .lc-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--sapphire-pale);
+            color: var(--sapphire-dark);
+            font-size: 20px;
+            font-weight: 900;
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .level-card.lc1 .lc-num { background: var(--sapphire-main); color: #ffffff; }
+        .level-card.lc2 .lc-num { background: var(--coral-main); color: #ffffff; }
+        .level-card.lc3 .lc-num { background: var(--aqua-main); color: #ffffff; }
+        .level-card.lc4 .lc-num { background: var(--marigold-main); color: #ffffff; }
+
+        .level-card .lc-title {
+            font-size: 21px;
+            font-weight: 900;
+            color: var(--sapphire-dark);
+            margin-bottom: 6px;
+        }
+
+        .level-card .lc-desc {
+            font-size: 18px;
+            font-weight: 500;
+            color: #4a4a4a;
+            line-height: 1.7;
+        }
+
+        /* ----- MNEMONIC BOX ----- */
+        .mnemonic-box {
+            background: linear-gradient(135deg, #FFFDE7 0%, #FFF9C4 100%);
+            border: 3px solid var(--marigold-main);
+            border-radius: 18px;
+            padding: 22px 26px;
+            margin: 18px 0;
+            position: relative;
+        }
+
+        .mnemonic-box::before {
+            content: "🧠";
+            position: absolute;
+            top: -16px;
+            left: 22px;
+            background: var(--marigold-main);
+            font-size: 1.15rem;
+            padding: 4px 12px;
+            border-radius: 40px;
+        }
+
+        .mnemonic-box .mn-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--marigold-dark);
+            margin-bottom: 12px;
+            padding-left: 6px;
+        }
+
+        .mnemonic-box .mn-formula {
+            background: linear-gradient(135deg, var(--marigold-main) 0%, var(--marigold-dark) 100%);
+            color: #ffffff;
+            font-size: 24px;
+            font-weight: 900;
+            padding: 10px 24px;
+            border-radius: 40px;
+            display: inline-block;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 14px rgba(217, 158, 26, 0.4);
+            margin-bottom: 14px;
+        }
+
+        .mnemonic-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .mnemonic-box ul li {
+            font-size: 20px;
+            font-weight: 600;
+            color: #4e342e;
+            padding: 6px 0 6px 30px;
+            position: relative;
+            line-height: 1.85;
+        }
+
+        .mnemonic-box ul li::before {
+            content: "\f111";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--marigold-dark);
+            position: absolute;
+            left: 4px;
+            top: 12px;
+            font-size: 0.6rem;
+        }
+
+        .mnemonic-box ul li strong {
+            color: var(--coral-dark);
+            font-weight: 900;
+        }
+
+        /* ----- EXAMPLE BOX ----- */
+        .example-box {
+            background: linear-gradient(135deg, var(--wine-pale) 0%, #F8D7E0 100%);
+            border: 2px solid var(--wine-main);
+            border-left: 7px solid var(--wine-main);
+            border-radius: 16px;
+            padding: 20px 24px;
+            margin: 16px 0;
+        }
+
+        .example-box .ex-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--wine-dark);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .example-box .ex-title i {
+            background: var(--wine-main);
+            color: #ffffff;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+        }
+
+        .example-box p,
+        .example-box ul,
+        .example-box li {
+            font-size: 20px;
+            font-weight: 500;
+            color: #1a1a2e;
+            line-height: 1.9;
+            margin-bottom: 8px;
+        }
+
+        .example-box strong {
+            color: var(--wine-dark);
+            font-weight: 900;
+        }
+
+        /* ----- CONCLUSION BOX ----- */
+        .conclusion-box {
+            background: linear-gradient(135deg, var(--sapphire-dark) 0%, var(--sapphire-main) 50%, var(--coral-main) 100%);
+            color: #ffffff;
+            border-radius: 18px;
+            padding: 22px 26px;
+            margin: 22px 0 12px;
+            font-weight: 500;
+            font-size: 21px;
+            box-shadow: 0 8px 24px rgba(27, 58, 92, 0.35);
+            line-height: 1.9;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .conclusion-box i {
+            color: #F5D742;
+            font-size: 28px;
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .conclusion-box strong {
+            color: #F5D742;
+            font-weight: 900;
+        }
+
+        /* ----- QUICK REMEMBER BOX ----- */
+        .quick-remember {
+            background: linear-gradient(135deg, var(--aqua-dark) 0%, var(--aqua-main) 100%);
+            color: #ffffff;
+            border-radius: 16px;
+            padding: 20px 26px;
+            margin: 18px 0;
+            box-shadow: 0 6px 20px rgba(14, 92, 99, 0.3);
+        }
+
+        .quick-remember .qr-title {
+            font-size: 20px;
+            font-weight: 900;
+            color: #F5D742;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .quick-remember .qr-chain {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            font-size: 19px;
+            font-weight: 800;
+        }
+
+        .quick-remember .qr-chip {
+            background: rgba(255, 255, 255, 0.22);
+            padding: 6px 18px;
+            border-radius: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* ----- SCROLL UP BUTTON ----- */
+        #scrollUpBtn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, var(--sapphire-main) 0%, var(--coral-main) 100%);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 1.7rem;
+            cursor: pointer;
+            box-shadow: 0 6px 24px rgba(27, 58, 92, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+
+        #scrollUpBtn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        #scrollUpBtn:hover {
+            transform: scale(1.08);
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-copy {
+            margin-top: 44px;
+            padding-top: 20px;
+            border-top: 3px solid #e0e0e0;
+            text-align: center;
+            font-size: 17px;
+            color: #616161;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px 28px;
+            font-weight: 600;
+        }
+
+        .footer-copy i {
+            color: var(--coral-main);
+            margin-right: 6px;
+        }
+
+        .footer-copy .highlight {
+            font-weight: 800;
+            color: var(--sapphire-dark);
+        }
+
+        hr {
+            border: none;
+            border-top: 3px dotted #e0e0e0;
+            margin: 32px 0 14px;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 14px 28px;
+                border-radius: 22px;
+            }
+
+            .main-banner h1 {
+                font-size: 22px;
+            }
+
+            .main-banner .subtitle {
+                font-size: 16px;
+            }
+
+            .section-head {
+                font-size: 20px;
+                padding: 14px 18px;
+            }
+
+            .section-head i {
+                width: 40px;
+                height: 40px;
+                font-size: 20px;
+            }
+
+            .section-head .section-num {
+                font-size: 13px;
+                padding: 3px 12px;
+            }
+
+            .sub-head {
+                font-size: 19px;
+            }
+
+            .question-card {
+                padding: 20px 18px;
+            }
+
+            .question-card .q-text {
+                font-size: 19px;
+            }
+
+            .answer-block {
+                padding: 18px 18px;
+            }
+
+            .answer-block p,
+            .answer-block ul,
+            .answer-block li {
+                font-size: 18px;
+            }
+
+            .answer-sub {
+                padding: 14px 16px;
+            }
+
+            .answer-sub .as-title {
+                font-size: 18px;
+            }
+
+            .answer-sub p,
+            .answer-sub ul,
+            .answer-sub li {
+                font-size: 18px;
+            }
+
+            table {
+                font-size: 17px;
+            }
+            th,
+            td {
+                font-size: 17px;
+                padding: 10px 12px;
+            }
+
+            .fc-item {
+                font-size: 16px;
+                padding: 10px 16px;
+            }
+
+            .fc-arrow {
+                font-size: 18px;
+            }
+
+            .level-card .lc-title {
+                font-size: 18px;
+            }
+
+            .level-card .lc-desc {
+                font-size: 16px;
+            }
+
+            .mnemonic-box .mn-formula {
+                font-size: 19px;
+                padding: 8px 18px;
+            }
+
+            .mnemonic-box ul li {
+                font-size: 17px;
+            }
+
+            .example-box p,
+            .example-box li {
+                font-size: 18px;
+            }
+
+            .conclusion-box {
+                font-size: 18px;
+                padding: 18px 20px;
+            }
+
+            .conclusion-box i {
+                font-size: 22px;
+            }
+
+            .quick-remember .qr-chain {
+                font-size: 17px;
+            }
+
+            #scrollUpBtn {
+                width: 50px;
+                height: 50px;
+                font-size: 1.3rem;
+                bottom: 16px;
+                right: 16px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 40px 50px 56px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ===== MAIN BANNER ===== -->
+        <div class="main-banner">
+            <div class="badge">
+                <i class="fas fa-book-open"></i>
+                कक्षा १२ · सामाजिक अध्ययन तथा जीवनोपयोगी शिक्षा
+            </div>
+            <h1>
+                <i class="fas fa-people-arrows"></i>
+                एकाइ ४, पाठ २: सामाजिक सम्बन्धहरूको विकास र सामाजिक अन्तरनिर्भरता
+            </h1>
+            <div class="subtitle">
+                व्यक्ति, परिवार, समुदाय र समाजबिचको सम्बन्ध, वैयक्तिकतावादी–समुदायवादी दृष्टिकोण तथा सामाजिक अन्तरनिर्भरताको विश्लेषणात्मक नोट।
+            </div>
+        </div>
+
+        <!-- ===== QUICK STATS ===== -->
+        <div class="quick-stats">
+            <div class="stat-card sc1">
+                <div class="stat-num">३</div>
+                <div class="stat-label">अभ्यास प्रश्नहरू</div>
+            </div>
+            <div class="stat-card sc2">
+                <div class="stat-num">२</div>
+                <div class="stat-label">दृष्टिकोणहरू</div>
+            </div>
+            <div class="stat-card sc3">
+                <div class="stat-num">५</div>
+                <div class="stat-label">अन्तरनिर्भरताका तह</div>
+            </div>
+        </div>
+
+        <!-- ===== पाठ परिचय ===== -->
+        <div class="intro-box">
+            <h2><i class="fas fa-circle-info"></i> पाठ परिचय</h2>
+            <p>यस पाठमा <strong>सामाजिक सम्बन्धहरूको विकास</strong> र <strong>सामाजिक अन्तरनिर्भरता</strong>को अवधारणाबारे अध्ययन गरिन्छ। व्यक्ति, परिवार, समुदाय तथा समाजबिचको सम्बन्ध समयसँगै कसरी विकास हुँदै आएको छ भन्ने विषय यस पाठको मुख्य केन्द्रबिन्दु हो।</p>
+            <p>साथै <strong>वैयक्तिकतावादी</strong> र <strong>समुदायवादी</strong> दृष्टिकोणबिचको भिन्नता, नेपाली समाजमा व्यक्ति र समुदायबिचको समन्वय तथा व्यक्ति, परिवार, समुदाय र राष्ट्रबिच रहेको परस्पर निर्भरताबारे अध्ययन गरिन्छ।</p>
+        </div>
+
+        <!-- ========================================================== -->
+        <!-- ===== प्रश्न १ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh1" id="q1">
+            <i class="fas fa-question"></i>
+            प्रश्न १: गार्हपत्य, आहवनीय र विदथ
+            <span class="section-num">Question 1</span>
+        </div>
+
+        <div class="question-card">
+            <span class="q-number">१</span>
+            <span class="q-text">गार्हपत्य, आहवनीय र विदथ भन्नाले के–के बुझिन्छ?</span>
+        </div>
+
+        <div class="answer-block">
+            <p><strong>उत्तर:</strong> प्रस्तुत स्रोत सामग्रीमा प्राचीन सामाजिक संरचनासँग सम्बन्धित गार्हपत्य, आहवनीय र विदथलाई निम्न रूपमा व्याख्या गरिएको छ:</p>
+        </div>
+
+        <div class="answer-sub as1">
+            <div class="as-title"><span class="num-badge">१</span> गार्हपत्य</div>
+            <p>स्रोत सामग्रीअनुसार गार्हपत्यले <strong>परिवार संस्था</strong>लाई जनाउँछ। परिवार समाजको आधारभूत सामाजिक एकाइका रूपमा रहेको मानिन्छ।</p>
+        </div>
+
+        <div class="answer-sub as2">
+            <div class="as-title"><span class="num-badge">२</span> आहवनीय</div>
+            <p>स्रोत सामग्रीअनुसार आहवनीयले <strong>ग्राम सङ्गठन वा गाउँ सभा</strong>लाई जनाउँछ, जहाँ समुदायसँग सम्बन्धित विषयमा सामूहिक छलफल तथा निर्णय गरिन्थ्यो।</p>
+        </div>
+
+        <div class="answer-sub as3">
+            <div class="as-title"><span class="num-badge">३</span> विदथ</div>
+            <p>स्रोत सामग्रीअनुसार विदथ <strong>विचार–विमर्श, उपभोग्य वस्तुको वितरण, धार्मिक क्रियाकलाप तथा सामूहिक तयारी</strong>जस्ता कार्यसँग सम्बन्धित संस्था थियो।</p>
+        </div>
+
+        <!-- Flowchart -->
+        <div class="flowchart-box">
+            <div class="fc-title">📌 प्राचीन सामाजिक संरचनाको क्रम</div>
+            <div class="fc-chain">
+                <div class="fc-item">परिवार</div>
+                <div class="fc-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="fc-item">ग्राम सङ्गठन</div>
+                <div class="fc-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="fc-item">सामूहिक संस्था</div>
+                <div class="fc-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="fc-item hi">प्राचीन सामाजिक संरचना</div>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <div class="ex-title"><i class="fas fa-info"></i> नोट</div>
+            <p>यी प्राचीन शब्दहरूको व्याख्या स्रोत सामग्रीमा प्रयोग भएको सामाजिक अध्ययनको सन्दर्भअनुसार प्रस्तुत गरिएको छ।</p>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== प्रश्न २ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh2" id="q2">
+            <i class="fas fa-question"></i>
+            प्रश्न २: वैयक्तिकतावादी र समुदायवादी दृष्टिकोण
+            <span class="section-num">Question 2</span>
+        </div>
+
+        <div class="question-card">
+            <span class="q-number">२</span>
+            <span class="q-text">वैयक्तिकतावादी दृष्टिकोण र समुदायवादी दृष्टिकोणमा के भिन्नता रहेको छ? नेपाली संस्कृतिमा तिनीहरूको समन्वय कसरी गरिएको छ?</span>
+        </div>
+
+        <div class="answer-block">
+            <p><strong>उत्तर:</strong> व्यक्ति र समाजको सम्बन्धलाई बुझ्ने क्रममा <strong>वैयक्तिकतावादी दृष्टिकोण</strong> र <strong>समुदायवादी दृष्टिकोण</strong> दुई फरक मान्यता हुन्।</p>
+            <p>वैयक्तिकतावादी दृष्टिकोणले व्यक्तिको स्वतन्त्रता, अधिकार, रुचि तथा व्यक्तिगत विकासलाई प्राथमिकता दिन्छ भने समुदायवादी दृष्टिकोणले समाज, समुदाय, साझा हित, कर्तव्य र सामाजिक सद्भावलाई बढी महत्त्व दिन्छ।</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-list"></i> दुई दृष्टिकोणको विशेषता</div>
+
+        <div class="level-cards">
+            <div class="level-card lc1">
+                <div class="lc-num"><i class="fas fa-user"></i></div>
+                <div class="lc-title">वैयक्तिकतावादी</div>
+                <div class="lc-desc">
+                    • व्यक्तिलाई केन्द्रमा राख्छ<br>
+                    • व्यक्तिगत स्वतन्त्रतामा जोड<br>
+                    • व्यक्तिगत अधिकारलाई महत्त्व<br>
+                    • व्यक्तिगत लक्ष्यलाई प्राथमिकता
+                </div>
+            </div>
+            <div class="level-card lc2">
+                <div class="lc-num"><i class="fas fa-users"></i></div>
+                <div class="lc-title">समुदायवादी</div>
+                <div class="lc-desc">
+                    • समुदाय र समाजलाई महत्त्व<br>
+                    • सामूहिक हितमा जोड<br>
+                    • कर्तव्य र जिम्मेवारीलाई महत्त्व<br>
+                    • सहकार्य र सद्भावलाई प्राथमिकता
+                </div>
+            </div>
+        </div>
+
+        <div class="table-wrap">
+            <div class="table-caption">तालिका: वैयक्तिकतावादी र समुदायवादी दृष्टिकोणको तुलना</div>
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width:22%;">आधार</th>
+                        <th style="width:39%;">वैयक्तिकतावादी दृष्टिकोण</th>
+                        <th style="width:39%;">समुदायवादी दृष्टिकोण</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>केन्द्र</strong></td>
+                        <td>व्यक्ति</td>
+                        <td>समुदाय वा समाज</td>
+                    </tr>
+                    <tr>
+                        <td><strong>प्राथमिकता</strong></td>
+                        <td>व्यक्तिगत स्वतन्त्रता</td>
+                        <td>सामूहिक हित</td>
+                    </tr>
+                    <tr>
+                        <td><strong>मुख्य पक्ष</strong></td>
+                        <td>अधिकार</td>
+                        <td>कर्तव्य र जिम्मेवारी</td>
+                    </tr>
+                    <tr>
+                        <td><strong>लक्ष्य</strong></td>
+                        <td>व्यक्तिगत विकास र उपलब्धि</td>
+                        <td>सामाजिक सद्भाव र सहकार्य</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-handshake"></i> नेपाली संस्कृतिमा समन्वय</div>
+
+        <div class="answer-block">
+            <p>नेपाली संस्कृतिमा व्यक्ति र समाजलाई पूर्ण रूपमा अलग नठानी दुवैबिच <strong>समन्वय र सामञ्जस्य</strong> कायम गर्ने अभ्यास पाइन्छ।</p>
+            <ul>
+                <li><strong>सामाजिक जीवनमा:</strong> परिवार, समुदाय, परम्परा, कर्तव्य र सामूहिक हितलाई महत्त्व दिइन्छ।</li>
+                <li><strong>व्यक्तिगत जीवनमा:</strong> आत्मविकास, व्यक्तिगत सोच, आस्था तथा स्वतन्त्रताको पनि स्थान रहेको छ।</li>
+                <li><strong>आधुनिक समयमा:</strong> शिक्षा, विज्ञान, प्रविधि, बजार, सञ्चार माध्यम र सामाजिक सञ्जालको प्रभावले व्यक्तिगत स्वतन्त्रता र व्यक्तित्व विकासको महत्त्व बढाएको छ। त्यससँगै परिवार, समुदाय र सामाजिक सम्बन्धको भूमिका पनि कायम रहेको देखिन्छ।</li>
+            </ul>
+        </div>
+
+        <!-- Nepal Coordination Flowchart -->
+        <div class="flowchart-box">
+            <div class="fc-title">📌 नेपाली सामाजिक अभ्यास — समन्वय र सामञ्जस्य</div>
+            <div class="fc-chain">
+                <div class="fc-item">व्यक्ति<br><small style="font-weight:500;">अधिकार • स्वतन्त्रता • आत्मविकास</small></div>
+                <div class="fc-arrow"><i class="fas fa-plus"></i></div>
+                <div class="fc-item">समुदाय<br><small style="font-weight:500;">कर्तव्य • सहकार्य • सामाजिक हित</small></div>
+                <div class="fc-arrow"><i class="fas fa-arrow-right"></i></div>
+                <div class="fc-item hi">नेपाली सामाजिक अभ्यास<br><small style="font-weight:500;">समन्वय र सामञ्जस्य</small></div>
+            </div>
+        </div>
+
+        <div class="conclusion-box">
+            <i class="fas fa-check-circle"></i>
+            <div>
+                <strong>निष्कर्ष:</strong> वैयक्तिकतावादी दृष्टिकोणले व्यक्तिको स्वतन्त्रता र अधिकारलाई जोड दिन्छ भने समुदायवादी दृष्टिकोणले सामूहिक हित, कर्तव्य र सामाजिक सद्भावलाई महत्त्व दिन्छ। नेपाली सामाजिक जीवनमा यी दुवै पक्षबिच सन्तुलन कायम गर्ने प्रयास देखिन्छ।
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ========================================================== -->
+        <!-- ===== प्रश्न ३ ===== -->
+        <!-- ========================================================== -->
+
+        <div class="section-head sh3" id="q3">
+            <i class="fas fa-question"></i>
+            प्रश्न ३: सामाजिक अन्तरनिर्भरता
+            <span class="section-num">Question 3</span>
+        </div>
+
+        <div class="question-card">
+            <span class="q-number">३</span>
+            <span class="q-text">सामाजिक अन्तरनिर्भरता भन्नाले के बुझिन्छ? उदाहरणसहित चर्चा गर्नुहोस्।</span>
+        </div>
+
+        <div class="answer-block">
+            <p><strong>उत्तर:</strong> समाजका विभिन्न एकाइ तथा संस्था एकअर्काको आवश्यकता, सहयोग, सेवा र भूमिकामा निर्भर रहने अवस्थालाई <strong>सामाजिक अन्तरनिर्भरता (Social Interdependence)</strong> भनिन्छ।</p>
+            <p>व्यक्ति, परिवार, समुदाय, संस्था र राष्ट्रमध्ये कुनै पनि पूर्ण रूपमा एक्लै आत्मनिर्भर हुँदैन। प्रत्येकले आफ्ना आवश्यकता पूरा गर्न र सामाजिक जीवन सञ्चालन गर्न अन्य व्यक्ति तथा संस्थासँग सहकार्य गर्नुपर्छ।</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-layer-group"></i> सामाजिक अन्तरनिर्भरताका तहहरू</div>
+
+        <div class="level-cards">
+            <div class="level-card lc1">
+                <div class="lc-num">१</div>
+                <div class="lc-title">व्यक्ति</div>
+                <div class="lc-desc">परिवार र समाजबाट शिक्षा, सुरक्षा र सहयोग प्राप्त गर्छ।</div>
+            </div>
+            <div class="level-card lc2">
+                <div class="lc-num">२</div>
+                <div class="lc-title">परिवार</div>
+                <div class="lc-desc">समुदाय, विद्यालय, स्वास्थ्य संस्था र बजारसँग सम्बन्धित हुन्छ।</div>
+            </div>
+            <div class="level-card lc3">
+                <div class="lc-num">३</div>
+                <div class="lc-title">समुदाय</div>
+                <div class="lc-desc">विभिन्न संस्था, स्थानीय संरचना र आर्थिक गतिविधिमा निर्भर हुन्छ।</div>
+            </div>
+            <div class="level-card lc4">
+                <div class="lc-num">४</div>
+                <div class="lc-title">राष्ट्र</div>
+                <div class="lc-desc">अन्य राष्ट्र तथा अन्तर्राष्ट्रिय संस्थासँग सहकार्य गर्छ।</div>
+            </div>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-book"></i> प्राचीन तथा परम्परागत उदाहरणहरू</div>
+
+        <div class="answer-sub as1">
+            <div class="as-title"><span class="num-badge">१</span> परिवार, कुल र कुटुम्ब</div>
+            <p>व्यक्तिको सुरक्षा, पालनपोषण, सामाजिक पहिचान र सहयोगका लागि परिवार तथा नातासम्बन्ध महत्त्वपूर्ण थिए।</p>
+        </div>
+
+        <div class="answer-sub as2">
+            <div class="as-title"><span class="num-badge">२</span> ग्राम र जनपद</div>
+            <p>गाउँ तथा फराकिलो क्षेत्रबिचको सम्बन्धले आर्थिक, प्रशासनिक र सामाजिक सहकार्य विस्तार गर्थ्यो।</p>
+        </div>
+
+        <div class="answer-sub as3">
+            <div class="as-title"><span class="num-badge">३</span> गुठीजस्ता संस्था</div>
+            <p>धार्मिक, सांस्कृतिक तथा सामाजिक कार्यमा सामूहिक सहभागिता र जिम्मेवारीलाई व्यवस्थित गर्न सहयोग गर्थे।</p>
+        </div>
+
+        <div class="answer-sub as4">
+            <div class="as-title"><span class="num-badge">४</span> गुरुकुल, आश्रम र व्यावसायिक समूह</div>
+            <p>शिक्षा, धार्मिक जीवन, व्यापार तथा शिल्पसँग सम्बन्धित मानिसबिच सहयोग र सहकार्यको वातावरण सिर्जना गर्थे।</p>
+        </div>
+
+        <div class="sub-head"><i class="fas fa-clock"></i> वर्तमान समयका उदाहरणहरू</div>
+
+        <div class="answer-sub as5">
+            <div class="as-title"><span class="num-badge">१</span> राजनीतिक दल</div>
+            <p>नागरिक, राज्य र राजनीतिक प्रक्रियाबिच सम्बन्ध स्थापित गर्छन्।</p>
+        </div>
+
+        <div class="answer-sub as1">
+            <div class="as-title"><span class="num-badge">२</span> गैरसरकारी संस्था</div>
+            <p>समुदाय र विभिन्न निकायसँग मिलेर सामाजिक कार्य सञ्चालन गर्छन्।</p>
+        </div>
+
+        <div class="answer-sub as2">
+            <div class="as-title"><span class="num-badge">३</span> व्यापारिक सङ्गठन</div>
+            <p>उत्पादक, श्रमिक, बजार र उपभोक्ताबिच सम्बन्ध कायम गर्छन्।</p>
+        </div>
+
+        <div class="answer-sub as3">
+            <div class="as-title"><span class="num-badge">४</span> अन्तर्राष्ट्रिय संस्था</div>
+            <p>संयुक्त राष्ट्रसङ्घ र सार्कजस्ता संस्थाले विभिन्न राष्ट्रबिच सहकार्य विस्तार गर्न सहयोग गर्छन्।</p>
+        </div>
+
+        <!-- Chain flowchart -->
+        <div class="flowchart-box">
+            <div class="fc-title">📌 सामाजिक अन्तरनिर्भरताको श्रृंखला</div>
+            <div class="fc-chain">
+                <div class="fc-item">व्यक्ति</div>
+                <div class="fc-arrow">↔</div>
+                <div class="fc-item">परिवार</div>
+                <div class="fc-arrow">↔</div>
+                <div class="fc-item">समुदाय</div>
+                <div class="fc-arrow">↔</div>
+                <div class="fc-item">राष्ट्र</div>
+                <div class="fc-arrow">↔</div>
+                <div class="fc-item hi">विश्व समुदाय</div>
+            </div>
+        </div>
+
+        <div class="example-box">
+            <div class="ex-title"><i class="fas fa-lightbulb"></i> सरल उदाहरण</div>
+            <p>एक किसानलाई उत्पादनका लागि बीउ, औजार र बजारको आवश्यकता पर्छ। व्यापारी किसानको उत्पादनमा निर्भर हुन्छ भने उपभोक्ता खाद्यान्नका लागि किसान र बजार दुवैमा निर्भर हुन्छ। यसरी सबै पक्ष एकअर्कासँग अन्तरनिर्भर हुन्छन्।</p>
+        </div>
+
+        <!-- Quick Remember -->
+        <div class="quick-remember">
+            <div class="qr-title"><i class="fas fa-bolt"></i> छिटो सम्झनुहोस् — सामाजिक अन्तरनिर्भरताका ५ तह</div>
+            <div class="qr-chain">
+                <span class="qr-chip">व्यक्ति</span>
+                <span>→</span>
+                <span class="qr-chip">परिवार</span>
+                <span>→</span>
+                <span class="qr-chip">समुदाय</span>
+                <span>→</span>
+                <span class="qr-chip">संस्था</span>
+                <span>→</span>
+                <span class="qr-chip">राष्ट्र</span>
+                <span>→</span>
+                <span class="qr-chip">विश्व समुदाय</span>
+            </div>
+        </div>
+
+        <div class="conclusion-box">
+            <i class="fas fa-check-circle"></i>
+            <div>
+                <strong>निष्कर्ष:</strong> मानव समाज परस्पर सहयोग र निर्भरतामा आधारित हुन्छ। व्यक्ति परिवारमा, परिवार समुदायमा, समुदाय विभिन्न सामाजिक संस्थामा र राष्ट्र अन्य राष्ट्र तथा अन्तर्राष्ट्रिय संरचनामा निर्भर हुन्छ। यही पारस्परिक सहयोग र निर्भरताले सामाजिक सम्बन्धलाई विस्तार गर्दै समाजलाई व्यवस्थित रूपमा सञ्चालन गर्न मद्दत गर्छ।
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- ===== FINAL TIP ===== -->
+        <div class="mnemonic-box">
+            <div class="mn-title">🔑 छिटो सम्झिने सूत्रहरू</div>
+            <ul>
+                <li><strong>गार्हपत्य – आहवनीय – विदथ:</strong> परिवार → गाउँ सभा → सामूहिक संस्था</li>
+                <li><strong>दुई दृष्टिकोण:</strong> वैयक्तिकतावादी (व्यक्ति + अधिकार) vs समुदायवादी (समाज + कर्तव्य)</li>
+                <li><strong>अन्तरनिर्भरताको तह:</strong> व्यक्ति → परिवार → समुदाय → राष्ट्र → विश्व समुदाय</li>
+            </ul>
+        </div>
+
+        <!-- ===== FOOTER ===== -->
+        <div class="footer-copy">
+            <span><i class="fas fa-user-graduate"></i> Prepared by: <span class="highlight">Narayan Sir</span></span>
+            <span><i class="fas fa-envelope"></i> nregmi511@gmail.com</span>
+            <span><i class="fas fa-copyright"></i> कक्षा १२ – एकाइ ४, पाठ २</span>
+            <span><i class="fas fa-mobile-alt"></i> Mobile &amp; Smartboard Friendly</span>
+        </div>
+
+    </div>
+    <!-- /container -->
+
+    <!-- ===== SCROLL UP BUTTON ===== -->
+    <button id="scrollUpBtn" aria-label="माथि जानुहोस्">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+        (function() {
+            const btn = document.getElementById('scrollUpBtn');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 400) {
+                    btn.classList.add('visible');
+                } else {
+                    btn.classList.remove('visible');
+                }
+            });
+
+            btn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        })();
+    </script>
+
+</body>
+</html>
